@@ -1,0 +1,21 @@
+#############
+#  DOTA 2
+#############
+
+*.vpk
+*.vpcf_c
+*.vsnd_c
+*.vsndevts_c
+*.vmat_c
+*.vmesh_c
+*.vanim_c
+*.vagrp_c
+*.vmdl_c
+*.bin
+*.vtex_c
+*.orig
+*.vxml_c
+*.vcss_c
+*.vxml_c
+*.vjs_c
+*.vcss_c
