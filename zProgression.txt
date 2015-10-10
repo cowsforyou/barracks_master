@@ -1,0 +1,18 @@
+#roadtocompletion
+
+[x] Create custom spawn
+[x] Link up folders on GitHub
+[ ] Create advanced pathing with multiple orders
+[ ] Import build helper
+[ ] Link buildings to specific creeps
+[ ] Color-in the creeps
+[ ] Create function to award last hit gold from creeps to player
+[ ] Clean up team and hero selection
+[ ] Display last hits and gold earned per player in-game
+
+-- Basic game should be playable at this point --
+
+[ ] Enable lumber resource
+[ ] Create new buildings and advanced tech upgrades
+
+-- TBC --
