@@ -19,6 +19,11 @@
 [ ] Color-in the creeps
 
 
+-- Scout Mechanics --
+
+[ ] Create custom scout
+
+
 -- Player Mechanics --
 
 [ ] Create function to award last hit gold from creeps to player
@@ -54,6 +59,9 @@ Link the spawnability of the creeps to their respective buildings. i.e. that cre
 -- Enable creep upgrades --
 Specifically, upgrades to the armor, health, damage and spawn count
 
+-- Create custom scout --
+There will be a land, air, and techies scout.
+
 
 -- Clean up team and hero selection --
 Players should be able to select what team they want to be on. It would also be nice to allow them to select their color/hero but if not possible then it can be auto assigned.
@@ -68,8 +76,7 @@ Some ideas include:
 Some kind of tech structure - a structure that allows the construction of advanced buildings and access advanced abilities
 Purifier - a structure that increases your gold earned and upgradable to also increase your lumber earned
 A hero structure - enables you to spawn hero creeps (for a cost each time you spawn a hero?)
-Raiding parties - creeps that you can control to either push into the lane or raid the enemy base/kill workers harvesting lumber
-Defense structure - basic defense structure to attack enemies raiding your base
+Defense structure - basic defense structure to attack scouts entering your base
 Aerial creeps - flying creeps
 AA creeps - well... creeps that shoot down aerial creeps
 Stealth creeps - mmhmm
