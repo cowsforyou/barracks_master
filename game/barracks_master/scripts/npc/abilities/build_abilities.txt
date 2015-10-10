@@ -1,0 +1,233 @@
+// Simple tower placement, normal behavior
+"build_tower"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"build_tower"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityCastPoint"				"0"
+
+	// BuildingHelper info
+	"Building"						"1" //bool
+	"BuildingSize"					"2"
+	"BuildTime"						"5.0"
+	"AbilityCastRange"				"200"
+	"UpdateHealth"					"1" //bool
+	"Scale"							"0" //bool
+	"PlayerCanControl"				"1" //bool
+
+	"UnitName"						"tower"
+	"AbilityCooldown"				"0"
+	"AbilityGoldCost"				"50"
+	// End of BuildingHelper info
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"build_time"			"5.0"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"gold_cost"				"50"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"lumber_cost"			"0"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"builder.lua"
+			"Function"		"Build"
+		}
+	}
+}
+
+// Placement of a big building, with rotation of the model, builder goes inside
+"build_city_center"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"build_city_center"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityCastPoint"				"0"
+
+	// BuildingHelper info
+	"Building"						"1" //bool
+	"BuildingSize"					"5"
+	"BuildTime"						"15.0"
+	"AbilityCastRange"				"200"
+	"UpdateHealth"					"1" //bool
+	"Scale"							"0" //bool
+	"PlayerCanControl"				"1" //bool
+
+	"BuilderInside"					"1" //bool
+	"ModelRotation"					"90.0"
+
+	"UnitName"						"city_center"
+	"AbilityCooldown"				"0"
+	"AbilityGoldCost"				"100"
+	// End of BuildingHelper info
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"build_time"			"15.0"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"gold_cost"				"100"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"lumber_cost"			"100"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"builder.lua"
+			"Function"		"Build"
+		}
+	}
+}
+
+// Building requires repair to finish construction. Can be assisted to make the process faster
+"build_tech_center"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"build_tech_center"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	// BuildingHelper info
+	"Building"						"1" //bool
+	"BuildingSize"					"4" 
+	"BuildTime"						"30.0"
+	"AbilityCastRange"				"200"
+	"UpdateHealth"					"1" //bool
+	"Scale"							"0" //bool
+	"PlayerCanControl"				"1" //bool
+
+	"RequiresRepair"				"1"
+
+	"UnitName"						"tech_center"
+	"AbilityCooldown"				"0"
+	"AbilityGoldCost"				"100"
+	// End of BuildingHelper info
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"build_time"			"30.0"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"gold_cost"				"100"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"lumber_cost"			"100"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"builder.lua"
+			"Function"		"Build"
+		}
+	}
+}
+
+// A _disabled ability is required to show the requirements on the tooltip
+"build_tech_center_disabled"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"build_tech_center"
+	"MaxLevel" 						"0"
+}
+
+// The builder is killed after finishing the building
+"build_dragon_tower"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"build_dragon_tower"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	// BuildingHelper info
+	"Building"						"1" //bool
+	"BuildingSize"					"3" 
+	"BuildTime"						"15.0"
+	"AbilityCastRange"				"200"
+	"UpdateHealth"					"1" //bool
+	"Scale"							"0" //bool
+	"PlayerCanControl"				"1" //bool
+
+	"BuilderInside"					"1"
+	"ConsumesBuilder"				"1"
+	"ModelRotation"					"90"
+
+	"UnitName"						"dragon_tower"
+	"AbilityCooldown"				"0"
+	"AbilityGoldCost"				"322"
+	// End of BuildingHelper info
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"build_time"			"15.0"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"gold_cost"				"322"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"lumber_cost"			"100"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"builder.lua"
+			"Function"		"Build"
+		}
+	}
+}
+
+"build_dragon_tower_disabled"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"build_dragon_tower"
+	"MaxLevel" 						"0"
+}

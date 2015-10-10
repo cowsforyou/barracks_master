@@ -169,6 +169,6 @@ function GameMode:_CaptureGameMode()
 
     mode:SetUnseenFogOfWarEnabled(USE_UNSEEN_FOG_OF_WAR)
 
-    self:OnFirstPlayerLoaded()
+    --self:OnFirstPlayerLoaded()
   end 
 end

@@ -41,7 +41,7 @@ function SpawnCreeps(color)
   local p2_position = point2:GetAbsOrigin()
 
   local NUMBER_OF_CREEPS_TO_SPAWN = 4
-  local REPEAT_EVERY = 10.0
+  local REPEAT_EVERY = 30.0
   Timers:CreateTimer(function()
     
     for i=1, NUMBER_OF_CREEPS_TO_SPAWN do
@@ -266,6 +266,9 @@ function GameMode:OnPlayerPickHero(keys)
   DebugPrint('[BAREBONES] OnPlayerPickHero')
   DebugPrintTable(keys)
 
+  -- building helper
+  BuildingEvents:OnPlayerPickHero(keys)
+
   local heroClass = keys.hero
   local heroEntity = EntIndexToHScript(keys.heroindex)
   local player = EntIndexToHScript(keys.player)
@@ -288,7 +291,7 @@ function GameMode:OnEntityKilled( keys )
   DebugPrintTable( keys )
 
   GameMode:_OnEntityKilled( keys )
-  
+  BuildingEvents:OnEntityKilled(keys)
 
   -- The Unit that was Killed
   local killedUnit = EntIndexToHScript( keys.entindex_killed )
@@ -310,6 +313,7 @@ function GameMode:OnEntityKilled( keys )
 
   -- Put code here to handle when an entity gets killed
 
+  --[[
   local name = killedUnit:GetUnitName()
   print(name)
 
@@ -318,6 +322,7 @@ function GameMode:OnEntityKilled( keys )
   else
     print("Something other than a radiant ranged creep died.")
   end
+  ]]
 
 end
 

@@ -1,0 +1,52 @@
+// Override Information for Beastmaster
+    //-------------------------------------------------------------------------------------------------------------
+    "npc_dota_hero_custom_beastmaster"                                          // ? What's this for ?
+    {
+        "override_hero"     "npc_dota_hero_beastmaster"                         // This is the override command
+
+        // Ability
+        //-------------------------------------------------------------------------------------------------------------          
+        "Ability1"          "beastmaster_call_of_the_wild"
+        "Ability2"          "beastmaster_call_of_the_wild_boar"
+        "Ability3"          "build_tower"                                                  // "" is to remove ability
+        "Ability4"          ""
+        "Ability5"          ""                                                  
+        "Ability6"          ""
+
+        // Armor
+        //-------------------------------------------------------------------------------------------------------------
+        "ArmorPhysical"             "0"
+        "MagicalResistance"         "25"
+
+        // Attack
+        //-------------------------------------------------------------------------------------------------------------
+        "AttackCapabilities"        "DOTA_UNIT_CAP_MELEE_ATTACK"
+        "AttackDamageMin"           "1"
+        "AttackDamageMax"           "1"
+        "AttackRate"                "1.700000"
+        "AttackAnimationPoint"      "0.300000"
+        "AttackAcquisitionRange"    "600"
+        "AttackRange"               "128"
+        "ProjectileSpeed"           "0"
+
+        // Attributes
+        //-------------------------------------------------------------------------------------------------------------
+        "AttributePrimary"          "DOTA_ATTRIBUTE_STRENGTH"
+        "AttributeBaseStrength"     "0"
+        "AttributeStrengthGain"     "0"
+        "AttributeBaseIntelligence" "0"
+        "AttributeIntelligenceGain" "0"
+        "AttributeBaseAgility"      "0"
+        "AttributeAgilityGain"      "0"
+        "StatusHealth"              "1"                                         // Minimum health ? I think ?
+
+        // Movement
+        //-------------------------------------------------------------------------------------------------------------
+        "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_GROUND"
+        "MovementSpeed"             "310"
+        "MovementTurnRate"          "0.400000"
+
+        // Inventory
+        //-------------------------------------------------------------------------------------------------------------
+        "HasInventory"  "0"
+    }

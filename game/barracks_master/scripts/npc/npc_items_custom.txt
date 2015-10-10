@@ -1,134 +1,434 @@
 "DOTAAbilities"
 {
-  //Shield
-  "item_example_item"
-  {
-    "ID"              "1836"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
-    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
-    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
-    "BaseClass"           "item_datadriven"
-    "AbilityCastAnimation"      "ACT_DOTA_DISABLED"
-    "AbilityTextureName"      "item_example_item"
-
-    // Stats
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityCastRange"        "900"
-    "AbilityCastPoint"        "0.2"
-    "AbilityCooldown"       "13.0"
-
-    // Item Info
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityManaCost"       "100"
-    "ItemCost"            "750"
-    "ItemInitialCharges"      "0"
-    "ItemDroppable"         "1"
-    "ItemSellable"          "1"
-    "ItemRequiresCharges"     "0"
-    "ItemShareability"        "ITEM_NOT_SHAREABLE"
-    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    
-    "MaxUpgradeLevel"       "1"
-    "ItemBaseLevel"         "1"
-    
-    "precache"
-    {
-      "particle"              "particles/frostivus_herofx/queen_shadow_strike_linear_parent.vpcf"
-      "particle_folder"       "particles/test_particle"
-      "soundfile"             "soundevents/game_sounds_heroes/game_sounds_abaddon.vsndevts"
-    }
-    "OnSpellStart"
-    {
-      "LinearProjectile"
-      {
-        "EffectName"      "particles/frostivus_herofx/queen_shadow_strike_linear_parent.vpcf"
-        "MoveSpeed"       "%speed"
-        //"StartPosition"   "attach_attack1"
-        "FixedDistance"   "%distance"
-        "StartRadius"     "%radius"
-        "EndRadius"       "%radius"
-        "TargetTeams"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
-        "TargetTypes"     "DOTA_UNIT_TARGET_HERO"
-        "TargetFlags"     "DOTA_UNIT_TARGET_FLAG_NONE"
-        "HasFrontalCone"    "0"
-        "ProvidesVision"    "0"
-        "VisionRadius"      "0"
-      }
-      "FireSound"
-      {
-        "EffectName"    "Hero_Abaddon.AphoticShield.Cast"
-        "Target"        "CASTER"
-      }
-      "ApplyModifier"
-      {
-        "Target"      "CASTER"
-        "ModifierName"  "modifier_item_shield"
-      }
-    }
-    
-    "OnProjectileHitUnit"
-    {     
-      "DeleteOnHit" "0"
-      "Damage"
-      {
-        "Target"      "TARGET"
-        "Type"    "DAMAGE_TYPE_PURE"
-        "Damage"  "%damage"
-      }
-    }
-    
-    "Modifiers"
-    {
-      "modifier_item_shield"
-      {
-        "EffectName"    "particles/test_particle/damage_immunity.vpcf"
-        "EffectAttachType"  "follow_origin"
-        "Target"      "CASTER"
-        
-        "Duration" "%duration"
-        "TextureName" "abaddon_aphotic_shield"
-        "Properties"
-        {
-          "MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE"    "%damage_reduction"
-        }
-      }
-    }
-    
-    // Special  
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
-    {
-      "01"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "duration"        "4.0"
-      }
-      
-      "02"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "damage_reduction"    "-50"
-      }
-      "03"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "radius"          "150"
-      }
-      "04"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "speed"           "1800"
-      }
-      "05"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "distance"        "900"
-      }
-      "06"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "damage"          "125"
-      }
-    }
-  }
+	"item_apply_modifiers"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"						"item_datadriven"
+	
+		"precache"
+		{
+			"particle"  "particles/econ/events/ti5/radiant_fountain_regen_lvl2_ti5.vpcf"
+		}
+	
+		"Modifiers"
+		{
+			"modifier_construction"
+			{
+				"IsHidden"				"1"
+				"OnCreated"
+				{
+					"AttachEffect"
+					{
+						"EffectName"        "particles/econ/events/ti5/radiant_fountain_regen_lvl2_ti5.vpcf"
+						"EffectAttachType"  "follow_origin"
+						"Target"            "TARGET"
+						"ControlPoints"
+						{
+							"01"			"0 250 0"
+						}
+					}
+				}
+			}
+			
+			"modifier_builder_hidden"
+			{
+				"IsHidden"				"1"  
+	
+				"States"
+				{
+					"MODIFIER_STATE_NO_UNIT_COLLISION"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_INVULNERABLE"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_ROOTED"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_DISARMED"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NOT_ON_MINIMAP"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR"	"MODIFIER_STATE_VALUE_ENABLED"
+					//"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED" //Builder can send build orders while inside the building
+					//"MODIFIER_STATE_UNSELECTABLE"	"MODIFIER_STATE_VALUE_ENABLED" //Builder is selectable while inside the building
+				}
+			}
+	
+			"modifier_onfire"
+			{
+				"IsHidden"			"1"
+				"OnCreated"
+				{
+					"AttachEffect"
+					{
+						"EffectName"        "particles/dire_fx/fire_barracks.vpcf"
+						"EffectAttachType"  "follow_origin"
+						"Target"            "TARGET"
+						"ControlPointEntities"
+						{
+							"TARGET"	"attach_fx"
+						}
+					}
+				}
+			}
+		}		
+	}
+	"item_building_cancel"
+	{
+		"BaseClass"             		"item_datadriven"
+		"AbilityTextureName"			"item_cancel"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"AbilityCastPoint"				"0"
+	
+		"ItemDroppable" 				"0"
+		"ItemPurchasable" 				"0"
+		"ItemSellable"					"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"CancelBuilding"
+			}
+		}
+	}
+	"item_build_wall"
+	{
+		"BaseClass"             		"item_datadriven"
+		"AbilityTextureName"			"item_build_wall"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	
+		"ItemDroppable" 				"0"
+		"ItemPurchasable" 				"0"
+	
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"2" 
+		"BuildTime"						"10.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"UnitName"						"wall"
+		"AbilityCooldown"				"0"
+		"AbilityGoldCost"				"10"
+		// End of BuildingHelper info
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"10.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"10"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"10"
+			}
+		}
+	
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+				"ItemUnitName"  "wall"
+			}
+		}
+	}
+	//Shield
+	  "item_example_item"
+	  {
+	    "ID"              "1836"
+	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+	    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
+	    "BaseClass"           "item_datadriven"
+	    "AbilityCastAnimation"      "ACT_DOTA_DISABLED"
+	    "AbilityTextureName"      "item_example_item"
+	
+	    // Stats
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilityCastRange"        "900"
+	    "AbilityCastPoint"        "0.2"
+	    "AbilityCooldown"       "13.0"
+	
+	    // Item Info
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilityManaCost"       "100"
+	    "ItemCost"            "750"
+	    "ItemInitialCharges"      "0"
+	    "ItemDroppable"         "1"
+	    "ItemSellable"          "1"
+	    "ItemRequiresCharges"     "0"
+	    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+	    
+	    "MaxUpgradeLevel"       "1"
+	    "ItemBaseLevel"         "1"
+	    
+	    "precache"
+	    {
+	      "particle"              "particles/frostivus_herofx/queen_shadow_strike_linear_parent.vpcf"
+	      "particle_folder"       "particles/test_particle"
+	      "soundfile"             "soundevents/game_sounds_heroes/game_sounds_abaddon.vsndevts"
+	    }
+	    "OnSpellStart"
+	    {
+	      "LinearProjectile"
+	      {
+	        "EffectName"      "particles/frostivus_herofx/queen_shadow_strike_linear_parent.vpcf"
+	        "MoveSpeed"       "%speed"
+	        //"StartPosition"   "attach_attack1"
+	        "FixedDistance"   "%distance"
+	        "StartRadius"     "%radius"
+	        "EndRadius"       "%radius"
+	        "TargetTeams"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	        "TargetTypes"     "DOTA_UNIT_TARGET_HERO"
+	        "TargetFlags"     "DOTA_UNIT_TARGET_FLAG_NONE"
+	        "HasFrontalCone"    "0"
+	        "ProvidesVision"    "0"
+	        "VisionRadius"      "0"
+	      }
+	      "FireSound"
+	      {
+	        "EffectName"    "Hero_Abaddon.AphoticShield.Cast"
+	        "Target"        "CASTER"
+	      }
+	      "ApplyModifier"
+	      {
+	        "Target"      "CASTER"
+	        "ModifierName"  "modifier_item_shield"
+	      }
+	    }
+	    
+	    "OnProjectileHitUnit"
+	    {     
+	      "DeleteOnHit" "0"
+	      "Damage"
+	      {
+	        "Target"      "TARGET"
+	        "Type"    "DAMAGE_TYPE_PURE"
+	        "Damage"  "%damage"
+	      }
+	    }
+	    
+	    "Modifiers"
+	    {
+	      "modifier_item_shield"
+	      {
+	        "EffectName"    "particles/test_particle/damage_immunity.vpcf"
+	        "EffectAttachType"  "follow_origin"
+	        "Target"      "CASTER"
+	        
+	        "Duration" "%duration"
+	        "TextureName" "abaddon_aphotic_shield"
+	        "Properties"
+	        {
+	          "MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE"    "%damage_reduction"
+	        }
+	      }
+	    }
+	    
+	    // Special  
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	      "01"
+	      {
+	        "var_type"        "FIELD_FLOAT"
+	        "duration"        "4.0"
+	      }
+	      
+	      "02"
+	      {
+	        "var_type"        "FIELD_INTEGER"
+	        "damage_reduction"    "-50"
+	      }
+	      "03"
+	      {
+	        "var_type"        "FIELD_INTEGER"
+	        "radius"          "150"
+	      }
+	      "04"
+	      {
+	        "var_type"        "FIELD_INTEGER"
+	        "speed"           "1800"
+	      }
+	      "05"
+	      {
+	        "var_type"        "FIELD_FLOAT"
+	        "distance"        "900"
+	      }
+	      "06"
+	      {
+	        "var_type"        "FIELD_INTEGER"
+	        "damage"          "125"
+	      }
+	    }
+	  }
+	// All channeled abilities require an item with the same name to be queued
+	// Research abilities set the ability hidden to prevent further queueing. The item re-enables them
+	"item_research_dark_tower"
+	{
+		"BaseClass"             		"item_datadriven"
+		"AbilityTextureName"			"item_research_dark_tower"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"AbilityCastPoint"				"0"
+	
+		"ItemDroppable" 				"0"
+		"ItemPurchasable" 				"0"
+		"ItemSellable"					"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/queue.lua"
+				"Function"		"DequeueUnit"
+			}
+	
+			// Re-enable research ability
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/research.lua"
+				"Function"		"ReEnableResearch"
+			}
+		}
+	}
+	
+	"item_research_ultimate_ability"
+	{
+		"BaseClass"             		"item_datadriven"
+		"AbilityTextureName"			"item_research_ultimate_ability"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"AbilityCastPoint"				"0"
+	
+		"ItemDroppable" 				"0"
+		"ItemPurchasable" 				"0"
+		"ItemSellable"					"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/queue.lua"
+				"Function"		"DequeueUnit"
+			}
+	
+			// Re-enable research ability
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/research.lua"
+				"Function"		"ReEnableResearch"
+			}
+		}
+	}
+	
+	"item_train_city_center_tier2"
+	{
+		"BaseClass"             		"item_datadriven"
+		"AbilityTextureName"			"item_train_city_center_tier2"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"AbilityCastPoint"				"0"
+	
+		"ItemDroppable" 				"0"
+		"ItemPurchasable" 				"0"
+		"ItemSellable"					"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/queue.lua"
+				"Function"		"DequeueUnit"
+			}
+	
+			// Re-enable abilities
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/upgrades.lua"
+				"Function"		"CancelUpgrade"
+			}
+	
+			"RemoveModifier"
+			{
+				"ModifierName"	"modifier_building_particle"
+				"Target" 		"CASTER"
+			}
+		}
+	}
+	
+	// Train abilities set all other abilities as hidden to prevent further queueing. The item re-enables them
+	"item_train_tower_tier2"
+	{
+		"BaseClass"             		"item_datadriven"
+		"AbilityTextureName"			"item_train_tower_tier2"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"AbilityCastPoint"				"0"
+	
+		"ItemDroppable" 				"0"
+		"ItemPurchasable" 				"0"
+		"ItemSellable"					"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/queue.lua"
+				"Function"		"DequeueUnit"
+			}
+	
+			// Re-enable abilities
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/upgrades.lua"
+				"Function"		"CancelUpgrade"
+			}
+	
+			"RemoveModifier"
+			{
+				"ModifierName"	"modifier_building_particle"
+				"Target" 		"CASTER"
+			}
+		}
+	}
+	
+	"item_train_dark_tower"
+	{
+		"BaseClass"             		"item_datadriven"
+		"AbilityTextureName"			"item_train_dark_tower"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"AbilityCastPoint"				"0"
+	
+		"ItemDroppable" 				"0"
+		"ItemPurchasable" 				"0"
+		"ItemSellable"					"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/queue.lua"
+				"Function"		"DequeueUnit"
+			}
+	
+			// Re-enable abilities
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/upgrades.lua"
+				"Function"		"CancelUpgrade"
+			}
+	
+			"RemoveModifier"
+			{
+				"ModifierName"	"modifier_building_particle"
+				"Target" 		"CASTER"
+			}
+		}
+	}
 }

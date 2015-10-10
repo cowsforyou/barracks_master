@@ -1,0 +1,102 @@
+//=================================================================================
+// Creature: Peasant
+//=================================================================================
+"peasant"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_creature"
+	"Model"						"models/heroes/kunkka/kunkka.vmdl"
+	"ModelScale"				"0.8"
+	"Level"						"1"
+	"HealthBarOffset"			"140"
+	"SelectionGroup"            "Peasants"
+	"SoundSet"					"Hero_Kunkka"
+
+	"UnitLabel"					"builder"
+
+	"precache"
+	{
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_kunkka.vsndevts"
+	}
+	
+	"PathfindingSearchDepthScale" "0.5"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"6"
+	"Ability1" 					"repair"
+	"Ability2" 					"build_tower"
+	"Ability3" 					"build_city_center"
+	"Ability4" 					"build_tech_center"
+	"Ability5"					"build_dragon_tower"
+	"Ability6" 					"ultimate_ability"
+
+	// Armor
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"0"
+	"MagicalResistance"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+	"AttackDamageMin"			"5.0"
+	"AttackDamageMax"			"6.0"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackRate"				"2"
+	"AttackAnimationPoint"		"0.433"
+	"AttackAcquisitionRange"	"500"
+	"AttackRange"				"90"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"20.0"
+	"BountyGoldMax"				"30.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+	"RingRadius"				"40"
+	"CollisionSize"				"16"
+	"FormationRank"				"3"
+		
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"190"
+	"MovementTurnRate"			"0.6"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusHealth"				"220"
+	"StatusHealthRegen"			"0.25"
+	"StatusMana"				"0"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"800"
+	"VisionNighttimeRange"		"600"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+	// Creature Data
+	//----------------------------------------------------------------
+	"Creature"
+	{
+		"DisableClumpingBehavior"	"1"
+		"AttachWearables"
+		{
+			"Wearable1"		{	"ItemDef"		"14"		} //"Hair"
+			"Wearable2"		{	"ItemDef"		"4122"		} //"Seafarer's Shoes"
+			"Wearable3" 	{	"ItemDef"		"11"		} //Hands
+			"Wearable4" 	{	"ItemDef"		"12"		} //Sword
+			"Wearable5" 	{	"ItemDef"		"10"		} //Boots
+		}
+	}
+}

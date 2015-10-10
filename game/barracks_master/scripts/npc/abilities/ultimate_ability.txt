@@ -1,0 +1,17 @@
+//SOME COOL ABILITY WITH WISPS
+"ultimate_ability"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"research_ultimate_ability"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityCastPoint"				"0"
+}
+
+"ultimate_ability_disabled"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"research_ultimate_ability"
+	"MaxLevel" 						"0"
+}

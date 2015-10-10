@@ -6,8 +6,8 @@ function GameMode:_OnGameRulesStateChange(keys)
   elseif newState == DOTA_GAMERULES_STATE_INIT then
     --Timers:RemoveTimer("alljointimer")
   elseif newState == DOTA_GAMERULES_STATE_HERO_SELECTION then
-    GameMode:PostLoadPrecache()
-    GameMode:OnAllPlayersLoaded()
+    --GameMode:PostLoadPrecache()
+    --GameMode:OnAllPlayersLoaded()
 
     if USE_CUSTOM_TEAM_COLORS_FOR_PLAYERS then
       for i=0,9 do
@@ -18,7 +18,7 @@ function GameMode:_OnGameRulesStateChange(keys)
       end
     end
   elseif newState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
-    GameMode:OnGameInProgress()
+    --GameMode:OnGameInProgress()
   end
 end
 
@@ -28,7 +28,7 @@ function GameMode:_OnNPCSpawned(keys)
 
   if npc:IsRealHero() and npc.bFirstSpawned == nil then
     npc.bFirstSpawned = true
-    GameMode:OnHeroInGame(npc)
+    --GameMode:OnHeroInGame(npc)
   end
 end
 
