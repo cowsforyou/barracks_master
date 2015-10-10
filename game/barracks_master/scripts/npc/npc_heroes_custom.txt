@@ -1,0 +1,120 @@
+"DOTAHeroes"
+{
+
+    // Override Information for Beastmaster
+    //-------------------------------------------------------------------------------------------------------------
+    "npc_dota_hero_custom_beastmaster"                                          // ? What's this for ?
+    {
+        "override_hero"     "npc_dota_hero_beastmaster"                         // This is the override command
+
+        // Ability
+        //-------------------------------------------------------------------------------------------------------------          
+        "Ability1"          "beastmaster_call_of_the_wild"
+        "Ability2"          "beastmaster_call_of_the_wild_boar"
+        "Ability3"          ""                                                  // "" is to remove ability
+        "Ability4"          ""
+        "Ability5"          ""                                                  
+        "Ability6"          ""
+
+        // Armor
+        //-------------------------------------------------------------------------------------------------------------
+        "ArmorPhysical"             "0"
+        "MagicalResistance"         "25"
+
+        // Attack
+        //-------------------------------------------------------------------------------------------------------------
+        "AttackCapabilities"        "DOTA_UNIT_CAP_MELEE_ATTACK"
+        "AttackDamageMin"           "1"
+        "AttackDamageMax"           "1"
+        "AttackRate"                "1.700000"
+        "AttackAnimationPoint"      "0.300000"
+        "AttackAcquisitionRange"    "600"
+        "AttackRange"               "128"
+        "ProjectileSpeed"           "0"
+
+        // Attributes
+        //-------------------------------------------------------------------------------------------------------------
+        "AttributePrimary"          "DOTA_ATTRIBUTE_STRENGTH"
+        "AttributeBaseStrength"     "0"
+        "AttributeStrengthGain"     "0"
+        "AttributeBaseIntelligence" "0"
+        "AttributeIntelligenceGain" "0"
+        "AttributeBaseAgility"      "0"
+        "AttributeAgilityGain"      "0"
+        "StatusHealth"              "1"                                         // Minimum health ? I think ?
+
+        // Movement
+        //-------------------------------------------------------------------------------------------------------------
+        "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_GROUND"
+        "MovementSpeed"             "310"
+        "MovementTurnRate"          "0.400000"
+
+        // Inventory
+        //-------------------------------------------------------------------------------------------------------------
+        "HasInventory"  "0"
+    }
+
+
+
+
+
+
+
+
+  "npc_dota_hero_ancient_apparition_barebones"
+  {
+    "AbilityLayout"     "6"
+    "override_hero"     "npc_dota_hero_ancient_apparition"
+    "SoundSet"          "0" 
+    "Ability1"        "example_ability" 
+    "Ability2"        "barebones_empty2" 
+    "Ability3"        "barebones_empty3" 
+    "Ability4"        "barebones_empty4"
+    "Ability5"        "barebones_empty5"
+    "Ability6"        "barebones_empty6"
+    "Ability7"        ""
+    "Ability8"        ""
+    "Ability9"        ""
+    "Ability10"       ""
+    "Ability11"       ""
+    "Ability12"       ""
+    "Ability13"       ""
+    "Ability14"       ""
+    "Ability15"       ""
+    "Ability16"       ""
+
+    "ArmorPhysical"       "0"                 // Physical protection.
+    "MagicalResistance"       "0"                 // Magical protection (percentage).
+
+    "AttackCapabilities"    "DOTA_UNIT_CAP_NO_ATTACK"
+    "AttackDamageMin"     "1"                   // Damage range min.
+    "AttackDamageMax"     "1"                   // Damage range max.
+
+    //"AttributePrimary"      "DOTA_ATTRIBUTE_STRENGTH"
+    "AttributeBaseStrength"   "0"                   // Base strength
+    "AttributeStrengthGain"   "0"                   // Strength bonus per level.
+    "AttributeBaseIntelligence" "0"                   // Base intelligence
+    "AttributeIntelligenceGain" "0"                   // Intelligence bonus per level.
+    "AttributeBaseAgility"    "0"                   // Base agility
+    "AttributeAgilityGain"    "0"                   // Agility bonus per level.
+
+    "BountyXP"          "0"                 // Experience earn.
+    "BountyGoldMin"       "0"                   // Gold earned min.
+    "BountyGoldMax"       "0"                   // Gold earned max.
+
+    //"BoundsHullName"      "DOTA_HULL_SIZE_HERO"
+    //"RingRadius"        "70"
+
+    "MovementCapabilities"    "DOTA_UNIT_CAP_MOVE_GROUND"
+    "MovementSpeed"       "360"                 // Speed.
+    "MovementTurnRate"      "1.0"                 // Turning rate.
+
+    "StatusHealth"        "1000"                 // Base health.
+    "StatusHealthRegen"     "0.0"                 // Health regeneration rate.
+    "StatusMana"        "400"                   // Base mana.
+    "StatusManaRegen"     "100.0"                 // Mana regeneration rate.
+
+    "VisionDaytimeRange"    "1800"                  // Range of vision at night time.
+    "VisionNighttimeRange"    "1800"                  // Range of vision at night time.
+  }
+}
