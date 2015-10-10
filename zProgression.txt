@@ -69,3 +69,8 @@ Some kind of tech structure - a structure that allows the construction of advanc
 Purifier - a structure that increases your gold earned and upgradable to also increase your lumber earned
 A hero structure - enables you to spawn hero creeps (for a cost each time you spawn a hero?)
 Raiding parties - creeps that you can control to either push into the lane or raid the enemy base/kill workers harvesting lumber
+Defense structure - basic defense structure to attack enemies raiding your base
+Aerial creeps - flying creeps
+AA creeps - well... creeps that shoot down aerial creeps
+Stealth creeps - mmhmm
+Stealth detect creeps - either have a special creep or have it as an upgrade to an existing creep
