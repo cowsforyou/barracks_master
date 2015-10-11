@@ -1,12 +1,15 @@
 "AddonInfo"
 {
   "TeamCount" "2"
-  "maps"      "template_map"
+  "maps"      "barracks_master_map_duo_v1.0"
   "IsPlayable"  "1"
-  "template_map"
+  "barracks_master_map_duo_v1.0"
   {
           "MaxPlayers"                    "4"
   }
+
+
+
 //  "desert_duo"
 //  {
 //          "MaxPlayers"                    "4"
