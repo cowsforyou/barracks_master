@@ -23,7 +23,7 @@
     "BuilderInside"                 "1" //bool
     "ModelRotation"                 "90.0"
 
-    "UnitName"                      "city_center"
+    "UnitName"                      "bm_melee_barracks"
     "AbilityCooldown"               "0"
     "AbilityGoldCost"               "100"
     // End of BuildingHelper info
@@ -56,7 +56,7 @@
         }
     }
  }
- 
+
 	"barebones_empty1"
 	  {
 	    // General
