@@ -27,7 +27,7 @@
 	"AbilityLayout"				"6"
 	"Ability1" 					"repair"
 	"Ability2" 					"build_tower"
-	"Ability3" 					"build_city_center"
+	"Ability3" 					"build_bm_melee_barracks"
 	"Ability4" 					"build_tech_center"
 	"Ability5"					"build_dragon_tower"
 	"Ability6" 					"ultimate_ability"

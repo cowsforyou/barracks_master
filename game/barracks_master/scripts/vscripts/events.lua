@@ -21,7 +21,7 @@ function GetTeamByColor(color)
   end
 end
 
-function SpawnCreeps(color)
+function SpawnCreeps(color, number, repeatEvery)
   local team = GetTeamByColor(color)
   
   local p1_string, p2_string = nil, nil
@@ -40,11 +40,12 @@ function SpawnCreeps(color)
   local p1_position = point1:GetAbsOrigin() 
   local p2_position = point2:GetAbsOrigin()
 
-  local NUMBER_OF_CREEPS_TO_SPAWN = 4
-  local REPEAT_EVERY = 30.0
+  --local NUMBER_OF_CREEPS_TO_SPAWN = 4
+  --local REPEAT_EVERY = 30.0
+  
   Timers:CreateTimer(function()
     
-    for i=1, NUMBER_OF_CREEPS_TO_SPAWN do
+    for i=1, number do
       local unit = CreateUnitByName(color.."_creep_melee", start_position, true, nil, nil, team)
       
       Timers:CreateTimer(0.1, function()
@@ -61,11 +62,9 @@ function SpawnCreeps(color)
         ExecuteOrderFromTable(order2)
         return nil
       end)
-
     end
-    return REPEAT_EVERY
+    return repeatEvery
   end)
-
 end
 
 -- The overall game state has changed
@@ -80,14 +79,18 @@ function GameMode:OnGameRulesStateChange(keys)
   -- Custom Creep Spawns --
   -------------------------
   local newState = GameRules:State_Get()
+  
+  --[[
   if newState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
     local TEAMS = { "blue", "purple", "red", "green" }
     for _,color in pairs(TEAMS) do
       SpawnCreeps(color)
     end
   end
+  --]]
 
 end
+
 
 -- An NPC has spawned somewhere in game.  This includes heroes
 function GameMode:OnNPCSpawned(keys)

@@ -75,7 +75,7 @@ The idea of fast mode is to allow players to reduce the average game time. Tower
 Some ideas include:
 Some kind of tech structure - a structure that allows the construction of advanced buildings and access advanced abilities
 Purifier - a structure that increases your gold earned and upgradable to also increase your lumber earned
-A hero structure - enables you to spawn hero creeps (for a cost each time you spawn a hero?)
+A hero structure - enables you to spawn hero creeps (for a cost each time you spawn a hero - A HERO HAS ENTERED THE BATTLEFIELD [print])
 Defense structure - basic defense structure to attack scouts entering your base
 Aerial creeps - flying creeps
 AA creeps - well... creeps that shoot down aerial creeps
