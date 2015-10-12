@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------------------------------
--- Melee Barracks AI
+-- General spawner AI
 --------------------------------------------------------------------------------------------------------
 function Think( keys )
     --print("Think")
@@ -31,7 +31,7 @@ function OnSpellStart( keys )
 end
 
 -----------------------
--- Timer functions
+-- Spawn creeps and manage building ability cooldown
 -----------------------
 function SpawnCreeps(color, number, repeatEvery, ability)
     local team = GetTeamByColor(color)

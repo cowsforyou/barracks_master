@@ -4,6 +4,8 @@ end
 
 RESPAWN_TIME = 30.0
 
+-- BUG: will probably break if you try to build anything before the horn
+
 -- runs only once during DOTA_GAMERULES_STATE_GAME_IN_PROGRESS
 function SpawnSynchronizer:Setup()
 	Timers:CreateTimer(function()
