@@ -6,9 +6,6 @@
  //=================================================================================
  "bm_melee_barracks"
  {
-    // BARRACKS MASTER
-    "vscripts"                   "barracks/bm_melee_barracks.lua"
-
     // General
     //----------------------------------------------------------------
     "BaseClass"                 "npc_dota_creature"
@@ -22,7 +19,7 @@
     // Abilities
     //----------------------------------------------------------------
     "AbilityLayout"             "4"
-    "Ability1"                  "train_city_center_tier2"
+    "Ability1"                  "spawn_melee_creeps"
     "Ability2"                  ""
     "Ability3"                  ""
     "Ability4"                  ""

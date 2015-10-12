@@ -28,6 +28,13 @@
 						}
 					}
 				}
+ 
+				// added by Veggiesama START
+				"States"
+				{
+					"MODIFIER_STATE_SILENCED"		"MODIFIER_STATE_VALUE_ENABLED"
+				}
+				// added by Veggiesama END
 			}
 			
 			"modifier_builder_hidden"

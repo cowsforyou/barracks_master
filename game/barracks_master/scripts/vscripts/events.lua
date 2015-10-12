@@ -13,60 +13,6 @@ function GameMode:OnDisconnect(keys)
 
 end
 
-function GetTeamByColor(color)
-  if color == "blue" or color == "purple" then
-    return DOTA_TEAM_GOODGUYS
-  elseif color == "red" or color == "green" then
-    return DOTA_TEAM_BADGUYS
-  end
-end
-
-function SpawnCreeps(color, number, repeatEvery)
-  local team = GetTeamByColor(color)
-  
-  local p1_string, p2_string = nil, nil
-  if team == DOTA_TEAM_GOODGUYS then
-    p1_string = "lane_mid_pathcorner_goodguys_1"
-    p2_string = "lane_mid_pathcorner_goodguys_2"
-  else
-    p1_string = "lane_mid_pathcorner_badguys_1"
-    p2_string = "lane_mid_pathcorner_badguys_2"
-  end
-
-  local spawner = Entities:FindByName(nil, color.."_npc_spawner")
-  local point1  = Entities:FindByName(nil, p1_string)
-  local point2  = Entities:FindByName(nil, p2_string)
-  local start_position = spawner:GetAbsOrigin()
-  local p1_position = point1:GetAbsOrigin() 
-  local p2_position = point2:GetAbsOrigin()
-
-  --local NUMBER_OF_CREEPS_TO_SPAWN = 4
-  --local REPEAT_EVERY = 30.0
-  
-  Timers:CreateTimer(function()
-    
-    for i=1, number do
-      local unit = CreateUnitByName(color.."_creep_melee", start_position, true, nil, nil, team)
-      
-      Timers:CreateTimer(0.1, function()
-        local order1 = {}
-        order1["UnitIndex"] = unit:GetEntityIndex()
-        order1["OrderType"] = DOTA_UNIT_ORDER_ATTACK_MOVE
-        order1["Position"]  = p1_position
-
-        local order2 = order1
-        order2["Position"] = p2_position
-        order2["Queue"]    = true
-
-        ExecuteOrderFromTable(order1)
-        ExecuteOrderFromTable(order2)
-        return nil
-      end)
-    end
-    return repeatEvery
-  end)
-end
-
 -- The overall game state has changed
 function GameMode:OnGameRulesStateChange(keys)
   DebugPrint("[BAREBONES] GameRules State Changed")
@@ -79,7 +25,11 @@ function GameMode:OnGameRulesStateChange(keys)
   -- Custom Creep Spawns --
   -------------------------
   local newState = GameRules:State_Get()
-  
+  if newState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
+    SpawnSynchronizer:Setup()
+  end  
+
+
   --[[
   if newState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
     local TEAMS = { "blue", "purple", "red", "green" }

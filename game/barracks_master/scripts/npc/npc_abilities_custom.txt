@@ -1,61 +1,116 @@
 "DOTAAbilities"
 {
+	// Autocast creep spawner spell; starts casting as soon as the building is fully constructed
+	"spawn_melee_creeps"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "build_city_center"
+	    "MaxLevel"                      "1"
 
- // Placement of a big building, with rotation of the model, builder goes inside
- "build_bm_melee_barracks"
- {
-    "BaseClass"                     "ability_datadriven"
-    "AbilityTextureName"            "build_city_center"
-    "MaxLevel"                      "1"
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"
 
-    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-    "AbilityCastPoint"              "0"
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"				"FIELD_INTEGER"
+	            "creep_count"			"4"
+	        }
+	        "02"
+	        {
+	        	"var_type"				"FIELD_FLOAT"
+	        	"creep_delay"			"30.0"
+	        }
+	    }
 
-    // BuildingHelper info
-    "Building"                      "1" //bool
-    "BuildingSize"                  "5"
-    "BuildTime"                     "15.0"
-    "AbilityCastRange"              "200"
-    "UpdateHealth"                  "1" //bool
-    "Scale"                         "0" //bool
-    "PlayerCanControl"              "1" //bool
+	    // run this script every time the spell is used
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "barracks/spawner.lua"
+	            "Function"      "OnSpellStart"
+	        }
+	    }
 
-    "BuilderInside"                 "1" //bool
-    "ModelRotation"                 "90.0"
+	    // modifiers are buffs/debuffs, usually associated with abilities
+	    "Modifiers"
+	    {
+	    	"modifier_spawn_melee_creeps_thinker"
+	    	{
+	    		"Passive"			"1" // start activated
+	    		"IsHidden"			"1" // hide the visual buff icon
 
-    "UnitName"                      "bm_melee_barracks"
-    "AbilityCooldown"               "0"
-    "AbilityGoldCost"               "100"
-    // End of BuildingHelper info
+	    		// run this Think() script every 0.25 seconds
+				"ThinkInterval" 	"0.25"
+			    "OnIntervalThink"
+				{
+					"RunScript"
+			        {
+			            "ScriptFile"    "barracks/spawner.lua"
+			            "Function"      "Think"
+			        }
+				}
+   	    	}
+	    }
+	}
 
-    "AbilitySpecial"
-    {
-        "01"
-        {
-            "var_type"              "FIELD_FLOAT"
-            "build_time"            "15.0"
-        }
-        "02"
-        {
-            "var_type"              "FIELD_INTEGER"
-            "gold_cost"             "100"
-        }
-        "03"
-        {
-            "var_type"              "FIELD_INTEGER"
-            "lumber_cost"           "100"
-        }
-    }
+	// Placement of a big building, with rotation of the model, builder goes inside
+	"build_bm_melee_barracks"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "build_city_center"
+	    "MaxLevel"                      "1"
 
-    "OnSpellStart"
-    {
-        "RunScript"
-        {
-            "ScriptFile"    "builder.lua"
-            "Function"      "Build"
-        }
-    }
- }
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityCastPoint"              "0"
+
+	    // BuildingHelper info
+	    "Building"                      "1" //bool
+	    "BuildingSize"                  "5"
+	    "BuildTime"                     "15.0"
+	    "AbilityCastRange"              "200"
+	    "UpdateHealth"                  "1" //bool
+	    "Scale"                         "0" //bool
+	    "PlayerCanControl"              "1" //bool
+
+	    "BuilderInside"                 "1" //bool
+	    "ModelRotation"                 "90.0"
+
+	    "UnitName"                      "bm_melee_barracks"
+	    "AbilityCooldown"               "0"
+	    "AbilityGoldCost"               "100"
+	    // End of BuildingHelper info
+
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"              "FIELD_FLOAT"
+	            "build_time"            "15.0"
+	        }
+	        "02"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "gold_cost"             "100"
+	        }
+	        "03"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "lumber_cost"           "100"
+	        }
+	    }
+
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "builder.lua"
+	            "Function"      "Build"
+	        }
+	    }
+	}
 
 	"barebones_empty1"
 	  {

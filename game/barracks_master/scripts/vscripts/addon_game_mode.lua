@@ -12,6 +12,7 @@ require('orders')
 require('builder')
 require('buildinghelper')
 require('buildingevents') -- veg
+require('barracks/spawn_synchronizer') -- veg
 
 -- This library allow for easily delayed/timed actions
 require('libraries/timers')
@@ -25,6 +26,7 @@ require('libraries/notifications')
 require('libraries/animations')
 -- This library can be used for performing "Frankenstein" attachments on units
 require('libraries/attachments')
+require('libraries/popups')
 
 -- These internal libraries set up barebones's events and processes.  Feel free to inspect them/change them if you need to.
 require('internal/gamemode')
