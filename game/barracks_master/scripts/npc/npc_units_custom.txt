@@ -9,8 +9,8 @@
     // General
     //----------------------------------------------------------------
     "BaseClass"                 "npc_dota_creature"
-    "Model"                     "models/props_structures/good_ancient_dest_sim.vmdl"
-    "ModelScale"                "0.6"
+    "Model"                     "models/creeps/lane_creeps/creep_radiant_melee/radiant_melee_mega.vmdl"
+    "ModelScale"                "2.0"
     "Level"                     "2"
     "HealthBarOffset"           "140"
     "HasInventory"              "1"

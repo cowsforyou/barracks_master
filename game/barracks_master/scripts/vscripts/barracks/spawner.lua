@@ -90,10 +90,14 @@ function GetPlayerColor(player)
     local unitName = unit:GetUnitName()
     
     local color = nil
-    if unitName == "npc_dota_hero_axe" then
+    if unitName == "npc_dota_hero_sven" then
         color = "blue"
-    elseif unitName == "blah_blah" then
-        color = "whatever"
+    elseif unitName == "npc_dota_hero_templar_assassin" then
+        color = "purple"
+    elseif unitName == "npc_dota_hero_axe" then
+        color = "red"
+    elseif unitName == "npc_dota_hero_venomancer" then
+        color = "green"
     end
     
     return color

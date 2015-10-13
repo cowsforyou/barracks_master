@@ -11,7 +11,7 @@
 
 -- Building Mechanics --
 
-[ ] Import build helper
+[x] Import build helper
 [ ] Create core buildings
 [ ] Link creeps to specific buildings
 [ ] Create ranged and siege creeps
