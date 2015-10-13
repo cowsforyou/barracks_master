@@ -25,16 +25,16 @@ function OnSpellStart( keys )
 
     local color = GetPlayerColor(player)
     local creepCount = ability:GetSpecialValueFor("creep_count")
-    local creepDelay = ability:GetSpecialValueFor("creep_delay") -- NOTE: curently unused
+    local creepName = keys.creepName
 
-    SpawnCreeps(color, creepCount, creepDelay, ability)
+    SpawnCreeps(creepName, color, creepCount, ability)
 end
 
 -----------------------
 -- Spawn creep groups and manage building ability cooldown
 -----------------------
-function SpawnCreeps(color, number, repeatEvery, ability)
-    local team = GetTeamByColor(color)
+function SpawnCreeps(playerColor, numberToSpawn, buildingAbility)
+    local team = GetTeamByColor(playerColor)
 
     local p1_string, p2_string = nil, nil
     if team == DOTA_TEAM_GOODGUYS then
@@ -45,7 +45,7 @@ function SpawnCreeps(color, number, repeatEvery, ability)
         p2_string = "lane_mid_pathcorner_badguys_2"
     end
 
-    local spawner = Entities:FindByName(nil, color.."_npc_spawner")
+    local spawner = Entities:FindByName(nil, playerColor.."_npc_spawner")
     local point1  = Entities:FindByName(nil, p1_string)
     local point2  = Entities:FindByName(nil, p2_string)
     local start_position = spawner:GetAbsOrigin()
@@ -54,21 +54,19 @@ function SpawnCreeps(color, number, repeatEvery, ability)
   
     -- set the cooldown to the next 30 second interval
     local nextSync = SpawnSynchronizer:GetNextInterval()
-    ability:StartCooldown(nextSync) --ability:StartCooldown(repeatEvery)
+    buildingAbility:StartCooldown(nextSync)
 
     -- don't spawn creeps the first time this ability is used
     -- the -1.0 gives us a little wiggleroom for the Thinker
     if nextSync < (RESPAWN_TIME-1.0) then return end
 
     -- create the unit group
-    for i=1, number do
+    for i=1, numberToSpawn do
         local unit = CreateUnitByName("creep_melee", start_position, true, nil, nil, team)
-        
+        ApplyCreepParameters(unit, team, playerColor)
+       
         -- short delay before issuing orders, or the orders won't go through
         Timers:CreateTimer(0.1, function()
-            print("Applying creep params")
-            ApplyCreepParameters(unit, team, color)
-        
             local order1 = {}
             order1["UnitIndex"] = unit:GetEntityIndex()
             order1["OrderType"] = DOTA_UNIT_ORDER_ATTACK_MOVE
@@ -99,16 +97,13 @@ function ApplyCreepParameters(unit, team, color)
             unit:SetModel(model)
             unit:SetOriginalModel(model)
         end
-        
-        if     color == "red"    then
-            --unit:SetRenderMode(0)
-            unit:SetRenderColor(255,0,0)
-        elseif color == "blue"   then unit:SetRenderColor(0,0,255)
-        elseif color == "green"  then unit:SetRenderColor(0,255,0)
-        elseif color == "purple" then unit:SetRenderColor(255,0,255)
-        end
     end
     
+    if     color == "red"    then unit:SetRenderColor(255,0,0)
+    elseif color == "blue"   then unit:SetRenderColor(0,0,255)
+    elseif color == "green"  then unit:SetRenderColor(0,255,0)
+    elseif color == "purple" then unit:SetRenderColor(255,0,255)
+    end
     
 end
 

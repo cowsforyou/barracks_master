@@ -17,11 +17,6 @@
 	            "var_type"				"FIELD_INTEGER"
 	            "creep_count"			"4"
 	        }
-	        "02"
-	        {
-	        	"var_type"				"FIELD_FLOAT"
-	        	"creep_delay"			"30.0"
-	        }
 	    }
 
 	    // run this script every time the spell is used
@@ -31,6 +26,7 @@
 	        {
 	            "ScriptFile"    "barracks/spawner.lua"
 	            "Function"      "OnSpellStart"
+	            "creepName"		"creep_melee"
 	        }
 	    }
 
