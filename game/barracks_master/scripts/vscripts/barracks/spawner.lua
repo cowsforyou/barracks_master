@@ -31,7 +31,7 @@ function OnSpellStart( keys )
 end
 
 -----------------------
--- Spawn creeps and manage building ability cooldown
+-- Spawn creep groups and manage building ability cooldown
 -----------------------
 function SpawnCreeps(color, number, repeatEvery, ability)
     local team = GetTeamByColor(color)
@@ -62,10 +62,12 @@ function SpawnCreeps(color, number, repeatEvery, ability)
 
     -- create the unit group
     for i=1, number do
-        local unit = CreateUnitByName(color.."_creep_melee", start_position, true, nil, nil, team)
+        local unit = CreateUnitByName("creep_melee", start_position, true, nil, nil, team)
         
         -- short delay before issuing orders, or the orders won't go through
         Timers:CreateTimer(0.1, function()
+            ApplyCreepParameters(unit, team, color)
+        
             local order1 = {}
             order1["UnitIndex"] = unit:GetEntityIndex()
             order1["OrderType"] = DOTA_UNIT_ORDER_ATTACK_MOVE
@@ -80,6 +82,26 @@ function SpawnCreeps(color, number, repeatEvery, ability)
             return nil
         end)
     end
+end
+
+function ApplyCreepParameters(unit, team, color)
+    local unitName = unit:GetUnitName()
+    
+    if unitName == "creep_melee" then
+        if team == DOTA_TEAM_GOODGUYS then
+            unit:SetOriginalModel("models/creeps/lane_creeps/creep_radiant_melee/radiant_melee.vmdl")
+        else
+            unit:SetOriginalModel("models/creeps/lane_creeps/creep_bad_melee/creep_bad_melee.vmdl")
+        end
+        
+        if     color == "red"    then unit:SetRenderColor(255,0,0)
+        elseif color == "blue"   then unit:SetRenderColor(0,0,255)
+        elseif color == "green"  then unit:SetRenderColor(0,255,0)
+        elseif color == "purple" then unit:SetRenderColor(255,0,255)
+        end
+    end
+    
+    
 end
 
 -----------------------
