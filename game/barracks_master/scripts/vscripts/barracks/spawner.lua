@@ -33,7 +33,7 @@ end
 -----------------------
 -- Spawn creep groups and manage building ability cooldown
 -----------------------
-function SpawnCreeps(playerColor, numberToSpawn, buildingAbility)
+function SpawnCreeps(creepName, playerColor, numberToSpawn, buildingAbility)
     local team = GetTeamByColor(playerColor)
 
     local p1_string, p2_string = nil, nil
@@ -62,7 +62,7 @@ function SpawnCreeps(playerColor, numberToSpawn, buildingAbility)
 
     -- create the unit group
     for i=1, numberToSpawn do
-        local unit = CreateUnitByName("creep_melee", start_position, true, nil, nil, team)
+        local unit = CreateUnitByName(creepName, start_position, true, nil, nil, team)
         ApplyCreepParameters(unit, team, playerColor)
        
         -- short delay before issuing orders, or the orders won't go through
