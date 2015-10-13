@@ -66,6 +66,7 @@ function SpawnCreeps(color, number, repeatEvery, ability)
         
         -- short delay before issuing orders, or the orders won't go through
         Timers:CreateTimer(0.1, function()
+            print("Applying creep params")
             ApplyCreepParameters(unit, team, color)
         
             local order1 = {}
@@ -86,15 +87,22 @@ end
 
 function ApplyCreepParameters(unit, team, color)
     local unitName = unit:GetUnitName()
+    local model = nil
     
     if unitName == "creep_melee" then
         if team == DOTA_TEAM_GOODGUYS then
-            unit:SetOriginalModel("models/creeps/lane_creeps/creep_radiant_melee/radiant_melee.vmdl")
+            model = "models/creeps/lane_creeps/creep_radiant_melee/radiant_melee.vmdl"
+            unit:SetModel(model)
+            unit:SetOriginalModel(model)
         else
-            unit:SetOriginalModel("models/creeps/lane_creeps/creep_bad_melee/creep_bad_melee.vmdl")
+            model = "models/creeps/lane_creeps/creep_bad_melee/creep_bad_melee.vmdl"
+            unit:SetModel(model)
+            unit:SetOriginalModel(model)
         end
         
-        if     color == "red"    then unit:SetRenderColor(255,0,0)
+        if     color == "red"    then
+            --unit:SetRenderMode(0)
+            unit:SetRenderColor(255,0,0)
         elseif color == "blue"   then unit:SetRenderColor(0,0,255)
         elseif color == "green"  then unit:SetRenderColor(0,255,0)
         elseif color == "purple" then unit:SetRenderColor(255,0,255)
