@@ -1,0 +1,51 @@
+// Autocast creep spawner spell; starts casting as soon as the building is fully constructed
+"spawn_melee_creeps"
+{
+    "BaseClass"                     "ability_datadriven"
+    "AbilityTextureName"            "build_city_center"
+    "MaxLevel"                      "1"
+
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+    "AbilityCastPoint"              "0"
+
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "creep_count"			"4"
+        }
+    }
+
+    // run this script every time the spell is used
+    "OnSpellStart"
+    {
+        "RunScript"
+        {
+            "ScriptFile"    "barracks/spawner.lua"
+            "Function"      "OnSpellStart"
+            "creepName"		"creep_melee"
+        }
+    }
+
+    // modifiers are buffs/debuffs, usually associated with abilities
+    "Modifiers"
+    {
+    	"modifier_spawn_melee_creeps_thinker"
+    	{
+    		"Passive"			"1" // start activated
+    		"IsHidden"			"1" // hide the visual buff icon
+
+    		// run this Think() script every 0.25 seconds
+			"ThinkInterval" 	"0.25"
+		    "OnIntervalThink"
+			{
+				"RunScript"
+		        {
+		            "ScriptFile"    "barracks/spawner.lua"
+		            "Function"      "Think"
+		        }
+			}
+   	    	}
+    }
+}

@@ -1,0 +1,21 @@
+"move_to_point_100"
+{
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+	"BaseClass"						"ability_datadriven"
+	"AbilityCastPoint"				"0"
+	"AbilityCooldown"				"0"
+	"AbilityCastRange"				"100"
+	"MaxLevel"						"1"
+
+	"AbilityManaCost"				"0"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"Target"		"POINT"
+			"ScriptFile"	"builder.lua"
+			"Function"		"StartBuilding"
+		}
+	}
+}

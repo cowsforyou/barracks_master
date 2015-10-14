@@ -1,0 +1,102 @@
+"repair"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"repair"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING | DOTA_UNIT_TARGET_HERO"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+
+	"AbilityMultiOrder"				"1"
+
+	// Mark this as a BuildingHelper ability to skip CancelQueue when cast
+	"Building"						"1"
+
+	"precache"
+	{
+		"particle"  "particles/units/heroes/hero_wisp/wisp_overcharge.vpcf"
+	}
+
+	"OnAbilityPhaseStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"builder.lua"
+			"Function"		"RepairStart"
+		}
+	}
+
+	"Modifiers"
+	{
+		// While moving to repair, cancel the process if another order is given
+		"modifier_on_order_cancel_repair"
+		{
+			"IsHidden"				"1"
+			"OnOrder"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"builder.lua"
+					"Function"		"CancelRepair"
+				}
+			}
+		}
+
+		// On the caster
+		"modifier_builder_repairing"
+		{
+			"OverrideAnimation" 	"ACT_DOTA_ATTACK"
+
+			"OnCreated"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"builder.lua"
+					"Function"		"CancelRepair"
+				}
+				
+				"RunScript"
+				{
+					"ScriptFile"	"builder.lua"
+					"Function"		"BuilderRepairing"
+				}
+			}
+
+			"OnOrder"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"builder.lua"
+					"Function"		"BuilderStopRepairing"
+				}
+			}
+
+			"ThinkInterval"  	"1.0"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"builder.lua"
+					"Function"		"RepairAnimation"
+				}
+			}	
+		}
+
+		// Stackable modifier on the building
+		"modifier_repairing_building"
+		{
+			"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			"ThinkInterval"  	"1.0"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"builder.lua"
+					"Function"		"Repair"
+				}
+			}
+		}
+	}
+}

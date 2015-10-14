@@ -1,0 +1,7 @@
+// A _disabled ability is required to show the requirements on the tooltip
+"build_tech_center_disabled"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"build_tech_center"
+	"MaxLevel" 						"0"
+}

@@ -1,0 +1,6 @@
+"train_dark_tower_disabled"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"train_dark_tower"
+	"MaxLevel" 						"0"
+}

@@ -1,0 +1,73 @@
+//=================================================================================
+ // Building: Melee Barracks
+ //=================================================================================
+ "bm_melee_barracks"
+ {
+    // General
+    //----------------------------------------------------------------
+    "BaseClass"                 "npc_dota_creature"
+    "Model"                     "models/creeps/lane_creeps/creep_radiant_melee/radiant_melee_mega.vmdl"
+    "ModelScale"                "2.0"
+    "Level"                     "2"
+    "HealthBarOffset"           "140"
+    "HasInventory"              "1"
+    "ConsideredHero"            "1" // interesting?
+    
+    // Abilities
+    //----------------------------------------------------------------
+    "AbilityLayout"             "4"
+    "Ability1"                  "spawn_melee_creeps"
+    "Ability2"                  ""
+    "Ability3"                  ""
+    "Ability4"                  ""
+    "Ability10"                 "ability_building"
+    "Ability11"                 "ability_building_queue"
+
+    // Armor
+    //----------------------------------------------------------------
+    "ArmorPhysical"             "5"
+    "MagicalResistance"         "0"
+    
+    // Attack
+    //----------------------------------------------------------------
+    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+    "AttackDamageType"          "DAMAGE_TYPE_ArmorPhysical"
+    "AttackDamageMin"           "0"
+    "AttackDamageMax"           "0"
+    
+    // Bounty
+    //----------------------------------------------------------------
+    "BountyGoldMin"             "0.0"
+    "BountyGoldMax"             "0.0"
+    
+    // Bounds
+    //----------------------------------------------------------------
+    "BoundsHullName"            "DOTA_HULL_SIZE_HUGE"
+    "RingRadius"                "220"
+    "CollisionSize"             "100"
+        
+    // Movement
+    //----------------------------------------------------------------
+    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_GROUND"
+    "MovementSpeed"             "0"
+    
+    // Status
+    //----------------------------------------------------------------
+    "StatusHealth"              "2000"
+    "StatusHealthRegen"         "0"
+    "StatusMana"                "100"
+    "StatusManaRegen"           "0"
+    
+    // Vision
+    //----------------------------------------------------------------
+    "VisionDaytimeRange"        "900"
+    "VisionNighttimeRange"      "600"
+    
+    // Team
+    //----------------------------------------------------------------
+    "TeamName"                  "DOTA_TEAM_NEUTRALS"
+    "CombatClassAttack"         "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+    "UnitRelationShipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+    
+ }

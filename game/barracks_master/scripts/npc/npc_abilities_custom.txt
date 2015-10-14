@@ -1,113 +1,93 @@
 "DOTAAbilities"
 {
-	// Autocast creep spawner spell; starts casting as soon as the building is fully constructed
-	"spawn_melee_creeps"
+	"ability_building"
 	{
-	    "BaseClass"                     "ability_datadriven"
-	    "AbilityTextureName"            "build_city_center"
-	    "MaxLevel"                      "1"
-
-	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-	    "AbilityCastPoint"              "0"
-
-	    "AbilitySpecial"
-	    {
-	        "01"
-	        {
-	            "var_type"				"FIELD_INTEGER"
-	            "creep_count"			"4"
-	        }
-	    }
-
-	    // run this script every time the spell is used
-	    "OnSpellStart"
-	    {
-	        "RunScript"
-	        {
-	            "ScriptFile"    "barracks/spawner.lua"
-	            "Function"      "OnSpellStart"
-	            "creepName"		"creep_melee"
-	        }
-	    }
-
-	    // modifiers are buffs/debuffs, usually associated with abilities
-	    "Modifiers"
-	    {
-	    	"modifier_spawn_melee_creeps_thinker"
-	    	{
-	    		"Passive"			"1" // start activated
-	    		"IsHidden"			"1" // hide the visual buff icon
-
-	    		// run this Think() script every 0.25 seconds
-				"ThinkInterval" 	"0.25"
-			    "OnIntervalThink"
+		"BaseClass"             		"ability_datadriven"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	
+		"Modifiers"
+		{
+			"modifier_building"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes"		"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"	
+				"States"
+				{
+					"MODIFIER_STATE_MAGIC_IMMUNE" "MODIFIER_STATE_VALUE_ENABLED" // Makes most abilities don't affect this. Use custom damage
+					"MODIFIER_STATE_ROOTED"		"MODIFIER_STATE_VALUE_ENABLED" // Prevents moving
+					"MODIFIER_STATE_SPECIALLY_DENIABLE" "MODIFIER_STATE_VALUE_ENABLED" // Allows attacking own buildings
+					"MODIFIER_STATE_LOW_ATTACK_PRIORITY" "MODIFIER_STATE_VALUE_ENABLED" // Makes it a secondary target when A-clicking ground
+					"MODIFIER_STATE_NO_UNIT_COLLISION"	"MODIFIER_STATE_VALUE_ENABLED" // GridNav is blocked
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_DISABLE_TURNING" "1"
+					"MODIFIER_PROPERTY_IGNORE_CAST_ANGLE" "1"
+					"MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE"	"0.1"
+				}
+			}
+		}		
+	}
+	"ability_building_queue"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	
+		"Modifiers"
+		{
+			"modifier_building_queue"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+		
+				"ThinkInterval"  "0.03"
+				"OnIntervalThink"
 				{
 					"RunScript"
-			        {
-			            "ScriptFile"    "barracks/spawner.lua"
-			            "Function"      "Think"
-			        }
+					{
+						"ScriptFile"	"buildings/queue.lua"
+						"Function"		"AdvanceQueue"
+					}
 				}
-   	    	}
-	    }
+			}
+		}
 	}
-
-	// Placement of a big building, with rotation of the model, builder goes inside
-	"build_bm_melee_barracks"
+	"ability_tower"
 	{
-	    "BaseClass"                     "ability_datadriven"
-	    "AbilityTextureName"            "build_city_center"
-	    "MaxLevel"                      "1"
-
-	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-	    "AbilityCastPoint"              "0"
-
-	    // BuildingHelper info
-	    "Building"                      "1" //bool
-	    "BuildingSize"                  "5"
-	    "BuildTime"                     "15.0"
-	    "AbilityCastRange"              "200"
-	    "UpdateHealth"                  "1" //bool
-	    "Scale"                         "0" //bool
-	    "PlayerCanControl"              "1" //bool
-
-	    "BuilderInside"                 "1" //bool
-	    "ModelRotation"                 "90.0"
-
-	    "UnitName"                      "bm_melee_barracks"
-	    "AbilityCooldown"               "0"
-	    "AbilityGoldCost"               "100"
-	    // End of BuildingHelper info
-
-	    "AbilitySpecial"
-	    {
-	        "01"
-	        {
-	            "var_type"              "FIELD_FLOAT"
-	            "build_time"            "15.0"
-	        }
-	        "02"
-	        {
-	            "var_type"              "FIELD_INTEGER"
-	            "gold_cost"             "100"
-	        }
-	        "03"
-	        {
-	            "var_type"              "FIELD_INTEGER"
-	            "lumber_cost"           "100"
-	        }
-	    }
-
-	    "OnSpellStart"
-	    {
-	        "RunScript"
-	        {
-	            "ScriptFile"    "builder.lua"
-	            "Function"      "Build"
-	        }
-	    }
+		"BaseClass"             		"ability_datadriven"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	
+		"Modifiers"
+		{
+			"modifier_tower"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes"		"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"	
+				"States"
+				{
+					"MODIFIER_STATE_MAGIC_IMMUNE" "MODIFIER_STATE_VALUE_ENABLED" // Makes most abilities don't affect this. Use custom damage
+					"MODIFIER_STATE_ROOTED"		"MODIFIER_STATE_VALUE_ENABLED" // Prevents moving
+					"MODIFIER_STATE_SPECIALLY_DENIABLE" "MODIFIER_STATE_VALUE_ENABLED" // Allows attacking own buildings
+					"MODIFIER_STATE_LOW_ATTACK_PRIORITY" "MODIFIER_STATE_VALUE_ENABLED" // Makes it a secondary target when A-clicking ground
+					"MODIFIER_STATE_NO_UNIT_COLLISION"	"MODIFIER_STATE_VALUE_ENABLED" // GridNav is blocked
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_DISABLE_TURNING" "1"
+					"MODIFIER_PROPERTY_IGNORE_CAST_ANGLE" "1"
+					"MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE"	"0.1"
+				}
+			}
+		}		
 	}
-
 	"barebones_empty1"
 	  {
 	    // General
@@ -168,332 +148,61 @@
 	    "BaseClass"           "ability_datadriven"
 	    "AbilityTextureName"            "rubick_empty1"
 	  }
-	"train_city_center_tier2"
+	// Placement of a big building, with rotation of the model, builder goes inside
+	"build_bm_melee_barracks"
 	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"train_city_center_tier2"
-		"MaxLevel" 						"1"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "build_city_center"
+	    "MaxLevel"                      "1"
 	
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityCastPoint"              "0"
 	
-		"AbilityGoldCost"				"100"
-		"AbilityChannelTime"			"10"
+	    // BuildingHelper info
+	    "Building"                      "1" //bool
+	    "BuildingSize"                  "5"
+	    "BuildTime"                     "15.0"
+	    "AbilityCastRange"              "200"
+	    "UpdateHealth"                  "1" //bool
+	    "Scale"                         "0" //bool
+	    "PlayerCanControl"              "1" //bool
 	
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"build_time"			"10.0" 
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"100"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"205"
-			}
-		}
+	    "BuilderInside"                 "1" //bool
+	    "ModelRotation"                 "90.0"
 	
-		"precache"
-		{
-			"particle"  "particles/radiant_fx2/good_ancient001_ambient_fallback_med.vpcf"
-		}
+	    "UnitName"                      "bm_melee_barracks"
+	    "AbilityCooldown"               "0"
+	    "AbilityGoldCost"               "100"
+	    // End of BuildingHelper info
 	
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"buildings/queue.lua"
-				"Function"		"EnqueueUnit"
-			}
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"              "FIELD_FLOAT"
+	            "build_time"            "15.0"
+	        }
+	        "02"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "gold_cost"             "100"
+	        }
+	        "03"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "lumber_cost"           "100"
+	        }
+	    }
 	
-			"RunScript"
-			{
-				"ScriptFile"	"buildings/upgrades.lua"
-				"Function"		"StartUpgrade"
-				"ModifierName"	"modifier_building_particle"
-			}
-		}
-	
-		"OnChannelSucceeded"
-		{
-			// Consume the first item in the queue
-			"RunScript"
-			{
-				"ScriptFile"   	"buildings/queue.lua"
-				"Function"      "NextQueue"
-			}
-	
-			"RunScript"
-			{
-				"ScriptFile"	"buildings/upgrades.lua"
-				"Function"		"UpgradeBuilding"
-				"UnitName"		"city_center_tier2"
-			}		
-		}
-	
-		"Modifiers"
-		{
-			"modifier_building_particle"
-			{
-				"IsHidden"			"1"
-		
-				"OnCreated"
-				{
-					"AttachEffect"
-					{
-						"EffectName"        "particles/radiant_fx2/good_ancient001_ambient_fallback_med.vpcf"
-						"EffectAttachType"  "follow_origin"
-						"Target"			"CASTER"
-						"ControlPointEntities"
-						{
-							"CASTER"	"attach_fx"
-						}
-					}
-				}
-			}
-		}
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "builder.lua"
+	            "Function"      "Build"
+	        }
+	    }
 	}
-	
-	"train_city_center_tier2_disabled"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"train_city_center_tier2"
-		"MaxLevel" 						"0"
-	}
-	
-	"train_tower_tier2"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"train_tower_tier2"
-		"MaxLevel" 						"1"
-	
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
-	
-		"AbilityGoldCost"				"100"
-		"AbilityChannelTime"			"5"
-	
-		"AbilityMultiOrder"				"1"
-	
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"build_time"			"5.0" 
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"100"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"70"
-			}
-		}
-	
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"buildings/queue.lua"
-				"Function"		"EnqueueUnit"
-			}
-	
-			"RunScript"
-			{
-				"ScriptFile"	"buildings/upgrades.lua"
-				"Function"		"StartUpgrade"
-				"ModifierName"	"modifier_building_particle"
-			}
-		}
-	
-		"OnChannelSucceeded"
-		{
-			// Consume the first item in the queue
-			"RunScript"
-			{
-				"ScriptFile"   	"buildings/queue.lua"
-				"Function"      "NextQueue"
-			}
-	
-			"RunScript"
-			{
-				"ScriptFile"	"buildings/upgrades.lua"
-				"Function"		"UpgradeBuilding"
-				"UnitName"		"tower_tier2"
-			}		
-		}
-	}
-	
-	"train_dark_tower"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"train_dark_tower"
-		"MaxLevel" 						"1"
-	
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
-	
-		"AbilityGoldCost"				"100"
-		"AbilityChannelTime"			"7"
-	
-		"AbilityMultiOrder"				"1"
-	
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"build_time"			"7.0" 
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"100"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"70"
-			}
-		}
-	
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"buildings/queue.lua"
-				"Function"		"EnqueueUnit"
-			}
-	
-			"RunScript"
-			{
-				"ScriptFile"	"buildings/upgrades.lua"
-				"Function"		"StartUpgrade"
-				"ModifierName"	"modifier_building_particle"
-			}
-		}
-	
-		"OnChannelSucceeded"
-		{
-			// Consume the first item in the queue
-			"RunScript"
-			{
-				"ScriptFile"   	"buildings/queue.lua"
-				"Function"      "NextQueue"
-			}
-	
-			"RunScript"
-			{
-				"ScriptFile"	"buildings/upgrades.lua"
-				"Function"		"UpgradeBuilding"
-				"UnitName"		"dark_tower"
-			}		
-		}
-	}
-	
-	"train_dark_tower_disabled"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"train_dark_tower"
-		"MaxLevel" 						"0"
-	}
-	
-	
-	"city_center_tier2_passive"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"MaxLevel" 						"1"
-		"AbilityTexture"				"city_center_tier2_passive"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	
-		"precache"
-		{
-			"particle"  "particles/radiant_fx2/good_ancient001_ambient_fallback_med.vpcf"
-		}
-	
-		"Modifiers"
-		{
-			"modifier_keep_particle"
-			{
-				"Passive"			"1"
-				"IsHidden"			"1"
-		
-				"OnCreated"
-				{
-					"AttachEffect"
-					{
-						"EffectName"        "particles/radiant_fx2/good_ancient001_ambient_fallback_med.vpcf"
-						"EffectAttachType"  "follow_origin"
-						"Target"			"CASTER"
-						"ControlPointEntities"
-						{
-							"CASTER"	"attach_fx"
-						}
-					}
-				}
-			}
-		}
-	}
-	// Simple tower placement, normal behavior
-	"build_tower"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower"
-		"MaxLevel" 						"1"
-	
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityCastPoint"				"0"
-	
-		// BuildingHelper info
-		"Building"						"1" //bool
-		"BuildingSize"					"2"
-		"BuildTime"						"5.0"
-		"AbilityCastRange"				"200"
-		"UpdateHealth"					"1" //bool
-		"Scale"							"0" //bool
-		"PlayerCanControl"				"1" //bool
-	
-		"UnitName"						"tower"
-		"AbilityCooldown"				"0"
-		"AbilityGoldCost"				"50"
-		// End of BuildingHelper info
-	
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"build_time"			"5.0"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"50"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"0"
-			}
-		}
-	
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"builder.lua"
-				"Function"		"Build"
-			}
-		}
-	}
-	
 	// Placement of a big building, with rotation of the model, builder goes inside
 	"build_city_center"
 	{
@@ -549,69 +258,6 @@
 			}
 		}
 	}
-	
-	// Building requires repair to finish construction. Can be assisted to make the process faster
-	"build_tech_center"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tech_center"
-		"MaxLevel" 						"1"
-	
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-	
-		// BuildingHelper info
-		"Building"						"1" //bool
-		"BuildingSize"					"4" 
-		"BuildTime"						"30.0"
-		"AbilityCastRange"				"200"
-		"UpdateHealth"					"1" //bool
-		"Scale"							"0" //bool
-		"PlayerCanControl"				"1" //bool
-	
-		"RequiresRepair"				"1"
-	
-		"UnitName"						"tech_center"
-		"AbilityCooldown"				"0"
-		"AbilityGoldCost"				"100"
-		// End of BuildingHelper info
-	
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"build_time"			"30.0"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"100"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"100"
-			}
-		}
-	
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"builder.lua"
-				"Function"		"Build"
-			}
-		}
-	}
-	
-	// A _disabled ability is required to show the requirements on the tooltip
-	"build_tech_center_disabled"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tech_center"
-		"MaxLevel" 						"0"
-	}
-	
 	// The builder is killed after finishing the building
 	"build_dragon_tower"
 	{
@@ -667,12 +313,158 @@
 			}
 		}
 	}
-	
 	"build_dragon_tower_disabled"
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"build_dragon_tower"
 		"MaxLevel" 						"0"
+	}
+	// Building requires repair to finish construction. Can be assisted to make the process faster
+	"build_tech_center"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"build_tech_center"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"4" 
+		"BuildTime"						"30.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"RequiresRepair"				"1"
+	
+		"UnitName"						"tech_center"
+		"AbilityCooldown"				"0"
+		"AbilityGoldCost"				"100"
+		// End of BuildingHelper info
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"30.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"100"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"100"
+			}
+		}
+	
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	// A _disabled ability is required to show the requirements on the tooltip
+	"build_tech_center_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"build_tech_center"
+		"MaxLevel" 						"0"
+	}
+	// Simple tower placement, normal behavior
+	"build_tower"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"build_tower"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityCastPoint"				"0"
+	
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"2"
+		"BuildTime"						"5.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"UnitName"						"tower"
+		"AbilityCooldown"				"0"
+		"AbilityGoldCost"				"50"
+		// End of BuildingHelper info
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"50"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	"city_center_tier2_passive"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"MaxLevel" 						"1"
+		"AbilityTexture"				"city_center_tier2_passive"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	
+		"precache"
+		{
+			"particle"  "particles/radiant_fx2/good_ancient001_ambient_fallback_med.vpcf"
+		}
+	
+		"Modifiers"
+		{
+			"modifier_keep_particle"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+		
+				"OnCreated"
+				{
+					"AttachEffect"
+					{
+						"EffectName"        "particles/radiant_fx2/good_ancient001_ambient_fallback_med.vpcf"
+						"EffectAttachType"  "follow_origin"
+						"Target"			"CASTER"
+						"ControlPointEntities"
+						{
+							"CASTER"	"attach_fx"
+						}
+					}
+				}
+			}
+		}
 	}
 	//-------------------
 	// Dummy stuff
@@ -875,6 +667,111 @@
 	      }
 	    }
 	  }
+	"move_to_point_100"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"BaseClass"						"ability_datadriven"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"AbilityCastRange"				"100"
+		"MaxLevel"						"1"
+	
+		"AbilityManaCost"				"0"
+	
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"Target"		"POINT"
+				"ScriptFile"	"builder.lua"
+				"Function"		"StartBuilding"
+			}
+		}
+	}
+	"move_to_point_150"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"BaseClass"						"ability_datadriven"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"AbilityCastRange"				"150"
+		"MaxLevel"						"1"
+	
+		"AbilityManaCost"				"0"
+	
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"Target"		"POINT"
+				"ScriptFile"	"builder.lua"
+				"Function"		"StartBuilding"
+			}
+		}
+	}
+	"move_to_point_200"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"BaseClass"						"ability_datadriven"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"AbilityCastRange"				"200"
+		"MaxLevel"						"1"
+	
+		"AbilityManaCost"				"0"
+	
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"Target"		"POINT"
+				"ScriptFile"	"builder.lua"
+				"Function"		"StartBuilding"
+			}
+		}
+	}
+	"move_to_point_250"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"BaseClass"						"ability_datadriven"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"AbilityCastRange"				"250"
+		"MaxLevel"						"1"
+	
+		"AbilityManaCost"				"0"
+	
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"Target"		"POINT"
+				"ScriptFile"	"builder.lua"
+				"Function"		"StartBuilding"
+			}
+		}
+	}
+	"move_to_point_300"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"BaseClass"						"ability_datadriven"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"AbilityCastRange"				"300"
+		"MaxLevel"						"1"
+	
+		"AbilityManaCost"				"0"
+	
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"Target"		"POINT"
+				"ScriptFile"	"builder.lua"
+				"Function"		"StartBuildingEntity"
+			}
+		}
+	}
 	"repair"
 	{
 		"BaseClass"             		"ability_datadriven"
@@ -1037,7 +934,6 @@
 			}
 		}
 	}
-	
 	"research_ultimate_ability"
 	{
 		"BaseClass"             		"ability_datadriven"
@@ -1104,6 +1000,289 @@
 		"AbilityTextureName"			"research_ultimate_ability"
 		"MaxLevel" 						"0"
 	}
+	// Autocast creep spawner spell; starts casting as soon as the building is fully constructed
+	"spawn_melee_creeps"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "build_city_center"
+	    "MaxLevel"                      "1"
+	
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"
+	
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"				"FIELD_INTEGER"
+	            "creep_count"			"4"
+	        }
+	    }
+	
+	    // run this script every time the spell is used
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "barracks/spawner.lua"
+	            "Function"      "OnSpellStart"
+	            "creepName"		"creep_melee"
+	        }
+	    }
+	
+	    // modifiers are buffs/debuffs, usually associated with abilities
+	    "Modifiers"
+	    {
+	    	"modifier_spawn_melee_creeps_thinker"
+	    	{
+	    		"Passive"			"1" // start activated
+	    		"IsHidden"			"1" // hide the visual buff icon
+	
+	    		// run this Think() script every 0.25 seconds
+				"ThinkInterval" 	"0.25"
+			    "OnIntervalThink"
+				{
+					"RunScript"
+			        {
+			            "ScriptFile"    "barracks/spawner.lua"
+			            "Function"      "Think"
+			        }
+				}
+	   	    	}
+	    }
+	}
+	"train_city_center_tier2"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"train_city_center_tier2"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	
+		"AbilityGoldCost"				"100"
+		"AbilityChannelTime"			"10"
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"10.0" 
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"100"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"205"
+			}
+		}
+	
+		"precache"
+		{
+			"particle"  "particles/radiant_fx2/good_ancient001_ambient_fallback_med.vpcf"
+		}
+	
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/queue.lua"
+				"Function"		"EnqueueUnit"
+			}
+	
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/upgrades.lua"
+				"Function"		"StartUpgrade"
+				"ModifierName"	"modifier_building_particle"
+			}
+		}
+	
+		"OnChannelSucceeded"
+		{
+			// Consume the first item in the queue
+			"RunScript"
+			{
+				"ScriptFile"   	"buildings/queue.lua"
+				"Function"      "NextQueue"
+			}
+	
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/upgrades.lua"
+				"Function"		"UpgradeBuilding"
+				"UnitName"		"city_center_tier2"
+			}		
+		}
+	
+		"Modifiers"
+		{
+			"modifier_building_particle"
+			{
+				"IsHidden"			"1"
+		
+				"OnCreated"
+				{
+					"AttachEffect"
+					{
+						"EffectName"        "particles/radiant_fx2/good_ancient001_ambient_fallback_med.vpcf"
+						"EffectAttachType"  "follow_origin"
+						"Target"			"CASTER"
+						"ControlPointEntities"
+						{
+							"CASTER"	"attach_fx"
+						}
+					}
+				}
+			}
+		}
+	}
+	"train_city_center_tier2_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"train_city_center_tier2"
+		"MaxLevel" 						"0"
+	}
+	"train_dark_tower"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"train_dark_tower"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	
+		"AbilityGoldCost"				"100"
+		"AbilityChannelTime"			"7"
+	
+		"AbilityMultiOrder"				"1"
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"7.0" 
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"100"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"70"
+			}
+		}
+	
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/queue.lua"
+				"Function"		"EnqueueUnit"
+			}
+	
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/upgrades.lua"
+				"Function"		"StartUpgrade"
+				"ModifierName"	"modifier_building_particle"
+			}
+		}
+	
+		"OnChannelSucceeded"
+		{
+			// Consume the first item in the queue
+			"RunScript"
+			{
+				"ScriptFile"   	"buildings/queue.lua"
+				"Function"      "NextQueue"
+			}
+	
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/upgrades.lua"
+				"Function"		"UpgradeBuilding"
+				"UnitName"		"dark_tower"
+			}		
+		}
+	}
+	"train_dark_tower_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"train_dark_tower"
+		"MaxLevel" 						"0"
+	}
+	"train_tower_tier2"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"train_tower_tier2"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	
+		"AbilityGoldCost"				"100"
+		"AbilityChannelTime"			"5"
+	
+		"AbilityMultiOrder"				"1"
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5.0" 
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"100"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"70"
+			}
+		}
+	
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/queue.lua"
+				"Function"		"EnqueueUnit"
+			}
+	
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/upgrades.lua"
+				"Function"		"StartUpgrade"
+				"ModifierName"	"modifier_building_particle"
+			}
+		}
+	
+		"OnChannelSucceeded"
+		{
+			// Consume the first item in the queue
+			"RunScript"
+			{
+				"ScriptFile"   	"buildings/queue.lua"
+				"Function"      "NextQueue"
+			}
+	
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/upgrades.lua"
+				"Function"		"UpgradeBuilding"
+				"UnitName"		"tower_tier2"
+			}		
+		}
+	}
 	//SOME COOL ABILITY WITH WISPS
 	"ultimate_ability"
 	{
@@ -1114,209 +1293,10 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 	}
-	
 	"ultimate_ability_disabled"
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"research_ultimate_ability"
 		"MaxLevel" 						"0"
-	}
-	"ability_building"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"MaxLevel" 						"1"
-	
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
-	
-		"Modifiers"
-		{
-			"modifier_building"
-			{
-				"Passive"			"1"
-				"IsHidden"			"1"
-				"Attributes"		"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"	
-				"States"
-				{
-					"MODIFIER_STATE_MAGIC_IMMUNE" "MODIFIER_STATE_VALUE_ENABLED" // Makes most abilities don't affect this. Use custom damage
-					"MODIFIER_STATE_ROOTED"		"MODIFIER_STATE_VALUE_ENABLED" // Prevents moving
-					"MODIFIER_STATE_SPECIALLY_DENIABLE" "MODIFIER_STATE_VALUE_ENABLED" // Allows attacking own buildings
-					"MODIFIER_STATE_LOW_ATTACK_PRIORITY" "MODIFIER_STATE_VALUE_ENABLED" // Makes it a secondary target when A-clicking ground
-					"MODIFIER_STATE_NO_UNIT_COLLISION"	"MODIFIER_STATE_VALUE_ENABLED" // GridNav is blocked
-				}
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_DISABLE_TURNING" "1"
-					"MODIFIER_PROPERTY_IGNORE_CAST_ANGLE" "1"
-					"MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE"	"0.1"
-				}
-			}
-		}		
-	}
-	
-	"ability_tower"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"MaxLevel" 						"1"
-	
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
-	
-		"Modifiers"
-		{
-			"modifier_tower"
-			{
-				"Passive"			"1"
-				"IsHidden"			"1"
-				"Attributes"		"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"	
-				"States"
-				{
-					"MODIFIER_STATE_MAGIC_IMMUNE" "MODIFIER_STATE_VALUE_ENABLED" // Makes most abilities don't affect this. Use custom damage
-					"MODIFIER_STATE_ROOTED"		"MODIFIER_STATE_VALUE_ENABLED" // Prevents moving
-					"MODIFIER_STATE_SPECIALLY_DENIABLE" "MODIFIER_STATE_VALUE_ENABLED" // Allows attacking own buildings
-					"MODIFIER_STATE_LOW_ATTACK_PRIORITY" "MODIFIER_STATE_VALUE_ENABLED" // Makes it a secondary target when A-clicking ground
-					"MODIFIER_STATE_NO_UNIT_COLLISION"	"MODIFIER_STATE_VALUE_ENABLED" // GridNav is blocked
-				}
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_DISABLE_TURNING" "1"
-					"MODIFIER_PROPERTY_IGNORE_CAST_ANGLE" "1"
-					"MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE"	"0.1"
-				}
-			}
-		}		
-	}
-	"ability_building_queue"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"MaxLevel" 						"1"
-	
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
-	
-		"Modifiers"
-		{
-			"modifier_building_queue"
-			{
-				"Passive"			"1"
-				"IsHidden"			"1"
-		
-				"ThinkInterval"  "0.03"
-				"OnIntervalThink"
-				{
-					"RunScript"
-					{
-						"ScriptFile"	"buildings/queue.lua"
-						"Function"		"AdvanceQueue"
-					}
-				}
-			}
-		}
-	}
-	"move_to_point_100"
-	{
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
-		"BaseClass"						"ability_datadriven"
-		"AbilityCastPoint"				"0"
-		"AbilityCooldown"				"0"
-		"AbilityCastRange"				"100"
-		"MaxLevel"						"1"
-	
-		"AbilityManaCost"				"0"
-	
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"Target"		"POINT"
-				"ScriptFile"	"builder.lua"
-				"Function"		"StartBuilding"
-			}
-		}
-	}
-	
-	"move_to_point_150"
-	{
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
-		"BaseClass"						"ability_datadriven"
-		"AbilityCastPoint"				"0"
-		"AbilityCooldown"				"0"
-		"AbilityCastRange"				"150"
-		"MaxLevel"						"1"
-	
-		"AbilityManaCost"				"0"
-	
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"Target"		"POINT"
-				"ScriptFile"	"builder.lua"
-				"Function"		"StartBuilding"
-			}
-		}
-	}
-	
-	"move_to_point_200"
-	{
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
-		"BaseClass"						"ability_datadriven"
-		"AbilityCastPoint"				"0"
-		"AbilityCooldown"				"0"
-		"AbilityCastRange"				"200"
-		"MaxLevel"						"1"
-	
-		"AbilityManaCost"				"0"
-	
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"Target"		"POINT"
-				"ScriptFile"	"builder.lua"
-				"Function"		"StartBuilding"
-			}
-		}
-	}
-	
-	"move_to_point_250"
-	{
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
-		"BaseClass"						"ability_datadriven"
-		"AbilityCastPoint"				"0"
-		"AbilityCooldown"				"0"
-		"AbilityCastRange"				"250"
-		"MaxLevel"						"1"
-	
-		"AbilityManaCost"				"0"
-	
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"Target"		"POINT"
-				"ScriptFile"	"builder.lua"
-				"Function"		"StartBuilding"
-			}
-		}
-	}
-	
-	"move_to_point_300"
-	{
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
-		"BaseClass"						"ability_datadriven"
-		"AbilityCastPoint"				"0"
-		"AbilityCooldown"				"0"
-		"AbilityCastRange"				"300"
-		"MaxLevel"						"1"
-	
-		"AbilityManaCost"				"0"
-	
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"Target"		"POINT"
-				"ScriptFile"	"builder.lua"
-				"Function"		"StartBuildingEntity"
-			}
-		}
 	}
 }

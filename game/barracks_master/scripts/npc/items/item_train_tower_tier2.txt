@@ -1,0 +1,34 @@
+// Train abilities set all other abilities as hidden to prevent further queueing. The item re-enables them
+"item_train_tower_tier2"
+{
+	"BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_train_tower_tier2"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	"AbilityCastPoint"				"0"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+	
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/queue.lua"
+			"Function"		"DequeueUnit"
+		}
+
+		// Re-enable abilities
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"CancelUpgrade"
+		}
+
+		"RemoveModifier"
+		{
+			"ModifierName"	"modifier_building_particle"
+			"Target" 		"CASTER"
+		}
+	}
+}

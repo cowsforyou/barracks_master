@@ -28,7 +28,7 @@
 						}
 					}
 				}
- 
+	 
 				// added by Veggiesama START
 				"States"
 				{
@@ -307,7 +307,6 @@
 			}
 		}
 	}
-	
 	"item_research_ultimate_ability"
 	{
 		"BaseClass"             		"item_datadriven"
@@ -335,7 +334,6 @@
 			}
 		}
 	}
-	
 	"item_train_city_center_tier2"
 	{
 		"BaseClass"             		"item_datadriven"
@@ -369,12 +367,10 @@
 			}
 		}
 	}
-	
-	// Train abilities set all other abilities as hidden to prevent further queueing. The item re-enables them
-	"item_train_tower_tier2"
+	"item_train_dark_tower"
 	{
 		"BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_train_tower_tier2"
+		"AbilityTextureName"			"item_train_dark_tower"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 		"AbilityCastPoint"				"0"
 	
@@ -404,11 +400,11 @@
 			}
 		}
 	}
-	
-	"item_train_dark_tower"
+	// Train abilities set all other abilities as hidden to prevent further queueing. The item re-enables them
+	"item_train_tower_tier2"
 	{
 		"BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_train_dark_tower"
+		"AbilityTextureName"			"item_train_tower_tier2"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 		"AbilityCastPoint"				"0"
 	
