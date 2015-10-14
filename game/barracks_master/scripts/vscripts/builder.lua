@@ -34,6 +34,27 @@ function Build( event )
 	local playerID = hero:GetPlayerID()
 	local player = PlayerResource:GetPlayer(playerID)	
 
+	-- <<<VEGGIESAMA
+	-- Set MaxBuildingCount in the ability KV to trigger this check.
+	-- No one player can build more than X building units at a time.
+	local maxBuildingCount = AbilityKV[ability_name].MaxBuildingCount
+	local allCreatures = Entities:FindAllByClassname("npc_dota_creature")
+
+	local buildingCounter = 0 
+	for _,creature in pairs(allCreatures) do
+		if creature:GetUnitName() == building_name and creature:GetPlayerOwner() == player then
+			print(creature:GetPlayerOwnerID())
+			buildingCounter = buildingCounter + 1
+			print(buildingCounter)
+		end
+	end
+
+	if maxBuildingCount ~= nil and buildingCounter >= maxBuildingCount then
+		print("MaxBuildingCount limit reached! Aborting build command.")
+		return
+	end
+    -- VEGGIESAMA>>>
+
 	-- If the ability has an AbilityGoldCost, it's impossible to not have enough gold the first time it's cast
 	-- Always refund the gold here, as the building hasn't been placed yet
 	hero:ModifyGold(gold_cost, false, 0)

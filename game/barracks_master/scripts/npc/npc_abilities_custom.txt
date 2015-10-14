@@ -172,6 +172,7 @@
 		"UnitName"						"bm_melee_barracks"
 		"AbilityCooldown"				"0"
 		"AbilityGoldCost"				"100"
+		"MaxBuildingCount"				"2"
 		// End of BuildingHelper info
 	
 		"AbilitySpecial"
