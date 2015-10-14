@@ -1,8 +1,8 @@
 // Building requires repair to finish construction. Can be assisted to make the process faster
-"build_bm_melee_barracks"
+"build_bm_ranged_barracks"
 {
 	"BaseClass"             		"ability_datadriven"
-	"AbilityTextureName"			"build_tech_center"
+	"AbilityTextureName"			"build_dragon_tower"
 	"MaxLevel" 						"1"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -19,7 +19,7 @@
 	"RequiresRepair"				"1"
 	"ModelRotation"					"90.0"
 
-	"UnitName"						"bm_melee_barracks"
+	"UnitName"						"bm_ranged_barracks"
 	"AbilityCooldown"				"0"
 	"AbilityGoldCost"				"100"
 	// End of BuildingHelper info

@@ -1,13 +1,13 @@
- //=================================================================================
- // Building: Melee Barracks
- //=================================================================================
- "bm_melee_barracks"
+//=================================================================================
+// Building: Ranged Barracks
+//=================================================================================
+"bm_ranged_barracks"
 {
 	// General
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_creature"
-	"Model"						"models/creeps/lane_creeps/creep_radiant_melee/radiant_melee_mega.vmdl"
-	"ModelScale"				"2.0"
+	"Model"						"models/creeps/lane_creeps/creep_radiant_ranged/radiant_ranged_mega.vmdl"
+	"ModelScale"				"1.9"
 	"Level"						"1"
 	"HealthBarOffset"			"140"
 	"HasInventory"				"1"
@@ -16,7 +16,7 @@
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
-	"Ability1"					"spawn_melee_creeps"
+	"Ability1"					"spawn_ranged_creeps"
 	"Ability2"					"research_ultimate_ability"
 	"Ability3"					""
 	"Ability4"					""
@@ -53,7 +53,7 @@
 	
 	// Status
 	//----------------------------------------------------------------
-	"StatusHealth"				"100"
+	"StatusHealth"				"600"
 	"StatusHealthRegen"			"0"
 	"StatusMana"				"100"
 	"StatusManaRegen"			"0"

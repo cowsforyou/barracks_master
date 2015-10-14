@@ -98,11 +98,37 @@ function ApplyCreepParameters(unit, team, color)
             unit:SetOriginalModel(model)
         end
     end
+
+    if unitName == "creep_ranged" then
+        if team == DOTA_TEAM_GOODGUYS then
+            model = "models/creeps/lane_creeps/creep_radiant_ranged/radiant_ranged.vmdl"
+            unit:SetModel(model)
+            unit:SetOriginalModel(model)
+        else
+            model = "models/creeps/lane_creeps/creep_bad_ranged/lane_dire_ranged.vmdl"
+            unit:SetModel(model)
+            unit:SetOriginalModel(model)
+        end
+    end
+
+    if unitName == "creep_wagon" then
+        if team == DOTA_TEAM_GOODGUYS then
+            model = "models/creeps/lane_creeps/creep_good_siege/creep_good_siege.vmdl"
+            unit:SetModel(model)
+            unit:SetOriginalModel(model)
+        else
+            model = "models/creeps/lane_creeps/creep_bad_siege/creep_bad_siege.vmdl"
+            unit:SetModel(model)
+            unit:SetOriginalModel(model)
+        end
+    end
+
+
     
-    if     color == "red"    then unit:SetRenderColor(255,0,0)
-    elseif color == "blue"   then unit:SetRenderColor(0,0,255)
-    elseif color == "green"  then unit:SetRenderColor(0,255,0)
-    elseif color == "purple" then unit:SetRenderColor(255,0,255)
+    if     color == "red"    then unit:SetRenderColor(255,128,128)
+    elseif color == "blue"   then unit:SetRenderColor(0,128,255)
+    elseif color == "green"  then unit:SetRenderColor(128,255,128)
+    elseif color == "purple" then unit:SetRenderColor(255,128,255)
     end
     
 end

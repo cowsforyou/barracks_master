@@ -1,0 +1,18 @@
+"npc_dota_hero_sven"
+{
+	"override_hero"				"npc_dota_hero_sven"
+
+	"UnitLabel"					"builder"
+
+	"AbilityLayout"				"6"
+	"Ability1" 					"repair"
+	"Ability2" 					"build_bm_melee_barracks"
+	"Ability3" 					"build_bm_ranged_barracks"
+	"Ability4" 					"build_bm_scout_barracks"
+	"Ability5"					"build_bm_wagon_barracks"
+	"Ability6" 					"ultimate_ability"
+	"Ability7"					""
+	"Ability8"					""
+	"Ability9"					""
+	"Ability10"					""
+}

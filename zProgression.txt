@@ -12,12 +12,12 @@
 -- Building Mechanics --
 
 [x] Import build helper
-[ ] Create core buildings
+[x] Create core buildings
 [x] Link creeps to specific buildings
-[ ] Create ranged and siege creeps
+[x] Create ranged and siege creeps
 [ ] Enable creep upgrades
 [x] Color-in the creeps
-
+[ ] Limit build area
 
 -- Scout Mechanics --
 
@@ -58,6 +58,9 @@ Link the spawnability of the creeps to their respective buildings. i.e. that cre
 
 -- Enable creep upgrades --
 Specifically, upgrades to the armor, health, damage and spawn count
+
+-- Limit build area --
+Limit the building area to just the player's base
 
 -- Create custom scout --
 There will be a land, air, and techies scout.
