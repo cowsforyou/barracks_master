@@ -160,7 +160,7 @@
 		// BuildingHelper info
 		"Building"						"1" //bool
 		"BuildingSize"					"4" 
-		"BuildTime"						"30.0"
+		"BuildTime"						"2.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
 		"Scale"							"0" //bool
@@ -214,7 +214,7 @@
 		// BuildingHelper info
 		"Building"						"1" //bool
 		"BuildingSize"					"4" 
-		"BuildTime"						"30.0"
+		"BuildTime"						"2.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
 		"Scale"							"0" //bool
@@ -268,7 +268,7 @@
 		// BuildingHelper info
 		"Building"						"1" //bool
 		"BuildingSize"					"4" 
-		"BuildTime"						"30.0"
+		"BuildTime"						"5.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
 		"Scale"							"0" //bool
@@ -309,6 +309,13 @@
 				"Function"		"Build"
 			}
 		}
+	}
+	// A _disabled ability is required to show the requirements on the tooltip
+	"build_bm_wagon_barracks_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"dragon_knight_breathe_fire"
+		"MaxLevel" 						"0"
 	}
 	// Placement of a big building, with rotation of the model, builder goes inside
 	"build_city_center"
