@@ -13,10 +13,10 @@
 
 [x] Import build helper
 [ ] Create core buildings
-[ ] Link creeps to specific buildings
+[x] Link creeps to specific buildings
 [ ] Create ranged and siege creeps
 [ ] Enable creep upgrades
-[ ] Color-in the creeps
+[x] Color-in the creeps
 
 
 -- Scout Mechanics --
