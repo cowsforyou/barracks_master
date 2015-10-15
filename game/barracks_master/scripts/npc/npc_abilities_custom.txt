@@ -88,6 +88,49 @@
 			}
 		}		
 	}
+	//Armor buff for ranged creeps
+	"armor_ranged"
+	{
+		// General
+		//---------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"roshan_spell_block"
+		"MaxLevel" 						"1"
+	
+	
+		// Modifiers
+		//---------------------------------------------------------------------------------------
+	    "Modifiers"
+	    {
+	      "modifier_armor_bonus"
+	      {
+	        "Passive"    "1"
+	        "IsHidden"   "0"
+	        
+	        "Properties"
+	        {
+	            "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%armor_bonus" // grab from AbilitySpecial
+	        }
+	        
+	      }
+	    }
+	
+		// Special
+		//---------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	      "01"
+	      {
+	        "var_type"        "FIELD_INTEGER"
+	        "armor_bonus"     "1"
+	      }
+	      
+	    }
+	
+	}
 	"barebones_empty1"
 	  {
 	    // General
@@ -1029,6 +1072,73 @@
 				}
 			}
 		}
+	}
+	"research_armor_ranged"
+	{
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "roshan_spell_block"
+	    "MaxLevel"                      "1"
+	
+	    "AbilityGoldCost"               "50"
+	    "AbilityChannelTime"            "10"
+	    
+	    "AbilitySpecial"
+	    {
+	        "02"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "research_time"         "10"
+	      }
+	
+	        "03"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "gold_cost"             "50"
+	      }
+	 
+	        "04"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "lumber_cost"           "25"
+	      }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "buildings/queue.lua"
+	            "Function"      "EnqueueUnit"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "buildings/research.lua"
+	            "Function"      "DisableResearch"
+	        }
+	    }
+	
+	    "OnChannelSucceeded"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "buildings/queue.lua"
+	            "Function"      "NextQueue"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "buildings/research.lua"
+	            "Function"      "ResearchComplete"
+	        }
+	    }
+	}
+	"research_armor_ranged_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"roshan_spell_block"
+		"MaxLevel" 						"0"
 	}
 	"research_bm_melee_armor"
 	{
