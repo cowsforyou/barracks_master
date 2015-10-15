@@ -23,17 +23,17 @@ function OnSpellStart( keys )
     local player = caster:GetPlayerOwner()
     if player == nil then return end -- don't try to spawn creeps from a ghost dummy
 
-    local color = GetPlayerColor(player)
-    local creepCount = ability:GetSpecialValueFor("creep_count")
     local creepName = keys.creepName
+    local creepCount = ability:GetSpecialValueFor("creep_count")
 
-    SpawnCreeps(creepName, color, creepCount, ability)
+    SpawnCreeps(player, ability, creepName, creepCount)
 end
 
 -----------------------
 -- Spawn creep groups and manage building ability cooldown
 -----------------------
-function SpawnCreeps(creepName, playerColor, numberToSpawn, buildingAbility)
+function SpawnCreeps(player, buildingAbility, creepName, numberToSpawn)
+    local playerColor = GetPlayerColor(player)
     local team = GetTeamByColor(playerColor)
 
     local p1_string, p2_string = nil, nil
@@ -62,9 +62,13 @@ function SpawnCreeps(creepName, playerColor, numberToSpawn, buildingAbility)
 
     -- create the unit group
     for i=1, numberToSpawn do
-        local unit = CreateUnitByName(creepName, start_position, true, nil, nil, team)
+        local unit = CreateUnitByName(creepName, start_position, true, nil, player, team)
         ApplyCreepParameters(unit, team, playerColor)
        
+        -- Building Helper tie-ins
+        CheckAbilityRequirements(unit, player) -- upgrades on spawn
+        table.insert(player.units, unit)       -- adds unit to player's units table
+
         -- short delay before issuing orders, or the orders won't go through
         Timers:CreateTimer(0.1, function()
             local order1 = {}
