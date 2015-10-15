@@ -1,0 +1,35 @@
+"bm_melee_armor"
+{
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"             "ability_datadriven"
+    "AbilityTextureName"    "holdout_blade_fury"
+
+    "MaxLevel"    "3"
+
+    "Modifiers"
+    {
+      "modifier_armor_bonus"
+      {
+        "Passive"    "1"
+        "IsHidden"   "0"
+        
+        "Properties"
+        {
+            "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%armor_bonus" // grab from AbilitySpecial
+        }
+        
+      }
+    }
+
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "armor_bonus"     "1 2 3"
+      }
+      
+    }
+}

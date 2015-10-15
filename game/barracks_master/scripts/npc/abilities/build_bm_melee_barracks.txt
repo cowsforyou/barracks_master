@@ -10,13 +10,13 @@
 	// BuildingHelper info
 	"Building"						"1" //bool
 	"BuildingSize"					"4" 
-	"BuildTime"						"2.0"
+	"BuildTime"						"8.0"
 	"AbilityCastRange"				"200"
 	"UpdateHealth"					"1" //bool
 	"Scale"							"0" //bool
 	"PlayerCanControl"				"1" //bool
 
-	"RequiresRepair"				"1"
+	"BuilderInside"					"1"
 	"ModelRotation"					"90.0"
 
 	"UnitName"						"bm_melee_barracks"
@@ -30,7 +30,7 @@
 		"01"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"build_time"			"30.0"
+			"build_time"			"8.0"
 		}
 		"02"
 		{
