@@ -17,7 +17,7 @@
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
 	"Ability1"					"spawn_ranged_creeps"
-	"Ability2"					"research_armor_ranged"
+	"Ability2"					"research_bm_ranged_armor"
 	"Ability3"					""
 	"Ability4"					""
 	"Ability10"					"ability_building"

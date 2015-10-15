@@ -1,14 +1,14 @@
-"bm_melee_armor"
+"bm_ranged_armor"
 {
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
     "BaseClass"             "ability_datadriven"
-    "AbilityTextureName"    "holdout_blade_fury"
+    "AbilityTextureName"    "roshan_spell_block"
 
     "MaxLevel"    "3"
 
     "Modifiers"
     {
-      "modifier_melee_armor_bonus"
+      "modifier_ranged_armor_bonus"
       {
         "Passive"    "1"
         "IsHidden"   "0"

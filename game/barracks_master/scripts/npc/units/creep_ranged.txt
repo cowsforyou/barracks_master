@@ -14,7 +14,7 @@
         // Abilities
         //----------------------------------------------------------------
         
-        "Ability1"                  "armor_ranged"          // Ability 1.
+        "Ability1"                  "bm_ranged_armor_disabled"          // Ability 1.
         "Ability2"                  "ultimate_ability"          // Ability 2.
         "Ability3"                  ""          // Ability 3.
         "Ability4"                  ""          // Ability 4.
