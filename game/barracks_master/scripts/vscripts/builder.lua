@@ -43,9 +43,7 @@ function Build( event )
 	local buildingCounter = 0 
 	for _,creature in pairs(allCreatures) do
 		if creature:GetUnitName() == building_name and creature:GetPlayerOwner() == player then
-			print(creature:GetPlayerOwnerID())
 			buildingCounter = buildingCounter + 1
-			print(buildingCounter)
 		end
 	end
 
