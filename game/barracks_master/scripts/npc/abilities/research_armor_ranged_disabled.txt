@@ -1,0 +1,6 @@
+"research_armor_ranged_disabled"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"roshan_spell_block"
+	"MaxLevel" 						"0"
+}
