@@ -72,7 +72,7 @@ function BuildingEvents:OnPlayerPickHero(keys)
   -- Give item to hero --
   -----------------------
   hero:AddItemByName("item_blink")
-
+  hero:AddItemByName("item_boar")
 
   -- Give a building ability
   local item = CreateItem("item_build_wall", hero, hero)

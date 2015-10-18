@@ -19,7 +19,7 @@
 [x] Color-in the creeps
 [ ] Allow ability slots to be "toggled"
 [x] Learn how to create/edit ability/item icons
-[ ] Create spawn additional unit ability
+[ ] Create spawn additional unit for melee and ranged barracks
 [ ] Enable lumber resource
 [ ] Replace city center default spawn to bm_melee_barracks
 [ ] Limit build area
