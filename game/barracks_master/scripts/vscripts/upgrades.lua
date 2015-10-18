@@ -30,7 +30,8 @@ function CheckAbilityRequirements( unit, player )
 				-- Exists and isn't hidden, check its requirements
 				if IsValidEntity(ability) then
 					local disabled = false
-				
+					local isResearchAbility = false
+
 					-- By default, all abilities that have a requirement start as _disabled
 					-- This is to prevent applying passive modifier effects that have to be removed later
 					-- The disabled ability is just a dummy for tooltip, precache and level 0.
@@ -40,6 +41,11 @@ function CheckAbilityRequirements( unit, player )
 						local ability_len = string.len(ability_name)
 						ability_name = string.sub(ability_name, 1 , ability_len - len)
 						disabled = true
+					end
+
+					-- is this a research ability? we should ignore it
+					if string.find(ability_name, "research_") then
+						isResearchAbility = true
 					end
 
 					-- Check if it has requirements on the KV table
@@ -69,16 +75,22 @@ function CheckAbilityRequirements( unit, player )
 							unit:SwapAbilities(disabled_ability_name, ability_name, false, true)
 							unit:RemoveAbility(disabled_ability_name)
 
-							-- Set the new ability level
 							local ability = unit:FindAbilityByName(ability_name)
-							ability:SetLevel(ability:GetMaxLevel())
+							local newLevel = GetResearchLevel(player, "research_" .. ability_name) or 1
+
+							-- Set the new ability level
+							if not isResearchAbility then
+								ability:SetLevel(newLevel)
+							end
 						else
 							--print("Ability Still DISABLED "..ability_name)
 						end
 					else
 						if player_has_requirements then
-							--print("Ability Still ENABLED "..ability_name)
-							--ability:SetLevel(1)
+							local newLevel = GetResearchLevel(player, "research_" .. ability_name) or 1
+							if not isResearchAbility then
+								ability:SetLevel(newLevel)
+							end
 						else	
 							-- Disable the ability, swap to a _disabled
 							--print("FAIL, DISABLED "..ability_name)
@@ -115,9 +127,13 @@ function CheckResearchRequirements( unit, player )
 
 				if string.find(ability_name, "research_") then
 					if PlayerHasResearch(player, ability_name) then
-						-- Player already has the research, remove it
-						ability:SetHidden(true)
-						unit:RemoveAbility(ability_name)						
+						if GetResearchLevel(player, ability_name) < ability:GetMaxLevel() then
+							ability:SetHidden(false)
+						else
+							-- Player already has the research, remove it
+							ability:SetHidden(true)
+							unit:RemoveAbility(ability_name)						
+						end
 					else
 						ability:SetHidden(false)
 					end

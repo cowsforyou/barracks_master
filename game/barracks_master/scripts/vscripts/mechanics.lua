@@ -87,6 +87,10 @@ function PlayerHasEnoughLumber( player, lumber_cost )
 	end
 end
 
+function GetResearchLevel(player, research_name)
+	return player.upgrades[research_name]
+end
+
 -- Returns bool
 function PlayerHasResearch( player, research_name )
 	if player.upgrades[research_name] then

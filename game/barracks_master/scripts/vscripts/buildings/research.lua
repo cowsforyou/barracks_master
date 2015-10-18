@@ -5,10 +5,12 @@ function ResearchComplete( event )
 	local caster = event.caster
 	local player = caster:GetPlayerOwner()
 	local ability = event.ability
+	local ability_level = ability:GetLevel()
 	local research_name = ability:GetAbilityName()
 
 	-- It shouldn't be possible to research the same upgrade more than once.
-	player.upgrades[research_name] = 1
+	player.upgrades[research_name] = ability_level
+	ability:SetLevel(ability_level + 1)
 	
 	-- Go through all the upgradeable units and upgrade with the research
 	for _,unit in pairs(player.units) do
