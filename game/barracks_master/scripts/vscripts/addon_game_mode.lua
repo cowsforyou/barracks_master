@@ -46,6 +46,7 @@ function Precache( context )
   PrecacheResource("particle_folder", "particles/econ/items/earthshaker/earthshaker_gravelmaw/", context)
 
   -- Resources used
+  PrecacheUnitByNameSync("npc_dota_beastmaster_boar_1", context)
   PrecacheUnitByNameSync("peasant", context)
   PrecacheUnitByNameSync("tower", context)
   PrecacheUnitByNameSync("tower_tier2", context)

@@ -17,11 +17,11 @@
 [x] Create ranged and siege creeps
 [x] Enable creep upgrades
 [x] Color-in the creeps
-[ ] Move build abilities from the ability slots to item slots
-[ ] Allow item slots to be "toggled"
-[ ] Learn how to create/edit ability/item icons
+[ ] Allow ability slots to be "toggled"
+[x] Learn how to create/edit ability/item icons
 [ ] Create spawn additional unit ability
 [ ] Enable lumber resource
+[ ] Replace city center default spawn to bm_melee_barracks
 [ ] Limit build area
 
 -- Player Mechanics --

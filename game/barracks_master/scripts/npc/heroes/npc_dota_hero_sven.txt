@@ -10,7 +10,7 @@
 	"Ability3" 					"build_bm_ranged_barracks"
 	"Ability4" 					"build_bm_lumber_yard"
 	"Ability5"					"build_bm_siege_barracks"
-	"Ability6" 					"sven_warcry"
+	"Ability6" 					"ability_boar"
 	"Ability7"					""
 	"Ability8"					""
 	"Ability9"					""
