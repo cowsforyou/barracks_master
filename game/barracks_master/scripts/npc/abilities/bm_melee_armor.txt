@@ -2,7 +2,7 @@
 {
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
     "BaseClass"             "ability_datadriven"
-    "AbilityTextureName"    "holdout_blade_fury"
+    "AbilityTextureName"    "lich_frost_armor"
 
     "MaxLevel"    "3"
 

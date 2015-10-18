@@ -115,7 +115,7 @@ function ApplyCreepParameters(unit, team, color)
         end
     end
 
-    if unitName == "creep_wagon" then
+    if unitName == "creep_siege" then
         if team == DOTA_TEAM_GOODGUYS then
             model = "models/creeps/lane_creeps/creep_good_siege/creep_good_siege.vmdl"
             unit:SetModel(model)

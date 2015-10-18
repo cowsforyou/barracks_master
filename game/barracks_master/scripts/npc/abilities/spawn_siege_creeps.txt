@@ -1,5 +1,5 @@
 // Autocast creep spawner spell; starts casting as soon as the building is fully constructed
-"spawn_wagon_creeps"
+"spawn_siege_creeps"
 {
     "BaseClass"                     "ability_datadriven"
     "AbilityTextureName"            "dragon_knight_breathe_fire"
@@ -24,7 +24,7 @@
         {
             "ScriptFile"    "barracks/spawner.lua"
             "Function"      "OnSpellStart"
-            "creepName"		"creep_wagon"
+            "creepName"		"creep_siege"
         }
     }
 

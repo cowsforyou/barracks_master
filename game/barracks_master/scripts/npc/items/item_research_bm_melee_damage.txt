@@ -1,4 +1,4 @@
-"item_research_bm_melee_armor"
+"item_research_bm_melee_damage"
 {
 	"BaseClass"             		"item_datadriven"
 	"AbilityTextureName"			"item_cancel"

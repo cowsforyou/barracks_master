@@ -1,5 +1,78 @@
 "DOTAUnits"
 {
+	//=================================================================================
+	// Building: Lumber Yard
+	//=================================================================================
+	"bm_lumber_yard"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/props_structures/good_barracks_melee001.vmdl"
+		"ModelScale"				"0.6"
+		"Level"						"1"
+		"HealthBarOffset"			"140"
+		"HasInventory"				"1"
+		"ConsideredHero"			"1"
+		
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"4"
+		"Ability1"					""
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+		"Ability10"					"ability_building"
+		"Ability11"					"ability_building_queue"
+		
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"
+		"MagicalResistance"			"0"
+		
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
+		
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyGoldMin"				"0.0"
+		"BountyGoldMax"				"0.0"
+		
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
+		"RingRadius"				"150"
+		"CollisionSize"				"130"
+		
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"	// Needed to cast Point abilities
+		"MovementSpeed"				"0"
+		
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"600"
+		"StatusHealthRegen"			"0"
+		"StatusMana"				"100"
+		"StatusManaRegen"			"0"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"900"
+		"VisionNighttimeRange"		"600"
+		
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+		"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+		
+	}
 	 //=================================================================================
 	 // Building: Melee Barracks
 	 //=================================================================================
@@ -20,7 +93,7 @@
 		"AbilityLayout"				"4"
 		"Ability1"					"spawn_melee_creeps"
 		"Ability2"					"research_bm_melee_armor"
-		"Ability3"					"research_ultimate_ability"
+		"Ability3"					"research_bm_melee_damage"
 		"Ability4"					""
 		"Ability10"					"ability_building"
 		"Ability11"					"ability_building_queue"
@@ -147,9 +220,9 @@
 		
 	}
 	//=================================================================================
-	// Building: Wagon Barracks
+	// Building: Siege Barracks
 	//=================================================================================
-	"bm_wagon_barracks"
+	"bm_siege_barracks"
 	{
 		// General
 		//----------------------------------------------------------------
@@ -164,7 +237,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
-		"Ability1"					"spawn_wagon_creeps"
+		"Ability1"					"spawn_siege_creeps"
 		"Ability2"					"research_ultimate_ability"
 		"Ability3"					""
 		"Ability4"					""
@@ -380,8 +453,8 @@
 	        // Abilities
 	        //----------------------------------------------------------------
 	        
-	        "Ability1"                  "bm_melee_armor_disabled"          // Ability 1.
-	        "Ability2"                  ""          // Ability 2.
+	        "Ability1"                  "bm_melee_armor_disabled"           // Ability 1.
+	        "Ability2"                  "bm_melee_damage_disabled"          // Ability 2.
 	        "Ability3"                  ""          // Ability 3.
 	        "Ability4"                  ""          // Ability 4.
 	        "Ability5"                  ""          // Ability 5.
@@ -549,9 +622,9 @@
 	        //Inventory
 	    }   
     //=================================================================================
-    // Creeps: Default Wagon Creep
+    // Creeps: Default Siege Creep
     //=================================================================================
-    "creep_wagon"
+    "creep_siege"
     {
         // General
         //

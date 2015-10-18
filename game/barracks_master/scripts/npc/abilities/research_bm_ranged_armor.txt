@@ -2,8 +2,8 @@
 {
     "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
     "BaseClass"                     "ability_datadriven"
-    "AbilityTextureName"            "roshan_spell_block"
-    "MaxLevel"                      "1"
+    "AbilityTextureName"            "lich_frost_armor"
+    "MaxLevel"                      "3"
 
     "AbilityGoldCost"               "50"
     "AbilityChannelTime"            "10"
@@ -25,7 +25,7 @@
         "04"
       {
         "var_type"              "FIELD_INTEGER"
-        "lumber_cost"           "25"
+        "lumber_cost"           "0 0 75"
       }
     }
 

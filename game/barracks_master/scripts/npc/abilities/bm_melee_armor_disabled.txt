@@ -1,6 +1,6 @@
 "bm_melee_armor_disabled"
 {
     "BaseClass"                     "ability_datadriven"
-    "AbilityTextureName"            "holdout_blade_fury"
+    "AbilityTextureName"            "lich_frost_armor"
     "MaxLevel"                      "0"
 }

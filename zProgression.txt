@@ -15,21 +15,25 @@
 [x] Create core buildings
 [x] Link creeps to specific buildings
 [x] Create ranged and siege creeps
-[ ] Enable creep upgrades
+[x] Enable creep upgrades
 [x] Color-in the creeps
+[ ] Move build abilities from the ability slots to item slots
+[ ] Allow item slots to be "toggled"
+[ ] Learn how to create/edit ability/item icons
+[ ] Create spawn additional unit ability
+[ ] Enable lumber resource
 [ ] Limit build area
-
--- Scout Mechanics --
-
-[ ] Create custom scout
-
 
 -- Player Mechanics --
 
+[ ] Learn how to edit passive income
 [ ] Create function to award last hit gold from creeps to player
 [ ] Clean up team and hero selection
 [ ] Display last hits and gold earned per player in-game
 
+-- Scout Mechanics --
+
+[ ] Create custom scout
 
 -- // Basic game should be playable at this point // --
 
@@ -39,8 +43,6 @@
 -- Advanced --
 
 [ ] Enable normal and fast game modes
-[ ] Enable lumber resource
-[ ] Create new buildings and advanced tech upgrades
 
 
 
@@ -84,3 +86,105 @@ Aerial creeps - flying creeps
 AA creeps - well... creeps that shoot down aerial creeps
 Stealth creeps - mmhmm
 Stealth detect creeps - either have a special creep or have it as an upgrade to an existing creep
+
+
+
+
+-------------------------------------
+-- Checklist for creating upgrades --
+-------------------------------------
+
+[ ] Create actual ability
+[ ] Create actual ability disabled
+[ ] Create research ability
+[ ] Create research ability disabled*
+[ ] Create item to cancel research
+[ ] Add requirements in tech_tree.kv*
+[ ] Give research ability to building
+[ ] Give actual ability to unit
+
+[ ] Create tooltip for actual ability
+[ ] Create tooltip for actual ability disabled
+[ ] Create tooltip for ability modifier status
+[ ] Create tooltip for research ability
+[ ] Create tooltip for research ability disabled
+[ ] Create tooltip for item to cancel research
+
+[ ] Image on actual ability
+[ ] Image on actual ability disabled
+[ ] Image on research ability
+[ ] Image on research ability disabled
+[ ] Image on item to cancel research
+
+
+
+
+---------------------------------------------------
+-- Tech Tree
+---------------------------------------------------
+
++Zombies	+Melee		+Ranged		+Lumber Yard
+-Damage		-Armor(3)	-Armor(3)	-Workers(5)
+			-Damage(3)	-Damage(3)		 |
+			-Count(1)	-Count(1) 		 |
+			-HP* 		-HP* 			 |
+			-Special*	-Special* 		 |
+	   			|		   |			 |
+	   			-------------			 |---------------------------
+		   			 |					 |							|	
+				  +Siege 			+*Research Center 		+Aviation Sanctuary
+				  -Count(1)
+				  -Special*
+
+
+
+-All level 3 upgrades will require lumber
+-All level 3 upgrades will be a comparatively large increase
+
+
+---------------------------------------------------
+-- Strategies
+---------------------------------------------------
++Cheap rush
+-Zombies
+-Counters: Tech rush (air)
+-Counters: Tech rush (hero)
+
++Balanced build
+-Creep upgrades
+-Counters: Cheap rush
+
++Tech rush (air)
+-Air
+-Counters: Balanced build
+
++Tech rush (hero)
+-Tech center
+
+
+---------------------------------------------------
+-- Specials
+---------------------------------------------------
++Melee
+-Battlelust
+-Creeps gain attack speed and quickly charge into range.
+-Attack Speed Bonus: 30
+-Proc Distance: 300
+-Rush Speed: 800
+-Cooldown: 4.0sec
+
++Ranged
+-Corruption
+-Attacks reduce the target's armor.
+-Armor Reduction: 7
+-Duration: 15
+
++Siege
+-Dull Boulders
+-Attacks in a small AoE with a slight reduction to damage.
+-AoE Raidus: 150
+-Damage Reduction: 7
+
+
+
+

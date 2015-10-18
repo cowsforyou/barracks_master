@@ -1,21 +1,21 @@
-"bm_ranged_armor"
+"bm_melee_damage"
 {
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
     "BaseClass"             "ability_datadriven"
-    "AbilityTextureName"    "lich_frost_armor"
+    "AbilityTextureName"    "sven_gods_strength"
 
     "MaxLevel"    "3"
 
     "Modifiers"
     {
-      "modifier_ranged_armor_bonus"
+      "modifier_melee_damage_bonus"
       {
         "Passive"    "1"
         "IsHidden"   "0"
         
         "Properties"
         {
-            "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%armor_bonus" // grab from AbilitySpecial
+            "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"    "%damage_bonus" // grab from AbilitySpecial
         }
         
       }
@@ -28,7 +28,7 @@
       "01"
       {
         "var_type"        "FIELD_INTEGER"
-        "armor_bonus"     "1 2 3"
+        "damage_bonus"     "3 7 15"
       }
       
     }

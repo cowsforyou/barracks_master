@@ -3,9 +3,168 @@
 	"Language"		"English"
 	"Tokens"
 	{		
-		"game_mode_15"				"BuildingHelper"
-		"addon_game_name"			"BuildingHelper"
+		"game_mode_15"				"BAREBONES"
+		"addon_game_name"			"Barracks Master"
 		
+		//"DOTA_Basics"							"ABILITIES"
+		//"DOTA_Upgrades"							"ITEMS"
+		//"DOTA_Shop_Category_Basics"				"ABILITIES"
+		//"DOTA_Shop_Category_Upgrades"			"ITEMS"
+		
+
+		//---------------------------------------------------------------------------------------------------------------------------------
+		//Barracks Master
+		//---------------------------------------------------------------------------------------------------------------------------------
+
+		//-------------------
+		//Heroes
+		//-------------------
+		"npc_dota_hero_axe"                                                    				"Barracks Master"
+		"npc_dota_hero_sven"                                                    			"Barracks Master"
+		"npc_dota_hero_templar_assassin"                                                    "Barracks Master"
+		"npc_dota_hero_venomancer"                                                    		"Barracks Master"
+
+
+		//-------------------
+		//Creeps
+		//-------------------
+		"creep_melee"                                                                     	"Melee Creep"
+		"creep_ranged"                                                                    	"Ranged Creep"
+		"creep_siege"                                                                     	"Siege Creep"
+
+
+		//-------------------
+		//Buildings
+		//-------------------
+		"bm_melee_barracks"                                                               	"Melee Barracks"
+		"DOTA_Tooltip_ability_build_bm_melee_barracks"                        				"Melee Barracks"		
+		"DOTA_Tooltip_ability_build_bm_melee_barracks_Description"                        	"Spawns melee creeps"
+		"DOTA_Tooltip_ability_build_bm_melee_barracks_build_time"                         	"BUILD TIME:"
+		"DOTA_Tooltip_ability_build_bm_melee_barracks_gold_cost"                          	"GOLD COST:"
+		"DOTA_Tooltip_ability_build_bm_melee_barracks_lumber_cost"                        	"LUMBER COST:"
+
+		"bm_ranged_barracks"                                                               	"Ranged Barracks"
+		"DOTA_Tooltip_ability_build_bm_ranged_barracks"                        				"Ranged Barracks"		
+		"DOTA_Tooltip_ability_build_bm_ranged_barracks_Description"                       	"Spawns ranged creeps"
+		"DOTA_Tooltip_ability_build_bm_ranged_barracks_build_time"                        	"BUILD TIME:"
+		"DOTA_Tooltip_ability_build_bm_ranged_barracks_gold_cost"                         	"GOLD COST:"
+		"DOTA_Tooltip_ability_build_bm_ranged_barracks_lumber_cost"                       	"LUMBER COST:"
+
+		"bm_lumber_yard"                                                               		"Lumber Yard"
+		"DOTA_Tooltip_ability_build_bm_lumber_yard"                        					"Lumber Yard"		
+		"DOTA_Tooltip_ability_build_bm_lumber_yard_Description"                       		"Allows you to harvest lumber"
+		"DOTA_Tooltip_ability_build_bm_lumber_yard_build_time"                        		"BUILD TIME:"
+		"DOTA_Tooltip_ability_build_bm_lumber_yard_gold_cost"                         		"GOLD COST:"
+		"DOTA_Tooltip_ability_build_bm_lumber_yard_lumber_cost"                       		"LUMBER COST:"
+
+		"bm_siege_barracks"                                                               	"Siege Barracks"
+		"DOTA_Tooltip_ability_build_bm_siege_barracks"                        				"Siege Barracks"
+		"DOTA_Tooltip_ability_build_bm_siege_barracks_Description"                       	"Spawns siege creeps"
+		"DOTA_Tooltip_ability_build_bm_siege_barracks_build_time"                        	"BUILD TIME:"
+		"DOTA_Tooltip_ability_build_bm_siege_barracks_gold_cost"                         	"GOLD COST:"
+		"DOTA_Tooltip_ability_build_bm_siege_barracks_lumber_cost"                       	"LUMBER COST:"
+
+		"DOTA_Tooltip_ability_build_bm_siege_barracks_disabled"                           	"Siege Barracks"
+		"DOTA_Tooltip_ability_build_bm_siege_barracks_disabled_Description"               	"<b><font color='#eedd44'>Requires:\n - Melee Barracks\n - Ranged Barracks</font></b>\n"
+
+
+		//-------------------
+		//Abilities
+		//-------------------
+
+		//Melee Armor
+		//-------------------------------------------------------------
+		"DOTA_Tooltip_ability_bm_melee_armor"                                           	"Armor Bonus"
+		"DOTA_Tooltip_ability_bm_melee_armor_Description"                               	"Gives +1 armor"
+
+		"DOTA_Tooltip_ability_bm_melee_armor_disabled"                                      "Armor Bonus"
+		"DOTA_Tooltip_ability_bm_melee_armor_Description"                               	"Gives +1 armor"
+
+		"DOTA_Tooltip_modifier_melee_armor_bonus"                                         	"Armor Bonus"
+		"DOTA_Tooltip_modifier_melee_armor_bonus_Description"                             	""
+
+		"DOTA_Tooltip_ability_research_bm_melee_armor"                                    	"Upgrade to Level 1 Armor"
+		"DOTA_Tooltip_ability_research_bm_melee_armor_Description"                        	"Increases armor of melee creeps"
+		"DOTA_Tooltip_ability_research_bm_melee_armor_build_time"                         	"BUILD TIME:"
+		"DOTA_Tooltip_ability_research_bm_melee_armor_gold_cost"                          	"GOLD COST:"
+		"DOTA_Tooltip_ability_research_bm_melee_armor_lumber_cost"                        	"LUMBER COST:"
+
+		"DOTA_Tooltip_ability_item_research_bm_melee_armor"                               	"Cancel Upgrade"
+		"DOTA_Tooltip_ability_item_research_bm_melee_armor_Description"                   	""
+
+
+		//Melee Damage
+		//-------------------------------------------------------------
+		"DOTA_Tooltip_ability_bm_melee_damage"                                           	"Damage Bonus"
+		"DOTA_Tooltip_ability_bm_melee_damage_Description"                               	"Gives +3 damage"
+
+		"DOTA_Tooltip_ability_bm_melee_damage_disabled"                                     "Damage Bonus"
+		"DOTA_Tooltip_ability_bm_melee_damage_Description"                               	"Gives +3 damage"
+
+		"DOTA_Tooltip_modifier_melee_damage_bonus"                                         	"Damage Bonus"
+		"DOTA_Tooltip_modifier_melee_damage_bonus_Description"                             	""
+
+		"DOTA_Tooltip_ability_research_bm_melee_damage"                                    	"Upgrade to Level 1 Damage"
+		"DOTA_Tooltip_ability_research_bm_melee_damage_Description"                        	"Increases damage of melee creeps"
+		"DOTA_Tooltip_ability_research_bm_melee_damage_build_time"                         	"BUILD TIME:"
+		"DOTA_Tooltip_ability_research_bm_melee_damage_gold_cost"                          	"GOLD COST:"
+		"DOTA_Tooltip_ability_research_bm_melee_damage_lumber_cost"                        	"LUMBER COST:"
+
+		"DOTA_Tooltip_ability_item_research_bm_melee_damage"                               	"Cancel Upgrade"
+		"DOTA_Tooltip_ability_item_research_bm_melee_damage_Description"                   	""
+
+
+		//Ranged Armor
+		//-------------------------------------------------------------
+		"DOTA_Tooltip_ability_bm_ranged_armor"                                           	"Armor Bonus"
+		"DOTA_Tooltip_ability_bm_ranged_armor_Description"                               	"Gives +1 armor"
+
+		"DOTA_Tooltip_ability_bm_ranged_armor_disabled"                                     "Armor Bonus"
+		"DOTA_Tooltip_ability_bm_ranged_armor_Description"                               	"Gives +1 armor"
+
+		"DOTA_Tooltip_modifier_ranged_armor_bonus"                                         	"Armor Bonus"
+		"DOTA_Tooltip_modifier_ranged_armor_bonus_Description"                             	""
+
+		"DOTA_Tooltip_ability_research_bm_ranged_armor"                                    	"Upgrade to Level 1 Armor"
+		"DOTA_Tooltip_ability_research_bm_ranged_armor_Description"                        	"Increases armor of ranged creeps"
+		"DOTA_Tooltip_ability_research_bm_ranged_armor_build_time"                         	"BUILD TIME:"
+		"DOTA_Tooltip_ability_research_bm_ranged_armor_gold_cost"                          	"GOLD COST:"
+		"DOTA_Tooltip_ability_research_bm_ranged_armor_lumber_cost"                        	"LUMBER COST:"
+
+		"DOTA_Tooltip_ability_item_research_bm_ranged_armor"                               	"Cancel Upgrade"
+		"DOTA_Tooltip_ability_item_research_bm_ranged_armor_Description"                   	""
+
+
+
+		//---------------------------------------------------------------------------------------------------------------------------------
+		//Non Barracks Master
+		//---------------------------------------------------------------------------------------------------------------------------------
+
+		//--------------------
+		//Abilities
+		//--------------------
+		"DOTA_Tooltip_ability_example_ability"										"Detonation"
+		"DOTA_Tooltip_ability_example_ability_Description"				"Detonator channels a charge and releases an explosion around the caster if the channel is successful, dealing damage and knocking back all enemies in range of the explosion"
+		"DOTA_Tooltip_ability_example_ability_Lore"								""
+		"DOTA_Tooltip_ability_example_ability_duration"							"DURATION:"
+    	"DOTA_Tooltip_ability_example_ability_radius"							"RADIUS:"
+   	 	"DOTA_Tooltip_ability_example_ability_distance"							"KNOCKBACK DISTANCE:"
+    	"DOTA_Tooltip_ability_example_ability_height"							"KNOCKBACK HEIGHT:"
+		
+		
+		//------------------------
+		// Items
+		//------------------------
+		"DOTA_Tooltip_ability_item_example_item"										"Shield Blaster"
+		"DOTA_Tooltip_ability_item_example_item_Description"							"Gives the caster a 50% damage reduction for 4 seconds while firing a projectile that deals damage 125 PURE damage to any enemy it hits."
+		"DOTA_Tooltip_ability_item_example_item_Lore"								""
+		"DOTA_Tooltip_ability_item_example_item_duration"							"DURATION:"
+    	"DOTA_Tooltip_ability_item_example_item_damage_reduction"							"DAMAGE REDUCTION:"
+    	"DOTA_Tooltip_ability_item_example_item_radius"							"PROJECTILE RADIUS:"
+    	"DOTA_Tooltip_ability_item_example_item_speed"							"PROJECTILE SPEED:"
+    	"DOTA_Tooltip_ability_item_example_item_distance"							"DISTANCE:"
+    	"DOTA_Tooltip_ability_item_example_item_damage"							"DAMAGE:"
+
 		// DOTA 2 MODKIT GENERATED TOOLTIPS FOR: samplerts
 		// Keys already defined in addon_english.txt are not listed, nor are Modifiers with the property "IsHidden" "1".
 
@@ -29,28 +188,25 @@
 		"DOTA_Tooltip_modifier_repairing_building"                                        "Repairing"
 		"DOTA_Tooltip_modifier_repairing_building_Description"                            "This building is being repaired by nearby builders"
 
-
-		// ******************** ITEM MODIFIERS ********************
-
 		// ******************** ABILITIES ********************
 		// <b><font color='#eedd44'>Requires:\n - BuildingName</font></b>\n
 		"DOTA_Tooltip_ability_train_city_center_tier2"                                    "Upgrade to Tier 2"
-		"DOTA_Tooltip_ability_train_city_center_tier2_Description"                        ""
+		"DOTA_Tooltip_ability_train_city_center_tier2_Description"                        "Allows for the construction of Dragon Towers and Ultimate research"
 		"DOTA_Tooltip_ability_train_city_center_tier2_build_time"                         "BUILD TIME:"
 		"DOTA_Tooltip_ability_train_city_center_tier2_gold_cost"                          "GOLD COST:"
 		"DOTA_Tooltip_ability_train_city_center_tier2_lumber_cost"                        "LUMBER COST:"
 
 		"DOTA_Tooltip_ability_train_city_center_tier2_disabled"                           "Upgrade to Tier 2 Disabled"
-		"DOTA_Tooltip_ability_train_city_center_tier2_disabled_Description"               "<b><font color='#eedd44'>Requires:\n - Tech Center (Building)</font></b>\n"
+		"DOTA_Tooltip_ability_train_city_center_tier2_disabled_Description"               "<b><font color='#eedd44'>Requires:\n - Tech Center</font></b>\n"
 
 		"DOTA_Tooltip_ability_train_tower_tier2"                                          "Upgrade to Tier 2"
-		"DOTA_Tooltip_ability_train_tower_tier2_Description"                              ""
+		"DOTA_Tooltip_ability_train_tower_tier2_Description"                              "Stronger tower"
 		"DOTA_Tooltip_ability_train_tower_tier2_build_time"                               "BUILD TIME:"
 		"DOTA_Tooltip_ability_train_tower_tier2_gold_cost"                                "GOLD COST:"
 		"DOTA_Tooltip_ability_train_tower_tier2_lumber_cost"                              "LUMBER COST:"
 
 		"DOTA_Tooltip_ability_train_dark_tower"                                           "Upgrade to Dark Tower"
-		"DOTA_Tooltip_ability_train_dark_tower_Description"                               ""
+		"DOTA_Tooltip_ability_train_dark_tower_Description"                               "Ultimate tower"
 		"DOTA_Tooltip_ability_train_dark_tower_build_time"                                "BUILD TIME:"
 		"DOTA_Tooltip_ability_train_dark_tower_gold_cost"                                 "GOLD COST:"
 		"DOTA_Tooltip_ability_train_dark_tower_lumber_cost"                               "LUMBER COST:"
@@ -59,88 +215,61 @@
 		"DOTA_Tooltip_ability_train_dark_tower_disabled_Description"                      "<b><font color='#eedd44'>Requires:\n - Tech Center</font></b>\n"
 
 		"DOTA_Tooltip_ability_build_tower"                                                "Build Tower"
-		"DOTA_Tooltip_ability_build_tower_Description"                                    ""
+		"DOTA_Tooltip_ability_build_tower_Description"                                    "Classic auto-build tower.\nCan be upgraded"
 		"DOTA_Tooltip_ability_build_tower_build_time"                                     "BUILD TIME:"
 		"DOTA_Tooltip_ability_build_tower_gold_cost"                                      "GOLD COST:"
 		"DOTA_Tooltip_ability_build_tower_lumber_cost"                                    "LUMBER COST:"
 
 		"DOTA_Tooltip_ability_build_city_center"                                          "Build City Center"
-		"DOTA_Tooltip_ability_build_city_center_Description"                              ""
+		"DOTA_Tooltip_ability_build_city_center_Description"                              "Contains the "
 		"DOTA_Tooltip_ability_build_city_center_build_time"                               "BUILD TIME:"
 		"DOTA_Tooltip_ability_build_city_center_gold_cost"                                "GOLD COST:"
 		"DOTA_Tooltip_ability_build_city_center_lumber_cost"                              "LUMBER COST:"
 
-		"DOTA_Tooltip_ability_build_research_center"                                      "Build Tech Center"
-		"DOTA_Tooltip_ability_build_research_center_Description"                          ""
-		"DOTA_Tooltip_ability_build_research_center_build_time"                           "BUILD TIME:"
-		"DOTA_Tooltip_ability_build_research_center_gold_cost"                            "GOLD COST:"
-		"DOTA_Tooltip_ability_build_research_center_lumber_cost"                          "LUMBER COST:"
+		"DOTA_Tooltip_ability_build_tech_center"                                          "Build Tech Center"
+		"DOTA_Tooltip_ability_build_tech_center_Description"                              "Contains the Dark Tower and Ultimate Ability researches"
+		"DOTA_Tooltip_ability_build_tech_center_build_time"                               "BUILD TIME:"
+		"DOTA_Tooltip_ability_build_tech_center_gold_cost"                                "GOLD COST:"
+		"DOTA_Tooltip_ability_build_tech_center_lumber_cost"                              "LUMBER COST:"
 
-		"DOTA_Tooltip_ability_build_research_center_disabled"                             "Build Research Center Disabled"
-		"DOTA_Tooltip_ability_build_research_center_disabled_Description"                 ""
+		"DOTA_Tooltip_ability_build_tech_center_disabled"                                 "Build Tech Center Disabled"
+		"DOTA_Tooltip_ability_build_tech_center_disabled_Description"                     "<b><font color='#eedd44'>Requires:\n - Tower</font></b>\n"
 
 		"DOTA_Tooltip_ability_build_dragon_tower"                                         "Build Dragon Tower"
-		"DOTA_Tooltip_ability_build_dragon_tower_Description"                             ""
+		"DOTA_Tooltip_ability_build_dragon_tower_Description"                             "Builder goes inside and offers himself as sacrifice to build this greater tower"
 		"DOTA_Tooltip_ability_build_dragon_tower_build_time"                              "BUILD TIME:"
 		"DOTA_Tooltip_ability_build_dragon_tower_gold_cost"                               "GOLD COST:"
 		"DOTA_Tooltip_ability_build_dragon_tower_lumber_cost"                             "LUMBER COST:"
 
 		"DOTA_Tooltip_ability_build_dragon_tower_disabled"                                "Build Dragon Tower Disabled"
-		"DOTA_Tooltip_ability_build_dragon_tower_disabled_Description"                    ""
+		"DOTA_Tooltip_ability_build_dragon_tower_disabled_Description"                    "<b><font color='#eedd44'>Requires:\n - Tech Center\n - City Center Tier 2</font></b>\n"
 
 		"DOTA_Tooltip_ability_repair"                                                     "Repair"
-		"DOTA_Tooltip_ability_repair_Description"                                         ""
+		"DOTA_Tooltip_ability_repair_Description"                                         "Repairs structures at the cost of resources."
 
 		"DOTA_Tooltip_ability_research_dark_tower"                                        "Research Dark Tower"
-		"DOTA_Tooltip_ability_research_dark_tower_Description"                            ""
+		"DOTA_Tooltip_ability_research_dark_tower_Description"                            "Allows Dragon Towers to be upgraded into Dark Towers"
 		"DOTA_Tooltip_ability_research_dark_tower_research_time"                          "RESEARCH TIME:"
 		"DOTA_Tooltip_ability_research_dark_tower_gold_cost"                              "GOLD COST:"
 		"DOTA_Tooltip_ability_research_dark_tower_lumber_cost"                            "LUMBER COST:"
 
 		"DOTA_Tooltip_ability_research_ultimate_ability"                                  "Research Ultimate Ability"
-		"DOTA_Tooltip_ability_research_ultimate_ability_Description"                      ""
+		"DOTA_Tooltip_ability_research_ultimate_ability_Description"                      "Lets you use your ultimate"
 		"DOTA_Tooltip_ability_research_ultimate_ability_research_time"                    "RESEARCH TIME:"
 		"DOTA_Tooltip_ability_research_ultimate_ability_gold_cost"                        "GOLD COST:"
 		"DOTA_Tooltip_ability_research_ultimate_ability_lumber_cost"                      "LUMBER COST:"
 
 		"DOTA_Tooltip_ability_research_ultimate_ability_disabled"                         "Research Ultimate Ability Disabled"
-		"DOTA_Tooltip_ability_research_ultimate_ability_disabled_Description"             ""
+		"DOTA_Tooltip_ability_research_ultimate_ability_disabled_Description"             "<b><font color='#eedd44'>Requires:\n - City Center Tier 2</font></b>\n"
 
 		"DOTA_Tooltip_ability_ultimate_ability"                                           "Ultimate Ability"
-		"DOTA_Tooltip_ability_ultimate_ability_Description"                               ""
+		"DOTA_Tooltip_ability_ultimate_ability_Description"                               "This is supposed to do something fancy"
 
 		"DOTA_Tooltip_ability_ultimate_ability_disabled"                                  "Ultimate Ability Disabled"
-		"DOTA_Tooltip_ability_ultimate_ability_disabled_Description"                      ""
+		"DOTA_Tooltip_ability_ultimate_ability_disabled_Description"                      "<b><font color='#eedd44'>Requires:\n -  Research Ultimate Ability</font></b>\n"
 
-		"DOTA_Tooltip_ability_ability_building"                                           "Ability Building"
-		"DOTA_Tooltip_ability_ability_building_Description"                               ""
-
-		"DOTA_Tooltip_ability_ability_tower"                                              "Ability Tower"
-		"DOTA_Tooltip_ability_ability_tower_Description"                                  ""
-
-		"DOTA_Tooltip_ability_ability_building_queue"                                     "Ability Building Queue"
-		"DOTA_Tooltip_ability_ability_building_queue_Description"                         ""
-
-		"DOTA_Tooltip_ability_move_to_point_100"                                          "Move To Point 100"
-		"DOTA_Tooltip_ability_move_to_point_100_Description"                              ""
-
-		"DOTA_Tooltip_ability_move_to_point_150"                                          "Move To Point 150"
-		"DOTA_Tooltip_ability_move_to_point_150_Description"                              ""
-
-		"DOTA_Tooltip_ability_move_to_point_200"                                          "Move To Point 200"
-		"DOTA_Tooltip_ability_move_to_point_200_Description"                              ""
-
-		"DOTA_Tooltip_ability_move_to_point_250"                                          "Move To Point 250"
-		"DOTA_Tooltip_ability_move_to_point_250_Description"                              ""
-
-		"DOTA_Tooltip_ability_move_to_point_300"                                          "Move To Point 300"
-		"DOTA_Tooltip_ability_move_to_point_300_Description"                              ""
-
-
+		
 		// ******************** ITEMS ********************
-		"DOTA_Tooltip_ability_item_apply_modifiers"                                       "Apply Modifiers"
-		"DOTA_Tooltip_ability_item_apply_modifiers_Description"                           ""
-
 		"DOTA_Tooltip_ability_item_building_cancel"                                       "Building Cancel"
 		"DOTA_Tooltip_ability_item_building_cancel_Description"                           ""
 
@@ -150,20 +279,19 @@
 		"DOTA_Tooltip_ability_item_build_wall_gold_cost"                                  "GOLD COST:"
 		"DOTA_Tooltip_ability_item_build_wall_lumber_cost"                                "LUMBER COST:"
 
-		"DOTA_Tooltip_ability_item_research_dark_tower"                                   "Research Dark Tower"
+		"DOTA_Tooltip_ability_item_research_dark_tower"                                   "Cancel Research Dark Tower"
 		"DOTA_Tooltip_ability_item_research_dark_tower_Description"                       ""
 
-		"DOTA_Tooltip_ability_item_research_ultimate_ability"                             "Research Ultimate Ability"
+		"DOTA_Tooltip_ability_item_research_ultimate_ability"                             "CancelResearch Ultimate Ability"
 		"DOTA_Tooltip_ability_item_research_ultimate_ability_Description"                 ""
 
-		"DOTA_Tooltip_ability_item_train_city_center_tier2"                               "Train City Center Tier2"
+		"DOTA_Tooltip_ability_item_train_city_center_tier2"                               "Cancel Upgrade to Tier 2"
 		"DOTA_Tooltip_ability_item_train_city_center_tier2_Description"                   ""
 
-		"DOTA_Tooltip_ability_item_train_tower_tier2"                                     "Train Tower Tier2"
+		"DOTA_Tooltip_ability_item_train_tower_tier2"                                     "Cancel Upgrade to Tier 2"
 		"DOTA_Tooltip_ability_item_train_tower_tier2_Description"                         ""
 
-		"DOTA_Tooltip_ability_item_train_dark_tower"                                      "Train Dark Tower"
+		"DOTA_Tooltip_ability_item_train_dark_tower"                                      "Cancel Upgrade to Dark Tower"
 		"DOTA_Tooltip_ability_item_train_dark_tower_Description"                          ""
-
 	}
 }
