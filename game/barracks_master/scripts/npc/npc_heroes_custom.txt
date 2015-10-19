@@ -138,7 +138,7 @@
 		"Ability3" 					"build_bm_ranged_barracks"
 		"Ability4" 					"build_bm_lumber_yard"
 		"Ability5"					"build_bm_siege_barracks"
-		"Ability6" 					"ability_boar"
+		"Ability6" 					"swap_abilities"
 		"Ability7"					""
 		"Ability8"					""
 		"Ability9"					""

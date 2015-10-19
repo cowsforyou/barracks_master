@@ -1850,6 +1850,26 @@
 	   	    	}
 	    }
 	}
+	
+	"swap_abilities"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "rubick_empty1"
+	    "MaxLevel"                      "1"
+	
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"
+	
+	    // run this script every time the spell is used
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "barracks/swap_abilities.lua"
+	            "Function"      "OnSpellStart"
+	        }
+	    }
+	}
 	"train_city_center_tier2"
 	{
 		"BaseClass"             		"ability_datadriven"
