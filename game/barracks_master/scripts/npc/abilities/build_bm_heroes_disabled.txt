@@ -1,0 +1,7 @@
+// A _disabled ability is required to show the requirements on the tooltip
+"build_bm_heroes_disabled"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"omniknight_guardian_angel"
+	"MaxLevel" 						"0"
+}

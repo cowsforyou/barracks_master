@@ -479,6 +479,192 @@
 	    "MaxLevel"                      "0"
 	}
 	// Building requires repair to finish construction. Can be assisted to make the process faster
+	"build_bm_ancient_barracks"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"granite_golem_hp_aura"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"3" 
+		"BuildTime"						"8.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"BuilderInside"					"1"
+		"ModelRotation"					"90.0"
+	
+		"UnitName"						"bm_ancient_barracks"
+		"AbilityCooldown"				"0"
+		"AbilityGoldCost"				"100"
+		"MaxBuildingCount"				"1"
+		// End of BuildingHelper info
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"8.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"100"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	// A _disabled ability is required to show the requirements on the tooltip
+	"build_bm_ancient_barracks_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"granite_golem_hp_aura"
+		"MaxLevel" 						"0"
+	}
+	// Building requires repair to finish construction. Can be assisted to make the process faster
+	"build_bm_aviation_sanctuary"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"beastmaster_call_of_the_wild"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"3" 
+		"BuildTime"						"5.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"BuilderInside"					"1"
+		"ModelRotation"					"90.0"
+	
+		"UnitName"						"bm_aviation_sanctuary"
+		"AbilityCooldown"				"0"
+		"AbilityGoldCost"				"100"
+		"MaxBuildingCount"				"1"
+		// End of BuildingHelper info
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"8.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"100"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	// A _disabled ability is required to show the requirements on the tooltip
+	"build_bm_aviation_sanctuary_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"beastmaster_call_of_the_wild"
+		"MaxLevel" 						"0"
+	}
+	// Building requires repair to finish construction. Can be assisted to make the process faster
+	"build_bm_heroes"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"omniknight_guardian_angel"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"4" 
+		"BuildTime"						"5.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"BuilderInside"					"1"
+		"ModelRotation"					"90.0"
+	
+		"UnitName"						"bm_heroes"
+		"AbilityCooldown"				"0"
+		"AbilityGoldCost"				"500"
+		"MaxBuildingCount"				"1"
+		// End of BuildingHelper info
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"500"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	// A _disabled ability is required to show the requirements on the tooltip
+	"build_bm_heroes_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"omniknight_guardian_angel"
+		"MaxLevel" 						"0"
+	}
+	// Building requires repair to finish construction. Can be assisted to make the process faster
 	"build_bm_lumber_yard"
 	{
 		"BaseClass"             		"ability_datadriven"
@@ -537,7 +723,7 @@
 	"build_bm_melee_barracks"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"big_thunder_lizard_frenzy"
+		"AbilityTextureName"			"melee_barracks"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -592,7 +778,7 @@
 	"build_bm_ranged_barracks"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"satyr_hellcaller_unholy_aura"
+		"AbilityTextureName"			"ranged_barracks"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -642,6 +828,75 @@
 				"Function"		"Build"
 			}
 		}
+	}
+	// A _disabled ability is required to show the requirements on the tooltip
+	"build_bm_ranged_barracks_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"ranged_barracks"
+		"MaxLevel" 						"0"
+	}
+	// Building requires repair to finish construction. Can be assisted to make the process faster
+	"build_bm_research_lab"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"train_city_center_tier2"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"4" 
+		"BuildTime"						"9.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"BuilderInside"					"1"
+		"ModelRotation"					"90.0"
+	
+		"UnitName"						"bm_research_lab"
+		"AbilityCooldown"				"0"
+		"AbilityGoldCost"				"1000"
+		"MaxBuildingCount"				"1"
+		// End of BuildingHelper info
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"9.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"1000"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	// A _disabled ability is required to show the requirements on the tooltip
+	"build_bm_research_lab_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"train_city_center_tier2"
+		"MaxLevel" 						"0"
 	}
 	// Building requires repair to finish construction. Can be assisted to make the process faster
 	"build_bm_siege_barracks"
@@ -704,6 +959,61 @@
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"black_dragon_dragonhide_aura"
 		"MaxLevel" 						"0"
+	}
+	// Building requires repair to finish construction. Can be assisted to make the process faster
+	"build_bm_skeleton_barracks"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"dark_troll_warlord_raise_dead"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"4" 
+		"BuildTime"						"5.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"BuilderInside"					"1"
+		"ModelRotation"					"90.0"
+	
+		"UnitName"						"bm_skeleton_barracks"
+		"AbilityCooldown"				"0"
+		"AbilityGoldCost"				"50"
+		"MaxBuildingCount"				"1"
+		// End of BuildingHelper info
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"50"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
 	}
 	// Placement of a big building, with rotation of the model, builder goes inside
 	"build_city_center"
@@ -1698,10 +2008,10 @@
 		"MaxLevel" 						"0"
 	}
 	// Autocast creep spawner spell; starts casting as soon as the building is fully constructed
-	"spawn_melee_creeps"
+	"spawn_skeleton_creeps"
 	{
 	    "BaseClass"                     "ability_datadriven"
-	    "AbilityTextureName"            "build_city_center"
+	    "AbilityTextureName"            "dark_troll_warlord_raise_dead"
 	    "MaxLevel"                      "1"
 	
 	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -1723,7 +2033,7 @@
 	        {
 	            "ScriptFile"    "barracks/spawner.lua"
 	            "Function"      "OnSpellStart"
-	            "creepName"		"creep_melee"
+	            "creepName"		"creep_skeleton"
 	        }
 	    }
 	
@@ -1826,6 +2136,57 @@
 	            "ScriptFile"    "barracks/spawner.lua"
 	            "Function"      "OnSpellStart"
 	            "creepName"		"creep_siege"
+	        }
+	    }
+	
+	    // modifiers are buffs/debuffs, usually associated with abilities
+	    "Modifiers"
+	    {
+	    	"modifier_spawn_melee_creeps_thinker"
+	    	{
+	    		"Passive"			"1" // start activated
+	    		"IsHidden"			"1" // hide the visual buff icon
+	
+	    		// run this Think() script every 0.25 seconds
+				"ThinkInterval" 	"0.25"
+			    "OnIntervalThink"
+				{
+					"RunScript"
+			        {
+			            "ScriptFile"    "barracks/spawner.lua"
+			            "Function"      "Think"
+			        }
+				}
+	   	    	}
+	    }
+	}
+	// Autocast creep spawner spell; starts casting as soon as the building is fully constructed
+	"spawn_skeleton_creeps"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "dark_troll_warlord_raise_dead"
+	    "MaxLevel"                      "1"
+	
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"
+	
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"				"FIELD_INTEGER"
+	            "creep_count"			"4"
+	        }
+	    }
+	
+	    // run this script every time the spell is used
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "barracks/spawner.lua"
+	            "Function"      "OnSpellStart"
+	            "creepName"		"creep_skeleton"
 	        }
 	    }
 	

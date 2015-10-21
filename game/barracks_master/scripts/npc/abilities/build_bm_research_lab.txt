@@ -1,8 +1,8 @@
 // Building requires repair to finish construction. Can be assisted to make the process faster
-"build_bm_ranged_barracks"
+"build_bm_research_lab"
 {
 	"BaseClass"             		"ability_datadriven"
-	"AbilityTextureName"			"ranged_barracks"
+	"AbilityTextureName"			"train_city_center_tier2"
 	"MaxLevel" 						"1"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -10,7 +10,7 @@
 	// BuildingHelper info
 	"Building"						"1" //bool
 	"BuildingSize"					"4" 
-	"BuildTime"						"15.0"
+	"BuildTime"						"9.0"
 	"AbilityCastRange"				"200"
 	"UpdateHealth"					"1" //bool
 	"Scale"							"0" //bool
@@ -19,9 +19,9 @@
 	"BuilderInside"					"1"
 	"ModelRotation"					"90.0"
 
-	"UnitName"						"bm_ranged_barracks"
+	"UnitName"						"bm_research_lab"
 	"AbilityCooldown"				"0"
-	"AbilityGoldCost"				"300"
+	"AbilityGoldCost"				"1000"
 	"MaxBuildingCount"				"1"
 	// End of BuildingHelper info
 
@@ -30,12 +30,12 @@
 		"01"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"build_time"			"15.0"
+			"build_time"			"9.0"
 		}
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"gold_cost"				"300"
+			"gold_cost"				"1000"
 		}
 		"03"
 		{

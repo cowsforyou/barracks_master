@@ -1,0 +1,7 @@
+// A _disabled ability is required to show the requirements on the tooltip
+"build_bm_research_lab_disabled"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"train_city_center_tier2"
+	"MaxLevel" 						"0"
+}

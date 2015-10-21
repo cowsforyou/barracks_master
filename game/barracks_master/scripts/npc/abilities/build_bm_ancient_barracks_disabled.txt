@@ -1,0 +1,7 @@
+// A _disabled ability is required to show the requirements on the tooltip
+"build_bm_ancient_barracks_disabled"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"granite_golem_hp_aura"
+	"MaxLevel" 						"0"
+}

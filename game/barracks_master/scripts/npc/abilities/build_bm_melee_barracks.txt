@@ -2,7 +2,7 @@
 "build_bm_melee_barracks"
 {
 	"BaseClass"             		"ability_datadriven"
-	"AbilityTextureName"			"big_thunder_lizard_frenzy"
+	"AbilityTextureName"			"melee_barracks"
 	"MaxLevel" 						"1"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"

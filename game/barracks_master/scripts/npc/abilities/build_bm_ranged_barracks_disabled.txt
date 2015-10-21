@@ -1,0 +1,7 @@
+// A _disabled ability is required to show the requirements on the tooltip
+"build_bm_ranged_barracks_disabled"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"ranged_barracks"
+	"MaxLevel" 						"0"
+}

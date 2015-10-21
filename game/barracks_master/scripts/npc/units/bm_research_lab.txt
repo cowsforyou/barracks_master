@@ -1,14 +1,14 @@
 //=================================================================================
-// Building: Ranged Barracks
+// Building: Research Lab
 //=================================================================================
-"bm_ranged_barracks"
+"bm_research_lab"
 {
 	// General
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_creature"
-	"Model"						"models/creeps/lane_creeps/creep_radiant_ranged/radiant_ranged_mega.vmdl"
-	"ModelScale"				"1.9"
-	"Level"						"1"
+	"Model"						"models/props_structures/good_ancient001.vmdl"
+	"ModelScale"				"0.6"
+	"Level"						"3"
 	"HealthBarOffset"			"140"
 	"HasInventory"				"1"
 	"ConsideredHero"			"1"
@@ -16,12 +16,11 @@
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
-	"Ability1"					"spawn_ranged_creeps"
-	"Ability2"					"research_bm_ranged_armor"
+	"Ability1"					"city_center_tier2_passive"
+	"Ability2"					""
 	"Ability3"					""
 	"Ability4"					""
 	"Ability10"					"ability_building"
-	"Ability11"					"ability_building_queue"
 	
 	// Armor
 	//----------------------------------------------------------------
@@ -31,6 +30,9 @@
 	// Attack
 	//----------------------------------------------------------------
 	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"0"
+	"AttackDamageMax"			"0"
 	
 	// Bounty
 	//----------------------------------------------------------------
@@ -40,17 +42,17 @@
 	// Bounds
 	//----------------------------------------------------------------
 	"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
-	"RingRadius"				"150"
-	"CollisionSize"				"144"
-	
+	"RingRadius"				"220"
+	"CollisionSize"				"172"
+		
 	// Movement
 	//----------------------------------------------------------------
-	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"	// Needed to cast Point abilities
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 	"MovementSpeed"				"0"
 	
 	// Status
 	//----------------------------------------------------------------
-	"StatusHealth"				"600"
+	"StatusHealth"				"2500"
 	"StatusHealthRegen"			"0"
 	"StatusMana"				"100"
 	"StatusManaRegen"			"0"

@@ -17,9 +17,10 @@
 [x] Create ranged and siege creeps
 [x] Enable creep upgrades
 [x] Color-in the creeps
-[ ] Allow ability slots to be "toggled"
+[x] Allow ability slots to be "toggled"
 [x] Learn how to create/edit ability/item icons
-[ ] Create spawn additional unit for melee and ranged barracks
+[ ] Create spawn additional unit ability for melee and ranged barracks
+[ ] Color in player buildings
 [ ] Enable lumber resource
 [ ] Replace city center default spawn to bm_melee_barracks
 [ ] Limit build area
@@ -30,6 +31,13 @@
 [ ] Create function to award last hit gold from creeps to player
 [ ] Clean up team and hero selection
 [ ] Display last hits and gold earned per player in-game
+
+-- UI --
+
+[ ] Learn how to locate building models
+[ ] Clean up team and hero selection
+[ ] Fix minimap
+
 
 -- Scout Mechanics --
 
@@ -123,18 +131,39 @@ Stealth detect creeps - either have a special creep or have it as an upgrade to 
 -- Tech Tree
 ---------------------------------------------------
 
-+Zombies	+Melee		+Ranged		+Lumber Yard
--Damage		-Armor(3)	-Armor(3)	-Workers(5)
-			-Damage(3)	-Damage(3)		 |
-			-Count(1)	-Count(1) 		 |
-			-HP* 		-HP* 			 |
-			-Special*	-Special* 		 |
-	   			|		   |			 |
-	   			-------------			 |---------------------------
-		   			 |					 |							|	
-				  +Siege 			+*Research Center 		+Aviation Sanctuary
-				  -Count(1)
-				  -Special*
++Zombies	+Melee		+Ranged					+Lumber Yard
+-Damage		-Armor(3)	-Armor(3)				-Workers(5)
+			-Damage(3)	-Damage(3)		 		-Defense*
+			-Count(1)	-Count(1) 		 			|
+			-HP* 		-Health Vial* 	 			|
+			-Special*	-Special* 		 			|
+	   			|		   |			 			|
+	   			-------------			-----------------------------
+		   			|					|							|	
+				  +Siege 			+*Research Lab 			+Aviation Sanctuary
+				  -Count(1)			-Confetti Scout			-count(1)
+				  -Special*				|					-range
+					|					|					-research hawk
+					|					|
+					|					|
+					|					|
+					|					-------------------------------------------------
+					|					|					   	|						|
+				+Ancient		+Portal of Heroes			+Purifier			+Library of Spells				
+								-SF 						-Wood Chips					|				
+								-Beastmaster 											|				
+								-Vengeful Spirit 										|				
+								-Medusa 												|
+																						|
+																						|
+																	---------------------------------------------
+																	|											|
+															+Unpromising Tower 							+Luminous Tower
+															-Chain Frost 								-Assassinate
+															-Chaos Meteor 								-Guardian Angel
+															-Call Down 									-Mass Repel
+
+
 
 
 

@@ -6,17 +6,17 @@ function OnSpellStart(keys)
 
     local list_main = {}
     list_main[0] = "repair"
-    list_main[1] = "build_bm_melee_barracks"
-    list_main[2] = "build_bm_siege_barracks"
+    list_main[1] = "build_bm_skeleton_barracks"
+    list_main[2] = "build_bm_melee_barracks"
     list_main[3] = "build_bm_ranged_barracks"
     list_main[4] = "build_bm_lumber_yard"
 
     local list_alt = {}
-    list_alt[0] = "meepo_earthbind"
-    list_alt[1] = "meepo_poof"
-    list_alt[2] = "meepo_geostrike"
-    list_alt[3] = "treant_living_armor"
-    list_alt[4] = "treant_overgrowth"
+    list_alt[0] = "build_bm_siege_barracks"
+    list_alt[1] = "build_bm_research_lab"
+    list_alt[2] = "build_bm_aviation_sanctuary"
+    list_alt[3] = "build_bm_ancient_barracks"
+    list_alt[4] = "build_bm_heroes"
 
     local list = {}
     print(caster:GetAbilityByIndex(0):GetAbilityName())

@@ -90,6 +90,18 @@ end
 function ApplyCreepParameters(unit, team, color)
     local unitName = unit:GetUnitName()
     local model = nil
+
+    if unitName == "creep_skeleton" then
+        if team == DOTA_TEAM_GOODGUYS then
+            model = "models/creeps/neutral_creeps/n_creep_troll_skeleton/n_creep_skeleton_melee.vmdl"
+            unit:SetModel(model)
+            unit:SetOriginalModel(model)
+        else
+            model = "models/creeps/neutral_creeps/n_creep_troll_skeleton/n_creep_skeleton_melee.vmdl"
+            unit:SetModel(model)
+            unit:SetOriginalModel(model)
+        end
+    end
     
     if unitName == "creep_melee" then
         if team == DOTA_TEAM_GOODGUYS then

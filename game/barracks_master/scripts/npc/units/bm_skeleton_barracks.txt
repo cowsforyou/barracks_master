@@ -1,13 +1,13 @@
-//=================================================================================
-// Building: Ranged Barracks
-//=================================================================================
-"bm_ranged_barracks"
+ //=================================================================================
+ // Building: Skeleton Barracks
+ //=================================================================================
+ "bm_skeleton_barracks"
 {
 	// General
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_creature"
-	"Model"						"models/creeps/lane_creeps/creep_radiant_ranged/radiant_ranged_mega.vmdl"
-	"ModelScale"				"1.9"
+	"Model"						"models/creeps/neutral_creeps/n_creep_troll_skeleton/n_creep_skeleton_melee.vmdl"
+	"ModelScale"				"1.5"
 	"Level"						"1"
 	"HealthBarOffset"			"140"
 	"HasInventory"				"1"
@@ -16,8 +16,8 @@
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
-	"Ability1"					"spawn_ranged_creeps"
-	"Ability2"					"research_bm_ranged_armor"
+	"Ability1"					"spawn_skeleton_creeps"
+	"Ability2"					""
 	"Ability3"					""
 	"Ability4"					""
 	"Ability10"					"ability_building"
@@ -31,6 +31,9 @@
 	// Attack
 	//----------------------------------------------------------------
 	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"0"
+	"AttackDamageMax"			"0"
 	
 	// Bounty
 	//----------------------------------------------------------------
@@ -40,8 +43,8 @@
 	// Bounds
 	//----------------------------------------------------------------
 	"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
-	"RingRadius"				"150"
-	"CollisionSize"				"144"
+	"RingRadius"				"130"
+	"CollisionSize"				"120"
 	
 	// Movement
 	//----------------------------------------------------------------
@@ -50,7 +53,7 @@
 	
 	// Status
 	//----------------------------------------------------------------
-	"StatusHealth"				"600"
+	"StatusHealth"				"100"
 	"StatusHealthRegen"			"0"
 	"StatusMana"				"100"
 	"StatusManaRegen"			"0"

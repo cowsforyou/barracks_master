@@ -28,6 +28,7 @@
 		//-------------------
 		//Creeps
 		//-------------------
+		"creep_skeleton"                                                                    "Skeleton Creep"
 		"creep_melee"                                                                     	"Melee Creep"
 		"creep_ranged"                                                                    	"Ranged Creep"
 		"creep_siege"                                                                     	"Siege Creep"
@@ -36,19 +37,29 @@
 		//-------------------
 		//Buildings
 		//-------------------
+		"bm_skeleton_barracks"                                                              "Skeleton Barracks"
+		"DOTA_Tooltip_ability_build_bm_skeleton_barracks"                        			"Skeleton Barracks"		
+		"DOTA_Tooltip_ability_build_bm_skeleton_barracks_Description"                       "Spawns Skeleton Creeps"
+		"DOTA_Tooltip_ability_build_bm_skeleton_barracks_build_time"                        "BUILD TIME:"
+		"DOTA_Tooltip_ability_build_bm_skeleton_barracks_gold_cost"                         "GOLD COST:"
+		"DOTA_Tooltip_ability_build_bm_skeleton_barracks_lumber_cost"                       "LUMBER COST:"
+
+
 		"bm_melee_barracks"                                                               	"Melee Barracks"
 		"DOTA_Tooltip_ability_build_bm_melee_barracks"                        				"Melee Barracks"		
-		"DOTA_Tooltip_ability_build_bm_melee_barracks_Description"                        	"Spawns melee creeps"
+		"DOTA_Tooltip_ability_build_bm_melee_barracks_Description"                        	"Spawns Melee Creeps"
 		"DOTA_Tooltip_ability_build_bm_melee_barracks_build_time"                         	"BUILD TIME:"
 		"DOTA_Tooltip_ability_build_bm_melee_barracks_gold_cost"                          	"GOLD COST:"
 		"DOTA_Tooltip_ability_build_bm_melee_barracks_lumber_cost"                        	"LUMBER COST:"
 
+
 		"bm_ranged_barracks"                                                               	"Ranged Barracks"
 		"DOTA_Tooltip_ability_build_bm_ranged_barracks"                        				"Ranged Barracks"		
-		"DOTA_Tooltip_ability_build_bm_ranged_barracks_Description"                       	"Spawns ranged creeps"
+		"DOTA_Tooltip_ability_build_bm_ranged_barracks_Description"                       	"Spawns Ranged Creeps"
 		"DOTA_Tooltip_ability_build_bm_ranged_barracks_build_time"                        	"BUILD TIME:"
 		"DOTA_Tooltip_ability_build_bm_ranged_barracks_gold_cost"                         	"GOLD COST:"
 		"DOTA_Tooltip_ability_build_bm_ranged_barracks_lumber_cost"                       	"LUMBER COST:"
+
 
 		"bm_lumber_yard"                                                               		"Lumber Yard"
 		"DOTA_Tooltip_ability_build_bm_lumber_yard"                        					"Lumber Yard"		
@@ -57,15 +68,39 @@
 		"DOTA_Tooltip_ability_build_bm_lumber_yard_gold_cost"                         		"GOLD COST:"
 		"DOTA_Tooltip_ability_build_bm_lumber_yard_lumber_cost"                       		"LUMBER COST:"
 
+
 		"bm_siege_barracks"                                                               	"Siege Barracks"
 		"DOTA_Tooltip_ability_build_bm_siege_barracks"                        				"Siege Barracks"
-		"DOTA_Tooltip_ability_build_bm_siege_barracks_Description"                       	"Spawns siege creeps"
+		"DOTA_Tooltip_ability_build_bm_siege_barracks_Description"                       	"Spawns Siege Creeps"
 		"DOTA_Tooltip_ability_build_bm_siege_barracks_build_time"                        	"BUILD TIME:"
 		"DOTA_Tooltip_ability_build_bm_siege_barracks_gold_cost"                         	"GOLD COST:"
 		"DOTA_Tooltip_ability_build_bm_siege_barracks_lumber_cost"                       	"LUMBER COST:"
 
 		"DOTA_Tooltip_ability_build_bm_siege_barracks_disabled"                           	"Siege Barracks"
 		"DOTA_Tooltip_ability_build_bm_siege_barracks_disabled_Description"               	"<b><font color='#eedd44'>Requires:\n - Melee Barracks\n - Ranged Barracks</font></b>\n"
+
+
+		"bm_research_lab"                                                               	"Research Lab"
+		"DOTA_Tooltip_ability_build_bm_research_lab"                        				"Research Lab"
+		"DOTA_Tooltip_ability_build_bm_research_lab_Description"                       		"Unlocks higher tiered buildings"
+		"DOTA_Tooltip_ability_build_bm_research_lab_build_time"                        		"BUILD TIME:"
+		"DOTA_Tooltip_ability_build_bm_research_lab_gold_cost"                         		"GOLD COST:"
+		"DOTA_Tooltip_ability_build_bm_research_lab_lumber_cost"                       		"LUMBER COST:"
+
+		"DOTA_Tooltip_ability_build_bm_research_lab_disabled"                           	"Research Lab"
+		"DOTA_Tooltip_ability_build_bm_research_lab_disabled_Description"               	"<b><font color='#eedd44'>Requires:\n - Melee Barracks\n - Lumber Yard</font></b>\n"
+
+
+		"bm_aviation_sanctuary"                                                             "Aviation Sanctuary"
+		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary"                        			"Aviation Sanctuary"
+		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_Description"                      "Spawns Air Creeps and unlocks Hawk Scout"
+		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_build_time"                       "BUILD TIME:"
+		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_gold_cost"                        "GOLD COST:"
+		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_lumber_cost"                      "LUMBER COST:"
+
+		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_disabled"                         "Aviation Sanctuary"
+		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_disabled_Description"             "<b><font color='#eedd44'>Requires:\n - Melee Barracks\n - Lumber Yard</font></b>\n"
+
 
 
 		//-------------------

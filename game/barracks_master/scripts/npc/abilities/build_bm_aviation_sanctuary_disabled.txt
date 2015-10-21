@@ -1,0 +1,7 @@
+// A _disabled ability is required to show the requirements on the tooltip
+"build_bm_aviation_sanctuary_disabled"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"beastmaster_call_of_the_wild"
+	"MaxLevel" 						"0"
+}
