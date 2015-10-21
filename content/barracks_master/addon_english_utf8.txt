@@ -60,6 +60,9 @@
 		"DOTA_Tooltip_ability_build_bm_ranged_barracks_gold_cost"                         	"GOLD COST:"
 		"DOTA_Tooltip_ability_build_bm_ranged_barracks_lumber_cost"                       	"LUMBER COST:"
 
+		"DOTA_Tooltip_ability_build_bm_ranged_barracks_disabled"                           	"Ranged Barracks"
+		"DOTA_Tooltip_ability_build_bm_ranged_barracks_disabled_Description"               	"<b><font color='#eedd44'>Requires:\n - Melee Barracks</font></b>\n"
+
 
 		"bm_lumber_yard"                                                               		"Lumber Yard"
 		"DOTA_Tooltip_ability_build_bm_lumber_yard"                        					"Lumber Yard"		
@@ -88,7 +91,7 @@
 		"DOTA_Tooltip_ability_build_bm_research_lab_lumber_cost"                       		"LUMBER COST:"
 
 		"DOTA_Tooltip_ability_build_bm_research_lab_disabled"                           	"Research Lab"
-		"DOTA_Tooltip_ability_build_bm_research_lab_disabled_Description"               	"<b><font color='#eedd44'>Requires:\n - Melee Barracks\n - Lumber Yard</font></b>\n"
+		"DOTA_Tooltip_ability_build_bm_research_lab_disabled_Description"               	"<b><font color='#eedd44'>Requires:\n - Lumber Yard</font></b>\n"
 
 
 		"bm_aviation_sanctuary"                                                             "Aviation Sanctuary"

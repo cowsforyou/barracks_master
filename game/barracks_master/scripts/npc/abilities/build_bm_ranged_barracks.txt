@@ -2,7 +2,7 @@
 "build_bm_ranged_barracks"
 {
 	"BaseClass"             		"ability_datadriven"
-	"AbilityTextureName"			"ranged_barracks"
+	"AbilityTextureName"			"ranged_barracks2"
 	"MaxLevel" 						"1"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"

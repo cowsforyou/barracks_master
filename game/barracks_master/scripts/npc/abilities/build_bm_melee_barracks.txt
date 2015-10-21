@@ -2,7 +2,7 @@
 "build_bm_melee_barracks"
 {
 	"BaseClass"             		"ability_datadriven"
-	"AbilityTextureName"			"melee_barracks"
+	"AbilityTextureName"			"melee_barracks2"
 	"MaxLevel" 						"1"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
