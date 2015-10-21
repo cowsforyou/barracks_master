@@ -1,0 +1,10 @@
+
+"ability_swapper_empty"
+{
+    "BaseClass"                     "ability_datadriven"
+    "AbilityTextureName"            "rubick_empty1"
+    "MaxLevel"                      "0" // might be buggy; doesn't gray-out but hides the pip
+
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+    "AbilityCastPoint"              "0"
+}

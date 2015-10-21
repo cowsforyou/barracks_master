@@ -1,0 +1,20 @@
+
+"ability_swapper_previous"
+{
+    "BaseClass"                     "ability_datadriven"
+    "AbilityTextureName"            "rubick_empty1"
+    "MaxLevel"                      "1"
+
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+    "AbilityCastPoint"              "0"
+
+    // run this script every time the spell is used
+    "OnSpellStart"
+    {
+        "RunScript"
+        {
+            "ScriptFile"    "spells/ability_swap.lua"
+            "Function"      "OnSpellStart"
+        }
+    }
+}

@@ -1,8 +1,8 @@
 // Autocast creep spawner spell; starts casting as soon as the building is fully constructed
-"spawn_skeleton_creeps"
+"spawn_melee_creeps"
 {
     "BaseClass"                     "ability_datadriven"
-    "AbilityTextureName"            "dark_troll_warlord_raise_dead"
+    "AbilityTextureName"            "melee_barracks2"
     "MaxLevel"                      "1"
 
     "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -24,7 +24,7 @@
         {
             "ScriptFile"    "barracks/spawner.lua"
             "Function"      "OnSpellStart"
-            "creepName"		"creep_skeleton"
+            "creepName"		"creep_melee"
         }
     }
 
@@ -46,6 +46,6 @@
 		            "Function"      "Think"
 		        }
 			}
-   	    	}
+   	    }
     }
 }

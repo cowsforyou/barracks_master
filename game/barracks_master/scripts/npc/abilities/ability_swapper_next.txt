@@ -1,5 +1,5 @@
 
-"swap_abilities"
+"ability_swapper_next"
 {
     "BaseClass"                     "ability_datadriven"
     "AbilityTextureName"            "rubick_empty1"
@@ -13,7 +13,7 @@
     {
         "RunScript"
         {
-            "ScriptFile"    "barracks/swap_abilities.lua"
+            "ScriptFile"    "spells/ability_swap.lua"
             "Function"      "OnSpellStart"
         }
     }

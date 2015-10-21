@@ -10,7 +10,7 @@
 	"Ability3" 					"build_bm_melee_barracks"
 	"Ability4" 					"build_bm_ranged_barracks"
 	"Ability5"					"build_bm_lumber_yard"
-	"Ability6" 					"swap_abilities"
+	"Ability6" 					"ability_swapper_next"
 	"Ability7"					""
 	"Ability8"					""
 	"Ability9"					""

@@ -31,7 +31,7 @@
     // modifiers are buffs/debuffs, usually associated with abilities
     "Modifiers"
     {
-    	"modifier_spawn_melee_creeps_thinker"
+    	"modifier_spawn_siege_creeps_thinker"
     	{
     		"Passive"			"1" // start activated
     		"IsHidden"			"1" // hide the visual buff icon
@@ -46,6 +46,6 @@
 		            "Function"      "Think"
 		        }
 			}
-   	    	}
+   	   	}
     }
 }

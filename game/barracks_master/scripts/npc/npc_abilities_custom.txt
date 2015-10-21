@@ -264,6 +264,56 @@
 			}
 		}
 	}
+	
+	"ability_swapper_empty"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "rubick_empty1"
+	    "MaxLevel"                      "0" // might be buggy; doesn't gray-out but hides the pip
+	
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"
+	}
+	
+	"ability_swapper_next"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "rubick_empty1"
+	    "MaxLevel"                      "1"
+	
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"
+	
+	    // run this script every time the spell is used
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "spells/ability_swap.lua"
+	            "Function"      "OnSpellStart"
+	        }
+	    }
+	}
+	
+	"ability_swapper_previous"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "rubick_empty1"
+	    "MaxLevel"                      "1"
+	
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"
+	
+	    // run this script every time the spell is used
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "spells/ability_swap.lua"
+	            "Function"      "OnSpellStart"
+	        }
+	    }
+	}
 	"ability_tower"
 	{
 		"BaseClass"             		"ability_datadriven"
@@ -2008,10 +2058,10 @@
 		"MaxLevel" 						"0"
 	}
 	// Autocast creep spawner spell; starts casting as soon as the building is fully constructed
-	"spawn_skeleton_creeps"
+	"spawn_melee_creeps"
 	{
 	    "BaseClass"                     "ability_datadriven"
-	    "AbilityTextureName"            "dark_troll_warlord_raise_dead"
+	    "AbilityTextureName"            "melee_barracks2"
 	    "MaxLevel"                      "1"
 	
 	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -2033,7 +2083,7 @@
 	        {
 	            "ScriptFile"    "barracks/spawner.lua"
 	            "Function"      "OnSpellStart"
-	            "creepName"		"creep_skeleton"
+	            "creepName"		"creep_melee"
 	        }
 	    }
 	
@@ -2055,7 +2105,7 @@
 			            "Function"      "Think"
 			        }
 				}
-	   	    	}
+	   	    }
 	    }
 	}
 	// Autocast creep spawner spell; starts casting as soon as the building is fully constructed
@@ -2091,7 +2141,7 @@
 	    // modifiers are buffs/debuffs, usually associated with abilities
 	    "Modifiers"
 	    {
-	    	"modifier_spawn_melee_creeps_thinker"
+	    	"modifier_spawn_ranged_creeps_thinker"
 	    	{
 	    		"Passive"			"1" // start activated
 	    		"IsHidden"			"1" // hide the visual buff icon
@@ -2106,7 +2156,7 @@
 			            "Function"      "Think"
 			        }
 				}
-	   	    	}
+	   	    }
 	    }
 	}
 	// Autocast creep spawner spell; starts casting as soon as the building is fully constructed
@@ -2142,7 +2192,7 @@
 	    // modifiers are buffs/debuffs, usually associated with abilities
 	    "Modifiers"
 	    {
-	    	"modifier_spawn_melee_creeps_thinker"
+	    	"modifier_spawn_siege_creeps_thinker"
 	    	{
 	    		"Passive"			"1" // start activated
 	    		"IsHidden"			"1" // hide the visual buff icon
@@ -2157,7 +2207,7 @@
 			            "Function"      "Think"
 			        }
 				}
-	   	    	}
+	   	   	}
 	    }
 	}
 	// Autocast creep spawner spell; starts casting as soon as the building is fully constructed
@@ -2193,7 +2243,7 @@
 	    // modifiers are buffs/debuffs, usually associated with abilities
 	    "Modifiers"
 	    {
-	    	"modifier_spawn_melee_creeps_thinker"
+	    	"modifier_spawn_skeleton_creeps_thinker"
 	    	{
 	    		"Passive"			"1" // start activated
 	    		"IsHidden"			"1" // hide the visual buff icon
@@ -2208,27 +2258,7 @@
 			            "Function"      "Think"
 			        }
 				}
-	   	    	}
-	    }
-	}
-	
-	"swap_abilities"
-	{
-	    "BaseClass"                     "ability_datadriven"
-	    "AbilityTextureName"            "rubick_empty1"
-	    "MaxLevel"                      "1"
-	
-	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-	    "AbilityCastPoint"              "0"
-	
-	    // run this script every time the spell is used
-	    "OnSpellStart"
-	    {
-	        "RunScript"
-	        {
-	            "ScriptFile"    "barracks/swap_abilities.lua"
-	            "Function"      "OnSpellStart"
-	        }
+	   	    }
 	    }
 	}
 	"train_city_center_tier2"
