@@ -159,7 +159,7 @@ Stealth detect creeps - either have a special creep or have it as an upgrade to 
 																	---------------------------------------------
 																	|											|
 															+Unpromising Tower 							+Luminous Tower
-															-Chain Frost 								-Assassinate
+															-Chain Frost 								-Sun Strike
 															-Chaos Meteor 								-Guardian Angel
 															-Call Down 									-Mass Repel
 

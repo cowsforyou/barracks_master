@@ -2,7 +2,7 @@
 "build_bm_skeleton_barracks"
 {
 	"BaseClass"             		"ability_datadriven"
-	"AbilityTextureName"			"dark_troll_warlord_raise_dead"
+	"AbilityTextureName"			"skeleton_barracks"
 	"MaxLevel" 						"1"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"

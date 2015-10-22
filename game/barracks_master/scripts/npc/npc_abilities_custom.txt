@@ -278,7 +278,7 @@
 	"ability_swapper_next"
 	{
 	    "BaseClass"                     "ability_datadriven"
-	    "AbilityTextureName"            "rubick_empty1"
+	    "AbilityTextureName"            "next"
 	    "MaxLevel"                      "1"
 	
 	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -298,7 +298,7 @@
 	"ability_swapper_previous"
 	{
 	    "BaseClass"                     "ability_datadriven"
-	    "AbilityTextureName"            "rubick_empty1"
+	    "AbilityTextureName"            "back"
 	    "MaxLevel"                      "1"
 	
 	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -952,7 +952,7 @@
 	"build_bm_siege_barracks"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"black_dragon_dragonhide_aura"
+		"AbilityTextureName"			"siege_barracks"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -1007,14 +1007,14 @@
 	"build_bm_siege_barracks_disabled"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"black_dragon_dragonhide_aura"
+		"AbilityTextureName"			"siege_barracks"
 		"MaxLevel" 						"0"
 	}
 	// Building requires repair to finish construction. Can be assisted to make the process faster
 	"build_bm_skeleton_barracks"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"dark_troll_warlord_raise_dead"
+		"AbilityTextureName"			"skeleton_barracks"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"

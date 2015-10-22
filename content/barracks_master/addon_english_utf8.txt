@@ -83,6 +83,17 @@
 		"DOTA_Tooltip_ability_build_bm_siege_barracks_disabled_Description"               	"<b><font color='#eedd44'>Requires:\n - Melee Barracks\n - Ranged Barracks</font></b>\n"
 
 
+		"bm_ancient_barracks"                                                               "Ancient Barracks"
+		"DOTA_Tooltip_ability_build_bm_ancient_barracks"                        			"Ancient Barracks"
+		"DOTA_Tooltip_ability_build_bm_ancient_barracks_Description"                       	"Spawns Ancient Creeps"
+		"DOTA_Tooltip_ability_build_bm_ancient_barracks_build_time"                        	"BUILD TIME:"
+		"DOTA_Tooltip_ability_build_bm_ancient_barracks_gold_cost"                         	"GOLD COST:"
+		"DOTA_Tooltip_ability_build_bm_ancient_barracks_lumber_cost"                       	"LUMBER COST:"
+
+		"DOTA_Tooltip_ability_build_bm_ancient_barracks_disabled"                           "Ancient Barracks"
+		"DOTA_Tooltip_ability_build_bm_ancient_barracks_disabled_Description"               "<b><font color='#eedd44'>Requires:\n - Siege Barracks</font></b>\n"
+
+
 		"bm_research_lab"                                                               	"Research Lab"
 		"DOTA_Tooltip_ability_build_bm_research_lab"                        				"Research Lab"
 		"DOTA_Tooltip_ability_build_bm_research_lab_Description"                       		"Unlocks higher tiered buildings"
@@ -102,7 +113,18 @@
 		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_lumber_cost"                      "LUMBER COST:"
 
 		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_disabled"                         "Aviation Sanctuary"
-		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_disabled_Description"             "<b><font color='#eedd44'>Requires:\n - Melee Barracks\n - Lumber Yard</font></b>\n"
+		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_disabled_Description"             "<b><font color='#eedd44'>Requires:\n - Lumber Yard</font></b>\n"
+
+
+		"bm_heroes"                                                             			"Portal of Heroes"
+		"DOTA_Tooltip_ability_build_bm_heroes"                        						"Portal of Heroes"
+		"DOTA_Tooltip_ability_build_bm_heroes_Description"                  	    		"Unlocks Heroes"
+		"DOTA_Tooltip_ability_build_bm_heroes_build_time"                  		    		"BUILD TIME:"
+		"DOTA_Tooltip_ability_build_bm_heroes_gold_cost"                       	 			"GOLD COST:"
+		"DOTA_Tooltip_ability_build_bm_heroes_lumber_cost"                      			"LUMBER COST:"
+
+		"DOTA_Tooltip_ability_build_bm_heroes_disabled"                         			"Portal of Heroes"
+		"DOTA_Tooltip_ability_build_bm_heroes_disabled_Description"             			"<b><font color='#eedd44'>Requires:\n - Research Lab</font></b>\n"
 
 
 
@@ -171,6 +193,13 @@
 
 		"DOTA_Tooltip_ability_item_research_bm_ranged_armor"                               	"Cancel Upgrade"
 		"DOTA_Tooltip_ability_item_research_bm_ranged_armor_Description"                   	""
+
+
+		//Ability Swapper
+		//-------------------------------------------------------------
+		"DOTA_Tooltip_ability_ability_swapper_next"                                     	"Next"
+		"DOTA_Tooltip_ability_ability_swapper_previous"                                     "Back"
+		"DOTA_Tooltip_ability_ability_swapper_empty"                                     	"Empty"
 
 
 

@@ -2,7 +2,7 @@
 "ability_swapper_previous"
 {
     "BaseClass"                     "ability_datadriven"
-    "AbilityTextureName"            "rubick_empty1"
+    "AbilityTextureName"            "back"
     "MaxLevel"                      "1"
 
     "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"

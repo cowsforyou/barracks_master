@@ -7,7 +7,7 @@
     // General
     //-------------------------------------------------------------------------------------------------------------
     "BaseClass"                     "item_datadriven"
-    "AbilityTextureName"			"item_armlet"
+    "AbilityTextureName"			"item_boar"
     "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 
     "ItemKillable"      "0" 
