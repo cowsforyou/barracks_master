@@ -266,16 +266,33 @@ function GameMode:OnEntityKilled( keys )
 
   -- Put code here to handle when an entity gets killed
 
-  --[[
-  local name = killedUnit:GetUnitName()
-  print(name)
+  local killerName = killerEntity:GetUnitName()
+  local killedName = killedUnit:GetUnitName()
 
-  if name == "npc_dota_creep_goodguys_ranged" then
-    print("You killed a radiant ranged creep! Great job.")
+  -- if the killer is neither a hero nor tower, and killed is neither hero nor tower, then
+  if string.find(killerName, "tower") == nil and not killerEntity:IsHero() then
+    if string.find(killedName, "hero") == nil and string.find(killedName, "tower") == nil then
+    	local player = killerEntity:GetOwner()
+    	if player then
+    		local playerID = player:GetPlayerID()
+    		local gold = killedUnit:GetGoldBounty()
+    		PlayerResource:ModifyGold(playerID, gold, false, DOTA_ModifyGold_CreepKill)
+
+			local particle = ParticleManager:CreateParticle("particles/generic_gameplay/lasthit_coins.vpcf", PATTACH_ABSORIGIN_FOLLOW, killedUnit)
+			ParticleManager:SetParticleControl(particle, 1, killedUnit:GetAbsOrigin())
+			EmitSoundOn("General.Coins", killedUnit)
+
+    		print("Awarding " .. gold .. " gold to player " .. playerID)
+    	else
+    		print("Nil player")
+    	end
+    else
+    	print("Creep killed hero or tower.")
+    end
   else
-    print("Something other than a radiant ranged creep died.")
+    print("Either a tower or hero killed something.")
   end
-  ]]
+
 
 end
 
