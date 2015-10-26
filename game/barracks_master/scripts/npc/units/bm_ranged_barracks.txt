@@ -7,7 +7,7 @@
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_creature"
 	"Model"						"models/creeps/lane_creeps/creep_radiant_ranged/radiant_ranged_mega.vmdl"
-	"ModelScale"				"1.9"
+	"ModelScale"				"1.7"
 	"Level"						"1"
 	"HealthBarOffset"			"140"
 	"HasInventory"				"1"
@@ -15,11 +15,13 @@
 	
 	// Abilities
 	//----------------------------------------------------------------
-	"AbilityLayout"				"4"
+	"AbilityLayout"				"6"
 	"Ability1"					"spawn_ranged_creeps"
 	"Ability2"					"research_bm_ranged_armor"
-	"Ability3"					""
-	"Ability4"					""
+	"Ability3"					"research_bm_ranged_damage"
+	"Ability4"					"research_bm_ranged_hp"
+	"Ability5"					""
+	"Ability6"					""
 	"Ability10"					"ability_building"
 	"Ability11"					"ability_building_queue"
 	
@@ -31,17 +33,20 @@
 	// Attack
 	//----------------------------------------------------------------
 	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"0"
+	"AttackDamageMax"			"0"
 	
 	// Bounty
 	//----------------------------------------------------------------
-	"BountyGoldMin"				"0.0"
-	"BountyGoldMax"				"0.0"
+	"BountyGoldMin"				"300"
+	"BountyGoldMax"				"300"
 	
 	// Bounds
 	//----------------------------------------------------------------
 	"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
-	"RingRadius"				"150"
-	"CollisionSize"				"144"
+	"RingRadius"				"120"
+	"CollisionSize"				"80"
 	
 	// Movement
 	//----------------------------------------------------------------

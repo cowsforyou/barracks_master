@@ -1,6 +1,6 @@
 "bm_melee_damage_disabled"
 {
     "BaseClass"                     "ability_datadriven"
-    "AbilityTextureName"            "sven_gods_strength"
+    "AbilityTextureName"            "damage"
     "MaxLevel"                      "0"
 }

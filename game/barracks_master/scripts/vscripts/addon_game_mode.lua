@@ -48,7 +48,11 @@ function Precache( context )
   PrecacheResource("particle_folder", "particles/econ/items/earthshaker/earthshaker_gravelmaw/", context)
 
   -- Resources used
-  PrecacheUnitByNameSync("npc_dota_beastmaster_boar_1", context)
+  PrecacheUnitByNameSync("scout_boar", context)
+  PrecacheUnitByNameSync("scout_hawk", context)
+  PrecacheUnitByNameSync("scout_techies", context)
+  PrecacheUnitByNameSync("creep_air", context) 
+      
   PrecacheUnitByNameSync("peasant", context)
   PrecacheUnitByNameSync("tower", context)
   PrecacheUnitByNameSync("tower_tier2", context)
@@ -57,7 +61,6 @@ function Precache( context )
   PrecacheUnitByNameSync("tech_center", context)
   PrecacheUnitByNameSync("dragon_tower", context)
   PrecacheUnitByNameSync("dark_tower", context)
-  PrecacheUnitByNameSync("wall", context)
 
   PrecacheItemByNameSync("item_apply_modifiers", context)
 

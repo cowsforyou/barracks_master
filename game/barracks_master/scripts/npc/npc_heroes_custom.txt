@@ -56,6 +56,24 @@
 	    "VisionDaytimeRange"    "1800"                  // Range of vision at night time.
 	    "VisionNighttimeRange"    "1800"                  // Range of vision at night time.
 	  }
+	"npc_dota_hero_axe"
+	{
+		"override_hero"				"npc_dota_hero_axe"
+	
+		"UnitLabel"					"builder"
+	
+		"AbilityLayout"				"6"
+		"Ability1" 					"repair"
+		"Ability2" 					"build_bm_skeleton_barracks"
+		"Ability3" 					"build_bm_melee_barracks"
+		"Ability4" 					"build_bm_ranged_barracks"
+		"Ability5"					"build_bm_lumber_yard"
+		"Ability6" 					"ability_swapper_next"
+		"Ability7"					""
+		"Ability8"					""
+		"Ability9"					""
+		"Ability10"					""
+	}
 	// Override Information for Beastmaster
 	    //-------------------------------------------------------------------------------------------------------------
 	    "npc_dota_hero_custom_beastmaster"                                          // ? What's this for ?
@@ -132,6 +150,38 @@
 	
 		"UnitLabel"					"builder"
 	
+		// Armor
+		//-------------------------------------------------------------------------------------------------------------
+		"ArmorPhysical"					"2"
+		"MagicalResistance"				"25"
+	
+		// Attack
+		//-------------------------------------------------------------------------------------------------------------
+		"AttackDamageMin"				"1"
+		"AttackDamageMax"				"1"	
+		"AttackDamageType"				"DAMAGE_TYPE_ArmorPhysical"
+	
+		// Attributes
+		//-------------------------------------------------------------------------------------------------------------
+		"AttributePrimary"				"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"			"0"
+		"AttributeStrengthGain"			"0"
+		"AttributeBaseIntelligence"		"0"
+		"AttributeIntelligenceGain"		"0"
+		"AttributeBaseAgility"			"0"
+		"AttributeAgilityGain"			"0"
+	
+	
+		// Status
+		//-------------------------------------------------------------------------------------------------------------
+		"StatusHealth"					"5"			// Base health.
+		"StatusHealthRegen"				"0.2"
+		"StatusMana"					"200"
+		"StatusManaRegen"				"0.4"
+	
+	
+		// Abilities
+		//-------------------------------------------------------------------------------------------------------------
 		"AbilityLayout"				"6"
 		"Ability1" 					"repair"
 		"Ability2" 					"build_bm_skeleton_barracks"

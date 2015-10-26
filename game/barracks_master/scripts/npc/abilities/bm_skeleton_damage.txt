@@ -1,0 +1,35 @@
+"bm_skeleton_damage"
+{
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"             "ability_datadriven"
+    "AbilityTextureName"    "damage"
+
+    "MaxLevel"    "1"
+
+    "Modifiers"
+    {
+      "modifier_skeleton_damage_bonus"
+      {
+        "Passive"    "1"
+        "IsHidden"   "0"
+        
+        "Properties"
+        {
+            "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"    "%damage_bonus" // grab from AbilitySpecial
+        }
+        
+      }
+    }
+
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "damage_bonus"     "20"
+      }
+      
+    }
+}

@@ -32,6 +32,17 @@
 		"creep_melee"                                                                     	"Melee Creep"
 		"creep_ranged"                                                                    	"Ranged Creep"
 		"creep_siege"                                                                     	"Siege Creep"
+		"creep_ancient1"                                                                    "Granite Golem"
+		"creep_ancient2"                                                                    "Big Thunder Lizard"
+		"creep_ancient3"                                                                    "Blue Dragonspawn Overseer"		
+
+
+		//-------------------
+		//Scouts
+		//-------------------
+		"scout_boar"                                                                      	"Boar Scout"
+		"scout_hawk"                                                                      	"Hawk Scout"
+		"scout_techies"                                                                     "Techies Scout"		
 
 
 		//-------------------
@@ -132,20 +143,45 @@
 		//Abilities
 		//-------------------
 
+		//Skeleton Damage
+		//-------------------------------------------------------------
+		"DOTA_Tooltip_ability_bm_skeleton_damage"                                           "Damage Bonus"
+		"DOTA_Tooltip_ability_bm_skeleton_damage_Description"                               "Grands additional damage"
+		"DOTA_Tooltip_ability_bm_skeleton_damage_damage_bonus"    							"DAMAGE BONUS:"	
+
+		"DOTA_Tooltip_ability_bm_skeleton_damage_disabled"                                  "Damage Bonus"
+		"DOTA_Tooltip_ability_bm_skeleton_damage_Description"                               "Grants additional damage"
+
+		"DOTA_Tooltip_modifier_skeleton_damage_bonus"                                       "Damage Bonus"
+		"DOTA_Tooltip_modifier_skeleton_damage_bonus_Description"                           ""
+
+		"DOTA_Tooltip_ability_research_bm_skeleton_damage"                                  "Upgrade Skeleton Damage"
+		"DOTA_Tooltip_ability_research_bm_skeleton_damage_Description"                      "Increases damage of skeleton creeps"
+		"DOTA_Tooltip_ability_research_bm_skeleton_damage_damage_bonus"                     "DAMAGE BONUS:"
+		"DOTA_Tooltip_ability_research_bm_skeleton_damage_research_time"                    "RESEARCH TIME:"
+		"DOTA_Tooltip_ability_research_bm_skeleton_damage_gold_cost"                        "GOLD COST:"
+		"DOTA_Tooltip_ability_research_bm_skeleton_damage_lumber_cost"                      "LUMBER COST:"
+
+		"DOTA_Tooltip_ability_item_research_bm_skeleton_damage"                             "Cancel Upgrade"
+		"DOTA_Tooltip_ability_item_research_bm_skeleton_damage_Description"             	""
+
+
 		//Melee Armor
 		//-------------------------------------------------------------
 		"DOTA_Tooltip_ability_bm_melee_armor"                                           	"Armor Bonus"
-		"DOTA_Tooltip_ability_bm_melee_armor_Description"                               	"Gives +1 armor"
+		"DOTA_Tooltip_ability_bm_melee_armor_Description"                               	"Grands additional armor"
+		"DOTA_Tooltip_ability_bm_melee_armor_armor_bonus"    								"ARMOR BONUS:"		
 
 		"DOTA_Tooltip_ability_bm_melee_armor_disabled"                                      "Armor Bonus"
-		"DOTA_Tooltip_ability_bm_melee_armor_Description"                               	"Gives +1 armor"
+		"DOTA_Tooltip_ability_bm_melee_armor_Description"                               	"Grands additional armor"
 
 		"DOTA_Tooltip_modifier_melee_armor_bonus"                                         	"Armor Bonus"
 		"DOTA_Tooltip_modifier_melee_armor_bonus_Description"                             	""
 
-		"DOTA_Tooltip_ability_research_bm_melee_armor"                                    	"Upgrade to Level 1 Armor"
+		"DOTA_Tooltip_ability_research_bm_melee_armor"                                    	"Upgrade Melee Armor"
 		"DOTA_Tooltip_ability_research_bm_melee_armor_Description"                        	"Increases armor of melee creeps"
-		"DOTA_Tooltip_ability_research_bm_melee_armor_build_time"                         	"BUILD TIME:"
+		"DOTA_Tooltip_ability_research_bm_melee_armor_armor_bonus"    						"ARMOR BONUS:"
+		"DOTA_Tooltip_ability_research_bm_melee_armor_research_time"                        "RESEARCH TIME:"
 		"DOTA_Tooltip_ability_research_bm_melee_armor_gold_cost"                          	"GOLD COST:"
 		"DOTA_Tooltip_ability_research_bm_melee_armor_lumber_cost"                        	"LUMBER COST:"
 
@@ -156,17 +192,19 @@
 		//Melee Damage
 		//-------------------------------------------------------------
 		"DOTA_Tooltip_ability_bm_melee_damage"                                           	"Damage Bonus"
-		"DOTA_Tooltip_ability_bm_melee_damage_Description"                               	"Gives +3 damage"
+		"DOTA_Tooltip_ability_bm_melee_damage_Description"                               	"Grands additional damage"
+		"DOTA_Tooltip_ability_bm_melee_damage_damage_bonus"    								"DAMAGE BONUS:"	
 
 		"DOTA_Tooltip_ability_bm_melee_damage_disabled"                                     "Damage Bonus"
-		"DOTA_Tooltip_ability_bm_melee_damage_Description"                               	"Gives +3 damage"
+		"DOTA_Tooltip_ability_bm_melee_damage_Description"                               	"Grants additional damage"
 
 		"DOTA_Tooltip_modifier_melee_damage_bonus"                                         	"Damage Bonus"
 		"DOTA_Tooltip_modifier_melee_damage_bonus_Description"                             	""
 
-		"DOTA_Tooltip_ability_research_bm_melee_damage"                                    	"Upgrade to Level 1 Damage"
+		"DOTA_Tooltip_ability_research_bm_melee_damage"                                    	"Upgrade Melee Damage"
 		"DOTA_Tooltip_ability_research_bm_melee_damage_Description"                        	"Increases damage of melee creeps"
-		"DOTA_Tooltip_ability_research_bm_melee_damage_build_time"                         	"BUILD TIME:"
+		"DOTA_Tooltip_ability_research_bm_melee_damage_damage_bonus"                       	"DAMAGE BONUS:"
+		"DOTA_Tooltip_ability_research_bm_melee_damage_research_time"                       "RESEARCH TIME:"
 		"DOTA_Tooltip_ability_research_bm_melee_damage_gold_cost"                          	"GOLD COST:"
 		"DOTA_Tooltip_ability_research_bm_melee_damage_lumber_cost"                        	"LUMBER COST:"
 
@@ -174,20 +212,45 @@
 		"DOTA_Tooltip_ability_item_research_bm_melee_damage_Description"                   	""
 
 
+		//Melee Health
+		//-------------------------------------------------------------
+		"DOTA_Tooltip_ability_bm_melee_hp"                                          	 	"Health Vial"
+		"DOTA_Tooltip_ability_bm_melee_hp_Description"                         		      	"Grands additional health"
+		"DOTA_Tooltip_ability_bm_melee_hp_health_bonus"    									"HEALTH BONUS:"	
+
+		"DOTA_Tooltip_ability_bm_melee_hp_disabled"                           	     	    "Health Vial"
+		"DOTA_Tooltip_ability_bm_melee_hp_Description"                        		       	"Grants additional health"
+
+		"DOTA_Tooltip_modifier_melee_hp_bonus"                                         		"Health Bonus"
+		"DOTA_Tooltip_modifier_melee_hp_bonus_Description"                             		""
+
+		"DOTA_Tooltip_ability_research_bm_melee_hp"                                    		"Health Vial"
+		"DOTA_Tooltip_ability_research_bm_melee_hp_Description"                        		"Increases health of melee creeps"
+		"DOTA_Tooltip_ability_research_bm_melee_hp_health_bonus"                       		"HEALTH BONUS:"
+		"DOTA_Tooltip_ability_research_bm_melee_hp_research_time"                       	"RESEARCH TIME:"
+		"DOTA_Tooltip_ability_research_bm_melee_hp_gold_cost"                          		"GOLD COST:"
+		"DOTA_Tooltip_ability_research_bm_melee_hp_lumber_cost"                        		"LUMBER COST:"
+
+		"DOTA_Tooltip_ability_item_research_bm_melee_hp"                               		"Cancel Upgrade"
+		"DOTA_Tooltip_ability_item_research_bm_melee_hp_Description"                   		""
+
+
 		//Ranged Armor
 		//-------------------------------------------------------------
 		"DOTA_Tooltip_ability_bm_ranged_armor"                                           	"Armor Bonus"
-		"DOTA_Tooltip_ability_bm_ranged_armor_Description"                               	"Gives +1 armor"
+		"DOTA_Tooltip_ability_bm_ranged_armor_Description"                               	"Grants additional armor"
+		"DOTA_Tooltip_ability_bm_ranged_armor_armor_bonus"    								"ARMOR BONUS:"
 
 		"DOTA_Tooltip_ability_bm_ranged_armor_disabled"                                     "Armor Bonus"
-		"DOTA_Tooltip_ability_bm_ranged_armor_Description"                               	"Gives +1 armor"
+		"DOTA_Tooltip_ability_bm_ranged_armor_Description"                               	"Grants additional armor"
 
 		"DOTA_Tooltip_modifier_ranged_armor_bonus"                                         	"Armor Bonus"
 		"DOTA_Tooltip_modifier_ranged_armor_bonus_Description"                             	""
 
-		"DOTA_Tooltip_ability_research_bm_ranged_armor"                                    	"Upgrade to Level 1 Armor"
+		"DOTA_Tooltip_ability_research_bm_ranged_armor"                                    	"Upgrade Ranged Armor"
 		"DOTA_Tooltip_ability_research_bm_ranged_armor_Description"                        	"Increases armor of ranged creeps"
-		"DOTA_Tooltip_ability_research_bm_ranged_armor_build_time"                         	"BUILD TIME:"
+		"DOTA_Tooltip_ability_research_bm_ranged_armor_armor_bonus"    						"ARMOR BONUS:"
+		"DOTA_Tooltip_ability_research_bm_ranged_armor_research_time"                       "RESEARCH TIME:"
 		"DOTA_Tooltip_ability_research_bm_ranged_armor_gold_cost"                          	"GOLD COST:"
 		"DOTA_Tooltip_ability_research_bm_ranged_armor_lumber_cost"                        	"LUMBER COST:"
 
@@ -195,11 +258,109 @@
 		"DOTA_Tooltip_ability_item_research_bm_ranged_armor_Description"                   	""
 
 
+		//Ranged Damage
+		//-------------------------------------------------------------
+		"DOTA_Tooltip_ability_bm_ranged_damage"                                           	"Damage Bonus"
+		"DOTA_Tooltip_ability_bm_ranged_damage_Description"                               	"Grants additional damage"
+		"DOTA_Tooltip_ability_bm_ranged_damage_damage_bonus"    							"DAMAGE BONUS:"	
+
+		"DOTA_Tooltip_ability_bm_ranged_damage_disabled"                                    "Damage Bonus"
+		"DOTA_Tooltip_ability_bm_ranged_damage_Description"                               	"Grants additional damage"
+
+		"DOTA_Tooltip_modifier_ranged_damage_bonus"                                         "Damage Bonus"
+		"DOTA_Tooltip_modifier_ranged_damage_bonus_Description"                             ""
+
+		"DOTA_Tooltip_ability_research_bm_ranged_damage"                                    "Upgrade Ranged Damage"
+		"DOTA_Tooltip_ability_research_bm_ranged_damage_Description"                        "Increases damage of ranged creeps"
+		"DOTA_Tooltip_ability_research_bm_ranged_damage_damage_bonus"    					"DAMAGE BONUS:"
+		"DOTA_Tooltip_ability_research_bm_ranged_damage_research_time"                      "RESEARCH TIME:"
+		"DOTA_Tooltip_ability_research_bm_ranged_damage_gold_cost"                          "GOLD COST:"
+		"DOTA_Tooltip_ability_research_bm_ranged_damage_lumber_cost"                        "LUMBER COST:"
+
+		"DOTA_Tooltip_ability_item_research_bm_ranged_damage"                               "Cancel Upgrade"
+		"DOTA_Tooltip_ability_item_research_bm_ranged_damage_Description"                   ""
+
+
+		//Ranged Health
+		//-------------------------------------------------------------
+		"DOTA_Tooltip_ability_bm_ranged_hp"                                          	 	"Health Vial"
+		"DOTA_Tooltip_ability_bm_ranged_hp_Description"                         		    "Grands additional health"
+		"DOTA_Tooltip_ability_bm_ranged_hp_health_bonus"    								"HEALTH BONUS:"	
+
+		"DOTA_Tooltip_ability_bm_ranged_hp_disabled"                           	     	    "Health Vial"
+		"DOTA_Tooltip_ability_bm_ranged_hp_Description"                        		       	"Grants additional health"
+
+		"DOTA_Tooltip_modifier_ranged_hp_bonus"                                         	"Health Bonus"
+		"DOTA_Tooltip_modifier_ranged_hp_bonus_Description"                             	""
+
+		"DOTA_Tooltip_ability_research_bm_ranged_hp"                                    	"Health Vial"
+		"DOTA_Tooltip_ability_research_bm_ranged_hp_Description"                        	"Increases health of ranged creeps"
+		"DOTA_Tooltip_ability_research_bm_ranged_hp_health_bonus"                       	"HEALTH BONUS:"
+		"DOTA_Tooltip_ability_research_bm_ranged_hp_research_time"                       	"RESEARCH TIME:"
+		"DOTA_Tooltip_ability_research_bm_ranged_hp_gold_cost"                          	"GOLD COST:"
+		"DOTA_Tooltip_ability_research_bm_ranged_hp_lumber_cost"                        	"LUMBER COST:"
+
+		"DOTA_Tooltip_ability_item_research_bm_ranged_hp"                               	"Cancel Upgrade"
+		"DOTA_Tooltip_ability_item_research_bm_ranged_hp_Description"                   	""
+
+
+
+		//Spawners
+		//-------------------------------------------------------------
+		"DOTA_Tooltip_ability_spawn_skeleton_creeps"                                        "Skeleton Spawner"
+		"DOTA_Tooltip_ability_spawn_skeleton_creeps_Description"                            "Automatically spawns skeleton creeps"
+		"DOTA_Tooltip_ability_spawn_skeleton_creeps_creep_count"                            "CREEP COUNT:"	
+
+		"DOTA_Tooltip_ability_spawn_melee_creeps"                                           "Melee Spawner"
+		"DOTA_Tooltip_ability_spawn_melee_creeps_Description"                               "Automatically spawns melee creeps"
+		"DOTA_Tooltip_ability_spawn_melee_creeps_creep_count"                               "CREEP COUNT:"		
+
+		"DOTA_Tooltip_ability_spawn_ranged_creeps"                                     		"Ranged Spawner"
+		"DOTA_Tooltip_ability_spawn_ranged_creeps_Description"                              "Automatically spawns ranged creeps"
+		"DOTA_Tooltip_ability_spawn_ranged_creeps_creep_count"                              "CREEP COUNT:"	
+
+		"DOTA_Tooltip_ability_spawn_siege_creeps"                                     		"Siege Spawner"
+		"DOTA_Tooltip_ability_spawn_siege_creeps_Description"                              	"Automatically spawns siege creeps"
+		"DOTA_Tooltip_ability_spawn_siege_creeps_creep_count"                              	"CREEP COUNT:"	
+
+		"DOTA_Tooltip_ability_spawn_ancient_creeps"                                     	"Ancient Spawner"
+		"DOTA_Tooltip_ability_spawn_ancient_creeps_Description"                             "Automatically spawns ancient creeps"
+		"DOTA_Tooltip_ability_spawn_ancient_creeps_creep_count"                             "CREEP COUNT:"	
+
+
+
+
 		//Ability Swapper
 		//-------------------------------------------------------------
 		"DOTA_Tooltip_ability_ability_swapper_next"                                     	"Next"
 		"DOTA_Tooltip_ability_ability_swapper_previous"                                     "Back"
 		"DOTA_Tooltip_ability_ability_swapper_empty"                                     	"Empty"
+
+
+
+
+		//-------------------
+		//Items
+		//-------------------
+
+		"DOTA_Tooltip_ability_item_boar"                                                  	"Boar Scout"
+		"DOTA_Tooltip_ability_item_boar_Description"                                      	""
+		"DOTA_Tooltip_ability_item_boar_duration"                            				"BOAR DURATION:"
+		"DOTA_Tooltip_ability_item_boar_gold_cost_tooltip"                                	"GOLD COST:"
+		"DOTA_Tooltip_ability_item_boar_max_count_tooltip"                                	"MAX COUNT:"
+
+		"DOTA_Tooltip_ability_item_hawk"                                                  	"Hawk Scout"
+		"DOTA_Tooltip_ability_item_hawk_Description"                                      	""
+		"DOTA_Tooltip_ability_item_hawk_duration"                            				"HAWK DURATION:"
+		"DOTA_Tooltip_ability_item_hawk_gold_cost_tooltip"                                	"GOLD COST:"
+
+		"DOTA_Tooltip_ability_item_techies"                                                 "Techies Scout"
+		"DOTA_Tooltip_ability_item_techies_Description"                                     ""
+		"DOTA_Tooltip_ability_item_techies_duration"                            			"TECHIES DURATION:"
+		"DOTA_Tooltip_ability_item_techies_gold_cost_tooltip"                               "GOLD COST:"
+
+
+
 
 
 

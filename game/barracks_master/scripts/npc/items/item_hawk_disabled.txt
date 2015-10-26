@@ -1,0 +1,11 @@
+"item_hawk_disabled"
+{
+    "BaseClass"                     "item_datadriven"
+    "AbilityTextureName"            "item_hawk"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+
+    "ItemKillable"      "0" 
+    "ItemSellable"      "0"
+    "ItemPurchasable"   "0"
+    "ItemDroppable"     "0"
+}

@@ -139,6 +139,53 @@ function ApplyCreepParameters(unit, team, color)
         end
     end
 
+    if unitName == "creep_air" then
+        if team == DOTA_TEAM_GOODGUYS then
+            model = "models/heroes/visage/visage_familiar.vmdl"
+            unit:SetModel(model)
+            unit:SetOriginalModel(model)
+        else
+            model = "models/heroes/visage/visage_familiar.vmdl"
+            unit:SetModel(model)
+            unit:SetOriginalModel(model)
+        end
+    end
+
+    if unitName == "creep_ancient1" then
+        if team == DOTA_TEAM_GOODGUYS then
+            model = "models/creeps/neutral_creeps/n_creep_golem_a/neutral_creep_golem_a.vmdl"
+            unit:SetModel(model)
+            unit:SetOriginalModel(model)
+        else
+            model = "models/creeps/neutral_creeps/n_creep_golem_a/neutral_creep_golem_a.vmdl"
+            unit:SetModel(model)
+            unit:SetOriginalModel(model)
+        end
+    end
+
+    if unitName == "creep_ancient2" then
+        if team == DOTA_TEAM_GOODGUYS then
+            model = "models/creeps/neutral_creeps/n_creep_thunder_lizard/n_creep_thunder_lizard_big.vmdl"
+            unit:SetModel(model)
+            unit:SetOriginalModel(model)
+        else
+            model = "models/creeps/neutral_creeps/n_creep_thunder_lizard/n_creep_thunder_lizard_big.vmdl"
+            unit:SetModel(model)
+            unit:SetOriginalModel(model)
+        end
+    end
+
+    if unitName == "creep_ancient3" then
+        if team == DOTA_TEAM_GOODGUYS then
+            model = "models/creeps/neutral_creeps/n_creep_dragonspawn_b/n_creep_dragonspawn_b.vmdl"
+            unit:SetModel(model)
+            unit:SetOriginalModel(model)
+        else
+            model = "models/creeps/neutral_creeps/n_creep_dragonspawn_b/n_creep_dragonspawn_b.vmdl"
+            unit:SetModel(model)
+            unit:SetOriginalModel(model)
+        end
+    end
 
     
     if     color == "red"    then unit:SetRenderColor(255,128,128)

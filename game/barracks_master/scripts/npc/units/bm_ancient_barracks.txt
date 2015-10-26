@@ -5,69 +5,71 @@
 	{										
 		// General
 		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/creeps/neutral_creeps/n_creep_golem_a/neutral_creep_golem_a.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
-		"SoundSet"					"n_creep_Melee"
-		"Level"						"6"
-		"IsAncient"					"1"
-		"ModelScale" 				"1.2"
-		"IsNeutralUnitType"			"1"
+		"ModelScale" 				"1.5"
+		"Level"						"1"
+		"HealthBarOffset"			"140"
+		"HasInventory"				"1"
+		"ConsideredHero"			"1"
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
+		"AbilityLayout"				"6"
+		"Ability1"					"spawn_ancient_creeps"
 		"Ability2"					""			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
+		"Ability5"					""			
+		"Ability6"					""			
+		"Ability10"					"ability_building"
+		"Ability11"					"ability_building_queue"
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"8"			// Physical protection.
+		"ArmorPhysical"				"5"
+		"MagicalResistance"			"0"
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"77"		// Damage range min.
-		"AttackDamageMax"			"87"		// Damage range max.	
-		"AttackRate"				"1.35"		// Speed of attack.
-		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"128"		// Range within a target can be attacked.
-		"ProjectileModel"			""			// Particle system model for projectile.
-		"ProjectileSpeed"			"0"			// Speed of projectile.		   
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"	   
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
-		"HealthBarOffset"			"220"
+		"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
+		"RingRadius"				"170"
+		"CollisionSize"				"140"
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"155"		// Experience earn.
-		"BountyGoldMin"				"107"		// Gold earned min.
-		"BountyGoldMax"				"121"		// Gold earned max.
+		"BountyXP"					"0"			// Experience earn.
+		"BountyGoldMin"				"500"		// Gold earned min.
+		"BountyGoldMax"				"500"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		// Speed.
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"	// Needed to cast Point abilities
+		"MovementSpeed"				"0"
 
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"1700"		// Base health.
-		"StatusHealthRegen"			"1.5"		// Health regeneration rate.
+		"StatusHealthRegen"			"0"		// Health regeneration rate.
 		"StatusMana"				"600"		// Base mana.
-		"StatusManaRegen"			"1.5"		// Mana regeneration rate.		 
+		"StatusManaRegen"			"0"		// Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"800"		// Range of vision during day light.
-		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+		"VisionDaytimeRange"		"900"		// Range of vision during day light.
+		"VisionNighttimeRange"		"600"		// Range of vision at night time.
 
 		// Team
 		//----------------------------------------------------------------
-		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
-		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_LIGHT"
-		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRONG"
-		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"TeamName"					"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+		"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
 	}		

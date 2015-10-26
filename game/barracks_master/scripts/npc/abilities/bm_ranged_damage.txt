@@ -1,0 +1,35 @@
+"bm_ranged_damage"
+{
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"             "ability_datadriven"
+    "AbilityTextureName"    "damage"
+
+    "MaxLevel"    "3"
+
+    "Modifiers"
+    {
+      "modifier_ranged_damage_bonus"
+      {
+        "Passive"    "1"
+        "IsHidden"   "0"
+        
+        "Properties"
+        {
+            "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"    "%damage_bonus" // grab from AbilitySpecial
+        }
+        
+      }
+    }
+
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "damage_bonus"     "10 15 20"
+      }
+      
+    }
+}

@@ -1,0 +1,61 @@
+"research_bm_scout_hawk"
+{
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+    "BaseClass"                     "ability_datadriven"
+    "AbilityTextureName"            "beastmaster_call_of_the_wild"
+    "MaxLevel"                      "1"
+
+    "AbilityGoldCost"               "300"
+    "AbilityChannelTime"            "10"
+    
+    "AbilitySpecial"
+    {    
+        "01"
+      {
+        "var_type"              "FIELD_INTEGER"
+        "research_time"         "10"
+      }
+
+        "02"
+      {
+        "var_type"              "FIELD_INTEGER"
+        "gold_cost"             "300"
+      }
+ 
+        "03"
+      {
+        "var_type"              "FIELD_INTEGER"
+        "lumber_cost"           "150"
+      }
+    }
+
+    "OnSpellStart"
+    {
+        "RunScript"
+        {
+            "ScriptFile"    "buildings/queue.lua"
+            "Function"      "EnqueueUnit"
+        }
+
+        "RunScript"
+        {
+            "ScriptFile"    "buildings/research.lua"
+            "Function"      "DisableResearch"
+        }
+    }
+
+    "OnChannelSucceeded"
+    {
+        "RunScript"
+        {
+            "ScriptFile"    "buildings/queue.lua"
+            "Function"      "NextQueue"
+        }
+
+        "RunScript"
+        {
+            "ScriptFile"    "buildings/research.lua"
+            "Function"      "ResearchComplete"
+        }
+    }
+}

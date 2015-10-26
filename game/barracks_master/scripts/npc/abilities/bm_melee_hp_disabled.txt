@@ -1,0 +1,6 @@
+"bm_melee_hp_disabled"
+{
+    "BaseClass"                     "ability_datadriven"
+    "AbilityTextureName"            "health_vial"
+    "MaxLevel"                      "0"
+}

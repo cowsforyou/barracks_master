@@ -21,32 +21,37 @@
 [x] Learn how to create/edit ability/item icons
 [ ] Create spawn additional unit ability for melee and ranged barracks
 [ ] Color in player buildings
-[ ] Enable lumber resource
+[ ] Create toggle button for Ancient Barracks
+[ ] Learn how to add lumber cost to buildings/research
+[ ] Enable lumber harvesting
+[ ] Enable Lumber Yard to spawn Lumberjacks
 [ ] Replace city center default spawn to bm_melee_barracks
 [ ] Limit build area
 
+
+-- Scout --
+
+[ ] Fix techies model, sound and particles
+[ ] Code Boar to allow max 3 count
+
+
 -- Player Mechanics --
 
-[ ] Learn how to edit passive income
-[ ] Create function to award last hit gold from creeps to player
-[ ] Clean up team and hero selection
+[ ] Specify exact spawn locations for each player
+[x] Learn how to edit passive income
+[ ] Award chunks of passive income progressively throughout the game
+[x] Create function to award last hit gold from creeps to player
 [ ] Display last hits and gold earned per player in-game
+[ ] Clean up team and hero selection
 
 -- UI --
 
+[ ] Announce when a hero spawns
+[ ] Show error message when player tries to build the same building
 [ ] Learn how to locate building models
 [ ] Clean up team and hero selection
+[ ] Display custom scoreboard for gold earned
 [ ] Fix minimap
-
-
--- Scout Mechanics --
-
-[ ] Create custom scout
-
--- // Basic game should be playable at this point // --
-
-[ ] Balance the game
-
 
 -- Advanced --
 
@@ -150,7 +155,7 @@ Stealth detect creeps - either have a special creep or have it as an upgrade to 
 					|					-------------------------------------------------
 					|					|					   	|						|
 				+Ancient		+Portal of Heroes			+Purifier			+Library of Spells				
-								-SF 						-Wood Chips					|				
+				-Toggle			-SF 						-Wood Chips					|				
 								-Beastmaster 											|				
 								-Vengeful Spirit 										|				
 								-Medusa 												|
@@ -159,9 +164,9 @@ Stealth detect creeps - either have a special creep or have it as an upgrade to 
 																	---------------------------------------------
 																	|											|
 															+Unpromising Tower 							+Luminous Tower
-															-Chain Frost 								-Sun Strike
-															-Chaos Meteor 								-Guardian Angel
-															-Call Down 									-Mass Repel
+															-Chain Frost 								-Mystic Flare
+															-Chaos Meteor 								-Sun Strike
+															-Call Down 									-Guardian Angel
 
 
 
@@ -215,5 +220,13 @@ Stealth detect creeps - either have a special creep or have it as an upgrade to 
 -Damage Reduction: 7
 
 
-
-
+---------------------------------------------------
+-- Known Bugs
+---------------------------------------------------
+-Swapping the starting building from "buildingevents.lua" to the Melee Barracks causes a string of errors in the console (although everything seems to function fine).
+-Removing the Kunkka builders at the start (by changing no. of builders from 5 to 0) causes errors in the console (although everything seems to function fine).
+-Researching an ability causes it to be hidden, however if one research completes, the ability list refreshes. If you attempt to queue abilities beyond their upgradable levels, it bugs out.
+-Build grid disappears.
+-Health Vial not giving intended HP boost.
+-Hawk and Boar spawn sounds not firing.
+-Debug tech tree unlock for Hawk

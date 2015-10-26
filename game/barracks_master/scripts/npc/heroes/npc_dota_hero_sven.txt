@@ -4,6 +4,38 @@
 
 	"UnitLabel"					"builder"
 
+	// Armor
+	//-------------------------------------------------------------------------------------------------------------
+	"ArmorPhysical"					"2"
+	"MagicalResistance"				"25"
+
+	// Attack
+	//-------------------------------------------------------------------------------------------------------------
+	"AttackDamageMin"				"1"
+	"AttackDamageMax"				"1"	
+	"AttackDamageType"				"DAMAGE_TYPE_ArmorPhysical"
+
+	// Attributes
+	//-------------------------------------------------------------------------------------------------------------
+	"AttributePrimary"				"DOTA_ATTRIBUTE_STRENGTH"
+	"AttributeBaseStrength"			"0"
+	"AttributeStrengthGain"			"0"
+	"AttributeBaseIntelligence"		"0"
+	"AttributeIntelligenceGain"		"0"
+	"AttributeBaseAgility"			"0"
+	"AttributeAgilityGain"			"0"
+
+
+	// Status
+	//-------------------------------------------------------------------------------------------------------------
+	"StatusHealth"					"5"			// Base health.
+	"StatusHealthRegen"				"0.2"
+	"StatusMana"					"200"
+	"StatusManaRegen"				"0.4"
+
+
+	// Abilities
+	//-------------------------------------------------------------------------------------------------------------
 	"AbilityLayout"				"6"
 	"Ability1" 					"repair"
 	"Ability2" 					"build_bm_skeleton_barracks"

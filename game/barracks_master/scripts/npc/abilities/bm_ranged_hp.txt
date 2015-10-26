@@ -1,0 +1,33 @@
+"bm_ranged_hp"
+{
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"             "ability_datadriven"
+    "AbilityTextureName"    "health_vial"
+
+    "MaxLevel"    "1"
+
+    "Modifiers"
+    {
+      "modifier_ranged_health_bonus"
+      {
+        "Passive"    "1"
+        "IsHidden"   "0"
+        
+        "Properties"
+        {
+            "MODIFIER_PROPERTY_HEALTH_BONUS"    "%health_bonus" // grab from AbilitySpecial
+        }        
+      }
+    }
+
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "health_bonus"     "200"
+      }
+    }
+}

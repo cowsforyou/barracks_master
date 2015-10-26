@@ -1,0 +1,6 @@
+"bm_ranged_damage_disabled"
+{
+    "BaseClass"                     "ability_datadriven"
+    "AbilityTextureName"            "damage"
+    "MaxLevel"                      "0"
+}

@@ -2,7 +2,7 @@
 {
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
     "BaseClass"             "ability_datadriven"
-    "AbilityTextureName"    "lich_frost_armor"
+    "AbilityTextureName"    "armor"
 
     "MaxLevel"    "3"
 

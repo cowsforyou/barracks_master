@@ -2,7 +2,7 @@
 "spawn_siege_creeps"
 {
     "BaseClass"                     "ability_datadriven"
-    "AbilityTextureName"            "dragon_knight_breathe_fire"
+    "AbilityTextureName"            "siege_barracks"
     "MaxLevel"                      "1"
 
     "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"

@@ -22,11 +22,12 @@
 
     // Time     
     //-------------------------------------------------------------------------------------------------------------
-    "AbilityCooldown"               "40.0"
+    "AbilityCooldown"               "2.0"
 
     // Cost
     //-------------------------------------------------------------------------------------------------------------
-    "AbilityManaCost"               "15"
+    "AbilityGoldCost"               "50"
+    "AbilityManaCost"               "30"
 
     // Special
     //-------------------------------------------------------------------------------------------------------------
@@ -35,64 +36,29 @@
         "01"
         {
             "var_type"                  "FIELD_INTEGER"
-            "hawk_duration"             "60"
+            "duration"                  "60"
         }
         "02"
         {
             "var_type"                  "FIELD_INTEGER"
-            "boar_hp_tooltip"           "200"
+            "gold_cost_tooltip"         "50"
         }
         "03"
         {
             "var_type"                  "FIELD_INTEGER"
-            "boar_damage_tooltip"       "15"
-        }
-        "04"
-        {
-            "var_type"                  "FIELD_INTEGER"
-            "boar_moveslow_tooltip"     "10"
-        }
-        "05"
-        {
-            "var_type"                  "FIELD_INTEGER"
-            "boar_attackslow_tooltip"   "10"
-        }
-        "06"
-        {
-            "var_type"                  "FIELD_INTEGER"
-            "poison_duration_tooltip"   "3"
-        }
-        "07"
-        {
-            "var_type"                  "FIELD_INTEGER"
-            "boar_duration"             "60"
+            "max_count_tooltip"         "3"
         }
 
         // Extra        
         "08"
         {
-            "var_type"              "FIELD_INTEGER"
-            "boar_1_count"          "1 0 0 0"
-        }
-        "09"
-        {
-            "var_type"              "FIELD_INTEGER"
-            "boar_2_count"          "0 1 0 0"
-        }
-        "10"
-        {
-            "var_type"              "FIELD_INTEGER"
-            "boar_3_count"          "0 0 1 0"
-        }
-        "11"
-        {
-            "var_type"              "FIELD_INTEGER"
-            "boar_4_count"          "0 0 0 1"
+            "var_type"                  "FIELD_INTEGER"
+            "boar_count"                "1"
         }
         "12"
         {
-            "var_type"              "FIELD_INTEGER"
-            "distance"              "150" // The distance in front of the target at which units will be created
+            "var_type"                  "FIELD_INTEGER"
+            "distance"                  "150" // The distance in front of the target at which units will be created
         }
     }
 
@@ -125,7 +91,7 @@
 
         "SpawnUnit"
         {
-            "UnitName"          "npc_dota_beastmaster_boar_1"
+            "UnitName"          "scout_boar"
             "Target"
             {
                 "Center"                "CASTER"
@@ -138,8 +104,8 @@
                 }
             }
 
-            "UnitCount"         "%boar_1_count"
-            "Duration"          "%boar_duration"
+            "UnitCount"         "%boar_count"
+            "Duration"          "%duration"
 
             "GrantsGold"        "1"
             "GrantsXP"          "1"

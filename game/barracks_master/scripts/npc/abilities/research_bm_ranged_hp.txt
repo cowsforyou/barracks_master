@@ -1,0 +1,67 @@
+"research_bm_ranged_hp"
+{
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+    "BaseClass"                     "ability_datadriven"
+    "AbilityTextureName"            "health_vial"
+    "MaxLevel"                      "1"
+
+    "AbilityGoldCost"               "200"
+    "AbilityChannelTime"            "10"
+    
+    "AbilitySpecial"
+    {
+        "01"
+      {
+        "var_type"              "FIELD_INTEGER"
+        "health_bonus"           "200"
+      }
+      
+        "02"
+      {
+        "var_type"              "FIELD_INTEGER"
+        "research_time"         "10"
+      }
+
+        "03"
+      {
+        "var_type"              "FIELD_INTEGER"
+        "gold_cost"             "200"
+      }
+ 
+        "04"
+      {
+        "var_type"              "FIELD_INTEGER"
+        "lumber_cost"           "75"
+      }
+    }
+
+    "OnSpellStart"
+    {
+        "RunScript"
+        {
+            "ScriptFile"    "buildings/queue.lua"
+            "Function"      "EnqueueUnit"
+        }
+
+        "RunScript"
+        {
+            "ScriptFile"    "buildings/research.lua"
+            "Function"      "DisableResearch"
+        }
+    }
+
+    "OnChannelSucceeded"
+    {
+        "RunScript"
+        {
+            "ScriptFile"    "buildings/queue.lua"
+            "Function"      "NextQueue"
+        }
+
+        "RunScript"
+        {
+            "ScriptFile"    "buildings/research.lua"
+            "Function"      "ResearchComplete"
+        }
+    }
+}

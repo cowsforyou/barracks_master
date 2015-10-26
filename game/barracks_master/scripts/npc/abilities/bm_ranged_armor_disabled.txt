@@ -1,6 +1,6 @@
 "bm_ranged_armor_disabled"
 {
     "BaseClass"                     "ability_datadriven"
-    "AbilityTextureName"            "lich_frost_armor"
+    "AbilityTextureName"            "armor"
     "MaxLevel"                      "0"
 }

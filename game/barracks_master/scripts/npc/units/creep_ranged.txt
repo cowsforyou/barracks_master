@@ -15,8 +15,8 @@
         //----------------------------------------------------------------
         
         "Ability1"                  "bm_ranged_armor_disabled"          // Ability 1.
-        "Ability2"                  "ultimate_ability"          // Ability 2.
-        "Ability3"                  ""          // Ability 3.
+        "Ability2"                  "bm_ranged_damage_disabled"          // Ability 2.
+        "Ability3"                  "bm_ranged_hp_disabled"             // Ability 3.
         "Ability4"                  ""          // Ability 4.
         "Ability5"                  ""          // Ability 5.
         "Ability6"                  ""          // Ability 6 - Extra.
@@ -26,7 +26,7 @@
         // Armor
         //----------------------------------------------------------------
         "ArmorPhysical"             "0"         // Physical protection.
-        "MagicalResistance"             "0"         // Magical protection.
+        "MagicalResistance"         "0"         // Magical protection.
 
         // Attack
         //----------------------------------------------------------------

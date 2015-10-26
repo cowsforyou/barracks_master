@@ -17,7 +17,7 @@
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
 	"Ability1"					"spawn_skeleton_creeps"
-	"Ability2"					""
+	"Ability2"					"research_bm_skeleton_damage"
 	"Ability3"					""
 	"Ability4"					""
 	"Ability10"					"ability_building"
@@ -43,8 +43,8 @@
 	// Bounds
 	//----------------------------------------------------------------
 	"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
-	"RingRadius"				"130"
-	"CollisionSize"				"120"
+	"RingRadius"				"90"
+	"CollisionSize"				"50"
 	
 	// Movement
 	//----------------------------------------------------------------

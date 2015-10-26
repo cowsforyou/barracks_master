@@ -1,0 +1,171 @@
+"item_techies"
+{
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "BaseClass"                     "item_datadriven"
+    "AbilityTextureName"			"item_techies"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+
+    "ItemKillable"      "0" 
+    "ItemSellable"      "0"
+    "ItemPurchasable"   "0"
+    "ItemDroppable"     "0"
+
+    
+    // Casting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastPoint"              "0.3"
+
+    // Time     
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"               "5.0"
+
+    // Cost
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityGoldCost"               "300"
+    "AbilityManaCost"               "100"
+
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"                  "FIELD_INTEGER"
+            "duration"                  "40"
+        }
+        "02"
+        {
+            "var_type"                  "FIELD_INTEGER"
+            "gold_cost_tooltip"         "20"
+        }
+
+        // Extra        
+        "08"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "hawk_count"            "1"
+        }
+        "12"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "distance"              "150" // The distance in front of the target at which units will be created
+        }
+    }
+
+    "precache"
+    {
+        "particle"  "particles/units/heroes/hero_beastmaster/beastmaster_call_boar.vpcf"
+        "particle"  "particles/units/heroes/hero_lone_druid/lone_druid_spirit_bear_death.vpcf"
+        "particle"  "particles/units/heroes/hero_beastmaster/beastmaster_boar_attack.vpcf"
+        "soundfile" "soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts"
+        "model"     "models/heroes/techies/techies.vmdl"
+        
+    }
+
+    "OnUpgrade"
+    {
+        "RunScript"
+        {
+            "ScriptFile"    "spells/call_of_the_wild.lua"
+            "Function"      "LevelUpAbility"
+            "ability_name"  "beastmaster_call_of_the_wild_boar_datadriven"
+        }
+    }
+
+    "OnSpellStart"
+    {
+        "FireSound"
+        {
+            "EffectName"    "Hero_Beastmaster.Call.Hawk"
+            "Target"        "CASTER"
+        }
+
+        "SpawnUnit"
+        {
+            "UnitName"          "scout_techies"
+            "Target"
+            {
+                "Center"                "CASTER"
+                "ScriptSelectPoints"
+                {
+                    "ScriptFile"    "spells/call_of_the_wild.lua"
+                    "Function"      "GetFrontPoint"
+                    "Target"        "CASTER"
+                    "Distance"      "%distance"
+                }
+            }
+
+            "UnitCount"         "%hawk_count"
+            "Duration"          "%duration"
+
+            "GrantsGold"        "1"
+            "GrantsXP"          "1"
+
+            // This makes sure units never get stuck
+            "OnSpawn"
+            {
+                "ApplyModifier"
+                {
+                    "ModifierName"  "modifier_phased"
+                    "Target"        "TARGET"
+                    "Duration"      "0.03"
+                }
+
+                "ApplyModifier"
+                {
+                    "ModifierName"  "modifier_beastmaster_hawk"
+                    "Target"        "TARGET"
+                }
+
+                "RunScript"
+                {
+                    "ScriptFile"    "spells/call_of_the_wild.lua"
+                    "Function"      "SetUnitsMoveForward"
+                }
+            }
+        }
+    }
+
+    "Modifiers"
+    {
+        "modifier_beastmaster_hawk"
+        {
+            "IsHidden"      "1"
+
+            "OnCreated"
+            {
+                "FireEffect"
+                {
+                    "Target"            "TARGET"
+                    "EffectName"        "particles/units/heroes/hero_beastmaster/beastmaster_call_bird.vpcf"
+                    "EffectAttachType"  "follow_origin"
+                }
+            }
+
+            "OnDeath"
+            {
+                "FireEffect"
+                {
+                    "Target"            
+                    {
+                        "Center"    "UNIT"
+                        "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
+                    }
+                    "EffectName"        "particles/units/heroes/hero_lone_druid/lone_druid_spirit_bear_death.vpcf"
+                    "EffectAttachType"  "follow_origin"
+                }
+                
+                "FireSound"
+                {
+                    "Target"            
+                    {
+                        "Center"    "UNIT"
+                        "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
+                    }
+                    "EffectName"    "Hero_Beastmaster_Bird.Death"
+                }
+            }
+        }
+    }
+}

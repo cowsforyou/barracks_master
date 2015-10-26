@@ -2,7 +2,7 @@
 "spawn_ranged_creeps"
 {
     "BaseClass"                     "ability_datadriven"
-    "AbilityTextureName"            "tusk_snowball"
+    "AbilityTextureName"            "ranged_barracks2"
     "MaxLevel"                      "1"
 
     "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"

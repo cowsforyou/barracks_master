@@ -37,14 +37,14 @@
 	
 	// Bounty
 	//----------------------------------------------------------------
-	"BountyGoldMin"				"0.0"
-	"BountyGoldMax"				"0.0"
+	"BountyGoldMin"				"400"
+	"BountyGoldMax"				"400"
 	
 	// Bounds
 	//----------------------------------------------------------------
 	"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
-	"RingRadius"				"150"
-	"CollisionSize"				"144"
+	"RingRadius"				"170"
+	"CollisionSize"				"140"
 	
 	// Movement
 	//----------------------------------------------------------------
