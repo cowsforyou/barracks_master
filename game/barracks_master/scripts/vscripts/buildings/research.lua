@@ -23,6 +23,17 @@ function ResearchComplete( event )
 	end
 end
 
+function ScoutResearchComplete ( event )
+	local caster = event.caster
+	local ability = event.ability
+	local itemName = event.item_name
+	local player = caster:GetPlayerOwner()
+	local hero = player:GetAssignedHero()
+
+	hero:AddItemByName(itemName)
+	ResearchComplete(event)
+end
+
 function LumberResearchComplete( event )
 	local player = event.caster:GetPlayerOwner()
 	local level = event.Level

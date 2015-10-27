@@ -55,7 +55,8 @@
         "RunScript"
         {
             "ScriptFile"    "buildings/research.lua"
-            "Function"      "ResearchComplete"
+            "Function"      "ScoutResearchComplete"
+            "item_name"     "item_hawk"
         }
     }
 }
