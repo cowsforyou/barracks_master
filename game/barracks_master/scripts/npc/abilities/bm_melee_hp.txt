@@ -6,20 +6,6 @@
 
     "MaxLevel"    "1"
 
-    "Modifiers"
-    {
-      "modifier_melee_health_bonus"
-      {
-        "Passive"     "1"
-        "IsHidden"    "0"
-        
-        "Properties"
-        {
-            "MODIFIER_PROPERTY_HEALTH_BONUS"    "%health_bonus" // grab from AbilitySpecial
-        }        
-      }
-    }
-
     // Special  
     //-------------------------------------------------------------------------------------------------------------
     "AbilitySpecial"
@@ -30,4 +16,38 @@
         "health_bonus"     "200"
       }
     }
+
+    "Modifiers"
+    {
+      "modifier_melee_health_bonus"
+      {
+        "Passive"     "1"
+        "IsHidden"    "0"
+        
+        "OnCreated"
+        {
+          "RunScript"
+          {
+            "ScriptFile"  "spells/raise_hp.lua"
+            "Function"    "OnCreated"
+          }
+        }
+
+        //"OnDestroy"
+        //{
+        //  "RunScript"
+        //  {
+        //    "ScriptFile"  "spells/raise_hp.lua"
+        //    "Function"    "OnDestroy"
+        //  }
+        //}
+
+        // DOES NOT WORK FOR NPC_DOTA_CREATURE
+        //"Properties"
+        //{
+        //    "MODIFIER_PROPERTY_HEALTH_BONUS"    "200" // grab from AbilitySpecial
+        //}        
+      }
+    }
+
 }

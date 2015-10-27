@@ -1141,7 +1141,7 @@
 	    {
 	        // General
 	        //
-	        "BaseClass"                 "npc_dota_creep_lane"   // Class of entity of link to.
+	        "BaseClass"                 "npc_dota_creature"   // Class of entity of link to.
 	        "Model"                     "models/creeps/lane_creeps/creep_radiant_melee/radiant_melee.vmdl"  // Model.
 	        "SoundSet"                  "Creep_Good_Melee"                  // Name of sound set.
 	        "ModelScale"                "0.93"
@@ -1233,7 +1233,7 @@
 	    {
 	        // General
 	        //
-	        "BaseClass"                 "npc_dota_creep_lane"   // Class of entity of link to.
+	        "BaseClass"                 "npc_dota_creature"   // Class of entity of link to.
 	        "Model"                     "models/creeps/lane_creeps/creep_radiant_ranged/radiant_ranged.vmdl"    // Model.
 	        "SoundSet"                  "Creep_Good_Range"                  // Name of sound set.
 	        "ModelScale"                    ".88"
@@ -1325,7 +1325,7 @@
     {
         // General
         //
-        "BaseClass"                 "npc_dota_creep_siege"  // Class of entity of link to.
+        "BaseClass"                 "npc_dota_creature"  // Class of entity of link to.
         "Model"                     "models/creeps/lane_creeps/creep_good_siege/creep_good_siege.vmdl"  // Model.
         "SoundSet"                  "Creep_Good_Engine"                 // Name of sound set.
         "MinimapIcon"                   "minimap_siege"
@@ -1419,7 +1419,7 @@
 	    {
 	        // General
 	        //
-	        "BaseClass"                 "npc_dota_creep_lane"    // Class of entity of link to.
+	        "BaseClass"                 "npc_dota_creature"    // Class of entity of link to.
 	        "Model"                     "models/creeps/neutral_creeps/n_creep_troll_skeleton/n_creep_skeleton_melee.vmdl"   // Model.
 	        "SoundSet"                  "Creep_Good_Melee"                  // Name of sound set.
 	        "ModelScale"                "1.1"
