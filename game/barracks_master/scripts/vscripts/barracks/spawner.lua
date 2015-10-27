@@ -54,11 +54,14 @@ function SpawnCreeps(player, buildingAbility, creepName, numberToSpawn)
   
     -- set the cooldown to the next 30 second interval
     local nextSync = SpawnSynchronizer:GetNextInterval()
-    buildingAbility:StartCooldown(nextSync)
 
     -- don't spawn creeps the first time this ability is used
     -- the -1.0 gives us a little wiggleroom for the Thinker
-    if nextSync < (RESPAWN_TIME-1.0) then return end
+    if nextSync == nil or nextSync < (RESPAWN_TIME-1.0) then 
+        return
+    else
+        buildingAbility:StartCooldown(nextSync)
+    end
 
     -- create the unit group
     for i=1, numberToSpawn do

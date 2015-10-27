@@ -16,5 +16,9 @@ end
 
 -- returns time in seconds until next tick
 function SpawnSynchronizer:GetNextInterval()
-	return SpawnSynchronizer.nextSpawnAt - GameRules:GetGameTime()
+	if SpawnSynchronizer.nextSpawnAt then
+		return SpawnSynchronizer.nextSpawnAt - GameRules:GetGameTime()
+	else
+		return nil
+	end
 end
