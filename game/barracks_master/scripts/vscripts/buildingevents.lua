@@ -40,6 +40,7 @@ function BuildingEvents:OnPlayerPickHero(keys)
   table.insert(player.units, hero)
   hero.state = "idle" --Builder state
 
+  --[[
   -- Spawn some peasants around the hero
   local position = hero:GetAbsOrigin()
   local numBuilders = 5
@@ -57,6 +58,7 @@ function BuildingEvents:OnPlayerPickHero(keys)
     -- Go through the abilities and upgrade
     CheckAbilityRequirements( builder, player )
   end
+  ]]
 
   -- Give Initial Resources
   hero:SetGold(5000, false)
