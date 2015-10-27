@@ -19,7 +19,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"5"			// Physical protection.
+		"ArmorPhysical"				"0"			// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -31,9 +31,9 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"77"		// Experience earn.
-		"BountyGoldMin"				"60"		// Gold earned min.
-		"BountyGoldMax"				"60"		// Gold earned max.
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"28"		// Gold earned min.
+		"BountyGoldMax"				"32"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
@@ -43,7 +43,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"100"		// Base health.
+		"StatusHealth"				"4"		// Base health.
 		"StatusHealthRegen"			"0"			// Health regeneration rate.
 		
 		// Vision

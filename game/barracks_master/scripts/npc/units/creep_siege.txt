@@ -28,14 +28,14 @@
 
         // Armor
         //----------------------------------------------------------------
-        "ArmorPhysical"             "0"         // Physical protection.
-        "MagicalResistance"             "80"            // Magical protection.
+        "ArmorPhysical"             "2"         // Physical protection.
+        "MagicalResistance"         "80"            // Magical protection.
 
         // Attack
         //----------------------------------------------------------------
         "AttackCapabilities"        "DOTA_UNIT_CAP_RANGED_ATTACK"
         "AttackDamageMin"           "35"        // Damage range min.
-        "AttackDamageMax"           "46"        // Damage range max.
+        "AttackDamageMax"           "45"        // Damage range max.
         "AttackDamageType"          "DAMAGE_TYPE_ArmorPhysical"
         "AttackRate"                "2.7"       // Speed of attack.
         "AttackAnimationPoint"      "0.7"       // Normalized time in animation cycle to attack.
@@ -56,9 +56,9 @@
 
         // Bounty
         //----------------------------------------------------------------
-        "BountyXP"                  "88"        // Experience earn.
-        "BountyGoldMin"             "66"        // Gold earned min.
-        "BountyGoldMax"             "80"        // Gold earned max.
+        "BountyXP"                  "0"        // Experience earn.
+        "BountyGoldMin"             "40"        // Gold earned min.
+        "BountyGoldMax"             "60"        // Gold earned max.
 
         // Bounds
         //----------------------------------------------------------------
@@ -74,7 +74,7 @@
 
         // Status
         //----------------------------------------------------------------
-        "StatusHealth"              "550"       // Base health.
+        "StatusHealth"              "500"       // Base health.
         "StatusHealthRegen"         "0"         // Health regeneration rate.
         "StatusMana"                "0"         // Base mana.
         "StatusManaRegen"           "0"         // Mana regeneration rate.

@@ -62,6 +62,42 @@
 	
 		"UnitLabel"					"builder"
 	
+		// Armor
+		//-------------------------------------------------------------------------------------------------------------
+		"ArmorPhysical"					"2"
+		"MagicalResistance"				"25"
+	
+		// Attack
+		//-------------------------------------------------------------------------------------------------------------
+		"AttackDamageMin"				"3"
+		"AttackDamageMax"				"3"	
+		"AttackDamageType"				"DAMAGE_TYPE_ArmorPhysical"
+	
+		// Attributes
+		//-------------------------------------------------------------------------------------------------------------
+		"AttributePrimary"				"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"			"0"
+		"AttributeStrengthGain"			"0"
+		"AttributeBaseIntelligence"		"0"
+		"AttributeIntelligenceGain"		"0"
+		"AttributeBaseAgility"			"0"
+		"AttributeAgilityGain"			"0"
+	
+		// Status
+		//-------------------------------------------------------------------------------------------------------------
+		"StatusHealth"					"10"			// Base health.
+		"StatusHealthRegen"				"0.2"
+		"StatusMana"					"300"
+		"StatusManaRegen"				"0.4"
+	
+		// Movement
+		//-------------------------------------------------------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"300"
+		"MovementTurnRate"			"0.500000"
+	
+		// Abilities
+		//-------------------------------------------------------------------------------------------------------------
 		"AbilityLayout"				"6"
 		"Ability1" 					"repair"
 		"Ability2" 					"build_bm_skeleton_barracks"
@@ -176,9 +212,118 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"StatusHealth"					"5"			// Base health.
 		"StatusHealthRegen"				"0.2"
-		"StatusMana"					"200"
+		"StatusMana"					"300"
 		"StatusManaRegen"				"0.4"
 	
+	
+		// Abilities
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityLayout"				"6"
+		"Ability1" 					"repair"
+		"Ability2" 					"build_bm_skeleton_barracks"
+		"Ability3" 					"build_bm_melee_barracks"
+		"Ability4" 					"build_bm_ranged_barracks"
+		"Ability5"					"build_bm_lumber_yard"
+		"Ability6" 					"ability_swapper_next"
+		"Ability7"					""
+		"Ability8"					""
+		"Ability9"					""
+		"Ability10"					""
+	}
+	"npc_dota_hero_templar_assassin"
+	{
+		"override_hero"				"npc_dota_hero_templar_assassin"
+	
+		"UnitLabel"					"builder"
+	
+		// Armor
+		//-------------------------------------------------------------------------------------------------------------
+		"ArmorPhysical"					"2"
+		"MagicalResistance"				"25"
+	
+		// Attack
+		//-------------------------------------------------------------------------------------------------------------
+		"AttackDamageMin"				"3"
+		"AttackDamageMax"				"3"	
+		"AttackDamageType"				"DAMAGE_TYPE_ArmorPhysical"
+	
+		// Attributes
+		//-------------------------------------------------------------------------------------------------------------
+		"AttributePrimary"				"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"			"0"
+		"AttributeStrengthGain"			"0"
+		"AttributeBaseIntelligence"		"0"
+		"AttributeIntelligenceGain"		"0"
+		"AttributeBaseAgility"			"0"
+		"AttributeAgilityGain"			"0"
+	
+		// Status
+		//-------------------------------------------------------------------------------------------------------------
+		"StatusHealth"					"10"			// Base health.
+		"StatusHealthRegen"				"0.2"
+		"StatusMana"					"300"
+		"StatusManaRegen"				"0.4"
+	
+		// Movement
+		//-------------------------------------------------------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"300"
+		"MovementTurnRate"			"0.500000"
+	
+		// Abilities
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityLayout"				"6"
+		"Ability1" 					"repair"
+		"Ability2" 					"build_bm_skeleton_barracks"
+		"Ability3" 					"build_bm_melee_barracks"
+		"Ability4" 					"build_bm_ranged_barracks"
+		"Ability5"					"build_bm_lumber_yard"
+		"Ability6" 					"ability_swapper_next"
+		"Ability7"					""
+		"Ability8"					""
+		"Ability9"					""
+		"Ability10"					""
+	}
+	"npc_dota_hero_venomancer"
+	{
+		"override_hero"				"npc_dota_hero_venomancer"
+	
+		"UnitLabel"					"builder"
+	
+		// Armor
+		//-------------------------------------------------------------------------------------------------------------
+		"ArmorPhysical"					"2"
+		"MagicalResistance"				"25"
+	
+		// Attack
+		//-------------------------------------------------------------------------------------------------------------
+		"AttackDamageMin"				"3"
+		"AttackDamageMax"				"3"	
+		"AttackDamageType"				"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRange"					"600"
+	
+		// Attributes
+		//-------------------------------------------------------------------------------------------------------------
+		"AttributePrimary"				"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"			"0"
+		"AttributeStrengthGain"			"0"
+		"AttributeBaseIntelligence"		"0"
+		"AttributeIntelligenceGain"		"0"
+		"AttributeBaseAgility"			"0"
+		"AttributeAgilityGain"			"0"
+	
+		// Status
+		//-------------------------------------------------------------------------------------------------------------
+		"StatusHealth"					"6"			// Base health.
+		"StatusHealthRegen"				"0.2"
+		"StatusMana"					"300"
+		"StatusManaRegen"				"0.4"
+	
+		// Movement
+		//-------------------------------------------------------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"300"
+		"MovementTurnRate"			"0.500000"
 	
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------

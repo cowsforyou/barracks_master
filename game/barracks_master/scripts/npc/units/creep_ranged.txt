@@ -31,8 +31,8 @@
         // Attack
         //----------------------------------------------------------------
         "AttackCapabilities"        "DOTA_UNIT_CAP_RANGED_ATTACK"
-        "AttackDamageMin"           "21"        // Damage range min.
-        "AttackDamageMax"           "26"        // Damage range max.
+        "AttackDamageMin"           "18"        // Damage range min.
+        "AttackDamageMax"           "22"        // Damage range max.
         "AttackDamageType"          "DAMAGE_TYPE_ArmorPhysical"
         "AttackRate"                "1"         // Speed of attack.
         "AttackAnimationPoint"      "0.5"       // Normalized time in animation cycle to attack.
@@ -41,21 +41,11 @@
         "ProjectileModel"           "particles/base_attacks/ranged_goodguy.vpcf" // Particle system model for projectile.
         "ProjectileSpeed"           "900"       // Speed of projectile.
 
-        // Attributes
-        //----------------------------------------------------------------
-        "AttributePrimary"          "DOTA_ATTRIBUTE_STRENGTH"
-        "AttributeBaseStrength"     "0"         // Base strength
-        "AttributeStrengthGain"     "0"         // Strength bonus per level.
-        "AttributeBaseIntelligence" "0"         // Base intelligence
-        "AttributeIntelligenceGain" "0"         // Intelligence bonus per level.
-        "AttributeBaseAgility"      "0"         // Base agility
-        "AttributeAgilityGain"      "0"         // Agility bonus per level.
-
         // Bounty
         //----------------------------------------------------------------
-        "BountyXP"                  "41"        // Experience earn.
-        "BountyGoldMin"             "42"        // Gold earned min.
-        "BountyGoldMax"             "48"        // Gold earned max.
+        "BountyXP"                  "0"        // Experience earn.
+        "BountyGoldMin"             "25"        // Gold earned min.
+        "BountyGoldMax"             "35"        // Gold earned max.
 
         // Bounds
         //----------------------------------------------------------------

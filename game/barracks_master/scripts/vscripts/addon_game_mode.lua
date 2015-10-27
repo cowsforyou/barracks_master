@@ -44,15 +44,28 @@ require('events')
 function Precache( context )
 
   -- Model ghost and grid particles
+    -- Barracks Master --
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_techies", context)
+
+
+    -- Non Barracks Master --    
   PrecacheResource("particle_folder", "particles/buildinghelper", context)
   PrecacheResource("particle_folder", "particles/econ/items/earthshaker/earthshaker_gravelmaw/", context)
 
+
   -- Resources used
-  PrecacheUnitByNameSync("scout_boar", context)
-  PrecacheUnitByNameSync("scout_hawk", context)
-  PrecacheUnitByNameSync("scout_techies", context)
-  PrecacheUnitByNameSync("creep_air", context) 
-      
+    -- Barracks Master --
+    PrecacheUnitByNameSync("scout_boar", context)
+    PrecacheUnitByNameSync("scout_hawk", context)
+    PrecacheUnitByNameSync("scout_techies", context)
+    PrecacheUnitByNameSync("creep_air", context) 
+
+    PrecacheItemByNameSync("item_boar", context)
+    PrecacheItemByNameSync("item_hawk", context)
+    PrecacheItemByNameSync("item_techies", context)
+
+
+    -- Non Barracks Master --    
   PrecacheUnitByNameSync("peasant", context)
   PrecacheUnitByNameSync("tower", context)
   PrecacheUnitByNameSync("tower_tier2", context)

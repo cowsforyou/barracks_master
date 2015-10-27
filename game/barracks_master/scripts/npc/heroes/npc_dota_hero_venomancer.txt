@@ -1,6 +1,6 @@
-"npc_dota_hero_sven"
+"npc_dota_hero_venomancer"
 {
-	"override_hero"				"npc_dota_hero_sven"
+	"override_hero"				"npc_dota_hero_venomancer"
 
 	"UnitLabel"					"builder"
 
@@ -11,9 +11,10 @@
 
 	// Attack
 	//-------------------------------------------------------------------------------------------------------------
-	"AttackDamageMin"				"1"
-	"AttackDamageMax"				"1"	
+	"AttackDamageMin"				"3"
+	"AttackDamageMax"				"3"	
 	"AttackDamageType"				"DAMAGE_TYPE_ArmorPhysical"
+	"AttackRange"					"600"
 
 	// Attributes
 	//-------------------------------------------------------------------------------------------------------------
@@ -25,14 +26,18 @@
 	"AttributeBaseAgility"			"0"
 	"AttributeAgilityGain"			"0"
 
-
 	// Status
 	//-------------------------------------------------------------------------------------------------------------
-	"StatusHealth"					"5"			// Base health.
+	"StatusHealth"					"6"			// Base health.
 	"StatusHealthRegen"				"0.2"
 	"StatusMana"					"300"
 	"StatusManaRegen"				"0.4"
 
+	// Movement
+	//-------------------------------------------------------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"300"
+	"MovementTurnRate"			"0.500000"
 
 	// Abilities
 	//-------------------------------------------------------------------------------------------------------------

@@ -66,16 +66,6 @@
         "model"     "models/heroes/beastmaster/beastmaster_beast.vmdl"
     }
 
-    "OnUpgrade"
-    {
-        "RunScript"
-        {
-            "ScriptFile"    "spells/call_of_the_wild.lua"
-            "Function"      "LevelUpAbility"
-            "ability_name"  "beastmaster_call_of_the_wild_boar_datadriven"
-        }
-    }
-
     "OnSpellStart"
     {
         "FireSound"

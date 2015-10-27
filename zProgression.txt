@@ -43,6 +43,7 @@
 [ ] Display last hits and gold earned per player in-game
 [ ] Clean up team and hero selection
 
+
 -- UI --
 
 [ ] Announce when a hero spawns
@@ -52,53 +53,21 @@
 [ ] Display custom scoreboard for gold earned
 [ ] Fix minimap
 
+
 -- Advanced --
 
 [ ] Enable normal and fast game modes
 
 
-
--------------
--- Details --
--------------
-
--- Create core buildings --
-Create melee, ranged, siege and scout buildings.
-
-
--- Link buildings to creeps --
-Link the spawnability of the creeps to their respective buildings. i.e. that creep class spawns only when their respective building is on the map.
-
-
--- Enable creep upgrades --
-Specifically, upgrades to the armor, health, damage and spawn count
-
--- Limit build area --
-Limit the building area to just the player's base
-
--- Create custom scout --
-There will be a land, air, and techies scout.
-
-
--- Clean up team and hero selection --
-Players should be able to select what team they want to be on. It would also be nice to allow them to select their color/hero but if not possible then it can be auto assigned.
-
-
--- Enable normal and fast game modes --
-The idea of fast mode is to allow players to reduce the average game time. Towers will have lower HPs and bounty will be increased.
-
-
--- Create new buildings and advanced tech upgrades --
-Some ideas include:
-Some kind of tech structure - a structure that allows the construction of advanced buildings and access advanced abilities
-Purifier - a structure that increases your gold earned and upgradable to also increase your lumber earned
-A hero structure - enables you to spawn hero creeps (for a cost each time you spawn a hero - A HERO HAS ENTERED THE BATTLEFIELD [print])
-Defense structure - basic defense structure to attack scouts entering your base
-Aerial creeps - flying creeps
-AA creeps - well... creeps that shoot down aerial creeps
-Stealth creeps - mmhmm
-Stealth detect creeps - either have a special creep or have it as an upgrade to an existing creep
-
+-- Bugs --
+[x] Swapping the starting building from "buildingevents.lua" to the Melee Barracks causes a string of errors in the console (although everything seems to function fine).
+[x] Removing the Kunkka builders at the start (by changing no. of builders from 5 to 0) causes errors in the console (although everything seems to function fine).
+[ ] Researching an ability causes it to be hidden, however if one research completes, the ability list refreshes. If you attempt to queue abilities beyond their upgradable levels, it bugs out.
+[ ] Build grid disappears when lumber yard is built.
+[x] Health Vial not giving intended HP boost.
+[x] Hawk and Boar spawn sounds not firing.
+[x] Tech tree unlock for Hawk not working
+[ ] Techies suiciding gives gold
 
 
 
@@ -139,16 +108,16 @@ Stealth detect creeps - either have a special creep or have it as an upgrade to 
 -Damage		-Armor(3)	-Armor(3)				-Workers(5)
 			-Damage(3)	-Damage(3)		 		-Defense*
 			-Count(1)	-Count(1) 		 			|
-			-HP* 		-Health Vial* 	 			|
+			-HP* 		-HP* 	 					|
 			-Special*	-Special* 		 			|
 	   			|		   |			 			|
 	   			-------------			-----------------------------
 		   			|					|							|	
 				  +Siege 			+*Research Lab 			+Aviation Sanctuary
-				  -Count(1)			-Confetti Scout			-count(1)
-				  -Special*				|					-range
-					|					|					-research hawk
-					|					|
+				  -Count(1)			-Research Techies		-Count(1)
+				  -Special*				|					-Evasion(3)
+					|					|					-Special*
+					|					|					-Research Hawk
 					|					|
 					|					|
 					|					-------------------------------------------------
@@ -178,21 +147,22 @@ Stealth detect creeps - either have a special creep or have it as an upgrade to 
 ---------------------------------------------------
 -- Strategies
 ---------------------------------------------------
-+Cheap rush
--Zombies
--Counters: Tech rush (air)
--Counters: Tech rush (hero)
++Skeleton rush
+-Skeleton Barracks
+-Counters: Air rush
+-Counters: Tech rush
 
 +Balanced build
 -Creep upgrades
--Counters: Cheap rush
+-Counters: Skeleton rush
 
-+Tech rush (air)
--Air
++Air Rush
+-Aviation Sanctuary
 -Counters: Balanced build
 
-+Tech rush (hero)
--Tech center
++Tech Rush
+-Portal of Heroes
+-Counters: Air rush
 
 
 ---------------------------------------------------
@@ -219,13 +189,79 @@ Stealth detect creeps - either have a special creep or have it as an upgrade to 
 -Damage Reduction: 7
 
 
+
 ---------------------------------------------------
--- Known Bugs
+-- Balance
 ---------------------------------------------------
--Swapping the starting building from "buildingevents.lua" to the Melee Barracks causes a string of errors in the console (although everything seems to function fine).
--Removing the Kunkka builders at the start (by changing no. of builders from 5 to 0) causes errors in the console (although everything seems to function fine).
--Researching an ability causes it to be hidden, however if one research completes, the ability list refreshes. If you attempt to queue abilities beyond their upgradable levels, it bugs out.
--Build grid disappears.
--Health Vial not giving intended HP boost.
--Hawk and Boar spawn sounds not firing.
--Debug tech tree unlock for Hawk
+
+--Initial
+Starting Gold: 		300
+Tick Gold:
+Tick Gold Time:
+Tick GPM:
+
+Starting Lumber:
+Tick Lumber:
+Tick Lumber Time:
+Tick LPM:
+
+--Creeps
+Skeleton Bounty:	10
+Skeleton HP: 		45
+Skeleton Armor: 	0
+Skeleton Damage:	25
+
+Melee Bounty:		20
+Melee HP: 			500
+Melee Armor: 		0
+Melee Damage:		20 (23)
+
+Ranged Bounty: 		30
+Ranged HP: 			300
+Ranged Armor: 		0
+Ranged Damage: 		20
+
+Siege Bounty: 		50
+Siege HP: 			500
+Siege Armor: 		2
+Siege Damage: 		40
+
+Air Bounty: 		40
+Air HP: 			350
+Air Armor: 			1
+Air Damage:			45
+
+Ancient Bounty:
+
+
+--Others
+Rune Bounty: 	Default (50)
+Hero Bounty: 	Default
+
+Boar Bounty: 	5
+Boar Cost:		10
+Boar HP: 		5
+Boar Armor: 	0
+Boar Damage: 	2
+
+Hawk Bounty: 	30
+Hawk Cost:		20
+Hawk HP: 		4
+Hawk Armor: 	0 
+
+Techies Bounty: 80
+Techies Cost: 	150
+Techies HP: 	5
+Techies Armor: 	0
+
+Axe/Sven
+HP: 			10
+Armor: 			2
+Damage: 		3
+
+TA/Veno
+HP: 			6
+Armor: 			2
+Damage: 		3
+
+

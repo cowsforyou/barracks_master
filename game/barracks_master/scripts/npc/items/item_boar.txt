@@ -26,7 +26,7 @@
 
     // Cost
     //-------------------------------------------------------------------------------------------------------------
-    "AbilityGoldCost"               "50"
+    "AbilityGoldCost"               "10"
     "AbilityManaCost"               "30"
 
     // Special
@@ -41,7 +41,7 @@
         "02"
         {
             "var_type"                  "FIELD_INTEGER"
-            "gold_cost_tooltip"         "50"
+            "gold_cost_tooltip"         "10"
         }
         "03"
         {
@@ -71,15 +71,15 @@
         "model"     "models/heroes/beastmaster/beastmaster_beast.vmdl"
     }
 
-    "OnUpgrade"
-    {
-        "RunScript"
-        {
-            "ScriptFile"    "spells/call_of_the_wild.lua"
-            "Function"      "LevelUpAbility"
-            "ability_name"  "beastmaster_call_of_the_wild_datadriven"
-        }
-    }
+    //"OnUpgrade"
+    //{
+    //    "RunScript"
+    //    {
+    //        "ScriptFile"    "spells/call_of_the_wild.lua"
+    //        "Function"      "LevelUpAbility"
+    //        "ability_name"  "beastmaster_call_of_the_wild_datadriven"
+    //    }
+    //}
 
     "OnSpellStart"
     {
