@@ -2,5 +2,19 @@
 {
     "BaseClass"                     "ability_datadriven"
     "AbilityTextureName"            "holdout_friendly_skewer"
-    "MaxLevel"                      "0"
+    "MaxLevel"                      "1"
+
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+   	"AbilityCooldown"				"1.0"
+    "AbilityCastPoint"              "0"
+
+    "OnSpellStart"
+    {
+        "RunScript"
+        {
+            "ScriptFile"    "barracks/spawner_switcher.lua"
+            "Function"      "SwitchCreep"
+            "creepName"		"creep_ancient2"
+        }
+    }
 }

@@ -24,14 +24,14 @@
         {
             "ScriptFile"    "barracks/spawner_auto.lua"
             "Function"      "OnSpellStart"
-            "creepName"		"creep_ancient1"
+            "creepName"		"creep_ancient1" // default value
         }
     }
 
     // modifiers are buffs/debuffs, usually associated with abilities
     "Modifiers"
     {
-    	"modifier_spawn_skeleton_creeps_thinker"
+    	"modifier_spawn_ancient_creeps_thinker"
     	{
     		"Passive"			"1" // start activated
     		"IsHidden"			"1" // hide the visual buff icon

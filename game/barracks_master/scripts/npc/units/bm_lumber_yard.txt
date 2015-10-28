@@ -42,7 +42,7 @@
 	
 	// Bounds
 	//----------------------------------------------------------------
-	"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
+	"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
 	"RingRadius"				"230"
 	"CollisionSize"				"230"
 	

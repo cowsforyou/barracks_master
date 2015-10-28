@@ -2893,6 +2893,66 @@
 		"AbilityTextureName"			"research_ultimate_ability"
 		"MaxLevel" 						"0"
 	}
+	"select_ancient1"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "holdout_friendly_skewer"
+	    "MaxLevel"                      "1"
+	   	
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	   	"AbilityCooldown"				"1.0"
+	    "AbilityCastPoint"              "0"
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "barracks/spawner_switcher.lua"
+	            "Function"      "SwitchCreep"
+	            "creepName"		"creep_ancient1"
+	        }
+	    }
+	}
+	"select_ancient2"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "holdout_friendly_skewer"
+	    "MaxLevel"                      "1"
+	
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	   	"AbilityCooldown"				"1.0"
+	    "AbilityCastPoint"              "0"
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "barracks/spawner_switcher.lua"
+	            "Function"      "SwitchCreep"
+	            "creepName"		"creep_ancient2"
+	        }
+	    }
+	}
+	"select_ancient3"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "holdout_friendly_skewer"
+	    "MaxLevel"                      "1"
+	
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	   	"AbilityCooldown"				"1.0"
+	    "AbilityCastPoint"              "0"
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "barracks/spawner_switcher.lua"
+	            "Function"      "SwitchCreep"
+	            "creepName"		"creep_ancient3"
+	        }
+	    }
+	}
 	// Autocast creep spawner spell; starts casting as soon as the building is fully constructed
 	"spawn_air_creeps"
 	{
@@ -2970,14 +3030,14 @@
 	        {
 	            "ScriptFile"    "barracks/spawner_auto.lua"
 	            "Function"      "OnSpellStart"
-	            "creepName"		"creep_ancient1"
+	            "creepName"		"creep_ancient1" // default value
 	        }
 	    }
 	
 	    // modifiers are buffs/debuffs, usually associated with abilities
 	    "Modifiers"
 	    {
-	    	"modifier_spawn_skeleton_creeps_thinker"
+	    	"modifier_spawn_ancient_creeps_thinker"
 	    	{
 	    		"Passive"			"1" // start activated
 	    		"IsHidden"			"1" // hide the visual buff icon

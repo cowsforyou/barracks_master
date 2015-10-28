@@ -23,8 +23,15 @@ function OnSpellStart( keys )
     local player = caster:GetPlayerOwner()
     if player == nil then return end -- don't try to spawn creeps from a ghost dummy
 
-    local creepName = keys.creepName
     local creepCount = ability:GetSpecialValueFor("creep_count")
+
+    -- check for a stored creepName value on the caster, then use that if it's present
+    local creepName = ""
+    if caster.creepName == nil then
+        creepName = keys.creepName
+    else
+        creepName = caster.creepName
+    end
 
     AutoSpawnCreeps(player, ability, creepName, creepCount)
 end

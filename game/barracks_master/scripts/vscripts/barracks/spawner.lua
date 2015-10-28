@@ -7,7 +7,7 @@ function ManualSpawnCreeps(player, building, buildingAbility, creepName)
     local hero = player:GetAssignedHero()
     local playerColor = GetPlayerColor(player)
     local team = GetTeamByColor(playerColor)
-    local pos = building:GetAbsOrigin()
+    local pos = building:GetAbsOrigin() + RandomVector(256.0)
 
     local unit = CreateUnitByName(creepName, pos, true, hero, player, team)
     unit:SetControllableByPlayer(player:GetPlayerID(), true)
@@ -16,6 +16,11 @@ function ManualSpawnCreeps(player, building, buildingAbility, creepName)
     -- Building Helper tie-ins
     CheckAbilityRequirements(unit, player) -- upgrades on spawn
     table.insert(player.units, unit)       -- adds unit to player's units table
+
+    -- unstick
+    Timers:CreateTimer(0.03, function()
+        FindClearSpaceForUnit(unit, pos, true)
+    end)
 end
 
 ---------------------------------------------------------------------
@@ -181,14 +186,12 @@ function ApplyCreepParameters(unit, team, color)
             unit:SetOriginalModel(model)
         end
     end
-
     
     if     color == "red"    then unit:SetRenderColor(255,128,128)
     elseif color == "blue"   then unit:SetRenderColor(0,128,255)
     elseif color == "green"  then unit:SetRenderColor(128,255,128)
     elseif color == "purple" then unit:SetRenderColor(255,128,255)
     end
-    
 end
 
 -----------------------

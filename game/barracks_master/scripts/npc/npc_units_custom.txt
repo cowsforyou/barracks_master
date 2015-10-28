@@ -19,9 +19,9 @@
 			//----------------------------------------------------------------
 			"AbilityLayout"				"5"
 			"Ability1"					"spawn_ancient_creeps"
-			"Ability2"					""			// Ability 2
-			"Ability3"					""			// Ability 3
-			"Ability4"					""			// Ability 4
+			"Ability2"					"select_ancient1"			// Ability 2
+			"Ability3"					"select_ancient2"			// Ability 3
+			"Ability4"					"select_ancient3"			// Ability 4
 			"Ability5"					""			
 			"Ability6"					""			
 			"Ability10"					"ability_building"
@@ -340,7 +340,7 @@
 		
 		// Bounds
 		//----------------------------------------------------------------
-		"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
+		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
 		"RingRadius"				"230"
 		"CollisionSize"				"230"
 		

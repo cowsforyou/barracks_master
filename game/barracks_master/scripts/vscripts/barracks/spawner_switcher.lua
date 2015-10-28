@@ -1,37 +1,21 @@
 --------------------------------------------------------------------------------------------------------
 -- General spawner AI
 --------------------------------------------------------------------------------------------------------
-function Think( keys )
-    --print("Think")
-    local caster = keys.caster
-    local ability = keys.ability
-
-    if ability.initialAutocast == nil and ability:GetAutoCastState() == false then
-        ability:ToggleAutoCast()
-        ability.initialAutocast = true
-    end
-
-    if ability:GetAutoCastState() == true and ability:IsFullyCastable() and not caster:HasModifier("modifier_construction") then
-        caster:CastAbilityNoTarget(ability, 0)
-    end
-end
-
-function OnSpellStart( keys )
-    --print("OnSpellStart")
-    local ability = keys.ability
-    local caster = keys.caster
-    local player = caster:GetPlayerOwner()
-    if player == nil then return end -- don't try to spawn creeps from a ghost dummy
-
-    local creepName = caster.creepName
-    local creepCount = ability:GetSpecialValueFor("creep_count")
-
-    AutoSpawnCreeps(player, ability, creepName, creepCount)
-end
-
 function SwitchCreep( keys )
+    local ability = keys.ability
     local caster = keys.caster
     local creepName = keys.creepName
 
+    -- skip first ability 0 (the spawner) and disable autocast up to sixth ability
+    for i=1,5 do
+        local abi = caster:GetAbilityByIndex(i)
+        if abi:GetAutoCastState() then
+            abi:ToggleAutoCast()
+        end
+    end
+    -- enable autocast for the clicked ability
+    ability:ToggleAutoCast()
+
+    -- for use in spawner_auto.lua's OnSpellStart()
     caster.creepName = creepName
 end
