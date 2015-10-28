@@ -230,7 +230,7 @@
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/props_structures/obelisk001.vmdl"
-		"ModelScale"				"1.8"
+		"ModelScale"				"1.0"
 		"Level"						"1"
 		"HealthBarOffset"			"140"
 		"HasInventory"				"1"
@@ -378,7 +378,7 @@
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/props_structures/tower_dragon_white.vmdl"
-		"ModelScale"				"1.8"
+		"ModelScale"				"1.0"
 		"Level"						"1"
 		"HealthBarOffset"			"140"
 		"HasInventory"				"1"
@@ -897,7 +897,7 @@
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/props_structures/tower_dragon_black.vmdl"
-		"ModelScale"				"1.8"
+		"ModelScale"				"1.0"
 		"Level"						"1"
 		"HealthBarOffset"			"140"
 		"HasInventory"				"1"

@@ -1452,7 +1452,7 @@
 		"PlayerCanControl"				"1" //bool
 	
 		"BuilderInside"					"1"
-		"ModelRotation"					"90.0"
+		"ModelRotation"					"270.0"
 	
 		"UnitName"						"bm_unpromising"
 		"AbilityCooldown"				"0"

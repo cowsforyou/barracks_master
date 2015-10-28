@@ -24,7 +24,7 @@
 [ ] Create toggle button for Ancient Barracks
 [ ] Learn how to add lumber cost to buildings/research
 [ ] Enable lumber harvesting
-[ ] Enable Lumber Yard to spawn Lumberjacks
+[x] Enable Lumber Yard to spawn Lumberjacks
 [x] Replace city center default spawn to bm_melee_barracks
 
 
@@ -67,7 +67,11 @@
 [x] Hawk and Boar spawn sounds not firing.
 [x] Tech tree unlock for Hawk not working
 [ ] Techies suiciding gives gold
-
+[x] Lumberjacks get stuck
+[ ] Lumber Yard model not giving right collision radius
+[ ] Library of Spells not selectable
+[ ] Research lab does not get unlocked if page 2 abilities are selected (when lumber yard completes)
+[ ] Techies death sound incorrect (currently hawk sound)
 
 
 -------------------------------------
