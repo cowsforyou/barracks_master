@@ -30,7 +30,7 @@ function CheckAbilityRequirements( unit, player )
 				-- Exists and isn't hidden, check its requirements
 				if IsValidEntity(ability) then
 					local disabled = false
-					local isResearchAbility = false
+					local isUpgradeableResearchAbility = false
 
 					-- By default, all abilities that have a requirement start as _disabled
 					-- This is to prevent applying passive modifier effects that have to be removed later
@@ -43,9 +43,14 @@ function CheckAbilityRequirements( unit, player )
 						disabled = true
 					end
 
-					-- is this a research ability? we should ignore it
+					--PrintTable(player.upgrades)
+
+					-- is this a research ability above level 0? we should ignore it, because it's an upgradeable research ability
 					if string.find(ability_name, "research_") then
-						isResearchAbility = true
+						--print("Player has research in " .. ability_name .. ": " .. tostring(PlayerHasResearch(player, ability_name)))
+						if ability:GetLevel() > 0 then
+							isUpgradeableResearchAbility = true
+						end
 					end
 
 					-- Check if it has requirements on the KV table
@@ -78,8 +83,9 @@ function CheckAbilityRequirements( unit, player )
 							local ability = unit:FindAbilityByName(ability_name)
 							local newLevel = GetResearchLevel(player, "research_" .. ability_name) or 1
 
+							print(ability_name .. ": isUpgradeableResearchAbility? " .. tostring(isUpgradeableResearchAbility))
 							-- Set the new ability level
-							if not isResearchAbility then
+							if not isUpgradeableResearchAbility then
 								ability:SetLevel(newLevel)
 							end
 						else
@@ -88,7 +94,7 @@ function CheckAbilityRequirements( unit, player )
 					else
 						if player_has_requirements then
 							local newLevel = GetResearchLevel(player, "research_" .. ability_name) or 1
-							if not isResearchAbility then
+							if not isUpgradeableResearchAbility then
 								ability:SetLevel(newLevel)
 							end
 						else	
