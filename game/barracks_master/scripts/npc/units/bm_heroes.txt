@@ -6,18 +6,22 @@
 		// General
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
-		"Model"						"models/creeps/neutral_creeps/n_creep_kobold/kobold_a/n_creep_kobold_a.vmdl"	// Model.
-		"SoundSet"					"n_creep_Melee"
-		"Level"						"2"
-		"ModelScale" 				"1"
-		"IsNeutralUnitType"			"1"
+		"Model"						"models/props_structures/tower_good4.vmdl"	// Model.
+		"ModelScale"				"1.0"
+		"Level"						"1"
+		"HealthBarOffset"			"140"
+		"HasInventory"				"1"
+		"ConsideredHero"			"1"
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
+		"AbilityLayout"				"5"
+		"Ability1"					"city_center_tier2_passive"			// Ability 1
 		"Ability2"					""			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
+		"Ability10"					"ability_building"
+		"Ability11"					"ability_building_queue"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -25,20 +29,17 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"14"		// Damage range min.
-		"AttackDamageMax"			"15"		// Damage range max.	
-		"AttackRate"				"1.35"		// Speed of attack.
-		"AttackAnimationPoint"		"0.38"		// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"110"		// Range within a target can be attacked.
-		"ProjectileModel"			""			// Particle system model for projectile.
-		"ProjectileSpeed"			"0"			// Speed of projectile.		   
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"	   
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"50"
-		"HealthBarOffset"			"180"
+		"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
+		"RingRadius"				"215"
+		"CollisionSize"				"220"
+
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -49,7 +50,7 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"330"		// Speed.
+		"MovementSpeed"				"0"
 
 		// Status
 		//----------------------------------------------------------------

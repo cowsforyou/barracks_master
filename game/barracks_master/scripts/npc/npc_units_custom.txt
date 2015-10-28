@@ -17,7 +17,7 @@
 	
 			// Abilities
 			//----------------------------------------------------------------
-			"AbilityLayout"				"6"
+			"AbilityLayout"				"5"
 			"Ability1"					"spawn_ancient_creeps"
 			"Ability2"					""			// Ability 2
 			"Ability3"					""			// Ability 3
@@ -93,6 +93,7 @@
 	
 			// Abilities
 			//----------------------------------------------------------------
+			"AbilityLayout"				"5"
 			"Ability1"					"spawn_air_creeps"			// Ability 1
 			"Ability2"					"research_bm_scout_hawk"			// Ability 2
 			"Ability3"					""			// Ability 3
@@ -155,18 +156,22 @@
 			// General
 			//----------------------------------------------------------------
 			"BaseClass"					"npc_dota_creature"
-			"Model"						"models/creeps/neutral_creeps/n_creep_kobold/kobold_a/n_creep_kobold_a.vmdl"	// Model.
-			"SoundSet"					"n_creep_Melee"
-			"Level"						"2"
-			"ModelScale" 				"1"
-			"IsNeutralUnitType"			"1"
+			"Model"						"models/props_structures/tower_good4.vmdl"	// Model.
+			"ModelScale"				"1.0"
+			"Level"						"1"
+			"HealthBarOffset"			"140"
+			"HasInventory"				"1"
+			"ConsideredHero"			"1"
 	
 			// Abilities
 			//----------------------------------------------------------------
-			"Ability1"					""			// Ability 1
+			"AbilityLayout"				"5"
+			"Ability1"					"city_center_tier2_passive"			// Ability 1
 			"Ability2"					""			// Ability 2
 			"Ability3"					""			// Ability 3
 			"Ability4"					""			// Ability 4
+			"Ability10"					"ability_building"
+			"Ability11"					"ability_building_queue"
 	
 			// Armor
 			//----------------------------------------------------------------
@@ -174,20 +179,17 @@
 	
 			// Attack
 			//----------------------------------------------------------------
-			"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-			"AttackDamageMin"			"14"		// Damage range min.
-			"AttackDamageMax"			"15"		// Damage range max.	
-			"AttackRate"				"1.35"		// Speed of attack.
-			"AttackAnimationPoint"		"0.38"		// Normalized time in animation cycle to attack.
-			"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-			"AttackRange"				"110"		// Range within a target can be attacked.
-			"ProjectileModel"			""			// Particle system model for projectile.
-			"ProjectileSpeed"			"0"			// Speed of projectile.		   
+			"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+			"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+			"AttackDamageMin"			"0"
+			"AttackDamageMax"			"0"	   
 	
 			// Bounds
 			//----------------------------------------------------------------
-			"RingRadius"				"50"
-			"HealthBarOffset"			"180"
+			"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
+			"RingRadius"				"215"
+			"CollisionSize"				"220"
+	
 	
 			// Bounty
 			//----------------------------------------------------------------
@@ -198,7 +200,7 @@
 			// Movement
 			//----------------------------------------------------------------
 			"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-			"MovementSpeed"				"330"		// Speed.
+			"MovementSpeed"				"0"
 	
 			// Status
 			//----------------------------------------------------------------
@@ -219,6 +221,81 @@
 			"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRONG"
 			"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 		}	
+	 //=================================================================================
+	 // Building: Library of Spells
+	 //=================================================================================
+	 "bm_library"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/props_structures/obelisk001.vmdl"
+		"ModelScale"				"1.8"
+		"Level"						"1"
+		"HealthBarOffset"			"140"
+		"HasInventory"				"1"
+		"ConsideredHero"			"1"
+		
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"5"
+		"Ability1"					""
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+		"Ability5"					""
+		"Ability6"					""
+		"Ability10"					"ability_building"
+		"Ability11"					"ability_building_queue"
+		
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"
+		"MagicalResistance"			"0"
+		
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
+		
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyGoldMin"				"300"
+		"BountyGoldMax"				"300"
+		
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
+		"RingRadius"				"120"
+		"CollisionSize"				"80"
+		
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"	// Needed to cast Point abilities
+		"MovementSpeed"				"0"
+		
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"100"
+		"StatusHealthRegen"			"0"
+		"StatusMana"				"100"
+		"StatusManaRegen"			"0"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"900"
+		"VisionNighttimeRange"		"600"
+		
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+		"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+		
+	}
 	//=================================================================================
 	// Building: Lumber Yard
 	//=================================================================================
@@ -227,8 +304,8 @@
 		// General
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
-		"Model"						"models/props_structures/good_barracks_melee001.vmdl"
-		"ModelScale"				"0.6"
+		"Model"						"models/props_tree/stump002.vmdl"
+		"ModelScale"				"4.5"
 		"Level"						"1"
 		"HealthBarOffset"			"140"
 		"HasInventory"				"1"
@@ -236,8 +313,8 @@
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"AbilityLayout"				"4"
-		"Ability1"					""
+		"AbilityLayout"				"5"
+		"Ability1"					"spawn_lumberjacks"
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
@@ -264,8 +341,8 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
-		"RingRadius"				"150"
-		"CollisionSize"				"130"
+		"RingRadius"				"230"
+		"CollisionSize"				"230"
 		
 		// Movement
 		//----------------------------------------------------------------
@@ -275,6 +352,81 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"600"
+		"StatusHealthRegen"			"0"
+		"StatusMana"				"100"
+		"StatusManaRegen"			"0"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"900"
+		"VisionNighttimeRange"		"600"
+		
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+		"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+		
+	}
+	 //=================================================================================
+	 // Building: Luminous Tower
+	 //=================================================================================
+	 "bm_luminous"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/props_structures/tower_dragon_white.vmdl"
+		"ModelScale"				"1.8"
+		"Level"						"1"
+		"HealthBarOffset"			"140"
+		"HasInventory"				"1"
+		"ConsideredHero"			"1"
+		
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"5"
+		"Ability1"					""
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+		"Ability5"					""
+		"Ability6"					""
+		"Ability10"					"ability_building"
+		"Ability11"					"ability_building_queue"
+		
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"
+		"MagicalResistance"			"0"
+		
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
+		
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyGoldMin"				"300"
+		"BountyGoldMax"				"300"
+		
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
+		"RingRadius"				"120"
+		"CollisionSize"				"80"
+		
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"	// Needed to cast Point abilities
+		"MovementSpeed"				"0"
+		
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"100"
 		"StatusHealthRegen"			"0"
 		"StatusMana"				"100"
 		"StatusManaRegen"			"0"
@@ -367,6 +519,81 @@
 		"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
 		
 	}
+	 //=================================================================================
+	 // Building: Purifier
+	 //=================================================================================
+	 "bm_purifier"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/lane_creeps/creep_radiant_melee/radiant_melee_mega.vmdl"
+		"ModelScale"				"1.8"
+		"Level"						"1"
+		"HealthBarOffset"			"140"
+		"HasInventory"				"1"
+		"ConsideredHero"			"1"
+		
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"5"
+		"Ability1"					""
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+		"Ability5"					""
+		"Ability6"					""
+		"Ability10"					"ability_building"
+		"Ability11"					"ability_building_queue"
+		
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"
+		"MagicalResistance"			"0"
+		
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
+		
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyGoldMin"				"300"
+		"BountyGoldMax"				"300"
+		
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
+		"RingRadius"				"120"
+		"CollisionSize"				"80"
+		
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"	// Needed to cast Point abilities
+		"MovementSpeed"				"0"
+		
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"100"
+		"StatusHealthRegen"			"0"
+		"StatusMana"				"100"
+		"StatusManaRegen"			"0"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"900"
+		"VisionNighttimeRange"		"600"
+		
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+		"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+		
+	}
 	//=================================================================================
 	// Building: Ranged Barracks
 	//=================================================================================
@@ -384,7 +611,7 @@
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"AbilityLayout"				"6"
+		"AbilityLayout"				"5"
 		"Ability1"					"spawn_ranged_creeps"
 		"Ability2"					"research_bm_ranged_armor"
 		"Ability3"					"research_bm_ranged_damage"
@@ -450,8 +677,8 @@
 		// General
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
-		"Model"						"models/props_structures/good_ancient001.vmdl"
-		"ModelScale"				"0.6"
+		"Model"						"models/props_structures/good_barracks_ranged002.vmdl"
+		"ModelScale"				"0.7"
 		"Level"						"3"
 		"HealthBarOffset"			"140"
 		"HasInventory"				"1"
@@ -459,12 +686,13 @@
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"AbilityLayout"				"4"
-		"Ability1"					"city_center_tier2_passive"
+		"AbilityLayout"				"5"
+		"Ability1"					""
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
 		"Ability10"					"ability_building"
+		"Ability11"					"ability_building_queue"
 		
 		// Armor
 		//----------------------------------------------------------------
@@ -486,8 +714,8 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
-		"RingRadius"				"220"
-		"CollisionSize"				"172"
+		"RingRadius"				"200"
+		"CollisionSize"				"200"
 			
 		// Movement
 		//----------------------------------------------------------------
@@ -531,7 +759,7 @@
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"AbilityLayout"				"4"
+		"AbilityLayout"				"5"
 		"Ability1"					"spawn_siege_creeps"
 		"Ability2"					"research_ultimate_ability"
 		"Ability3"					""
@@ -604,7 +832,7 @@
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"AbilityLayout"				"4"
+		"AbilityLayout"				"5"
 		"Ability1"					"spawn_skeleton_creeps"
 		"Ability2"					"research_bm_skeleton_damage"
 		"Ability3"					""
@@ -634,6 +862,81 @@
 		"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
 		"RingRadius"				"90"
 		"CollisionSize"				"50"
+		
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"	// Needed to cast Point abilities
+		"MovementSpeed"				"0"
+		
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"100"
+		"StatusHealthRegen"			"0"
+		"StatusMana"				"100"
+		"StatusManaRegen"			"0"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"900"
+		"VisionNighttimeRange"		"600"
+		
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+		"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+		
+	}
+	 //=================================================================================
+	 // Building: Unpromising Tower
+	 //=================================================================================
+	 "bm_unpromising"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/props_structures/tower_dragon_black.vmdl"
+		"ModelScale"				"1.8"
+		"Level"						"1"
+		"HealthBarOffset"			"140"
+		"HasInventory"				"1"
+		"ConsideredHero"			"1"
+		
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"5"
+		"Ability1"					""
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+		"Ability5"					""
+		"Ability6"					""
+		"Ability10"					"ability_building"
+		"Ability11"					"ability_building_queue"
+		
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"
+		"MagicalResistance"			"0"
+		
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
+		
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyGoldMin"				"300"
+		"BountyGoldMax"				"300"
+		
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
+		"RingRadius"				"120"
+		"CollisionSize"				"80"
 		
 		// Movement
 		//----------------------------------------------------------------
@@ -1628,6 +1931,110 @@
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
 		"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
 		
+	}
+	//=================================================================================
+	// Lumberjack
+	//=================================================================================
+	"lumberjack"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/heroes/shredder/shredder.vmdl"
+		"ModelScale"				"0.7"
+		"Level"						"1"
+		"HealthBarOffset"			"140"
+		"SelectionGroup"            "Peasants"
+		"SoundSet"					"Hero_Shredder"
+	
+		"UnitLabel"					"builder"
+	
+		"precache"
+		{
+			"soundfile" "soundevents/game_sounds_heroes/game_sounds_shredder.vsndevts"
+		}
+		
+		"PathfindingSearchDepthScale" "0.5"
+		
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"4"
+		"Ability1" 					"repair"
+		"Ability2" 					""
+		"Ability3" 					""
+		"Ability4" 					""
+		"Ability5"					""
+		"Ability6" 					""
+	
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"0"
+		"MagicalResistance"			"0"
+		
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"5.0"
+		"AttackDamageMax"			"6.0"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"2"
+		"AttackAnimationPoint"		"0.433"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"90"
+		
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyGoldMin"				"20.0"
+		"BountyGoldMax"				"30.0"
+		
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"40"
+		"CollisionSize"				"16"
+		"FormationRank"				"3"
+			
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"190"
+		"MovementTurnRate"			"0.6"
+		
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"220"
+		"StatusHealthRegen"			"0.25"
+		"StatusMana"				"0"
+		"StatusManaRegen"			"0"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"
+		"VisionNighttimeRange"		"600"
+		
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+			"DisableClumpingBehavior"	"1"
+			"AttachWearables"
+			{
+				"Wearable1"		{	"ItemDef"		"388"		} //Offhand
+				"Wearable2"		{	"ItemDef"		"402"		} //Weapon
+				"Wearable3" 	{	"ItemDef"		"386"		} //Head
+				"Wearable4" 	{	"ItemDef"		"389"		} //Shoulder
+				"Wearable5" 	{	"ItemDef"		"390"		} //Back
+				"Wearable6"		{	"ItemDef"		"401"		} //Armor
+				"Wearable7"		{	"ItemDef"		"400"		} //Belt
+			}
+		}
 	}
 	"npc_dota_beastmaster_boar_1"
 	{										

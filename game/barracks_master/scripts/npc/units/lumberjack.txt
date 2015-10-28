@@ -1,0 +1,104 @@
+//=================================================================================
+// Lumberjack
+//=================================================================================
+"lumberjack"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_creature"
+	"Model"						"models/heroes/shredder/shredder.vmdl"
+	"ModelScale"				"0.7"
+	"Level"						"1"
+	"HealthBarOffset"			"140"
+	"SelectionGroup"            "Peasants"
+	"SoundSet"					"Hero_Shredder"
+
+	"UnitLabel"					"builder"
+
+	"precache"
+	{
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_shredder.vsndevts"
+	}
+	
+	"PathfindingSearchDepthScale" "0.5"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"4"
+	"Ability1" 					"repair"
+	"Ability2" 					""
+	"Ability3" 					""
+	"Ability4" 					""
+	"Ability5"					""
+	"Ability6" 					""
+
+	// Armor
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"0"
+	"MagicalResistance"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+	"AttackDamageMin"			"5.0"
+	"AttackDamageMax"			"6.0"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackRate"				"2"
+	"AttackAnimationPoint"		"0.433"
+	"AttackAcquisitionRange"	"500"
+	"AttackRange"				"90"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"20.0"
+	"BountyGoldMax"				"30.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+	"RingRadius"				"40"
+	"CollisionSize"				"16"
+	"FormationRank"				"3"
+		
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"190"
+	"MovementTurnRate"			"0.6"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusHealth"				"220"
+	"StatusHealthRegen"			"0.25"
+	"StatusMana"				"0"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"800"
+	"VisionNighttimeRange"		"600"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+	// Creature Data
+	//----------------------------------------------------------------
+	"Creature"
+	{
+		"DisableClumpingBehavior"	"1"
+		"AttachWearables"
+		{
+			"Wearable1"		{	"ItemDef"		"388"		} //Offhand
+			"Wearable2"		{	"ItemDef"		"402"		} //Weapon
+			"Wearable3" 	{	"ItemDef"		"386"		} //Head
+			"Wearable4" 	{	"ItemDef"		"389"		} //Shoulder
+			"Wearable5" 	{	"ItemDef"		"390"		} //Back
+			"Wearable6"		{	"ItemDef"		"401"		} //Armor
+			"Wearable7"		{	"ItemDef"		"400"		} //Belt
+		}
+	}
+}

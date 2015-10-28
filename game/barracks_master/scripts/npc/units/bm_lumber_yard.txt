@@ -6,8 +6,8 @@
 	// General
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_creature"
-	"Model"						"models/props_structures/good_barracks_melee001.vmdl"
-	"ModelScale"				"0.6"
+	"Model"						"models/props_tree/stump002.vmdl"
+	"ModelScale"				"4.5"
 	"Level"						"1"
 	"HealthBarOffset"			"140"
 	"HasInventory"				"1"
@@ -15,8 +15,8 @@
 	
 	// Abilities
 	//----------------------------------------------------------------
-	"AbilityLayout"				"4"
-	"Ability1"					""
+	"AbilityLayout"				"5"
+	"Ability1"					"spawn_lumberjacks"
 	"Ability2"					""
 	"Ability3"					""
 	"Ability4"					""
@@ -43,8 +43,8 @@
 	// Bounds
 	//----------------------------------------------------------------
 	"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
-	"RingRadius"				"150"
-	"CollisionSize"				"130"
+	"RingRadius"				"230"
+	"CollisionSize"				"230"
 	
 	// Movement
 	//----------------------------------------------------------------

@@ -6,8 +6,8 @@
 	// General
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_creature"
-	"Model"						"models/props_structures/good_ancient001.vmdl"
-	"ModelScale"				"0.6"
+	"Model"						"models/props_structures/good_barracks_ranged002.vmdl"
+	"ModelScale"				"0.7"
 	"Level"						"3"
 	"HealthBarOffset"			"140"
 	"HasInventory"				"1"
@@ -15,12 +15,13 @@
 	
 	// Abilities
 	//----------------------------------------------------------------
-	"AbilityLayout"				"4"
-	"Ability1"					"city_center_tier2_passive"
+	"AbilityLayout"				"5"
+	"Ability1"					""
 	"Ability2"					""
 	"Ability3"					""
 	"Ability4"					""
 	"Ability10"					"ability_building"
+	"Ability11"					"ability_building_queue"
 	
 	// Armor
 	//----------------------------------------------------------------
@@ -42,8 +43,8 @@
 	// Bounds
 	//----------------------------------------------------------------
 	"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
-	"RingRadius"				"220"
-	"CollisionSize"				"172"
+	"RingRadius"				"200"
+	"CollisionSize"				"200"
 		
 	// Movement
 	//----------------------------------------------------------------

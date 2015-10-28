@@ -1,0 +1,6 @@
+"select_ancient2"
+{
+    "BaseClass"                     "ability_datadriven"
+    "AbilityTextureName"            "holdout_friendly_skewer"
+    "MaxLevel"                      "0"
+}

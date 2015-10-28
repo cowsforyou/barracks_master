@@ -1,0 +1,35 @@
+"particle_01"
+{
+	"BaseClass"             		"ability_datadriven"
+	"MaxLevel" 						"1"
+	"AbilityTexture"				"city_center_tier2_passive"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"precache"
+	{
+		"particle"  "particles/radiant_fx2/good_ancient001_sphere.vpcf"
+	}
+
+	"Modifiers"
+	{
+		"modifier_keep_particle"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+	
+			"OnCreated"
+			{
+				"AttachEffect"
+				{
+					"EffectName"        "particles/radiant_fx2/good_ancient001_sphere.vpcf"
+					"EffectAttachType"  "follow_origin"
+					"Target"			"CASTER"
+					"ControlPointEntities"
+					{
+						"CASTER"	"attach_fx"
+					}
+				}
+			}
+		}
+	}
+}

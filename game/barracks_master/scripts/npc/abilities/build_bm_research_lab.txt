@@ -2,7 +2,7 @@
 "build_bm_research_lab"
 {
 	"BaseClass"             		"ability_datadriven"
-	"AbilityTextureName"			"train_city_center_tier2"
+	"AbilityTextureName"			"research_lab3"
 	"MaxLevel" 						"1"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"

@@ -2,7 +2,7 @@
 "build_bm_lumber_yard"
 {
 	"BaseClass"             		"ability_datadriven"
-	"AbilityTextureName"			"build_tech_center"
+	"AbilityTextureName"			"lumber_yard4"
 	"MaxLevel" 						"1"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"

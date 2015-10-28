@@ -1,0 +1,59 @@
+// Autocast creep spawner spell; starts casting as soon as the building is fully constructed
+"spawn_lumberjacks"
+{
+    "BaseClass"                     "ability_datadriven"
+    "AbilityTextureName"            "lumberjack"
+    "MaxLevel"                      "1"
+
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+    "AbilityCastPoint"              "0"
+
+    "AbilityGoldCost"               "50"
+
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "creep_count"			"1"
+        }
+
+        "02"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "gold_cost"             "50"
+        }
+    }
+
+    // run this script every time the spell is used
+    "OnSpellStart"
+    {
+        "RunScript"
+        {
+            "ScriptFile"    "barracks/spawner_manual.lua"
+            "Function"      "OnSpellStart"
+            "creepName"		"lumberjack"
+        }
+    }
+
+    // modifiers are buffs/debuffs, usually associated with abilities
+    "Modifiers"
+    {
+    	"modifier_spawn_lumberjacks_thinker"
+    	{
+    		"Passive"			"1" // start activated
+    		"IsHidden"			"1" // hide the visual buff icon
+
+    		// run this Think() script every 0.25 seconds
+			"ThinkInterval" 	"0.25"
+		    "OnIntervalThink"
+			{
+				"RunScript"
+		        {
+		            "ScriptFile"    "barracks/spawner_manual.lua"
+		            "Function"      "Think"
+		        }
+			}
+   	    }
+    }
+}

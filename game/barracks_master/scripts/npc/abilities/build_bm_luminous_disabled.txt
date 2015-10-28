@@ -1,0 +1,7 @@
+// A _disabled ability is required to show the requirements on the tooltip
+"build_bm_luminous_disabled"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"melee_barracks3"
+	"MaxLevel" 						"0"
+}

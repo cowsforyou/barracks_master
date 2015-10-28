@@ -11,20 +11,16 @@ function OnSpellStart(keys)
         "build_bm_melee_barracks",
         "build_bm_ranged_barracks",
         "build_bm_lumber_yard",
-        "build_bm_siege_barracks", -- start page 2
+        "build_bm_siege_barracks",-- start page 2
         "build_bm_research_lab",
         "build_bm_aviation_sanctuary",
         "build_bm_ancient_barracks",
-        "build_bm_heroes", -- start page 3
-        "meepo_earthbind",
-        "meepo_poof",
-        "meepo_geostrike",
-        "treant_natures_guise", -- start page 4
-        "treant_leech_seed",
-        "treant_living_armor",
-        "treant_overgrowth",
-        "disruptor_thunder_strike", -- start page 5
-        "disruptor_glimpse", -- remaining 2 slots will be filled with blanks
+        "build_bm_heroes",-- start page 3
+        "build_bm_purifier",
+        "build_bm_library",
+        "build_bm_unpromising",
+        "build_bm_luminous",-- start page 4
+        -- remaining slots will be filled with blanks
     }
 
     -- if caster doesn't have an AbilitySwapper, make one

@@ -32,6 +32,7 @@
 		"creep_melee"                                                                     	"Melee Creep"
 		"creep_ranged"                                                                    	"Ranged Creep"
 		"creep_siege"                                                                     	"Siege Creep"
+		"creep_air"                                                                     	"Familiar"
 		"creep_ancient1"                                                                    "Granite Golem"
 		"creep_ancient2"                                                                    "Big Thunder Lizard"
 		"creep_ancient3"                                                                    "Blue Dragonspawn Overseer"		
@@ -50,7 +51,7 @@
 		//-------------------
 		"bm_skeleton_barracks"                                                              "Skeleton Barracks"
 		"DOTA_Tooltip_ability_build_bm_skeleton_barracks"                        			"Skeleton Barracks"		
-		"DOTA_Tooltip_ability_build_bm_skeleton_barracks_Description"                       "Spawns Skeleton Creeps"
+		"DOTA_Tooltip_ability_build_bm_skeleton_barracks_Description"                       "Spawns Skeleton Creeps."
 		"DOTA_Tooltip_ability_build_bm_skeleton_barracks_build_time"                        "BUILD TIME:"
 		"DOTA_Tooltip_ability_build_bm_skeleton_barracks_gold_cost"                         "GOLD COST:"
 		"DOTA_Tooltip_ability_build_bm_skeleton_barracks_lumber_cost"                       "LUMBER COST:"
@@ -58,7 +59,7 @@
 
 		"bm_melee_barracks"                                                               	"Melee Barracks"
 		"DOTA_Tooltip_ability_build_bm_melee_barracks"                        				"Melee Barracks"		
-		"DOTA_Tooltip_ability_build_bm_melee_barracks_Description"                        	"Spawns Melee Creeps"
+		"DOTA_Tooltip_ability_build_bm_melee_barracks_Description"                        	"Spawns Melee Creeps."
 		"DOTA_Tooltip_ability_build_bm_melee_barracks_build_time"                         	"BUILD TIME:"
 		"DOTA_Tooltip_ability_build_bm_melee_barracks_gold_cost"                          	"GOLD COST:"
 		"DOTA_Tooltip_ability_build_bm_melee_barracks_lumber_cost"                        	"LUMBER COST:"
@@ -66,7 +67,7 @@
 
 		"bm_ranged_barracks"                                                               	"Ranged Barracks"
 		"DOTA_Tooltip_ability_build_bm_ranged_barracks"                        				"Ranged Barracks"		
-		"DOTA_Tooltip_ability_build_bm_ranged_barracks_Description"                       	"Spawns Ranged Creeps"
+		"DOTA_Tooltip_ability_build_bm_ranged_barracks_Description"                       	"Spawns Ranged Creeps."
 		"DOTA_Tooltip_ability_build_bm_ranged_barracks_build_time"                        	"BUILD TIME:"
 		"DOTA_Tooltip_ability_build_bm_ranged_barracks_gold_cost"                         	"GOLD COST:"
 		"DOTA_Tooltip_ability_build_bm_ranged_barracks_lumber_cost"                       	"LUMBER COST:"
@@ -77,7 +78,7 @@
 
 		"bm_lumber_yard"                                                               		"Lumber Yard"
 		"DOTA_Tooltip_ability_build_bm_lumber_yard"                        					"Lumber Yard"		
-		"DOTA_Tooltip_ability_build_bm_lumber_yard_Description"                       		"Allows you to harvest lumber"
+		"DOTA_Tooltip_ability_build_bm_lumber_yard_Description"                       		"This tree stump will provide all the lumber you need."
 		"DOTA_Tooltip_ability_build_bm_lumber_yard_build_time"                        		"BUILD TIME:"
 		"DOTA_Tooltip_ability_build_bm_lumber_yard_gold_cost"                         		"GOLD COST:"
 		"DOTA_Tooltip_ability_build_bm_lumber_yard_lumber_cost"                       		"LUMBER COST:"
@@ -85,7 +86,7 @@
 
 		"bm_siege_barracks"                                                               	"Siege Barracks"
 		"DOTA_Tooltip_ability_build_bm_siege_barracks"                        				"Siege Barracks"
-		"DOTA_Tooltip_ability_build_bm_siege_barracks_Description"                       	"Spawns Siege Creeps"
+		"DOTA_Tooltip_ability_build_bm_siege_barracks_Description"                       	"Spawns Siege Creeps."
 		"DOTA_Tooltip_ability_build_bm_siege_barracks_build_time"                        	"BUILD TIME:"
 		"DOTA_Tooltip_ability_build_bm_siege_barracks_gold_cost"                         	"GOLD COST:"
 		"DOTA_Tooltip_ability_build_bm_siege_barracks_lumber_cost"                       	"LUMBER COST:"
@@ -96,7 +97,7 @@
 
 		"bm_ancient_barracks"                                                               "Ancient Barracks"
 		"DOTA_Tooltip_ability_build_bm_ancient_barracks"                        			"Ancient Barracks"
-		"DOTA_Tooltip_ability_build_bm_ancient_barracks_Description"                       	"Spawns Ancient Creeps"
+		"DOTA_Tooltip_ability_build_bm_ancient_barracks_Description"                       	"Spawns Ancient Creeps."
 		"DOTA_Tooltip_ability_build_bm_ancient_barracks_build_time"                        	"BUILD TIME:"
 		"DOTA_Tooltip_ability_build_bm_ancient_barracks_gold_cost"                         	"GOLD COST:"
 		"DOTA_Tooltip_ability_build_bm_ancient_barracks_lumber_cost"                       	"LUMBER COST:"
@@ -107,7 +108,7 @@
 
 		"bm_research_lab"                                                               	"Research Lab"
 		"DOTA_Tooltip_ability_build_bm_research_lab"                        				"Research Lab"
-		"DOTA_Tooltip_ability_build_bm_research_lab_Description"                       		"Unlocks higher tiered buildings"
+		"DOTA_Tooltip_ability_build_bm_research_lab_Description"                       		"Unlocks higher tiered buildings."
 		"DOTA_Tooltip_ability_build_bm_research_lab_build_time"                        		"BUILD TIME:"
 		"DOTA_Tooltip_ability_build_bm_research_lab_gold_cost"                         		"GOLD COST:"
 		"DOTA_Tooltip_ability_build_bm_research_lab_lumber_cost"                       		"LUMBER COST:"
@@ -118,7 +119,7 @@
 
 		"bm_aviation_sanctuary"                                                             "Aviation Sanctuary"
 		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary"                        			"Aviation Sanctuary"
-		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_Description"                      "Spawns Air Creeps and unlocks Hawk Scout"
+		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_Description"                      "Spawns Air Creeps and unlocks Hawk Scout."
 		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_build_time"                       "BUILD TIME:"
 		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_gold_cost"                        "GOLD COST:"
 		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_lumber_cost"                      "LUMBER COST:"
@@ -129,7 +130,7 @@
 
 		"bm_heroes"                                                             			"Portal of Heroes"
 		"DOTA_Tooltip_ability_build_bm_heroes"                        						"Portal of Heroes"
-		"DOTA_Tooltip_ability_build_bm_heroes_Description"                  	    		"Unlocks Heroes"
+		"DOTA_Tooltip_ability_build_bm_heroes_Description"                  	    		"Unlocks Heroes."
 		"DOTA_Tooltip_ability_build_bm_heroes_build_time"                  		    		"BUILD TIME:"
 		"DOTA_Tooltip_ability_build_bm_heroes_gold_cost"                       	 			"GOLD COST:"
 		"DOTA_Tooltip_ability_build_bm_heroes_lumber_cost"                      			"LUMBER COST:"
@@ -137,6 +138,49 @@
 		"DOTA_Tooltip_ability_build_bm_heroes_disabled"                         			"Portal of Heroes"
 		"DOTA_Tooltip_ability_build_bm_heroes_disabled_Description"             			"<b><font color='#eedd44'>Requires:\n - Research Lab</font></b>\n"
 
+
+		"bm_purifier"                                                             			"Purifier"
+		"DOTA_Tooltip_ability_build_bm_purifier"                        					"Purifier"
+		"DOTA_Tooltip_ability_build_bm_purifier_Description"                  	    		"Increases resource earned by 25%"
+		"DOTA_Tooltip_ability_build_bm_purifier_build_time"                  		    	"BUILD TIME:"
+		"DOTA_Tooltip_ability_build_bm_purifier_gold_cost"                       	 		"GOLD COST:"
+		"DOTA_Tooltip_ability_build_bm_purifier_lumber_cost"                      			"LUMBER COST:"
+
+		"DOTA_Tooltip_ability_build_bm_purifier_disabled"                         			"Purifier"
+		"DOTA_Tooltip_ability_build_bm_purifier_disabled_Description"             			"<b><font color='#eedd44'>Requires:\n - Research Lab</font></b>\n"
+
+
+		"bm_library"                                                             			"Library of Spells"
+		"DOTA_Tooltip_ability_build_bm_library"                        						"Library of Spells"
+		"DOTA_Tooltip_ability_build_bm_library_Description"                  	    		"Knowledge is power; And with great power comes great responsibility."
+		"DOTA_Tooltip_ability_build_bm_library_build_time"                  		    	"BUILD TIME:"
+		"DOTA_Tooltip_ability_build_bm_library_gold_cost"                       	 		"GOLD COST:"
+		"DOTA_Tooltip_ability_build_bm_library_lumber_cost"                      			"LUMBER COST:"
+
+		"DOTA_Tooltip_ability_build_bm_library_disabled"                         			"Library of Spells"
+		"DOTA_Tooltip_ability_build_bm_library_disabled_Description"             			"<b><font color='#eedd44'>Requires:\n - Research Lab</font></b>\n"
+
+
+		"bm_unpromising"                                                             		"Unpromising Tower"
+		"DOTA_Tooltip_ability_build_bm_unpromising"                        					"Unpromising Tower"
+		"DOTA_Tooltip_ability_build_bm_unpromising_Description"                  	    	"The Dark Side."
+		"DOTA_Tooltip_ability_build_bm_unpromising_build_time"                  		    "BUILD TIME:"
+		"DOTA_Tooltip_ability_build_bm_unpromising_gold_cost"                       	 	"GOLD COST:"
+		"DOTA_Tooltip_ability_build_bm_unpromising_lumber_cost"                      		"LUMBER COST:"
+
+		"DOTA_Tooltip_ability_build_bm_unpromising_disabled"                         		"Unpromising Tower"
+		"DOTA_Tooltip_ability_build_bm_unpromising_disabled_Description"             		"<b><font color='#eedd44'>Requires:\n - Library of Spells</font></b>\n"
+
+
+		"bm_luminous"                                                             			"Luminous Tower"
+		"DOTA_Tooltip_ability_build_bm_luminous"                        					"Luminous Tower"
+		"DOTA_Tooltip_ability_build_bm_luminous_Description"                  	    		"The Light Side."
+		"DOTA_Tooltip_ability_build_bm_luminous_build_time"                  		    	"BUILD TIME:"
+		"DOTA_Tooltip_ability_build_bm_luminous_gold_cost"                       	 		"GOLD COST:"
+		"DOTA_Tooltip_ability_build_bm_luminous_lumber_cost"                      			"LUMBER COST:"
+
+		"DOTA_Tooltip_ability_build_bm_luminous_disabled"                         			"Luminous Tower"
+		"DOTA_Tooltip_ability_build_bm_luminous_disabled_Description"             			"<b><font color='#eedd44'>Requires:\n - Library of Spells</font></b>\n"
 
 
 		//-------------------
@@ -322,6 +366,10 @@
 		"DOTA_Tooltip_ability_spawn_siege_creeps"                                     		"Siege Spawner"
 		"DOTA_Tooltip_ability_spawn_siege_creeps_Description"                              	"Automatically spawns siege creeps"
 		"DOTA_Tooltip_ability_spawn_siege_creeps_creep_count"                              	"CREEP COUNT:"	
+
+		"DOTA_Tooltip_ability_spawn_air_creeps"                                     		"Air Spawner"
+		"DOTA_Tooltip_ability_spawn_air_creeps_Description"                              	"Automatically spawns Familiars"
+		"DOTA_Tooltip_ability_spawn_air_creeps_creep_count"                              	"COUNT:"	
 
 		"DOTA_Tooltip_ability_spawn_ancient_creeps"                                     	"Ancient Spawner"
 		"DOTA_Tooltip_ability_spawn_ancient_creeps_Description"                             "Automatically spawns ancient creeps"

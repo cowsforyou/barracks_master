@@ -15,7 +15,7 @@
 	
 	// Abilities
 	//----------------------------------------------------------------
-	"AbilityLayout"				"4"
+	"AbilityLayout"				"5"
 	"Ability1"					"spawn_skeleton_creeps"
 	"Ability2"					"research_bm_skeleton_damage"
 	"Ability3"					""
