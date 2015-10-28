@@ -12,7 +12,7 @@ function OnSpellStart(keys)
         "build_bm_ranged_barracks",
         "build_bm_lumber_yard",
         "build_bm_siege_barracks",-- start page 2
-        "build_bm_research_lab",
+        "build_bm_tech_lab",
         "build_bm_aviation_sanctuary",
         "build_bm_ancient_barracks",
         "build_bm_heroes",-- start page 3

@@ -1255,68 +1255,6 @@
 		}
 	}
 	// Building requires repair to finish construction. Can be assisted to make the process faster
-	"build_bm_research_lab"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"research_lab3"
-		"MaxLevel" 						"1"
-	
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-	
-		// BuildingHelper info
-		"Building"						"1" //bool
-		"BuildingSize"					"4" 
-		"BuildTime"						"9.0"
-		"AbilityCastRange"				"200"
-		"UpdateHealth"					"1" //bool
-		"Scale"							"0" //bool
-		"PlayerCanControl"				"1" //bool
-	
-		"BuilderInside"					"1"
-		"ModelRotation"					"90.0"
-	
-		"UnitName"						"bm_research_lab"
-		"AbilityCooldown"				"0"
-		"AbilityGoldCost"				"1000"
-		"MaxBuildingCount"				"1"
-		// End of BuildingHelper info
-	
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"build_time"			"9.0"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"1000"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"0"
-			}
-		}
-	
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"builder.lua"
-				"Function"		"Build"
-			}
-		}
-	}
-	// A _disabled ability is required to show the requirements on the tooltip
-	"build_bm_research_lab_disabled"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"train_city_center_tier2"
-		"MaxLevel" 						"0"
-	}
-	// Building requires repair to finish construction. Can be assisted to make the process faster
 	"build_bm_siege_barracks"
 	{
 		"BaseClass"             		"ability_datadriven"
@@ -1432,6 +1370,68 @@
 				"Function"		"Build"
 			}
 		}
+	}
+	// Building requires repair to finish construction. Can be assisted to make the process faster
+	"build_bm_tech_lab"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"research_lab3"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"4" 
+		"BuildTime"						"9.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"BuilderInside"					"1"
+		"ModelRotation"					"90.0"
+	
+		"UnitName"						"bm_tech_lab"
+		"AbilityCooldown"				"0"
+		"AbilityGoldCost"				"1000"
+		"MaxBuildingCount"				"1"
+		// End of BuildingHelper info
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"9.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"1000"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	// A _disabled ability is required to show the requirements on the tooltip
+	"build_bm_tech_lab_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"research_lab3"
+		"MaxLevel" 						"0"
 	}
 	// Building requires repair to finish construction. Can be assisted to make the process faster
 	"build_bm_unpromising"

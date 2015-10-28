@@ -1,5 +1,5 @@
 // Building requires repair to finish construction. Can be assisted to make the process faster
-"build_bm_research_lab"
+"build_bm_tech_lab"
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"research_lab3"
@@ -19,7 +19,7 @@
 	"BuilderInside"					"1"
 	"ModelRotation"					"90.0"
 
-	"UnitName"						"bm_research_lab"
+	"UnitName"						"bm_tech_lab"
 	"AbilityCooldown"				"0"
 	"AbilityGoldCost"				"1000"
 	"MaxBuildingCount"				"1"

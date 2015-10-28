@@ -69,7 +69,7 @@
 [x] Lumberjacks get stuck
 [ ] Lumber Yard model not giving right collision radius
 [ ] Library of Spells not selectable
-[ ] Research lab does not get unlocked if page 2 abilities are selected (when lumber yard completes)
+[x] Research lab does not get unlocked if page 2 abilities are selected (when lumber yard completes)
 [ ] Techies death sound incorrect (currently hawk sound)
 [ ] Ancient rax looks spastic while waiting for first spawn
 [ ] HP upgrades not accessible after building research lab

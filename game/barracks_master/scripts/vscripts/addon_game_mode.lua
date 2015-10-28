@@ -65,7 +65,7 @@ function Precache( context )
     PrecacheUnitByNameSync("creep_air", context) 
 
     PrecacheUnitByNameSync("bm_lumber_yard", context) 
-    PrecacheUnitByNameSync("bm_research_lab", context) 
+    PrecacheUnitByNameSync("bm_tech_lab", context) 
     PrecacheUnitByNameSync("bm_heroes", context) 
     PrecacheUnitByNameSync("bm_purifier", context) 
     PrecacheUnitByNameSync("bm_library", context) 
