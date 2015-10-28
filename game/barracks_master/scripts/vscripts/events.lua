@@ -278,9 +278,10 @@ function GameMode:OnEntityKilled( keys )
     		local gold = killedUnit:GetGoldBounty()
     		PlayerResource:ModifyGold(playerID, gold, false, DOTA_ModifyGold_CreepKill)
 
-			local particle = ParticleManager:CreateParticle("particles/generic_gameplay/lasthit_coins.vpcf", PATTACH_ABSORIGIN_FOLLOW, killedUnit)
-			ParticleManager:SetParticleControl(particle, 1, killedUnit:GetAbsOrigin())
-			EmitSoundOn("General.Coins", killedUnit)
+  			local particle = ParticleManager:CreateParticle("particles/generic_gameplay/lasthit_coins.vpcf", PATTACH_ABSORIGIN_FOLLOW, killedUnit)
+  			ParticleManager:SetParticleControl(particle, 1, killedUnit:GetAbsOrigin())
+  			EmitSoundOn("General.Coins", killedUnit)
+        PopupGoldGain(killedUnit, gold)
 
     		print("Awarding " .. gold .. " gold to player " .. playerID)
     	else
