@@ -5,7 +5,7 @@
     {
         // General
         //
-        "BaseClass"                 "npc_dota_creep_lane"                                                       // Class of entity of link to.
+        "BaseClass"                 "npc_dota_creature"                                                       // Class of entity of link to.
         "Model"                     "models/creeps/neutral_creeps/n_creep_golem_a/neutral_creep_golem_a.vmdl"   // Model.
         "SoundSet"                  "n_creep_Melee"                                                             // Name of sound set.
         "ModelScale"                "1.1"

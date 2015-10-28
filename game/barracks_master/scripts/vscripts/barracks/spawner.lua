@@ -177,11 +177,11 @@ function ApplyCreepParameters(unit, team, color)
 
     if unitName == "creep_ancient3" then
         if team == DOTA_TEAM_GOODGUYS then
-            model = "models/creeps/neutral_creeps/n_creep_dragonspawn_b/n_creep_dragonspawn_b.vmdl"
+            model = "models/creeps/neutral_creeps/n_creep_black_dragon/n_creep_black_dragon.vmdl"
             unit:SetModel(model)
             unit:SetOriginalModel(model)
         else
-            model = "models/creeps/neutral_creeps/n_creep_dragonspawn_b/n_creep_dragonspawn_b.vmdl"
+            model = "models/creeps/neutral_creeps/n_creep_black_dragon/n_creep_black_dragon.vmdl"
             unit:SetModel(model)
             unit:SetOriginalModel(model)
         end
