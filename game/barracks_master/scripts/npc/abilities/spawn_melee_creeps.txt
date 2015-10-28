@@ -2,7 +2,7 @@
 "spawn_melee_creeps"
 {
     "BaseClass"                     "ability_datadriven"
-    "AbilityTextureName"            "melee_barracks2"
+    "AbilityTextureName"            "melee_barracks3"
     "MaxLevel"                      "1"
 
     "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"

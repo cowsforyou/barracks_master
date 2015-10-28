@@ -39,18 +39,17 @@
 [x] Learn how to edit passive income
 [ ] Award chunks of passive income progressively throughout the game
 [x] Create function to award last hit gold from creeps to player
-[ ] Display last hits and gold earned per player in-game
 [ ] Clean up team and hero selection
 
 
 -- UI --
 
+[ ] Display last hits and gold earned per player in-game
 [ ] Announce when a hero spawns
 [ ] Show error message when player tries to build the same building
-[ ] Learn how to locate building models
+[x] Learn how to locate building models
 [ ] Clean up team and hero selection
-[ ] Display custom scoreboard for gold earned
-[ ] Fix minimap
+[x] Fix minimap
 
 
 -- Advanced --
@@ -72,6 +71,8 @@
 [ ] Library of Spells not selectable
 [ ] Research lab does not get unlocked if page 2 abilities are selected (when lumber yard completes)
 [ ] Techies death sound incorrect (currently hawk sound)
+[ ] Ancient rax looks spastic while waiting for first spawn
+[ ] HP upgrades not accessible after building research lab
 
 
 -------------------------------------

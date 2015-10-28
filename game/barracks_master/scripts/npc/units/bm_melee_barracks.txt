@@ -19,7 +19,7 @@
 	"Ability1"					"spawn_melee_creeps"
 	"Ability2"					"research_bm_melee_armor"
 	"Ability3"					"research_bm_melee_damage"
-	"Ability4"					"research_bm_melee_hp"
+	"Ability4"					"research_bm_melee_hp_disabled"
 	"Ability5"					""
 	"Ability6"					""
 	"Ability10"					"ability_building"

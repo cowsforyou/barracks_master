@@ -2,7 +2,7 @@
 {
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
     "BaseClass"             "ability_datadriven"
-    "AbilityTextureName"    "health_vial"
+    "AbilityTextureName"    "health_vial2"
 
     "MaxLevel"    "1"
 

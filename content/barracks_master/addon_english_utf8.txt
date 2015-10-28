@@ -275,8 +275,12 @@
 		"DOTA_Tooltip_ability_research_bm_melee_hp_gold_cost"                          		"GOLD COST:"
 		"DOTA_Tooltip_ability_research_bm_melee_hp_lumber_cost"                        		"LUMBER COST:"
 
+		"DOTA_Tooltip_ability_research_bm_melee_hp_disabled"                         		"Health Vial"
+		"DOTA_Tooltip_ability_research_bm_melee_hp_disabled_Description"             		"<b><font color='#eedd44'>Requires:\n - Research Lab</font></b>\n"
+
 		"DOTA_Tooltip_ability_item_research_bm_melee_hp"                               		"Cancel Upgrade"
 		"DOTA_Tooltip_ability_item_research_bm_melee_hp_Description"                   		""
+
 
 
 		//Ranged Armor
@@ -343,6 +347,9 @@
 		"DOTA_Tooltip_ability_research_bm_ranged_hp_research_time"                       	"RESEARCH TIME:"
 		"DOTA_Tooltip_ability_research_bm_ranged_hp_gold_cost"                          	"GOLD COST:"
 		"DOTA_Tooltip_ability_research_bm_ranged_hp_lumber_cost"                        	"LUMBER COST:"
+
+		"DOTA_Tooltip_ability_research_bm_ranged_hp_disabled"                         		"Health Vial"
+		"DOTA_Tooltip_ability_research_bm_ranged_hp_disabled_Description"             		"<b><font color='#eedd44'>Requires:\n - Research Lab</font></b>\n"
 
 		"DOTA_Tooltip_ability_item_research_bm_ranged_hp"                               	"Cancel Upgrade"
 		"DOTA_Tooltip_ability_item_research_bm_ranged_hp_Description"                   	""

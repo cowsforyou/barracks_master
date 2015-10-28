@@ -1,7 +1,7 @@
 "select_ancient1"
 {
     "BaseClass"                     "ability_datadriven"
-    "AbilityTextureName"            "holdout_friendly_skewer"
+    "AbilityTextureName"            "select_ancient1"
     "MaxLevel"                      "1"
    	
     "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"

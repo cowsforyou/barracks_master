@@ -2,7 +2,7 @@
 "spawn_skeleton_creeps"
 {
     "BaseClass"                     "ability_datadriven"
-    "AbilityTextureName"            "skeleton_barracks"
+    "AbilityTextureName"            "skeleton_barracks4"
     "MaxLevel"                      "1"
 
     "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"

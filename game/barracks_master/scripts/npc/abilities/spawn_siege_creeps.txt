@@ -2,7 +2,7 @@
 "spawn_siege_creeps"
 {
     "BaseClass"                     "ability_datadriven"
-    "AbilityTextureName"            "siege_barracks"
+    "AbilityTextureName"            "siege_barracks3"
     "MaxLevel"                      "1"
 
     "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
