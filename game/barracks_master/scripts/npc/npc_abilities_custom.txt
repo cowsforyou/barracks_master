@@ -1959,6 +1959,56 @@
 	      }
 	    }
 	  }
+	"lumberjack_harvest"
+	{
+	    // General  
+	    // ----------------------------------------------------------------------------------------
+	    "BaseClass"              "ability_datadriven"
+	    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+	    "AbilityUnitTargetType"  "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING | DOTA_UNIT_TARGET_HERO"
+	    "AbilityUnitTargetTeam"  "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	    "AbilityTextureName"     "shredder_chakram"
+	
+	    "MaxLevel"               "1"
+	
+	    "AbilityChannelTime"     "4.0"
+	    "AbilityCooldown"        "3.0"
+	
+	    "AbilityCastAnimation"   "ACT_DOTA_TELEPORT"
+	    "AnimationIgnoresModelScale"    "0"
+	    "AnimationPlaybackRate"         "1.0"
+	
+	    "AbilityCastRange"       "256.0"
+	    "AbilityCastPoint"       "0.0"
+	
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"            "FIELD_INTEGER"
+	            "lumber_per_tick"     "100"
+	        }
+	    }
+	
+	    "OnAbilityPhaseStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "spells/lumberjack_harvest.lua"
+	            "Function"      "OnSpellStart"
+	        }       
+	    }
+	
+	    "OnChannelSucceeded"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "spells/lumberjack_harvest.lua"
+	            "Function"      "OnChannelSucceeded"
+	        }
+	    }
+	
+	}
 	"move_to_point_100"
 	{
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"

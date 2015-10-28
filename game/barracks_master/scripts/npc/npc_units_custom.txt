@@ -1954,7 +1954,7 @@
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
 		"Ability1" 					"repair"
-		"Ability2" 					""
+		"Ability2" 					"lumberjack_harvest"
 		"Ability3" 					""
 		"Ability4" 					""
 		"Ability5"					""
