@@ -1,38 +1,27 @@
---------------------------------------------------------------------------------------------------------
--- General spawner AI
---------------------------------------------------------------------------------------------------------
-function Think( keys )
-    --print("Think")
-    local caster = keys.caster
-    local ability = keys.ability
 
-    if ability.initialAutocast == nil and ability:GetAutoCastState() == false then
-        ability:ToggleAutoCast()
-        ability.initialAutocast = true
-    end
+---------------------------------------------------------------------
+-- Spawn one creep at a time (peasants)
+-- No orders issued, spawns next to base
+---------------------------------------------------------------------
+function ManualSpawnCreeps(player, building, buildingAbility, creepName)
+    local hero = player:GetAssignedHero()
+    local playerColor = GetPlayerColor(player)
+    local team = GetTeamByColor(playerColor)
+    local pos = building:GetAbsOrigin()
 
-    if ability:GetAutoCastState() == true and ability:IsFullyCastable() and not caster:HasModifier("modifier_construction") then
-        caster:CastAbilityNoTarget(ability, 0)
-    end
+    local unit = CreateUnitByName(creepName, pos, true, hero, player, team)
+    unit:SetControllableByPlayer(player:GetPlayerID(), true)
+    ApplyCreepParameters(unit, team, playerColor)
+
+    -- Building Helper tie-ins
+    CheckAbilityRequirements(unit, player) -- upgrades on spawn
+    table.insert(player.units, unit)       -- adds unit to player's units table
 end
 
-function OnSpellStart( keys )
-    --print("OnSpellStart")
-    local ability = keys.ability
-    local caster = keys.caster
-    local player = caster:GetPlayerOwner()
-    if player == nil then return end -- don't try to spawn creeps from a ghost dummy
-
-    local creepName = keys.creepName
-    local creepCount = ability:GetSpecialValueFor("creep_count")
-
-    SpawnCreeps(player, ability, creepName, creepCount)
-end
-
------------------------
+---------------------------------------------------------------------
 -- Spawn creep groups and manage building ability cooldown
------------------------
-function SpawnCreeps(player, buildingAbility, creepName, numberToSpawn)
+---------------------------------------------------------------------
+function AutoSpawnCreeps(player, buildingAbility, creepName, numberToSpawn)
     local playerColor = GetPlayerColor(player)
     local team = GetTeamByColor(playerColor)
 
@@ -90,6 +79,9 @@ function SpawnCreeps(player, buildingAbility, creepName, numberToSpawn)
     end
 end
 
+---------------------------------------------------------------------
+-- Set up coloration and model swaps
+---------------------------------------------------------------------
 function ApplyCreepParameters(unit, team, color)
     local unitName = unit:GetUnitName()
     local model = nil
@@ -202,6 +194,8 @@ end
 -----------------------
 -- Utility functions
 -----------------------
+
+-- Each player has their own color, independent from team
 function GetPlayerColor(player)
     local unit = player:GetAssignedHero()
     local unitName = unit:GetUnitName()

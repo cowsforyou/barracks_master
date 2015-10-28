@@ -22,7 +22,7 @@
     {
         "RunScript"
         {
-            "ScriptFile"    "barracks/spawner.lua"
+            "ScriptFile"    "barracks/spawner_auto.lua"
             "Function"      "OnSpellStart"
             "creepName"		"creep_air"
         }
@@ -42,7 +42,7 @@
 			{
 				"RunScript"
 		        {
-		            "ScriptFile"    "barracks/spawner.lua"
+		            "ScriptFile"    "barracks/spawner_auto.lua"
 		            "Function"      "Think"
 		        }
 			}

@@ -12,9 +12,11 @@ require('orders')
 require('builder')
 require('buildinghelper')
 require('buildingevents') -- veg
-require('barracks/spawn_synchronizer') -- veg
-require('barracks/class_utils') -- veg
-require('barracks/ability_swapper') -- veg
+
+require('barracks/spawner')
+require('barracks/spawn_synchronizer')
+require('barracks/class_utils')
+require('barracks/ability_swapper')
 
 -- This library allow for easily delayed/timed actions
 require('libraries/timers')

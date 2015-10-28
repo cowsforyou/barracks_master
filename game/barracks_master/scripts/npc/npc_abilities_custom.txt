@@ -2599,7 +2599,7 @@
 	    {
 	        "RunScript"
 	        {
-	            "ScriptFile"    "barracks/spawner.lua"
+	            "ScriptFile"    "barracks/spawner_auto.lua"
 	            "Function"      "OnSpellStart"
 	            "creepName"		"creep_air"
 	        }
@@ -2619,7 +2619,7 @@
 				{
 					"RunScript"
 			        {
-			            "ScriptFile"    "barracks/spawner.lua"
+			            "ScriptFile"    "barracks/spawner_auto.lua"
 			            "Function"      "Think"
 			        }
 				}
@@ -2650,7 +2650,7 @@
 	    {
 	        "RunScript"
 	        {
-	            "ScriptFile"    "barracks/spawner.lua"
+	            "ScriptFile"    "barracks/spawner_auto.lua"
 	            "Function"      "OnSpellStart"
 	            "creepName"		"creep_ancient1"
 	        }
@@ -2670,7 +2670,7 @@
 				{
 					"RunScript"
 			        {
-			            "ScriptFile"    "barracks/spawner.lua"
+			            "ScriptFile"    "barracks/spawner_auto.lua"
 			            "Function"      "Think"
 			        }
 				}
@@ -2701,7 +2701,7 @@
 	    {
 	        "RunScript"
 	        {
-	            "ScriptFile"    "barracks/spawner.lua"
+	            "ScriptFile"    "barracks/spawner_auto.lua"
 	            "Function"      "OnSpellStart"
 	            "creepName"		"creep_melee"
 	        }
@@ -2721,7 +2721,7 @@
 				{
 					"RunScript"
 			        {
-			            "ScriptFile"    "barracks/spawner.lua"
+			            "ScriptFile"    "barracks/spawner_auto.lua"
 			            "Function"      "Think"
 			        }
 				}
@@ -2752,7 +2752,7 @@
 	    {
 	        "RunScript"
 	        {
-	            "ScriptFile"    "barracks/spawner.lua"
+	            "ScriptFile"    "barracks/spawner_auto.lua"
 	            "Function"      "OnSpellStart"
 	            "creepName"		"creep_ranged"
 	        }
@@ -2772,7 +2772,7 @@
 				{
 					"RunScript"
 			        {
-			            "ScriptFile"    "barracks/spawner.lua"
+			            "ScriptFile"    "barracks/spawner_auto.lua"
 			            "Function"      "Think"
 			        }
 				}
@@ -2803,7 +2803,7 @@
 	    {
 	        "RunScript"
 	        {
-	            "ScriptFile"    "barracks/spawner.lua"
+	            "ScriptFile"    "barracks/spawner_auto.lua"
 	            "Function"      "OnSpellStart"
 	            "creepName"		"creep_siege"
 	        }
@@ -2823,7 +2823,7 @@
 				{
 					"RunScript"
 			        {
-			            "ScriptFile"    "barracks/spawner.lua"
+			            "ScriptFile"    "barracks/spawner_auto.lua"
 			            "Function"      "Think"
 			        }
 				}
@@ -2854,7 +2854,7 @@
 	    {
 	        "RunScript"
 	        {
-	            "ScriptFile"    "barracks/spawner.lua"
+	            "ScriptFile"    "barracks/spawner_auto.lua"
 	            "Function"      "OnSpellStart"
 	            "creepName"		"creep_skeleton"
 	        }
@@ -2874,7 +2874,7 @@
 				{
 					"RunScript"
 			        {
-			            "ScriptFile"    "barracks/spawner.lua"
+			            "ScriptFile"    "barracks/spawner_auto.lua"
 			            "Function"      "Think"
 			        }
 				}
