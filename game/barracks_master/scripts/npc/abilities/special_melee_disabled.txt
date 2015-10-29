@@ -2,5 +2,5 @@
 {
     "BaseClass"                     "ability_datadriven"
     "AbilityTextureName"            "research_ultimate_ability"
-    "MaxLevel"                      "1"
+    "MaxLevel"                      "0"
 }

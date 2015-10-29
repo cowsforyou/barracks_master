@@ -221,6 +221,7 @@
 			"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRONG"
 			"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 		}	
+	
 	 //=================================================================================
 	 // Building: Library of Spells
 	 //=================================================================================
@@ -229,10 +230,10 @@
 		// General
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
-		"Model"						"models/props_structures/obelisk001.vmdl"
-		"ModelScale"				"1.0"
+		"Model"						"models/props_structures/good_statue010.vmdl"
+		"ModelScale"				"1.4"
 		"Level"						"1"
-		"HealthBarOffset"			"140"
+		"HealthBarOffset"			"180"
 		"HasInventory"				"1"
 		"ConsideredHero"			"1"
 		
@@ -267,8 +268,8 @@
 		
 		// Bounds
 		//----------------------------------------------------------------
-		"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
-		"RingRadius"				"120"
+		"BoundsHullName"			"DOTA_HULL_SIZE_FILLER" // 96 radius
+		"RingRadius"				"150"
 		"CollisionSize"				"80"
 		
 		// Movement

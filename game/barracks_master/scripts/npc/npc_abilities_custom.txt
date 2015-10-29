@@ -3654,7 +3654,7 @@
 	{
 	    "BaseClass"                     "ability_datadriven"
 	    "AbilityTextureName"            "research_ultimate_ability"
-	    "MaxLevel"                      "1"
+	    "MaxLevel"                      "0"
 	}
 	"special_melee"
 	{
@@ -3666,7 +3666,7 @@
 	{
 	    "BaseClass"                     "ability_datadriven"
 	    "AbilityTextureName"            "research_ultimate_ability"
-	    "MaxLevel"                      "1"
+	    "MaxLevel"                      "0"
 	}
 	"special_ranged"
 	{
@@ -3678,7 +3678,7 @@
 	{
 	    "BaseClass"                     "ability_datadriven"
 	    "AbilityTextureName"            "research_ultimate_ability"
-	    "MaxLevel"                      "1"
+	    "MaxLevel"                      "0"
 	}
 	"special_siege"
 	{
@@ -3690,7 +3690,7 @@
 	{
 	    "BaseClass"                     "ability_datadriven"
 	    "AbilityTextureName"            "research_ultimate_ability"
-	    "MaxLevel"                      "1"
+	    "MaxLevel"                      "0"
 	}
 	"train_city_center_tier2"
 	{
