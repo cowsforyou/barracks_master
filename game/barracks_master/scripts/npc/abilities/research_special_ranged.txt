@@ -1,0 +1,60 @@
+"research_special_ranged"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"research_ultimate_ability"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+
+	"AbilityGoldCost"				"50"
+	"AbilityChannelTime"			"10"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"research_time"			"10"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"gold_cost"				"50"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"lumber_cost"			"25"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/queue.lua"
+			"Function"		"EnqueueUnit"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/research.lua"
+			"Function"		"DisableResearch"
+		}
+	}
+
+	"OnChannelSucceeded"
+	{
+		"RunScript"
+		{
+			"ScriptFile"   	"buildings/queue.lua"
+			"Function"      "NextQueue"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/research.lua"
+			"Function"		"ResearchComplete"
+		}
+	}
+}

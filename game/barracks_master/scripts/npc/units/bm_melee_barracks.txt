@@ -15,12 +15,12 @@
 	
 	// Abilities
 	//----------------------------------------------------------------
-	"AbilityLayout"				"6"
+	"AbilityLayout"				"5"
 	"Ability1"					"spawn_melee_creeps"
 	"Ability2"					"research_bm_melee_armor"
 	"Ability3"					"research_bm_melee_damage"
 	"Ability4"					"research_bm_melee_hp_disabled"
-	"Ability5"					""
+	"Ability5"					"research_special_melee_disabled"
 	"Ability6"					""
 	"Ability10"					"ability_building"
 	"Ability11"					"ability_building_queue"

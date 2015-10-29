@@ -45,39 +45,48 @@ require('events')
 
 function Precache( context )
 
-  -- Model ghost and grid particles
-    -- Barracks Master --
+
+  -- Barracks Master --
+    -- Particles
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_lone_druid", context) -- for Boar, Hawk and Techies Scouts
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_beastmaster", context) -- for Boar, Hawk and Techies Scouts  
   PrecacheResource("particle_folder", "particles/units/heroes/hero_techies", context) -- for Techies Scout
   PrecacheResource("particle_folder", "particles/units/heroes/hero_shredder", context) -- for Lumberjack
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_vengeful", context) -- for Hero
   PrecacheResource("particle_folder", "particles/radiant_fx2", context) -- testing particle ability
 
-    -- Non Barracks Master --    
+    -- Sounds
+  PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts", context) -- for Boar and Hawk Scouts
+  PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_techies.vsndevts", context)
+  PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_vengefulspirit.vsndevts", context)
+
+    -- Units
+  PrecacheUnitByNameSync("lumberjack", context)    
+  PrecacheUnitByNameSync("scout_boar", context)
+  PrecacheUnitByNameSync("scout_hawk", context)
+  PrecacheUnitByNameSync("scout_techies", context)
+  PrecacheUnitByNameSync("creep_air", context) 
+
+  PrecacheUnitByNameSync("bm_lumber_yard", context) 
+  PrecacheUnitByNameSync("bm_tech_lab", context) 
+  PrecacheUnitByNameSync("bm_heroes", context) 
+  PrecacheUnitByNameSync("bm_purifier", context) 
+  PrecacheUnitByNameSync("bm_library", context) 
+  PrecacheUnitByNameSync("bm_unpromising", context)         
+  PrecacheUnitByNameSync("bm_luminous", context)    
+
+    -- Items
+  PrecacheItemByNameSync("item_boar", context)
+  PrecacheItemByNameSync("item_hawk", context)
+  PrecacheItemByNameSync("item_techies", context)
+
+
+  -- Non Barracks Master --   
+    -- Model ghost and grid particles
   PrecacheResource("particle_folder", "particles/buildinghelper", context)
   PrecacheResource("particle_folder", "particles/econ/items/earthshaker/earthshaker_gravelmaw/", context)
 
-
-  -- Resources used
-    -- Barracks Master --
-    PrecacheUnitByNameSync("lumberjack", context)    
-    PrecacheUnitByNameSync("scout_boar", context)
-    PrecacheUnitByNameSync("scout_hawk", context)
-    PrecacheUnitByNameSync("scout_techies", context)
-    PrecacheUnitByNameSync("creep_air", context) 
-
-    PrecacheUnitByNameSync("bm_lumber_yard", context) 
-    PrecacheUnitByNameSync("bm_tech_lab", context) 
-    PrecacheUnitByNameSync("bm_heroes", context) 
-    PrecacheUnitByNameSync("bm_purifier", context) 
-    PrecacheUnitByNameSync("bm_library", context) 
-    PrecacheUnitByNameSync("bm_unpromising", context)         
-    PrecacheUnitByNameSync("bm_luminous", context) 
-
-    PrecacheItemByNameSync("item_boar", context)
-    PrecacheItemByNameSync("item_hawk", context)
-    PrecacheItemByNameSync("item_techies", context)
-
-
-    -- Non Barracks Master --    
+    -- Resources used
   PrecacheUnitByNameSync("peasant", context)
   PrecacheUnitByNameSync("tower", context)
   PrecacheUnitByNameSync("tower_tier2", context)

@@ -106,15 +106,15 @@
 		"DOTA_Tooltip_ability_build_bm_ancient_barracks_disabled_Description"               "<b><font color='#eedd44'>Requires:\n - Siege Barracks</font></b>\n"
 
 
-		"bm_research_lab"                                                               	"Research Lab"
-		"DOTA_Tooltip_ability_build_bm_research_lab"                        				"Research Lab"
-		"DOTA_Tooltip_ability_build_bm_research_lab_Description"                       		"Unlocks higher tiered buildings."
-		"DOTA_Tooltip_ability_build_bm_research_lab_build_time"                        		"BUILD TIME:"
-		"DOTA_Tooltip_ability_build_bm_research_lab_gold_cost"                         		"GOLD COST:"
-		"DOTA_Tooltip_ability_build_bm_research_lab_lumber_cost"                       		"LUMBER COST:"
+		"bm_tech_lab"                                                               		"Tec Lab"
+		"DOTA_Tooltip_ability_build_bm_tech_lab"                        					"Tec Lab"
+		"DOTA_Tooltip_ability_build_bm_tech_lab_Description"                       			"Unlocks higher tiered buildings."
+		"DOTA_Tooltip_ability_build_bm_tech_lab_build_time"                        			"BUILD TIME:"
+		"DOTA_Tooltip_ability_build_bm_tech_lab_gold_cost"                         			"GOLD COST:"
+		"DOTA_Tooltip_ability_build_bm_tech_lab_lumber_cost"                       			"LUMBER COST:"
 
-		"DOTA_Tooltip_ability_build_bm_research_lab_disabled"                           	"Research Lab"
-		"DOTA_Tooltip_ability_build_bm_research_lab_disabled_Description"               	"<b><font color='#eedd44'>Requires:\n - Lumber Yard</font></b>\n"
+		"DOTA_Tooltip_ability_build_bm_tech_lab_disabled"                           		"Research Lab"
+		"DOTA_Tooltip_ability_build_bm_tech_lab_disabled_Description"               		"<b><font color='#eedd44'>Requires:\n - Lumber Yard</font></b>\n"
 
 
 		"bm_aviation_sanctuary"                                                             "Aviation Sanctuary"
@@ -276,7 +276,7 @@
 		"DOTA_Tooltip_ability_research_bm_melee_hp_lumber_cost"                        		"LUMBER COST:"
 
 		"DOTA_Tooltip_ability_research_bm_melee_hp_disabled"                         		"Health Vial"
-		"DOTA_Tooltip_ability_research_bm_melee_hp_disabled_Description"             		"<b><font color='#eedd44'>Requires:\n - Research Lab</font></b>\n"
+		"DOTA_Tooltip_ability_research_bm_melee_hp_disabled_Description"             		"<b><font color='#eedd44'>Requires:\n - Tech Lab</font></b>\n"
 
 		"DOTA_Tooltip_ability_item_research_bm_melee_hp"                               		"Cancel Upgrade"
 		"DOTA_Tooltip_ability_item_research_bm_melee_hp_Description"                   		""
@@ -349,7 +349,7 @@
 		"DOTA_Tooltip_ability_research_bm_ranged_hp_lumber_cost"                        	"LUMBER COST:"
 
 		"DOTA_Tooltip_ability_research_bm_ranged_hp_disabled"                         		"Health Vial"
-		"DOTA_Tooltip_ability_research_bm_ranged_hp_disabled_Description"             		"<b><font color='#eedd44'>Requires:\n - Research Lab</font></b>\n"
+		"DOTA_Tooltip_ability_research_bm_ranged_hp_disabled_Description"             		"<b><font color='#eedd44'>Requires:\n - Tech Lab</font></b>\n"
 
 		"DOTA_Tooltip_ability_item_research_bm_ranged_hp"                               	"Cancel Upgrade"
 		"DOTA_Tooltip_ability_item_research_bm_ranged_hp_Description"                   	""

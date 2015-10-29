@@ -17,7 +17,7 @@
 	//----------------------------------------------------------------
 	"AbilityLayout"				"5"
 	"Ability1"					"spawn_siege_creeps"
-	"Ability2"					"research_ultimate_ability"
+	"Ability2"					"research_special_siege_disabled"
 	"Ability3"					""
 	"Ability4"					""
 	"Ability10"					"ability_building"

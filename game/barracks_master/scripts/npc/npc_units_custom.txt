@@ -95,8 +95,8 @@
 			//----------------------------------------------------------------
 			"AbilityLayout"				"5"
 			"Ability1"					"spawn_air_creeps"			// Ability 1
-			"Ability2"					"research_bm_scout_hawk"			// Ability 2
-			"Ability3"					""			// Ability 3
+			"Ability2"					"research_special_air_disabled"			// Ability 2
+			"Ability3"					"research_bm_scout_hawk"			// Ability 3
 			"Ability4"					""			// Ability 4
 			"Ability10"					"ability_building"
 			"Ability11"					"ability_building_queue"
@@ -340,9 +340,9 @@
 		
 		// Bounds
 		//----------------------------------------------------------------
-		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS" // Radius 144
 		"RingRadius"				"230"
-		"CollisionSize"				"230"
+		"CollisionSize"				"144"
 		
 		// Movement
 		//----------------------------------------------------------------
@@ -461,12 +461,12 @@
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"AbilityLayout"				"6"
+		"AbilityLayout"				"5"
 		"Ability1"					"spawn_melee_creeps"
 		"Ability2"					"research_bm_melee_armor"
 		"Ability3"					"research_bm_melee_damage"
 		"Ability4"					"research_bm_melee_hp_disabled"
-		"Ability5"					""
+		"Ability5"					"research_special_melee_disabled"
 		"Ability6"					""
 		"Ability10"					"ability_building"
 		"Ability11"					"ability_building_queue"
@@ -616,7 +616,7 @@
 		"Ability2"					"research_bm_ranged_armor"
 		"Ability3"					"research_bm_ranged_damage"
 		"Ability4"					"research_bm_ranged_hp_disabled"
-		"Ability5"					""
+		"Ability5"					"research_special_ranged_disabled"
 		"Ability6"					""
 		"Ability10"					"ability_building"
 		"Ability11"					"ability_building_queue"
@@ -688,7 +688,7 @@
 		//----------------------------------------------------------------
 		"AbilityLayout"				"5"
 		"Ability1"					"spawn_siege_creeps"
-		"Ability2"					"research_ultimate_ability"
+		"Ability2"					"research_special_siege_disabled"
 		"Ability3"					""
 		"Ability4"					""
 		"Ability10"					"ability_building"
@@ -1124,7 +1124,7 @@
 	        // Abilities
 	        //----------------------------------------------------------------
 	        
-	        "Ability1"                  ""          // Ability 1.
+	        "Ability1"                  "special_air_disabled"          // Ability 1.
 	        "Ability2"                  ""          // Ability 2.
 	        "Ability3"                  ""          // Ability 3.
 	        "Ability4"                  ""          // Ability 4.
@@ -1224,8 +1224,8 @@
 	        // Attack
 	        //----------------------------------------------------------------
 	        "AttackCapabilities"        "DOTA_UNIT_CAP_MELEE_ATTACK"
-	        "AttackDamageMin"           "77"        // Damage range min.
-	        "AttackDamageMax"           "87"        // Damage range max.    
+	        "AttackDamageMin"           "75"        // Damage range min.
+	        "AttackDamageMax"           "85"        // Damage range max.    
 	        "AttackRate"                "1.35"      // Speed of attack.
 	        "AttackAnimationPoint"      "0.3"       // Normalized time in animation cycle to attack.
 	        "AttackAcquisitionRange"    "500"       // Range within a target can be acquired.
@@ -1440,7 +1440,7 @@
 	        "Ability1"                  "bm_melee_armor_disabled"           // Ability 1.
 	        "Ability2"                  "bm_melee_damage_disabled"          // Ability 2.
 	        "Ability3"                  "bm_melee_hp_disabled"              // Ability 3.
-	        "Ability4"                  ""          // Ability 4.
+	        "Ability4"                  "special_melee_disabled"          // Ability 4.
 	        "Ability5"                  ""          // Ability 5.
 	        "Ability6"                  ""          // Ability 6 - Extra.
 	        "Ability7"                  ""          // Ability 7 - Extra.
@@ -1532,7 +1532,7 @@
 	        "Ability1"                  "bm_ranged_armor_disabled"          // Ability 1.
 	        "Ability2"                  "bm_ranged_damage_disabled"          // Ability 2.
 	        "Ability3"                  "bm_ranged_hp_disabled"             // Ability 3.
-	        "Ability4"                  ""          // Ability 4.
+	        "Ability4"                  "special_ranged_disabled"          // Ability 4.
 	        "Ability5"                  ""          // Ability 5.
 	        "Ability6"                  ""          // Ability 6 - Extra.
 	        "Ability7"                  ""          // Ability 7 - Extra.
@@ -1614,7 +1614,7 @@
         // Abilities
         //----------------------------------------------------------------
         
-        "Ability1"                  ""          // Ability 1.
+        "Ability1"                  "special_siege_disabled"          // Ability 1.
         "Ability2"                  ""          // Ability 2.
         "Ability3"                  ""          // Ability 3.
         "Ability4"                  ""          // Ability 4.
@@ -2430,8 +2430,7 @@
 		"Level"						"5"
 		"ModelScale"				"0.55"
 		"IsSummoned"				"1"
-		"UnitLabel"					"boar"
-	
+		
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"techies_suicide"			// Ability 1

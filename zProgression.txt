@@ -21,9 +21,9 @@
 [x] Learn how to create/edit ability/item icons
 [ ] Create spawn additional unit ability for melee and ranged barracks
 [ ] Color in player buildings
-[ ] Create toggle button for Ancient Barracks
+[x] Create toggle button for Ancient Barracks
 [ ] Learn how to add lumber cost to buildings/research
-[ ] Enable lumber harvesting
+[x] Enable lumber harvesting
 [x] Enable Lumber Yard to spawn Lumberjacks
 [x] Replace city center default spawn to bm_melee_barracks
 
@@ -72,7 +72,9 @@
 [x] Research lab does not get unlocked if page 2 abilities are selected (when lumber yard completes)
 [ ] Techies death sound incorrect (currently hawk sound)
 [ ] Ancient rax looks spastic while waiting for first spawn
-[ ] HP upgrades not accessible after building research lab
+[x] HP upgrades not accessible after building research lab
+[ ] Lumber Yard has no portrait
+
 
 
 -------------------------------------
@@ -113,20 +115,20 @@
 			-Damage(3)	-Damage(3)		 		-Defense*
 			-Count(1)	-Count(1) 		 			|
 			-HP* 		-HP* 	 					|
-			-Special*	-Special* 		 			|
+			-Special**	-Special** 		 			|
 	   			|		   |			 			|
 	   			-------------			-----------------------------
 		   			|					|							|	
 				  +Siege 			+*Research Lab 			+Aviation Sanctuary
 				  -Count(1)			-Research Techies		-Count(1)
-				  -Special*				|					-Evasion(3)
-					|					|					-Special*
+				  -Special**			|					-Evasion(3)
+					|					|					-Special**
 					|					|					-Research Hawk
 					|					|
 					|					|
 					|					-------------------------------------------------
 					|					|					   	|						|
-				+Ancient		+Portal of Heroes			+Purifier			+Library of Spells				
+				+Ancient		+Portal of Heroes			+Purifier			+**Library of Spells				
 				-Toggle			-SF 						-Wood Chips					|				
 								-Beastmaster 											|				
 								-Vengeful Spirit 										|				
@@ -235,7 +237,20 @@ Air HP: 			350
 Air Armor: 			1
 Air Damage:			45
 
-Ancient Bounty:
+Ancient1 Bounty:	150
+Ancient1 HP: 		1700
+Ancient1 Armor: 	8
+Ancient1 Damage: 	80
+Ancent1 AS: 		1.35
+
+
+
+Venge Bounty:		110
+Venge Cost: 
+Venge HP: 			1200
+Venge Armor: 		5
+Venge Damage: 		85
+Venge AS: 			3
 
 
 --Others

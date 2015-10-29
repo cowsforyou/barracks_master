@@ -8,8 +8,7 @@
 	"Level"						"5"
 	"ModelScale"				"0.55"
 	"IsSummoned"				"1"
-	"UnitLabel"					"boar"
-
+	
 	// Abilities
 	//----------------------------------------------------------------
 	"Ability1"					"techies_suicide"			// Ability 1

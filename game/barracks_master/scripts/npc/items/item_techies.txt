@@ -53,17 +53,6 @@
         }
     }
 
-    "precache"
-    {
-        "particle"              "particles/units/heroes/hero_lone_druid/lone_druid_spirit_bear_death.vpcf"     
-        "soundfile"             "soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts"
-
-        "GameSoundsFile"        "soundevents/game_sounds_heroes/game_sounds_techies.vsndevts"
-        "VoiceFile"             "soundevents/voscripts/game_sounds_vo_techies.vsndevts"  
-        "model"                 "models/heroes/techies/techies.vmdl"
-        
-    }
-
     "OnSpellStart"
     {
         "FireSound"
@@ -145,16 +134,6 @@
                     }
                     "EffectName"        "particles/units/heroes/hero_lone_druid/lone_druid_spirit_bear_death.vpcf"
                     "EffectAttachType"  "follow_origin"
-                }
-                
-                "FireSound"
-                {
-                    "Target"            
-                    {
-                        "Center"    "UNIT"
-                        "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
-                    }
-                    "EffectName"    "Hero_Beastmaster_Bird.Death"
                 }
             }
         }
