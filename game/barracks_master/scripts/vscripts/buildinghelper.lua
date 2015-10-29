@@ -336,6 +336,10 @@ function BuildingHelper:PlaceBuilding(player, name, location, blockGridNav, size
 
     building.state = "complete"
 
+    -- colorize the building on completion
+    local playerColor = GetPlayerColor(player)
+    ApplyColorToUnit(building, playerColor)
+
     -- Return the created building
     return building
 end

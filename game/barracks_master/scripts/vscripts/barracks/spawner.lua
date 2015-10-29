@@ -11,7 +11,8 @@ function ManualSpawnCreeps(player, building, buildingAbility, creepName)
 
     local unit = CreateUnitByName(creepName, pos, true, hero, player, team)
     unit:SetControllableByPlayer(player:GetPlayerID(), true)
-    ApplyCreepParameters(unit, team, playerColor)
+    ApplyModelToUnit(unit, team)
+    ApplyColorToUnit(unit, playerColor)
 
     -- Building Helper tie-ins
     CheckAbilityRequirements(unit, player) -- upgrades on spawn
@@ -60,7 +61,8 @@ function AutoSpawnCreeps(player, buildingAbility, creepName, numberToSpawn)
     -- create the unit group
     for i=1, numberToSpawn do
         local unit = CreateUnitByName(creepName, start_position, true, nil, player, team)
-        ApplyCreepParameters(unit, team, playerColor)
+        ApplyModelToUnit(unit, team)
+        ApplyColorToUnit(unit, playerColor)
        
         -- Building Helper tie-ins
         CheckAbilityRequirements(unit, player) -- upgrades on spawn
@@ -87,7 +89,7 @@ end
 ---------------------------------------------------------------------
 -- Set up coloration and model swaps
 ---------------------------------------------------------------------
-function ApplyCreepParameters(unit, team, color)
+function ApplyModelToUnit(unit, team)
     local unitName = unit:GetUnitName()
     local model = nil
 
@@ -101,9 +103,8 @@ function ApplyCreepParameters(unit, team, color)
             unit:SetModel(model)
             unit:SetOriginalModel(model)
         end
-    end
-    
-    if unitName == "creep_melee" then
+
+    elseif unitName == "creep_melee" then
         if team == DOTA_TEAM_GOODGUYS then
             model = "models/creeps/lane_creeps/creep_radiant_melee/radiant_melee.vmdl"
             unit:SetModel(model)
@@ -113,9 +114,8 @@ function ApplyCreepParameters(unit, team, color)
             unit:SetModel(model)
             unit:SetOriginalModel(model)
         end
-    end
-
-    if unitName == "creep_ranged" then
+    
+    elseif unitName == "creep_ranged" then
         if team == DOTA_TEAM_GOODGUYS then
             model = "models/creeps/lane_creeps/creep_radiant_ranged/radiant_ranged.vmdl"
             unit:SetModel(model)
@@ -125,9 +125,8 @@ function ApplyCreepParameters(unit, team, color)
             unit:SetModel(model)
             unit:SetOriginalModel(model)
         end
-    end
-
-    if unitName == "creep_siege" then
+    
+    elseif unitName == "creep_siege" then
         if team == DOTA_TEAM_GOODGUYS then
             model = "models/creeps/lane_creeps/creep_good_siege/creep_good_siege.vmdl"
             unit:SetModel(model)
@@ -137,56 +136,54 @@ function ApplyCreepParameters(unit, team, color)
             unit:SetModel(model)
             unit:SetOriginalModel(model)
         end
-    end
-
-    if unitName == "creep_air" then
-        if team == DOTA_TEAM_GOODGUYS then
-            model = "models/heroes/visage/visage_familiar.vmdl"
-            unit:SetModel(model)
-            unit:SetOriginalModel(model)
-        else
-            model = "models/heroes/visage/visage_familiar.vmdl"
-            unit:SetModel(model)
-            unit:SetOriginalModel(model)
-        end
-    end
-
-    if unitName == "creep_ancient1" then
-        if team == DOTA_TEAM_GOODGUYS then
-            model = "models/creeps/neutral_creeps/n_creep_golem_a/neutral_creep_golem_a.vmdl"
-            unit:SetModel(model)
-            unit:SetOriginalModel(model)
-        else
-            model = "models/creeps/neutral_creeps/n_creep_golem_a/neutral_creep_golem_a.vmdl"
-            unit:SetModel(model)
-            unit:SetOriginalModel(model)
-        end
-    end
-
-    if unitName == "creep_ancient2" then
-        if team == DOTA_TEAM_GOODGUYS then
-            model = "models/creeps/neutral_creeps/n_creep_thunder_lizard/n_creep_thunder_lizard_big.vmdl"
-            unit:SetModel(model)
-            unit:SetOriginalModel(model)
-        else
-            model = "models/creeps/neutral_creeps/n_creep_thunder_lizard/n_creep_thunder_lizard_big.vmdl"
-            unit:SetModel(model)
-            unit:SetOriginalModel(model)
-        end
-    end
-
-    if unitName == "creep_ancient3" then
-        if team == DOTA_TEAM_GOODGUYS then
-            model = "models/creeps/neutral_creeps/n_creep_black_dragon/n_creep_black_dragon.vmdl"
-            unit:SetModel(model)
-            unit:SetOriginalModel(model)
-        else
-            model = "models/creeps/neutral_creeps/n_creep_black_dragon/n_creep_black_dragon.vmdl"
-            unit:SetModel(model)
-            unit:SetOriginalModel(model)
-        end
-    end
     
+    elseif unitName == "creep_air" then
+        if team == DOTA_TEAM_GOODGUYS then
+            model = "models/heroes/visage/visage_familiar.vmdl"
+            unit:SetModel(model)
+            unit:SetOriginalModel(model)
+        else
+            model = "models/heroes/visage/visage_familiar.vmdl"
+            unit:SetModel(model)
+            unit:SetOriginalModel(model)
+        end
+    
+    elseif unitName == "creep_ancient1" then
+        if team == DOTA_TEAM_GOODGUYS then
+            model = "models/creeps/neutral_creeps/n_creep_golem_a/neutral_creep_golem_a.vmdl"
+            unit:SetModel(model)
+            unit:SetOriginalModel(model)
+        else
+            model = "models/creeps/neutral_creeps/n_creep_golem_a/neutral_creep_golem_a.vmdl"
+            unit:SetModel(model)
+            unit:SetOriginalModel(model)
+        end
+    
+    elseif unitName == "creep_ancient2" then
+        if team == DOTA_TEAM_GOODGUYS then
+            model = "models/creeps/neutral_creeps/n_creep_thunder_lizard/n_creep_thunder_lizard_big.vmdl"
+            unit:SetModel(model)
+            unit:SetOriginalModel(model)
+        else
+            model = "models/creeps/neutral_creeps/n_creep_thunder_lizard/n_creep_thunder_lizard_big.vmdl"
+            unit:SetModel(model)
+            unit:SetOriginalModel(model)
+        end
+    
+    elseif unitName == "creep_ancient3" then
+        if team == DOTA_TEAM_GOODGUYS then
+            model = "models/creeps/neutral_creeps/n_creep_black_dragon/n_creep_black_dragon.vmdl"
+            unit:SetModel(model)
+            unit:SetOriginalModel(model)
+        else
+            model = "models/creeps/neutral_creeps/n_creep_black_dragon/n_creep_black_dragon.vmdl"
+            unit:SetModel(model)
+            unit:SetOriginalModel(model)
+        end
+    end
+end
+
+function ApplyColorToUnit(unit, color)
     if     color == "red"    then unit:SetRenderColor(255,128,128)
     elseif color == "blue"   then unit:SetRenderColor(0,128,255)
     elseif color == "green"  then unit:SetRenderColor(128,255,128)

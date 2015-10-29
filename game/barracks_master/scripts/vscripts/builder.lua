@@ -155,6 +155,10 @@ function Build( event )
 
 		-- Add the building handle to the list of structures
 		table.insert(player.structures, unit)
+
+    	-- colorize the building when construction starts
+    	local playerColor = GetPlayerColor(player)
+        ApplyColorToUnit(unit, playerColor)
 	end)
 
 	-- A building finished construction
