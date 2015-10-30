@@ -2,7 +2,7 @@
 "build_bm_library"
 {
 	"BaseClass"             		"ability_datadriven"
-	"AbilityTextureName"			"melee_barracks3"
+	"AbilityTextureName"			"library"
 	"MaxLevel" 						"1"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"

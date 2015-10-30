@@ -2,14 +2,14 @@
 "build_bm_purifier"
 {
 	"BaseClass"             		"ability_datadriven"
-	"AbilityTextureName"			"melee_barracks3"
+	"AbilityTextureName"			"purifier"
 	"MaxLevel" 						"1"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
 	// BuildingHelper info
 	"Building"						"1" //bool
-	"BuildingSize"					"4" 
+	"BuildingSize"					"3" 
 	"BuildTime"						"8.0"
 	"AbilityCastRange"				"200"
 	"UpdateHealth"					"1" //bool
@@ -17,7 +17,7 @@
 	"PlayerCanControl"				"1" //bool
 
 	"BuilderInside"					"1"
-	"ModelRotation"					"90.0"
+	"ModelRotation"					"180.0"
 
 	"UnitName"						"bm_purifier"
 	"AbilityCooldown"				"0"

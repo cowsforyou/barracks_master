@@ -845,7 +845,7 @@
 	"build_bm_heroes"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"omniknight_guardian_angel"
+		"AbilityTextureName"			"heroes"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -900,14 +900,14 @@
 	"build_bm_heroes_disabled"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"omniknight_guardian_angel"
+		"AbilityTextureName"			"heroes"
 		"MaxLevel" 						"0"
 	}
 	// Building requires repair to finish construction. Can be assisted to make the process faster
 	"build_bm_library"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"melee_barracks3"
+		"AbilityTextureName"			"library"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -962,7 +962,7 @@
 	"build_bm_library_disabled"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"melee_barracks3"
+		"AbilityTextureName"			"library"
 		"MaxLevel" 						"0"
 	}
 	// Building requires repair to finish construction. Can be assisted to make the process faster
@@ -1024,7 +1024,7 @@
 	"build_bm_luminous"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"melee_barracks3"
+		"AbilityTextureName"			"luminous"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -1079,7 +1079,7 @@
 	"build_bm_luminous_disabled"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"melee_barracks3"
+		"AbilityTextureName"			"luminous"
 		"MaxLevel" 						"0"
 	}
 	// Building requires repair to finish construction. Can be assisted to make the process faster
@@ -1141,14 +1141,14 @@
 	"build_bm_purifier"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"melee_barracks3"
+		"AbilityTextureName"			"purifier"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
 		// BuildingHelper info
 		"Building"						"1" //bool
-		"BuildingSize"					"4" 
+		"BuildingSize"					"3" 
 		"BuildTime"						"8.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
@@ -1156,7 +1156,7 @@
 		"PlayerCanControl"				"1" //bool
 	
 		"BuilderInside"					"1"
-		"ModelRotation"					"90.0"
+		"ModelRotation"					"180.0"
 	
 		"UnitName"						"bm_purifier"
 		"AbilityCooldown"				"0"
@@ -1196,7 +1196,7 @@
 	"build_bm_purifier_disabled"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"melee_barracks3"
+		"AbilityTextureName"			"purifier"
 		"MaxLevel" 						"0"
 	}
 	// Building requires repair to finish construction. Can be assisted to make the process faster
@@ -1437,7 +1437,7 @@
 	"build_bm_unpromising"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"melee_barracks3"
+		"AbilityTextureName"			"unpromising"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -1452,7 +1452,7 @@
 		"PlayerCanControl"				"1" //bool
 	
 		"BuilderInside"					"1"
-		"ModelRotation"					"270.0"
+		"ModelRotation"					"180.0"
 	
 		"UnitName"						"bm_unpromising"
 		"AbilityCooldown"				"0"
@@ -1492,7 +1492,7 @@
 	"build_bm_unpromising_disabled"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"melee_barracks3"
+		"AbilityTextureName"			"unpromising"
 		"MaxLevel" 						"0"
 	}
 	// Placement of a big building, with rotation of the model, builder goes inside

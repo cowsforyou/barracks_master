@@ -2,6 +2,6 @@
 "build_bm_purifier_disabled"
 {
 	"BaseClass"             		"ability_datadriven"
-	"AbilityTextureName"			"melee_barracks3"
+	"AbilityTextureName"			"purifier"
 	"MaxLevel" 						"0"
 }

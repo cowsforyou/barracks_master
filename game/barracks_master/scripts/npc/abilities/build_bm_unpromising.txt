@@ -2,7 +2,7 @@
 "build_bm_unpromising"
 {
 	"BaseClass"             		"ability_datadriven"
-	"AbilityTextureName"			"melee_barracks3"
+	"AbilityTextureName"			"unpromising"
 	"MaxLevel" 						"1"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -17,7 +17,7 @@
 	"PlayerCanControl"				"1" //bool
 
 	"BuilderInside"					"1"
-	"ModelRotation"					"270.0"
+	"ModelRotation"					"180.0"
 
 	"UnitName"						"bm_unpromising"
 	"AbilityCooldown"				"0"
