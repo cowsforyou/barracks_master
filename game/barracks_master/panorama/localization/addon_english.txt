@@ -17,4 +17,9 @@
 	"DOTA_Custom8"    								"Purple Horse"
 	
 	"addonname"										"Barebones"
+
+	"custom_end_screen_legend_cs"				"CS"
+	"custom_end_screen_legend_networth"			"NET"
+	"custom_end_screen_legend_gold"				"GOLD"
+	"custom_end_screen_legend_lumber"			"LUMBER"
 }
