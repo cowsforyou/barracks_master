@@ -5,11 +5,6 @@ function OnPlayerLumberChanged ( args ) {
 	var lumber = args.lumber
 	$.Msg("Player "+iPlayerID+" Lumber: "+lumber)
 	$('#LumberText').text = lumber
-
-	var test = $.GetContextPanel()
-	$.Msg(test.id)
-
-	//$.FindChildInContext("#_dynamic_player_0", "#Lumber").text = lumber
 }
 
 (function () {
