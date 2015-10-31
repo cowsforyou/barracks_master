@@ -6,7 +6,7 @@
   
   "barracks_master_duo"
   {
-          "MaxPlayers"                    "4"
+          "MaxPlayers"                    "6"
   }
 
 
