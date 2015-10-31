@@ -34,10 +34,17 @@
             "var_type"                  "FIELD_INTEGER"
             "duration"                  "40"
         }
+
         "02"
         {
             "var_type"                  "FIELD_INTEGER"
-            "gold_cost_tooltip"         "150"
+            "gold_cost"                 "150"
+        }
+
+        "03"
+        {
+            "var_type"                  "FIELD_INTEGER"
+            "lumber_cost"               "50"
         }
 
         // Extra        

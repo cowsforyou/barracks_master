@@ -10,7 +10,7 @@
 	// BuildingHelper info
 	"Building"						"1" //bool
 	"BuildingSize"					"4" 
-	"BuildTime"						"8.0"
+	"BuildTime"						"30.0"
 	"AbilityCastRange"				"200"
 	"UpdateHealth"					"1" //bool
 	"Scale"							"0" //bool
@@ -21,7 +21,7 @@
 
 	"UnitName"						"bm_melee_barracks"
 	"AbilityCooldown"				"0"
-	"AbilityGoldCost"				"400"
+	"AbilityGoldCost"				"500"
 	"MaxBuildingCount"				"1"
 	// End of BuildingHelper info
 
@@ -30,17 +30,12 @@
 		"01"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"build_time"			"8.0"
+			"build_time"			"30.0"
 		}
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"gold_cost"				"400"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"lumber_cost"			"0"
+			"gold_cost"				"500"
 		}
 	}
 

@@ -61,13 +61,13 @@ function BuildingEvents:OnPlayerPickHero(keys)
   ]]
 
   -- Give Initial Resources
-  hero:SetGold(5000, false)
-  ModifyLumber(player, 5000)
+  hero:SetGold(300, false)
+  ModifyLumber(player, 0)
 
   -- Lumber tick
   Timers:CreateTimer(1, function()
-    ModifyLumber(player, 10)
-    return 10
+    ModifyLumber(player, 5)
+    return 30
   end)
 
   -----------------------
@@ -75,8 +75,6 @@ function BuildingEvents:OnPlayerPickHero(keys)
   -----------------------
   hero:AddItemByName("item_travel_boots")
   hero:AddItemByName("item_boar")
-  hero:AddItemByName("item_techies")  
-  hero:AddItemByName("item_blink")
 
   -- Give a building ability
   -- Legacy: local item = CreateItem("item_build_wall", hero, hero)

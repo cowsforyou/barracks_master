@@ -1,37 +1,31 @@
-"research_bm_melee_hp"
+"research_bm_scout_techies"
 {
     "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
     "BaseClass"                     "ability_datadriven"
-    "AbilityTextureName"            "health_vial2"
+    "AbilityTextureName"            "techies"
     "MaxLevel"                      "1"
 
-    "AbilityGoldCost"               "500"
-    "AbilityChannelTime"            "120"
+    "AbilityGoldCost"               "100"
+    "AbilityChannelTime"            "60"
     
     "AbilitySpecial"
-    {
+    {    
         "01"
       {
         "var_type"              "FIELD_INTEGER"
-        "health_bonus"           "200"
+        "research_time"         "60"
       }
-      
+
         "02"
       {
         "var_type"              "FIELD_INTEGER"
-        "research_time"         "120"
+        "gold_cost"             "50"
       }
-
+ 
         "03"
       {
         "var_type"              "FIELD_INTEGER"
-        "gold_cost"             "500"
-      }
- 
-        "04"
-      {
-        "var_type"              "FIELD_INTEGER"
-        "lumber_cost"           "75"
+        "lumber_cost"           "300"
       }
     }
 
@@ -61,7 +55,8 @@
         "RunScript"
         {
             "ScriptFile"    "buildings/research.lua"
-            "Function"      "ResearchComplete"
+            "Function"      "ScoutResearchComplete"
+            "item_name"     "item_techies"
         }
     }
 }

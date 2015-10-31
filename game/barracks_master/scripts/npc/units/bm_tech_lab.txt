@@ -16,7 +16,7 @@
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"5"
-	"Ability1"					""
+	"Ability1"					"research_bm_scout_techies"
 	"Ability2"					""
 	"Ability3"					""
 	"Ability4"					""

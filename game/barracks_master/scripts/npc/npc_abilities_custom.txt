@@ -729,7 +729,7 @@
 		// BuildingHelper info
 		"Building"						"1" //bool
 		"BuildingSize"					"4" 
-		"BuildTime"						"8.0"
+		"BuildTime"						"45.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
 		"Scale"							"0" //bool
@@ -740,7 +740,7 @@
 	
 		"UnitName"						"bm_ancient_barracks"
 		"AbilityCooldown"				"0"
-		"AbilityGoldCost"				"100"
+		"AbilityGoldCost"				"800"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
 	
@@ -749,17 +749,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"build_time"			"8.0"
+				"build_time"			"45.0"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"100"
+				"gold_cost"				"800"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"0"
+				"lumber_cost"			"350"
 			}
 		}
 	
@@ -791,7 +791,7 @@
 		// BuildingHelper info
 		"Building"						"1" //bool
 		"BuildingSize"					"4" 
-		"BuildTime"						"5.0"
+		"BuildTime"						"30.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
 		"Scale"							"0" //bool
@@ -802,7 +802,7 @@
 	
 		"UnitName"						"bm_aviation_sanctuary"
 		"AbilityCooldown"				"0"
-		"AbilityGoldCost"				"100"
+		"AbilityGoldCost"				"400"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
 	
@@ -811,17 +811,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"build_time"			"8.0"
+				"build_time"			"30.0"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"100"
+				"gold_cost"				"400"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"0"
+				"lumber_cost"			"100"
 			}
 		}
 	
@@ -977,7 +977,7 @@
 		// BuildingHelper info
 		"Building"						"1" //bool
 		"BuildingSize"					"3" 
-		"BuildTime"						"8.0"
+		"BuildTime"						"35.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
 		"Scale"							"0" //bool
@@ -988,7 +988,7 @@
 	
 		"UnitName"						"bm_lumber_yard"
 		"AbilityCooldown"				"0"
-		"AbilityGoldCost"				"100"
+		"AbilityGoldCost"				"300"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
 	
@@ -997,17 +997,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"build_time"			"8.0"
+				"build_time"			"35.0"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"100"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"0"
+				"gold_cost"				"300"
 			}
 		}
 	
@@ -1094,7 +1089,7 @@
 		// BuildingHelper info
 		"Building"						"1" //bool
 		"BuildingSize"					"4" 
-		"BuildTime"						"8.0"
+		"BuildTime"						"30.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
 		"Scale"							"0" //bool
@@ -1105,7 +1100,7 @@
 	
 		"UnitName"						"bm_melee_barracks"
 		"AbilityCooldown"				"0"
-		"AbilityGoldCost"				"400"
+		"AbilityGoldCost"				"500"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
 	
@@ -1114,17 +1109,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"build_time"			"8.0"
+				"build_time"			"30.0"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"400"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"0"
+				"gold_cost"				"500"
 			}
 		}
 	
@@ -1211,7 +1201,7 @@
 		// BuildingHelper info
 		"Building"						"1" //bool
 		"BuildingSize"					"4" 
-		"BuildTime"						"5.0"
+		"BuildTime"						"20.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
 		"Scale"							"0" //bool
@@ -1222,7 +1212,7 @@
 	
 		"UnitName"						"bm_ranged_barracks"
 		"AbilityCooldown"				"0"
-		"AbilityGoldCost"				"200"
+		"AbilityGoldCost"				"350"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
 	
@@ -1231,17 +1221,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"build_time"			"5.0"
+				"build_time"			"20.0"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"200"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"0"
+				"gold_cost"				"350"
 			}
 		}
 	
@@ -1266,7 +1251,7 @@
 		// BuildingHelper info
 		"Building"						"1" //bool
 		"BuildingSize"					"4" 
-		"BuildTime"						"5.0"
+		"BuildTime"						"35.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
 		"Scale"							"0" //bool
@@ -1277,7 +1262,7 @@
 	
 		"UnitName"						"bm_siege_barracks"
 		"AbilityCooldown"				"0"
-		"AbilityGoldCost"				"500"
+		"AbilityGoldCost"				"400"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
 	
@@ -1286,17 +1271,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"build_time"			"5.0"
+				"build_time"			"35.0"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"500"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"0"
+				"gold_cost"				"400"
 			}
 		}
 	
@@ -1339,7 +1319,7 @@
 	
 		"UnitName"						"bm_skeleton_barracks"
 		"AbilityCooldown"				"0"
-		"AbilityGoldCost"				"200"
+		"AbilityGoldCost"				"400"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
 	
@@ -1348,17 +1328,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"build_time"			"5.0"
+				"build_time"			"20.0"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"200"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"0"
+				"gold_cost"				"400"
 			}
 		}
 	
@@ -1383,7 +1358,7 @@
 		// BuildingHelper info
 		"Building"						"1" //bool
 		"BuildingSize"					"4" 
-		"BuildTime"						"9.0"
+		"BuildTime"						"45.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
 		"Scale"							"0" //bool
@@ -1394,7 +1369,7 @@
 	
 		"UnitName"						"bm_tech_lab"
 		"AbilityCooldown"				"0"
-		"AbilityGoldCost"				"1000"
+		"AbilityGoldCost"				"400"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
 	
@@ -1403,17 +1378,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"build_time"			"9.0"
+				"build_time"			"45.0"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"1000"
+				"gold_cost"				"400"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"0"
+				"lumber_cost"			"150"
 			}
 		}
 	
@@ -1971,7 +1946,7 @@
 	
 	    "MaxLevel"               "1"
 	
-	    "AbilityChannelTime"     "4.0"
+	    "AbilityChannelTime"     "5.0"
 	    "AbilityCooldown"        "3.0"
 	
 	    "AbilityCastAnimation"   "ACT_DOTA_TELEPORT"
@@ -1986,7 +1961,7 @@
 	        "01"
 	        {
 	            "var_type"            "FIELD_INTEGER"
-	            "lumber_per_tick"     "100"
+	            "lumber_per_tick"     "5"
 	        }
 	    }
 	
@@ -2293,33 +2268,33 @@
 	    "AbilityTextureName"            "armor"
 	    "MaxLevel"                      "3"
 	
-	    "AbilityGoldCost"               "50 100 200"
-	    "AbilityChannelTime"            "10 20 30"
+	    "AbilityGoldCost"               "100 200 300"
+	    "AbilityChannelTime"            "30 45 180"
 	    
 	    "AbilitySpecial"
 	    {
 	        "01"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "armor_bonus"           "1 2 3"
+	        "armor_bonus"           "1 2 4"
 	      }
 	      
 	        "02"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "research_time"         "10 20 30"
+	        "research_time"         "30 45 180"
 	      }
 	
 	        "03"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "gold_cost"             "50 100 200"
+	        "gold_cost"             "100 200 300"
 	      }
 	 
 	        "04"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "lumber_cost"           "0 0 75"
+	        "lumber_cost"           "0 0 125"
 	      }
 	    }
 	
@@ -2360,33 +2335,33 @@
 	    "AbilityTextureName"            "damage"
 	    "MaxLevel"                      "3"
 	
-	    "AbilityGoldCost"               "50 100 200"
-	    "AbilityChannelTime"            "10 20 30"
+	    "AbilityGoldCost"               "100 250 400"
+	    "AbilityChannelTime"            "30 45 180"
 	    
 	    "AbilitySpecial"
 	    {
 	        "01"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "damage_bonus"           "3 7 15"
+	        "damage_bonus"           "3 7 25"
 	      }
 	      
 	        "02"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "research_time"         "10 20 30"
+	        "research_time"         "30 45 180"
 	      }
 	
 	        "03"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "gold_cost"             "50 100 200"
+	        "gold_cost"             "30 45 400"
 	      }
 	 
 	        "04"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "lumber_cost"           "0 0 75"
+	        "lumber_cost"           "0 0 150"
 	      }
 	    }
 	
@@ -2428,7 +2403,7 @@
 	    "MaxLevel"                      "1"
 	
 	    "AbilityGoldCost"               "500"
-	    "AbilityChannelTime"            "10"
+	    "AbilityChannelTime"            "120"
 	    
 	    "AbilitySpecial"
 	    {
@@ -2441,7 +2416,7 @@
 	        "02"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "research_time"         "10"
+	        "research_time"         "120"
 	      }
 	
 	        "03"
@@ -2500,33 +2475,33 @@
 	    "AbilityTextureName"            "armor"
 	    "MaxLevel"                      "3"
 	
-	    "AbilityGoldCost"               "50 100 200"
-	    "AbilityChannelTime"            "10 15 20"
+	    "AbilityGoldCost"               "50 100 250"
+	    "AbilityChannelTime"            "30 45 180"
 	    
 	    "AbilitySpecial"
 	    {
 	        "01"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "armor_bonus"           "1 2 3"
+	        "armor_bonus"           "1 2 5"
 	      }
 	
 	        "02"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "research_time"         "10 15 20"
+	        "research_time"         "30 45 180"
 	      }
 	
 	        "03"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "gold_cost"             "50 100 200"
+	        "gold_cost"             "50 100 250"
 	      }
 	 
 	        "04"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "lumber_cost"           "0 0 75"
+	        "lumber_cost"           "0 0 100"
 	      }
 	    }
 	
@@ -2567,33 +2542,33 @@
 	    "AbilityTextureName"            "damage"
 	    "MaxLevel"                      "3"
 	
-	    "AbilityGoldCost"               "50 100 200"
-	    "AbilityChannelTime"            "10 20 30"
+	    "AbilityGoldCost"               "90 200 350"
+	    "AbilityChannelTime"            "30 45 180"
 	    
 	    "AbilitySpecial"
 	    {
 	        "01"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "damage_bonus"           "10 15 20"
+	        "damage_bonus"           "5 12 30"
 	      }
 	      
 	        "02"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "research_time"         "10 20 30"
+	        "research_time"         "30 45 180"
 	      }
 	
 	        "03"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "gold_cost"             "50 100 200"
+	        "gold_cost"             "90 200 350"
 	      }
 	 
 	        "04"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "lumber_cost"           "0 0 75"
+	        "lumber_cost"           "0 0 130"
 	      }
 	    }
 	
@@ -2635,7 +2610,7 @@
 	    "MaxLevel"                      "1"
 	
 	    "AbilityGoldCost"               "200"
-	    "AbilityChannelTime"            "10"
+	    "AbilityChannelTime"            "120"
 	    
 	    "AbilitySpecial"
 	    {
@@ -2648,7 +2623,7 @@
 	        "02"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "research_time"         "10"
+	        "research_time"         "120"
 	      }
 	
 	        "03"
@@ -2707,27 +2682,27 @@
 	    "AbilityTextureName"            "beastmaster_call_of_the_wild"
 	    "MaxLevel"                      "1"
 	
-	    "AbilityGoldCost"               "300"
-	    "AbilityChannelTime"            "10"
+	    "AbilityGoldCost"               "150"
+	    "AbilityChannelTime"            "60"
 	    
 	    "AbilitySpecial"
 	    {    
 	        "01"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "research_time"         "10"
+	        "research_time"         "60"
 	      }
 	
 	        "02"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "gold_cost"             "300"
+	        "gold_cost"             "150"
 	      }
 	 
 	        "03"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "lumber_cost"           "150"
+	        "lumber_cost"           "80"
 	      }
 	    }
 	
@@ -2762,6 +2737,68 @@
 	        }
 	    }
 	}
+	"research_bm_scout_techies"
+	{
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "techies"
+	    "MaxLevel"                      "1"
+	
+	    "AbilityGoldCost"               "100"
+	    "AbilityChannelTime"            "60"
+	    
+	    "AbilitySpecial"
+	    {    
+	        "01"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "research_time"         "60"
+	      }
+	
+	        "02"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "gold_cost"             "50"
+	      }
+	 
+	        "03"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "lumber_cost"           "300"
+	      }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "buildings/queue.lua"
+	            "Function"      "EnqueueUnit"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "buildings/research.lua"
+	            "Function"      "DisableResearch"
+	        }
+	    }
+	
+	    "OnChannelSucceeded"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "buildings/queue.lua"
+	            "Function"      "NextQueue"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "buildings/research.lua"
+	            "Function"      "ScoutResearchComplete"
+	            "item_name"     "item_techies"
+	        }
+	    }
+	}
 	"research_bm_skeleton_damage"
 	{
 	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
@@ -2769,8 +2806,8 @@
 	    "AbilityTextureName"            "damage"
 	    "MaxLevel"                      "1"
 	
-	    "AbilityGoldCost"               "50"
-	    "AbilityChannelTime"            "10"
+	    "AbilityGoldCost"               "120"
+	    "AbilityChannelTime"            "40"
 	    
 	    "AbilitySpecial"
 	    {
@@ -2783,19 +2820,13 @@
 	        "02"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "research_time"         "10"
+	        "research_time"         "40"
 	      }
 	
 	        "03"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "gold_cost"             "50"
-	      }
-	 
-	        "04"
-	      {
-	        "var_type"              "FIELD_INTEGER"
-	        "lumber_cost"           "0"
+	        "gold_cost"             "120"
 	      }
 	    }
 	
@@ -3391,7 +3422,8 @@
 	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	    "AbilityCastPoint"              "0"
 	
-	    "AbilityGoldCost"               "50"
+	    "AbilityGoldCost"               "80"
+	    "AbilityCooldown"               "40.0"
 	
 	    "AbilitySpecial"
 	    {
@@ -3404,7 +3436,7 @@
 	        "02"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "gold_cost"             "50"
+	            "gold_cost"             "80"
 	        }
 	    }
 	

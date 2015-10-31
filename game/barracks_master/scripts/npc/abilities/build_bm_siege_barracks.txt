@@ -10,7 +10,7 @@
 	// BuildingHelper info
 	"Building"						"1" //bool
 	"BuildingSize"					"4" 
-	"BuildTime"						"5.0"
+	"BuildTime"						"35.0"
 	"AbilityCastRange"				"200"
 	"UpdateHealth"					"1" //bool
 	"Scale"							"0" //bool
@@ -21,7 +21,7 @@
 
 	"UnitName"						"bm_siege_barracks"
 	"AbilityCooldown"				"0"
-	"AbilityGoldCost"				"500"
+	"AbilityGoldCost"				"400"
 	"MaxBuildingCount"				"1"
 	// End of BuildingHelper info
 
@@ -30,17 +30,12 @@
 		"01"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"build_time"			"5.0"
+			"build_time"			"35.0"
 		}
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"gold_cost"				"500"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"lumber_cost"			"0"
+			"gold_cost"				"400"
 		}
 	}
 

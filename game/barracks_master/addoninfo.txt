@@ -1,9 +1,10 @@
 "AddonInfo"
 {
   "TeamCount" "2"
-  "maps"      "barracks_master_map_duo_v1.0"
+  "maps"      "barracks_master_duo"
   "IsPlayable"  "1"
-  "barracks_master_map_duo_v1.0"
+  
+  "barracks_master_duo"
   {
           "MaxPlayers"                    "4"
   }

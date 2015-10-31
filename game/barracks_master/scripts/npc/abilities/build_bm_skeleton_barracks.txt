@@ -21,7 +21,7 @@
 
 	"UnitName"						"bm_skeleton_barracks"
 	"AbilityCooldown"				"0"
-	"AbilityGoldCost"				"200"
+	"AbilityGoldCost"				"400"
 	"MaxBuildingCount"				"1"
 	// End of BuildingHelper info
 
@@ -30,17 +30,12 @@
 		"01"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"build_time"			"5.0"
+			"build_time"			"20.0"
 		}
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"gold_cost"				"200"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"lumber_cost"			"0"
+			"gold_cost"				"400"
 		}
 	}
 

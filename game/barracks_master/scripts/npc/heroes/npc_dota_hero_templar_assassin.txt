@@ -14,6 +14,7 @@
 	"AttackDamageMin"				"3"
 	"AttackDamageMax"				"3"	
 	"AttackDamageType"				"DAMAGE_TYPE_ArmorPhysical"
+	"AttackRange"					"600"
 
 	// Attributes
 	//-------------------------------------------------------------------------------------------------------------
@@ -27,7 +28,7 @@
 
 	// Status
 	//-------------------------------------------------------------------------------------------------------------
-	"StatusHealth"					"10"			// Base health.
+	"StatusHealth"					"6"			// Base health.
 	"StatusHealthRegen"				"0.2"
 	"StatusMana"					"300"
 	"StatusManaRegen"				"0.4"

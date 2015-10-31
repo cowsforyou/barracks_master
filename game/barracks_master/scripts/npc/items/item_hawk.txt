@@ -41,7 +41,7 @@
         "02"
         {
             "var_type"                  "FIELD_INTEGER"
-            "gold_cost_tooltip"         "20"
+            "gold_cost"                 "20"
         }
 
         // Extra        

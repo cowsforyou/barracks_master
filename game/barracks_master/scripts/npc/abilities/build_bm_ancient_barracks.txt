@@ -10,7 +10,7 @@
 	// BuildingHelper info
 	"Building"						"1" //bool
 	"BuildingSize"					"4" 
-	"BuildTime"						"8.0"
+	"BuildTime"						"45.0"
 	"AbilityCastRange"				"200"
 	"UpdateHealth"					"1" //bool
 	"Scale"							"0" //bool
@@ -21,7 +21,7 @@
 
 	"UnitName"						"bm_ancient_barracks"
 	"AbilityCooldown"				"0"
-	"AbilityGoldCost"				"100"
+	"AbilityGoldCost"				"800"
 	"MaxBuildingCount"				"1"
 	// End of BuildingHelper info
 
@@ -30,17 +30,17 @@
 		"01"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"build_time"			"8.0"
+			"build_time"			"45.0"
 		}
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"gold_cost"				"100"
+			"gold_cost"				"800"
 		}
 		"03"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"lumber_cost"			"0"
+			"lumber_cost"			"350"
 		}
 	}
 

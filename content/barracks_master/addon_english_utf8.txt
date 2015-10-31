@@ -106,14 +106,14 @@
 		"DOTA_Tooltip_ability_build_bm_ancient_barracks_disabled_Description"               "<b><font color='#eedd44'>Requires:\n - Siege Barracks</font></b>\n"
 
 
-		"bm_tech_lab"                                                               		"Tec Lab"
-		"DOTA_Tooltip_ability_build_bm_tech_lab"                        					"Tec Lab"
+		"bm_tech_lab"                                                               		"Tech Lab"
+		"DOTA_Tooltip_ability_build_bm_tech_lab"                        					"Tech Lab"
 		"DOTA_Tooltip_ability_build_bm_tech_lab_Description"                       			"Unlocks higher tiered buildings."
 		"DOTA_Tooltip_ability_build_bm_tech_lab_build_time"                        			"BUILD TIME:"
 		"DOTA_Tooltip_ability_build_bm_tech_lab_gold_cost"                         			"GOLD COST:"
 		"DOTA_Tooltip_ability_build_bm_tech_lab_lumber_cost"                       			"LUMBER COST:"
 
-		"DOTA_Tooltip_ability_build_bm_tech_lab_disabled"                           		"Research Lab"
+		"DOTA_Tooltip_ability_build_bm_tech_lab_disabled"                           		"Tech Lab"
 		"DOTA_Tooltip_ability_build_bm_tech_lab_disabled_Description"               		"<b><font color='#eedd44'>Requires:\n - Lumber Yard</font></b>\n"
 
 
@@ -342,7 +342,7 @@
 		"DOTA_Tooltip_modifier_ranged_hp_bonus_Description"                             	""
 
 		"DOTA_Tooltip_ability_research_bm_ranged_hp"                                    	"Health Vial"
-		"DOTA_Tooltip_ability_research_bm_ranged_hp_Description"                        	"Increases health of ranged creeps"
+		"DOTA_Tooltip_ability_research_bm_ranged_hp_Description"                        	"Increases health of ranged creeps."
 		"DOTA_Tooltip_ability_research_bm_ranged_hp_health_bonus"                       	"HEALTH BONUS:"
 		"DOTA_Tooltip_ability_research_bm_ranged_hp_research_time"                       	"RESEARCH TIME:"
 		"DOTA_Tooltip_ability_research_bm_ranged_hp_gold_cost"                          	"GOLD COST:"
@@ -353,6 +353,21 @@
 
 		"DOTA_Tooltip_ability_item_research_bm_ranged_hp"                               	"Cancel Upgrade"
 		"DOTA_Tooltip_ability_item_research_bm_ranged_hp_Description"                   	""
+
+
+		//Scout Unlocks
+		//-------------------------------------------------------------
+		"DOTA_Tooltip_ability_research_bm_scout_hawk"                                    	"Hawk Scout"
+		"DOTA_Tooltip_ability_research_bm_scout_hawk_Description"                        	"Allows your Barracks Master to spawn Hawk Scouts."
+		"DOTA_Tooltip_ability_research_bm_scout_hawk_research_time"                       	"RESEARCH TIME:"
+		"DOTA_Tooltip_ability_research_bm_scout_hawk_gold_cost"                          	"GOLD COST:"
+		"DOTA_Tooltip_ability_research_bm_scout_hawk_lumber_cost"                        	"LUMBER COST:"
+
+		"DOTA_Tooltip_ability_research_bm_scout_techies"                                    "Techies Scout"
+		"DOTA_Tooltip_ability_research_bm_scout_techies_Description"                        "Allows your Barracks Master to spawn Techies Scouts."
+		"DOTA_Tooltip_ability_research_bm_scout_techies_research_time"                      "RESEARCH TIME:"
+		"DOTA_Tooltip_ability_research_bm_scout_techies_gold_cost"                          "GOLD COST:"
+		"DOTA_Tooltip_ability_research_bm_scout_techies_lumber_cost"                        "LUMBER COST:"
 
 
 
@@ -379,18 +394,28 @@
 		"DOTA_Tooltip_ability_spawn_air_creeps_creep_count"                              	"COUNT:"	
 
 		"DOTA_Tooltip_ability_spawn_ancient_creeps"                                     	"Ancient Spawner"
-		"DOTA_Tooltip_ability_spawn_ancient_creeps_Description"                             "Automatically spawns ancient creeps"
+		"DOTA_Tooltip_ability_spawn_ancient_creeps_Description"                             "Automatically spawns your chosen Ancient. Select a different Ancient to toggle."
 		"DOTA_Tooltip_ability_spawn_ancient_creeps_creep_count"                             "CREEP COUNT:"	
 
 
 
-
-		//Ability Swapper
+		//Misc
 		//-------------------------------------------------------------
 		"DOTA_Tooltip_ability_ability_swapper_next"                                     	"Next"
 		"DOTA_Tooltip_ability_ability_swapper_previous"                                     "Back"
 		"DOTA_Tooltip_ability_ability_swapper_empty"                                     	"Empty"
 
+		"DOTA_Tooltip_ability_lumberjack_harvest"                                     		"Harvest Lumber"
+		"DOTA_Tooltip_ability_lumberjack_harvest_Description"                               "Use ability and target Lumber Yard to begin harvesting."
+
+		"DOTA_Tooltip_ability_select_ancient1"                                     			"Granite Golem"
+		"DOTA_Tooltip_ability_select_ancient1_Description"                                  "Click to select Granite Golems as your Ancient spawn."
+
+		"DOTA_Tooltip_ability_select_ancient2"                                     			"Thunder Lizard"
+		"DOTA_Tooltip_ability_select_ancient1_Description"                                  "Click to select Thunder Lizard as your Ancient spawn."	
+		
+		"DOTA_Tooltip_ability_select_ancient3"                                     			"Black Dragon"
+		"DOTA_Tooltip_ability_select_ancient1_Description"                                  "Click to select Black Dragon as your Ancient spawn."	
 
 
 
@@ -401,18 +426,20 @@
 		"DOTA_Tooltip_ability_item_boar"                                                  	"Boar Scout"
 		"DOTA_Tooltip_ability_item_boar_Description"                                      	""
 		"DOTA_Tooltip_ability_item_boar_duration"                            				"BOAR DURATION:"
-		"DOTA_Tooltip_ability_item_boar_gold_cost_tooltip"                                	"GOLD COST:"
-		"DOTA_Tooltip_ability_item_boar_max_count_tooltip"                                	"MAX COUNT:"
+		"DOTA_Tooltip_ability_item_boar_gold_cost"                                			"GOLD COST:"
+		//"DOTA_Tooltip_ability_item_boar_max_count"                                		"MAX COUNT:"
 
 		"DOTA_Tooltip_ability_item_hawk"                                                  	"Hawk Scout"
 		"DOTA_Tooltip_ability_item_hawk_Description"                                      	""
 		"DOTA_Tooltip_ability_item_hawk_duration"                            				"HAWK DURATION:"
-		"DOTA_Tooltip_ability_item_hawk_gold_cost_tooltip"                                	"GOLD COST:"
+		"DOTA_Tooltip_ability_item_hawk_gold_cost"                                			"GOLD COST:"
 
 		"DOTA_Tooltip_ability_item_techies"                                                 "Techies Scout"
 		"DOTA_Tooltip_ability_item_techies_Description"                                     ""
 		"DOTA_Tooltip_ability_item_techies_duration"                            			"TECHIES DURATION:"
-		"DOTA_Tooltip_ability_item_techies_gold_cost_tooltip"                               "GOLD COST:"
+		"DOTA_Tooltip_ability_item_techies_gold_cost"                               		"GOLD COST:"
+		"DOTA_Tooltip_ability_item_techies_lumber_cost"                               		"LUMBER COST:"
+
 
 
 

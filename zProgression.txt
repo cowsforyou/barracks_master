@@ -20,9 +20,9 @@
 [x] Allow ability slots to be "toggled"
 [x] Learn how to create/edit ability/item icons
 [ ] Create spawn additional unit ability for melee and ranged barracks
-[ ] Color in player buildings
+[x] Color in player buildings
 [x] Create toggle button for Ancient Barracks
-[ ] Learn how to add lumber cost to buildings/research
+[x] Learn how to add lumber cost to buildings/research
 [x] Enable lumber harvesting
 [x] Enable Lumber Yard to spawn Lumberjacks
 [x] Replace city center default spawn to bm_melee_barracks
@@ -35,7 +35,7 @@
 
 -- Player Mechanics --
 
-[ ] Specify exact spawn locations for each player
+[x] Specify exact spawn locations for each player
 [x] Learn how to edit passive income
 [ ] Award chunks of passive income progressively throughout the game
 [x] Create function to award last hit gold from creeps to player
@@ -68,13 +68,14 @@
 [ ] Techies suiciding gives gold
 [x] Lumberjacks get stuck
 [ ] Lumber Yard model not giving right collision radius
-[ ] Library of Spells not selectable
+[x] Library of Spells not selectable
 [x] Research lab does not get unlocked if page 2 abilities are selected (when lumber yard completes)
-[ ] Techies death sound incorrect (currently hawk sound)
+[x] Techies death sound incorrect (currently hawk sound)
 [ ] Ancient rax looks spastic while waiting for first spawn
 [x] HP upgrades not accessible after building research lab
 [ ] Lumber Yard has no portrait
-
+[ ] Attempting to build existing structues uses up resources
+[ ] Not a bug but improvement - add tooltip for disabled abilities to what's required for upgrade
 
 
 -------------------------------------
@@ -202,20 +203,21 @@
 
 --Initial
 Starting Gold: 		300
-Tick Gold:
-Tick Gold Time:
-Tick GPM:
+Tick Gold: 			5
+Tick Gold Time: 	10
+Tick GPM: 			30
 
-Starting Lumber:
-Tick Lumber:
-Tick Lumber Time:
-Tick LPM:
+Starting Lumber: 	0
+Tick Lumber: 		5
+Tick Lumber Time: 	30
+Tick LPM: 			10
+Harvest LPM: 		60
 
 --Creeps
 Skeleton Bounty:	10
 Skeleton HP: 		45
 Skeleton Armor: 	0
-Skeleton Damage:	25
+Skeleton Damage:	50
 
 Melee Bounty:		20
 Melee HP: 			500
