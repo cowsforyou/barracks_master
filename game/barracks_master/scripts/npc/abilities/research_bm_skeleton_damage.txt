@@ -3,29 +3,29 @@
     "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
     "BaseClass"                     "ability_datadriven"
     "AbilityTextureName"            "damage"
-    "MaxLevel"                      "1"
+    "MaxLevel"                      "2"
 
-    "AbilityGoldCost"               "120"
-    "AbilityChannelTime"            "40"
+    "AbilityGoldCost"               "75 150"
+    "AbilityChannelTime"            "40 60"
     
     "AbilitySpecial"
     {
         "01"
       {
         "var_type"              "FIELD_INTEGER"
-        "damage_bonus"           "20"
+        "damage_bonus"           "20 35"
       }
       
         "02"
       {
         "var_type"              "FIELD_INTEGER"
-        "research_time"         "40"
+        "research_time"         "40 60"
       }
 
         "03"
       {
         "var_type"              "FIELD_INTEGER"
-        "gold_cost"             "120"
+        "gold_cost"             "75 150"
       }
     }
 

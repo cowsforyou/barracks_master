@@ -57,7 +57,8 @@ function Precache( context )
 
     -- Sounds
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts", context) -- for Boar and Hawk Scouts
-  PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_techies.vsndevts", context)
+  PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_techies.vsndevts", context) -- for Techies Scout
+  PrecacheResource("soundfile" "soundevents/game_sounds_heroes/game_sounds_shredder.vsndevts", context) -- for Lumberjacks
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_vengefulspirit.vsndevts", context)
 
     -- Units

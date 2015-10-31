@@ -35,7 +35,8 @@
 		"creep_air"                                                                     	"Familiar"
 		"creep_ancient1"                                                                    "Granite Golem"
 		"creep_ancient2"                                                                    "Big Thunder Lizard"
-		"creep_ancient3"                                                                    "Blue Dragonspawn Overseer"		
+		"creep_ancient3"                                                                    "Black Dragon"
+		"lumberjack"																		"Lumberjack"
 
 
 		//-------------------
@@ -396,6 +397,11 @@
 		"DOTA_Tooltip_ability_spawn_ancient_creeps"                                     	"Ancient Spawner"
 		"DOTA_Tooltip_ability_spawn_ancient_creeps_Description"                             "Automatically spawns your chosen Ancient. Select a different Ancient to toggle."
 		"DOTA_Tooltip_ability_spawn_ancient_creeps_creep_count"                             "CREEP COUNT:"	
+
+		"DOTA_Tooltip_ability_spawn_lumberjacks"                                     		"Spawn Lumberjack"
+		"DOTA_Tooltip_ability_spawn_lumberjacks_Description"                              	"People are often confused when they see Lumberjack waving his hands aimlessly. Only with closer inspection do they realize that he is actually harvesting lumber."
+		"DOTA_Tooltip_ability_spawn_lumberjacks_gold_cost"                              	"GOLD COST:"
+		"DOTA_Tooltip_ability_spawn_lumberjacks_max_count"                              	"MAX COUNT:"		
 
 
 
