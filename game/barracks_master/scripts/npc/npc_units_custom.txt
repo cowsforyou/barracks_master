@@ -1943,11 +1943,6 @@
 		"SoundSet"					"Hero_Shredder"
 	
 		"UnitLabel"					"builder"
-	
-		"precache"
-		{
-			"soundfile" "soundevents/game_sounds_heroes/game_sounds_shredder.vsndevts"
-		}
 		
 		"PathfindingSearchDepthScale" "0.5"
 		
