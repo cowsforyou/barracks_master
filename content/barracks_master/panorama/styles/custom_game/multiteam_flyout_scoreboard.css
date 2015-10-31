@@ -183,6 +183,8 @@
 
 .ScoreboardPanel Label
 {
+	horizontal-align: center;
+	line-height: 30px;
 	font-size: 30px;
 	text-shadow: 2px 2px 2px black;
 }
@@ -324,19 +326,24 @@
 
 .ScoreCol_Kills,
 .ScoreCol_Deaths,
-.ScoreCol_Assists
+.ScoreCol_Assists,
+.ScoreCol_CS
 {
 	width: 50px;
 	text-align: center;
 }
 
-
-
-.ScoreCol_CS,
 .ScoreCol_NetWorth,
 .ScoreCol_Gold,
 .ScoreCol_Lumber
 {
-	width: 50px;
+	width: 80px;
 	text-align: center;
+}
+
+#Lumber,
+#Gold,
+#NetWorth
+{
+	font-size: 16px;
 }

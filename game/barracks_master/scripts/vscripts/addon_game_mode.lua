@@ -17,6 +17,8 @@ require('barracks/spawner')
 require('barracks/spawn_synchronizer')
 require('barracks/class_utils')
 require('barracks/ability_swapper')
+require('barracks/scoreboard_updater')
+require('barracks/last_hits')
 
 -- This library allow for easily delayed/timed actions
 require('libraries/timers')

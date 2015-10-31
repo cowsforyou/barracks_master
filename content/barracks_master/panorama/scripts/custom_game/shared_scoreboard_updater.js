@@ -54,11 +54,15 @@ function _ScoreboardUpdater_UpdatePlayerPanel( scoreboardConfig, playersContaine
 		//var test = $("#_dynamic_player_0")
 		//$.Msg("player0:"+test)
 
-		var lumber = 0
-		_ScoreboardUpdater_SetTextSafe( playerPanel, "CS", lumber );
-		_ScoreboardUpdater_SetTextSafe( playerPanel, "NetWorth", lumber );
-		_ScoreboardUpdater_SetTextSafe( playerPanel, "Gold", lumber );
+		var cs = CustomNetTables.GetTableValue("scores", playerId)["cs"]
+		var netWorth = CustomNetTables.GetTableValue("scores", playerId)["netWorth"]
+		var lumber = CustomNetTables.GetTableValue("scores", playerId)["lumber"]
+		var gold = CustomNetTables.GetTableValue("scores", playerId)["gold"]
+
+		_ScoreboardUpdater_SetTextSafe( playerPanel, "CS", cs );
+		_ScoreboardUpdater_SetTextSafe( playerPanel, "NetWorth", netWorth );
 		_ScoreboardUpdater_SetTextSafe( playerPanel, "Lumber", lumber );
+		_ScoreboardUpdater_SetTextSafe( playerPanel, "Gold", gold );
 
 		//_ScoreboardUpdater_SetTextSafe( playerPanel, "Kills", playerInfo.player_kills );
 		//_ScoreboardUpdater_SetTextSafe( playerPanel, "Deaths", playerInfo.player_deaths );
