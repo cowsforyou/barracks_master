@@ -25,7 +25,10 @@ function GameMode:OnGameRulesStateChange(keys)
   -- Custom Creep Spawns --
   -------------------------
   local newState = GameRules:State_Get()
-  if newState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
+  if newState == DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP then
+    LastHits:Setup()
+    ScoreboardUpdater:Setup()
+  elseif newState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
     SpawnSynchronizer:Setup()
   end  
 
@@ -265,36 +268,6 @@ function GameMode:OnEntityKilled( keys )
   local damagebits = keys.damagebits -- This might always be 0 and therefore useless
 
   -- Put code here to handle when an entity gets killed
-
-  local killerName = killerEntity:GetUnitName()
-  local killedName = killedUnit:GetUnitName()
-
-  -- if the killer is neither a hero nor tower, and killed is neither hero nor tower, then
-  if string.find(killerName, "tower") == nil and not killerEntity:IsHero() then
-    if string.find(killedName, "hero") == nil and string.find(killedName, "tower") == nil then
-    	local player = killerEntity:GetOwner()
-    	if player then
-    		local playerID = player:GetPlayerID()
-    		local gold = killedUnit:GetGoldBounty()
-    		PlayerResource:ModifyGold(playerID, gold, false, DOTA_ModifyGold_CreepKill)
-
-  			local particle = ParticleManager:CreateParticle("particles/generic_gameplay/lasthit_coins.vpcf", PATTACH_ABSORIGIN_FOLLOW, killedUnit)
-  			ParticleManager:SetParticleControl(particle, 1, killedUnit:GetAbsOrigin())
-  			EmitSoundOn("General.Coins", killedUnit)
-        PopupGoldGain(killedUnit, gold)
-
-    		print("Awarding " .. gold .. " gold to player " .. playerID)
-    	else
-    		print("Nil player")
-    	end
-    else
-    	print("Creep killed hero or tower.")
-    end
-  else
-    print("Either a tower or hero killed something.")
-  end
-
-
 end
 
 
