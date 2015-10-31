@@ -75,7 +75,7 @@
 [x] HP upgrades not accessible after building research lab
 [ ] Lumber Yard has no portrait
 [ ] Attempting to build existing structues uses up resources
-[ ] Not a bug but improvement - add tooltip for disabled abilities to what's required for upgrade
+[x] Rename teams not working
 
 
 -------------------------------------

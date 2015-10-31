@@ -53,6 +53,10 @@ function Precache( context )
   PrecacheResource("particle_folder", "particles/units/heroes/hero_techies", context) -- for Techies Scout
   PrecacheResource("particle_folder", "particles/units/heroes/hero_shredder", context) -- for Lumberjack
   PrecacheResource("particle_folder", "particles/units/heroes/hero_vengeful", context) -- for Hero
+
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_furion", context) -- for spectator
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_riki", context) -- for spectator
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_disruptor", context) -- for spectator
   PrecacheResource("particle_folder", "particles/radiant_fx2", context) -- testing particle ability
 
     -- Sounds
@@ -75,6 +79,9 @@ function Precache( context )
   PrecacheUnitByNameSync("bm_library", context) 
   PrecacheUnitByNameSync("bm_unpromising", context)         
   PrecacheUnitByNameSync("bm_luminous", context)    
+
+  PrecacheUnitByNameSync("npc_dota_hero_wisp", context) -- for spectator
+  PrecacheUnitByNameSync("npc_dota_hero_disruptor", context) -- for spectator
 
     -- Items
   PrecacheItemByNameSync("item_boar", context)
