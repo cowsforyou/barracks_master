@@ -44,7 +44,9 @@
 
 -- UI --
 
-[ ] Display last hits and gold earned per player in-game
+[x] Display last hits and gold earned per player in-game
+[ ] Setup net worth calculation for scoreboard
+[ ] Permanently display scoreboard with autorefresh function
 [ ] Announce when a hero spawns
 [ ] Show error message when player tries to build the same building
 [x] Learn how to locate building models
@@ -65,7 +67,7 @@
 [x] Health Vial not giving intended HP boost.
 [x] Hawk and Boar spawn sounds not firing.
 [x] Tech tree unlock for Hawk not working
-[ ] Techies suiciding gives gold
+[ ] Own creeps dying gives gold (e.g. techies, boar, hawk)
 [x] Lumberjacks get stuck
 [ ] Lumber Yard model not giving right collision radius
 [x] Library of Spells not selectable
@@ -76,6 +78,7 @@
 [ ] Lumber Yard has no portrait
 [ ] Attempting to build existing structues uses up resources
 [x] Rename teams not working
+[ ] Last hit animation and sounds playing globally
 
 
 -------------------------------------
