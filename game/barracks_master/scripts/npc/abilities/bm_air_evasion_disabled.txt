@@ -1,0 +1,6 @@
+"bm_air_evasion_disabled"
+{
+    "BaseClass"                     "ability_datadriven"
+    "AbilityTextureName"            "evasion"
+    "MaxLevel"                      "0"
+}

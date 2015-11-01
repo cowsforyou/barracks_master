@@ -5,7 +5,7 @@
     {
         // General
         //
-        "BaseClass"                 "npc_dota_creature"   // Class of entity of link to.
+        "BaseClass"                 "npc_dota_creep_lane"   // Class of entity of link to.
         "Model"                     "models/creeps/lane_creeps/creep_radiant_ranged/radiant_ranged.vmdl"    // Model.
         "SoundSet"                  "Creep_Good_Range"                  // Name of sound set.
         "ModelScale"                    ".88"

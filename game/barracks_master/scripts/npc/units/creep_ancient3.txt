@@ -27,8 +27,8 @@
         // Attack
         //----------------------------------------------------------------
         "AttackCapabilities"        "DOTA_UNIT_CAP_RANGED_ATTACK"
-        "AttackDamageMin"           "48"        // Damage range min.
-        "AttackDamageMax"           "81"        // Damage range max.
+        "AttackDamageMin"           "50"        // Damage range min.
+        "AttackDamageMax"           "80"        // Damage range max.
         "AttackRate"                "1.5"       // Speed of attack.
         "AttackAnimationPoint"      "0.94"      // Normalized time in animation cycle to attack.
         "AttackAcquisitionRange"    "300"       // Range within a target can be acquired.
@@ -43,9 +43,9 @@
 
         // Bounty
         //----------------------------------------------------------------
-        "BountyXP"                  "155"       // Experience earn.
-        "BountyGoldMin"             "150"       // Gold earned min.
-        "BountyGoldMax"             "190"       // Gold earned max.
+        "BountyXP"                  ""       // Experience earn.
+        "BountyGoldMin"             "140"       // Gold earned min.
+        "BountyGoldMax"             "160"       // Gold earned max.
 
         // Movement
         //----------------------------------------------------------------

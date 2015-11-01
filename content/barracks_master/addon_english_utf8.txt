@@ -6,10 +6,10 @@
 		"game_mode_15"				"BAREBONES"
 		"addon_game_name"			"Barracks Master"
 		
-		//"DOTA_Basics"							"ABILITIES"
+		//"DOTA_Basics"								"ABILITIES"
 		//"DOTA_Upgrades"							"ITEMS"
 		//"DOTA_Shop_Category_Basics"				"ABILITIES"
-		//"DOTA_Shop_Category_Upgrades"			"ITEMS"
+		//"DOTA_Shop_Category_Upgrades"				"ITEMS"
 		
 
 		//---------------------------------------------------------------------------------------------------------------------------------
@@ -17,7 +17,7 @@
 		//---------------------------------------------------------------------------------------------------------------------------------
 
 		//-------------------
-		//Heroes
+		//Builders
 		//-------------------
 		"npc_dota_hero_axe"                                                    				"Barracks Master"
 		"npc_dota_hero_sven"                                                    			"Barracks Master"
@@ -45,6 +45,14 @@
 		"scout_boar"                                                                      	"Boar Scout"
 		"scout_hawk"                                                                      	"Hawk Scout"
 		"scout_techies"                                                                     "Techies Scout"		
+
+
+		//-------------------
+		//Heroes
+		//-------------------
+		"hero_vengeful"																		"Vengeful Spirit"
+		"hero_nevermore"																	"Shadow Fiend"
+		"hero_beastmaster"																	"Beastmaster"
 
 
 		//-------------------
@@ -115,7 +123,7 @@
 		"DOTA_Tooltip_ability_build_bm_tech_lab_lumber_cost"                       			"LUMBER COST:"
 
 		"DOTA_Tooltip_ability_build_bm_tech_lab_disabled"                           		"Tech Lab"
-		"DOTA_Tooltip_ability_build_bm_tech_lab_disabled_Description"               		"<b><font color='#eedd44'>Requires:\n - Lumber Yard</font></b>\n"
+		"DOTA_Tooltip_ability_build_bm_tech_lab_disabled_Description"               		"Unlocks higher tiered buildings.\n<b><font color='#eedd44'>Requires:\n - Lumber Yard</font></b>\n"
 
 
 		"bm_aviation_sanctuary"                                                             "Aviation Sanctuary"
@@ -126,18 +134,18 @@
 		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_lumber_cost"                      "LUMBER COST:"
 
 		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_disabled"                         "Aviation Sanctuary"
-		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_disabled_Description"             "<b><font color='#eedd44'>Requires:\n - Lumber Yard</font></b>\n"
+		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_disabled_Description"             "Spawns Air Creeps and unlocks Hawk Scout.\n<b><font color='#eedd44'>Requires:\n - Lumber Yard</font></b>\n"
 
 
 		"bm_heroes"                                                             			"Portal of Heroes"
 		"DOTA_Tooltip_ability_build_bm_heroes"                        						"Portal of Heroes"
-		"DOTA_Tooltip_ability_build_bm_heroes_Description"                  	    		"Unlocks Heroes."
+		"DOTA_Tooltip_ability_build_bm_heroes_Description"                  	    		"Allows you to spawn Heroes."
 		"DOTA_Tooltip_ability_build_bm_heroes_build_time"                  		    		"BUILD TIME:"
 		"DOTA_Tooltip_ability_build_bm_heroes_gold_cost"                       	 			"GOLD COST:"
 		"DOTA_Tooltip_ability_build_bm_heroes_lumber_cost"                      			"LUMBER COST:"
 
 		"DOTA_Tooltip_ability_build_bm_heroes_disabled"                         			"Portal of Heroes"
-		"DOTA_Tooltip_ability_build_bm_heroes_disabled_Description"             			"<b><font color='#eedd44'>Requires:\n - Research Lab</font></b>\n"
+		"DOTA_Tooltip_ability_build_bm_heroes_disabled_Description"             			"Allows you to spawn Heroes.\n<b><font color='#eedd44'>Requires:\n - Tech Lab</font></b>\n"
 
 
 		"bm_purifier"                                                             			"Purifier"
@@ -148,7 +156,7 @@
 		"DOTA_Tooltip_ability_build_bm_purifier_lumber_cost"                      			"LUMBER COST:"
 
 		"DOTA_Tooltip_ability_build_bm_purifier_disabled"                         			"Purifier"
-		"DOTA_Tooltip_ability_build_bm_purifier_disabled_Description"             			"<b><font color='#eedd44'>Requires:\n - Research Lab</font></b>\n"
+		"DOTA_Tooltip_ability_build_bm_purifier_disabled_Description"             			"Increases resource earned by 25%.\n<b><font color='#eedd44'>Requires:\n - Tech Lab</font></b>\n"
 
 
 		"bm_library"                                                             			"Library of Spells"
@@ -159,7 +167,7 @@
 		"DOTA_Tooltip_ability_build_bm_library_lumber_cost"                      			"LUMBER COST:"
 
 		"DOTA_Tooltip_ability_build_bm_library_disabled"                         			"Library of Spells"
-		"DOTA_Tooltip_ability_build_bm_library_disabled_Description"             			"<b><font color='#eedd44'>Requires:\n - Research Lab</font></b>\n"
+		"DOTA_Tooltip_ability_build_bm_library_disabled_Description"             			"Knowledge is power; And with great power comes great responsibility.\n<b><font color='#eedd44'>Requires:\n - Tech Lab</font></b>\n"
 
 
 		"bm_unpromising"                                                             		"Unpromising Tower"
@@ -170,7 +178,7 @@
 		"DOTA_Tooltip_ability_build_bm_unpromising_lumber_cost"                      		"LUMBER COST:"
 
 		"DOTA_Tooltip_ability_build_bm_unpromising_disabled"                         		"Unpromising Tower"
-		"DOTA_Tooltip_ability_build_bm_unpromising_disabled_Description"             		"<b><font color='#eedd44'>Requires:\n - Library of Spells</font></b>\n"
+		"DOTA_Tooltip_ability_build_bm_unpromising_disabled_Description"             		"The Dark Side.\n<b><font color='#eedd44'>Requires:\n - Library of Spells</font></b>\n"
 
 
 		"bm_luminous"                                                             			"Luminous Tower"
@@ -181,7 +189,7 @@
 		"DOTA_Tooltip_ability_build_bm_luminous_lumber_cost"                      			"LUMBER COST:"
 
 		"DOTA_Tooltip_ability_build_bm_luminous_disabled"                         			"Luminous Tower"
-		"DOTA_Tooltip_ability_build_bm_luminous_disabled_Description"             			"<b><font color='#eedd44'>Requires:\n - Library of Spells</font></b>\n"
+		"DOTA_Tooltip_ability_build_bm_luminous_disabled_Description"             			"The Light Side.\n<b><font color='#eedd44'>Requires:\n - Library of Spells</font></b>\n"
 
 
 		//-------------------
@@ -264,21 +272,20 @@
 		"DOTA_Tooltip_ability_bm_melee_hp_health_bonus"    									"HEALTH BONUS:"	
 
 		"DOTA_Tooltip_ability_bm_melee_hp_disabled"                           	     	    "Health Vial"
-		"DOTA_Tooltip_ability_bm_melee_hp_Description"                        		       	"Grants additional health"
+		"DOTA_Tooltip_ability_bm_melee_hp_Description"                        		       	"Grants additional health."
 
 		"DOTA_Tooltip_modifier_melee_hp_bonus"                                         		"Health Bonus"
 		"DOTA_Tooltip_modifier_melee_hp_bonus_Description"                             		""
 
 		"DOTA_Tooltip_ability_research_bm_melee_hp"                                    		"Health Vial"
-		"DOTA_Tooltip_ability_research_bm_melee_hp_Description"                        		"Increases health of melee creeps"
+		"DOTA_Tooltip_ability_research_bm_melee_hp_Description"                        		"Increases health of melee creeps."
 		"DOTA_Tooltip_ability_research_bm_melee_hp_health_bonus"                       		"HEALTH BONUS:"
 		"DOTA_Tooltip_ability_research_bm_melee_hp_research_time"                       	"RESEARCH TIME:"
 		"DOTA_Tooltip_ability_research_bm_melee_hp_gold_cost"                          		"GOLD COST:"
 		"DOTA_Tooltip_ability_research_bm_melee_hp_lumber_cost"                        		"LUMBER COST:"
 
-		"DOTA_Tooltip_ability_research_bm_melee_hp_disabled"                         		"Health Vial"
-		"DOTA_Tooltip_ability_research_bm_melee_hp_disabled_Description"             		"<b><font color='#eedd44'>Requires:\n - Tech Lab</font></b>\n"
-
+		"DOTA_Tooltip_ability_research_bm_melee_hp_disabled"                         		"Health Vial"	
+		"DOTA_Tooltip_ability_research_bm_melee_hp_disabled_Description"             		"Increases health of melee creeps.\n<b><font color='#eedd44'>Requires:\n - Tech Lab</font></b>\n"
 		"DOTA_Tooltip_ability_item_research_bm_melee_hp"                               		"Cancel Upgrade"
 		"DOTA_Tooltip_ability_item_research_bm_melee_hp_Description"                   		""
 
@@ -350,7 +357,7 @@
 		"DOTA_Tooltip_ability_research_bm_ranged_hp_lumber_cost"                        	"LUMBER COST:"
 
 		"DOTA_Tooltip_ability_research_bm_ranged_hp_disabled"                         		"Health Vial"
-		"DOTA_Tooltip_ability_research_bm_ranged_hp_disabled_Description"             		"<b><font color='#eedd44'>Requires:\n - Tech Lab</font></b>\n"
+		"DOTA_Tooltip_ability_research_bm_ranged_hp_disabled_Description"             		"Increases health of ranged creeps.\n<b><font color='#eedd44'>Requires:\n - Tech Lab</font></b>\n"
 
 		"DOTA_Tooltip_ability_item_research_bm_ranged_hp"                               	"Cancel Upgrade"
 		"DOTA_Tooltip_ability_item_research_bm_ranged_hp_Description"                   	""
@@ -398,10 +405,27 @@
 		"DOTA_Tooltip_ability_spawn_ancient_creeps_Description"                             "Automatically spawns your chosen Ancient. Select a different Ancient to toggle."
 		"DOTA_Tooltip_ability_spawn_ancient_creeps_creep_count"                             "CREEP COUNT:"	
 
+		"DOTA_Tooltip_ability_spawn_hero_vengeful"                                     		"Spawn Vengeful Spirit"
+		"DOTA_Tooltip_ability_spawn_hero_vengeful_Description"                              "Vengeful Spirit has True Strike and provides Vengence Aura which boosts attack damage by 36%."
+		"DOTA_Tooltip_ability_spawn_hero_vengeful_gold_cost"                              	"GOLD COST:"
+		"DOTA_Tooltip_ability_spawn_hero_vengeful_lumber_cost"                              "LUMBER COST:"
+
+		"DOTA_Tooltip_ability_spawn_hero_nevermore"                                     	"Spawn Shadow Fiend"
+		"DOTA_Tooltip_ability_spawn_hero_nevermore_Description"                             "Shadow Fiend has True Strike and provides Presence of the Dark Lord which reduces armor by 6."
+		"DOTA_Tooltip_ability_spawn_hero_nevermore_gold_cost"                              	"GOLD COST:"
+		"DOTA_Tooltip_ability_spawn_hero_nevermore_lumber_cost"                             "LUMBER COST:"
+
+		"DOTA_Tooltip_ability_spawn_hero_beastmaster"                                     	"Spawn Beastmaster"
+		"DOTA_Tooltip_ability_spawn_hero_beastmaster_Description"                           "Beastmaster has True Strike and provides Inner Beast which boosts attack speed by 45."
+		"DOTA_Tooltip_ability_spawn_hero_beastmaster_gold_cost"                             "GOLD COST:"
+		"DOTA_Tooltip_ability_spawn_hero_beastmaster_lumber_cost"                           "LUMBER COST:"
+
 		"DOTA_Tooltip_ability_spawn_lumberjacks"                                     		"Spawn Lumberjack"
 		"DOTA_Tooltip_ability_spawn_lumberjacks_Description"                              	"People are often confused when they see Lumberjack waving his hands aimlessly. Only with closer inspection do they realize that he is actually harvesting lumber."
 		"DOTA_Tooltip_ability_spawn_lumberjacks_gold_cost"                              	"GOLD COST:"
-		"DOTA_Tooltip_ability_spawn_lumberjacks_max_count"                              	"MAX COUNT:"		
+		"DOTA_Tooltip_ability_spawn_lumberjacks_max_count"                              	"MAX COUNT:"
+
+
 
 
 

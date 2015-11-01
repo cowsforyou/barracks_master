@@ -54,7 +54,14 @@ function Precache( context )
   PrecacheResource("particle_folder", "particles/units/heroes/hero_beastmaster", context) -- for Boar, Hawk and Techies Scouts  
   PrecacheResource("particle_folder", "particles/units/heroes/hero_techies", context) -- for Techies Scout
   PrecacheResource("particle_folder", "particles/units/heroes/hero_shredder", context) -- for Lumberjack
-  PrecacheResource("particle_folder", "particles/units/heroes/hero_vengeful", context) -- for Hero
+
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_vengeful", context) -- for Hero: Vengeful Spirit
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_nevermore", context) -- for Hero: Shadow Fiend
+                                                                                        -- for Hero: Beastmaster (precached above)
+
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_skywrath_mage", context) -- for Mystic Flare
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_invoker", context) -- for Sun Strike
+
 
   PrecacheResource("particle_folder", "particles/units/heroes/hero_furion", context) -- for spectator
   PrecacheResource("particle_folder", "particles/units/heroes/hero_riki", context) -- for spectator
@@ -65,17 +72,33 @@ function Precache( context )
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts", context) -- for Boar and Hawk Scouts
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_techies.vsndevts", context) -- for Techies Scout
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_shredder.vsndevts", context) -- for Lumberjacks
-  PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_vengefulspirit.vsndevts", context)
+
+  PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_vengefulspirit.vsndevts", context) -- for Hero: Vengeful Spirit
+  PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_nevermore.vsndevts", context) -- for Hero: Shadow Fiend
+                                                                                                          -- for Hero: Beastmaster (precached above)
+
+  PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_skywrath_mage.vsndevts", context) -- for Mystic Flare
+  PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_invoker.vsndevts", context) -- for Sun Strike
 
     -- Units
   PrecacheUnitByNameSync("lumberjack", context)    
   PrecacheUnitByNameSync("scout_boar", context)
   PrecacheUnitByNameSync("scout_hawk", context)
   PrecacheUnitByNameSync("scout_techies", context)
-  PrecacheUnitByNameSync("creep_air", context) 
+  PrecacheUnitByNameSync("creep_air", context)
 
-  PrecacheUnitByNameSync("bm_lumber_yard", context) 
-  PrecacheUnitByNameSync("bm_tech_lab", context) 
+  PrecacheUnitByNameSync("hero_vengeful", context)
+  PrecacheUnitByNameSync("hero_nevermore", context)  
+  PrecacheUnitByNameSync("hero_beastmaster", context) 
+
+  PrecacheUnitByNameSync("bm_skeleton_barracks", context) 
+  PrecacheUnitByNameSync("bm_melee_barracks", context) 
+  PrecacheUnitByNameSync("bm_ranged_barracks", context) 
+  PrecacheUnitByNameSync("bm_lumber_yard", context)
+  PrecacheUnitByNameSync("bm_siege_barracks", context) 
+  PrecacheUnitByNameSync("bm_tech_lab", context)
+  PrecacheUnitByNameSync("bm_aviation_sanctuary", context)
+  PrecacheUnitByNameSync("bm_ancient_barracks", context) 
   PrecacheUnitByNameSync("bm_heroes", context) 
   PrecacheUnitByNameSync("bm_purifier", context) 
   PrecacheUnitByNameSync("bm_library", context) 

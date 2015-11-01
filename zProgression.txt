@@ -26,11 +26,7 @@
 [x] Enable lumber harvesting
 [x] Enable Lumber Yard to spawn Lumberjacks
 [x] Replace city center default spawn to bm_melee_barracks
-
-
--- Scout --
-
-[ ] Code Boar to allow max 3 count
+[ ] Code max lumberjacks to be 7
 
 
 -- Player Mechanics --
@@ -52,6 +48,7 @@
 [x] Learn how to locate building models
 [ ] Clean up team and hero selection
 [x] Fix minimap
+[ ] Change team colors on loading screen
 
 
 -- Advanced --
@@ -76,9 +73,13 @@
 [ ] Ancient rax looks spastic while waiting for first spawn
 [x] HP upgrades not accessible after building research lab
 [ ] Lumber Yard has no portrait
-[ ] Attempting to build existing structues uses up resources
+[ ] Attempting to build existing structues uses up gold (lumber not affected)
 [x] Rename teams not working
-[ ] Last hit animation and sounds playing globally
+[ ] Last hit gold animation and sounds playing globally
+[ ] Lumber cost not working for hero spawns
+[x] Mystic flare sounds not working
+[ ] Sun Strike damage not registering
+[ ] Air evasion research jumps straight to level 3
 
 
 -------------------------------------
@@ -248,14 +249,38 @@ Ancient1 Armor: 	8
 Ancient1 Damage: 	80
 Ancent1 AS: 		1.35
 
+Ancient2 Bounty:	150
+Ancient2 HP: 		1400
+Ancient2 Armor: 	2
+Ancient2 Damage: 	75
+Ancent2 AS: 		1.8
 
+Ancient3 Bounty:	150
+Ancient3 HP: 		2000
+Ancient3 Armor: 	4
+Ancient3 Damage: 	65
+Ancent3 AS: 		1.5
 
 Venge Bounty:		110
 Venge Cost: 
 Venge HP: 			1200
 Venge Armor: 		5
 Venge Damage: 		85
-Venge AS: 			3
+Venge AS: 			0.9
+
+Never Bounty:		110
+Never Cost: 
+Never HP: 			1200
+Never Armor: 		5
+Never Damage: 		85
+Never AS: 			0.9
+
+Beast Bounty:		110
+Beast Cost: 
+Beast HP: 			1300
+Beast Armor: 		5
+Beast Damage: 		95
+Beast AS: 			0.9
 
 
 --Others

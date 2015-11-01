@@ -1,15 +1,17 @@
 // Autocast creep spawner spell; starts casting as soon as the building is fully constructed
-"spawn_lumberjacks"
+"spawn_hero_vengeful"
 {
     "BaseClass"                     "ability_datadriven"
-    "AbilityTextureName"            "lumberjack"
+    "AbilityTextureName"            "hero_vengeful"
     "MaxLevel"                      "1"
 
     "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
     "AbilityCastPoint"              "0"
 
-    "AbilityGoldCost"               "80"
-    "AbilityCooldown"               "40.0"
+    "AbilityGoldCost"               "100"
+    "AbilityCooldown"               "5.0"
+
+
 
     "AbilitySpecial"
     {
@@ -22,24 +24,23 @@
         "02"
         {
             "var_type"              "FIELD_INTEGER"
-            "gold_cost"             "80"
+            "gold_cost"             "100"
         }
 
         "03"
         {
             "var_type"              "FIELD_INTEGER"
-            "max_count"             "7"
+            "lumber_cost"           "100"
         }
-
-
     }
 
     // run this script every time the spell is used
     "OnSpellStart"
     {
+
         "FireSound"
         {
-            "EffectName"    "Hero_Shredder.Pick"
+            "EffectName"    "Hero_VengefulSpirit.Pick"
             "Target"        "CASTER"
         }
 
@@ -47,7 +48,7 @@
         {
             "ScriptFile"    "barracks/spawner_manual.lua"
             "Function"      "OnSpellStart"
-            "creepName"		"lumberjack"
+            "creepName"		"hero_vengeful"
         }
     }
 

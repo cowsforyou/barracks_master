@@ -5,7 +5,7 @@
     {
         // General
         //
-        "BaseClass"                 "npc_dota_creep_lane"   // Class of entity of link to.
+        "BaseClass"                 "npc_dota_creature"   // Class of entity of link to.
         "Model"                     "models/heroes/visage/visage_familiar.vmdl"  // Model.
         "SoundSet"                  "Visage_Familiar"                  // Name of sound set.
         "ModelScale"                "0.66"
@@ -13,9 +13,9 @@
         
         // Abilities
         //----------------------------------------------------------------
-        
+        "AbilityLayout"             "4"
         "Ability1"                  "special_air_disabled"          // Ability 1.
-        "Ability2"                  ""          // Ability 2.
+        "Ability2"                  "bm_air_evasion_disabled"          // Ability 2.
         "Ability3"                  ""          // Ability 3.
         "Ability4"                  ""          // Ability 4.
         "Ability5"                  ""          // Ability 5.

@@ -16,8 +16,8 @@
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"5"
-	"Ability1"					""
-	"Ability2"					""
+	"Ability1"					"luminous_mystic_flare"
+	"Ability2"					"luminous_sun_strike"
 	"Ability3"					""
 	"Ability4"					""
 	"Ability5"					""

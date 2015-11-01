@@ -18,9 +18,10 @@
 		//----------------------------------------------------------------
 		"AbilityLayout"				"5"
 		"Ability1"					"spawn_air_creeps"			// Ability 1
-		"Ability2"					"research_special_air_disabled"			// Ability 2
-		"Ability3"					"research_bm_scout_hawk"			// Ability 3
-		"Ability4"					""			// Ability 4
+		"Ability2"					"research_bm_air_evasion"		
+		"Ability3"					"research_special_air_disabled"			
+		"Ability4"					"research_bm_scout_hawk"		
+		"Ability5"					""			
 		"Ability10"					"ability_building"
 		"Ability11"					"ability_building_queue"
 

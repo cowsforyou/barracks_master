@@ -1,0 +1,21 @@
+"bm_air_evasion"
+{
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"             "ability_datadriven"
+    "AbilityTextureName"    "evasion"
+
+    "MaxLevel"    "3"
+
+
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "bonus_evasion"   "10 15 20"
+      }
+      
+    }
+}

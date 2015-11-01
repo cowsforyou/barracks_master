@@ -16,10 +16,12 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"5"
-		"Ability1"					"city_center_tier2_passive"			// Ability 1
-		"Ability2"					""			// Ability 2
-		"Ability3"					""			// Ability 3
-		"Ability4"					""			// Ability 4
+		"Ability1"					""			// Ability 1
+		"Ability2"					"spawn_hero_vengeful"				// Ability 2
+		"Ability3"					"spawn_hero_nevermore"				// Ability 3
+		"Ability4"					"spawn_hero_beastmaster"			// Ability 4
+		
+		"Ability9"					"city_center_tier2_passive"		
 		"Ability10"					"ability_building"
 		"Ability11"					"ability_building_queue"
 
