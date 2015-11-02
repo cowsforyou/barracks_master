@@ -274,8 +274,8 @@
 		"DOTA_Tooltip_ability_bm_melee_hp_disabled"                           	     	    "Health Vial"
 		"DOTA_Tooltip_ability_bm_melee_hp_Description"                        		       	"Grants additional health."
 
-		"DOTA_Tooltip_modifier_melee_hp_bonus"                                         		"Health Bonus"
-		"DOTA_Tooltip_modifier_melee_hp_bonus_Description"                             		""
+		"DOTA_Tooltip_modifier_melee_health_bonus"                                         	"Health Bonus"
+		"DOTA_Tooltip_modifier_melee_health_bonus_Description"                             	""
 
 		"DOTA_Tooltip_ability_research_bm_melee_hp"                                    		"Health Vial"
 		"DOTA_Tooltip_ability_research_bm_melee_hp_Description"                        		"Increases health of melee creeps."
@@ -321,7 +321,7 @@
 		"DOTA_Tooltip_ability_bm_ranged_damage_damage_bonus"    							"DAMAGE BONUS:"	
 
 		"DOTA_Tooltip_ability_bm_ranged_damage_disabled"                                    "Damage Bonus"
-		"DOTA_Tooltip_ability_bm_ranged_damage_Description"                               	"Grants additional damage"
+		"DOTA_Tooltip_ability_bm_ranged_damage_Description"                               	"Grants additional damage."
 
 		"DOTA_Tooltip_modifier_ranged_damage_bonus"                                         "Damage Bonus"
 		"DOTA_Tooltip_modifier_ranged_damage_bonus_Description"                             ""
@@ -346,8 +346,8 @@
 		"DOTA_Tooltip_ability_bm_ranged_hp_disabled"                           	     	    "Health Vial"
 		"DOTA_Tooltip_ability_bm_ranged_hp_Description"                        		       	"Grants additional health"
 
-		"DOTA_Tooltip_modifier_ranged_hp_bonus"                                         	"Health Bonus"
-		"DOTA_Tooltip_modifier_ranged_hp_bonus_Description"                             	""
+		"DOTA_Tooltip_modifier_ranged_health_bonus"                                         "Health Bonus"
+		"DOTA_Tooltip_modifier_ranged_health_bonus_Description"                             ""
 
 		"DOTA_Tooltip_ability_research_bm_ranged_hp"                                    	"Health Vial"
 		"DOTA_Tooltip_ability_research_bm_ranged_hp_Description"                        	"Increases health of ranged creeps."
@@ -361,6 +361,40 @@
 
 		"DOTA_Tooltip_ability_item_research_bm_ranged_hp"                               	"Cancel Upgrade"
 		"DOTA_Tooltip_ability_item_research_bm_ranged_hp_Description"                   	""
+
+
+		//Air Evasion
+		//-------------------------------------------------------------
+		"DOTA_Tooltip_ability_bm_air_evasion"                                             	"Evasion"
+		"DOTA_Tooltip_ability_bm_air_evasion_Description"                                 	"Provides evasion to Familiars."
+		"DOTA_Tooltip_ability_bm_air_evasion_bonus_evasion"                               	"EVASION PERCENTAGE:"
+
+		"DOTA_Tooltip_ability_bm_air_evasion_disabled"                                    	"Evasion"
+		"DOTA_Tooltip_ability_bm_air_evasion_disabled_Description"                        	"Provides evasion to Familiars."
+
+		"DOTA_Tooltip_ability_research_bm_air_evasion"                                    	"Evasion"
+		"DOTA_Tooltip_ability_research_bm_air_evasion_Description"                        	"Provides evasion to Familiars."
+		"DOTA_Tooltip_ability_research_bm_air_evasion_research_time"                      	"RESEARCH TIME:"
+		"DOTA_Tooltip_ability_research_bm_air_evasion_gold_cost"                          	"GOLD COST:"
+		"DOTA_Tooltip_ability_research_bm_air_evasion_lumber_cost"                        	"LUMBER COST:"
+		"DOTA_Tooltip_ability_research_bm_air_evasion_bonus_evasion_tooltip"              	"EVASION PERCENTAGE:"
+
+		"DOTA_Tooltip_ability_item_research_bm_air_evasion"                               	"Cancel Upgrade"
+		"DOTA_Tooltip_ability_item_research_bm_air_evasion_Description"                   	""
+
+
+		//Mystic Flare
+		//-------------------------------------------------------------
+		"DOTA_Tooltip_ability_luminous_mystic_flare"                                      	"Mystic Flare"
+		"DOTA_Tooltip_ability_luminous_mystic_flare_Description"                          	"Conjure a precise and violent mystical field that lays waste to adversaries. Deals massive damage distributed evenly among all enemies in the area."
+		"DOTA_Tooltip_ability_luminous_mystic_flare_damage"                               	"DAMAGE:"
+
+
+		//Sun Strike
+		//-------------------------------------------------------------
+		"DOTA_Tooltip_ability_luminous_sun_strike"                                        	"Sun Strike"
+		"DOTA_Tooltip_ability_luminous_sun_strike_Description"                            	"Sends a catastrophic ray of fierce energy from the sun at any targeted location, incinerating everything beneath it."
+
 
 
 		//Scout Unlocks
