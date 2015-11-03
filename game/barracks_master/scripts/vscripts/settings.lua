@@ -1,5 +1,7 @@
 -- In this file you can set up all the properties and settings for your game mode.
 
+-- buildings
+REFUND_FACTOR = 1.0						-- when cancelling building production, refund the original value times this factor
 
 ENABLE_HERO_RESPAWN = true              -- Should the heroes automatically respawn on a timer or stay dead until manually respawned
 UNIVERSAL_SHOP_MODE = false             -- Should the main shop contain Secret Shop items as well as regular items

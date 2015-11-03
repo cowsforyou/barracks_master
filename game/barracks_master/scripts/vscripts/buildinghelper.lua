@@ -758,14 +758,19 @@ function BuildingHelper:CancelBuilding(keys)
     DebugPrint("[BH] CancelBuilding "..building:GetUnitName().." "..building:GetEntityIndex())
 
     -- Refund
-    local refund_factor = 0.75
-    local gold_cost = math.floor(GetGoldCost(building) * refund_factor)
-    local lumber_cost = math.floor(GetLumberCost(building) * refund_factor)
+    local gold_cost = math.floor(GetGoldCost(building) * REFUND_FACTOR)
+    local lumber_cost = math.floor(GetLumberCost(building) * REFUND_FACTOR)
+    print(string.format("Refunding %s gold and %s lumber.", gold_cost, lumber_cost))
+    
+    if gold_cost > 0 then
+        hero:ModifyGold(gold_cost, true, 0)
+        PopupGoldGain(hero, gold_cost)
+    end
 
-    hero:ModifyGold(gold_cost, true, 0)
-    ModifyLumber( hero:GetPlayerOwner(), lumber_cost)
-    PopupGoldGain(building, gold_cost)
-    PopupLumber(building, lumber_cost)
+    if lumber_cost > 0 then
+        ModifyLumber( hero:GetPlayerOwner(), lumber_cost)
+        PopupLumber(hero, lumber_cost)
+    end
 
     -- Eject builder
     local builder = building.builder_inside

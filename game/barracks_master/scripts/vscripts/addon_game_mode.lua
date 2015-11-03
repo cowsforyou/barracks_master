@@ -21,6 +21,8 @@ require('barracks/scoreboard_updater')
 require('barracks/last_hits')
 require('barracks/convars')
 
+require('buildings/research')
+
 -- This library allow for easily delayed/timed actions
 require('libraries/timers')
 -- This library can be used for advancted physics/motion/collision of units.  See PhysicsReadme.txt for more information.
