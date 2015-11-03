@@ -28,6 +28,8 @@ function EnqueueUnit( event )
 		end
 	else
 		-- Refund with message
+		local gold_cost = train_ability:GetSpecialValueFor("gold_cost")
+		local lumber_cost = train_ability:GetSpecialValueFor("lumber_cost")
  		PlayerResource:ModifyGold(pID, gold_cost, false, 0)
 		SendErrorMessage(caster:GetPlayerOwnerID(), "#error_queue_full")
 	end
@@ -48,10 +50,11 @@ function DequeueUnit( event )
 	-- Get tied ability
 	local train_ability_name = string.gsub(item_ability_name, "item_", "")
 	local train_ability = caster:FindAbilityByName(train_ability_name)
-	local gold_cost = train_ability:GetGoldCost( train_ability:GetLevel() )
+	local gold_cost = train_ability:GetSpecialValueFor("gold_cost")
+	local lumber_cost = train_ability:GetSpecialValueFor("lumber_cost")
+	--print(string.format("%s (L%s) costs %s gold and %s lumber.", train_ability_name, train_ability:GetLevel(), gold_cost, lumber_cost))
 
 	print("Start dequeue")
-
 	for itemSlot = 0, 5, 1 do
        	local item = caster:GetItemInSlot( itemSlot )
         if item ~= nil then
@@ -68,7 +71,8 @@ function DequeueUnit( event )
 	            
 	            -- Refund ability cost
 	            PlayerResource:ModifyGold(pID, gold_cost, false, 0)
-				print("Refund ",gold_cost)
+	            ModifyLumber(player, lumber_cost)
+				print(string.format("Refunding %s gold and %s lumber.", gold_cost, lumber_cost))
 
 				-- Set not channeling if the cancelled item was the first slot
 				if itemSlot == 0 then
