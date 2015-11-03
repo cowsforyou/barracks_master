@@ -13,7 +13,7 @@
         "01"
       {
         "var_type"              "FIELD_INTEGER"
-        "bonus_evasion_tooltip" "10 15 30"
+        "evasion_bonus"         "10 15 30"
       }
 
         "02"

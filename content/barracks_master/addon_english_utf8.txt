@@ -367,7 +367,7 @@
 		//-------------------------------------------------------------
 		"DOTA_Tooltip_ability_bm_air_evasion"                                             	"Evasion"
 		"DOTA_Tooltip_ability_bm_air_evasion_Description"                                 	"Provides evasion to Familiars."
-		"DOTA_Tooltip_ability_bm_air_evasion_bonus_evasion"                               	"EVASION PERCENTAGE:"
+		"DOTA_Tooltip_ability_bm_air_evasion_evasion_bonus"                               	"EVASION PERCENTAGE:"
 
 		"DOTA_Tooltip_ability_bm_air_evasion_disabled"                                    	"Evasion"
 		"DOTA_Tooltip_ability_bm_air_evasion_disabled_Description"                        	"Provides evasion to Familiars."
@@ -377,7 +377,7 @@
 		"DOTA_Tooltip_ability_research_bm_air_evasion_research_time"                      	"RESEARCH TIME:"
 		"DOTA_Tooltip_ability_research_bm_air_evasion_gold_cost"                          	"GOLD COST:"
 		"DOTA_Tooltip_ability_research_bm_air_evasion_lumber_cost"                        	"LUMBER COST:"
-		"DOTA_Tooltip_ability_research_bm_air_evasion_bonus_evasion_tooltip"              	"EVASION PERCENTAGE:"
+		"DOTA_Tooltip_ability_research_bm_air_evasion_evasion_bonus"              			"EVASION PERCENTAGE:"
 
 		"DOTA_Tooltip_ability_item_research_bm_air_evasion"                               	"Cancel Upgrade"
 		"DOTA_Tooltip_ability_item_research_bm_air_evasion_Description"                   	""

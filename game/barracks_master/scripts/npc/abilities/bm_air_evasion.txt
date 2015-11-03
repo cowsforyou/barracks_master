@@ -6,6 +6,20 @@
 
     "MaxLevel"    "3"
 
+    "Modifiers"
+    {
+      "modifier_melee_armor_bonus"
+      {
+        "Passive"    "1"
+        "IsHidden"   "0"
+        
+        "Properties"
+        {
+            "MODIFIER_PROPERTY_EVASION_CONSTANT"    "%evasion_bonus" // grab from AbilitySpecial
+        }
+        
+      }
+    }
 
     // Special  
     //-------------------------------------------------------------------------------------------------------------
@@ -14,7 +28,7 @@
       "01"
       {
         "var_type"        "FIELD_INTEGER"
-        "bonus_evasion"   "10 15 20"
+        "evasion_bonus"   "10 15 20"
       }
       
     }

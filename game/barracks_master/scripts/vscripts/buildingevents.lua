@@ -61,8 +61,8 @@ function BuildingEvents:OnPlayerPickHero(keys)
   ]]
 
   -- Give Initial Resources
-  hero:SetGold(5300, false)
-  ModifyLumber(player, 5000)
+  hero:SetGold(300, false)
+  ModifyLumber(player, 0)
 
   -- Lumber tick
   Timers:CreateTimer(1, function()

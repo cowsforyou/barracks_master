@@ -64,7 +64,7 @@
 [x] Health Vial not giving intended HP boost.
 [x] Hawk and Boar spawn sounds not firing.
 [x] Tech tree unlock for Hawk not working
-[ ] Own creeps dying gives gold (e.g. techies, boar, hawk)
+[x] Own creeps dying gives gold (e.g. techies, boar, hawk)
 [x] Lumberjacks get stuck
 [ ] Lumber Yard model not giving right collision radius
 [x] Library of Spells not selectable
@@ -73,12 +73,12 @@
 [ ] Ancient rax looks spastic while waiting for first spawn
 [x] HP upgrades not accessible after building research lab
 [ ] Lumber Yard has no portrait
-[ ] Attempting to build existing structues uses up gold (lumber not affected)
+[x] Attempting to build existing structues uses up gold (lumber not affected)
 [x] Rename teams not working
-[ ] Last hit gold animation and sounds playing globally
+[x] Last hit gold animation and sounds playing globally
 [ ] Lumber cost not working for hero spawns
 [x] Mystic flare sounds not working
-[ ] Sun Strike damage not registering
+[x] Sun Strike damage not registering
 [ ] Air evasion research jumps straight to level 3
 
 
