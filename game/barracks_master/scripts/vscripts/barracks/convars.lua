@@ -21,7 +21,7 @@ function BMConvars:RegisterCommands()
   	-- this is already built into the engine
   	--Convars:RegisterCommand( "set_time_of_day", Dynamic_Wrap(self, 'ConvarSetTimeOfDay'), "Sets the time of day to the indicated value.", FCVAR_CHEAT )
     Convars:RegisterCommand("bm_fake_heroes", Dynamic_Wrap(self, 'SpawnFakeHeroes'), "Spawn heroes to fill in missing players.", FCVAR_CHEAT )
-    Convars:RegisterCommand("bm_money", Dynamic_Wrap(self, 'GiveMoney'), "Spawn heroes to fill in missing players.", FCVAR_CHEAT )
+    Convars:RegisterCommand("bm_money", Dynamic_Wrap(self, 'GiveMoney'), "+9999 gold and lumber", FCVAR_CHEAT )
 end
 
 function BMConvars:GiveMoney()
