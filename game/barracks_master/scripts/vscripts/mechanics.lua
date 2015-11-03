@@ -77,7 +77,7 @@ end
 
 -- Returns bool
 function PlayerHasEnoughLumber( player, lumber_cost )
-	local pID = player:GetAssignedHero():GetPlayerID()
+	local pID = player:GetPlayerID()
 
 	if player.lumber < lumber_cost then
 		SendErrorMessage(pID, "#error_not_enough_lumber")

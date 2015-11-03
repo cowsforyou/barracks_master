@@ -11,7 +11,6 @@
     "AbilityGoldCost"               "100"
     "AbilityCooldown"               "5.0"
 
-
     "AbilitySpecial"
     {
         "01"
@@ -30,46 +29,18 @@
         {
             "var_type"              "FIELD_INTEGER"
             "lumber_cost"           "100"
-        }
-        
+        }    
     }
 
     // run this script every time the spell is used
     "OnSpellStart"
     {
-
-        "FireSound"
-        {
-            "EffectName"    "Hero_Beastmaster.Pick"
-            "Target"        "CASTER"
-        }
-
         "RunScript"
         {
-            "ScriptFile"    "barracks/spawner_manual.lua"
+            "ScriptFile"    "barracks/spawner_auto.lua"
             "Function"      "OnSpellStart"
             "creepName"		"hero_beastmaster"
+            "soundName"     "Hero_Beastmaster.Pick"
         }
-    }
-
-    // modifiers are buffs/debuffs, usually associated with abilities
-    "Modifiers"
-    {
-    	"modifier_spawn_lumberjacks_thinker"
-    	{
-    		"Passive"			"1" // start activated
-    		"IsHidden"			"1" // hide the visual buff icon
-
-    		// run this Think() script every 0.25 seconds
-			"ThinkInterval" 	"0.25"
-		    "OnIntervalThink"
-			{
-				"RunScript"
-		        {
-		            "ScriptFile"    "barracks/spawner_manual.lua"
-		            "Function"      "Think"
-		        }
-			}
-   	    }
     }
 }

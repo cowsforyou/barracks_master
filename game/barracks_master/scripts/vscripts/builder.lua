@@ -57,7 +57,8 @@ function Build( event )
 	end
 
 	if maxBuildingCount ~= nil and buildingCounter >= maxBuildingCount then
-		print("MaxBuildingCount limit reached! Aborting build command.")
+		SendErrorMessage(playerID, "#error_max_building_count")
+		--print("MaxBuildingCount limit reached! Aborting build command.")
 		return
 	end
     -- VEGGIESAMA>>>

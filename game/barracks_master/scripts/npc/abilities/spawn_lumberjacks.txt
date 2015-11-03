@@ -50,25 +50,4 @@
             "creepName"		"lumberjack"
         }
     }
-
-    // modifiers are buffs/debuffs, usually associated with abilities
-    "Modifiers"
-    {
-    	"modifier_spawn_lumberjacks_thinker"
-    	{
-    		"Passive"			"1" // start activated
-    		"IsHidden"			"1" // hide the visual buff icon
-
-    		// run this Think() script every 0.25 seconds
-			"ThinkInterval" 	"0.25"
-		    "OnIntervalThink"
-			{
-				"RunScript"
-		        {
-		            "ScriptFile"    "barracks/spawner_manual.lua"
-		            "Function"      "Think"
-		        }
-			}
-   	    }
-    }
 }

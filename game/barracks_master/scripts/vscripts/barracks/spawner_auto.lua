@@ -24,6 +24,9 @@ function OnSpellStart( keys )
     if player == nil then return end -- don't try to spawn creeps from a ghost dummy
 
     local creepCount = ability:GetSpecialValueFor("creep_count")
+    local gold_cost = ability:GetSpecialValueFor("gold_cost") or 0
+    local lumber_cost = ability:GetSpecialValueFor("lumber_cost") or 0
+    local overrideSpawnSync = false
 
     -- check for a stored creepName value on the caster, then use that if it's present
     local creepName = ""
@@ -33,5 +36,30 @@ function OnSpellStart( keys )
         creepName = caster.creepName
     end
 
-    AutoSpawnCreeps(player, ability, creepName, creepCount)
+    -- check lumber (if necessary) and refund gold if lumber is insufficient
+    -- doing this will override the spawn synchronizer, so no thinker should be used
+    if lumber_cost > 0 then
+        if not PlayerHasEnoughLumber(player, lumber_cost) then
+            PlayerResource:ModifyGold(player:GetPlayerID(), gold_cost, false, 0) -- refund gold
+            ability:EndCooldown()
+            --SendErrorMessage(pID, "#error_not_enough_lumber")
+            return
+        else
+            ModifyLumber(player, -lumber_cost)
+            overrideSpawnSync = true
+        end
+    end
+
+    -- including a gold cost overrides the spawn synchronizer
+    if gold_cost > 0 then
+        overrideSpawnSync = true
+    end
+
+    -- play a sound
+    local soundName = keys.soundName
+    if soundName then 
+        EmitSoundOnClient(soundName, player)
+    end
+
+    AutoSpawnCreeps(player, ability, creepName, creepCount, overrideSpawnSync)
 end

@@ -27,7 +27,8 @@ end
 ---------------------------------------------------------------------
 -- Spawn creep groups and manage building ability cooldown
 ---------------------------------------------------------------------
-function AutoSpawnCreeps(player, buildingAbility, creepName, numberToSpawn)
+function AutoSpawnCreeps(player, buildingAbility, creepName, numberToSpawn, overrideSpawnSync)
+    local overrideSpawnSync = overrideSpawnSync or false
     local playerColor = GetPlayerColor(player)
     local team = GetTeamByColor(playerColor)
 
@@ -52,10 +53,12 @@ function AutoSpawnCreeps(player, buildingAbility, creepName, numberToSpawn)
 
     -- don't spawn creeps the first time this ability is used
     -- the -1.0 gives us a little wiggleroom for the Thinker
-    if nextSync == nil or nextSync < (RESPAWN_TIME-1.0) then 
-        return
-    else
-        buildingAbility:StartCooldown(nextSync)
+    if not overrideSpawnSync then
+        if nextSync == nil or nextSync < (RESPAWN_TIME-1.0) then 
+            return
+        else
+            buildingAbility:StartCooldown(nextSync)
+        end
     end
 
     -- create the unit group
