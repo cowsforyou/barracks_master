@@ -221,3 +221,21 @@ function GetTeamByColor(color)
         return DOTA_TEAM_BADGUYS
     end
 end
+
+function GetTeamByUnitName(unitName)
+    if unitName == "npc_dota_hero_sven" or unitName == "npc_dota_hero_templar_assassin" then
+        return DOTA_TEAM_GOODGUYS
+    elseif unitName == "npc_dota_hero_axe" or unitName == "npc_dota_hero_venomancer" then
+        return DOTA_TEAM_BADGUYS
+    end
+end
+
+function IsHeroOnList(heroList, heroName)
+  for k,v in pairs(heroList) do
+    if heroName == k then
+      return true
+    end
+  end
+
+  return false
+end

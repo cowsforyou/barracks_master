@@ -51,6 +51,10 @@ function PopupGoldGain(target, amount)
     PopupNumbers(target, "gold", Vector(255, 200, 33), 2.0, amount, POPUP_SYMBOL_PRE_PLUS, nil)
 end
 
+function PopupGoldGainForPlayer(player, target, amount)
+    PopupNumbers(target, "gold", Vector(255, 200, 33), 2.0, amount, POPUP_SYMBOL_PRE_PLUS, nil, player)
+end
+
 -- e.g. when missing uphill
 function PopupMiss(target)
     PopupNumbers(target, "miss", Vector(255, 0, 0), 1.0, nil, POPUP_SYMBOL_PRE_MISS, nil)
@@ -89,11 +93,16 @@ function PopupLumber(target, amount)
 end
 
 -- Customizable version.
-function PopupNumbers(target, pfx, color, lifetime, number, presymbol, postsymbol)
+function PopupNumbers(target, pfx, color, lifetime, number, presymbol, postsymbol, ownerOverride)
+    local ownerOverride = ownerOverride or false
     local pfxPath = string.format("particles/msg_fx/msg_%s.vpcf", pfx)
-    local pidx
-    if pfx == "gold" or pfx == "luber" then
-        pidx = ParticleManager:CreateParticleForTeam(pfxPath, PATTACH_ABSORIGIN_FOLLOW, target, target:GetTeamNumber())
+    local pidx = nil
+    if pfx == "gold" then
+        if ownerOverride ~= false then
+            pidx = ParticleManager:CreateParticleForPlayer(pfxPath, PATTACH_ABSORIGIN_FOLLOW, target, ownerOverride)
+        else
+            pidx = ParticleManager:CreateParticleForPlayer(pfxPath, PATTACH_ABSORIGIN_FOLLOW, target, target:GetOwner())
+        end
     else
         pidx = ParticleManager:CreateParticle(pfxPath, PATTACH_ABSORIGIN_FOLLOW, target)
     end
