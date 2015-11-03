@@ -22,6 +22,20 @@ function BMConvars:RegisterCommands()
   	--Convars:RegisterCommand( "set_time_of_day", Dynamic_Wrap(self, 'ConvarSetTimeOfDay'), "Sets the time of day to the indicated value.", FCVAR_CHEAT )
     Convars:RegisterCommand("bm_fake_heroes", Dynamic_Wrap(self, 'SpawnFakeHeroes'), "Spawn heroes to fill in missing players.", FCVAR_CHEAT )
     Convars:RegisterCommand("bm_money", Dynamic_Wrap(self, 'GiveMoney'), "+9999 gold and lumber", FCVAR_CHEAT )
+    Convars:RegisterCommand("bm_warpten", Dynamic_Wrap(self, 'WarpTen'), "Instant buildings.", FCVAR_CHEAT )
+end
+
+function BMConvars:WarpTen()
+  local humanPlayer = Convars:GetCommandClient()
+  local humanPlayerID = humanPlayer:GetPlayerID()
+
+  if GameRules.WarpTen == nil or GameRules.WarpTen == 0 then
+    print("Instant buildings activated.")
+    GameRules.WarpTen = 1
+  else
+    print("Instant buildings deactivated.")
+    GameRules.WarpTen = 0
+  end
 end
 
 function BMConvars:GiveMoney()
