@@ -5,7 +5,7 @@
     "AbilityTextureName"            "techies"
     "MaxLevel"                      "1"
 
-    "AbilityGoldCost"               "100"
+    "AbilityGoldCost"               "50"
     "AbilityChannelTime"            "60"
     
     "AbilitySpecial"
