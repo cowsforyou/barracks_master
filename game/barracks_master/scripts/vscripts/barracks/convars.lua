@@ -29,12 +29,12 @@ function BMConvars:WarpTen()
   local humanPlayer = Convars:GetCommandClient()
   local humanPlayerID = humanPlayer:GetPlayerID()
 
-  if GameRules.WarpTen == nil or GameRules.WarpTen == 0 then
+  if GameRules.WarpTen == nil or GameRules.WarpTen == false then
     print("Instant buildings activated.")
-    GameRules.WarpTen = 1
+    GameRules.WarpTen = true
   else
     print("Instant buildings deactivated.")
-    GameRules.WarpTen = 0
+    GameRules.WarpTen = false
   end
 end
 
