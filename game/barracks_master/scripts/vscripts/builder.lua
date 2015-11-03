@@ -34,6 +34,14 @@ function Build( event )
 	local playerID = hero:GetPlayerID()
 	local player = PlayerResource:GetPlayer(playerID)	
 
+	-- If the ability has an AbilityGoldCost, it's impossible to not have enough gold the first time it's cast
+	-- Always refund the gold here, as the building hasn't been placed yet
+	hero:ModifyGold(gold_cost, false, 0)
+
+	if not PlayerHasEnoughLumber( player, lumber_cost ) then
+		return
+	end
+
 	-- <<<VEGGIESAMA
 	-- Set MaxBuildingCount in the ability KV to trigger this check.
 	-- No one player can build more than X building units at a time.
@@ -52,14 +60,6 @@ function Build( event )
 		return
 	end
     -- VEGGIESAMA>>>
-
-	-- If the ability has an AbilityGoldCost, it's impossible to not have enough gold the first time it's cast
-	-- Always refund the gold here, as the building hasn't been placed yet
-	hero:ModifyGold(gold_cost, false, 0)
-
-	if not PlayerHasEnoughLumber( player, lumber_cost ) then
-		return
-	end
 
     -- Makes a building dummy and starts panorama ghosting
 	BuildingHelper:AddBuilding(event)
