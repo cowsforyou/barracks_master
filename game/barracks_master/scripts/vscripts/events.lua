@@ -26,6 +26,7 @@ function GameMode:OnGameRulesStateChange(keys)
   -------------------------
   local newState = GameRules:State_Get()
   if newState == DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP then
+    BMConvars:Setup()
     LastHits:Setup()
     ScoreboardUpdater:Setup()
   elseif newState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
