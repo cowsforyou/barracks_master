@@ -415,7 +415,7 @@
 	
 	    "Modifiers"
 	    {
-	      "modifier_melee_armor_bonus"
+	      "modifier_air_evasion_bonus"
 	      {
 	        "Passive"    "1"
 	        "IsHidden"   "0"

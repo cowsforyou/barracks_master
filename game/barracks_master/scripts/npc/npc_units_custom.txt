@@ -78,77 +78,77 @@
 	//=================================================================================
 	// Building: Aviation Sanctuary
 	//=================================================================================
-		"bm_aviation_sanctuary"
-		{
-			// General
-			//----------------------------------------------------------------
-			"BaseClass"					"npc_dota_creature"
-			"Model"						"models/heroes/beastmaster/beastmaster_bird.vmdl"	// Model.
-			"SoundSet"					"n_creep_Ranged"
-			"Level"						"6"
-			"HealthBarOffset"			"300"
-			"ModelScale" 				"2.2"
-			"HasInventory"				"1"
-			"ConsideredHero"			"1"
+	"bm_aviation_sanctuary"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/heroes/beastmaster/beastmaster_bird.vmdl"	// Model.
+		"SoundSet"					"n_creep_Ranged"
+		"Level"						"1"
+		"HealthBarOffset"			"300"
+		"ModelScale" 				"2.2"
+		"HasInventory"				"1"
+		"ConsideredHero"			"1"
 	
-			// Abilities
-			//----------------------------------------------------------------
-			"AbilityLayout"				"5"
-			"Ability1"					"spawn_air_creeps"			// Ability 1
-			"Ability2"					"research_bm_air_evasion"		
-			"Ability3"					"research_special_air_disabled"			
-			"Ability4"					"research_bm_scout_hawk"		
-			"Ability5"					""			
-			"Ability10"					"ability_building"
-			"Ability11"					"ability_building_queue"
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"5"
+		"Ability1"					"spawn_air_creeps"			// Ability 1
+		"Ability2"					"research_bm_air_evasion"		
+		"Ability3"					"research_special_air_disabled"			
+		"Ability4"					"research_bm_scout_hawk"		
+		"Ability5"					""			
+		"Ability10"					"ability_building"
+		"Ability11"					"ability_building_queue"
 	
-			// Armor
-			//----------------------------------------------------------------
-			"ArmorPhysical"				"4"			// Physical protection.
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"4"			// Physical protection.
 	
-			// Attack
-			//----------------------------------------------------------------
-			"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
-			"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-			"AttackDamageMin"			"0"
-			"AttackDamageMax"			"0"	     
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"	     
 	
-			// Bounds
-			//----------------------------------------------------------------
-			"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
-			"RingRadius"				"120"
-			"CollisionSize"				"80"
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
+		"RingRadius"				"120"
+		"CollisionSize"				"80"
 	
-			// Bounty
-			//----------------------------------------------------------------
-			"BountyXP"					"0"		// Experience earn.
-			"BountyGoldMin"				"400"		// Gold earned min.
-			"BountyGoldMax"				"400"		// Gold earned max.
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"400"		// Gold earned min.
+		"BountyGoldMax"				"400"		// Gold earned max.
 	
-			// Movement
-			//----------------------------------------------------------------
-			"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-			"MovementSpeed"				"0"		// Speed.			
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"0"		// Speed.			
 	
-			// Status
-			//----------------------------------------------------------------
-			"StatusHealth"				"500"		// Base health.
-			"StatusHealthRegen"			"0"			// Health regeneration rate.
-			"StatusMana"				"0"			// Base mana.
-			"StatusManaRegen"			"0"			// Mana regeneration rate.		 
-			
-			// Vision
-			//----------------------------------------------------------------
-			"VisionDaytimeRange"		"900"		// Range of vision during day light.
-			"VisionNighttimeRange"		"600"		// Range of vision at night time.
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"500"		// Base health.
+		"StatusHealthRegen"			"0"			// Health regeneration rate.
+		"StatusMana"				"0"			// Base mana.
+		"StatusManaRegen"			"0"			// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"900"		// Range of vision during day light.
+		"VisionNighttimeRange"		"600"		// Range of vision at night time.
 	
-			// Team
-			//----------------------------------------------------------------
-			"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
-			"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_LIGHT"
-			"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRONG"
-			"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-		}
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_LIGHT"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRONG"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}
 	//=================================================================================
 	// Building: Portal of Heroes
 	//=================================================================================
@@ -448,10 +448,10 @@
 		"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
 		
 	}
-	 //=================================================================================
-	 // Building: Melee Barracks
-	 //=================================================================================
-	 "bm_melee_barracks"
+	//=================================================================================
+	// Building: Melee Barracks
+	//=================================================================================
+	"bm_melee_barracks"
 	{
 		// General
 		//----------------------------------------------------------------
