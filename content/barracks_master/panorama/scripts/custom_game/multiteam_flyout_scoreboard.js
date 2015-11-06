@@ -1,18 +1,36 @@
 "use strict";
 
 var g_ScoreboardHandle = null;
+var nextPressActivatesScoreboard = true;
 
 function SetFlyoutScoreboardVisible( bVisible )
 {
-	$.GetContextPanel().SetHasClass( "flyout_scoreboard_visible", bVisible );
+	// bVisible is true when the button is pressed, false when released.
+	// We want to turn the hold-down behavior into a toggle click, so only listen to button presses.
+	// NOTE: This messes with the default behavior of clicking the UI button, so we should hide/replace it.
 	if ( bVisible )
 	{
-		ScoreboardUpdater_SetScoreboardActive( g_ScoreboardHandle, true );
+		// and the next press will activate the scoreboard
+		if (nextPressActivatesScoreboard)
+		{
+			// set values to true, and next press will deactivate
+			ScoreboardUpdater_SetScoreboardActive( g_ScoreboardHandle, true );
+			$.GetContextPanel().SetHasClass( "flyout_scoreboard_visible", true );			
+			nextPressActivatesScoreboard = false
+		}
+		else
+		{
+			ScoreboardUpdater_SetScoreboardActive( g_ScoreboardHandle, false );
+			$.GetContextPanel().SetHasClass( "flyout_scoreboard_visible", false );	
+			nextPressActivatesScoreboard = true
+		}
 	}
-	else
-	{
-		ScoreboardUpdater_SetScoreboardActive( g_ScoreboardHandle, false );
-	}
+}
+
+// refresh the scoreboard every second when the custom event is called
+function RefreshScoreboard()
+{
+	ScoreboardUpdater_SetScoreboardActive( g_ScoreboardHandle, !nextPressActivatesScoreboard );
 }
 
 (function()
@@ -26,7 +44,8 @@ function SetFlyoutScoreboardVisible( bVisible )
 	};
 	g_ScoreboardHandle = ScoreboardUpdater_InitializeScoreboard( scoreboardConfig, $( "#TeamsContainer" ) );
 	
-	SetFlyoutScoreboardVisible( false );
+	SetFlyoutScoreboardVisible( true );
 	
+	GameEvents.Subscribe( "RefreshScoreboard", RefreshScoreboard );
 	$.RegisterEventHandler( "DOTACustomUI_SetFlyoutScoreboardVisible", $.GetContextPanel(), SetFlyoutScoreboardVisible );
 })();

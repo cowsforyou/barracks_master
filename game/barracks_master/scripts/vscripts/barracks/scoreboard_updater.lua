@@ -26,4 +26,6 @@ function ScoreboardUpdater:Update()
 		
 		CustomNetTables:SetTableValue("scores", tostring(playerID), values)
 	end
+
+	CustomGameEventManager:Send_ServerToAllClients("RefreshScoreboard", {})
 end

@@ -3,7 +3,7 @@
 // Handle Right Button events
 function OnRightButtonPressed()
 {
-	$.Msg("OnRightButtonPressed")
+	//$.Msg("OnRightButtonPressed")
 
 	var iPlayerID = Players.GetLocalPlayer();
 	var mainSelected = Players.GetLocalPlayerPortraitUnit();
