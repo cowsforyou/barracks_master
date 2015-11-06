@@ -18,8 +18,11 @@
 	
 	"addonname"										"Barebones"
 
-	"custom_end_screen_legend_cs"				"CS"
-	"custom_end_screen_legend_networth"			"NET WORTH"
-	"custom_end_screen_legend_gold"				"GOLD"
-	"custom_end_screen_legend_lumber"			"LUMBER"
+	"custom_end_screen_legend_cs"					"KILLS"
+	"custom_end_screen_legend_networth"				"NET WORTH"
+	"custom_end_screen_legend_gold"					"GOLD"
+	"custom_end_screen_legend_lumber"				"LUMBER"
+
+	"error_max_building_count"						"Structure Already Built"
+	"error_not_enough_lumber"						"Not Enough Lumber"
 }

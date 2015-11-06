@@ -76,10 +76,14 @@
 [x] Attempting to build existing structues uses up gold (lumber not affected)
 [x] Rename teams not working
 [x] Last hit gold animation and sounds playing globally
-[ ] Lumber cost not working for hero spawns
+[x] Lumber cost not working for hero spawns
 [x] Mystic flare sounds not working
 [x] Sun Strike damage not registering
-[ ] Air evasion research jumps straight to level 3
+[x] Air evasion research jumps straight to level 3
+[ ] Sound not firing when heroes are spawned from Portal of Heroes
+[ ] Area behind dire ancient is always visible to radiant
+[ ] Chaos Meteor not damaging buildings
+[ ] Change tint of sun stirke particle and precache correct particle
 
 
 -------------------------------------
@@ -147,12 +151,6 @@
 															-Chaos Meteor 								-Sun Strike
 															-Call Down 									-Guardian Angel
 
-
-
-
-
--All level 3 upgrades will require lumber
--All level 3 upgrades will be a comparatively large increase
 
 
 ---------------------------------------------------
@@ -302,7 +300,7 @@ Techies Bounty: 80
 Techies Cost: 	150
 Techies HP: 	5
 Techies Armor: 	0
-
+A
 Axe/Sven
 HP: 			10
 Armor: 			2
@@ -313,3 +311,10 @@ HP: 			6
 Armor: 			2
 Damage: 		3
 
+TBD:
+change vs cost 		 : 150 gold, 50 lumber
+change nevermore cost: 50 gold, 150 lumber
+
+add chain frost, chaos meteor, modify sun strike
+
+remove all specials from melee ranged siege air
