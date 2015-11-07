@@ -341,10 +341,14 @@ function CancelRepair( event )
 		end
 	end
 
-	ability.cancelled = true
-	caster.state = "idle"
-	
-	ToggleOff(ability)
+	if ability then 
+		ability.cancelled = true
+		caster.state = "idle"
+		
+		ToggleOff(ability)
+	else
+		print("Ability nil. Repair borked. Fix later.")
+	end
 end
 
 -- Repair Ratios

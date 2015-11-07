@@ -83,7 +83,7 @@ function CheckAbilityRequirements( unit, player )
 							local ability = unit:FindAbilityByName(ability_name)
 							local newLevel = GetResearchLevel(player, "research_" .. ability_name) or 1
 
-							print(ability_name .. ": isUpgradeableResearchAbility? " .. tostring(isUpgradeableResearchAbility))
+							--print(ability_name .. ": isUpgradeableResearchAbility? " .. tostring(isUpgradeableResearchAbility))
 							-- Set the new ability level
 							if not isUpgradeableResearchAbility then
 								ability:SetLevel(newLevel)
