@@ -112,7 +112,7 @@
 		"DOTA_Tooltip_ability_build_bm_ancient_barracks_lumber_cost"                       	"LUMBER COST:"
 
 		"DOTA_Tooltip_ability_build_bm_ancient_barracks_disabled"                           "Ancient Barracks"
-		"DOTA_Tooltip_ability_build_bm_ancient_barracks_disabled_Description"               "<b><font color='#eedd44'>Requires:\n - Siege Barracks</font></b>\n"
+		"DOTA_Tooltip_ability_build_bm_ancient_barracks_disabled_Description"               "<b><font color='#eedd44'>Requires:\n - Siege Barracks\n - Tech Lab</font></b>\n"
 
 
 		"bm_tech_lab"                                                               		"Tech Lab"
@@ -619,7 +619,7 @@
 		"DOTA_Tooltip_ability_build_dragon_tower_disabled_Description"                    "<b><font color='#eedd44'>Requires:\n - Tech Center\n - City Center Tier 2</font></b>\n"
 
 		"DOTA_Tooltip_ability_repair"                                                     "Repair"
-		"DOTA_Tooltip_ability_repair_Description"                                         "Repairs structures at the cost of resources."
+		"DOTA_Tooltip_ability_repair_Description"                                         "Repair structures."
 
 		"DOTA_Tooltip_ability_research_dark_tower"                                        "Research Dark Tower"
 		"DOTA_Tooltip_ability_research_dark_tower_Description"                            "Allows Dragon Towers to be upgraded into Dark Towers"

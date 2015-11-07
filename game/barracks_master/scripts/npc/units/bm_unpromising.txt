@@ -16,7 +16,7 @@
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"5"
-	"Ability1"					""
+	"Ability1"					"unpromising_chain_frost"
 	"Ability2"					""
 	"Ability3"					""
 	"Ability4"					""

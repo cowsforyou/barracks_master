@@ -21,7 +21,7 @@
 
 	"UnitName"						"bm_purifier"
 	"AbilityCooldown"				"0"
-	"AbilityGoldCost"				"400"
+	"AbilityGoldCost"				"50"
 	"MaxBuildingCount"				"1"
 	// End of BuildingHelper info
 
@@ -35,7 +35,7 @@
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"gold_cost"				"400"
+			"gold_cost"				"50"
 		}
 		"03"
 		{

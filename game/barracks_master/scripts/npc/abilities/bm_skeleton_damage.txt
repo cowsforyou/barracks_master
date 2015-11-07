@@ -4,7 +4,7 @@
     "BaseClass"             "ability_datadriven"
     "AbilityTextureName"    "damage"
 
-    "MaxLevel"    "1"
+    "MaxLevel"    "2"
 
     "Modifiers"
     {
@@ -28,7 +28,7 @@
       "01"
       {
         "var_type"        "FIELD_INTEGER"
-        "damage_bonus"     "20"
+        "damage_bonus"     "20 35"
       }
       
     }

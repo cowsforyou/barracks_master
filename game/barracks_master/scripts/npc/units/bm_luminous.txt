@@ -17,7 +17,7 @@
 	//----------------------------------------------------------------
 	"AbilityLayout"				"5"
 	"Ability1"					"luminous_mystic_flare"
-	"Ability2"					"invoker_sun_strike"
+	"Ability2"					"luminous_sun_strike"
 	"Ability3"					""
 	"Ability4"					""
 	"Ability5"					""

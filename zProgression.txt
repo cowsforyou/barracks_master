@@ -26,7 +26,7 @@
 [x] Enable lumber harvesting
 [x] Enable Lumber Yard to spawn Lumberjacks
 [x] Replace city center default spawn to bm_melee_barracks
-[ ] Code max lumberjacks to be 7
+[ ] Code max lumberjacks to be 10
 
 
 -- Player Mechanics --
@@ -41,14 +41,15 @@
 -- UI --
 
 [x] Display last hits and gold earned per player in-game
-[ ] Setup net worth calculation for scoreboard
-[ ] Permanently display scoreboard with autorefresh function
+[x] Setup net worth calculation for scoreboard
+[x] Permanently display scoreboard with autorefresh function
 [ ] Announce when a hero spawns
-[ ] Show error message when player tries to build the same building
+[x] Show error message when player tries to build the same building
 [x] Learn how to locate building models
 [ ] Clean up team and hero selection
 [x] Fix minimap
 [ ] Change team colors on loading screen
+[ ] Add pregame tutorial
 
 
 -- Advanced --
@@ -83,7 +84,21 @@
 [ ] Sound not firing when heroes are spawned from Portal of Heroes
 [ ] Area behind dire ancient is always visible to radiant
 [ ] Chaos Meteor not damaging buildings
-[ ] Change tint of sun stirke particle and precache correct particle
+[ ] Change tint of sun stirke particle and precache correct particled research
+[x] PA and Sven spawns at the same place, Veno and Axe spawns at the same place
+[ ] Tooltip update for repair not requiring resources
+
+
+Balance
+[ ] Heroes unable to attack
+[ ] Enable lumber upgrade on purifier
+
+
+Tutorial stuff
+[ ] Building toggle
+[ ] Repair
+[ ] Barracks spawn creeps
+[ ] Explain about farm (creep kills)
 
 
 -------------------------------------

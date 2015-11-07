@@ -20,8 +20,8 @@
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
-	"Ability1" 					"repair"
-	"Ability2" 					"lumberjack_harvest"
+	"Ability1" 					"lumberjack_harvest"
+	"Ability2" 					""
 	"Ability3" 					""
 	"Ability4" 					""
 	"Ability5"					""

@@ -46,11 +46,10 @@ function sun_strike_damage( keys )
     local target_location = target:GetAbsOrigin() 
     local ability = keys.ability
     local ability_level = ability:GetLevel() - 1
-    local exort_level = caster:FindAbilityByName("invoker_exort_datadriven"):GetLevel() - 1
 
     -- Ability variables
     local area_of_effect = ability:GetLevelSpecialValueFor("area_of_effect", ability_level)
-    local damage = ability:GetLevelSpecialValueFor("damage", exort_level)
+    local damage = ability:GetLevelSpecialValueFor("damage", ability_level)
 
     -- Targeting variables
     local target_teams = ability:GetAbilityTargetTeam()
