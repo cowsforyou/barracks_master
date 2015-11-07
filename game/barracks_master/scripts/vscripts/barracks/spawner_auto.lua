@@ -58,7 +58,7 @@ function OnSpellStart( keys )
     -- play a sound
     local soundName = keys.soundName
     if soundName then 
-        EmitSoundOnClient(soundName, player)
+        EmitSoundOn(soundName, caster)
     end
 
     AutoSpawnCreeps(player, ability, creepName, creepCount, overrideSpawnSync)
