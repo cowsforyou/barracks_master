@@ -18,19 +18,19 @@ function BuildingEvents:OnPlayerPickHero(keys)
 
   -- Create city center in front of the hero
   local position = hero:GetAbsOrigin() + hero:GetForwardVector() * 300
-  local city_center_name = "bm_melee_barracks"
-  local building = BuildingHelper:PlaceBuilding(player, city_center_name, position, true, 5) 
+  local starting_rax_name = "bm_melee_barracks"
+  local building = BuildingHelper:PlaceBuilding(player, starting_rax_name, position, true, 5) 
 
   -- Set health to test repair
   building:SetHealth(building:GetMaxHealth()/3)
 
   -- These are required for repair to know how many resources the building takes
-  building.GoldCost = 100
-  building.LumberCost = 100
-  building.BuildTime = 15
+  building.GoldCost = GameRules.AbilityKV["build_"..starting_rax_name]["AbilityGoldCost"]
+  building.LumberCost = 100 -- not right
+  building.BuildTime = 15 -- not right
 
   -- Add the building to the player structures list
-  player.buildings[city_center_name] = 1
+  player.buildings[starting_rax_name] = 1
   table.insert(player.structures, building)
 
   CheckAbilityRequirements( hero, player )

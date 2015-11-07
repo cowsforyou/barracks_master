@@ -19,7 +19,7 @@ function ScoreboardUpdater:Update()
 
 		local values = {
 			cs = PlayerResource:GetLastHits(playerID),
-			netWorth = 0,
+			netWorth = self:GetNetWorth(player),
 			lumber = player.lumber,
 			gold = PlayerResource:GetGold(playerID),
 		}
@@ -28,4 +28,26 @@ function ScoreboardUpdater:Update()
 	end
 
 	CustomGameEventManager:Send_ServerToAllClients("RefreshScoreboard", {})
+end
+
+function ScoreboardUpdater:GetNetWorth(player)
+	if player.structures == nil then return 0 end
+
+	local netWorth = 0
+	--PrintTable(player)
+
+	for _,structure in pairs(player.structures) do
+		netWorth = netWorth + GetGoldCost(structure)
+	end
+
+	for _,unit in pairs(player.units) do
+		netWorth = netWorth + GetGoldCost(unit)
+	end
+
+	for upgradeName,upgradeLevel in pairs(player.upgrades) do
+		local costString = GameRules.AbilityKV[upgradeName]["AbilityGoldCost"]
+		--print(upgradeName .. ": " .. costString)
+	end
+
+	return netWorth
 end

@@ -15,6 +15,7 @@ function ManualSpawnCreeps(player, building, buildingAbility, creepName)
     ApplyColorToUnit(unit, playerColor)
 
     -- Building Helper tie-ins
+    unit.GoldCost = buildingAbility:GetSpecialValueFor("gold_cost") or 0    
     CheckAbilityRequirements(unit, player) -- upgrades on spawn
     table.insert(player.units, unit)       -- adds unit to player's units table
 
@@ -68,6 +69,7 @@ function AutoSpawnCreeps(player, buildingAbility, creepName, numberToSpawn, over
         ApplyColorToUnit(unit, playerColor)
        
         -- Building Helper tie-ins
+        unit.GoldCost = buildingAbility:GetSpecialValueFor("gold_cost") or 0
         CheckAbilityRequirements(unit, player) -- upgrades on spawn
         table.insert(player.units, unit)       -- adds unit to player's units table
 
