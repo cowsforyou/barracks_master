@@ -13,7 +13,7 @@
 	"SelectionGroup"            "Peasants"
 	"SoundSet"					"Hero_Shredder"
 
-	"UnitLabel"					"builder"
+	"UnitLabel"					"lumberjack"
 	
 	"PathfindingSearchDepthScale" "0.5"
 	

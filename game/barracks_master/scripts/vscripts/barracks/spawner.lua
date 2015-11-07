@@ -22,6 +22,18 @@ function ManualSpawnCreeps(player, building, buildingAbility, creepName)
     -- unstick
     Timers:CreateTimer(0.03, function()
         FindClearSpaceForUnit(unit, pos, true)
+
+        -- if lumberjack, auto-harvest from nearest lumber yard on spawn
+        if creepName == "lumberjack" then
+            local lumberyard = buildingAbility:GetCaster()
+            local harvestAbility = unit:FindAbilityByName("lumberjack_harvest")
+            local order = {}
+            order["UnitIndex"] = unit:GetEntityIndex()
+            order["TargetIndex"] = lumberyard:GetEntityIndex()
+            order["AbilityIndex"] = harvestAbility:entindex()
+            order["OrderType"] = DOTA_UNIT_ORDER_CAST_TARGET
+            ExecuteOrderFromTable(order)
+        end
     end)
 end
 

@@ -3,7 +3,7 @@
 // Handle Right Button events
 function OnRightButtonPressed()
 {
-	//$.Msg("OnRightButtonPressed")
+	$.Msg("OnRightButtonPressed")
 
 	var iPlayerID = Players.GetLocalPlayer();
 	var mainSelected = Players.GetLocalPlayerPortraitUnit();
@@ -36,12 +36,41 @@ function OnRightButtonPressed()
 			
 	}
 
+    if ( IsLumberjack( mainSelected ))
+    {
+        $.Msg("Is lumberjack")
+        // Cancel BH
+        SendCancelCommand();
+
+        // If it's mousing over entities
+        if (mouseEntities.length > 0)
+        {
+            for ( var e of mouseEntities )
+            {
+                // Repair rightclick
+                if ( IsLumberyard(e.entityIndex) && Entities.IsControllableByPlayer( e.entityIndex, iPlayerID ) ){
+                    $.Msg("Player "+iPlayerID+" clicked on his Lumberyard")
+                    GameEvents.SendCustomGameEventToServer( "harvest_order", { pID: iPlayerID, mainSelected: mainSelected, targetIndex: e.entityIndex, queue: pressedShift })
+                    return true;
+                }
+                return false;
+            }
+        }
+            
+    }
+
+
 	return false;
 }
 
 // Builders require the "builder" label in its unit definition
 function IsBuilder( entIndex ) {
 	return (Entities.GetUnitLabel( entIndex ) == "builder")
+}
+
+// Lumberjacks require the "lumberjack" label in its unit definition
+function IsLumberjack( entIndex ) {
+    return (Entities.GetUnitLabel( entIndex ) == "lumberjack")
 }
 
 // Main mouse event callback

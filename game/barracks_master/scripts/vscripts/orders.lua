@@ -117,6 +117,27 @@ function GameMode:RepairOrder( event )
     end
 end
 
+------------------------------------------------
+--             Harvest Right-Click             --
+------------------------------------------------
+function GameMode:HarvestOrder( event )
+    local pID = event.pID
+    local entityIndex = event.mainSelected
+    local targetIndex = event.targetIndex
+    local building = EntIndexToHScript(targetIndex)
+    local selectedEntities = GetSelectedEntities(pID)
+    local queue = tobool(event.queue)
+
+    local unit = EntIndexToHScript(entityIndex)
+    local harvest_ability = unit:FindAbilityByName("lumberjack_harvest")
+
+    -- Repair
+    if harvest_ability and harvest_ability:IsFullyCastable() and not harvest_ability:IsHidden() then
+        ExecuteOrderFromTable({ UnitIndex = entityIndex, OrderType = DOTA_UNIT_ORDER_CAST_TARGET, TargetIndex = targetIndex, AbilityIndex = harvest_ability:GetEntityIndex(), Queue = queue})
+    end
+end
+
+
 ORDERS = {
     [0] = "DOTA_UNIT_ORDER_NONE",
     [1] = "DOTA_UNIT_ORDER_MOVE_TO_POSITION",

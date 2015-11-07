@@ -105,6 +105,11 @@ function IsCustomBuilding( entityIndex ){
 	return (ability_building != -1)
 }
 
+function IsLumberyard (entityIndex) {
+	var buildingName = Entities.GetUnitName( entityIndex )
+	return (buildingName == "bm_lumber_yard")
+}
+
 function AddToSelection ( args ) {
 	var entIndex = args.ent_index
 
