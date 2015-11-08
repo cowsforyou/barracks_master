@@ -27,6 +27,7 @@
 [x] Enable Lumber Yard to spawn Lumberjacks
 [x] Replace city center default spawn to bm_melee_barracks
 [ ] Code max lumberjacks to be 10
+[ ] Code in purifier
 
 
 -- Player Mechanics --
@@ -50,6 +51,7 @@
 [x] Fix minimap
 [ ] Change team colors on loading screen
 [ ] Add pregame tutorial
+[ ] Have additional gold/lumber earned pop up ontop of purifier
 
 
 -- Advanced --
@@ -88,6 +90,8 @@
 [x] PA and Sven spawns at the same place, Veno and Axe spawns at the same place
 [x] Tooltip update for repair not requiring resources
 [ ] Chain frost has no hotkey
+[ ] Net worth should include current gold
+[ ] Give brief description on the different barracks and strength of creeps
 
 
 Balance
@@ -99,7 +103,7 @@ Tutorial stuff
 [ ] Building toggle
 [ ] Repair
 [ ] Barracks spawn creeps
-[ ] Explain about farm (creep kills)
+[ ] Explain about farm (creep kills) + tower kills dont give gold
 
 
 -------------------------------------

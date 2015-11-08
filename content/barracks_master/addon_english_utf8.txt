@@ -150,13 +150,13 @@
 
 		"bm_purifier"                                                             			"Purifier"
 		"DOTA_Tooltip_ability_build_bm_purifier"                        					"Purifier"
-		"DOTA_Tooltip_ability_build_bm_purifier_Description"                  	    		"Increases resource earned by 25%"
+		"DOTA_Tooltip_ability_build_bm_purifier_Description"                  	    		"Increases gold earned by 25 percent."
 		"DOTA_Tooltip_ability_build_bm_purifier_build_time"                  		    	"BUILD TIME:"
 		"DOTA_Tooltip_ability_build_bm_purifier_gold_cost"                       	 		"GOLD COST:"
 		"DOTA_Tooltip_ability_build_bm_purifier_lumber_cost"                      			"LUMBER COST:"
 
 		"DOTA_Tooltip_ability_build_bm_purifier_disabled"                         			"Purifier"
-		"DOTA_Tooltip_ability_build_bm_purifier_disabled_Description"             			"Increases resource earned by 25%.\n<b><font color='#eedd44'>Requires:\n - Tech Lab</font></b>\n"
+		"DOTA_Tooltip_ability_build_bm_purifier_disabled_Description"             			"Increases gold earned by 25 percent.\n<b><font color='#eedd44'>Requires:\n - Tech Lab</font></b>\n"
 
 
 		"bm_library"                                                             			"Library of Spells"

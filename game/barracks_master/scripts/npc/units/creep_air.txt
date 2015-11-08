@@ -14,8 +14,8 @@
         // Abilities
         //----------------------------------------------------------------
         "AbilityLayout"             "4"
-        "Ability1"                  "special_air_disabled"          // Ability 1.
-        "Ability2"                  "bm_air_evasion_disabled"          // Ability 2.
+        "Ability1"                  "bm_air_evasion_disabled"          // Ability 1.
+        "Ability2"                  ""          // Ability 2.
         "Ability3"                  ""          // Ability 3.
         "Ability4"                  ""          // Ability 4.
         "Ability5"                  ""          // Ability 5.
@@ -75,8 +75,8 @@
         
         // Vision
         //----------------------------------------------------------------
-        "VisionDaytimeRange"        "900"       // Range of vision during day light.
-        "VisionNighttimeRange"      "600"       // Range of vision at night time.
+        "VisionDaytimeRange"        "1100"       // Range of vision during day light.
+        "VisionNighttimeRange"      "800"       // Range of vision at night time.
         
         //Inventory
     }   

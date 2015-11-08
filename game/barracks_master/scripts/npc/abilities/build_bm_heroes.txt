@@ -10,7 +10,7 @@
 	// BuildingHelper info
 	"Building"						"1" //bool
 	"BuildingSize"					"4" 
-	"BuildTime"						"5.0"
+	"BuildTime"						"40.0"
 	"AbilityCastRange"				"200"
 	"UpdateHealth"					"1" //bool
 	"Scale"							"0" //bool
@@ -30,7 +30,7 @@
 		"01"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"build_time"			"5.0"
+			"build_time"			"40.0"
 		}
 		"02"
 		{

@@ -619,7 +619,7 @@
 		"Ability1"					"spawn_ranged_creeps"
 		"Ability2"					"research_bm_ranged_armor"
 		"Ability3"					"research_bm_ranged_damage"
-		"Ability4"					"research_bm_ranged_hp_disabled"
+		"Ability4"					""
 		"Ability5"					""
 		"Ability6"					""
 		"Ability10"					"ability_building"
@@ -1128,8 +1128,8 @@
 	        // Abilities
 	        //----------------------------------------------------------------
 	        "AbilityLayout"             "4"
-	        "Ability1"                  "special_air_disabled"          // Ability 1.
-	        "Ability2"                  "bm_air_evasion_disabled"          // Ability 2.
+	        "Ability1"                  "bm_air_evasion_disabled"          // Ability 1.
+	        "Ability2"                  ""          // Ability 2.
 	        "Ability3"                  ""          // Ability 3.
 	        "Ability4"                  ""          // Ability 4.
 	        "Ability5"                  ""          // Ability 5.
@@ -1189,8 +1189,8 @@
 	        
 	        // Vision
 	        //----------------------------------------------------------------
-	        "VisionDaytimeRange"        "900"       // Range of vision during day light.
-	        "VisionNighttimeRange"      "600"       // Range of vision at night time.
+	        "VisionDaytimeRange"        "1100"       // Range of vision during day light.
+	        "VisionNighttimeRange"      "800"       // Range of vision at night time.
 	        
 	        //Inventory
 	    }   
@@ -1444,7 +1444,7 @@
 	        "Ability1"                  "bm_melee_armor_disabled"           // Ability 1.
 	        "Ability2"                  "bm_melee_damage_disabled"          // Ability 2.
 	        "Ability3"                  "bm_melee_hp_disabled"              // Ability 3.
-	        "Ability4"                  "special_melee_disabled"          // Ability 4.
+	        "Ability4"                  ""          // Ability 4.
 	        "Ability5"                  ""          // Ability 5.
 	        "Ability6"                  ""          // Ability 6 - Extra.
 	        "Ability7"                  ""          // Ability 7 - Extra.
@@ -1618,7 +1618,7 @@
         // Abilities
         //----------------------------------------------------------------
         
-        "Ability1"                  "special_siege_disabled"          // Ability 1.
+        "Ability1"                  ""          // Ability 1.
         "Ability2"                  ""          // Ability 2.
         "Ability3"                  ""          // Ability 3.
         "Ability4"                  ""          // Ability 4.
