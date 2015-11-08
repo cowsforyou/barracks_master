@@ -48,8 +48,8 @@
 			// Bounty
 			//----------------------------------------------------------------
 			"BountyXP"					"0"			// Experience earn.
-			"BountyGoldMin"				"500"		// Gold earned min.
-			"BountyGoldMax"				"500"		// Gold earned max.
+			"BountyGoldMin"				"200"		// Gold earned min.
+			"BountyGoldMax"				"200"		// Gold earned max.
 	
 			// Movement
 			//----------------------------------------------------------------
@@ -58,7 +58,7 @@
 	
 			// Status
 			//----------------------------------------------------------------
-			"StatusHealth"				"900"		// Base health.
+			"StatusHealth"				"1500"		// Base health.
 			"StatusHealthRegen"			"0"		// Health regeneration rate.
 			"StatusMana"				"600"		// Base mana.
 			"StatusManaRegen"			"0"		// Mana regeneration rate.		 
@@ -104,7 +104,7 @@
 	
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"4"			// Physical protection.
+		"ArmorPhysical"				"5"			// Physical protection.
 	
 		// Attack
 		//----------------------------------------------------------------
@@ -122,8 +122,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"0"		// Experience earn.
-		"BountyGoldMin"				"400"		// Gold earned min.
-		"BountyGoldMax"				"400"		// Gold earned max.
+		"BountyGoldMin"				"250"		// Gold earned min.
+		"BountyGoldMax"				"250"		// Gold earned max.
 	
 		// Movement
 		//----------------------------------------------------------------
@@ -132,7 +132,7 @@
 	
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"500"		// Base health.
+		"StatusHealth"				"900"		// Base health.
 		"StatusHealthRegen"			"0"			// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.		 
@@ -178,7 +178,7 @@
 	
 			// Armor
 			//----------------------------------------------------------------
-			"ArmorPhysical"				"1"			// Physical protection.
+			"ArmorPhysical"				"5"			// Physical protection.
 	
 			// Attack
 			//----------------------------------------------------------------
@@ -196,9 +196,9 @@
 	
 			// Bounty
 			//----------------------------------------------------------------
-			"BountyXP"					"41"		// Experience earn.
-			"BountyGoldMin"				"23"		// Gold earned min.
-			"BountyGoldMax"				"29"		// Gold earned max.
+			"BountyXP"					"0"		// Experience earn.
+			"BountyGoldMin"				"300"		// Gold earned min.
+			"BountyGoldMax"				"300"		// Gold earned max.
 	
 			// Movement
 			//----------------------------------------------------------------
@@ -207,15 +207,15 @@
 	
 			// Status
 			//----------------------------------------------------------------
-			"StatusHealth"				"400"		// Base health.
+			"StatusHealth"				"800"		// Base health.
 			"StatusHealthRegen"			"0.5"		// Health regeneration rate.
 			"StatusMana"				"0"			// Base mana.
 			"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 			
 			// Vision
 			//----------------------------------------------------------------
-			"VisionDaytimeRange"		"800"		// Range of vision during day light.
-			"VisionNighttimeRange"		"800"		// Range of vision at night time.
+			"VisionDaytimeRange"		"700"		// Range of vision during day light.
+			"VisionNighttimeRange"		"400"		// Range of vision at night time.
 	
 			// Team
 			//----------------------------------------------------------------
@@ -266,8 +266,8 @@
 		
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyGoldMin"				"300"
-		"BountyGoldMax"				"300"
+		"BountyGoldMin"				"400"
+		"BountyGoldMax"				"400"
 		
 		// Bounds
 		//----------------------------------------------------------------
@@ -282,15 +282,15 @@
 		
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"100"
+		"StatusHealth"				"600"
 		"StatusHealthRegen"			"0"
 		"StatusMana"				"100"
 		"StatusManaRegen"			"0"
 		
 		// Vision
 		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"900"
-		"VisionNighttimeRange"		"600"
+		"VisionDaytimeRange"		"700"
+		"VisionNighttimeRange"		"400"
 		
 		// Team
 		//----------------------------------------------------------------
@@ -430,15 +430,15 @@
 		
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"100"
+		"StatusHealth"				"1200"
 		"StatusHealthRegen"			"0"
 		"StatusMana"				"100"
 		"StatusManaRegen"			"0"
 		
 		// Vision
 		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"900"
-		"VisionNighttimeRange"		"600"
+		"VisionDaytimeRange"		"700"
+		"VisionNighttimeRange"		"400"
 		
 		// Team
 		//----------------------------------------------------------------
@@ -489,8 +489,8 @@
 		
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyGoldMin"				"300"
-		"BountyGoldMax"				"300"
+		"BountyGoldMin"				"200"
+		"BountyGoldMax"				"200"
 		
 		// Bounds
 		//----------------------------------------------------------------
@@ -505,7 +505,7 @@
 		
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"800"
+		"StatusHealth"				"1500"
 		"StatusHealthRegen"			"0"
 		"StatusMana"				"100"
 		"StatusManaRegen"			"0"
@@ -564,8 +564,8 @@
 		
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyGoldMin"				"300"
-		"BountyGoldMax"				"300"
+		"BountyGoldMin"				"400"
+		"BountyGoldMax"				"400"
 		
 		// Bounds
 		//----------------------------------------------------------------
@@ -580,15 +580,15 @@
 		
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"100"
+		"StatusHealth"				"700"
 		"StatusHealthRegen"			"0"
 		"StatusMana"				"100"
 		"StatusManaRegen"			"0"
 		
 		// Vision
 		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"900"
-		"VisionNighttimeRange"		"600"
+		"VisionDaytimeRange"		"700"
+		"VisionNighttimeRange"		"400"
 		
 		// Team
 		//----------------------------------------------------------------
@@ -639,8 +639,8 @@
 		
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyGoldMin"				"300"
-		"BountyGoldMax"				"300"
+		"BountyGoldMin"				"200"
+		"BountyGoldMax"				"200"
 		
 		// Bounds
 		//----------------------------------------------------------------
@@ -655,7 +655,7 @@
 		
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"600"
+		"StatusHealth"				"1500"
 		"StatusHealthRegen"			"0"
 		"StatusMana"				"100"
 		"StatusManaRegen"			"0"
@@ -712,8 +712,8 @@
 		
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyGoldMin"				"400"
-		"BountyGoldMax"				"400"
+		"BountyGoldMin"				"250"
+		"BountyGoldMax"				"250"
 		
 		// Bounds
 		//----------------------------------------------------------------
@@ -728,7 +728,7 @@
 		
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"600"
+		"StatusHealth"				"1500"
 		"StatusHealthRegen"			"0"
 		"StatusMana"				"100"
 		"StatusManaRegen"			"0"
@@ -785,8 +785,8 @@
 		
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyGoldMin"				"0.0"
-		"BountyGoldMax"				"0.0"
+		"BountyGoldMin"				"150.0"
+		"BountyGoldMax"				"150.0"
 		
 		// Bounds
 		//----------------------------------------------------------------
@@ -801,15 +801,15 @@
 		
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"100"
+		"StatusHealth"				"400"
 		"StatusHealthRegen"			"0"
 		"StatusMana"				"100"
 		"StatusManaRegen"			"0"
 		
 		// Vision
 		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"900"
-		"VisionNighttimeRange"		"600"
+		"VisionDaytimeRange"		"700"
+		"VisionNighttimeRange"		"400"
 		
 		// Team
 		//----------------------------------------------------------------
@@ -858,14 +858,14 @@
 		
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyGoldMin"				"0.0"
-		"BountyGoldMax"				"0.0"
+		"BountyGoldMin"				"200.0"
+		"BountyGoldMax"				"200.0"
 		
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
-		"RingRadius"				"200"
-		"CollisionSize"				"200"
+		"RingRadius"				"400"
+		"CollisionSize"				"400"
 			
 		// Movement
 		//----------------------------------------------------------------
@@ -874,15 +874,15 @@
 		
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"2500"
+		"StatusHealth"				"900"
 		"StatusHealthRegen"			"0"
 		"StatusMana"				"100"
 		"StatusManaRegen"			"0"
 		
 		// Vision
 		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"900"
-		"VisionNighttimeRange"		"600"
+		"VisionDaytimeRange"		"700"
+		"VisionNighttimeRange"		"400"
 		
 		// Team
 		//----------------------------------------------------------------
@@ -949,15 +949,15 @@
 		
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"100"
+		"StatusHealth"				"1200"
 		"StatusHealthRegen"			"0"
 		"StatusMana"				"100"
 		"StatusManaRegen"			"0"
 		
 		// Vision
 		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"900"
-		"VisionNighttimeRange"		"600"
+		"VisionDaytimeRange"		"700"
+		"VisionNighttimeRange"		"400"
 		
 		// Team
 		//----------------------------------------------------------------

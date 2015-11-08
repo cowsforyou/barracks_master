@@ -37,8 +37,8 @@
 	
 	// Bounty
 	//----------------------------------------------------------------
-	"BountyGoldMin"				"400"
-	"BountyGoldMax"				"400"
+	"BountyGoldMin"				"250"
+	"BountyGoldMax"				"250"
 	
 	// Bounds
 	//----------------------------------------------------------------
@@ -53,7 +53,7 @@
 	
 	// Status
 	//----------------------------------------------------------------
-	"StatusHealth"				"600"
+	"StatusHealth"				"1500"
 	"StatusHealthRegen"			"0"
 	"StatusMana"				"100"
 	"StatusManaRegen"			"0"

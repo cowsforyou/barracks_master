@@ -55,15 +55,15 @@
 	
 	// Status
 	//----------------------------------------------------------------
-	"StatusHealth"				"100"
+	"StatusHealth"				"1200"
 	"StatusHealthRegen"			"0"
 	"StatusMana"				"100"
 	"StatusManaRegen"			"0"
 	
 	// Vision
 	//----------------------------------------------------------------
-	"VisionDaytimeRange"		"900"
-	"VisionNighttimeRange"		"600"
+	"VisionDaytimeRange"		"700"
+	"VisionNighttimeRange"		"400"
 	
 	// Team
 	//----------------------------------------------------------------

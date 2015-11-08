@@ -37,14 +37,14 @@
 	
 	// Bounty
 	//----------------------------------------------------------------
-	"BountyGoldMin"				"0.0"
-	"BountyGoldMax"				"0.0"
+	"BountyGoldMin"				"200.0"
+	"BountyGoldMax"				"200.0"
 	
 	// Bounds
 	//----------------------------------------------------------------
 	"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
-	"RingRadius"				"200"
-	"CollisionSize"				"200"
+	"RingRadius"				"400"
+	"CollisionSize"				"400"
 		
 	// Movement
 	//----------------------------------------------------------------
@@ -53,15 +53,15 @@
 	
 	// Status
 	//----------------------------------------------------------------
-	"StatusHealth"				"2500"
+	"StatusHealth"				"900"
 	"StatusHealthRegen"			"0"
 	"StatusMana"				"100"
 	"StatusManaRegen"			"0"
 	
 	// Vision
 	//----------------------------------------------------------------
-	"VisionDaytimeRange"		"900"
-	"VisionNighttimeRange"		"600"
+	"VisionDaytimeRange"		"700"
+	"VisionNighttimeRange"		"400"
 	
 	// Team
 	//----------------------------------------------------------------

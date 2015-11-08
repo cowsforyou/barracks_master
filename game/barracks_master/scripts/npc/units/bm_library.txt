@@ -40,8 +40,8 @@
 	
 	// Bounty
 	//----------------------------------------------------------------
-	"BountyGoldMin"				"300"
-	"BountyGoldMax"				"300"
+	"BountyGoldMin"				"400"
+	"BountyGoldMax"				"400"
 	
 	// Bounds
 	//----------------------------------------------------------------
@@ -56,15 +56,15 @@
 	
 	// Status
 	//----------------------------------------------------------------
-	"StatusHealth"				"100"
+	"StatusHealth"				"600"
 	"StatusHealthRegen"			"0"
 	"StatusMana"				"100"
 	"StatusManaRegen"			"0"
 	
 	// Vision
 	//----------------------------------------------------------------
-	"VisionDaytimeRange"		"900"
-	"VisionNighttimeRange"		"600"
+	"VisionDaytimeRange"		"700"
+	"VisionNighttimeRange"		"400"
 	
 	// Team
 	//----------------------------------------------------------------

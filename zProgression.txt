@@ -81,12 +81,12 @@
 [x] Mystic flare sounds not working
 [x] Sun Strike damage not registering
 [x] Air evasion research jumps straight to level 3
-[ ] Sound not firing when heroes are spawned from Portal of Heroes
+[x] Sound not firing when heroes are spawned from Portal of Heroes
 [ ] Area behind dire ancient is always visible to radiant
 [ ] Chaos Meteor not damaging buildings
 [ ] Change tint of sun stirke particle and precache correct particled research
 [x] PA and Sven spawns at the same place, Veno and Axe spawns at the same place
-[ ] Tooltip update for repair not requiring resources
+[x] Tooltip update for repair not requiring resources
 
 
 Balance
