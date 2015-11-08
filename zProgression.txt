@@ -85,7 +85,6 @@
 [x] Air evasion research jumps straight to level 3
 [x] Sound not firing when heroes are spawned from Portal of Heroes
 [ ] Area behind dire ancient is always visible to radiant
-[ ] Chaos Meteor not damaging buildings
 [ ] Change tint of sun stirke particle and precache correct particled research
 [x] PA and Sven spawns at the same place, Veno and Axe spawns at the same place
 [x] Tooltip update for repair not requiring resources
@@ -95,6 +94,8 @@
 [x] Give brief description on the different barracks and strength of creeps
 [ ] The Stump hitbox too tall
 [x] Build grid unavailable for Unpromising Tower and Luminous Tower
+[x] Chaos Meteor damages towers but not player buildings
+[ ] Initial vision of Chaos Meteor target location not showing
 
 
 Balance

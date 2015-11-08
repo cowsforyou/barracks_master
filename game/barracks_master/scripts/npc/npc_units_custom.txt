@@ -911,7 +911,7 @@
 		//----------------------------------------------------------------
 		"AbilityLayout"				"5"
 		"Ability1"					"unpromising_chain_frost"
-		"Ability2"					""
+		"Ability2"					"unpromising_chaos_meteor"
 		"Ability3"					""
 		"Ability4"					""
 		"Ability5"					""
