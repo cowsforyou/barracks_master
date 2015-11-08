@@ -1,8 +1,0 @@
-barracks_master_map_duo_v2.0
-{
-	material materials/overviews/barracks_master_map_duo_v2.0.vmat
-	pos_x -8192
-	pos_y 192
-	scale 8.188
-}
-

@@ -3,7 +3,6 @@
 	"Language"		"English"
 	"Tokens"
 	{		
-		"game_mode_15"				"BAREBONES"
 		"addon_game_name"			"Barracks Master"
 		
 		//"DOTA_Basics"								"ABILITIES"
@@ -479,7 +478,6 @@
 		//-------------------
 		//Items
 		//-------------------
-
 		"DOTA_Tooltip_ability_item_boar"                                                  	"Boar Scout"
 		"DOTA_Tooltip_ability_item_boar_Description"                                      	""
 		"DOTA_Tooltip_ability_item_boar_duration"                            				"BOAR DURATION:"
@@ -498,7 +496,22 @@
 		"DOTA_Tooltip_ability_item_techies_lumber_cost"                               		"LUMBER COST:"
 
 
-
+		
+		//-------------------
+		//UNIVERSAL LOADSCREEN TIPS		(25+ games played)
+		//-------------------
+		"dota_tip_universal_1"				"test"
+		"dota_tip_universal_2"				"test"
+		"dota_tip_universal_3"				"test"
+		"dota_tip_universal_4"				"test"
+		"dota_tip_universal_5"				"test"
+		"dota_tip_universal_6"				"test"
+		"dota_tip_universal_7"				"test"
+		"dota_tip_universal_8"				"test"
+		"dota_tip_universal_9"				"test"
+		"dota_tip_universal_10"				"test"
+		"dota_tip_universal_11"				"test"
+		"dota_tip_universal_12"				"test"
 
 
 
