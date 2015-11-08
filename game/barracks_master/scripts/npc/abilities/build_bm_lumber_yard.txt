@@ -2,14 +2,14 @@
 "build_bm_lumber_yard"
 {
 	"BaseClass"             		"ability_datadriven"
-	"AbilityTextureName"			"lumber_yard4"
+	"AbilityTextureName"			"the_stump3"
 	"MaxLevel" 						"1"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
 	// BuildingHelper info
 	"Building"						"1" //bool
-	"BuildingSize"					"3" 
+	"BuildingSize"					"5" 
 	"BuildTime"						"35.0"
 	"AbilityCastRange"				"200"
 	"UpdateHealth"					"1" //bool

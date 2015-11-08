@@ -63,19 +63,19 @@
 [x] Swapping the starting building from "buildingevents.lua" to the Melee Barracks causes a string of errors in the console (although everything seems to function fine).
 [x] Removing the Kunkka builders at the start (by changing no. of builders from 5 to 0) causes errors in the console (although everything seems to function fine).
 [ ] Researching an ability causes it to be hidden, however if one research completes, the ability list refreshes. If you attempt to queue abilities beyond their upgradable levels, it bugs out.
-[ ] Build grid disappears when lumber yard is built.
+[x] Build grid disappears when lumber yard is built.
 [x] Health Vial not giving intended HP boost.
 [x] Hawk and Boar spawn sounds not firing.
 [x] Tech tree unlock for Hawk not working
 [x] Own creeps dying gives gold (e.g. techies, boar, hawk)
 [x] Lumberjacks get stuck
-[ ] Lumber Yard model not giving right collision radius
+[x] Lumber Yard model not giving right collision radius
 [x] Library of Spells not selectable
 [x] Research lab does not get unlocked if page 2 abilities are selected (when lumber yard completes)
 [x] Techies death sound incorrect (currently hawk sound)
 [ ] Ancient rax looks spastic while waiting for first spawn
 [x] HP upgrades not accessible after building research lab
-[ ] Lumber Yard has no portrait
+[x] Lumber Yard has no portrait
 [x] Attempting to build existing structues uses up gold (lumber not affected)
 [x] Rename teams not working
 [x] Last hit gold animation and sounds playing globally
@@ -91,7 +91,10 @@
 [x] Tooltip update for repair not requiring resources
 [ ] Chain frost has no hotkey
 [ ] Net worth should include current gold
-[ ] Give brief description on the different barracks and strength of creeps
+[ ] Net worth should include research values
+[x] Give brief description on the different barracks and strength of creeps
+[ ] The Stump hitbox too tall
+[x] Build grid unavailable for Unpromising Tower and Luminous Tower
 
 
 Balance
