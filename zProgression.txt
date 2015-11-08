@@ -87,6 +87,7 @@
 [ ] Change tint of sun stirke particle and precache correct particled research
 [x] PA and Sven spawns at the same place, Veno and Axe spawns at the same place
 [x] Tooltip update for repair not requiring resources
+[ ] Chain frost has no hotkey
 
 
 Balance

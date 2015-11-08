@@ -20,7 +20,7 @@ function ManualSpawnCreeps(player, building, buildingAbility, creepName)
     table.insert(player.units, unit)       -- adds unit to player's units table
 
     -- unstick
-    Timers:CreateTimer(0.03, function()
+    Timers:CreateTimer(0.1, function()
         FindClearSpaceForUnit(unit, pos, true)
 
         -- if lumberjack, auto-harvest from nearest lumber yard on spawn
