@@ -1010,7 +1010,7 @@
 	"build_bm_lumber_yard"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"the_stump3"
+		"AbilityTextureName"			"the_stump4"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
