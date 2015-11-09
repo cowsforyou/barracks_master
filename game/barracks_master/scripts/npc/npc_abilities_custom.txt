@@ -1994,7 +1994,7 @@
 	    "AnimationIgnoresModelScale"    "0"
 	    "AnimationPlaybackRate"         "1.0"
 	
-	    "AbilityCastRange"       "100.0"
+	    "AbilityCastRange"       "200.0"
 	    "AbilityCastPoint"       "0.0"
 	
 	    "AbilitySpecial"
