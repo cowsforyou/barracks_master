@@ -5,9 +5,9 @@
 {
 	horizontal-align: left;
 	vertical-align: top;
-	margin-top: 150px;
+	margin-top: 100px;
     flow-children: down;
-    padding: 10px;
+    padding: 0px;
 	
     transform: translatex( -700px );
     transition-property: transform;
@@ -135,6 +135,7 @@
 	text-shadow: 2px 2px 2px black;
 	text-transform: uppercase;
 	font-size: 12px;
+	margin-bottom: -18px;
 	color: #90999b;
 }
 
@@ -223,8 +224,7 @@
 {
 	color: white;
 	font-size: 14px;
-	margin-bottom: -4px;
-	margin-top: 0px;
+	margin-top: -4px;
 	white-space: nowrap;
 }
 
@@ -241,8 +241,8 @@
 	margin-top: 0px;
 	horizontal-align: right;
 	vertical-align: top;
-	width: 18px;
-	height: 18px;
+	width: 15px;
+	height: 15px;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -305,12 +305,12 @@
 
 .ScoreCol_TeamInfo
 {
-	width: 60px;
+	width: 40px;
 }
 
 .ScoreCol_PlayerDetails
 {
-	width: 170px;
+	width: 160px;
 }
 
 .ScoreCol_Hero
@@ -330,11 +330,13 @@
 {
 	width: 50px;
 	text-align: center;
+
 }
 
 .ScoreCol_CS
 {
 	width: 60px;
+	height: 32px;
 	text-align: center;
 }
 
@@ -343,12 +345,14 @@
 .ScoreCol_Lumber
 {
 	width: 90px;
+	height: 32px;
 	text-align: center;
 }
 
 #CS
 {
-	font-size: 28px;
+	font-size: 16px;
+	margin-top: -2px;
 }
 
 #Lumber,
@@ -356,4 +360,5 @@
 #NetWorth
 {
 	font-size: 16px;
+	margin-top: -2px;
 }
