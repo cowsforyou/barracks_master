@@ -16,7 +16,7 @@
 	"DOTA_Custom7"    								"Olive Snake"
 	"DOTA_Custom8"    								"Purple Horse"
 	
-	"addonname"										"Barebones"
+	"addonname"										"Barracks Master"
 
 	"custom_end_screen_legend_cs"					"KILLS"
 	"custom_end_screen_legend_networth"				"NET WORTH"

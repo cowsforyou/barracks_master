@@ -28,6 +28,7 @@
 [x] Replace city center default spawn to bm_melee_barracks
 [ ] Code max lumberjacks to be 10
 [ ] Code in purifier
+[ ] Create either/or function for Luminous and Unpromising Towers.
 
 
 -- Player Mechanics --
@@ -50,8 +51,10 @@
 [ ] Clean up team and hero selection
 [x] Fix minimap
 [ ] Change team colors on loading screen
-[ ] Add pregame tutorial
+[ ] Learn how to edit loading screen
+[ ] Learn how to edit tips on loading screen
 [ ] Have additional gold/lumber earned pop up ontop of purifier
+[ ] Create countdown timer for "superweapons"
 
 
 -- Advanced --
@@ -97,6 +100,7 @@
 [x] Chaos Meteor damages towers but not player buildings
 [ ] Initial vision of Chaos Meteor target location not showing
 [ ] Lumberjacks unable to harvest
+[ ] Fix superweapon tooltips.
 
 
 Balance

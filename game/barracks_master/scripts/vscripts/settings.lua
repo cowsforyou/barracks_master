@@ -86,8 +86,8 @@ USE_CUSTOM_TEAM_COLORS_FOR_PLAYERS = true          -- Should we use custom team 
 
 TEAM_COLORS = {}                        -- If USE_CUSTOM_TEAM_COLORS is set, use these colors.
 TEAM_COLORS[DOTA_TEAM_GOODGUYS] = { 61, 210, 150 }  --    Teal
-TEAM_COLORS[DOTA_TEAM_BADGUYS]  = { 243, 201, 9 }   --    Yellow
-TEAM_COLORS[DOTA_TEAM_CUSTOM_1] = { 197, 77, 168 }  --    Pink
+TEAM_COLORS[DOTA_TEAM_BADGUYS]  = { 51, 111, 7 }    --    Dark Green
+TEAM_COLORS[DOTA_TEAM_CUSTOM_1] = { 180, 180, 180 } --    Gray
 TEAM_COLORS[DOTA_TEAM_CUSTOM_2] = { 255, 108, 0 }   --    Orange
 TEAM_COLORS[DOTA_TEAM_CUSTOM_3] = { 52, 85, 255 }   --    Blue
 TEAM_COLORS[DOTA_TEAM_CUSTOM_4] = { 101, 212, 19 }  --    Green
