@@ -96,6 +96,7 @@
 [x] Build grid unavailable for Unpromising Tower and Luminous Tower
 [x] Chaos Meteor damages towers but not player buildings
 [ ] Initial vision of Chaos Meteor target location not showing
+[ ] Lumberjacks unable to harvest
 
 
 Balance
