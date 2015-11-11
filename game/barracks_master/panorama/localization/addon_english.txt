@@ -23,7 +23,10 @@
 	"custom_end_screen_legend_gold"					"GOLD"
 	"custom_end_screen_legend_lumber"				"LUMBER"
 
+	"error_max_unit_count_reached"					"Max Unit Count Reached"
 	"error_max_building_count"						"Structure Already Built"
 	"error_not_enough_lumber"						"Not Enough Lumber"
 	"error_invalid_build_position"					"Invalid Build Area"
+
+	"alch_gold"										"Alchemist was feeling rich and donated some gold to you: "
 }

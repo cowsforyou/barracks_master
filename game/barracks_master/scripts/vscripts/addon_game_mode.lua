@@ -21,6 +21,7 @@ require('barracks/scoreboard_updater')
 require('barracks/last_hits')
 require('barracks/convars')
 require('barracks/purifier')
+require('barracks/alchemist_gifter')
 
 require('buildings/research')
 

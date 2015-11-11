@@ -31,6 +31,7 @@ function GameMode:OnGameRulesStateChange(keys)
     ScoreboardUpdater:Setup()
   elseif newState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
     SpawnSynchronizer:Setup()
+    AlchemistGifter:Setup()
   end  
 
 
