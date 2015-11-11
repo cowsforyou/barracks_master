@@ -20,6 +20,7 @@ require('barracks/ability_swapper')
 require('barracks/scoreboard_updater')
 require('barracks/last_hits')
 require('barracks/convars')
+require('barracks/purifier')
 
 require('buildings/research')
 

@@ -43,7 +43,7 @@ function LastHits:OnEntityKilled( keys )
 		ParticleManager:SetParticleControl(coinsParticle, 1, killedUnit:GetAbsOrigin())
 		EmitSoundOnClient("General.Coins", player)
     	PopupGoldGainForPlayer(player, killedUnit, gold)
-
+        Purifier:EarnedGold(player, gold)
 		--print("Awarding " .. gold .. " gold to player " .. playerID)
     else
     	--print("Valid killer: " .. tostring(self:IsValidBountyKiller(killerEntity)) ..

@@ -8,6 +8,7 @@ function OnChannelSucceeded(keys)
 
     ModifyLumber(player, lumber)
     PopupLumber(caster, lumber)
+    Purifier:EarnedLumber(player, lumber)
 
     caster:CastAbilityOnTarget(target, ability, player:entindex())
 	--print("Gain lumber and restart channel.")
