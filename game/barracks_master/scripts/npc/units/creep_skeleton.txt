@@ -38,7 +38,7 @@
         "AttackRate"                "1.0"       // Speed of attack.
         "AttackAnimationPoint"      "0.56"      // Normalized time in animation cycle to attack.
         "AttackAcquisitionRange"    "500"       // Range within a target can be acquired.
-        "AttackRange"               "90"        // Range within a target can be attacked.
+        "AttackRange"               "110"        // Range within a target can be attacked.
         "ProjectileModel"           ""          // Particle system model for projectile.
         "ProjectileSpeed"           ""          // Speed of projectile.
 
@@ -61,7 +61,7 @@
 
         // Status
         //----------------------------------------------------------------
-        "StatusHealth"              "90"        // Base health.
+        "StatusHealth"              "65"        // Base health.
         "StatusHealthRegen"         "0.0"       // Health regeneration rate.
         "StatusMana"                "0"         // Base mana.
         "StatusManaRegen"           "0"         // Mana regeneration rate.

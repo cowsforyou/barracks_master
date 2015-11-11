@@ -55,11 +55,19 @@
 [ ] Learn how to edit tips on loading screen
 [ ] Have additional gold/lumber earned pop up ontop of purifier
 [ ] Create countdown timer for "superweapons"
+[ ] Have gold sound play when alchemist donates gold (soundfile: sounds/ui/coins_big.vsnd)
+[ ] Have "Your base is under attack" play when any of your buildings get attacked (soundfile: sounds/vo/announcer/ann_custom_generic_alert_01.vsnd)
+[ ] Have "Building" play when building begins (soundfile: sounds/vo/announcer/ann_custom_generic_alert_12.vsnd)
+[ ] Have "Construction Complete" play when building is complete (soundfile: sounds/vo/announcer/ann_custom_generic_alert_10.vsnd)
+[ ] Have "Research Complete" play when research is done (soundfile: sounds/vo/announcer/ann_custom_generic_alert_09.vsnd)
+[ ] Have "Insufficient Funds" play when there is not enough gold error (soundfile: sounds/vo/announcer/ann_custom_generic_alert_06.vsnd)
+[ ] Have "Not Enough Resources" play when there is not enough lumber error (soundfile: sounds/vo/announcer/ann_custom_generic_alert_05.vsnd)
 
 
 -- Advanced --
 
 [ ] Enable normal and fast game modes
+[ ] Have item drops (soundfile: sounds/vo/announcer/ann_custom_new_item_01)
 
 
 -- Bugs --
