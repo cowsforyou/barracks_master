@@ -91,7 +91,6 @@ end
 
 -- An entity died
 function BuildingEvents:OnEntityKilled( event )
-
   -- The Unit that was Killed
   local killedUnit = EntIndexToHScript(event.entindex_killed)
   -- The Killing entity
@@ -102,6 +101,23 @@ function BuildingEvents:OnEntityKilled( event )
 
   -- Player owner of the unit
   local player = killedUnit:GetPlayerOwner()
+
+  --[[
+          GetOwner    GetPlayerOwner
+  Unit    player      nil 
+  Build   hero        player
+  Hero    player      nil
+  Sven    player      player
+  Lumbrj  player      nil
+  ]]
+
+  -- fix for units
+  if player == nil then
+    player = killedUnit:GetOwner()
+    if player and not player:IsPlayer() then
+      player = nil
+    end
+  end
 
   -- Building Killed
   if IsCustomBuilding(killedUnit) then
@@ -144,14 +160,18 @@ function BuildingEvents:OnEntityKilled( event )
       end
     end
     player.structures = table_structures
-    
-    local table_units = {}
-    for _,unit in pairs(player.units) do
-      if unit and IsValidEntity(unit) then
-        table.insert(table_units, unit)
+
+    -- units take a while to disappear    
+    Timers:CreateTimer(10.0, function()
+      local table_units = {}
+      for _,unit in pairs(player.units) do
+        if unit and IsValidEntity(unit) then
+          table.insert(table_units, unit)
+        end
       end
-    end
-    player.units = table_units    
+      player.units = table_units
+    end)
+
   end
 end
 
