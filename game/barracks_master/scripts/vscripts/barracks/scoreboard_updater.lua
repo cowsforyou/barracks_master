@@ -30,10 +30,12 @@ function ScoreboardUpdater:Update()
 	CustomGameEventManager:Send_ServerToAllClients("RefreshScoreboard", {})
 end
 
+
+-- Net Worth = current gold + buildings worth + research worth + living units worth (heroes, lumberjacks, scouts)
 function ScoreboardUpdater:GetNetWorth(player)
 	if player.structures == nil then return 0 end
 
-	local netWorth = 0
+	local netWorth = PlayerResource:GetGold(player:GetPlayerID())
 	--PrintTable(player)
 
 	for _,structure in pairs(player.structures) do
@@ -46,8 +48,26 @@ function ScoreboardUpdater:GetNetWorth(player)
 
 	for upgradeName,upgradeLevel in pairs(player.upgrades) do
 		local costString = GameRules.AbilityKV[upgradeName]["AbilityGoldCost"]
-		--print(upgradeName .. ": " .. costString)
+		local costTable = self:SplitResearchGoldCostString(costString)
+		
+		for i=1, upgradeLevel do
+			netWorth = netWorth + costTable[i]
+			--print(upgradeName .. ": Adding " .. costTable[i])
+		end
 	end
 
 	return netWorth
+end
+
+function ScoreboardUpdater:SplitResearchGoldCostString(costString)
+	return string_split(costString, " ")
+end
+
+-- http://stackoverflow.com/questions/1426954/split-string-in-lua
+function string_split(s, delimiter)
+    result = {};
+    for match in (s..delimiter):gmatch("(.-)"..delimiter) do
+        table.insert(result, match);
+    end
+    return result;
 end
