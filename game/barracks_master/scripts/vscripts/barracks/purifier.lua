@@ -2,7 +2,7 @@ if not Purifier then
     Purifier = class({})
 end
 
-function Purifier:GetPurifier(player)
+function Purifier:FindPurifier(player)
     for _,structure in pairs(player.structures) do
         if structure:GetUnitName() == "bm_purifier" then
             return structure
@@ -13,7 +13,7 @@ function Purifier:GetPurifier(player)
 end
 
 function Purifier:EarnedGold(player, gold)
-    local purifier = self:GetPurifier(player)
+    local purifier = self:FindPurifier(player)
     if not purifier then
         --print("No purifier found.")
         return
@@ -31,7 +31,7 @@ function Purifier:EarnedGold(player, gold)
 end
 
 function Purifier:EarnedLumber(player, lumber)
-    local purifier = self:GetPurifier(player)
+    local purifier = self:FindPurifier(player)
     if not purifier then
         --print("No purifier found.")
         return
