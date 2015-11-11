@@ -51,7 +51,7 @@
 [ ] Clean up team and hero selection
 [x] Fix minimap
 [ ] Change team colors on loading screen
-[ ] Learn how to edit loading screen
+[x] Learn how to edit loading screen
 [ ] Learn how to edit tips on loading screen
 [ ] Have additional gold/lumber earned pop up ontop of purifier
 [ ] Create countdown timer for "superweapons"
@@ -100,14 +100,14 @@
 [x] PA and Sven spawns at the same place, Veno and Axe spawns at the same place
 [x] Tooltip update for repair not requiring resources
 [ ] Chain frost has no hotkey
-[ ] Net worth should include current gold
-[ ] Net worth should include research values
+[x] Net worth should include current gold
+[x] Net worth should include research values
 [x] Give brief description on the different barracks and strength of creeps
 [ ] The Stump hitbox too tall
 [x] Build grid unavailable for Unpromising Tower and Luminous Tower
 [x] Chaos Meteor damages towers but not player buildings
 [ ] Initial vision of Chaos Meteor target location not showing
-[ ] Lumberjacks unable to harvest
+[x] Lumberjacks unable to harvest
 [ ] Fix superweapon tooltips.
 [ ] Creeps last hitting heroes shd get last hit gold
 [ ] Melee rax spawning at same location (if you stagger the spawns it might work)
@@ -115,7 +115,7 @@
 
 
 Balance
-[ ] Heroes unable to attack
+[ ] Heroes unable to attack OR heroes get enough dmg to last hit
 [ ] Enable lumber upgrade on purifier
 [ ] Modify kill bounty on players?
 [ ] Modify fb gold?

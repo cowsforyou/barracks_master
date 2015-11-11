@@ -543,7 +543,7 @@
 	      "01"
 	      {
 	        "var_type"        "FIELD_INTEGER"
-	        "health_bonus"     "200"
+	        "health_bonus"     "500"
 	      }
 	    }
 	
@@ -2759,7 +2759,7 @@
 	        "01"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "health_bonus"           "200"
+	        "health_bonus"           "500"
 	      }
 	      
 	        "02"
@@ -2777,7 +2777,7 @@
 	        "04"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "lumber_cost"           "75"
+	        "lumber_cost"           "125"
 	      }
 	    }
 	
