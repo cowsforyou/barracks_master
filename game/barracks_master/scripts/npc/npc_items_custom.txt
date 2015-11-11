@@ -965,7 +965,7 @@
 	
 	    // Cost
 	    //-------------------------------------------------------------------------------------------------------------
-	    "AbilityGoldCost"               "150"
+	    "AbilityGoldCost"               "175"
 	    "AbilityManaCost"               "130"
 	
 	    // Special
@@ -981,13 +981,7 @@
 	        "02"
 	        {
 	            "var_type"                  "FIELD_INTEGER"
-	            "gold_cost"                 "150"
-	        }
-	
-	        "03"
-	        {
-	            "var_type"                  "FIELD_INTEGER"
-	            "lumber_cost"               "50"
+	            "gold_cost"                 "175"
 	        }
 	
 	        // Extra        

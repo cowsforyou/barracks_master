@@ -15,9 +15,9 @@
         // Abilities
         //----------------------------------------------------------------
         
-        "Ability1"                  "big_thunder_lizard_slam"               // Ability 1
-        "Ability2"                  "big_thunder_lizard_frenzy"             // Ability 2
-        "Ability3"                  "big_thunder_lizard_wardrums_aura"      // Ability 3
+        "Ability1"                  "big_thunder_lizard_wardrums_aura"              // Ability 1
+        "Ability2"                  "neutral_spell_immunity"                        // Ability 2
+        "Ability3"                  ""          // Ability 3
         "Ability4"                  ""          // Ability 4.
         "Ability5"                  ""          // Ability 5.
         "Ability6"                  ""          // Ability 6 - Extra.

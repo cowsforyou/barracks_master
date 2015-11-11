@@ -4634,7 +4634,7 @@
 	        "08"
 	        {
 	            "var_type"              "FIELD_FLOAT"
-	            "main_damage"           "8000" // changing this does nothing - hardcoded in lua
+	            "main_damage"           "9999" // changing this does nothing - hardcoded in lua
 	        }
 	        "09"
 	        {
