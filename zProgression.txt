@@ -109,18 +109,21 @@
 [ ] Initial vision of Chaos Meteor target location not showing
 [ ] Lumberjacks unable to harvest
 [ ] Fix superweapon tooltips.
+[ ] Creeps last hitting heroes shd get last hit gold
+[ ] Melee rax spawning at same location (if you stagger the spawns it might work)
+[ ] Ranged barracks missing hp upgrade
 
 
 Balance
 [ ] Heroes unable to attack
 [ ] Enable lumber upgrade on purifier
+[ ] Modify kill bounty on players?
+[ ] Modify fb gold?
+[ ] Disable additional gold from hero kills/assists
+[ ] Last stand
 
 
-Tutorial stuff
-[ ] Building toggle
-[ ] Repair
-[ ] Barracks spawn creeps
-[ ] Explain about farm (creep kills) + tower kills dont give gold
+
 
 
 -------------------------------------
@@ -196,7 +199,7 @@ Tutorial stuff
 +Skeleton rush
 -Skeleton Barracks
 -Counters: Air rush
--Counters: Tech rush
+-Counters: Tech rush (success)
 
 +Balanced build
 -Creep upgrades
