@@ -28,5 +28,5 @@
 	"error_not_enough_lumber"						"Not Enough Lumber"
 	"error_invalid_build_position"					"Invalid Build Area"
 
-	"alch_gold"										"Alchemist was feeling rich and donated some gold to you: "
+	"alch_gold"										"Alchemist was feeling rich and donated gold to you. Amount received: "
 }

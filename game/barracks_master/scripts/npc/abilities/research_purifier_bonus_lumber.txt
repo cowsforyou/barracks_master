@@ -5,27 +5,27 @@
     "AbilityTextureName"            "research_ultimate_ability"
     "MaxLevel"                      "3"
 
-    "AbilityGoldCost"               "200 300 500"
-    "AbilityChannelTime"            "60 90 180"
+    "AbilityGoldCost"               "200 400 600"
+    "AbilityChannelTime"            "60 120 240"
     
     "AbilitySpecial"
     {
         "01"
       {
         "var_type"              "FIELD_INTEGER"
-        "lumber_bonus"           "15 25 40"
+        "lumber_bonus"           "20 40 60"
       }
       
         "02"
       {
         "var_type"              "FIELD_INTEGER"
-        "research_time"         "60 90 180"
+        "research_time"         "60 120 240"
       }
 
         "03"
       {
         "var_type"              "FIELD_INTEGER"
-        "gold_cost"             "200 300 500"
+        "gold_cost"             "200 400 600"
       }
     }
 

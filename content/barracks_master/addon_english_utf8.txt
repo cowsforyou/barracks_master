@@ -142,7 +142,7 @@
 
 		"bm_purifier"                                                             			"Purifier"
 		"DOTA_Tooltip_ability_build_bm_purifier"                        					"Purifier"
-		"DOTA_Tooltip_ability_build_bm_purifier_Description"                  	    		"Increases gold earned by 25 percent. Can be upgraded to also increase lumber earned."
+		"DOTA_Tooltip_ability_build_bm_purifier_Description"                  	    		"Increases creep-kill gold earned by 25 percent. Can be upgraded to also increase lumber earned."
 		"DOTA_Tooltip_ability_build_bm_purifier_build_time"                  		    	"<font color='#057aff'>BUILD TIME</font>:"
 		"DOTA_Tooltip_ability_build_bm_purifier_gold_cost"                       	 		"<font color='#fff22e'>GOLD COST</font>:"
 		"DOTA_Tooltip_ability_build_bm_purifier_lumber_cost"                      			"<font color='#28fe77'>LUMBER COST</font>:"
@@ -392,7 +392,7 @@
 
 		//Chain Frost
 		//-------------------------------------------------------------
-		"DOTA_Tooltip_ability_unpromising_chain_frost"                                      "Mystic Flare"
+		"DOTA_Tooltip_ability_unpromising_chain_frost"                                      "Chain Frost"
 		"DOTA_Tooltip_ability_unpromising_chain_frost_Description"                          "Releases an orb of frost that bounces between nearby enemy units, slowing and damaging each time it hits. The first target is mini-stunned."
 		"DOTA_Tooltip_ability_unpromising_chain_frost_jumps"   								"JUMPS:"
 		"DOTA_Tooltip_ability_unpromising_chain_frost_damage"                               "DAMAGE:"

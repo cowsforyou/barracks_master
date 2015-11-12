@@ -12,7 +12,7 @@
       "01"
       {
         "var_type"       	"FIELD_INTEGER"
-        "lumber_bonus"     	"15 25 40"
+        "lumber_bonus"     	"20 40 60"
       }
       
     }
