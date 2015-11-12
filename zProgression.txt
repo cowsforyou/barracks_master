@@ -26,8 +26,8 @@
 [x] Enable lumber harvesting
 [x] Enable Lumber Yard to spawn Lumberjacks
 [x] Replace city center default spawn to bm_melee_barracks
-[ ] Code max lumberjacks to be 10
-[ ] Code in purifier
+[x] Code max lumberjacks to be 10
+[x] Code in purifier
 [ ] Create either/or function for Luminous and Unpromising Towers.
 
 
@@ -35,7 +35,7 @@
 
 [x] Specify exact spawn locations for each player
 [x] Learn how to edit passive income
-[ ] Award chunks of passive income progressively throughout the game
+[x] Award chunks of passive income progressively throughout the game
 [x] Create function to award last hit gold from creeps to player
 [ ] Clean up team and hero selection
 
@@ -52,8 +52,9 @@
 [x] Fix minimap
 [ ] Change team colors on loading screen
 [x] Learn how to edit loading screen
+[ ] Clean up loading screen codes
 [ ] Learn how to edit tips on loading screen
-[ ] Have additional gold/lumber earned pop up ontop of purifier
+[x] Have additional gold/lumber earned pop up ontop of purifier
 [ ] Create countdown timer for "superweapons"
 [ ] Have gold sound play when alchemist donates gold (soundfile: sounds/ui/coins_big.vsnd)
 [ ] Have "Your base is under attack" play when any of your buildings get attacked (soundfile: sounds/vo/announcer/ann_custom_generic_alert_01.vsnd)
@@ -113,6 +114,8 @@
 [ ] Creeps last hitting heroes shd get last hit gold
 [ ] Melee rax spawning at same location (if you stagger the spawns it might work)
 [x] Ranged barracks missing hp upgrade
+[ ] Purifier giving errors when superweapons net kills
+[ ] Clean up purifier description to make clear only creep kills gets bonus
 
 
 Balance
