@@ -33,6 +33,11 @@
 	background-size: 100% 100%;
 }
 
+#seq
+{
+    overflow: clip;
+	pre-transform-scale2d: 1.05, 1.05;
+}
 
 #seq_bg
 {
