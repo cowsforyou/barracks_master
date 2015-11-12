@@ -25,7 +25,8 @@ function AlchemistGifter:GiftAllPlayers()
 	print(string.format("Minute: %s, Gold: %s", currentMinute, gold))
     Notifications:TopToAll({hero="npc_dota_hero_alchemist", duration=5.0})
 	Notifications:TopToAll({text="#alch_gold", duration=5.0, continue=true})
-	Notifications:TopToAll({text=gold.."gp", duration=5.0, continue=true})
+	Notifications:TopToAll({text=gold.."g", duration=5.0, continue=true})
+	EmitGlobalSound("General.CoinsBig") 
 	for i=0, playerCount do
 		PlayerResource:ModifyGold(i, gold, true, 0)
 	end
