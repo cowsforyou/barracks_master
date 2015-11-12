@@ -23,9 +23,9 @@ function AlchemistGifter:GiftAllPlayers()
 	local currentMinute = math.floor(GameRules:GetGameTime() / 60)
 	local gold = GIFT_CONSTANT + (GIFT_MULTIPLIER * currentMinute)
 	print(string.format("Minute: %s, Gold: %s", currentMinute, gold))
-    Notifications:TopToAll({hero="npc_dota_hero_alchemist", duration=5.0})
-	Notifications:TopToAll({text="#alch_gold", duration=5.0, continue=true})
-	Notifications:TopToAll({text=gold.."gp", duration=5.0, continue=true})
+    Notifications:TopToAll({hero="npc_dota_hero_alchemist", duration=10.0})
+	Notifications:TopToAll({text="#alch_gold", duration=10.0, continue=true})
+	Notifications:TopToAll({text=gold.."g", duration=10.0, continue=true})
 	for i=0, playerCount do
 		PlayerResource:ModifyGold(i, gold, true, 0)
 	end
