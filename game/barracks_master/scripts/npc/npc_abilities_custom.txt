@@ -1180,7 +1180,7 @@
 		// BuildingHelper info
 		"Building"						"1" //bool
 		"BuildingSize"					"3" 
-		"BuildTime"						"8.0"
+		"BuildTime"						"90.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
 		"Scale"							"0" //bool
@@ -1191,7 +1191,7 @@
 	
 		"UnitName"						"bm_purifier"
 		"AbilityCooldown"				"0"
-		"AbilityGoldCost"				"50"
+		"AbilityGoldCost"				"450"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
 	
@@ -1200,17 +1200,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"build_time"			"8.0"
+				"build_time"			"90.0"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"50"
+				"gold_cost"				"450"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"0"
+				"lumber_cost"			"200"
 			}
 		}
 	
@@ -2459,6 +2459,52 @@
 			}
 		}
 	}
+	"purifier_bonus_gold"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "research_ultimate_ability"
+	
+	    "MaxLevel"                      "1"
+	
+	    // Special  
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	      "01"
+	      {
+	        "var_type"       "FIELD_INTEGER"
+	        "gold_bonus"     "25"
+	      }
+	      
+	    }
+	
+	
+	}
+	"purifier_bonus_lumber"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "research_ultimate_ability"
+	
+	    "MaxLevel"                      "3"
+	
+	    // Special  
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	      "01"
+	      {
+	        "var_type"       	"FIELD_INTEGER"
+	        "lumber_bonus"     	"15 25 40"
+	      }
+	      
+	    }
+	}
+	"purifier_bonus_lumber_disabled"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "research_ultimate_ability"
+	    "MaxLevel"                      "0"
+	}
 	"repair"
 	{
 		"BaseClass"             		"ability_datadriven"
@@ -3220,6 +3266,61 @@
 				"Function"		"ResearchComplete"
 			}
 		}
+	}
+	"research_purifier_bonus_lumber"
+	{
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "research_ultimate_ability"
+	    "MaxLevel"                      "3"
+	
+	    "AbilityGoldCost"               "200 300 500"
+	    "AbilityChannelTime"            "60 90 180"
+	    
+	    "AbilitySpecial"
+	    {
+	        "01"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "lumber_bonus"           "15 25 40"
+	      }
+	      
+	        "02"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "research_time"         "60 90 180"
+	      }
+	
+	        "03"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "gold_cost"             "200 300 500"
+	      }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "buildings/queue.lua"
+	            "Function"      "EnqueueUnit"
+	        }
+	    }
+	
+	    "OnChannelSucceeded"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "buildings/queue.lua"
+	            "Function"      "NextQueue"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "buildings/research.lua"
+	            "Function"      "ResearchComplete"
+	        }
+	    }
 	}
 	"research_special_air"
 	{

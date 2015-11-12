@@ -109,10 +109,10 @@
 [x] Chaos Meteor damages towers but not player buildings
 [ ] Initial vision of Chaos Meteor target location not showing
 [x] Lumberjacks unable to harvest
-[ ] Fix superweapon tooltips.
+[x] Fix superweapon tooltips.
 [ ] Creeps last hitting heroes shd get last hit gold
 [ ] Melee rax spawning at same location (if you stagger the spawns it might work)
-[ ] Ranged barracks missing hp upgrade
+[x] Ranged barracks missing hp upgrade
 
 
 Balance
