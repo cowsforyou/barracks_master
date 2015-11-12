@@ -1,0 +1,19 @@
+"purifier_bonus_lumber"
+{
+    "BaseClass"                     "ability_datadriven"
+    "AbilityTextureName"            "research_ultimate_ability"
+
+    "MaxLevel"                      "3"
+
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"       	"FIELD_INTEGER"
+        "lumber_bonus"     	"15 25 40"
+      }
+      
+    }
+}

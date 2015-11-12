@@ -1,0 +1,21 @@
+"purifier_bonus_gold"
+{
+    "BaseClass"                     "ability_datadriven"
+    "AbilityTextureName"            "research_ultimate_ability"
+
+    "MaxLevel"                      "1"
+
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"       "FIELD_INTEGER"
+        "gold_bonus"     "25"
+      }
+      
+    }
+
+
+}
