@@ -117,7 +117,7 @@
 [ ] Melee rax spawning at same location (if you stagger the spawns it might work)
 [x] Ranged barracks missing hp upgrade
 [ ] Purifier giving errors when superweapons net kills
-[ ] Clean up purifier description to make clear only creep kills gets bonus
+[x] Clean up purifier description to make clear only creep kills gets bonus
 [ ] Clean up Portal of Heroes ambient animation
 [ ] Random Lumberjack console error bug
 

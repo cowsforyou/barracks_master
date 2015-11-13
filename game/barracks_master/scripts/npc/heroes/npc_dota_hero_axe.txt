@@ -25,6 +25,13 @@
 	"AttributeBaseAgility"			"0"
 	"AttributeAgilityGain"			"0"
 
+    // Bounty
+    //----------------------------------------------------------------
+    "BountyXP"                  "0"        // Experience earn.
+    "BountyGoldMin"             "60"        // Gold earned min.
+    "BountyGoldMax"             "60"        // Gold earned max.
+
+
 	// Status
 	//-------------------------------------------------------------------------------------------------------------
 	"StatusHealth"					"10"			// Base health.
