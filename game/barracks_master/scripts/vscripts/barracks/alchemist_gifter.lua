@@ -24,10 +24,10 @@ function AlchemistGifter:GiftAllPlayers()
 	local gold = GIFT_CONSTANT + (GIFT_MULTIPLIER * currentMinute)
 	--print(string.format("Minute: %s, Gold: %s", currentMinute, gold))
 
-	local dur = 10.0
-    Notifications:TopToAll({hero="npc_dota_hero_alchemist", duration=dur})
-	Notifications:TopToAll({text="#alch_gold", duration=dur, continue=true})
-	Notifications:TopToAll({text=gold.."g", duration=dur, continue=true})
+	local dur = 7.0
+    Notifications:BottomToAll({hero="npc_dota_hero_alchemist", duration=dur})
+	Notifications:BottomToAll({text="#alch_gold", duration=dur, continue=true})
+	Notifications:BottomToAll({text=gold.."g", duration=dur, continue=true})
 	EmitGlobalSound("General.CoinsBig")
 
 	for i=0, playerCount do
