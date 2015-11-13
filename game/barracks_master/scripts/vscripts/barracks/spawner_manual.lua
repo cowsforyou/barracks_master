@@ -49,7 +49,7 @@ function GetUnitCount(player, unitName)
     
     local unitCount = 0
     for _,unit in pairs(player.units) do
-        if unit:GetUnitName() == unitName then
+        if not unit:IsNull() and unit:GetUnitName() == unitName then
             unitCount = unitCount + 1
         end
     end
