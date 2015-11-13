@@ -16,9 +16,9 @@
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"5"
-	"Ability1"					""
-	"Ability2"					""
-	"Ability3"					""
+	"Ability1"					"purifier_bonus_gold"
+	"Ability2"					"purifier_bonus_lumber_disabled"
+	"Ability3"					"research_purifier_bonus_lumber"
 	"Ability4"					""
 	"Ability5"					""
 	"Ability6"					""
