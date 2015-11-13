@@ -54,7 +54,7 @@
 [x] Fix minimap
 [ ] Change team colors on loading screen
 [x] Learn how to edit loading screen
-[ ] Clean up loading screen codes
+[x] Clean up loading screen codes
 [ ] Learn how to edit tips on loading screen
 [x] Have additional gold/lumber earned pop up ontop of purifier
 [ ] Create countdown timer for "superweapons"
