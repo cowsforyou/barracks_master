@@ -19,8 +19,15 @@ function Purifier:EarnedGold(player, gold)
         return
     end
 
+    local goldAbility = purifier:FindAbilityByName("purifier_bonus_gold")
+    if not goldAbility then
+        --print("Shouldn't ever happen because this ability is not researched")
+        return
+    end
+
     local playerID = player:GetPlayerID()
-    local extraGold = math.floor(gold * 0.25)
+    local goldMultiplier = goldAbility:GetSpecialValueFor("gold_bonus") / 100
+    local extraGold = math.floor(gold * goldMultiplier)
     PlayerResource:ModifyGold(playerID, extraGold, false, DOTA_ModifyGold_CreepKill)
 
     -- particle effects appear on the purifier itself
@@ -37,12 +44,14 @@ function Purifier:EarnedLumber(player, lumber)
         return
     end
 
-    --if not purifier:FindAbilityByName("bm_purify_lumber") then -- or whatever
-    --    print("Purify lumber not researched yet")
-    --    return
-    --end
+    local lumberAbility = purifier:FindAbilityByName("purifier_bonus_lumber")
+    if not lumberAbility then
+        --print("Purify lumber ability not researched yet")
+        return
+    end
 
-    local extraLumber = math.floor(lumber * 0.25)
+    local lumberMultiplier = lumberAbility:GetSpecialValueFor("lumber_bonus") / 100
+    local extraLumber = math.floor(lumber * lumberMultiplier)
     ModifyLumber(player, extraLumber)
     PopupLumber(purifier, extraLumber)
     --print("Found purifier, lumber +" .. extraLumber)
