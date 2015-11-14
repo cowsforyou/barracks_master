@@ -22,13 +22,13 @@
         "02"
         {
             "var_type"              "FIELD_INTEGER"
-            "gold_cost"             "75"
+            "gold_cost"             "125"
         }
 
         "03"
         {
             "var_type"              "FIELD_INTEGER"
-            "lumber_cost"           "75"
+            "lumber_cost"           "125"
         }    
     }
 

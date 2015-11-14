@@ -121,6 +121,8 @@
 [ ] Clean up Portal of Heroes ambient animation
 [ ] Random Lumberjack console error bug
 [ ] Color health bars?
+[ ] Have gold cost of disabled buildings shown
+[ ] Tooltips for ancient toggle not showing description
 
 
 Balance
@@ -130,6 +132,7 @@ Balance
 [ ] Modify fb gold?
 [ ] Disable additional gold from hero kills/assists
 [ ] Last stand
+[ ] Mana regen?
 
 
 

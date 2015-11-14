@@ -517,7 +517,7 @@
 	      "01"
 	      {
 	        "var_type"        "FIELD_INTEGER"
-	        "damage_bonus"     "3 12 40"
+	        "damage_bonus"     "10 24 60"
 	      }
 	      
 	    }
@@ -658,7 +658,7 @@
 	      "01"
 	      {
 	        "var_type"        "FIELD_INTEGER"
-	        "damage_bonus"     "5 15 50"
+	        "damage_bonus"     "15 30 70"
 	      }
 	      
 	    }
@@ -2746,7 +2746,7 @@
 	        "01"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "damage_bonus"           "3 12 40"
+	        "damage_bonus"           "10 24 60"
 	      }
 	      
 	        "02"
@@ -2935,7 +2935,7 @@
 	        "01"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "damage_bonus"           "5 15 50"
+	        "damage_bonus"           "15 30 70"
 	      }
 	      
 	        "02"
@@ -3810,13 +3810,13 @@
 	        "02"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "gold_cost"             "75"
+	            "gold_cost"             "125"
 	        }
 	
 	        "03"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "lumber_cost"           "75"
+	            "lumber_cost"           "125"
 	        }    
 	    }
 	
@@ -3856,13 +3856,13 @@
 	        "02"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "gold_cost"             "50"
+	            "gold_cost"             "100"
 	        }
 	
 	        "03"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "lumber_cost"           "100"
+	            "lumber_cost"           "150"
 	        }
 	    }
 	
@@ -3902,13 +3902,13 @@
 	        "02"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "gold_cost"             "100"
+	            "gold_cost"             "150"
 	        }
 	
 	        "03"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "lumber_cost"           "50"
+	            "lumber_cost"           "100"
 	        }
 	    }
 	
