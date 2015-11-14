@@ -758,6 +758,28 @@
 	    "AbilityTextureName"            "damage"
 	    "MaxLevel"                      "0"
 	}
+	"bm_truestrike"
+	{
+	  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	  "BaseClass"             "ability_datadriven"
+	  "AbilityTextureName"    "truestrike"
+	
+	  "MaxLevel"    "1"
+	
+	  "Modifiers"
+	  {
+	    "modifier_bm_truestrike"
+	    {
+	      "Passive"    "1"
+	      "IsHidden"   "1"
+	      
+	      "States"
+	      {
+	        "MODIFIER_STATE_CANNOT_MISS"  "MODIFIER_STATE_VALUE_ENABLED"
+	      }
+	    }
+	  }
+	}
 	// Building requires repair to finish construction. Can be assisted to make the process faster
 	"build_bm_ancient_barracks"
 	{
@@ -3055,7 +3077,7 @@
 	    "AbilityTextureName"            "beastmaster_call_of_the_wild"
 	    "MaxLevel"                      "1"
 	
-	    "AbilityGoldCost"               "150"
+	    "AbilityGoldCost"               "120"
 	    "AbilityChannelTime"            "60"
 	    
 	    "AbilitySpecial"
@@ -3069,13 +3091,13 @@
 	        "02"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "gold_cost"             "150"
+	        "gold_cost"             "120"
 	      }
 	 
 	        "03"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "lumber_cost"           "80"
+	        "lumber_cost"           "30"
 	      }
 	    }
 	
@@ -3797,7 +3819,7 @@
 	    "AbilityCastPoint"              "0"
 	
 	    "AbilityGoldCost"               "75"
-	    "AbilityCooldown"               "5.0"
+	    "AbilityCooldown"               "20.0"
 	
 	    "AbilitySpecial"
 	    {
@@ -3843,7 +3865,7 @@
 	    "AbilityCastPoint"              "0"
 	
 	    "AbilityGoldCost"               "50"
-	    "AbilityCooldown"               "5.0"
+	    "AbilityCooldown"               "20.0"
 	
 	    "AbilitySpecial"
 	    {
@@ -3889,7 +3911,7 @@
 	    "AbilityCastPoint"              "0"
 	
 	    "AbilityGoldCost"               "100"
-	    "AbilityCooldown"               "5.0"
+	    "AbilityCooldown"               "20.0"
 	
 	    "AbilitySpecial"
 	    {
@@ -3935,7 +3957,7 @@
 	    "AbilityCastPoint"              "0"
 	
 	    "AbilityGoldCost"               "80"
-	    "AbilityCooldown"               "40.0"
+	    "AbilityCooldown"               "30.0"
 	
 	    "AbilitySpecial"
 	    {

@@ -5,7 +5,7 @@
     "AbilityTextureName"            "beastmaster_call_of_the_wild"
     "MaxLevel"                      "1"
 
-    "AbilityGoldCost"               "150"
+    "AbilityGoldCost"               "120"
     "AbilityChannelTime"            "60"
     
     "AbilitySpecial"
@@ -19,13 +19,13 @@
         "02"
       {
         "var_type"              "FIELD_INTEGER"
-        "gold_cost"             "150"
+        "gold_cost"             "120"
       }
  
         "03"
       {
         "var_type"              "FIELD_INTEGER"
-        "lumber_cost"           "80"
+        "lumber_cost"           "30"
       }
     }
 

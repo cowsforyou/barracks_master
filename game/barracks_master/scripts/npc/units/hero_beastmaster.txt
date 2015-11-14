@@ -14,7 +14,7 @@
         // Abilities
         //----------------------------------------------------------------
         "AbilityLayout"             "4"
-        "Ability1"                  ""          // Ability 1.
+        "Ability1"                  "bm_truestrike"          // Ability 1.
         "Ability2"                  "beastmaster_inner_beast"          // Ability 2.
         "Ability3"                  ""          // Ability 3.
         "Ability4"                  ""          // Ability 4.

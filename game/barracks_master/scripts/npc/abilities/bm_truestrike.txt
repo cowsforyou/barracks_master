@@ -1,0 +1,22 @@
+"bm_truestrike"
+{
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  "BaseClass"             "ability_datadriven"
+  "AbilityTextureName"    "truestrike"
+
+  "MaxLevel"    "1"
+
+  "Modifiers"
+  {
+    "modifier_bm_truestrike"
+    {
+      "Passive"    "1"
+      "IsHidden"   "1"
+      
+      "States"
+      {
+        "MODIFIER_STATE_CANNOT_MISS"  "MODIFIER_STATE_VALUE_ENABLED"
+      }
+    }
+  }
+}

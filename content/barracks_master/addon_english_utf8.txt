@@ -33,7 +33,7 @@
 		"creep_siege"                                                                     	"Siege Creep"
 		"creep_air"                                                                     	"Air Creep"
 		"creep_ancient1"                                                                    "Granite Golem"
-		"creep_ancient2"                                                                    "Big Thunder Lizard"
+		"creep_ancient2"                                                                    "Thunderhide"
 		"creep_ancient3"                                                                    "Black Dragon"
 		"lumberjack"																		"Lumberjack"
 
@@ -473,22 +473,22 @@
 
 		//Purifier
 		//-------------------------------------------------------------
-		"DOTA_Tooltip_ability_purifier_bonus_gold"                                        "Eldwurm's Gold"
-		"DOTA_Tooltip_ability_purifier_bonus_gold_Description"                            "Increases gold earned from creep-kills by 25 percent. By remelting gold in the fire of Slyrak, one is able to create additional value out of the precious metal."
-		"DOTA_Tooltip_ability_purifier_bonus_gold_gold_bonus"                             "BONUS PERCENTAGE:"
+		"DOTA_Tooltip_ability_purifier_bonus_gold"                                 			"Eldwurm's Gold"
+		"DOTA_Tooltip_ability_purifier_bonus_gold_Description"                            	"Increases gold earned from creep-kills by 25 percent. By remelting gold in the fire of Slyrak, one is able to create additional value out of the precious metal."
+		"DOTA_Tooltip_ability_purifier_bonus_gold_gold_bonus"                             	"BONUS PERCENTAGE:"
 
-		"DOTA_Tooltip_ability_purifier_bonus_lumber"                                      "Wood Chips"
-		"DOTA_Tooltip_ability_purifier_bonus_lumber_Description"                          "Increases yield of lumber earned. All sawmills turn logs into lumber, but in the process much waste is generated. Wood chips and sawdust can be recycled to make sure nothing goes to waste."
-		"DOTA_Tooltip_ability_purifier_bonus_lumber_lumber_bonus"                         "BONUS PERCENTAGE:"
+		"DOTA_Tooltip_ability_purifier_bonus_lumber"                                      	"Wood Chips"
+		"DOTA_Tooltip_ability_purifier_bonus_lumber_Description"                          	"Increases yield of lumber earned. All sawmills turn logs into lumber, but in the process much waste is generated. Wood chips and sawdust can be recycled to make sure nothing goes to waste."
+		"DOTA_Tooltip_ability_purifier_bonus_lumber_lumber_bonus"                         	"BONUS PERCENTAGE:"
 
-		"DOTA_Tooltip_ability_purifier_bonus_lumber_disabled"                             "Wood Chips"
-		"DOTA_Tooltip_ability_purifier_bonus_lumber_disabled_Description"                 "Increases yield of lumber earned. All sawmills turn logs into lumber, but in the process much waste is generated. Wood chips and sawdust can be recycled to make sure nothing goes to waste.\n<b><font color='#eedd44'>Requires:\n - Research Wood Chips</font></b>"
+		"DOTA_Tooltip_ability_purifier_bonus_lumber_disabled"                             	"Wood Chips"
+		"DOTA_Tooltip_ability_purifier_bonus_lumber_disabled_Description"                 	"Increases yield of lumber earned. All sawmills turn logs into lumber, but in the process much waste is generated. Wood chips and sawdust can be recycled to make sure nothing goes to waste.\n<b><font color='#eedd44'>Requires:\n - Research Wood Chips</font></b>"
 
-		"DOTA_Tooltip_ability_research_purifier_bonus_lumber"                             "Research Wood Chips"
-		"DOTA_Tooltip_ability_research_purifier_bonus_lumber_Description"                 "Increases yield of lumber earned. All sawmills turn logs into lumber, but in the process much waste is generated. Wood chips and sawdust can be recycled to make sure nothing goes to waste."
-		"DOTA_Tooltip_ability_research_purifier_bonus_lumber_lumber_bonus"                "BONUS PERCENTAGE:"
-		"DOTA_Tooltip_ability_research_purifier_bonus_lumber_research_time"               "<font color='#057aff'>RESEARCH TIME</font>:"
-		"DOTA_Tooltip_ability_research_purifier_bonus_lumber_gold_cost"                   "<font color='#fff22e'>GOLD COST</font>:"
+		"DOTA_Tooltip_ability_research_purifier_bonus_lumber"                             	"Research Wood Chips"
+		"DOTA_Tooltip_ability_research_purifier_bonus_lumber_Description"                 	"Increases yield of lumber earned. All sawmills turn logs into lumber, but in the process much waste is generated. Wood chips and sawdust can be recycled to make sure nothing goes to waste."
+		"DOTA_Tooltip_ability_research_purifier_bonus_lumber_lumber_bonus"                	"BONUS PERCENTAGE:"
+		"DOTA_Tooltip_ability_research_purifier_bonus_lumber_research_time"               	"<font color='#057aff'>RESEARCH TIME</font>:"
+		"DOTA_Tooltip_ability_research_purifier_bonus_lumber_gold_cost"                   	"<font color='#fff22e'>GOLD COST</font>:"
 
 
 		//Misc
@@ -501,14 +501,16 @@
 		"DOTA_Tooltip_ability_lumberjack_harvest_Description"                               "Use ability and target The Stump to begin harvesting."
 
 		"DOTA_Tooltip_ability_select_ancient1"                                     			"Granite Golem"
-		"DOTA_Tooltip_ability_select_ancient1_Description"                                  "Click to select Granite Golems as your Ancient spawn."
+		"DOTA_Tooltip_ability_select_ancient1_Description"                                  "Click to select Granite Golems as your Ancient spawn. Granite Golems have Granite Aura which increases the health capacity of nearby units."
 
-		"DOTA_Tooltip_ability_select_ancient2"                                     			"Thunder Lizard"
-		"DOTA_Tooltip_ability_select_ancient1_Description"                                  "Click to select Thunder Lizard as your Ancient spawn."	
+		"DOTA_Tooltip_ability_select_ancient2"                                     			"Thunderhide"
+		"DOTA_Tooltip_ability_select_ancient2_Description"                                  "Click to select Thunderhides as your Ancient spawn. Thunderhides have War Drums Aura which increases the attack speed and attack damage of nearby allies."	
 		
 		"DOTA_Tooltip_ability_select_ancient3"                                     			"Black Dragon"
-		"DOTA_Tooltip_ability_select_ancient1_Description"                                  "Click to select Black Dragon as your Ancient spawn."	
+		"DOTA_Tooltip_ability_select_ancient3_Description"                                  "Click to select Black Dragons as your Ancient spawn. Black Dragons have Dragonhide Aura which grants nearby allies additional armor."	
 
+		"DOTA_Tooltip_ability_bm_truestrike"                                              	"True Strike"
+		"DOTA_Tooltip_ability_bm_truestrike_Description"                                  	"Prevents attacks from missing. True Strike does not work when attacking enemy structures."
 
 
 		//-------------------

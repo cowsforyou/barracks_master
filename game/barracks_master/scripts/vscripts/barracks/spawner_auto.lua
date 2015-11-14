@@ -54,11 +54,11 @@ function OnSpellStart( keys )
     if gold_cost > 0 then
         overrideSpawnSync = true
     end
-
-    -- play a sound
+    
+    -- play a sound -- veggiesama
     local soundName = keys.soundName
     if soundName then 
-        EmitSoundOn(soundName, caster)
+        EmitGlobalSound(soundName)
     end
 
     AutoSpawnCreeps(player, ability, creepName, creepCount, overrideSpawnSync)

@@ -9,7 +9,7 @@
     "AbilityCastPoint"              "0"
 
     "AbilityGoldCost"               "80"
-    "AbilityCooldown"               "40.0"
+    "AbilityCooldown"               "30.0"
 
     "AbilitySpecial"
     {
