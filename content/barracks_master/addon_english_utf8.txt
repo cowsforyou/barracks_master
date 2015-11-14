@@ -148,7 +148,7 @@
 		"DOTA_Tooltip_ability_build_bm_purifier_lumber_cost"                      			"<font color='#28fe77'>LUMBER COST</font>:"
 
 		"DOTA_Tooltip_ability_build_bm_purifier_disabled"                         			"Purifier"
-		"DOTA_Tooltip_ability_build_bm_purifier_disabled_Description"             			"Increases gold earned by 25 percent. Can be upgraded to also increase lumber earned.\n<b><font color='#eedd44'>Requires:\n - Tech Lab</font></b>\n"
+		"DOTA_Tooltip_ability_build_bm_purifier_disabled_Description"             			"Increases creep-kill gold earned by 25 percent. Can be upgraded to also increase lumber earned.\n<b><font color='#eedd44'>Requires:\n - Tech Lab</font></b>\n"
 
 
 		"bm_library"                                                             			"Library of Spells"
@@ -364,6 +364,9 @@
 		"DOTA_Tooltip_ability_bm_air_evasion_disabled"                                    	"Evasion"
 		"DOTA_Tooltip_ability_bm_air_evasion_disabled_Description"                        	"Provides evasion to Air Creeps."
 
+		"DOTA_Tooltip_modifier_air_evasion_bonus"                                         	"Evasion"
+		"DOTA_Tooltip_modifier_air_evasion_bonus_Description"                             	"Grants evasion"
+
 		"DOTA_Tooltip_ability_research_bm_air_evasion"                                    	"Evasion"
 		"DOTA_Tooltip_ability_research_bm_air_evasion_Description"                        	"Provides evasion to Air Creeps."
 		"DOTA_Tooltip_ability_research_bm_air_evasion_evasion_bonus"              			"EVASION PERCENTAGE:"
@@ -468,7 +471,24 @@
 		"DOTA_Tooltip_ability_spawn_lumberjacks_max_count"                              	"MAX COUNT:"
 
 
+		//Purifier
+		//-------------------------------------------------------------
+		"DOTA_Tooltip_ability_purifier_bonus_gold"                                        "Eldwurm's Gold"
+		"DOTA_Tooltip_ability_purifier_bonus_gold_Description"                            "Increases gold earned from creep-kills by 25 percent. By remelting gold in the fire of Slyrak, one is able to create additional value out of the precious metal."
+		"DOTA_Tooltip_ability_purifier_bonus_gold_gold_bonus"                             "BONUS PERCENTAGE:"
 
+		"DOTA_Tooltip_ability_purifier_bonus_lumber"                                      "Wood Chips"
+		"DOTA_Tooltip_ability_purifier_bonus_lumber_Description"                          "Increases yield of lumber earned. All sawmills turn logs into lumber, but in the process much waste is generated. Wood chips and sawdust can be recycled to make sure nothing goes to waste."
+		"DOTA_Tooltip_ability_purifier_bonus_lumber_lumber_bonus"                         "BONUS PERCENTAGE:"
+
+		"DOTA_Tooltip_ability_purifier_bonus_lumber_disabled"                             "Wood Chips"
+		"DOTA_Tooltip_ability_purifier_bonus_lumber_disabled_Description"                 "Increases yield of lumber earned. All sawmills turn logs into lumber, but in the process much waste is generated. Wood chips and sawdust can be recycled to make sure nothing goes to waste.\n<b><font color='#eedd44'>Requires:\n - Research Wood Chips</font></b>"
+
+		"DOTA_Tooltip_ability_research_purifier_bonus_lumber"                             "Research Wood Chips"
+		"DOTA_Tooltip_ability_research_purifier_bonus_lumber_Description"                 "Increases yield of lumber earned. All sawmills turn logs into lumber, but in the process much waste is generated. Wood chips and sawdust can be recycled to make sure nothing goes to waste."
+		"DOTA_Tooltip_ability_research_purifier_bonus_lumber_lumber_bonus"                "BONUS PERCENTAGE:"
+		"DOTA_Tooltip_ability_research_purifier_bonus_lumber_research_time"               "<font color='#057aff'>RESEARCH TIME</font>:"
+		"DOTA_Tooltip_ability_research_purifier_bonus_lumber_gold_cost"                   "<font color='#fff22e'>GOLD COST</font>:"
 
 
 		//Misc

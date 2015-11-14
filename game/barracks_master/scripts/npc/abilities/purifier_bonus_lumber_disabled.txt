@@ -1,6 +1,6 @@
 "purifier_bonus_lumber_disabled"
 {
     "BaseClass"                     "ability_datadriven"
-    "AbilityTextureName"            "research_ultimate_ability"
+    "AbilityTextureName"            "wood_chips"
     "MaxLevel"                      "0"
 }

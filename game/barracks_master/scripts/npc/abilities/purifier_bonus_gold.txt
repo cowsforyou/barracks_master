@@ -1,7 +1,7 @@
 "purifier_bonus_gold"
 {
     "BaseClass"                     "ability_datadriven"
-    "AbilityTextureName"            "research_ultimate_ability"
+    "AbilityTextureName"            "dragon_knight_breathe_fire"
     "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
     "MaxLevel"                      "1"

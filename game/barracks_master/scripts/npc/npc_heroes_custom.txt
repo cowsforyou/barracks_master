@@ -69,8 +69,8 @@
 	
 		// Attack
 		//-------------------------------------------------------------------------------------------------------------
-		"AttackDamageMin"				"3"
-		"AttackDamageMax"				"3"	
+		"AttackDamageMin"				"30"
+		"AttackDamageMax"				"30"	
 		"AttackDamageType"				"DAMAGE_TYPE_ArmorPhysical"
 	
 		// Attributes
@@ -92,8 +92,8 @@
 	
 		// Status
 		//-------------------------------------------------------------------------------------------------------------
-		"StatusHealth"					"10"			// Base health.
-		"StatusHealthRegen"				"0.2"
+		"StatusHealth"					"100"			// Base health.
+		"StatusHealthRegen"				"0.4"
 		"StatusMana"					"300"
 		"StatusManaRegen"				"0.4"
 	
@@ -207,8 +207,8 @@
 	
 		// Attack
 		//-------------------------------------------------------------------------------------------------------------
-		"AttackDamageMin"				"3"
-		"AttackDamageMax"				"3"	
+		"AttackDamageMin"				"30"
+		"AttackDamageMax"				"30"	
 		"AttackDamageType"				"DAMAGE_TYPE_ArmorPhysical"
 	
 		// Attributes
@@ -231,8 +231,8 @@
 	    
 		// Status
 		//-------------------------------------------------------------------------------------------------------------
-		"StatusHealth"					"10"			// Base health.
-		"StatusHealthRegen"				"0.2"
+		"StatusHealth"					"100"			// Base health.
+		"StatusHealthRegen"				"0.4"
 		"StatusMana"					"300"
 		"StatusManaRegen"				"0.4"
 	
@@ -269,8 +269,8 @@
 	
 		// Attack
 		//-------------------------------------------------------------------------------------------------------------
-		"AttackDamageMin"				"3"
-		"AttackDamageMax"				"3"	
+		"AttackDamageMin"				"30"
+		"AttackDamageMax"				"30"	
 		"AttackDamageType"				"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRange"					"600"
 	
@@ -294,8 +294,8 @@
 	    
 		// Status
 		//-------------------------------------------------------------------------------------------------------------
-		"StatusHealth"					"6"			// Base health.
-		"StatusHealthRegen"				"0.2"
+		"StatusHealth"					"70"			// Base health.
+		"StatusHealthRegen"				"0.4"
 		"StatusMana"					"300"
 		"StatusManaRegen"				"0.4"
 	
@@ -332,8 +332,8 @@
 	
 		// Attack
 		//-------------------------------------------------------------------------------------------------------------
-		"AttackDamageMin"				"3"
-		"AttackDamageMax"				"3"	
+		"AttackDamageMin"				"30"
+		"AttackDamageMax"				"30"	
 		"AttackDamageType"				"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRange"					"600"
 	
@@ -355,8 +355,8 @@
 	    
 		// Status
 		//-------------------------------------------------------------------------------------------------------------
-		"StatusHealth"					"6"			// Base health.
-		"StatusHealthRegen"				"0.2"
+		"StatusHealth"					"70"			// Base health.
+		"StatusHealthRegen"				"0.4"
 		"StatusMana"					"300"
 		"StatusManaRegen"				"0.4"
 	

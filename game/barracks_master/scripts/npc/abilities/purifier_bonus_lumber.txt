@@ -1,7 +1,7 @@
 "purifier_bonus_lumber"
 {
     "BaseClass"                     "ability_datadriven"
-    "AbilityTextureName"            "research_ultimate_ability"
+    "AbilityTextureName"            "wood_chips"
     "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
     "MaxLevel"                      "3"

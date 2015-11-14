@@ -2248,8 +2248,8 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"2.0"
-		"AttackDamageMax"			"2.0"
+		"AttackDamageMin"			"20.0"
+		"AttackDamageMax"			"20.0"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"2"
 		"AttackAnimationPoint"		"0.433"
@@ -2276,7 +2276,7 @@
 		
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"5"
+		"StatusHealth"				"50"
 		"StatusHealthRegen"			"0.25"
 		"StatusMana"				"0"
 		"StatusManaRegen"			"0"
@@ -2528,8 +2528,8 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"2"		// Damage range min.
-		"AttackDamageMax"			"2"		// Damage range max.	
+		"AttackDamageMin"			"20"		// Damage range min.
+		"AttackDamageMax"			"20"		// Damage range max.	
 		"AttackRate"				"1.25"		// Speed of attack.
 		"AttackAnimationPoint"		"0.5"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"600"		// Range within a target can be acquired.
@@ -2555,8 +2555,8 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"5"		// Base health.
-		"StatusHealthRegen"			"0"		// Health regeneration rate.
+		"StatusHealth"				"50"		// Base health.
+		"StatusHealthRegen"			"0.25"		// Health regeneration rate.
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -2615,8 +2615,8 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"4"		// Base health.
-		"StatusHealthRegen"			"0"			// Health regeneration rate.
+		"StatusHealth"				"40"		// Base health.
+		"StatusHealthRegen"			"0.25"			// Health regeneration rate.
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -2680,8 +2680,8 @@
 	
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"5"		// Base health.
-		"StatusHealthRegen"			"0"		// Health regeneration rate.
+		"StatusHealth"				"50"		// Base health.
+		"StatusHealthRegen"			"0.25"		// Health regeneration rate.
 		"StatusMana"				"175"
 		"StatusManaRegen"			"0"
 		

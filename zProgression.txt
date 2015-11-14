@@ -120,6 +120,7 @@
 [x] Clean up purifier description to make clear only creep kills gets bonus
 [ ] Clean up Portal of Heroes ambient animation
 [ ] Random Lumberjack console error bug
+[ ] Color health bars?
 
 
 Balance
