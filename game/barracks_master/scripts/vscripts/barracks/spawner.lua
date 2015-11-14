@@ -202,9 +202,9 @@ end
 
 function ApplyColorToUnit(unit, color)
     if     color == "red"    then unit:SetRenderColor(255,128,128)
-    elseif color == "blue"   then unit:SetRenderColor(0,128,255)
+    elseif color == "blue"   then unit:SetRenderColor(50,167,255)
     elseif color == "green"  then unit:SetRenderColor(128,255,128)
-    elseif color == "purple" then unit:SetRenderColor(255,128,255)
+    elseif color == "purple" then unit:SetRenderColor(255,255,0)
     end
 end
 
