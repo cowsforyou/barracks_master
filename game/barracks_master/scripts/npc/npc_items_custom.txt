@@ -615,6 +615,124 @@
 	    "ItemPurchasable"   "0"
 	    "ItemDroppable"     "0"
 	}
+	"item_last_stand"
+	{
+	    // General
+	    //-------------------------------------------------------------------------------------------------------------
+	    "BaseClass"                     "item_datadriven"
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	    "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+	    "AbilityTextureName"            "item_bfury"
+	
+	    // Precache
+	    //-------------------------------------------------------------------------------------------------------------
+	    "precache"
+	    {
+	        "soundfile"         "soundevents/game_sounds_heroes/game_sounds_sven.vsndevts"
+	        "particle"          "particles/units/heroes/hero_sven/sven_spell_gods_strength.vpcf"
+	        "particle"          "particles/status_fx/status_effect_gods_strength.vpcf"
+	        "particle"          "particles/units/heroes/hero_sven/sven_spell_great_cleave.vpcf"
+	    }
+	
+	
+	    // Casting
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilityCastPoint"              "0.3"
+	
+	    // Time     
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilityCooldown"               "12.0"
+	    "AbilityDuration"               "10.0"
+	
+	    // Cost
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilityManaCost"               "0"
+	
+	    // Special
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "cleave_radius"         "300.0"
+	        }
+	        
+	        "02"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "cleave_percent"        "70"
+	        }
+	        "03"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "bonus_damage"          "300"       
+	        }
+	        "04"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "bonus_attackspeed"     "160"       
+	        }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "FireSound"
+	        {
+	            "EffectName"        "Hero_Sven.GodsStrength"
+	            "Target"            "CASTER"
+	        }
+	
+	        "FireEffect"
+	        {
+	            "EffectName"        "particles/units/heroes/hero_sven/sven_spell_gods_strength.vpcf"
+	            "EffectAttachType"  "follow_origin"
+	            "Target"            "CASTER"
+	        }
+	
+	        "ApplyModifier"
+	        {
+	            "ModifierName"      "modifier_last_stand"
+	            "Target"            "CASTER"
+	        }
+	    }
+	
+	
+	    "Modifiers"
+	    {
+	        "modifier_last_stand"
+	        {
+	            "IsBuff"        "1"
+	            "IsPurgable"    "0"
+	            "Duration"      "%AbilityDuration"
+	
+	            "StatusEffectName"  "particles/status_fx/status_effect_gods_strength.vpcf"
+	            "StatusEffectPriority"  "10"
+	
+	            "Properties"
+	            {
+	                "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"      "%bonus_damage"
+	                "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%bonus_attackspeed"
+	            }
+	
+	            "States"
+	            {
+	                "MODIFIER_STATE_INVULNERABLE"  "MODIFIER_STATE_VALUE_ENABLED"
+	            }
+	
+	            "OnAttackLanded"
+	            {
+	                "CleaveAttack"
+	                {
+	                    "CleavePercent"     "%cleave_percent"
+	                    "CleaveRadius"      "%cleave_radius"
+	                    "CleaveEffect"      "particles/units/heroes/hero_sven/sven_spell_great_cleave.vpcf"
+	                }
+	            }
+	        }
+	    }
+	}
+	
 	"item_research_bm_air_evasion"
 	{
 		"BaseClass"             		"item_datadriven"

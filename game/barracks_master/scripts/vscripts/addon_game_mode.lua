@@ -68,7 +68,6 @@ function Precache( context )
   PrecacheResource("particle_folder", "particles/units/heroes/hero_invoker", context) -- for Sun Strike
   PrecacheResource("particle_folder", "particles/units/heroes/hero_lich", context) -- for Chain Frost
 
-
   PrecacheResource("particle_folder", "particles/units/heroes/hero_furion", context) -- for spectator
   PrecacheResource("particle_folder", "particles/units/heroes/hero_riki", context) -- for spectator
   PrecacheResource("particle_folder", "particles/units/heroes/hero_disruptor", context) -- for spectator
@@ -119,6 +118,7 @@ function Precache( context )
   PrecacheItemByNameSync("item_boar", context)
   PrecacheItemByNameSync("item_hawk", context)
   PrecacheItemByNameSync("item_techies", context)
+  PrecacheItemByNameSync("item_last_stand", context)
 
 
   -- Non Barracks Master --   

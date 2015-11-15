@@ -29,7 +29,7 @@
 [x] Code max lumberjacks to be 10
 [x] Code in purifier
 [ ] Create either/or function for Luminous and Unpromising Towers.
-[ ] Create truestrike modifier for heroes
+[x] Create truestrike modifier for heroes
 [ ] Create Last Stand item and code when to award item
 
 
@@ -58,7 +58,7 @@
 [ ] Learn how to edit tips on loading screen
 [x] Have additional gold/lumber earned pop up ontop of purifier
 [ ] Create countdown timer for "superweapons"
-[ ] Have gold sound play when alchemist donates gold (soundfile: sounds/ui/coins_big.vsnd)
+[x] Have gold sound play when alchemist donates gold (soundfile: sounds/ui/coins_big.vsnd)
 [ ] Have "Your base is under attack" play when any of your buildings get attacked (soundfile: sounds/vo/announcer/ann_custom_generic_alert_01.vsnd)
 [ ] Have "Your forces are under attack" play when your hero, scouts or lumberjacks get attacked (soundfile: sounds/vo/announcer/ann_custom_generic_alert_03.vsnd)
 [ ] Have "Building" play when building begins (soundfile: sounds/vo/announcer/ann_custom_generic_alert_12.vsnd)
@@ -107,7 +107,7 @@
 [x] Net worth should include current gold
 [x] Net worth should include research values
 [x] Give brief description on the different barracks and strength of creeps
-[ ] The Stump hitbox too tall
+[x] The Stump hitbox too tall
 [x] Build grid unavailable for Unpromising Tower and Luminous Tower
 [x] Chaos Meteor damages towers but not player buildings
 [ ] Initial vision of Chaos Meteor target location not showing
@@ -121,9 +121,9 @@
 [ ] Clean up Portal of Heroes ambient animation
 [x] Random Lumberjack console error bug
 [ ] Color health bars?
-[ ] Have gold cost of disabled buildings shown
-[ ] Tooltips for ancient toggle not showing description
-[ ] Modify pathing of creeps after t2
+[x] Have gold cost of disabled buildings shown
+[x] Tooltips for ancient toggle not showing description
+[x] Modify pathing of creeps after t2
 
 
 Balance
