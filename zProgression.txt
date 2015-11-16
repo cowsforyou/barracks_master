@@ -40,6 +40,7 @@
 [x] Award chunks of passive income progressively throughout the game
 [x] Create function to award last hit gold from creeps to player
 [ ] Clean up team and hero selection
+[ ] Code mana regen on ancient
 
 
 -- UI --
@@ -127,15 +128,10 @@
 
 
 Balance
-[ ] Heroes unable to attack OR heroes get enough dmg to last hit
-[ ] Enable lumber upgrade on purifier
 [ ] Modify kill bounty on players?
 [ ] Modify fb gold?
 [ ] Disable additional gold from hero kills/assists
 [ ] Last stand
-[ ] Mana regen?
-
-
 
 
 
@@ -205,28 +201,6 @@ Balance
 															-Call Down 									-Guardian Angel
 
 
-
----------------------------------------------------
--- Strategies
----------------------------------------------------
-+Skeleton rush
--Skeleton Barracks
--Counters: Air rush
--Counters: Tech rush (success)
-
-+Balanced build
--Creep upgrades
--Counters: Skeleton rush
-
-+Air Rush
--Aviation Sanctuary
--Counters: Balanced build
-
-+Tech Rush
--Portal of Heroes
--Counters: Air rush
-
-
 ---------------------------------------------------
 -- Specials
 ---------------------------------------------------
@@ -249,125 +223,3 @@ Balance
 -Attacks in a small AoE with a slight reduction to damage.
 -AoE Raidus: 150
 -Damage Reduction: 7
-
-
-
----------------------------------------------------
--- Balance
----------------------------------------------------
-
---Initial
-Starting Gold: 		300
-Tick Gold: 			5
-Tick Gold Time: 	10
-Tick GPM: 			30
-
-Starting Lumber: 	0
-Tick Lumber: 		5
-Tick Lumber Time: 	30
-Tick LPM: 			10
-Harvest LPM: 		60
-
---Creeps
-Skeleton Bounty:	10
-Skeleton HP: 		45
-Skeleton Armor: 	0
-Skeleton Damage:	50
-
-Melee Bounty:		20
-Melee HP: 			500
-Melee Armor: 		0
-Melee Damage:		20 (23)
-
-Ranged Bounty: 		30
-Ranged HP: 			300
-Ranged Armor: 		0
-Ranged Damage: 		20
-
-Siege Bounty: 		50
-Siege HP: 			500
-Siege Armor: 		2
-Siege Damage: 		40
-
-Air Bounty: 		40
-Air HP: 			350
-Air Armor: 			1
-Air Damage:			45
-
-Ancient1 Bounty:	150
-Ancient1 HP: 		1700
-Ancient1 Armor: 	8
-Ancient1 Damage: 	80
-Ancent1 AS: 		1.35
-
-Ancient2 Bounty:	150
-Ancient2 HP: 		1400
-Ancient2 Armor: 	2
-Ancient2 Damage: 	75
-Ancent2 AS: 		1.8
-
-Ancient3 Bounty:	150
-Ancient3 HP: 		2000
-Ancient3 Armor: 	4
-Ancient3 Damage: 	65
-Ancent3 AS: 		1.5
-
-Venge Bounty:		110
-Venge Cost: 
-Venge HP: 			1200
-Venge Armor: 		5
-Venge Damage: 		85
-Venge AS: 			0.9
-
-Never Bounty:		110
-Never Cost: 
-Never HP: 			1200
-Never Armor: 		5
-Never Damage: 		85
-Never AS: 			0.9
-
-Beast Bounty:		110
-Beast Cost: 
-Beast HP: 			1300
-Beast Armor: 		5
-Beast Damage: 		95
-Beast AS: 			0.9
-
-
---Others
-Rune Bounty: 	Default (50)
-Hero Bounty: 	Default
-
-Boar Bounty: 	5
-Boar Cost:		10
-Boar HP: 		5
-Boar Armor: 	0
-Boar Damage: 	2
-
-Hawk Bounty: 	30
-Hawk Cost:		20
-Hawk HP: 		4
-Hawk Armor: 	0 
-
-Techies Bounty: 80
-Techies Cost: 	150
-Techies HP: 	5
-Techies Armor: 	0
-A
-Axe/Sven
-HP: 			10
-Armor: 			2
-Damage: 		3
-
-TA/Veno
-HP: 			6
-Armor: 			2
-Damage: 		3
-
-TBD:
-change vs cost 		 : 150 gold, 50 lumber
-change nevermore cost: 50 gold, 150 lumber
-
-add chain frost, chaos meteor, modify sun strike
-
-remove all specials from melee ranged siege air

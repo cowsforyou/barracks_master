@@ -3,33 +3,39 @@
     // General
     //-------------------------------------------------------------------------------------------------------------
     "BaseClass"                     "item_datadriven"
-    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-    "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+    "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
     "AbilityTextureName"            "item_bfury"
+    "AOERadius"                     "%radius"
 
     // Precache
     //-------------------------------------------------------------------------------------------------------------
     "precache"
     {
-        "soundfile"         "soundevents/game_sounds_heroes/game_sounds_sven.vsndevts"
-        "particle"          "particles/units/heroes/hero_sven/sven_spell_gods_strength.vpcf"
-        "particle"          "particles/status_fx/status_effect_gods_strength.vpcf"
-        "particle"          "particles/units/heroes/hero_sven/sven_spell_great_cleave.vpcf"
+        "soundfile"         "soundevents/game_sounds_heroes/game_sounds_lion.vsndevts"
+        "particle"          "particles/units/heroes/hero_lion/lion_spell_finger_of_death.vpcf"
     }
 
 
     // Casting
     //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastRange"              "900"
     "AbilityCastPoint"              "0.3"
 
     // Time     
     //-------------------------------------------------------------------------------------------------------------
-    "AbilityCooldown"               "12.0"
-    "AbilityDuration"               "10.0"
+    "AbilityCooldown"               "5.0"
 
     // Cost
     //-------------------------------------------------------------------------------------------------------------
     "AbilityManaCost"               "0"
+
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityModifierSupportValue"   "0.0"   // Modifier just delays damage
 
     // Special
     //-------------------------------------------------------------------------------------------------------------
@@ -37,24 +43,20 @@
     {
         "01"
         {
-            "var_type"              "FIELD_INTEGER"
-            "cleave_radius"         "300.0"
+            "var_type"                  "FIELD_FLOAT"
+            "radius"                    "400"
         }
-        
+
         "02"
         {
-            "var_type"              "FIELD_INTEGER"
-            "cleave_percent"        "70"
+            "var_type"                  "FIELD_INTEGER"
+            "damage"                    "1400"
         }
+
         "03"
         {
-            "var_type"              "FIELD_INTEGER"
-            "bonus_damage"          "300"       
-        }
-        "04"
-        {
-            "var_type"              "FIELD_INTEGER"
-            "bonus_attackspeed"     "160"       
+            "var_type"                  "FIELD_FLOAT"
+            "damage_delay"              "0.25"
         }
     }
 
@@ -62,54 +64,64 @@
     {
         "FireSound"
         {
-            "EffectName"        "Hero_Sven.GodsStrength"
-            "Target"            "CASTER"
+            "EffectName"    "Hero_Lion.FingerOfDeath"
+            "Target"        "CASTER"
+        }
+
+        "FireSound"
+        {
+            "EffectName"    "Hero_Lion.FingerOfDeathImpact"
+            "Target"        "TARGET"
         }
 
         "FireEffect"
         {
-            "EffectName"        "particles/units/heroes/hero_sven/sven_spell_gods_strength.vpcf"
-            "EffectAttachType"  "follow_origin"
-            "Target"            "CASTER"
+            "EffectName"        "particles/units/heroes/hero_lion/lion_spell_finger_of_death.vpcf"
+            "EffectAttachType"  "start_at_customorigin"
+
+            "ControlPointEntities"
+            {
+                "CASTER"    "attach_attack1"
+                "TARGET"    "attach_hitloc"
+            }
         }
 
-        "ApplyModifier"
+        "ActOnTargets"
         {
-            "ModifierName"      "modifier_last_stand"
-            "Target"            "CASTER"
+            "Target"
+            {
+                "Center"    "TARGET"
+                "Radius"    "%radius"
+                "Teams"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                "Types"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+            }
+
+            "Action"
+            {
+                "ApplyModifier"
+                {
+                    "ModifierName"      "modifier_last_stand_damage"
+                    "Target"            "TARGET"
+                }
+            }
         }
     }
 
 
     "Modifiers"
     {
-        "modifier_last_stand"
+        "modifier_last_stand_damage"
         {
-            "IsBuff"        "1"
-            "IsPurgable"    "0"
-            "Duration"      "%AbilityDuration"
+            "IsHidden"  "1"
+            "Duration"  "%damage_delay"
 
-            "StatusEffectName"  "particles/status_fx/status_effect_gods_strength.vpcf"
-            "StatusEffectPriority"  "10"
-
-            "Properties"
+            "OnDestroy"
             {
-                "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"      "%bonus_damage"
-                "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%bonus_attackspeed"
-            }
-
-            "States"
-            {
-                "MODIFIER_STATE_INVULNERABLE"  "MODIFIER_STATE_VALUE_ENABLED"
-            }
-
-            "OnAttackLanded"
-            {
-                "CleaveAttack"
+                "Damage"
                 {
-                    "CleavePercent"     "%cleave_percent"
-                    "CleaveRadius"      "%cleave_radius"
-                    "CleaveEffect"      "particles/units/heroes/hero_sven/sven_spell_great_cleave.vpcf"
+                    "Target"    "TARGET"
+                    "Type"      "DAMAGE_TYPE_MAGICAL"
+                    "Damage"    "%damage"
                 }
             }
         }

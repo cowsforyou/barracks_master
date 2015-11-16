@@ -620,6 +620,136 @@
 	    // General
 	    //-------------------------------------------------------------------------------------------------------------
 	    "BaseClass"                     "item_datadriven"
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+	    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	    "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+	    "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+	    "AbilityTextureName"            "item_bfury"
+	    "AOERadius"                     "%radius"
+	
+	    // Precache
+	    //-------------------------------------------------------------------------------------------------------------
+	    "precache"
+	    {
+	        "soundfile"         "soundevents/game_sounds_heroes/game_sounds_lion.vsndevts"
+	        "particle"          "particles/units/heroes/hero_lion/lion_spell_finger_of_death.vpcf"
+	    }
+	
+	
+	    // Casting
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilityCastRange"              "900"
+	    "AbilityCastPoint"              "0.3"
+	
+	    // Time     
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilityCooldown"               "5.0"
+	
+	    // Cost
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilityManaCost"               "0"
+	
+	    // Stats
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilityModifierSupportValue"   "0.0"   // Modifier just delays damage
+	
+	    // Special
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"                  "FIELD_FLOAT"
+	            "radius"                    "400"
+	        }
+	
+	        "02"
+	        {
+	            "var_type"                  "FIELD_INTEGER"
+	            "damage"                    "1400"
+	        }
+	
+	        "03"
+	        {
+	            "var_type"                  "FIELD_FLOAT"
+	            "damage_delay"              "0.25"
+	        }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "FireSound"
+	        {
+	            "EffectName"    "Hero_Lion.FingerOfDeath"
+	            "Target"        "CASTER"
+	        }
+	
+	        "FireSound"
+	        {
+	            "EffectName"    "Hero_Lion.FingerOfDeathImpact"
+	            "Target"        "TARGET"
+	        }
+	
+	        "FireEffect"
+	        {
+	            "EffectName"        "particles/units/heroes/hero_lion/lion_spell_finger_of_death.vpcf"
+	            "EffectAttachType"  "start_at_customorigin"
+	
+	            "ControlPointEntities"
+	            {
+	                "CASTER"    "attach_attack1"
+	                "TARGET"    "attach_hitloc"
+	            }
+	        }
+	
+	        "ActOnTargets"
+	        {
+	            "Target"
+	            {
+	                "Center"    "TARGET"
+	                "Radius"    "%radius"
+	                "Teams"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	                "Types"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	            }
+	
+	            "Action"
+	            {
+	                "ApplyModifier"
+	                {
+	                    "ModifierName"      "modifier_last_stand_damage"
+	                    "Target"            "TARGET"
+	                }
+	            }
+	        }
+	    }
+	
+	
+	    "Modifiers"
+	    {
+	        "modifier_last_stand_damage"
+	        {
+	            "IsHidden"  "1"
+	            "Duration"  "%damage_delay"
+	
+	            "OnDestroy"
+	            {
+	                "Damage"
+	                {
+	                    "Target"    "TARGET"
+	                    "Type"      "DAMAGE_TYPE_MAGICAL"
+	                    "Damage"    "%damage"
+	                }
+	            }
+	        }
+	    }
+	}
+	
+	"item_last_stand2"
+	{
+	    // General
+	    //-------------------------------------------------------------------------------------------------------------
+	    "BaseClass"                     "item_datadriven"
 	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 	    "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
 	    "AbilityTextureName"            "item_bfury"
