@@ -67,8 +67,8 @@ function OnSpellStart( keys )
         local dur = 3.0
         Notifications:BottomToAll({hero=iconName, duration=dur})
         Notifications:BottomToAll({text="#"..creepName, duration=dur, continue=true}) -- "#hero_beastmaster"
-        Notifications:BottomToAll({text=" ", duration=dur, continue=true})
-        Notifications:BottomToAll({text="#hero_spawned", duration=dur, continue=true})
+        --Notifications:BottomToAll({text=" ", duration=dur, continue=true}) -- somehow the spacing wasn't showing up so i combined the text display into the creepName so these 2 lines are not needed (cows)
+        --Notifications:BottomToAll({text="#hero_spawned", duration=dur, continue=true})
     end
 
     AutoSpawnCreeps(player, ability, creepName, creepCount, overrideSpawnSync)

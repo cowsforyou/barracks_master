@@ -28,10 +28,9 @@
 	"error_not_enough_lumber"						"Not Enough Lumber"
 	"error_invalid_build_position"					"Invalid Build Area"
 
-	"hero_beastmaster"								"Beastmaster"
-	"hero_vengeful"									"Vengeful Spirit"
-	"hero_nevermore"								"Shadow Fiend"
-	"hero_spawned"									"has spawned"
+	"hero_beastmaster"								"Beastmaster has spawned"
+	"hero_vengeful"									"Vengeful Spirit has spawned"
+	"hero_nevermore"								"Shadow Fiend has spawned"
 
 	"alch_gold"										"Alchemist was feeling rich and donated gold to you. Amount received: "
 }
