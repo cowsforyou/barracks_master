@@ -12,7 +12,9 @@ function GameMode:InitGameMode()
   GameRules:GetGameModeEntity():SetCameraDistanceOverride(1300)
 
   -- DebugPrint
-  Convars:RegisterConvar('debug_spew', tostring(DEBUG_SPEW), 'Set to 1 to start spewing debug info. Set to 0 to disable.', 0)
+  --Convars:RegisterConvar('debug_spew', tostring(DEBUG_SPEW), 'Set to 1 to start spewing debug info. Set to 0 to disable.', 0)
+  -- Commands can be registered for debugging purposes or as functions that can be called by the custom Scaleform UI
+  --Convars:RegisterCommand( "command_example", Dynamic_Wrap(GameMode, 'ExampleConsoleCommand'), "A console command example", FCVAR_CHEAT )
   
   -- Event Hooks (redundant)
   --ListenToGameEvent('entity_killed', Dynamic_Wrap(GameMode, 'OnEntityKilled'), self)
@@ -40,9 +42,6 @@ function GameMode:InitGameMode()
 
   -- Keeps the blighted gridnav positions
   GameRules.Blight = {}
-
-  -- Commands can be registered for debugging purposes or as functions that can be called by the custom Scaleform UI
-  Convars:RegisterCommand( "command_example", Dynamic_Wrap(GameMode, 'ExampleConsoleCommand'), "A console command example", FCVAR_CHEAT )
 
   DebugPrint('[BAREBONES] Done loading Barebones gamemode!\n\n')  
 end

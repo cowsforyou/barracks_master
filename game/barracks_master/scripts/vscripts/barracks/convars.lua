@@ -3,7 +3,7 @@ if BMConvars == nil then
 end
 
 function BMConvars:Setup()
-	self:RegisterConvars()
+	--self:RegisterConvars()
 	self:RegisterCommands()
 end
 
