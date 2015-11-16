@@ -3819,7 +3819,7 @@
 	    "AbilityCastPoint"              "0"
 	
 	    "AbilityGoldCost"               "75"
-	    "AbilityCooldown"               "20.0"
+	    "AbilityCooldown"               "40.0"
 	
 	    "AbilitySpecial"
 	    {
@@ -3832,7 +3832,7 @@
 	        "02"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "gold_cost"             "125"
+	            "gold_cost"             "175"
 	        }
 	
 	        "03"
@@ -3866,7 +3866,7 @@
 	    "AbilityCastPoint"              "0"
 	
 	    "AbilityGoldCost"               "50"
-	    "AbilityCooldown"               "20.0"
+	    "AbilityCooldown"               "40.0"
 	
 	    "AbilitySpecial"
 	    {
@@ -3879,7 +3879,7 @@
 	        "02"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "gold_cost"             "100"
+	            "gold_cost"             "150"
 	        }
 	
 	        "03"
@@ -3913,7 +3913,7 @@
 	    "AbilityCastPoint"              "0"
 	
 	    "AbilityGoldCost"               "100"
-	    "AbilityCooldown"               "20.0"
+	    "AbilityCooldown"               "40.0"
 	
 	    "AbilitySpecial"
 	    {
@@ -3926,7 +3926,7 @@
 	        "02"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "gold_cost"             "150"
+	            "gold_cost"             "200"
 	        }
 	
 	        "03"

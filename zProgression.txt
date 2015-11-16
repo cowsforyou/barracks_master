@@ -131,6 +131,9 @@
 Balance
 
 [ ] Disable additional gold from hero kills/assists
+[ ] Grey out built structures?
+[ ] Nerf mortality early game?
+[ ] Nerf heroes
 
 
 
