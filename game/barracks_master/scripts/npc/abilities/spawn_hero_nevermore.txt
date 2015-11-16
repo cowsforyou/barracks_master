@@ -41,6 +41,7 @@
             "Function"      "OnSpellStart"
             "creepName"		"hero_nevermore"
             "soundName"     "Hero_Nevermore.Pick"
+            "iconName"      "npc_dota_hero_nevermore"
         }
     }
 }

@@ -41,6 +41,7 @@
             "Function"      "OnSpellStart"
             "creepName"		"hero_vengeful"
             "soundName"     "Hero_VengefulSpirit.Pick"
+            "iconName"      "npc_dota_hero_vengefulspirit"
         }
     }
 }

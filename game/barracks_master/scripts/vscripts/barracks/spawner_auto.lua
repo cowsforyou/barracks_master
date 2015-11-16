@@ -61,5 +61,15 @@ function OnSpellStart( keys )
         EmitGlobalSound(soundName)
     end
 
+    -- display notifications
+    local iconName = keys.iconName
+    if iconName then
+        local dur = 3.0
+        Notifications:BottomToAll({hero=iconName, duration=dur})
+        Notifications:BottomToAll({text="#"..creepName, duration=dur, continue=true}) -- "#hero_beastmaster"
+        Notifications:BottomToAll({text=" ", duration=dur, continue=true})
+        Notifications:BottomToAll({text="#hero_spawned", duration=dur, continue=true})
+    end
+
     AutoSpawnCreeps(player, ability, creepName, creepCount, overrideSpawnSync)
 end

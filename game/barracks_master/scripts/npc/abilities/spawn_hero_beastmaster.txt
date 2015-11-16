@@ -41,6 +41,7 @@
             "Function"      "OnSpellStart"
             "creepName"		"hero_beastmaster"
             "soundName"     "Hero_Beastmaster.Pick"
+            "iconName"      "npc_dota_hero_beastmaster"
         }
     }
 }

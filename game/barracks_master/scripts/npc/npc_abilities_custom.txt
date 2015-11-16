@@ -3851,6 +3851,7 @@
 	            "Function"      "OnSpellStart"
 	            "creepName"		"hero_beastmaster"
 	            "soundName"     "Hero_Beastmaster.Pick"
+	            "iconName"      "npc_dota_hero_beastmaster"
 	        }
 	    }
 	}
@@ -3897,6 +3898,7 @@
 	            "Function"      "OnSpellStart"
 	            "creepName"		"hero_nevermore"
 	            "soundName"     "Hero_Nevermore.Pick"
+	            "iconName"      "npc_dota_hero_nevermore"
 	        }
 	    }
 	}
@@ -3943,6 +3945,7 @@
 	            "Function"      "OnSpellStart"
 	            "creepName"		"hero_vengeful"
 	            "soundName"     "Hero_VengefulSpirit.Pick"
+	            "iconName"      "npc_dota_hero_vengefulspirit"
 	        }
 	    }
 	}

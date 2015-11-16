@@ -30,7 +30,8 @@
 [x] Code in purifier
 [ ] Create either/or function for Luminous and Unpromising Towers.
 [x] Create truestrike modifier for heroes
-[ ] Create Last Stand item and code when to award item
+[x] Create Last Stand item
+[ ] Code when to award Last Stand item
 
 
 -- Player Mechanics --
@@ -48,7 +49,7 @@
 [x] Display last hits and gold earned per player in-game
 [x] Setup net worth calculation for scoreboard
 [x] Permanently display scoreboard with autorefresh function
-[ ] Announce when a hero spawns
+[x] Announce when a hero spawns
 [x] Show error message when player tries to build the same building
 [x] Learn how to locate building models
 [ ] Clean up team and hero selection
@@ -128,10 +129,8 @@
 
 
 Balance
-[ ] Modify kill bounty on players?
-[ ] Modify fb gold?
+
 [ ] Disable additional gold from hero kills/assists
-[ ] Last stand
 
 
 
