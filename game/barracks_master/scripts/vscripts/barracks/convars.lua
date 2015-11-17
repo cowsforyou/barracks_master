@@ -48,34 +48,6 @@ function BMConvars:GiveMoney()
 end
 
 function BMConvars:SpawnFakeHeroes()
-  local empty_gg = CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_GOODGUYS] - PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_GOODGUYS) 
-  local empty_bg = CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_BADGUYS]  - PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_BADGUYS)
-  local humanPlayer = Convars:GetCommandClient()
-  local humanPlayerID = humanPlayer:GetPlayerID()
-
-  -- spawn missing good guys
-  for i=1, empty_gg do
-    local msg = "dota_create_unit npc_dota_hero_wisp"
-    if PlayerResource:GetTeam(humanPlayerID) ~= DOTA_TEAM_GOODGUYS then
-      msg = msg .. " enemy"
-    end
-    SendToServerConsole(msg)
-  end
-
-  -- spawn missing bad guys
-  for i=1, empty_bg do
-    local msg = "dota_create_unit npc_dota_hero_wisp"
-    if PlayerResource:GetTeam(humanPlayerID) ~= DOTA_TEAM_BADGUYS then
-      msg = msg .. " enemy"
-    end
-    SendToServerConsole(msg)
-  end
-end
-
-
-
---------------------------------------------------------------------------------
-function BMConvars:SpawnFakeHeroes_DEPRECATED() -- broken
   local humanPlayer = Convars:GetCommandClient()
   local humanPlayerID = humanPlayer:GetPlayerID()
 

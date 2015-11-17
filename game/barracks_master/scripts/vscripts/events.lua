@@ -229,12 +229,13 @@ function GameMode:OnPlayerPickHero(keys)
     return
   end
 
-  -- replace player's hero (wisp) with a hero that corresponds to the player's team and team slot
   local team = player:GetTeam()
-  local playerCountForTeam = PlayerResource:GetPlayerCountForTeam(team)
+  local playerCountPerTeam = PlayerResource:GetPlayerCountForTeam(team)
+
+  -- replace player's hero (wisp) with a hero that corresponds to the player's team and team slot
   local newHeroName = ""
-  for slot=1, playerCountForTeam do
-    --print (slot.." / "..playerCountForTeam)
+  for slot=1, playerCountPerTeam do
+    --print (slot.." / "..playerCountPerTeam)
     local playerID = player:GetPlayerID()
     if playerID == PlayerResource:GetNthPlayerIDOnTeam(team, slot) then
       player.heroReplaced = true
@@ -266,7 +267,6 @@ function GameMode:ReplaceWithBMHero(playerID, team, slot)
   end
 
   if heroName ~= "" then
-    PrecacheUnitByNameAsync(heroName, function(...) end, playerID)
     PlayerResource:ReplaceHeroWith(playerID, heroName, 0, 0)
   end
 
