@@ -29,6 +29,8 @@ function GameMode:OnGameRulesStateChange(keys)
     BMConvars:Setup()
     LastHits:Setup()
     ScoreboardUpdater:Setup()
+  elseif newState == DOTA_GAMERULES_STATE_HERO_SELECTION then
+    self:PostLoadPrecache()
   elseif newState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
     SpawnSynchronizer:Setup()
     AlchemistGifter:Setup()
@@ -219,6 +221,18 @@ function GameMode:OnPlayerTakeTowerDamage(keys)
   local damage = keys.damage
 end
 
+-- Precaches cosmetics for all players
+function GameMode:PostLoadPrecache()
+  for playerID = 0, DOTA_MAX_PLAYERS-1 do
+    if PlayerResource:IsValidPlayer(playerID) then
+      PrecacheUnitByNameAsync("npc_dota_hero_sven", function(...) end, playerID)
+      PrecacheUnitByNameAsync("npc_dota_hero_templar_assassin", function(...) end, playerID)
+      PrecacheUnitByNameAsync("npc_dota_hero_axe", function(...) end, playerID)
+      PrecacheUnitByNameAsync("npc_dota_hero_venomancer", function(...) end, playerID)
+    end
+  end
+end
+
 -- A player picked a hero
 function GameMode:OnPlayerPickHero(keys)
   DebugPrint('[BAREBONES] OnPlayerPickHero')
@@ -267,7 +281,9 @@ function GameMode:ReplaceWithBMHero(playerID, team, slot)
 
   if heroName ~= "" then
     PrecacheUnitByNameAsync(heroName, function(...) end, playerID)
-    PlayerResource:ReplaceHeroWith(playerID, heroName, 0, 0)
+    local oldHero = PlayerResource:GetSelectedHeroEntity(playerID)
+    local newHero = PlayerResource:ReplaceHeroWith(playerID, heroName, 0, 0)
+    UTIL_Remove(oldHero)
   end
 
   return heroName

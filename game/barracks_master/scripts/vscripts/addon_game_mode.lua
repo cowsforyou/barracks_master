@@ -117,6 +117,12 @@ function Precache( context )
   PrecacheUnitByNameSync("bm_unpromising", context)         
   PrecacheUnitByNameSync("bm_luminous", context)    
 
+
+  PrecacheUnitByNameSync("npc_dota_hero_sven", context)
+  PrecacheUnitByNameSync("npc_dota_hero_templar_assassin", context)
+  PrecacheUnitByNameSync("npc_dota_hero_axe", context)
+  PrecacheUnitByNameSync("npc_dota_hero_venomancer", context)
+
   PrecacheUnitByNameSync("npc_dota_hero_wisp", context) -- for spectator
   PrecacheUnitByNameSync("npc_dota_hero_disruptor", context) -- for spectator
 
