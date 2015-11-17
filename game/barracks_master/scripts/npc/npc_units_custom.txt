@@ -1630,7 +1630,7 @@
         // Armor
         //----------------------------------------------------------------
         "ArmorPhysical"             "2"         // Physical protection.
-        "MagicalResistance"         "80"            // Magical protection.
+        "MagicalResistance"         "50"            // Magical protection.
 
         // Attack
         //----------------------------------------------------------------
