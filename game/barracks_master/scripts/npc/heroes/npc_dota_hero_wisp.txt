@@ -47,9 +47,9 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityLayout"				"4"
 	"Ability1" 					"riki_permanent_invisibility"
-	"Ability2" 					"furion_teleportation"
-	"Ability3" 					"disruptor_kinetic_field"
-	"Ability4" 					"slark_shadow_dance"
+	"Ability2" 					""
+	"Ability3" 					""
+	"Ability4" 					""
 	"Ability5"					""
 	"Ability6" 					""
 	"Ability7"					""

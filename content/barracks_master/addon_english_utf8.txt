@@ -532,6 +532,10 @@
 		"DOTA_Tooltip_ability_item_techies_duration"                            			"TECHIES DURATION:"
 		"DOTA_Tooltip_ability_item_techies_gold_cost"                               		"<font color='#fff22e'>GOLD COST</font>:"
 
+		"DOTA_Tooltip_ability_item_last_stand"                                              "Last Stand"
+		"DOTA_Tooltip_ability_item_last_stand_Description"                                  "The Barracks Master channels all his inner strength to deal a devastating blow to anyone who dares oppose him. Limited charges. Use wisely."
+		"DOTA_Tooltip_ability_item_last_stand_damage"                            			"DAMAGE:"
+		"DOTA_Tooltip_ability_item_last_stand_radius"                               		"RADIUS:"		
 
 		
 		//-------------------
