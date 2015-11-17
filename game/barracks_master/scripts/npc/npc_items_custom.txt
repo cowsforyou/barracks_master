@@ -635,6 +635,7 @@
 	    "ItemShareability"      "ITEM_FULLY_SHAREABLE"
 	
 	    "ItemInitialCharges"    "1"
+	    "ItemRequiresCharges"   "1"
 	    "ItemPermanent"         "0"
 	
 	    // Precache
@@ -700,6 +701,7 @@
 	            "Target"        "TARGET"
 	        }
 	
+	        "SpendCharge" {}
 	
 	        "ActOnTargets"
 	        {

@@ -49,4 +49,34 @@ function LastHits:OnEntityKilled( keys )
     	--print("Valid killer: " .. tostring(self:IsValidBountyKiller(killerEntity)) ..
         --    ", Valid target: " .. tostring(self:IsValidBountyTargetForPlayer(player, killedUnit)))
     end
+
+    if self:IsTower(killedUnit) then
+        self:IncrementLastStandCharges(killedUnit:GetTeam())
+    end
+end
+
+function LastHits:IncrementLastStandCharges(towerTeam)
+    local heroList = HeroList:GetAllHeroes()
+    for _,hero in pairs(heroList) do
+        if hero:GetTeam() == towerTeam then
+            local itemName = "item_last_stand"
+            local lastStandItem = GetItemByName(hero, itemName)
+            if lastStandItem then
+                lastStandItem:SetCurrentCharges(lastStandItem:GetCurrentCharges() + 1)
+            else
+                hero:AddItemByName(itemName)
+            end
+        end
+    end
+end
+
+function GetItemByName(unit, item_name)
+  for i=DOTA_ITEM_SLOT_1, DOTA_ITEM_SLOT_6 do
+    local item = unit:GetItemInSlot(i)
+    if item and item:GetAbilityName() == item_name then
+      return item
+    end
+  end
+
+  return nil
 end
