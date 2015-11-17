@@ -224,53 +224,12 @@ function GameMode:OnPlayerPickHero(keys)
   DebugPrint('[BAREBONES] OnPlayerPickHero')
   DebugPrintTable(keys)
 
+  -- building helper
+  BuildingEvents:OnPlayerPickHero(keys)
+
+  local heroClass = keys.hero
+  local heroEntity = EntIndexToHScript(keys.heroindex)
   local player = EntIndexToHScript(keys.player)
-  if player.heroReplaced then
-    return
-  end
-
-  local team = player:GetTeam()
-  local playerCountPerTeam = PlayerResource:GetPlayerCountForTeam(team)
-
-  -- replace player's hero (wisp) with a hero that corresponds to the player's team and team slot
-  local newHeroName = ""
-  for slot=1, playerCountPerTeam do
-    --print (slot.." / "..playerCountPerTeam)
-    local playerID = player:GetPlayerID()
-    if playerID == PlayerResource:GetNthPlayerIDOnTeam(team, slot) then
-      player.heroReplaced = true
-      newHeroName = self:ReplaceWithBMHero(playerID, team, slot)
-      print(string.format("Player ID %s is on Team %s, Slot %s", playerID, team, slot))
-    end
-  end
-
-  -- building helper for non-spectators
-  if team ~= DOTA_TEAM_CUSTOM_1 then 
-    Timers:CreateTimer(0.1, function()
-      keys.hero = newHeroName
-      keys.heroindex = player:GetAssignedHero():entindex()
-      BuildingEvents:OnPlayerPickHero(keys)
-    end)
-  end
-end
-
-function GameMode:ReplaceWithBMHero(playerID, team, slot)
-  local heroName = ""
-  if     team == DOTA_TEAM_GOODGUYS then
-    if     slot == 1 then heroName = "npc_dota_hero_sven"
-    elseif slot == 2 then heroName = "npc_dota_hero_templar_assassin"
-    end
-  elseif team == DOTA_TEAM_BADGUYS then
-    if     slot == 1 then heroName = "npc_dota_hero_axe"
-    elseif slot == 2 then heroName = "npc_dota_hero_venomancer"
-    end
-  end
-
-  if heroName ~= "" then
-    PlayerResource:ReplaceHeroWith(playerID, heroName, 0, 0)
-  end
-
-  return heroName
 end
 
 -- A player killed another player in a multi-team context
