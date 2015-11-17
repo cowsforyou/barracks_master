@@ -80,7 +80,7 @@
 
 		"bm_lumber_yard"                                                               		"The Stump"
 		"DOTA_Tooltip_ability_build_bm_lumber_yard"                        					"The Stump"		
-		"DOTA_Tooltip_ability_build_bm_lumber_yard_Description"                       		"Enables harvesting of lumber. The Stump is your single source of inexhaustible lumber."
+		"DOTA_Tooltip_ability_build_bm_lumber_yard_Description"                       		"Enables harvesting of lumber. The Stump is your single source of inexhaustible lumber. Unlocks Living Armor."
 		"DOTA_Tooltip_ability_build_bm_lumber_yard_build_time"                        		"<font color='#057aff'>BUILD TIME</font>:"
 		"DOTA_Tooltip_ability_build_bm_lumber_yard_gold_cost"                         		"<font color='#fff22e'>GOLD COST</font>:"
 
@@ -153,7 +153,7 @@
 
 		"bm_library"                                                             			"Library of Spells"
 		"DOTA_Tooltip_ability_build_bm_library"                        						"Library of Spells"
-		"DOTA_Tooltip_ability_build_bm_library_Description"                  	    		"Unlocks the highest tiered abilities and enables the construction of Luminous Tower and Unpromising Tower. The Library of Spells is extremely fragile so it is highly susceptible to Techies raids. Keep it well protected."
+		"DOTA_Tooltip_ability_build_bm_library_Description"                  	    		"Unlocks the highest tiered abilities and enables the construction of Luminous Tower and Unpromising Tower. Has Assassinate ability. The Library of Spells is extremely fragile so it is highly susceptible to Techies raids. Keep it well protected."
 		"DOTA_Tooltip_ability_build_bm_library_build_time"                  		    	"<font color='#057aff'>BUILD TIME</font>:"
 		"DOTA_Tooltip_ability_build_bm_library_gold_cost"                       	 		"<font color='#fff22e'>GOLD COST</font>:"
 		"DOTA_Tooltip_ability_build_bm_library_lumber_cost"                      			"<font color='#28fe77'>LUMBER COST</font>:"

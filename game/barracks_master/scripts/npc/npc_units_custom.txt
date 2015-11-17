@@ -243,7 +243,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"5"
-		"Ability1"					""
+		"Ability1"					"sniper_assassinate"
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
@@ -282,7 +282,7 @@
 		
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"600"
+		"StatusHealth"				"700"
 		"StatusHealthRegen"			"0"
 		"StatusMana"				"100"
 		"StatusManaRegen"			"0"
@@ -319,7 +319,7 @@
 		//----------------------------------------------------------------
 		"AbilityLayout"				"5"
 		"Ability1"					"spawn_lumberjacks"
-		"Ability2"					""
+		"Ability2"					"treant_living_armor"
 		"Ability3"					""
 		"Ability4"					""
 		"Ability10"					"ability_building"

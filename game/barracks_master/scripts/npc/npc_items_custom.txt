@@ -628,6 +628,15 @@
 	    "AbilityTextureName"            "item_bfury"
 	    "AOERadius"                     "%radius"
 	
+	    // Item Details
+	    //-------------------------------------------------------------------------------------------------------------  
+	    "ItemDroppable"         "1"
+	    "ItemKillable"          "1"
+	    "ItemShareability"      "ITEM_FULLY_SHAREABLE"
+	
+	    "ItemInitialCharges"    "1"
+	    "ItemPermanent"         "0"
+	
 	    // Precache
 	    //-------------------------------------------------------------------------------------------------------------
 	    "precache"

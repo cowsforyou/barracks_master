@@ -17,7 +17,7 @@
 	//----------------------------------------------------------------
 	"AbilityLayout"				"5"
 	"Ability1"					"spawn_lumberjacks"
-	"Ability2"					""
+	"Ability2"					"treant_living_armor"
 	"Ability3"					""
 	"Ability4"					""
 	"Ability10"					"ability_building"
