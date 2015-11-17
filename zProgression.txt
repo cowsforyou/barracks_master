@@ -40,7 +40,6 @@
 [x] Learn how to edit passive income
 [x] Award chunks of passive income progressively throughout the game
 [x] Create function to award last hit gold from creeps to player
-[ ] Clean up team and hero selection
 [ ] Code mana regen on ancient
 
 

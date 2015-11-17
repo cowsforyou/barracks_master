@@ -65,8 +65,11 @@ function Precache( context )
                                                                                         -- for Hero: Beastmaster (precached above)
 
   PrecacheResource("particle_folder", "particles/units/heroes/hero_skywrath_mage", context) -- for Mystic Flare
-  PrecacheResource("particle_folder", "particles/units/heroes/hero_invoker", context) -- for Sun Strike
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_invoker", context) -- for Sun Strike/Chaos Meteor
   PrecacheResource("particle_folder", "particles/units/heroes/hero_lich", context) -- for Chain Frost
+
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_treant", context) -- for Living Armor
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_sniper", context) -- for Assassinate  
 
   PrecacheResource("particle_folder", "particles/units/heroes/hero_furion", context) -- for spectator
   PrecacheResource("particle_folder", "particles/units/heroes/hero_riki", context) -- for spectator
@@ -83,8 +86,11 @@ function Precache( context )
                                                                                                           -- for Hero: Beastmaster (precached above)
 
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_skywrath_mage.vsndevts", context) -- for Mystic Flare
-  PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_invoker.vsndevts", context) -- for Sun Strike
+  PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_invoker.vsndevts", context) -- for Sun Strike/Chaos Meteor
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_lich.vsndevts", context) -- for Chain Frost
+
+  PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_treant.vsndevts", context) -- for Living Armor
+  PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_sniper.vsndevts", context) -- for Assassinate 
 
     -- Units
   PrecacheUnitByNameSync("lumberjack", context)    
