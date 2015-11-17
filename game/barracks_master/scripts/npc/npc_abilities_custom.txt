@@ -3818,7 +3818,7 @@
 	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	    "AbilityCastPoint"              "0"
 	
-	    "AbilityGoldCost"               "75"
+	    "AbilityGoldCost"               "175"
 	    "AbilityCooldown"               "40.0"
 	
 	    "AbilitySpecial"
@@ -3865,7 +3865,7 @@
 	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	    "AbilityCastPoint"              "0"
 	
-	    "AbilityGoldCost"               "50"
+	    "AbilityGoldCost"               "150"
 	    "AbilityCooldown"               "40.0"
 	
 	    "AbilitySpecial"
@@ -3912,7 +3912,7 @@
 	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	    "AbilityCastPoint"              "0"
 	
-	    "AbilityGoldCost"               "100"
+	    "AbilityGoldCost"               "200"
 	    "AbilityCooldown"               "40.0"
 	
 	    "AbilitySpecial"

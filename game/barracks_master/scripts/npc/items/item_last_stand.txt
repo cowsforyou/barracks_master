@@ -2,6 +2,7 @@
 {
     // General
     //-------------------------------------------------------------------------------------------------------------
+    "ID"    "1008"
     "BaseClass"                     "item_datadriven"
     "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
     "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"

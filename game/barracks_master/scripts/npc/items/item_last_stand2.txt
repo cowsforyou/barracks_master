@@ -2,6 +2,7 @@
 {
     // General
     //-------------------------------------------------------------------------------------------------------------
+    "ID"    "1009"
     "BaseClass"                     "item_datadriven"
     "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
     "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"

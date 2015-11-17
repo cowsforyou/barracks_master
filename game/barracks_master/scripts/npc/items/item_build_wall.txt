@@ -1,5 +1,6 @@
 "item_build_wall"
 {
+    "ID"    "1003"
 	"BaseClass"             		"item_datadriven"
 	"AbilityTextureName"			"item_build_wall"
 	"MaxLevel" 						"1"

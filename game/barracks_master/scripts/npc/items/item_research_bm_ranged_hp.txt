@@ -1,6 +1,7 @@
 "item_research_bm_ranged_hp"
 {
-	"BaseClass"             		"item_datadriven"
+	"ID"    "1016"
+ 	"BaseClass"             		"item_datadriven"
 	"AbilityTextureName"			"item_cancel"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 	"AbilityCastPoint"				"0"

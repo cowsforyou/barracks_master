@@ -1,5 +1,6 @@
 "item_research_bm_melee_armor"
 {
+    "ID"    "1011"
 	"BaseClass"             		"item_datadriven"
 	"AbilityTextureName"			"item_cancel"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"

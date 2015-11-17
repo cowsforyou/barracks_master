@@ -2,6 +2,7 @@
 {
 	"item_apply_modifiers"
 	{
+	    "ID"    "1001"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"BaseClass"						"item_datadriven"
 	
@@ -81,6 +82,7 @@
 	{
 	    // General
 	    //-------------------------------------------------------------------------------------------------------------
+	    "ID"    "1002"
 	    "BaseClass"                     "item_datadriven"
 	    "AbilityTextureName"			"item_boar"
 	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -246,6 +248,7 @@
 	}
 	"item_building_cancel"
 	{
+	    "ID"    "1004"
 		"BaseClass"             		"item_datadriven"
 		"AbilityTextureName"			"item_cancel"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
@@ -266,6 +269,7 @@
 	}
 	"item_build_wall"
 	{
+	    "ID"    "1003"
 		"BaseClass"             		"item_datadriven"
 		"AbilityTextureName"			"item_build_wall"
 		"MaxLevel" 						"1"
@@ -321,7 +325,7 @@
 	//Shield
 	  "item_example_item"
 	  {
-	    "ID"              "1836"
+	    "ID"              "1005"
 	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
 	    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
 	    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
@@ -457,6 +461,7 @@
 	{
 	    // General
 	    //-------------------------------------------------------------------------------------------------------------
+	    "ID"    "1001"
 	    "BaseClass"                     "item_datadriven"
 	    "AbilityTextureName"			"item_hawk"
 	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -606,6 +611,7 @@
 	}
 	"item_hawk_disabled"
 	{
+	    "ID"    "1007"
 	    "BaseClass"                     "item_datadriven"
 	    "AbilityTextureName"            "item_hawk"
 	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -619,6 +625,7 @@
 	{
 	    // General
 	    //-------------------------------------------------------------------------------------------------------------
+	    "ID"    "1008"
 	    "BaseClass"                     "item_datadriven"
 	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
 	    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -761,6 +768,7 @@
 	{
 	    // General
 	    //-------------------------------------------------------------------------------------------------------------
+	    "ID"    "1009"
 	    "BaseClass"                     "item_datadriven"
 	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 	    "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
@@ -877,6 +885,7 @@
 	
 	"item_research_bm_air_evasion"
 	{
+	    "ID"    "1010"
 		"BaseClass"             		"item_datadriven"
 		"AbilityTextureName"			"item_cancel"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
@@ -904,6 +913,7 @@
 	}
 	"item_research_bm_melee_armor"
 	{
+	    "ID"    "1011"
 		"BaseClass"             		"item_datadriven"
 		"AbilityTextureName"			"item_cancel"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
@@ -931,7 +941,8 @@
 	}
 	"item_research_bm_melee_damage"
 	{
-		"BaseClass"             		"item_datadriven"
+	    "ID"    "1012"
+	    "BaseClass"             		"item_datadriven"
 		"AbilityTextureName"			"item_cancel"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 		"AbilityCastPoint"				"0"
@@ -958,7 +969,8 @@
 	}
 	"item_research_bm_melee_hp"
 	{
-		"BaseClass"             		"item_datadriven"
+	    "ID"    "1013"
+	 	"BaseClass"             		"item_datadriven"
 		"AbilityTextureName"			"item_cancel"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 		"AbilityCastPoint"				"0"
@@ -985,7 +997,8 @@
 	}
 	"item_research_bm_ranged_armor"
 	{
-		"BaseClass"             		"item_datadriven"
+		"ID"    "1014"
+	 	"BaseClass"             		"item_datadriven"
 		"AbilityTextureName"			"item_cancel"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 		"AbilityCastPoint"				"0"
@@ -1012,7 +1025,8 @@
 	}
 	"item_research_bm_ranged_damage"
 	{
-		"BaseClass"             		"item_datadriven"
+		"ID"    "1015"
+	 	"BaseClass"             		"item_datadriven"
 		"AbilityTextureName"			"item_cancel"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 		"AbilityCastPoint"				"0"
@@ -1039,7 +1053,8 @@
 	}
 	"item_research_bm_ranged_hp"
 	{
-		"BaseClass"             		"item_datadriven"
+		"ID"    "1016"
+	 	"BaseClass"             		"item_datadriven"
 		"AbilityTextureName"			"item_cancel"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 		"AbilityCastPoint"				"0"
@@ -1066,7 +1081,8 @@
 	}
 	"item_research_bm_scout_hawk"
 	{
-		"BaseClass"             		"item_datadriven"
+		"ID"    "1018"
+	 	"BaseClass"             		"item_datadriven"
 		"AbilityTextureName"			"item_cancel"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 		"AbilityCastPoint"				"0"
@@ -1093,7 +1109,8 @@
 	}
 	"item_research_bm_scout_techies"
 	{
-		"BaseClass"             		"item_datadriven"
+		"ID"    "1017"
+	 	"BaseClass"             		"item_datadriven"
 		"AbilityTextureName"			"item_cancel"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 		"AbilityCastPoint"				"0"
@@ -1120,7 +1137,8 @@
 	}
 	"item_research_bm_skeleton_damage"
 	{
-		"BaseClass"             		"item_datadriven"
+		"ID"    "1019"
+	 	"BaseClass"             		"item_datadriven"
 		"AbilityTextureName"			"item_cancel"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 		"AbilityCastPoint"				"0"
@@ -1149,7 +1167,8 @@
 	// Research abilities set the ability hidden to prevent further queueing. The item re-enables them
 	"item_research_dark_tower"
 	{
-		"BaseClass"             		"item_datadriven"
+		"ID"    "1020"
+	 	"BaseClass"             		"item_datadriven"
 		"AbilityTextureName"			"item_research_dark_tower"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 		"AbilityCastPoint"				"0"
@@ -1176,7 +1195,8 @@
 	}
 	"item_research_purifier_bonus_lumber"
 	{
-		"BaseClass"             		"item_datadriven"
+		"ID"    "1021"
+	 	"BaseClass"             		"item_datadriven"
 		"AbilityTextureName"			"item_cancel"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 		"AbilityCastPoint"				"0"
@@ -1203,7 +1223,8 @@
 	}
 	"item_research_ultimate_ability"
 	{
-		"BaseClass"             		"item_datadriven"
+		"ID"    "1022"
+	 	"BaseClass"             		"item_datadriven"
 		"AbilityTextureName"			"item_research_ultimate_ability"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 		"AbilityCastPoint"				"0"
@@ -1232,6 +1253,7 @@
 	{
 	    // General
 	    //-------------------------------------------------------------------------------------------------------------
+	    "ID"    "1023"
 	    "BaseClass"                     "item_datadriven"
 	    "AbilityTextureName"			"item_techies"
 	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -1372,7 +1394,8 @@
 	}
 	"item_train_city_center_tier2"
 	{
-		"BaseClass"             		"item_datadriven"
+		"ID"    "1024"
+	 	"BaseClass"             		"item_datadriven"
 		"AbilityTextureName"			"item_train_city_center_tier2"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 		"AbilityCastPoint"				"0"
@@ -1405,7 +1428,8 @@
 	}
 	"item_train_dark_tower"
 	{
-		"BaseClass"             		"item_datadriven"
+		"ID"    "1025"
+	 	"BaseClass"             		"item_datadriven"
 		"AbilityTextureName"			"item_train_dark_tower"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 		"AbilityCastPoint"				"0"
@@ -1439,7 +1463,8 @@
 	// Train abilities set all other abilities as hidden to prevent further queueing. The item re-enables them
 	"item_train_tower_tier2"
 	{
-		"BaseClass"             		"item_datadriven"
+		"ID"    "1026"
+	 	"BaseClass"             		"item_datadriven"
 		"AbilityTextureName"			"item_train_tower_tier2"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 		"AbilityCastPoint"				"0"

@@ -1,5 +1,6 @@
 "item_hawk_disabled"
 {
+    "ID"    "1007"
     "BaseClass"                     "item_datadriven"
     "AbilityTextureName"            "item_hawk"
     "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"

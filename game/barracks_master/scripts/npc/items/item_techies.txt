@@ -2,6 +2,7 @@
 {
     // General
     //-------------------------------------------------------------------------------------------------------------
+    "ID"    "1023"
     "BaseClass"                     "item_datadriven"
     "AbilityTextureName"			"item_techies"
     "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"

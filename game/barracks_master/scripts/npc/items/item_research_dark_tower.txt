@@ -2,7 +2,8 @@
 // Research abilities set the ability hidden to prevent further queueing. The item re-enables them
 "item_research_dark_tower"
 {
-	"BaseClass"             		"item_datadriven"
+	"ID"    "1020"
+ 	"BaseClass"             		"item_datadriven"
 	"AbilityTextureName"			"item_research_dark_tower"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 	"AbilityCastPoint"				"0"

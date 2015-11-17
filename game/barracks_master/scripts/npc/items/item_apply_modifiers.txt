@@ -1,5 +1,6 @@
 "item_apply_modifiers"
 {
+    "ID"    "1001"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	"BaseClass"						"item_datadriven"
 
