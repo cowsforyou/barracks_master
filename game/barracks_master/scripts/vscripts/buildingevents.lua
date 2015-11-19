@@ -103,23 +103,6 @@ function BuildingEvents:OnEntityKilled( event )
   -- Player owner of the unit
   local player = killedUnit:GetPlayerOwner()
 
-  --[[
-          GetOwner    GetPlayerOwner
-  Unit    player      nil 
-  Build   hero        player
-  Hero    player      nil
-  Sven    player      player
-  Lumbrj  player      nil
-  ]]
-
-  -- fix for units
-  if player == nil then
-    player = killedUnit:GetOwner()
-    if player and not player:IsPlayer() then
-      player = nil
-    end
-  end
-
   -- Building Killed
   if IsCustomBuilding(killedUnit) then
 

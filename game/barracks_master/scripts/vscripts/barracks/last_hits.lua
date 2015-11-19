@@ -18,11 +18,11 @@ function LastHits:IsTower(entity)
 end
 
 function LastHits:IsValidBountyKiller(entity)
-    return not self:IsTower(entity) and not entity:IsHero() and entity:GetOwner() ~= nil
+    return not self:IsTower(entity) and not entity:IsHero() and entity:GetPlayerOwner() ~= nil
 end
 
 function LastHits:IsValidBountyTargetForPlayer(player, entity)
-    return not self:IsTower(entity) and not entity:IsHero() and entity:GetOwner() ~= player
+    return not self:IsTower(entity) and not entity:IsHero() and entity:GetPlayerOwner() ~= player
 end
 
 function LastHits:OnEntityKilled( keys )
@@ -32,18 +32,18 @@ function LastHits:OnEntityKilled( keys )
         killerEntity = EntIndexToHScript( keys.entindex_attacker )
     end
 
-    local player = killerEntity:GetOwner()
+    local player = killerEntity:GetPlayerOwner()
     if self:IsValidBountyKiller(killerEntity) and self:IsValidBountyTargetForPlayer(player, killedUnit) then
 		local playerID = player:GetPlayerID()
 		local gold = killedUnit:GetGoldBounty()
-		PlayerResource:ModifyGold(playerID, gold, false, DOTA_ModifyGold_CreepKill)
-        PlayerResource:IncrementLastHits(playerID)
-
-		local coinsParticle = ParticleManager:CreateParticleForPlayer("particles/generic_gameplay/lasthit_coins.vpcf", PATTACH_ABSORIGIN_FOLLOW, killedUnit, player)
-		ParticleManager:SetParticleControl(coinsParticle, 1, killedUnit:GetAbsOrigin())
-		EmitSoundOnClient("General.Coins", player)
-    	PopupGoldGainForPlayer(player, killedUnit, gold)
-        Purifier:EarnedGold(player, gold)
+		Purifier:EarnedGold(player, gold)
+        -- FUNNY STORY: turns out if you set the unit's ownership correctly, you don't need to do this stuff.
+        --PlayerResource:ModifyGold(playerID, gold, false, DOTA_ModifyGold_CreepKill)
+        --PlayerResource:IncrementLastHits(playerID)
+        --local coinsParticle = ParticleManager:CreateParticleForPlayer("particles/generic_gameplay/lasthit_coins.vpcf", PATTACH_ABSORIGIN_FOLLOW, killedUnit, player)
+		--ParticleManager:SetParticleControl(coinsParticle, 1, killedUnit:GetAbsOrigin())
+		--PopupGoldGainForPlayer(player, killedUnit, gold)
+        --EmitSoundOnClient("General.Coins", player)
 		--print("Awarding " .. gold .. " gold to player " .. playerID)
     else
     	--print("Valid killer: " .. tostring(self:IsValidBountyKiller(killerEntity)) ..

@@ -10,7 +10,6 @@ function GameMode:OnDisconnect(keys)
   local networkid = keys.networkid
   local reason = keys.reason
   local userid = keys.userid
-
 end
 
 -- The overall game state has changed
@@ -35,19 +34,7 @@ function GameMode:OnGameRulesStateChange(keys)
     SpawnSynchronizer:Setup()
     AlchemistGifter:Setup()
   end  
-
-
-  --[[
-  if newState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
-    local TEAMS = { "blue", "purple", "red", "green" }
-    for _,color in pairs(TEAMS) do
-      SpawnCreeps(color)
-    end
-  end
-  --]]
-
 end
-
 
 -- An NPC has spawned somewhere in game.  This includes heroes
 function GameMode:OnNPCSpawned(keys)
@@ -238,6 +225,7 @@ function GameMode:OnPlayerPickHero(keys)
   DebugPrint('[BAREBONES] OnPlayerPickHero')
   DebugPrintTable(keys)
 
+  -- after a hero is replaced, this function is actually called again
   local player = EntIndexToHScript(keys.player)
   if player.heroReplaced then
     return
@@ -260,6 +248,7 @@ function GameMode:OnPlayerPickHero(keys)
   -- building helper for non-spectators
   if team ~= DOTA_TEAM_CUSTOM_1 then 
     Timers:CreateTimer(0.1, function()
+      -- remap the keys to the newly replaced hero
       keys.hero = newHeroName
       keys.heroindex = player:GetAssignedHero():entindex()
       BuildingEvents:OnPlayerPickHero(keys)
@@ -280,7 +269,6 @@ function GameMode:ReplaceWithBMHero(playerID, team, slot)
   end
 
   if heroName ~= "" then
-    PrecacheUnitByNameAsync(heroName, function(...) end, playerID)
     local oldHero = PlayerResource:GetSelectedHeroEntity(playerID)
     local newHero = PlayerResource:ReplaceHeroWith(playerID, heroName, 0, 0)
     UTIL_Remove(oldHero)

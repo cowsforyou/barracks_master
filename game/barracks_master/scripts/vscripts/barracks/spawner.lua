@@ -11,6 +11,7 @@ function ManualSpawnCreeps(player, building, buildingAbility, creepName)
 
     local unit = CreateUnitByName(creepName, pos, true, hero, player, team)
     unit:SetControllableByPlayer(player:GetPlayerID(), true)
+    unit:SetOwner(hero)
     ApplyModelToUnit(unit, team)
     ApplyColorToUnit(unit, playerColor)
 
@@ -43,6 +44,7 @@ end
 function AutoSpawnCreeps(player, buildingAbility, creepName, numberToSpawn, overrideSpawnSync)
     local overrideSpawnSync = overrideSpawnSync or false
     local playerColor = GetPlayerColor(player)
+    local hero = player:GetAssignedHero()
     local team = GetTeamByColor(playerColor)
 
     local p1_string, p2_string = nil, nil
@@ -76,7 +78,8 @@ function AutoSpawnCreeps(player, buildingAbility, creepName, numberToSpawn, over
 
     -- create the unit group
     for i=1, numberToSpawn do
-        local unit = CreateUnitByName(creepName, start_position, true, nil, player, team)
+        local unit = CreateUnitByName(creepName, start_position, true, hero, player, team)
+        unit:SetOwner(hero)
         ApplyModelToUnit(unit, team)
         ApplyColorToUnit(unit, playerColor)
        

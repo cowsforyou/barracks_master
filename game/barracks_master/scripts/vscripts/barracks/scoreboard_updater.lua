@@ -33,7 +33,7 @@ end
 
 -- Net Worth = current gold + buildings worth + research worth + living units worth (heroes, lumberjacks, scouts)
 function ScoreboardUpdater:GetNetWorth(player)
-	if player.structures == nil then return 0 end
+	if player == nil or player.structures == nil then return 0 end
 
 	local netWorth = PlayerResource:GetGold(player:GetPlayerID())
 	--PrintTable(player)

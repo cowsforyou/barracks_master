@@ -2,7 +2,7 @@ function OnChannelSucceeded(keys)
     local caster = keys.caster
     local ability = keys.ability
     local target = keys.target
-    local player = caster:GetOwner()
+    local player = caster:GetPlayerOwner()
 
     local lumber = ability:GetSpecialValueFor("lumber_per_tick")
 
