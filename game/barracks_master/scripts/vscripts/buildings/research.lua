@@ -21,6 +21,8 @@ function ResearchComplete( event )
 	for _,structure in pairs(player.structures) do
 		CheckAbilityRequirements( structure, player )
 	end
+
+	--PrintTable(player.upgrades)
 end
 
 function ScoutResearchComplete ( event )

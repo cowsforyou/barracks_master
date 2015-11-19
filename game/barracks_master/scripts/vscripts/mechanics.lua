@@ -102,13 +102,18 @@ end
 
 -- Returns bool
 function PlayerHasRequirementForAbility( player, ability_name )
+	-- Unlock all abilities cheat
+	if GameRules.Synergy then
+		return true
+	end
+
 	local requirements = GameRules.Requirements
 	local buildings = player.buildings
 	local upgrades = player.upgrades
 	local requirement_failed = false
 
 	if requirements[ability_name] then
-
+		PrintTable(requirements[ability_name])
 		-- Go through each requirement line and check if the player has that building on its list
 		for k,v in pairs(requirements[ability_name]) do
 

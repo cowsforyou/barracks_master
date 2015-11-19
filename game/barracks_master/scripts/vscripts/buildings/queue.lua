@@ -128,11 +128,11 @@ function NextQueue( event )
 
         		local train_ability = caster:FindAbilityByName(train_ability_name)
 
-        		print("Q")
-        		DeepPrintTable(caster.queue)
+        		--print("Q")
+        		--DeepPrintTable(caster.queue)
         		local queue_element = getIndex(caster.queue, item:GetEntityIndex())
         		if IsValidEntity(item) then
-	        		print(item:GetEntityIndex().." in queue at "..queue_element)
+	        		--print(item:GetEntityIndex().." in queue at "..queue_element)
 		            table.remove(caster.queue, queue_element)
 	            	caster:RemoveItem(item)
 	            end
