@@ -1356,7 +1356,7 @@
 	"build_bm_siege_barracks_disabled"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"siege_barracks"
+		"AbilityTextureName"			"siege_barracks3"
 		"MaxLevel" 						"0"
 	}
 	// Building requires repair to finish construction. Can be assisted to make the process faster

@@ -85,7 +85,7 @@ function GameMode:FilterExecuteOrder( filterTable )
         return true
 
     -- Cancel builder queue when casting non building abilities
-    elseif (abilityIndex and abilityIndex ~= 0) and IsBuilder(unit) then
+    elseif (abilityIndex and abilityIndex ~= 0) and IsBuilder(unit) and ability then
         local ability = EntIndexToHScript(abilityIndex)
         print("ORDER FILTER",ability:GetAbilityName(), IsBuildingAbility(ability))
         if not IsBuildingAbility(ability) then
