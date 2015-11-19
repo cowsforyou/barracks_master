@@ -31,7 +31,7 @@
 [ ] Create either/or function for Luminous and Unpromising Towers.
 [x] Create truestrike modifier for heroes
 [x] Create Last Stand item
-[ ] Code when to award Last Stand item
+[x] Code when to award Last Stand item
 
 
 -- Player Mechanics --
@@ -40,7 +40,6 @@
 [x] Learn how to edit passive income
 [x] Award chunks of passive income progressively throughout the game
 [x] Create function to award last hit gold from creeps to player
-[ ] Code mana regen on ancient
 
 
 -- UI --
@@ -51,7 +50,7 @@
 [x] Announce when a hero spawns
 [x] Show error message when player tries to build the same building
 [x] Learn how to locate building models
-[ ] Clean up team and hero selection
+[x] Clean up team and hero selection
 [x] Fix minimap
 [ ] Change team colors on loading screen
 [x] Learn how to edit loading screen
@@ -78,7 +77,7 @@
 -- Bugs --
 [x] Swapping the starting building from "buildingevents.lua" to the Melee Barracks causes a string of errors in the console (although everything seems to function fine).
 [x] Removing the Kunkka builders at the start (by changing no. of builders from 5 to 0) causes errors in the console (although everything seems to function fine).
-[ ] Researching an ability causes it to be hidden, however if one research completes, the ability list refreshes. If you attempt to queue abilities beyond their upgradable levels, it bugs out.
+[x] Researching an ability causes it to be hidden, however if one research completes, the ability list refreshes. If you attempt to queue abilities beyond their upgradable levels, it bugs out.
 [x] Build grid disappears when lumber yard is built.
 [x] Health Vial not giving intended HP boost.
 [x] Hawk and Boar spawn sounds not firing.
@@ -101,7 +100,6 @@
 [x] Air evasion research jumps straight to level 3
 [x] Sound not firing when heroes are spawned from Portal of Heroes
 [ ] Area behind dire ancient is always visible to radiant
-[ ] Change tint of sun stirke particle and precache correct particled research
 [x] PA and Sven spawns at the same place, Veno and Axe spawns at the same place
 [x] Tooltip update for repair not requiring resources
 [ ] Chain frost has no hotkey
@@ -117,7 +115,7 @@
 [x] Creeps last hitting heroes should award gold (currently it awards nothing - killed by netural creep status)
 [ ] Melee rax spawning at same location (if you stagger the spawns it might work)
 [x] Ranged barracks missing hp upgrade
-[ ] Purifier giving errors when superweapons net kills
+[x] Purifier giving errors when superweapons net kills
 [x] Clean up purifier description to make clear only creep kills gets bonus
 [ ] Clean up Portal of Heroes ambient animation
 [x] Random Lumberjack console error bug
@@ -125,14 +123,18 @@
 [x] Have gold cost of disabled buildings shown
 [x] Tooltips for ancient toggle not showing description
 [x] Modify pathing of creeps after t2
+[ ] Lumber having decimal places on scoreboard
+[ ] Research gets reset on building when it's destroyed and rebuilt
+[x] Late game crashes (related to superweapons possibly?)
+[ ] Double building on the same spot renders the gold/lumber wasted
+[ ] Able to a-click friendly structures
 
 
 Balance
 
 [ ] Disable additional gold from hero kills/assists
-[ ] Grey out built structures?
-[ ] Nerf mortality early game?
-[ ] Nerf heroes
+[ ] Change hp of melee rax to full
+
 
 
 
