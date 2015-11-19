@@ -7,7 +7,7 @@ function CheckResearchRequirements( unit, player )
 			if ability then
 				local ability_name = ability:GetAbilityName()
 
-				if string.find(ability_name, "research_") then
+				if string.find(ability_name, "research_") and not IsAbilityChannelingOrQueued(ability) then
 					if PlayerHasResearch(player, ability_name) then
 						if GetResearchLevel(player, ability_name) < ability:GetMaxLevel() then
 							ability:SetHidden(false)
@@ -115,6 +115,25 @@ function SetNormalAbilityLevel(ability, player)
 	else
 		ability:SetLevel(1)
 	end
+end
+
+function IsAbilityChannelingOrQueued(ability)
+	local unit = ability:GetCaster()
+	local abilityName = ability:GetAbilityName()
+
+	if ability:IsChanneling() then
+		return true
+	end
+
+	for itemSlot=0,5 do
+		local item = unit:GetItemInSlot(itemSlot)
+		if item ~= nil and string.find(item:GetName(), abilityName) then
+			--print("item: " .. item:GetName())
+			return true
+		end
+	end
+
+	return false
 end
 
 -- Go through every ability and check if the requirements are met

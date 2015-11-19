@@ -113,7 +113,6 @@ function PlayerHasRequirementForAbility( player, ability_name )
 	local requirement_failed = false
 
 	if requirements[ability_name] then
-		PrintTable(requirements[ability_name])
 		-- Go through each requirement line and check if the player has that building on its list
 		for k,v in pairs(requirements[ability_name]) do
 
