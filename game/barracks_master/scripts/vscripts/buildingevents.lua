@@ -22,7 +22,7 @@ function BuildingEvents:OnPlayerPickHero(keys)
   local building = BuildingHelper:PlaceBuilding(player, starting_rax_name, position, true, 5) 
 
   -- Set health to test repair
-  building:SetHealth(building:GetMaxHealth()/3)
+  --building:SetHealth(building:GetMaxHealth()/3)
 
   -- These are required for repair to know how many resources the building takes
   building.GoldCost = GameRules.AbilityKV["build_"..starting_rax_name]["AbilityGoldCost"]
