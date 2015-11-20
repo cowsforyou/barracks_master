@@ -172,7 +172,7 @@
 			"Ability3"					"spawn_hero_nevermore"				// Ability 3
 			"Ability4"					"spawn_hero_beastmaster"			// Ability 4
 			
-			"Ability9"					"city_center_tier2_passive"		
+			//"Ability9"					"city_center_tier2_passive"		
 			"Ability10"					"ability_building"
 			"Ability11"					"ability_building_queue"
 	

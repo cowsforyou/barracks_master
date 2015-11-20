@@ -17,6 +17,11 @@
 
 "bm_updates_text"	"
 Nov 20:
+- Techies duration reduced from 40sec to 30sec
+- Spectator Team count reduced from 2 to 1
+- Ambient animation removed on Portal of Heroes
+
+Nov 20:
 - Barracks Master is now officially in open beta mode!
 - Loading screen now shows recent updates
 - Tier 3 towers moved closer to the middle of the map
