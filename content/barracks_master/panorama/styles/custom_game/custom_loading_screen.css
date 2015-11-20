@@ -25,6 +25,58 @@
 	text-shadow: 2px 2px 2px #000000;
 }
 
+#BM_Updates_BG
+{
+	horizontal-align: left;
+	vertical-align: top;
+	margin-top: 95px;
+	margin-left: 660px;
+	width: 400px;
+	height: 856px;
+	background-color: black;
+	opacity: .7;
+}
+
+#BM_Updates
+{
+	horizontal-align: left;
+	vertical-align: top;
+	margin-top: 95px;
+	margin-left: 660px;
+	width: 400px;
+	height: 856px;
+}
+
+#UpdatesTitle
+{
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-left: 7px;
+	font-size: 30px;
+	font-weight: bold;
+	color: #ffffff;
+	text-shadow: 2px 2px 2px #000000;
+}
+
+#Updates
+{
+	padding-top: 40px;
+	padding-left: 7px;
+	padding-left: 7px;
+	font-size: 15px;
+	color: #ffffff;
+}
+
+#Contact
+{
+	vertical-align: bottom;
+	padding-bottom: 12px;
+	padding-left: 7px;
+	padding-left: 7px;
+	font-size: 16px;
+	color: #e5e5e5;
+}
+
 .SeqP
 {
 	background-repeat: no-repeat;

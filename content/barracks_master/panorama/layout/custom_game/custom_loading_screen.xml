@@ -10,8 +10,19 @@
 			<Image id="seq_p3" class="SeqP" src="file://{images}/custom_game/loading_screen/bm_loading_screen_p3.psd" />
 			<Image id="seq_p4" class="SeqP" src="file://{images}/custom_game/loading_screen/bm_loading_screen_p4.psd" />
 		</Panel>
+
 		<Panel id="TitlePanel">
 			<Label id="BMTitle" text="#addon_game_name" style="" />
 		</Panel>
+
+		<Panel id="BM_Updates_BG">
+		</Panel>
+
+		<Panel id="BM_Updates">
+			<Label id="UpdatesTitle" text="#bm_updates_title" style="" />
+			<Label id="Updates" text="#bm_updates_text" style="" />
+			<Label id="Contact" text="#bm_contact_text" style="" />
+		</Panel>
+
 	</Panel>
 </root>

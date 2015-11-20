@@ -3,17 +3,38 @@
 	"Language"		"English"
 	"Tokens"
 	{		
-		"addon_game_name"			"Barracks Master"
+		"addon_game_name"			"Barracks Master (Beta)"
 		
-		//"DOTA_Basics"								"ABILITIES"
-		//"DOTA_Upgrades"							"ITEMS"
-		//"DOTA_Shop_Category_Basics"				"ABILITIES"
-		//"DOTA_Shop_Category_Upgrades"				"ITEMS"
-		
-
 		//---------------------------------------------------------------------------------------------------------------------------------
 		//Barracks Master
 		//---------------------------------------------------------------------------------------------------------------------------------
+		
+
+		//-------------------
+		//Updates
+		//-------------------
+"bm_updates_title"	"Updates"
+
+"bm_updates_text"	"
+Nov 20:
+- Barracks Master is now officially in open beta mode!
+- Loading screen now shows recent updates
+- Tier 3 towers moved closer to the middle of the map
+- Tier 2 towers moved downhill
+- There are now 2 tier 2 towers on each team
+
+Nov 19:
+- Melee Barracks now start at full health instead of 1/3 health
+- Ranged Health Vial cost increased from 200gold to 350gold
+- Ranged Health Vial bonus increased from 200hp to 400hp
+- Library of Spells cost increased from 250gold to 300gold
+- Luminous and Unpromising Towers cost increased from 500gold to 600gold
+"
+
+"bm_contact_text"	"
+Have an idea and want to contribute?
+Send your suggestions to thenewmetadota@gmail.com."
+
 
 		//-------------------
 		//Builders
