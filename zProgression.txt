@@ -127,7 +127,11 @@
 [ ] Research gets reset on building when it's destroyed and rebuilt
 [x] Late game crashes (related to superweapons possibly?)
 [ ] Double building on the same spot renders the gold/lumber wasted
-[ ] Able to a-click friendly structures
+
+
+-- Urgent Fixes --
+[ ] Clean up player tables (need to rewrite)
+[ ] Fix gridnav system
 
 
 Balance
@@ -135,50 +139,6 @@ Balance
 [ ] Disable additional gold from hero kills/assists
 
 
-
-
-Crashes
-
-1) Building The Stump causes this message to be shown
-[ W General              ]: CDOTA_ParticleManager::SetParticleControlEnt: Unable to lookup attachment follow_origin on model models/items/furion/treant_stump.vmdl
-
-
-2) Building Tech Lab causes these messages to be shown
-[ W General              ]: CDOTA_ParticleManager::SetParticleControlEnt: Unable to lookup attachment follow_origin on model models/props_structures/good_barracks_ranged002.vmdl
-[ W General              ]: CNetworkOriginCellCoordQuantizedVector m_cellZ cell 155 is outside of cell bounds (0->128) @(15714.286133 -15714.284180 23405.712891)
-[   VScript              ]: Not a Valid Entity!, there's currently 	10	units and	3	structures in the table
-
-3) Spawning a Lumberjack causes these messages to be shown
-[ W ResourceSystem       ]: File error loading resource header "panorama/images/heroes/icons/npc_dota_hero_default_png.vtex_c" (Error: ERROR_FILEOPEN)
-[ W General              ]: c:\buildslave\source2_dota_rel_win64\build\src\rendersystem\texturebase.cpp(1976):ResourceHandleToData( panorama/images/heroes/icons/npc_dota_hero_default_png.vtex ) failed! Falling back to error texture!
-[ W RenderSystem         ]: Texture manager doesn't know about texture "materials/vgui/hud/heroportraits/portraitbackground_forest_psd_be89f72f.vtex" - returning error texture in CTextureManagerDx11::GetResourceView
-
-4) Spawning another Lumberjack causes this message to be shown
-[ W RenderSystem         ]: Texture manager doesn't know about texture "materials/vgui/hud/heroportraits/portraitbackground_darkclouds_psd_c19b9d70.vtex" - returning error texture in CTextureManagerDx11::GetResourceView
-
-5) And another Lumberjack spawn causes it to give the older error again
-[ W RenderSystem         ]: Texture manager doesn't know about texture "materials/vgui/hud/heroportraits/portraitbackground_forest_psd_be89f72f.vtex" - returning error texture in CTextureManagerDx11::GetResourceView
-
-6) Building Portal of Heroes causes this message to be shown
-[ W General              ]: CDOTA_ParticleManager::SetParticleControlEnt: Unable to lookup attachment follow_origin on model models/props_structures/tower_good4.vmdl
-[ W General              ]: CNetworkOriginCellCoordQuantizedVector m_cellZ cell 128 is outside of cell bounds (0->128) @(11000.000000 -11000.000000 16384.000000)
-
-7) Everytime Alch gold is given these error messages show up
-[ W ResourceSystem       ]: File error loading resource header "panorama/images/heroes/icons/npc_dota_hero_default_png.vtex_c" (Error: ERROR_FILEOPEN)
-[ W General              ]: c:\buildslave\source2_dota_rel_win64\build\src\rendersystem\texturebase.cpp(1976):ResourceHandleToData( panorama/images/heroes/icons/npc_dota_hero_default_png.vtex ) failed! Falling back to error texture!
-
-8) Spawning VS causes these error messages to show up
-[ W RenderSystem         ]: Texture manager doesn't know about texture "materials/vgui/hud/heroportraits/portraitbackground_gradient_top_psd_49c98dd5.vtex" - returning error texture in CTextureManagerDx11::GetResourceView
-[ W ResourceSystem       ]: File error loading resource header "panorama/images/heroes/icons/npc_dota_hero_default_png.vtex_c" (Error: ERROR_FILEOPEN)
-[ W General              ]: c:\buildslave\source2_dota_rel_win64\build\src\rendersystem\texturebase.cpp(1976):ResourceHandleToData( panorama/images/heroes/icons/npc_dota_hero_default_png.vtex ) failed! Falling back to error texture!
-
-9) Spawning any of the heroes again causes these error message to show up everytime
-[ W ResourceSystem       ]: File error loading resource header "panorama/images/heroes/icons/npc_dota_hero_default_png.vtex_c" (Error: ERROR_FILEOPEN)
-[ W General              ]: c:\buildslave\source2_dota_rel_win64\build\src\rendersystem\texturebase.cpp(1976):ResourceHandleToData( panorama/images/heroes/icons/npc_dota_hero_default_png.vtex ) failed! Falling back to error texture!
-
-10) Attempting Techies suicide causes these erorrs to show up
-[   VScript              ]: Cant find ability table for techies_suicide
-[ W RenderSystem         ]: Texture missing shader resource view - returning error texture in CTextureManagerDx11::GetResourceView
 
 
 -------------------------------------
