@@ -96,7 +96,7 @@
 
                 "ApplyModifier"
                 {
-                    "ModifierName"  "modifier_beastmaster_hawk"
+                    "ModifierName"  "modifier_beastmaster_techies"
                     "Target"        "TARGET"
                 }
 
@@ -111,7 +111,7 @@
 
     "Modifiers"
     {
-        "modifier_beastmaster_hawk"
+        "modifier_beastmaster_techies"
         {
             "IsHidden"      "1"
 
