@@ -172,6 +172,14 @@ Crashes
 [ W ResourceSystem       ]: File error loading resource header "panorama/images/heroes/icons/npc_dota_hero_default_png.vtex_c" (Error: ERROR_FILEOPEN)
 [ W General              ]: c:\buildslave\source2_dota_rel_win64\build\src\rendersystem\texturebase.cpp(1976):ResourceHandleToData( panorama/images/heroes/icons/npc_dota_hero_default_png.vtex ) failed! Falling back to error texture!
 
+9) Spawning any of the heroes again causes these error message to show up everytime
+[ W ResourceSystem       ]: File error loading resource header "panorama/images/heroes/icons/npc_dota_hero_default_png.vtex_c" (Error: ERROR_FILEOPEN)
+[ W General              ]: c:\buildslave\source2_dota_rel_win64\build\src\rendersystem\texturebase.cpp(1976):ResourceHandleToData( panorama/images/heroes/icons/npc_dota_hero_default_png.vtex ) failed! Falling back to error texture!
+
+10) Attempting Techies suicide causes these erorrs to show up
+[   VScript              ]: Cant find ability table for techies_suicide
+[ W RenderSystem         ]: Texture missing shader resource view - returning error texture in CTextureManagerDx11::GetResourceView
+
 
 -------------------------------------
 -- Checklist for creating upgrades --
