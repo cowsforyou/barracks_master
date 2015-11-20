@@ -92,6 +92,9 @@ function Precache( context )
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_treant.vsndevts", context) -- for Living Armor
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_sniper.vsndevts", context) -- for Assassinate 
 
+  PrecacheResource("soundfile", "soundevents/BMBuilding.vsndevts", context) -- for Assassinate 
+
+
     -- Units
   PrecacheUnitByNameSync("lumberjack", context)    
   PrecacheUnitByNameSync("scout_boar", context)

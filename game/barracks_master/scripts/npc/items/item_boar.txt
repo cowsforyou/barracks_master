@@ -78,7 +78,7 @@
     {
         "FireSound"
         {
-            "EffectName"    "Hero_Beastmaster.Call.Boar"
+            "EffectName"    "barracks_master.BMBuilding"
             "Target"        "CASTER"
         }
 

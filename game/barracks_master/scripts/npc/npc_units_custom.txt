@@ -2513,18 +2513,18 @@
 		"ModelScale"				"0.65"
 		"IsSummoned"				"1"
 		"UnitLabel"					"boar"
-
+	
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					""			// Ability 1
 		"Ability2"					""			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
-
+	
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"0"			// Physical protection.
-
+	
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -2536,23 +2536,23 @@
 		"AttackRange"				"550"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/units/heroes/hero_beastmaster/beastmaster_boar_attack.vpcf"	// Particle system model for projectile.
 		"ProjectileSpeed"			"1500"		// Speed of projectile.		   
-
+	
 		// Bounds
 		//----------------------------------------------------------------
 		"HealthBarOffset"			"125"
-
+	
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"4"		// Gold earned min.
 		"BountyGoldMax"				"6"		// Gold earned max.
-
+	
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"350"		// Speed.
 		"MovementTurnRate"			"0.6"		// Turning rate.
-
+	
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"50"		// Base health.
@@ -2562,7 +2562,7 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1400"		// Range of vision during day light.
 		"VisionNighttimeRange"		"800"		// Range of vision at night time.
-
+	
 		// Team
 		//----------------------------------------------------------------
 		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
@@ -2581,38 +2581,38 @@
 		"ModelScale"				"1.2"
 		"IsSummoned"				"1"
 		"UnitLabel"					"hawk"
-
+	
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					""			// Ability 1
 		"Ability2"					""			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
-
+	
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"0"			// Physical protection.
-
+	
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
-
+	
 		// Bounds
 		//----------------------------------------------------------------
 		"HealthBarOffset"			"165"
-
+	
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"28"		// Gold earned min.
 		"BountyGoldMax"				"32"		// Gold earned max.
-
+	
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
 		"MovementSpeed"				"325"		// Speed.
 		"MovementTurnRate"			"0.6"		// Turning rate.
-
+	
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"40"		// Base health.
@@ -2622,7 +2622,7 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1600"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1000"		// Range of vision at night time.
-
+	
 		// Team
 		//----------------------------------------------------------------
 		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
