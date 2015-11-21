@@ -134,7 +134,8 @@ function Build( event )
 		DebugPrint("[BH] Started construction of " .. unit:GetUnitName() .. " " .. unit:GetEntityIndex())
 
 		-- Play construction sound -- cows
-	    EmitSoundOn("BarracksMaster.Building", caster)	
+	    EmitSoundOn("BarracksMaster.Building", caster)
+		print("Building Construction Start")
 
 		-- Store the Build Time, Gold Cost and secondary resource the building 
 	    -- This is necessary for repair to know what was the cost of the building and use resources periodically
@@ -173,6 +174,7 @@ function Build( event )
 		
 		-- Play construction complete sound
 		EmitSoundOn("BarracksMaster.ConstructionComplete", caster) -- cows
+		print("Building Finished")
 
 		-- Let the building cast abilities
 		unit:RemoveModifierByName("modifier_construction")

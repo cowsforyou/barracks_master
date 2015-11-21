@@ -34,31 +34,24 @@ function LastHits:OnEntityKilled( keys )
 
     local player = killerEntity:GetPlayerOwner()
     if self:IsValidBountyKiller(killerEntity) and self:IsValidBountyTargetForPlayer(player, killedUnit) then
-		local playerID = player:GetPlayerID()
-		local gold = killedUnit:GetGoldBounty()
-		Purifier:EarnedGold(player, gold)
+        local playerID = player:GetPlayerID()
+        local gold = killedUnit:GetGoldBounty()
+        Purifier:EarnedGold(player, gold)
         -- FUNNY STORY: turns out if you set the unit's ownership correctly, you don't need to do this stuff. -- cows says LEL
         --PlayerResource:ModifyGold(playerID, gold, false, DOTA_ModifyGold_CreepKill)
         --PlayerResource:IncrementLastHits(playerID)
         --local coinsParticle = ParticleManager:CreateParticleForPlayer("particles/generic_gameplay/lasthit_coins.vpcf", PATTACH_ABSORIGIN_FOLLOW, killedUnit, player)
-		--ParticleManager:SetParticleControl(coinsParticle, 1, killedUnit:GetAbsOrigin())
-		--PopupGoldGainForPlayer(player, killedUnit, gold)
+        --ParticleManager:SetParticleControl(coinsParticle, 1, killedUnit:GetAbsOrigin())
+        --PopupGoldGainForPlayer(player, killedUnit, gold)
         --EmitSoundOnClient("General.Coins", player)
-		--print("Awarding " .. gold .. " gold to player " .. playerID)
+        --print("Awarding " .. gold .. " gold to player " .. playerID)
     else
-    	--print("Valid killer: " .. tostring(self:IsValidBountyKiller(killerEntity)) ..
+        --print("Valid killer: " .. tostring(self:IsValidBountyKiller(killerEntity)) ..
         --    ", Valid target: " .. tostring(self:IsValidBountyTargetForPlayer(player, killedUnit)))
     end
 
     if self:IsTower(killedUnit) then
         self:IncrementLastStandCharges(killedUnit:GetTeam())
-            -- Show a notification -- cows
-            local dur = 5.0                                                                                                 
-            Notifications:BottomToTeam(killedUnit:GetTeam(), {image="file://{images}/custom_game/last_stand.psd", duration=dur})                      
-            Notifications:BottomToTeam(killedUnit:GetTeam(), {text="#give_item_last_stand", duration=dur, continue=true})  
-
-            -- Fire a sound -- cows
-            --EmitSoundOn("BarracksMaster.NewItem", killedUnit:GetTeam()) -- not working yet
     end
 end
 
@@ -77,13 +70,33 @@ function LastHits:IncrementLastStandCharges(towerTeam)
     end
 end
 
-function GetItemByName(unit, item_name)
-  for i=DOTA_ITEM_SLOT_1, DOTA_ITEM_SLOT_6 do
-    local item = unit:GetItemInSlot(i)
-    if item and item:GetAbilityName() == item_name then
-      return item
+function LastHits:IncrementLastStandCharges(towerTeam)
+    local dur = 5.0                                                                                                 
+    --Notifications:BottomToTeam(killedUnit:GetTeam(), {ability="lion_finger_of_death", duration=dur})        -- removed as picture looked oversized              
+    Notifications:BottomToTeam(towerTeam, {text="#give_item_last_stand", duration=dur})  
+  
+      local heroList = HeroList:GetAllHeroes()
+    for _,hero in pairs(heroList) do
+        if hero:GetTeam() == towerTeam then
+            local itemName = "item_last_stand"
+            local lastStandItem = GetItemByName(hero, itemName)
+            if lastStandItem then
+                lastStandItem:SetCurrentCharges(lastStandItem:GetCurrentCharges() + 1)
+            else
+                hero:AddItemByName(itemName)
+            end
+            EmitSoundOnClient("BarracksMaster.NewItem", player)
+        end
     end
-  end
+end
 
-  return nil
+function GetItemByName(unit, item_name)
+    for i=DOTA_ITEM_SLOT_1, DOTA_ITEM_SLOT_6 do
+            local item = unit:GetItemInSlot(i)
+            if item and item:GetAbilityName() == item_name then
+                return item
+            end
+    end
+
+    return nil
 end
