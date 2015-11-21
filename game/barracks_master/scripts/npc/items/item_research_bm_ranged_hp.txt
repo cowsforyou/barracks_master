@@ -12,6 +12,12 @@
 	
 	"OnSpellStart"
 	{
+	    "FireSound"
+        {
+            "EffectName"    "BarracksMaster.Cancelled"
+            "Target"        "CASTER"
+        }
+        
 		"RunScript"
 		{
 			"ScriptFile"	"buildings/queue.lua"

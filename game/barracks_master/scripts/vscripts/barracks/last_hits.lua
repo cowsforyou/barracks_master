@@ -37,7 +37,7 @@ function LastHits:OnEntityKilled( keys )
 		local playerID = player:GetPlayerID()
 		local gold = killedUnit:GetGoldBounty()
 		Purifier:EarnedGold(player, gold)
-        -- FUNNY STORY: turns out if you set the unit's ownership correctly, you don't need to do this stuff.
+        -- FUNNY STORY: turns out if you set the unit's ownership correctly, you don't need to do this stuff. -- cows says LEL
         --PlayerResource:ModifyGold(playerID, gold, false, DOTA_ModifyGold_CreepKill)
         --PlayerResource:IncrementLastHits(playerID)
         --local coinsParticle = ParticleManager:CreateParticleForPlayer("particles/generic_gameplay/lasthit_coins.vpcf", PATTACH_ABSORIGIN_FOLLOW, killedUnit, player)
@@ -52,6 +52,13 @@ function LastHits:OnEntityKilled( keys )
 
     if self:IsTower(killedUnit) then
         self:IncrementLastStandCharges(killedUnit:GetTeam())
+            -- Show a notification -- cows
+            local dur = 5.0                                                                                                 
+            Notifications:BottomToTeam(killedUnit:GetTeam(), {image="file://{images}/custom_game/last_stand.psd", duration=dur})                      
+            Notifications:BottomToTeam(killedUnit:GetTeam(), {text="#give_item_last_stand", duration=dur, continue=true})  
+
+            -- Fire a sound -- cows
+            --EmitSoundOn("BarracksMaster.NewItem", killedUnit:GetTeam()) -- not working yet
     end
 end
 
