@@ -85,7 +85,8 @@ function LastHits:IncrementLastStandCharges(towerTeam)
             else
                 hero:AddItemByName(itemName)
             end
-            EmitSoundOnClient("BarracksMaster.NewItem", player)
+            --EmitSoundOnClient("BarracksMaster.NewItem", player)
+            --EmitAnnouncerSoundForTeam("BarracksMaster.NewItem", unit:GetTeam())
         end
     end
 end
