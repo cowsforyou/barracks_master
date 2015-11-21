@@ -82,11 +82,13 @@ function Build( event )
        	-- If not enough resources to queue, stop
        	if not PlayerHasEnoughGold( player, lumber_cost ) then
        		SendErrorMessage(caster:GetPlayerOwnerID(), "#error_not_enough_gold")
+       		EmitSoundOn("BarracksMaster.InsufficientFunds", caster) -- cows
 			return false
 		end
 
        	if not PlayerHasEnoughLumber( player, lumber_cost ) then
        		SendErrorMessage(caster:GetPlayerOwnerID(), "#error_not_enough_lumber")
+        	EmitSoundOn("BarracksMaster.InsufficientResources", caster) -- cows      		
 			return false
 		end
 
@@ -101,7 +103,7 @@ function Build( event )
     	ModifyLumber( player, -lumber_cost)
 
     	-- Play a sound
-    	EmitSoundOnClient("DOTA_Item.ObserverWard.Activate", player)
+    	--EmitSoundOnClient("DOTA_Item.ObserverWard.Activate", player)
 
     	-- Move the units away from the building place
 	
@@ -130,7 +132,9 @@ function Build( event )
 	-- A building unit was created
 	event:OnConstructionStarted(function(unit)
 		DebugPrint("[BH] Started construction of " .. unit:GetUnitName() .. " " .. unit:GetEntityIndex())
-		-- Play construction sound
+
+		-- Play construction sound -- cows
+	    EmitSoundOn("BarracksMaster.Building", caster)	
 
 		-- Store the Build Time, Gold Cost and secondary resource the building 
 	    -- This is necessary for repair to know what was the cost of the building and use resources periodically
@@ -168,6 +172,7 @@ function Build( event )
 		DebugPrint("[BH] Completed construction of " .. unit:GetUnitName() .. " " .. unit:GetEntityIndex())
 		
 		-- Play construction complete sound
+		EmitSoundOn("BarracksMaster.ConstructionComplete", caster) -- cows
 
 		-- Let the building cast abilities
 		unit:RemoveModifierByName("modifier_construction")

@@ -92,7 +92,7 @@ function Precache( context )
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_treant.vsndevts", context) -- for Living Armor
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_sniper.vsndevts", context) -- for Assassinate 
 
-  PrecacheResource("soundfile", "soundevents/BMBuilding.vsndevts", context) -- for Assassinate 
+  PrecacheResource("soundfile", "soundevents/BM_custom_sounds.vsndevts", context) -- for Barracks Master Announcer
 
 
     -- Units

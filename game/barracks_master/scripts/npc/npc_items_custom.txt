@@ -154,7 +154,7 @@
 	    {
 	        "FireSound"
 	        {
-	            "EffectName"    "barracks_master.BMBuilding"
+	            "EffectName"    "Hero_Beastmaster.Call.Boar"
 	            "Target"        "CASTER"
 	        }
 	

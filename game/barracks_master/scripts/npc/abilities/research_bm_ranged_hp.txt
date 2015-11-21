@@ -46,6 +46,12 @@
 
     "OnChannelSucceeded"
     {
+        "FireSound"
+        {
+            "EffectName"    "BarracksMaster.ResearchComplete"
+            "Target"        "CASTER"
+        }
+        
         "RunScript"
         {
             "ScriptFile"    "buildings/queue.lua"
