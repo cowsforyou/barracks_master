@@ -17,6 +17,10 @@
 
 "bm_updates_text"	"
 Nov 22:
+• Potential fix for late game crashes (thank you Noya!).
+• Please report if crashing still occurs.
+
+Nov 22:
 • Thank you to those that have given me feedback! We are aware of some late game crashing issues. It's not an easy problem to fix but we are working hard! Please bear with us.
 • We also have volunteers to help translate the game into Russian(Русский) and Chinese(简体中文)! I will push that immediately once it's completed.
 • If you have suggestions or bugs to report, feel free to add me on Steam (cowsforyou) or send me an email at thenewmetadota@gmail.com.
