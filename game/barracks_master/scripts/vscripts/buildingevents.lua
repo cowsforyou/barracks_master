@@ -145,24 +145,17 @@ function BuildingEvents:OnEntityKilled( event )
     end
     player.structures = table_structures
 
-    -- Noya rewrite    
-    local player_units = GetAllUnits(playerID) -- Returns the player.units, which should be hero.units instead to avoid reconnection issues
-    local unit_index = getIndexTable(player_units, killedUnit)
-    if unit_index then
-      print("Unit Removed From Table")
-      table.remove(player_units, unit_index)
-    end
-
-    -- getIndexTable is just iterate over the table and find the index:
-    function getIndexTable(list, element)
-      if list == nil then return false end
-      for k,v in pairs(list) do
-        if v == element then
-          return k
+    -- units take a while to disappear    
+    Timers:CreateTimer(10.0, function()
+      local table_units = {}
+      for _,unit in pairs(player.units) do
+        if unit and IsValidEntity(unit) then
+          table.insert(table_units, unit)
         end
       end
-      return -1
-    end
+      player.units = table_units
+    end)
+
   end
 end
 
