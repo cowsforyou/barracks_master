@@ -145,16 +145,13 @@ function BuildingEvents:OnEntityKilled( event )
     end
     player.structures = table_structures
 
-    -- units take a while to disappear    
-    Timers:CreateTimer(10.0, function()
-      local table_units = {}
-      for _,unit in pairs(player.units) do
-        if unit and IsValidEntity(unit) then
-          table.insert(table_units, unit)
-        end
+    local table_units = {}
+    for _,unit in pairs(player.units) do
+      if unit and IsValidEntity(unit) and unit:IsAlive() then
+        table.insert(table_units, unit)
       end
-      player.units = table_units
-    end)
+    end
+    player.units = table_units
 
   end
 end
