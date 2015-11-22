@@ -16,6 +16,13 @@
 "bm_updates_title"	"Updates"
 
 "bm_updates_text"	"
+Nov 21:
+*Congratulations to OG for winning the Frankfurt Major!*
+- 'Building' sound added
+- 'Construction complete' sound added
+- 'Research complete' sound added
+- 'Cancelled' sound added
+
 Nov 20:
 - Techies duration reduced from 40sec to 30sec
 - Spectator Team count reduced from 2 to 1
