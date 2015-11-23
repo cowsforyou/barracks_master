@@ -17,6 +17,9 @@
 
 "bm_updates_text"	"
 Nov 22:
+• Portal of Heroes removed temporarily. It seems to be the one that is causing the crashes at the moment. Will reinstate once it's fixed!
+
+Nov 22:
 • 2nd attempt at crashing fix.
 
 Nov 22:
@@ -39,13 +42,6 @@ Nov 20:
 • Techies duration reduced from 40sec to 30sec
 • Spectator Team count reduced from 2 to 1
 • Ambient animation removed on Portal of Heroes
-
-Nov 20:
-• Barracks Master is now officially in open beta mode!
-• Loading screen now shows recent updates
-• Tier 3 towers moved closer to the middle of the map
-• Tier 2 towers moved downhill
-• There are now 2 tier 2 towers on each team
 "
 
 "bm_contact_text"	"
