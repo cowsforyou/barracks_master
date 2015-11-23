@@ -10,7 +10,8 @@
         "SoundSet"                  "Creep_Good_Range"                  // Name of sound set.
         "ModelScale"                    ".88"
         "Level"                     "2"
-        
+        "IgnoreAddSummonedToSelection"  "1"
+                
         // Abilities
         //----------------------------------------------------------------
         

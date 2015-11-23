@@ -6,6 +6,7 @@
 	"BaseClass"					"npc_dota_beastmaster_hawk"
 	"SoundSet"					"0"			// Name of sound set.
 	"Level"						"6"
+    "IgnoreAddSummonedToSelection"  "1"
 	"ModelScale"				"1.2"
 	"IsSummoned"				"1"
 	"UnitLabel"					"hawk"

@@ -6,6 +6,7 @@
 	"BaseClass"					"npc_dota_creature"
 	"SoundSet"					"Hero_Techies"			// Name of sound set.
 	"Level"						"5"
+	"IgnoreAddSummonedToSelection"  "1"
 	"ModelScale"				"0.55"
 	"IsSummoned"				"1"
 	

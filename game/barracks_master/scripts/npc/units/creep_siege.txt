@@ -13,7 +13,8 @@
         "ModelScale"                    ".65"
         "Level"                         "4"
         "CanBeDominated"                "1"
-        
+        "IgnoreAddSummonedToSelection"  "1"
+                
         // Abilities
         //----------------------------------------------------------------
         

@@ -9,12 +9,12 @@
 	"Model"						"models/heroes/shredder/shredder.vmdl"
 	"ModelScale"				"0.7"
 	"Level"						"1"
+    "IgnoreAddSummonedToSelection"  "1"   
+
 	"HealthBarOffset"			"140"
 	"SelectionGroup"            "Peasants"
 	"SoundSet"					"Hero_Shredder"
-
 	"UnitLabel"					"lumberjack"
-	
 	"PathfindingSearchDepthScale" "0.5"
 	
 	// Abilities

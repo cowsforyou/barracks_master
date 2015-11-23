@@ -1124,6 +1124,7 @@
 	        "SoundSet"                  "Visage_Familiar"                  // Name of sound set.
 	        "ModelScale"                "0.66"
 	        "Level"                     "1"
+	        "IgnoreAddSummonedToSelection"  "1"
 	        
 	        // Abilities
 	        //----------------------------------------------------------------
@@ -1207,6 +1208,7 @@
 	        "ModelScale"                "1.1"
 	        "Level"                     "1"
 	        "IsSummoned"                "1"
+	        "IgnoreAddSummonedToSelection"  "1"
 	                
 	        // Abilities
 	        //----------------------------------------------------------------
@@ -1286,7 +1288,8 @@
 	        "ModelScale"                "1.0"
 	        "Level"                     "1"
 	        "IsSummoned"                "1"
-	                
+	        "IgnoreAddSummonedToSelection"  "1"
+	                        
 	        // Abilities
 	        //----------------------------------------------------------------
 	        
@@ -1366,7 +1369,8 @@
 	        "IsAncient"                 "1"
 	        "ModelScale"                "1"
 	        "IsNeutralUnitType"         "1"
-	
+	        "IgnoreAddSummonedToSelection"  "1"
+	        
 	        // Abilities
 	        //----------------------------------------------------------------
 	        "Ability1"                  "black_dragon_dragonhide_aura"          // Ability 1
@@ -1437,7 +1441,8 @@
 	        "SoundSet"                  "Creep_Good_Melee"                  // Name of sound set.
 	        "ModelScale"                "0.93"
 	        "Level"                     "3"
-	        
+	        "IgnoreAddSummonedToSelection"  "1"
+	
 	        // Abilities
 	        //----------------------------------------------------------------
 	        
@@ -1529,7 +1534,8 @@
 	        "SoundSet"                  "Creep_Good_Range"                  // Name of sound set.
 	        "ModelScale"                    ".88"
 	        "Level"                     "2"
-	        
+	        "IgnoreAddSummonedToSelection"  "1"
+	                
 	        // Abilities
 	        //----------------------------------------------------------------
 	        
@@ -1614,7 +1620,8 @@
         "ModelScale"                    ".65"
         "Level"                         "4"
         "CanBeDominated"                "1"
-        
+        "IgnoreAddSummonedToSelection"  "1"
+                
         // Abilities
         //----------------------------------------------------------------
         
@@ -1706,7 +1713,8 @@
 	        "ModelScale"                "1.1"
 	        "Level"                     "1"
 	        "IsSummoned"                "1"
-	                
+	        "IgnoreAddSummonedToSelection"  "1"
+	                        
 	        // Abilities
 	        //----------------------------------------------------------------
 	        
@@ -1942,7 +1950,8 @@
         "SoundSet"                  "Hero_Beastmaster"                   // Name of sound set.
         "ModelScale"                "0.77"
         "Level"                     "1"
-        
+        "IgnoreAddSummonedToSelection"  "1"
+                
         // Abilities
         //----------------------------------------------------------------
         "AbilityLayout"             "4"
@@ -2035,7 +2044,8 @@
 	        "SoundSet"                  "Hero_Nevermore"                   // Name of sound set.
 	        "ModelScale"                "0.98"
 	        "Level"                     "1"
-	        
+	        "IgnoreAddSummonedToSelection"  "1"
+	                
 	        // Abilities
 	        //----------------------------------------------------------------
 	        "AbilityLayout"             "4"
@@ -2129,7 +2139,8 @@
 	        "SoundSet"                  "Hero_VengefulSpirit"                   // Name of sound set.
 	        "ModelScale"                "0.98"
 	        "Level"                     "1"
-	        
+	        "IgnoreAddSummonedToSelection"  "1"
+	                
 	        // Abilities
 	        //----------------------------------------------------------------
 	        "AbilityLayout"             "4"
@@ -2222,12 +2233,12 @@
 		"Model"						"models/heroes/shredder/shredder.vmdl"
 		"ModelScale"				"0.7"
 		"Level"						"1"
+	    "IgnoreAddSummonedToSelection"  "1"   
+	
 		"HealthBarOffset"			"140"
 		"SelectionGroup"            "Peasants"
 		"SoundSet"					"Hero_Shredder"
-	
 		"UnitLabel"					"lumberjack"
-		
 		"PathfindingSearchDepthScale" "0.5"
 		
 		// Abilities
@@ -2510,6 +2521,7 @@
 		"BaseClass"					"npc_dota_beastmaster_boar"
 		"SoundSet"					"Beastmaster_Boar"			// Name of sound set.
 		"Level"						"5"
+		"IgnoreAddSummonedToSelection"  "1"   
 		"ModelScale"				"0.65"
 		"IsSummoned"				"1"
 		"UnitLabel"					"boar"
@@ -2578,6 +2590,7 @@
 		"BaseClass"					"npc_dota_beastmaster_hawk"
 		"SoundSet"					"0"			// Name of sound set.
 		"Level"						"6"
+	    "IgnoreAddSummonedToSelection"  "1"
 		"ModelScale"				"1.2"
 		"IsSummoned"				"1"
 		"UnitLabel"					"hawk"
@@ -2640,6 +2653,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"Hero_Techies"			// Name of sound set.
 		"Level"						"5"
+		"IgnoreAddSummonedToSelection"  "1"
 		"ModelScale"				"0.55"
 		"IsSummoned"				"1"
 		

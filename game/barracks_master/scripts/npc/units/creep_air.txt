@@ -10,6 +10,7 @@
         "SoundSet"                  "Visage_Familiar"                  // Name of sound set.
         "ModelScale"                "0.66"
         "Level"                     "1"
+        "IgnoreAddSummonedToSelection"  "1"
         
         // Abilities
         //----------------------------------------------------------------

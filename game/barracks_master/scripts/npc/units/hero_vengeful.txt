@@ -10,7 +10,8 @@
         "SoundSet"                  "Hero_VengefulSpirit"                   // Name of sound set.
         "ModelScale"                "0.98"
         "Level"                     "1"
-        
+        "IgnoreAddSummonedToSelection"  "1"
+                
         // Abilities
         //----------------------------------------------------------------
         "AbilityLayout"             "4"
