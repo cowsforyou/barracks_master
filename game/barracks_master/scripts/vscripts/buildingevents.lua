@@ -133,27 +133,30 @@ function BuildingEvents:OnEntityKilled( event )
     BuildingHelper:ClearQueue(killedUnit)
   end
 
-  -- Table cleanup
-  if player then
-    -- Remake the tables
-    local table_structures = {}
-    for _,building in pairs(player.structures) do
-      if building and IsValidEntity(building) and building:IsAlive() then
-        --print("Valid building: "..building:GetUnitName())
-        table.insert(table_structures, building)
-      end
+  if player and not killedUnit:IsHero() then
+    if IsCustomBuilding(killedUnit) then
+      RemoveMatchingEntityFromTable(player.structures, killedUnit)
+    else
+      RemoveMatchingEntityFromTable(player.units, killedUnit)
     end
-    player.structures = table_structures
-
-    local table_units = {}
-    for _,unit in pairs(player.units) do
-      if unit and IsValidEntity(unit) and unit:IsAlive() then
-        table.insert(table_units, unit)
-      end
-    end
-    player.units = table_units
-
   end
+end
+
+function RemoveMatchingEntityFromTable(tbl, entity)
+  for i,item in pairs(tbl) do
+    if item and IsValidEntity(item) then
+      if item:entindex() == entity:entindex() then
+        table.remove(tbl, i)
+        print("Successfully removed "..entity:GetUnitName().." from table. Player owner: "..
+          entity:GetPlayerOwnerID() .. ". Table length: "..#tbl)
+        return true
+      end
+    else
+      print("ERROR: Passed table item is nil or not valid.")
+    end
+  end
+  print("ERROR: Could not find entity "..entity:GetUnitName().." in table.")
+  return false
 end
 
 -- Called whenever a player changes its current selection, it keeps a list of entity indexes
