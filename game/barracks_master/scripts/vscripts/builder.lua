@@ -46,16 +46,14 @@ function Build( event )
 	-- <<<VEGGIESAMA
 	-- Set MaxBuildingCount in the ability KV to trigger this check.
 	-- No one player can build more than X building units at a time.
+	local buildingCounter = 0
+    for _,building in pairs(player.structures) do
+    	if building and IsValidEntity(building) and building:GetUnitName() == building_name then
+    		buildingCounter = buildingCounter + 1
+    	end
+    end
+
 	local maxBuildingCount = AbilityKV[ability_name].MaxBuildingCount
-	local allCreatures = Entities:FindAllByClassname("npc_dota_creature")
-
-	local buildingCounter = 0 
-	for _,creature in pairs(allCreatures) do
-		if creature:GetUnitName() == building_name and creature:GetPlayerOwner() == player then
-			buildingCounter = buildingCounter + 1
-		end
-	end
-
 	if maxBuildingCount ~= nil and buildingCounter >= maxBuildingCount then
 		SendErrorMessage(playerID, "#error_max_building_count")
 		--print("MaxBuildingCount limit reached! Aborting build command.")
