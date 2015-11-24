@@ -113,24 +113,24 @@
 [x] Lumberjacks unable to harvest
 [x] Fix superweapon tooltips.
 [x] Creeps last hitting heroes should award gold (currently it awards nothing - killed by netural creep status)
-[ ] Melee rax spawning at same location (if you stagger the spawns it might work)
+[x] Melee rax spawning at same location (if you stagger the spawns it might work)
 [x] Ranged barracks missing hp upgrade
 [x] Purifier giving errors when superweapons net kills
 [x] Clean up purifier description to make clear only creep kills gets bonus
-[ ] Clean up Portal of Heroes ambient animation
+[x] Clean up Portal of Heroes ambient animation
 [x] Random Lumberjack console error bug
 [ ] Color health bars?
 [x] Have gold cost of disabled buildings shown
 [x] Tooltips for ancient toggle not showing description
 [x] Modify pathing of creeps after t2
-[ ] Lumber having decimal places on scoreboard
-[ ] Research gets reset on building when it's destroyed and rebuilt
+[x] Lumber having decimal places on scoreboard
+[x] Research gets reset on building when it's destroyed and rebuilt
 [x] Late game crashes (related to superweapons possibly?)
 [ ] Double building on the same spot renders the gold/lumber wasted
 
 
 -- Urgent Fixes --
-[ ] Clean up player tables (need to rewrite)
+[x] Clean up player tables (need to rewrite)
 [ ] Fix gridnav system
 
 

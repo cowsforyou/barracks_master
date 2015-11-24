@@ -16,6 +16,10 @@
 "bm_updates_title"	"Updates"
 
 "bm_updates_text"	"
+Nov 23:
+• Portal of Heroes fixed and reinstated.
+• Disabled 'Auto Select Summoned Units'.
+
 Nov 22:
 • Portal of Heroes removed temporarily. It seems to be the one that is causing the crashes at the moment. Will reinstate once it's fixed!
 
@@ -37,11 +41,6 @@ Nov 21:
 • 'Construction complete' sound added
 • 'Research complete' sound added
 • 'Cancelled' sound added
-
-Nov 20:
-• Techies duration reduced from 40sec to 30sec
-• Spectator Team count reduced from 2 to 1
-• Ambient animation removed on Portal of Heroes
 "
 
 "bm_contact_text"	"
@@ -485,17 +484,17 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_spawn_ancient_creeps_creep_count"                             "CREEP COUNT:"	
 
 		"DOTA_Tooltip_ability_spawn_hero_vengeful"                                     		"Spawn Vengeful Spirit"
-		"DOTA_Tooltip_ability_spawn_hero_vengeful_Description"                              "Vengeful Spirit has True Strike and provides Vengence Aura which boosts attack damage by 36%."
+		"DOTA_Tooltip_ability_spawn_hero_vengeful_Description"                              "Vengeful Spirit has True Strike and provides Vengence Aura which boosts attack damage by 12 percent."
 		"DOTA_Tooltip_ability_spawn_hero_vengeful_gold_cost"                              	"<font color='#fff22e'>GOLD COST</font>:"
 		"DOTA_Tooltip_ability_spawn_hero_vengeful_lumber_cost"                              "<font color='#28fe77'>LUMBER COST</font>:"
 
 		"DOTA_Tooltip_ability_spawn_hero_nevermore"                                     	"Spawn Shadow Fiend"
-		"DOTA_Tooltip_ability_spawn_hero_nevermore_Description"                             "Shadow Fiend has True Strike and provides Presence of the Dark Lord which reduces armor by 6."
+		"DOTA_Tooltip_ability_spawn_hero_nevermore_Description"                             "Shadow Fiend has True Strike and provides Presence of the Dark Lord which reduces armor by 3."
 		"DOTA_Tooltip_ability_spawn_hero_nevermore_gold_cost"                              	"<font color='#fff22e'>GOLD COST</font>:"
 		"DOTA_Tooltip_ability_spawn_hero_nevermore_lumber_cost"                             "<font color='#28fe77'>LUMBER COST</font>:"
 
 		"DOTA_Tooltip_ability_spawn_hero_beastmaster"                                     	"Spawn Beastmaster"
-		"DOTA_Tooltip_ability_spawn_hero_beastmaster_Description"                           "Beastmaster has True Strike and provides Inner Beast which boosts attack speed by 45."
+		"DOTA_Tooltip_ability_spawn_hero_beastmaster_Description"                           "Beastmaster has True Strike and provides Inner Beast which boosts attack speed by 15."
 		"DOTA_Tooltip_ability_spawn_hero_beastmaster_gold_cost"                             "<font color='#fff22e'>GOLD COST</font>:"
 		"DOTA_Tooltip_ability_spawn_hero_beastmaster_lumber_cost"                           "<font color='#28fe77'>LUMBER COST</font>:"
 
@@ -549,6 +548,12 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_bm_truestrike"                                              	"True Strike"
 		"DOTA_Tooltip_ability_bm_truestrike_Description"                                  	"Prevents attacks from missing. True Strike does not work when attacking enemy structures."
 
+		"DOTA_Tooltip_ability_bm_command_aura"                                            	"Vengeance Aura"
+		"DOTA_Tooltip_ability_bm_command_aura_Description"                                	"Vengeful Spirit's presence increases the physical damage of nearby friendly units."
+		"DOTA_Tooltip_ability_bm_command_aura_bonus_damage_pct"                           	"BONUS DAMAGE PERCENTAGE:"
+		"DOTA_Tooltip_ability_bm_command_aura_radius"                                     	"RADIUS:"
+		"DOTA_Tooltip_modifier_command_aura_buff"                                         	"Vengeance Aura"
+		"DOTA_Tooltip_modifier_command_aura_buff_Description"                             	"12 percent bonus damage"
 
 		//-------------------
 		//Items

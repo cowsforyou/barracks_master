@@ -2142,7 +2142,7 @@
 	    //----------------------------------------------------------------
 	    "AbilityLayout"             "4"
 	    "Ability1"                  "bm_truestrike"          // Ability 1.
-	    "Ability2"                  "vengefulspirit_command_aura"          // Ability 2.
+	    "Ability2"                  "bm_command_aura"          // Ability 2.
 	    "Ability3"                  ""          // Ability 3.
 	    "Ability4"                  ""          // Ability 4.
 	    "Ability5"                  ""          // Ability 5.
