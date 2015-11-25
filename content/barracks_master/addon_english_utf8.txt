@@ -16,6 +16,15 @@
 "bm_updates_title"	"Updates"
 
 "bm_updates_text"	"
+Nov 24:
+• Ancients spell immunity removed.
+• Ancients now have 50 percent spell resistance.
+• Ancient Thunderhide HP increased from 1400 to 1600.
+• Ancient Black Dragon HP decreased from 2000 to 1800.
+
+Nov 24:
+• Bounty gold from all building kills reduced to 40.
+
 Nov 23:
 • Portal of Heroes fixed and reinstated.
 • Disabled 'Auto Select Summoned Units'.
@@ -34,13 +43,6 @@ Nov 22:
 • Thank you to those that have given me feedback! We are aware of some late game crashing issues. It's not an easy problem to fix but we are working hard! Please bear with us.
 • We also have volunteers to help translate the game into Russian(Русский) and Chinese(简体中文)! I will push that immediately once it's completed.
 • If you have suggestions or bugs to report, feel free to add me on Steam (cowsforyou) or send me an email at thenewmetadota@gmail.com.
-
-Nov 21:
-*Congratulations to OG for winning the Frankfurt Major!*
-• 'Building' sound added
-• 'Construction complete' sound added
-• 'Research complete' sound added
-• 'Cancelled' sound added
 "
 
 "bm_contact_text"	"
@@ -120,7 +122,7 @@ Send your suggestions to thenewmetadota@gmail.com."
 
 		"bm_siege_barracks"                                                               	"Siege Barracks"
 		"DOTA_Tooltip_ability_build_bm_siege_barracks"                        				"Siege Barracks"
-		"DOTA_Tooltip_ability_build_bm_siege_barracks_Description"                       	"Spawns Siege Creeps. A relentless artillery unit, the Siege Creep stands at a distance to provide constant bombardment. Its weapon can be upgraded to do splash damaage."
+		"DOTA_Tooltip_ability_build_bm_siege_barracks_Description"                       	"Spawns Siege Creeps. A relentless artillery unit, the Siege Creep stands at a distance to provide constant bombardment. Its weapon can be upgraded to do splash damage."
 		"DOTA_Tooltip_ability_build_bm_siege_barracks_build_time"                        	"<font color='#057aff'>BUILD TIME</font>:"
 		"DOTA_Tooltip_ability_build_bm_siege_barracks_gold_cost"                         	"<font color='#fff22e'>GOLD COST</font>:"
 		"DOTA_Tooltip_ability_build_bm_siege_barracks_lumber_cost"                       	"<font color='#28fe77'>LUMBER COST</font>:"
