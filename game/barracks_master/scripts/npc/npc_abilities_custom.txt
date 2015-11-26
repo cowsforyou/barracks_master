@@ -2778,26 +2778,6 @@
 	      "lumber_bonus"     	"20 40 60" // percent
 	    }    
 	  }
-	
-	  "Modifiers"
-	  {
-	    "modifier_autocast"
-	    {
-	      "Passive"     "1" // start activated
-	      "IsHidden"    "1" // hide the visual buff icon
-	
-	      // run this Think() script every 0.25 seconds
-	      "ThinkInterval"   "0.25"
-	      "OnIntervalThink"
-	      {
-	        "RunScript"
-	        {
-	          "ScriptFile"    "barracks/autocast.lua"
-	          "Function"      "Think"
-	        }
-	      }
-	    }
-	  }
 	}
 	"purifier_bonus_lumber_disabled"
 	{
@@ -4377,26 +4357,6 @@
 	            "ScriptFile"    "barracks/spawner_manual.lua"
 	            "Function"      "OnSpellStart"
 	            "creepName"		"lumberjack"
-	        }
-	    }
-	
-	    "Modifiers"
-	    {
-	        "modifier_autocast"
-	        {
-	            "Passive"     "1" // start activated
-	            "IsHidden"    "1" // hide the visual buff icon
-	
-	            // run this Think() script every 0.25 seconds
-	            "ThinkInterval"   "0.25"
-	            "OnIntervalThink"
-	            {
-	                "RunScript"
-	                {
-	                    "ScriptFile"    "barracks/autocast.lua"
-	                    "Function"      "Think"
-	                }
-	            }
 	        }
 	    }
 	}

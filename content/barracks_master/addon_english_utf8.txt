@@ -17,6 +17,19 @@
 
 "bm_updates_text"	"
 Nov 26:
+• Fixed autospawn Lumberjack bug.
+
+Nov 26:
+• Library of Spells build time decreased from 90 to 60sec.
+• Library of Spells cost increased from 300gold/450lumber to 500gold/600lumber.
+• Luminous and Unpromising Tower build time increased from 60 to 120sec.
+• Bashlord research time decreased from 270 to 150sec.
+• Corrupted Blade research time decreased from 270 to 150sec.
+• Corrupted Blade bonus damage increased from 20 to 30.
+• Corrupted Blade armor reduction increased from -4 to -5.
+• Autocast visual added on Eldwurm's Gold.
+
+Nov 26:
 • New particle effect added on Portal of Heroes.
 • New particle effect added on Purifier.
 
@@ -40,13 +53,6 @@ Nov 23:
 
 Nov 22:
 • Portal of Heroes removed temporarily. It seems to be the one that is causing the crashes at the moment. Will reinstate once it's fixed!
-
-Nov 22:
-• 2nd attempt at crashing fix.
-
-Nov 22:
-• Potential fix for late game crashes (thank you Noya!).
-• Please report if crashing still occurs.
 "
 
 "bm_contact_text"	"
