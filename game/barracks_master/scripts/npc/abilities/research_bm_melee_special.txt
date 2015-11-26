@@ -6,7 +6,7 @@
 	"MaxLevel" 						"1"
 
 	"AbilityGoldCost"				"950"
-	"AbilityChannelTime"			"270"
+	"AbilityChannelTime"			"150"
 	
 	"AbilitySpecial"
 	{
@@ -28,7 +28,7 @@
 		"04"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"research_time"			"270"
+			"research_time"			"150"
 		}
 		"05"
 		{
@@ -53,6 +53,12 @@
 
 	"OnChannelSucceeded"
 	{
+        "FireSound"
+        {
+            "EffectName"    "BarracksMaster.ResearchComplete"
+            "Target"        "CASTER"
+        }
+        
 		"RunScript"
 		{
 			"ScriptFile"   	"buildings/queue.lua"

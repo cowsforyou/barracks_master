@@ -10,17 +10,16 @@
 	// BuildingHelper info
 	"Building"						"1" //bool
 	"BuildingSize"					"4" 
-	"BuildTime"						"60.0"
 	"AbilityCastRange"				"200"
 	"UpdateHealth"					"1" //bool
 	"Scale"							"0" //bool
 	"PlayerCanControl"				"1" //bool
-
 	"BuilderInside"					"1"
 	"ModelRotation"					"90.0"
-
 	"UnitName"						"bm_luminous"
 	"AbilityCooldown"				"0"
+
+	"BuildTime"						"120.0"
 	"AbilityGoldCost"				"600"
 	"MaxBuildingCount"				"1"
 	// End of BuildingHelper info
@@ -30,7 +29,7 @@
 		"01"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"build_time"			"60.0"
+			"build_time"			"120.0"
 		}
 		"02"
 		{

@@ -1229,20 +1229,19 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
 		// BuildingHelper info
+		"UnitName"						"bm_library"
 		"Building"						"1" //bool
 		"BuildingSize"					"5" 
-		"BuildTime"						"90.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
 		"Scale"							"0" //bool
 		"PlayerCanControl"				"1" //bool
-	
 		"BuilderInside"					"1"
 		"ModelRotation"					"90.0"
-	
-		"UnitName"						"bm_library"
 		"AbilityCooldown"				"0"
-		"AbilityGoldCost"				"300"
+	
+		"BuildTime"						"60.0"
+		"AbilityGoldCost"				"500"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
 	
@@ -1251,17 +1250,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"build_time"			"90.0"
+				"build_time"			"60.0"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"300"
+				"gold_cost"				"500"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"450"
+				"lumber_cost"			"600"
 			}
 		}
 	
@@ -1343,17 +1342,16 @@
 		// BuildingHelper info
 		"Building"						"1" //bool
 		"BuildingSize"					"4" 
-		"BuildTime"						"60.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
 		"Scale"							"0" //bool
 		"PlayerCanControl"				"1" //bool
-	
 		"BuilderInside"					"1"
 		"ModelRotation"					"90.0"
-	
 		"UnitName"						"bm_luminous"
 		"AbilityCooldown"				"0"
+	
+		"BuildTime"						"120.0"
 		"AbilityGoldCost"				"600"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
@@ -1363,7 +1361,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"build_time"			"60.0"
+				"build_time"			"120.0"
 			}
 			"02"
 			{
@@ -1624,7 +1622,6 @@
 		// BuildingHelper info
 		"Building"						"1" //bool
 		"BuildingSize"					"3" 
-		"BuildTime"						"5.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
 		"Scale"							"0" //bool
@@ -1635,6 +1632,7 @@
 	
 		"UnitName"						"bm_skeleton_barracks"
 		"AbilityCooldown"				"0"
+		"BuildTime"						"20.0"	
 		"AbilityGoldCost"				"400"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
@@ -1736,17 +1734,16 @@
 		// BuildingHelper info
 		"Building"						"1" //bool
 		"BuildingSize"					"4" 
-		"BuildTime"						"60.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
 		"Scale"							"0" //bool
 		"PlayerCanControl"				"1" //bool
-	
 		"BuilderInside"					"1"
 		"ModelRotation"					"180.0"
-	
 		"UnitName"						"bm_unpromising"
 		"AbilityCooldown"				"0"
+	
+		"BuildTime"						"120.0"
 		"AbilityGoldCost"				"600"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
@@ -1756,7 +1753,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"build_time"			"60.0"
+				"build_time"			"120.0"
 			}
 			"02"
 			{
@@ -2726,45 +2723,81 @@
 	}
 	"purifier_bonus_gold"
 	{
-	    "BaseClass"                     "ability_datadriven"
-	    "AbilityTextureName"            "dragon_knight_breathe_fire"
-	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	  "BaseClass"                     "ability_datadriven"
+	  "AbilityTextureName"            "dragon_knight_breathe_fire"
+	  "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	
-	    "MaxLevel"                      "1"
+	  "MaxLevel"                      "1"
 	
-	    // Special  
-	    //-------------------------------------------------------------------------------------------------------------
-	    "AbilitySpecial"
+	  // Special  
+	  //-------------------------------------------------------------------------------------------------------------
+	  "AbilitySpecial"
+	  {
+	    "01"
 	    {
-	      "01"
+	      "var_type"       "FIELD_INTEGER"
+	      "gold_bonus"     "25"
+	    }    
+	  }
+	
+	  "Modifiers"
+	  {
+	    "modifier_autocast"
+	    {
+	      "Passive"     "1" // start activated
+	      "IsHidden"    "1" // hide the visual buff icon
+	
+	      // run this Think() script every 0.25 seconds
+	      "ThinkInterval"   "0.25"
+	      "OnIntervalThink"
 	      {
-	        "var_type"       "FIELD_INTEGER"
-	        "gold_bonus"     "25"
+	        "RunScript"
+	        {
+	          "ScriptFile"    "barracks/autocast.lua"
+	          "Function"      "Think"
+	        }
 	      }
-	      
 	    }
-	
-	
+	  }
 	}
 	"purifier_bonus_lumber"
 	{
-	    "BaseClass"                     "ability_datadriven"
-	    "AbilityTextureName"            "wood_chips"
-	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	  "BaseClass"                     "ability_datadriven"
+	  "AbilityTextureName"            "wood_chips"
+	  "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	
-	    "MaxLevel"                      "3"
+	  "MaxLevel"                      "3"
 	
-	    // Special  
-	    //-------------------------------------------------------------------------------------------------------------
-	    "AbilitySpecial"
+	  // Special  
+	  //-------------------------------------------------------------------------------------------------------------
+	  "AbilitySpecial"
+	  {
+	    "01"
 	    {
-	      "01"
+	      "var_type"       	"FIELD_INTEGER"
+	      "lumber_bonus"     	"20 40 60" // percent
+	    }    
+	  }
+	
+	  "Modifiers"
+	  {
+	    "modifier_autocast"
+	    {
+	      "Passive"     "1" // start activated
+	      "IsHidden"    "1" // hide the visual buff icon
+	
+	      // run this Think() script every 0.25 seconds
+	      "ThinkInterval"   "0.25"
+	      "OnIntervalThink"
 	      {
-	        "var_type"       	"FIELD_INTEGER"
-	        "lumber_bonus"     	"20 40 60" // percent
+	        "RunScript"
+	        {
+	          "ScriptFile"    "barracks/autocast.lua"
+	          "Function"      "Think"
+	        }
 	      }
-	      
 	    }
+	  }
 	}
 	"purifier_bonus_lumber_disabled"
 	{
@@ -3156,7 +3189,7 @@
 		"MaxLevel" 						"1"
 	
 		"AbilityGoldCost"				"950"
-		"AbilityChannelTime"			"270"
+		"AbilityChannelTime"			"150"
 		
 		"AbilitySpecial"
 		{
@@ -3178,7 +3211,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"research_time"			"270"
+				"research_time"			"150"
 			}
 			"05"
 			{
@@ -3203,6 +3236,12 @@
 	
 		"OnChannelSucceeded"
 		{
+	        "FireSound"
+	        {
+	            "EffectName"    "BarracksMaster.ResearchComplete"
+	            "Target"        "CASTER"
+	        }
+	        
 			"RunScript"
 			{
 				"ScriptFile"   	"buildings/queue.lua"
@@ -3438,24 +3477,24 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 	
 		"AbilityGoldCost"				"650"
-		"AbilityChannelTime"			"270"
+		"AbilityChannelTime"			"150"
 		
 		"AbilitySpecial"
 		{
 	        "01"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "bonus_damage"          "20"
+	            "bonus_damage"          "30"
 	        }
 	        "02"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "corruption_armor"      "-4"
+	            "corruption_armor"      "-5"
 	        }
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"research_time"			"270"
+				"research_time"			"150"
 			}
 			"04"
 			{
@@ -3480,6 +3519,12 @@
 	
 		"OnChannelSucceeded"
 		{
+	        "FireSound"
+	        {
+	            "EffectName"    "BarracksMaster.ResearchComplete"
+	            "Target"        "CASTER"
+	        }
+	
 			"RunScript"
 			{
 				"ScriptFile"   	"buildings/queue.lua"
@@ -4332,6 +4377,26 @@
 	            "ScriptFile"    "barracks/spawner_manual.lua"
 	            "Function"      "OnSpellStart"
 	            "creepName"		"lumberjack"
+	        }
+	    }
+	
+	    "Modifiers"
+	    {
+	        "modifier_autocast"
+	        {
+	            "Passive"     "1" // start activated
+	            "IsHidden"    "1" // hide the visual buff icon
+	
+	            // run this Think() script every 0.25 seconds
+	            "ThinkInterval"   "0.25"
+	            "OnIntervalThink"
+	            {
+	                "RunScript"
+	                {
+	                    "ScriptFile"    "barracks/autocast.lua"
+	                    "Function"      "Think"
+	                }
+	            }
 	        }
 	    }
 	}

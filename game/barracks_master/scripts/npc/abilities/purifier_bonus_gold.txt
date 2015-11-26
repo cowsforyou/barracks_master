@@ -1,22 +1,39 @@
 "purifier_bonus_gold"
 {
-    "BaseClass"                     "ability_datadriven"
-    "AbilityTextureName"            "dragon_knight_breathe_fire"
-    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  "BaseClass"                     "ability_datadriven"
+  "AbilityTextureName"            "dragon_knight_breathe_fire"
+  "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
-    "MaxLevel"                      "1"
+  "MaxLevel"                      "1"
 
-    // Special  
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
+  // Special  
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilitySpecial"
+  {
+    "01"
     {
-      "01"
+      "var_type"       "FIELD_INTEGER"
+      "gold_bonus"     "25"
+    }    
+  }
+
+  "Modifiers"
+  {
+    "modifier_autocast"
+    {
+      "Passive"     "1" // start activated
+      "IsHidden"    "1" // hide the visual buff icon
+
+      // run this Think() script every 0.25 seconds
+      "ThinkInterval"   "0.25"
+      "OnIntervalThink"
       {
-        "var_type"       "FIELD_INTEGER"
-        "gold_bonus"     "25"
+        "RunScript"
+        {
+          "ScriptFile"    "barracks/autocast.lua"
+          "Function"      "Think"
+        }
       }
-      
     }
-
-
+  }
 }

@@ -16,6 +16,10 @@
 "bm_updates_title"	"Updates"
 
 "bm_updates_text"	"
+Nov 26:
+• New particle effect added on Portal of Heroes.
+• New particle effect added on Purifier.
+
 Nov 25:
 • New research on Melee Barracks added: Bashlord.
 • New research on Ranged Barracks added: Corrupted Blade.
@@ -333,7 +337,7 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_modifier_bm_melee_special_bash_Description"                         	"Unit is stunned."
 
 		"DOTA_Tooltip_ability_research_bm_melee_special"                                  	"Research Bashloard"
-		"DOTA_Tooltip_ability_research_bm_melee_special_Description"                      	"Increases attack speed and grants each attack a chance to stun the target. Turn your Melee Creep into a Bashlord by giving it this ability. The Bashlord ability even allows your creeps to bash towers!"
+		"DOTA_Tooltip_ability_research_bm_melee_special_Description"                      	"Increases attack speed and grants each attack a chance to stun the target. Turn your Melee Creep into a Bashlord by giving it this ability. Even towers can be bashed!"
 		"DOTA_Tooltip_ability_research_bm_melee_special_bonus_attack_speed"					"ATTACK SPEED BONUS:"
 		"DOTA_Tooltip_ability_research_bm_melee_special_bash_chance"						"BASH CHANCE:"
 		"DOTA_Tooltip_ability_research_bm_melee_special_bash_duration"						"BASH DURATION:"	
@@ -342,7 +346,7 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_research_bm_melee_special_lumber_cost"                      	"<font color='#28fe77'>LUMBER COST</font>:"
 
 		"DOTA_Tooltip_ability_research_bm_melee_special_disabled"                         	"Research Bashloard"
-		"DOTA_Tooltip_ability_research_bm_melee_special_disabled_Description"             	"Increases attack speed and grants each attack a chance to stun the target. Turn your Melee Creep into a Bashlord by giving it this ability. The Bashlord ability even allows your creeps to bash towers!\n<b><font color='#eedd44'>Requires:\n - Library of Spells</font></b>\n"
+		"DOTA_Tooltip_ability_research_bm_melee_special_disabled_Description"             	"Increases attack speed and grants each attack a chance to stun the target. Turn your Melee Creep into a Bashlord by giving it this ability. Even towers can be bashed!\n<b><font color='#eedd44'>Requires:\n - Library of Spells</font></b>\n"
 
 
 

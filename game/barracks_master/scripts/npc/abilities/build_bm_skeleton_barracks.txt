@@ -10,7 +10,6 @@
 	// BuildingHelper info
 	"Building"						"1" //bool
 	"BuildingSize"					"3" 
-	"BuildTime"						"5.0"
 	"AbilityCastRange"				"200"
 	"UpdateHealth"					"1" //bool
 	"Scale"							"0" //bool
@@ -21,6 +20,7 @@
 
 	"UnitName"						"bm_skeleton_barracks"
 	"AbilityCooldown"				"0"
+	"BuildTime"						"20.0"	
 	"AbilityGoldCost"				"400"
 	"MaxBuildingCount"				"1"
 	// End of BuildingHelper info

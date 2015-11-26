@@ -67,7 +67,7 @@
 [x] Have "Cancelled" play when research or building is cancelled (soundfile: sounds/vo/announcer/ann_custom_generic_alert_15.vsnd)
 [ ] Have "Insufficient Funds" play when there is not enough gold error (soundfile: sounds/vo/announcer/ann_custom_generic_alert_06.vsnd)
 [ ] Have "Not Enough Resources" play when there is not enough lumber error (soundfile: sounds/vo/announcer/ann_custom_generic_alert_05.vsnd)
-[ ] Have "New Item Available" play when a player receives an extra charge of Last Stand (soundfile: sounds/vo/announcer/ann_custom_new_item_01)
+[ ] Have autocast visual play on wood chips
 
 -- Advanced --
 
@@ -129,14 +129,6 @@
 [ ] Double building on the same spot renders the gold/lumber wasted
 
 
--- Urgent Fixes --
-[x] Clean up player tables (need to rewrite)
-[ ] Fix gridnav system
-
-
--- Error Logs --
-[   Entity System        ]: SERVER: npc_dota_creature(CDOTA_BaseNPC_Creature) 'npc_dota_creature' [879] thinking for 19.10 ms!!!
-[   Entity System        ]: SERVER: npc_dota_hero_sven(CDOTA_Unit_Hero_Sven) 'npc_dota_hero_sven' [208] thinking for 36.53 ms!!!
 
 
 Balance

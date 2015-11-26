@@ -8,20 +8,19 @@
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
 	// BuildingHelper info
+	"UnitName"						"bm_library"
 	"Building"						"1" //bool
 	"BuildingSize"					"5" 
-	"BuildTime"						"90.0"
 	"AbilityCastRange"				"200"
 	"UpdateHealth"					"1" //bool
 	"Scale"							"0" //bool
 	"PlayerCanControl"				"1" //bool
-
 	"BuilderInside"					"1"
 	"ModelRotation"					"90.0"
-
-	"UnitName"						"bm_library"
 	"AbilityCooldown"				"0"
-	"AbilityGoldCost"				"300"
+
+	"BuildTime"						"60.0"
+	"AbilityGoldCost"				"500"
 	"MaxBuildingCount"				"1"
 	// End of BuildingHelper info
 
@@ -30,17 +29,17 @@
 		"01"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"build_time"			"90.0"
+			"build_time"			"60.0"
 		}
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"gold_cost"				"300"
+			"gold_cost"				"500"
 		}
 		"03"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"lumber_cost"			"450"
+			"lumber_cost"			"600"
 		}
 	}
 
