@@ -17,6 +17,9 @@
 
 "bm_updates_text"	"
 Nov 26:
+• Russian(Русский) translation added! Thank you str!
+
+Nov 26:
 • Fixed autospawn Lumberjack bug.
 
 Nov 26:
