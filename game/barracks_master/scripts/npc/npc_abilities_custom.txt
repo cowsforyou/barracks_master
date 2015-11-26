@@ -446,6 +446,22 @@
 	    "AbilityTextureName"            "evasion"
 	    "MaxLevel"                      "0"
 	}
+	"bm_air_special"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	    "AbilityTextureName"            "research_ultimate_ability"
+	
+	    "MaxLevel"                      "1"
+	
+	    
+	}
+	"bm_air_special_disabled"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "research_ultimate_ability"
+	    "MaxLevel"                      "0"
+	}
 	"bm_command_aura"
 	{
 	  "BaseClass"             "ability_datadriven"
@@ -538,38 +554,36 @@
 	}
 	"bm_melee_damage"
 	{
-	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	    "BaseClass"             "ability_datadriven"
-	    "AbilityTextureName"    "damage"
+	  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	  "BaseClass"             "ability_datadriven"
+	  "AbilityTextureName"    "damage"
 	
-	    "MaxLevel"    "3"
+	  "MaxLevel"    "3"
 	
-	    "Modifiers"
+	  "Modifiers"
+	  {
+	    "modifier_melee_damage_bonus"
 	    {
-	      "modifier_melee_damage_bonus"
+	      "Passive"    "1"
+	      "IsHidden"   "0"
+	        
+	      "Properties"
 	      {
-	        "Passive"    "1"
-	        "IsHidden"   "0"
-	        
-	        "Properties"
-	        {
-	            "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"    "%damage_bonus" // grab from AbilitySpecial
-	        }
-	        
-	      }
+	          "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"    "%damage_bonus" // grab from AbilitySpecial
+	      }       
 	    }
+	  }
 	
-	    // Special  
-	    //-------------------------------------------------------------------------------------------------------------
-	    "AbilitySpecial"
+	  // Special  
+	  //-------------------------------------------------------------------------------------------------------------
+	  "AbilitySpecial"
+	  {
+	    "01"
 	    {
-	      "01"
-	      {
-	        "var_type"        "FIELD_INTEGER"
-	        "damage_bonus"     "10 24 60"
-	      }
-	      
-	    }
+	      "var_type"        "FIELD_INTEGER"
+	      "damage_bonus"     "10 24 60"
+	    }    
+	  }
 	}
 	"bm_melee_damage_disabled"
 	{
@@ -634,6 +648,109 @@
 	{
 	    "BaseClass"                     "ability_datadriven"
 	    "AbilityTextureName"            "health_vial2"
+	    "MaxLevel"                      "0"
+	}
+	"bm_melee_special"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	    "AbilityTextureName"            "bm_basher3"
+	
+	    "MaxLevel"                      "1"
+	
+	    // Special  
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "bonus_attack_speed"    "25"
+	        }
+	        "02"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "bash_chance"           "20"
+	        }
+	        "03"
+	        {
+	            "var_type"              "FIELD_FLOAT"
+	            "bash_duration"         "1.6"
+	        }
+	    }
+	
+	    "Modifiers"
+	    {
+	        "modifier_bm_melee_special"
+	        {
+	            "Passive"           "1"
+	            "IsHidden"          "1"
+	            "Attributes"        "MODIFIER_ATTRIBUTE_MULTIPLE"
+	            
+	            "EffectName"            "particles/items2_fx/mask_of_madness.vpcf"
+	            "EffectAttachType"      "follow_origin"
+	
+	            "Properties"
+	            {
+	                //"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"      	"%bonus_damage"
+	                "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"      "%bonus_attack_speed"
+	            }
+	            
+	            "OnAttackLanded"
+	            {
+	                "Random"
+	                {
+	                    "Chance"            "%bash_chance"
+	                    "PseudoRandom"      "DOTA_PSEUDO_RANDOM_ITEM_MKB"
+	                    "OnSuccess"
+	                    {
+	                        //"Damage"
+	                        //{
+	                        //    "Target"        "TARGET"
+	                        //    "Type"          "DAMAGE_TYPE_MAGICAL"
+	                        //    "Damage"        "%bash_damage"
+	                        //}//
+	                        
+	                        "ApplyModifier"
+	                        {
+	                            "Target"            "TARGET"
+	                            "ModifierName"      "modifier_bm_melee_special_bash"
+	                        }
+	                        
+	                        "FireSound"
+	                        {
+	                            "EffectName"        "DOTA_Item.SkullBasher"
+	                            "Target"            "TARGET"
+	                        }
+	                    }
+	                }
+	            }
+	        }
+	
+	        "modifier_bm_melee_special_bash"
+	        {
+	            "Duration"              "%bash_duration"
+	            "Passive"               "0"
+	            "IsHidden"              "0"
+	            "IsBuff"                "0"
+	            "IsDebuff"              "1"
+	            "IsPurgable"            "1"
+	            
+	            "EffectName"            "particles/generic_gameplay/generic_stunned.vpcf"
+	            "EffectAttachType"      "follow_overhead"
+	            "OverrideAnimation"     "ACT_DOTA_DISABLED"
+	            
+	            "States"
+	            {
+	                "MODIFIER_STATE_STUNNED"        "MODIFIER_STATE_VALUE_ENABLED"
+	            }
+	        }
+	    }
+	}
+	"bm_melee_special_disabled"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "bm_basher3"
 	    "MaxLevel"                      "0"
 	}
 	"bm_ranged_armor"
@@ -764,6 +881,93 @@
 	{
 	    "BaseClass"                     "ability_datadriven"
 	    "AbilityTextureName"            "health_vial"
+	    "MaxLevel"                      "0"
+	}
+	"bm_ranged_special"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	    "AbilityTextureName"            "bm_desolator3"
+	
+	    "MaxLevel"                      "1"
+	
+	    // Special  
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "bonus_damage"          "20"
+	        }
+	        "02"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "corruption_armor"      "-4"
+	        }
+	        "03"
+	        {
+	            "var_type"              "FIELD_FLOAT"
+	            "corruption_duration"   "10.0"
+	        }
+	    }
+	    
+	    "Modifiers"
+	    {
+	        "modifier_bm_ranged_special"
+	        {
+	            "Passive"           "1"
+	            "IsHidden"          "1"
+	            "Attributes"        "MODIFIER_ATTRIBUTE_MULTIPLE"
+	
+	            "EffectName"            "particles/items2_fx/mask_of_madness.vpcf"
+	            "EffectAttachType"      "follow_origin"
+	            
+	            "Properties"
+	            {
+	                "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"                      "%bonus_damage"
+	            }
+	            
+	            "Orb"
+	            {
+	                "Priority"              "DOTA_ORB_PRIORITY_ITEM"
+	                "ProjectileName"        "particles/items_fx/desolator_projectile.vpcf"
+	                "CastAttack"            "0"
+	            }
+	
+	            "OnOrbImpact"
+	            {
+	                "ApplyModifier"
+	                {
+	                    "Target"            "TARGET"
+	                    "ModifierName"      "modifier_bm_ranged_special_corruption"
+	                }
+	                
+	                "FireSound"
+	                {
+	                    "EffectName"        "Item_Desolator.Target"
+	                    "Target"            "TARGET"
+	                }
+	            }
+	        }
+	        "modifier_bm_ranged_special_corruption"
+	        {
+	            "Duration"              "%corruption_duration"
+	            "Passive"               "0"
+	            "IsHidden"              "0"
+	            "IsDebuff"              "1"
+	            
+	            "Properties"
+	            {
+	                "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"        "%corruption_armor"
+	            }
+	        }
+	    }
+	}
+	"bm_ranged_special_disabled"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "bm_desolator3"
 	    "MaxLevel"                      "0"
 	}
 	"bm_skeleton_damage"
@@ -1313,7 +1517,7 @@
 		// BuildingHelper info
 		"Building"						"1" //bool
 		"BuildingSize"					"4" 
-		"BuildTime"						"20.0"
+		"BuildTime"						"25.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
 		"Scale"							"0" //bool
@@ -1333,7 +1537,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"build_time"			"20.0"
+				"build_time"			"25.0"
 			}
 			"02"
 			{
@@ -2460,17 +2664,12 @@
 			}
 		}
 	}
-	"particle_01"
+	"particle_floating_orb"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"MaxLevel" 						"1"
-		"AbilityTexture"				"city_center_tier2_passive"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 	
-		"precache"
-		{
-			"particle"  "particles/radiant_fx2/good_ancient001_sphere.vpcf"
-		}
+		"MaxLevel" 						"1"
 	
 		"Modifiers"
 		{
@@ -2483,7 +2682,7 @@
 				{
 					"AttachEffect"
 					{
-						"EffectName"        "particles/radiant_fx2/good_ancient001_sphere.vpcf"
+						"EffectName"        "particles/units/heroes/hero_obsidian_destroyer/obsidian_destroyer_prison_top_orb.vpcf"
 						"EffectAttachType"  "follow_origin"
 						"Target"			"CASTER"
 						"ControlPointEntities"
@@ -2495,17 +2694,12 @@
 			}
 		}
 	}
-	"particle_02"
+	"particle_small_fire"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"MaxLevel" 						"1"
-		"AbilityTexture"				"city_center_tier2_passive"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 	
-		"precache"
-		{
-			"particle"  "particles/radiant_fx2/good_ancient001_pulse.vpcf"
-		}
+		"MaxLevel" 						"1"
 	
 		"Modifiers"
 		{
@@ -2518,8 +2712,8 @@
 				{
 					"AttachEffect"
 					{
-						"EffectName"        "particles/radiant_fx2/good_ancient001_pulse.vpcf"
-						"EffectAttachType"  "follow_origin"
+						"EffectName"        "particles/econ/courier/courier_trail_international_2013_se/courier_international_2013_se_f.vpcf"
+						"EffectAttachType"  "follow_overhead"
 						"Target"			"CASTER"
 						"ControlPointEntities"
 						{
@@ -2883,8 +3077,8 @@
 	}
 	"research_bm_melee_hp"
 	{
-	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 	    "BaseClass"                     "ability_datadriven"
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 	    "AbilityTextureName"            "health_vial2"
 	    "MaxLevel"                      "1"
 	
@@ -2952,6 +3146,80 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"health_vial2"
+		"MaxLevel" 						"0"
+	}
+	"research_bm_melee_special"
+	{
+		"BaseClass"             		"ability_datadriven"
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"AbilityTextureName"			"bm_basher3"
+		"MaxLevel" 						"1"
+	
+		"AbilityGoldCost"				"950"
+		"AbilityChannelTime"			"270"
+		
+		"AbilitySpecial"
+		{
+	        "01"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "bonus_attack_speed"    "25"
+	        }
+	        "02"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "bash_chance"           "20"
+	        }
+	        "03"
+	        {
+	            "var_type"              "FIELD_FLOAT"
+	            "bash_duration"         "1.6"
+	        }
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"research_time"			"270"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"950"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"1200"
+			}
+		}
+	
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/queue.lua"
+				"Function"		"EnqueueUnit"
+			}
+		}
+	
+		"OnChannelSucceeded"
+		{
+			"RunScript"
+			{
+				"ScriptFile"   	"buildings/queue.lua"
+				"Function"      "NextQueue"
+			}
+	
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/research.lua"
+				"Function"		"ResearchComplete"
+			}
+		}
+	}
+	"research_bm_melee_special_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"bm_basher3"
 		"MaxLevel" 						"0"
 	}
 	"research_bm_ranged_armor"
@@ -3159,6 +3427,76 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"health_vial2"
+		"MaxLevel" 						"0"
+	}
+	"research_bm_ranged_special"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"bm_desolator3"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	
+		"AbilityGoldCost"				"650"
+		"AbilityChannelTime"			"270"
+		
+		"AbilitySpecial"
+		{
+	        "01"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "bonus_damage"          "20"
+	        }
+	        "02"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "corruption_armor"      "-4"
+	        }
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"research_time"			"270"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"650"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"800"
+			}
+		}
+	
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/queue.lua"
+				"Function"		"EnqueueUnit"
+			}
+		}
+	
+		"OnChannelSucceeded"
+		{
+			"RunScript"
+			{
+				"ScriptFile"   	"buildings/queue.lua"
+				"Function"      "NextQueue"
+			}
+	
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/research.lua"
+				"Function"		"ResearchComplete"
+			}
+		}
+	}
+	"research_bm_ranged_special_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"bm_desolator3"
 		"MaxLevel" 						"0"
 	}
 	"research_bm_scout_hawk"
@@ -3516,126 +3854,6 @@
 		}
 	}
 	"research_special_air_disabled"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"research_ultimate_ability"
-		"MaxLevel" 						"0"
-	}
-	"research_special_melee"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"research_ultimate_ability"
-		"MaxLevel" 						"1"
-	
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
-	
-		"AbilityGoldCost"				"50"
-		"AbilityChannelTime"			"10"
-		
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"research_time"			"10"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"50"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"25"
-			}
-		}
-	
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"buildings/queue.lua"
-				"Function"		"EnqueueUnit"
-			}
-		}
-	
-		"OnChannelSucceeded"
-		{
-			"RunScript"
-			{
-				"ScriptFile"   	"buildings/queue.lua"
-				"Function"      "NextQueue"
-			}
-	
-			"RunScript"
-			{
-				"ScriptFile"	"buildings/research.lua"
-				"Function"		"ResearchComplete"
-			}
-		}
-	}
-	"research_special_melee_disabled"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"research_ultimate_ability"
-		"MaxLevel" 						"0"
-	}
-	"research_special_ranged"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"research_ultimate_ability"
-		"MaxLevel" 						"1"
-	
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
-	
-		"AbilityGoldCost"				"50"
-		"AbilityChannelTime"			"10"
-		
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"research_time"			"10"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"50"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"25"
-			}
-		}
-	
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"buildings/queue.lua"
-				"Function"		"EnqueueUnit"
-			}
-		}
-	
-		"OnChannelSucceeded"
-		{
-			"RunScript"
-			{
-				"ScriptFile"   	"buildings/queue.lua"
-				"Function"      "NextQueue"
-			}
-	
-			"RunScript"
-			{
-				"ScriptFile"	"buildings/research.lua"
-				"Function"		"ResearchComplete"
-			}
-		}
-	}
-	"research_special_ranged_disabled"
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"research_ultimate_ability"
@@ -4321,42 +4539,6 @@
 	   	    }
 	    }
 	}
-	"special_air"
-	{
-	    "BaseClass"                     "ability_datadriven"
-	    "AbilityTextureName"            "research_ultimate_ability"
-	    "MaxLevel"                      "1"
-	}
-	"special_air_disabled"
-	{
-	    "BaseClass"                     "ability_datadriven"
-	    "AbilityTextureName"            "research_ultimate_ability"
-	    "MaxLevel"                      "0"
-	}
-	"special_melee"
-	{
-	    "BaseClass"                     "ability_datadriven"
-	    "AbilityTextureName"            "research_ultimate_ability"
-	    "MaxLevel"                      "1"
-	}
-	"special_melee_disabled"
-	{
-	    "BaseClass"                     "ability_datadriven"
-	    "AbilityTextureName"            "research_ultimate_ability"
-	    "MaxLevel"                      "0"
-	}
-	"special_ranged"
-	{
-	    "BaseClass"                     "ability_datadriven"
-	    "AbilityTextureName"            "research_ultimate_ability"
-	    "MaxLevel"                      "1"
-	}
-	"special_ranged_disabled"
-	{
-	    "BaseClass"                     "ability_datadriven"
-	    "AbilityTextureName"            "research_ultimate_ability"
-	    "MaxLevel"                      "0"
-	}
 	"special_siege"
 	{
 	    "BaseClass"                     "ability_datadriven"
@@ -4369,6 +4551,48 @@
 	    "AbilityTextureName"            "research_ultimate_ability"
 	    "MaxLevel"                      "0"
 	}
+	"test_particle01"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	
+		"MaxLevel" 						"1"
+	
+		"Modifiers"
+		{
+			"modifier_keep_particle"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+		
+				"OnCreated"
+				{
+					"AttachEffect"
+					{
+						"EffectName"        "particles/units/heroes/hero_obsidian_destroyer/obsidian_destroyer_prison_top_orb.vpcf"
+						"EffectAttachType"  "follow_origin"
+						"Target"			"CASTER"
+						"ControlPointEntities"
+						{
+							"CASTER"	"attach_fx"
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	//working particles
+	//particles/customgames/capturepoints/cp_allied_fire.vpcf
+	//particles/customgames/capturepoints/cp_mover.vpcf
+	//particles/dire_fx/fire_barracks.vpcf
+	//particles/econ/courier/courier_faceless_rex/cour_rex_ground_b.vpcf
+	//particles/econ/courier/courier_polycount_01/courier_trail_polycount_01.vpcf
+	//particles/econ/courier/courier_trail_orbit/courier_trail_orbit.vpcf
+	//particles/econ/events/fall_major_2015/teleport_end_fallmjr_2015.vpcf
+	//particles/econ/events/fall_major_2015/teleport_start_fallmjr_2015_counter.vpcf
+	//particles/econ/items/enigma/enigma_world_chasm/enigma_blackhole_ti5.vpcf
+	//particles/units/heroes/hero_obsidian_destroyer/obsidian_destroyer_prison_top_orb.vpcf
 	"train_city_center_tier2"
 	{
 		"BaseClass"             		"ability_datadriven"

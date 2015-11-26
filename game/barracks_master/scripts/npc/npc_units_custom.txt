@@ -160,7 +160,7 @@
 			"Model"						"models/props_structures/tower_good4.vmdl"	// Model.
 			"ModelScale"				"1.0"
 			"Level"						"1"
-			"HealthBarOffset"			"140"
+			"HealthBarOffset"			"120"
 			"HasInventory"				"1"
 			"ConsideredHero"			"1"
 	
@@ -171,8 +171,7 @@
 			"Ability2"					"spawn_hero_vengeful"				// Ability 2
 			"Ability3"					"spawn_hero_nevermore"				// Ability 3
 			"Ability4"					"spawn_hero_beastmaster"			// Ability 4
-			
-			//"Ability9"					"city_center_tier2_passive"		
+			"Ability9"					"particle_floating_orb"		
 			"Ability10"					"ability_building"
 			"Ability11"					"ability_building_queue"
 	
@@ -322,6 +321,7 @@
 		"Ability2"					"treant_living_armor"
 		"Ability3"					""
 		"Ability4"					""
+		"Ability9"					""
 		"Ability10"					"ability_building"
 		"Ability11"					"ability_building_queue"
 		
@@ -466,12 +466,13 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"5"
+	
 		"Ability1"					"spawn_melee_creeps"
 		"Ability2"					"research_bm_melee_armor"
 		"Ability3"					"research_bm_melee_damage"
 		"Ability4"					"research_bm_melee_hp_disabled"
-		"Ability5"					""
-		"Ability6"					""
+		"Ability5"					"research_bm_melee_special_disabled"
+		"Ability9"					""
 		"Ability10"					"ability_building"
 		"Ability11"					"ability_building_queue"
 		
@@ -540,13 +541,14 @@
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"AbilityLayout"				"5"
+		"AbilityLayout"				"4"
+	
 		"Ability1"					"purifier_bonus_gold"
 		"Ability2"					"purifier_bonus_lumber_disabled"
 		"Ability3"					"research_purifier_bonus_lumber"
 		"Ability4"					""
 		"Ability5"					""
-		"Ability6"					""
+		"Ability9"					"particle_small_fire"
 		"Ability10"					"ability_building"
 		"Ability11"					"ability_building_queue"
 		
@@ -620,7 +622,7 @@
 		"Ability2"					"research_bm_ranged_armor"
 		"Ability3"					"research_bm_ranged_damage"
 		"Ability4"					"research_bm_ranged_hp_disabled"
-		"Ability5"					""
+		"Ability5"					"research_bm_ranged_special_disabled"
 		"Ability6"					""
 		"Ability10"					"ability_building"
 		"Ability11"					"ability_building_queue"
@@ -1446,11 +1448,11 @@
 	
 	        // Abilities
 	        //----------------------------------------------------------------
-	        
+	        "AbilityLayout"             "4"
 	        "Ability1"                  "bm_melee_armor_disabled"           // Ability 1.
 	        "Ability2"                  "bm_melee_damage_disabled"          // Ability 2.
 	        "Ability3"                  "bm_melee_hp_disabled"              // Ability 3.
-	        "Ability4"                  ""          // Ability 4.
+	        "Ability4"                  "bm_melee_special_disabled"          // Ability 4.
 	        "Ability5"                  ""          // Ability 5.
 	        "Ability6"                  ""          // Ability 6 - Extra.
 	        "Ability7"                  ""          // Ability 7 - Extra.
@@ -1543,7 +1545,7 @@
 	        "Ability1"                  "bm_ranged_armor_disabled"          // Ability 1.
 	        "Ability2"                  "bm_ranged_damage_disabled"          // Ability 2.
 	        "Ability3"                  "bm_ranged_hp_disabled"             // Ability 3.
-	        "Ability4"                  ""          // Ability 4.
+	        "Ability4"                  "bm_ranged_special_disabled"          // Ability 4.
 	        "Ability5"                  ""          // Ability 5.
 	        "Ability6"                  ""          // Ability 6 - Extra.
 	        "Ability7"                  ""          // Ability 7 - Extra.

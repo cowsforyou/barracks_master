@@ -9,7 +9,7 @@
 		"Model"						"models/props_structures/tower_good4.vmdl"	// Model.
 		"ModelScale"				"1.0"
 		"Level"						"1"
-		"HealthBarOffset"			"140"
+		"HealthBarOffset"			"120"
 		"HasInventory"				"1"
 		"ConsideredHero"			"1"
 
@@ -20,8 +20,7 @@
 		"Ability2"					"spawn_hero_vengeful"				// Ability 2
 		"Ability3"					"spawn_hero_nevermore"				// Ability 3
 		"Ability4"					"spawn_hero_beastmaster"			// Ability 4
-		
-		//"Ability9"					"city_center_tier2_passive"		
+		"Ability9"					"particle_floating_orb"		
 		"Ability10"					"ability_building"
 		"Ability11"					"ability_building_queue"
 

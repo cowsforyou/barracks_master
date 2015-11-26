@@ -1,0 +1,81 @@
+"bm_ranged_special"
+{
+    "BaseClass"                     "ability_datadriven"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityTextureName"            "bm_desolator3"
+
+    "MaxLevel"                      "1"
+
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "bonus_damage"          "20"
+        }
+        "02"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "corruption_armor"      "-4"
+        }
+        "03"
+        {
+            "var_type"              "FIELD_FLOAT"
+            "corruption_duration"   "10.0"
+        }
+    }
+    
+    "Modifiers"
+    {
+        "modifier_bm_ranged_special"
+        {
+            "Passive"           "1"
+            "IsHidden"          "1"
+            "Attributes"        "MODIFIER_ATTRIBUTE_MULTIPLE"
+
+            "EffectName"            "particles/items2_fx/mask_of_madness.vpcf"
+            "EffectAttachType"      "follow_origin"
+            
+            "Properties"
+            {
+                "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"                      "%bonus_damage"
+            }
+            
+            "Orb"
+            {
+                "Priority"              "DOTA_ORB_PRIORITY_ITEM"
+                "ProjectileName"        "particles/items_fx/desolator_projectile.vpcf"
+                "CastAttack"            "0"
+            }
+
+            "OnOrbImpact"
+            {
+                "ApplyModifier"
+                {
+                    "Target"            "TARGET"
+                    "ModifierName"      "modifier_bm_ranged_special_corruption"
+                }
+                
+                "FireSound"
+                {
+                    "EffectName"        "Item_Desolator.Target"
+                    "Target"            "TARGET"
+                }
+            }
+        }
+        "modifier_bm_ranged_special_corruption"
+        {
+            "Duration"              "%corruption_duration"
+            "Passive"               "0"
+            "IsHidden"              "0"
+            "IsDebuff"              "1"
+            
+            "Properties"
+            {
+                "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"        "%corruption_armor"
+            }
+        }
+    }
+}

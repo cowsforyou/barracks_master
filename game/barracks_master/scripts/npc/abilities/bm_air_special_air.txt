@@ -1,6 +1,10 @@
-"special_melee"
+"bm_air_special"
 {
     "BaseClass"                     "ability_datadriven"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
     "AbilityTextureName"            "research_ultimate_ability"
+
     "MaxLevel"                      "1"
+
+    
 }

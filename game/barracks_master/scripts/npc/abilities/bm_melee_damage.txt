@@ -1,35 +1,33 @@
 "bm_melee_damage"
 {
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "BaseClass"             "ability_datadriven"
-    "AbilityTextureName"    "damage"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  "BaseClass"             "ability_datadriven"
+  "AbilityTextureName"    "damage"
 
-    "MaxLevel"    "3"
+  "MaxLevel"    "3"
 
-    "Modifiers"
+  "Modifiers"
+  {
+    "modifier_melee_damage_bonus"
     {
-      "modifier_melee_damage_bonus"
+      "Passive"    "1"
+      "IsHidden"   "0"
+        
+      "Properties"
       {
-        "Passive"    "1"
-        "IsHidden"   "0"
-        
-        "Properties"
-        {
-            "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"    "%damage_bonus" // grab from AbilitySpecial
-        }
-        
-      }
+          "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"    "%damage_bonus" // grab from AbilitySpecial
+      }       
     }
+  }
 
-    // Special  
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
+  // Special  
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilitySpecial"
+  {
+    "01"
     {
-      "01"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "damage_bonus"     "10 24 60"
-      }
-      
-    }
+      "var_type"        "FIELD_INTEGER"
+      "damage_bonus"     "10 24 60"
+    }    
+  }
 }

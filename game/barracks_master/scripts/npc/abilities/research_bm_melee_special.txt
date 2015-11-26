@@ -1,0 +1,68 @@
+"research_bm_melee_special"
+{
+	"BaseClass"             		"ability_datadriven"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	"AbilityTextureName"			"bm_basher3"
+	"MaxLevel" 						"1"
+
+	"AbilityGoldCost"				"950"
+	"AbilityChannelTime"			"270"
+	
+	"AbilitySpecial"
+	{
+        "01"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "bonus_attack_speed"    "25"
+        }
+        "02"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "bash_chance"           "20"
+        }
+        "03"
+        {
+            "var_type"              "FIELD_FLOAT"
+            "bash_duration"         "1.6"
+        }
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"research_time"			"270"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"gold_cost"				"950"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"lumber_cost"			"1200"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/queue.lua"
+			"Function"		"EnqueueUnit"
+		}
+	}
+
+	"OnChannelSucceeded"
+	{
+		"RunScript"
+		{
+			"ScriptFile"   	"buildings/queue.lua"
+			"Function"      "NextQueue"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/research.lua"
+			"Function"		"ResearchComplete"
+		}
+	}
+}

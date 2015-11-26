@@ -15,13 +15,14 @@
 	
 	// Abilities
 	//----------------------------------------------------------------
-	"AbilityLayout"				"5"
+	"AbilityLayout"				"4"
+
 	"Ability1"					"purifier_bonus_gold"
 	"Ability2"					"purifier_bonus_lumber_disabled"
 	"Ability3"					"research_purifier_bonus_lumber"
 	"Ability4"					""
 	"Ability5"					""
-	"Ability6"					""
+	"Ability9"					"particle_small_fire"
 	"Ability10"					"ability_building"
 	"Ability11"					"ability_building_queue"
 	

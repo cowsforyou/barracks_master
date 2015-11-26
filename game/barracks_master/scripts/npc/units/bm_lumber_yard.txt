@@ -20,6 +20,7 @@
 	"Ability2"					"treant_living_armor"
 	"Ability3"					""
 	"Ability4"					""
+	"Ability9"					""
 	"Ability10"					"ability_building"
 	"Ability11"					"ability_building_queue"
 	

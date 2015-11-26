@@ -1,6 +1,0 @@
-"special_air_disabled"
-{
-    "BaseClass"                     "ability_datadriven"
-    "AbilityTextureName"            "research_ultimate_ability"
-    "MaxLevel"                      "0"
-}

@@ -1,0 +1,6 @@
+"research_bm_ranged_special_disabled"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"bm_desolator3"
+	"MaxLevel" 						"0"
+}

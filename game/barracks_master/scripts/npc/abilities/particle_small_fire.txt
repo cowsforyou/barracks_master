@@ -1,0 +1,30 @@
+"particle_small_fire"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+	"MaxLevel" 						"1"
+
+	"Modifiers"
+	{
+		"modifier_keep_particle"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+	
+			"OnCreated"
+			{
+				"AttachEffect"
+				{
+					"EffectName"        "particles/econ/courier/courier_trail_international_2013_se/courier_international_2013_se_f.vpcf"
+					"EffectAttachType"  "follow_overhead"
+					"Target"			"CASTER"
+					"ControlPointEntities"
+					{
+						"CASTER"	"attach_fx"
+					}
+				}
+			}
+		}
+	}
+}

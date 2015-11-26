@@ -1,6 +1,0 @@
-"research_special_melee_disabled"
-{
-	"BaseClass"             		"ability_datadriven"
-	"AbilityTextureName"			"research_ultimate_ability"
-	"MaxLevel" 						"0"
-}

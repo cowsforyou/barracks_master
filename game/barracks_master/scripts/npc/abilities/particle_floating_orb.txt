@@ -1,14 +1,9 @@
-"particle_02"
+"particle_floating_orb"
 {
 	"BaseClass"             		"ability_datadriven"
-	"MaxLevel" 						"1"
-	"AbilityTexture"				"city_center_tier2_passive"
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 
-	"precache"
-	{
-		"particle"  "particles/radiant_fx2/good_ancient001_pulse.vpcf"
-	}
+	"MaxLevel" 						"1"
 
 	"Modifiers"
 	{
@@ -21,7 +16,7 @@
 			{
 				"AttachEffect"
 				{
-					"EffectName"        "particles/radiant_fx2/good_ancient001_pulse.vpcf"
+					"EffectName"        "particles/units/heroes/hero_obsidian_destroyer/obsidian_destroyer_prison_top_orb.vpcf"
 					"EffectAttachType"  "follow_origin"
 					"Target"			"CASTER"
 					"ControlPointEntities"

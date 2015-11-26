@@ -1,6 +1,6 @@
-"special_ranged_disabled"
+"bm_melee_special_disabled"
 {
     "BaseClass"                     "ability_datadriven"
-    "AbilityTextureName"            "research_ultimate_ability"
+    "AbilityTextureName"            "bm_basher3"
     "MaxLevel"                      "0"
 }

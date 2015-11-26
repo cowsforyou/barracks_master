@@ -16,6 +16,11 @@
 "bm_updates_title"	"Updates"
 
 "bm_updates_text"	"
+Nov 25:
+• New research on Melee Barracks added: Bashlord.
+• New research on Ranged Barracks added: Corrupted Blade.
+• Ranged Barracks build time increased from 20 to 25sec.
+
 Nov 24:
 • Ancients spell immunity removed.
 • Ancients now have 50 percent spell resistance.
@@ -38,11 +43,6 @@ Nov 22:
 Nov 22:
 • Potential fix for late game crashes (thank you Noya!).
 • Please report if crashing still occurs.
-
-Nov 22:
-• Thank you to those that have given me feedback! We are aware of some late game crashing issues. It's not an easy problem to fix but we are working hard! Please bear with us.
-• We also have volunteers to help translate the game into Russian(Русский) and Chinese(简体中文)! I will push that immediately once it's completed.
-• If you have suggestions or bugs to report, feel free to add me on Steam (cowsforyou) or send me an email at thenewmetadota@gmail.com.
 "
 
 "bm_contact_text"	"
@@ -304,17 +304,45 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_modifier_melee_health_bonus"                                         	"Health Bonus"
 		"DOTA_Tooltip_modifier_melee_health_bonus_Description"                             	""
 
-		"DOTA_Tooltip_ability_research_bm_melee_hp"                                    		"Health Vial"
+		"DOTA_Tooltip_ability_research_bm_melee_hp"                                    		"Research Health Vial"
 		"DOTA_Tooltip_ability_research_bm_melee_hp_Description"                        		"Increases health of melee creeps."
 		"DOTA_Tooltip_ability_research_bm_melee_hp_health_bonus"                       		"HEALTH BONUS:"
 		"DOTA_Tooltip_ability_research_bm_melee_hp_research_time"                       	"<font color='#057aff'>RESEARCH TIME</font>:"
 		"DOTA_Tooltip_ability_research_bm_melee_hp_gold_cost"                          		"<font color='#fff22e'>GOLD COST</font>:"
 		"DOTA_Tooltip_ability_research_bm_melee_hp_lumber_cost"                        		"<font color='#28fe77'>LUMBER COST</font>:"
 
-		"DOTA_Tooltip_ability_research_bm_melee_hp_disabled"                         		"Health Vial"	
+		"DOTA_Tooltip_ability_research_bm_melee_hp_disabled"                         		"Research Health Vial"	
 		"DOTA_Tooltip_ability_research_bm_melee_hp_disabled_Description"             		"Increases health of melee creeps.\n<b><font color='#eedd44'>Requires:\n - Tech Lab</font></b>\n"
 		"DOTA_Tooltip_ability_item_research_bm_melee_hp"                               		"Cancel Upgrade"
 		"DOTA_Tooltip_ability_item_research_bm_melee_hp_Description"                   		""
+
+
+
+		//Melee Special: Bashlord
+		//-------------------------------------------------------------
+		"DOTA_Tooltip_ability_bm_melee_special"                                           	"Bashloard"
+		"DOTA_Tooltip_ability_bm_melee_special_Description"                               	"Increases attack speed and grants each attack a chance to stun the target."
+		"DOTA_Tooltip_ability_bm_melee_special_bonus_attack_speed"                        	"ATTACK SPEED BONUS:"
+		"DOTA_Tooltip_ability_bm_melee_special_bash_chance"                               	"BASH CHANCE:"
+		"DOTA_Tooltip_ability_bm_melee_special_bash_duration"                             	"BASH DURATION:"
+
+		"DOTA_Tooltip_ability_bm_melee_special_disabled"                                  	"Bashloard"
+		"DOTA_Tooltip_ability_bm_melee_special_disabled_Description"                      	"Increases attack speed and grants each attack a chance to stun the target."
+
+		"DOTA_Tooltip_modifier_bm_melee_special_bash"                                     	"Bashloard"
+		"DOTA_Tooltip_modifier_bm_melee_special_bash_Description"                         	"Unit is stunned."
+
+		"DOTA_Tooltip_ability_research_bm_melee_special"                                  	"Research Bashloard"
+		"DOTA_Tooltip_ability_research_bm_melee_special_Description"                      	"Increases attack speed and grants each attack a chance to stun the target. Turn your Melee Creep into a Bashlord by giving it this ability. The Bashlord ability even allows your creeps to bash towers!"
+		"DOTA_Tooltip_ability_research_bm_melee_special_bonus_attack_speed"					"ATTACK SPEED BONUS:"
+		"DOTA_Tooltip_ability_research_bm_melee_special_bash_chance"						"BASH CHANCE:"
+		"DOTA_Tooltip_ability_research_bm_melee_special_bash_duration"						"BASH DURATION:"	
+		"DOTA_Tooltip_ability_research_bm_melee_special_research_time"                    	"<font color='#057aff'>RESEARCH TIME</font>:"
+		"DOTA_Tooltip_ability_research_bm_melee_special_gold_cost"                        	"<font color='#fff22e'>GOLD COST</font>:"
+		"DOTA_Tooltip_ability_research_bm_melee_special_lumber_cost"                      	"<font color='#28fe77'>LUMBER COST</font>:"
+
+		"DOTA_Tooltip_ability_research_bm_melee_special_disabled"                         	"Research Bashloard"
+		"DOTA_Tooltip_ability_research_bm_melee_special_disabled_Description"             	"Increases attack speed and grants each attack a chance to stun the target. Turn your Melee Creep into a Bashlord by giving it this ability. The Bashlord ability even allows your creeps to bash towers!\n<b><font color='#eedd44'>Requires:\n - Library of Spells</font></b>\n"
 
 
 
@@ -376,18 +404,45 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_modifier_ranged_health_bonus"                                         "Health Bonus"
 		"DOTA_Tooltip_modifier_ranged_health_bonus_Description"                             ""
 
-		"DOTA_Tooltip_ability_research_bm_ranged_hp"                                    	"Health Vial"
+		"DOTA_Tooltip_ability_research_bm_ranged_hp"                                    	"Research Health Vial"
 		"DOTA_Tooltip_ability_research_bm_ranged_hp_Description"                        	"Increases health of ranged creeps."
 		"DOTA_Tooltip_ability_research_bm_ranged_hp_health_bonus"                       	"HEALTH BONUS:"
 		"DOTA_Tooltip_ability_research_bm_ranged_hp_research_time"                       	"<font color='#057aff'>RESEARCH TIME</font>:"
 		"DOTA_Tooltip_ability_research_bm_ranged_hp_gold_cost"                          	"<font color='#fff22e'>GOLD COST</font>:"
 		"DOTA_Tooltip_ability_research_bm_ranged_hp_lumber_cost"                        	"<font color='#28fe77'>LUMBER COST</font>:"
 
-		"DOTA_Tooltip_ability_research_bm_ranged_hp_disabled"                         		"Health Vial"
+		"DOTA_Tooltip_ability_research_bm_ranged_hp_disabled"                         		"Research Health Vial"
 		"DOTA_Tooltip_ability_research_bm_ranged_hp_disabled_Description"             		"Increases health of ranged creeps.\n<b><font color='#eedd44'>Requires:\n - Tech Lab</font></b>\n"
 
 		"DOTA_Tooltip_ability_item_research_bm_ranged_hp"                               	"Cancel Upgrade"
 		"DOTA_Tooltip_ability_item_research_bm_ranged_hp_Description"                   	""
+
+
+
+		//Ranged Special: Corrupted Blade
+		//-------------------------------------------------------------
+		"DOTA_Tooltip_modifier_bm_ranged_special_corruption"                              	"Corrupted Blade"
+		"DOTA_Tooltip_modifier_bm_ranged_special_corruption_Description"                  	"Losing armor from corruption"
+
+		"DOTA_Tooltip_ability_bm_ranged_special"                                          	"Corrupted Blade"
+		"DOTA_Tooltip_ability_bm_ranged_special_Description"                              	"Grants bonus damage and reduces your target's armor. The Corruption debuff works against buildings as well."
+		"DOTA_Tooltip_ability_bm_ranged_special_bonus_damage"                             	"BONUS DAMAGE:"
+		"DOTA_Tooltip_ability_bm_ranged_special_corruption_armor"                         	"ARMOR REDUCTION:"
+
+		"DOTA_Tooltip_ability_bm_ranged_special_disabled"                                 	"Corrupted Blade"
+		"DOTA_Tooltip_ability_bm_ranged_special_disabled_Description"                     	"Grants bonus damage and reduces your target's armor."
+
+		"DOTA_Tooltip_ability_research_bm_ranged_special"                                 	"Research Corrupted Blade"
+		"DOTA_Tooltip_ability_research_bm_ranged_special_Description"                     	"Grants bonus damage and reduces your target's armor. The Corruption debuff works against buildings as well."
+		"DOTA_Tooltip_ability_research_bm_ranged_special_bonus_damage"  					"BONUS DAMAGE:"
+		"DOTA_Tooltip_ability_research_bm_ranged_special_corruption_armor"  				"ARMOR REDUCTION:"
+		"DOTA_Tooltip_ability_research_bm_ranged_special_research_time"                   	"<font color='#057aff'>RESEARCH TIME</font>:"
+		"DOTA_Tooltip_ability_research_bm_ranged_special_gold_cost"                       	"<font color='#fff22e'>GOLD COST</font>:"
+		"DOTA_Tooltip_ability_research_bm_ranged_special_lumber_cost"                     	"<font color='#28fe77'>LUMBER COST</font>:"
+
+		"DOTA_Tooltip_ability_research_bm_ranged_special_disabled"                        	"Research Corrupted Blade"
+		"DOTA_Tooltip_ability_research_bm_ranged_special_disabled_Description"            	"Grants bonus damage and reduces your target's armor. The Corruption debuff works against buildings as well.\n<b><font color='#eedd44'>Requires:\n - Library of Spells</font></b>\n"
+
 
 
 		//Air Evasion

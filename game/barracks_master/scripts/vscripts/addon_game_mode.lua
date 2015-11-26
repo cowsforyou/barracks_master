@@ -71,10 +71,22 @@ function Precache( context )
   PrecacheResource("particle_folder", "particles/units/heroes/hero_treant", context) -- for Living Armor
   PrecacheResource("particle_folder", "particles/units/heroes/hero_sniper", context) -- for Assassinate  
 
-  PrecacheResource("particle_folder", "particles/units/heroes/hero_furion", context) -- for spectator
   PrecacheResource("particle_folder", "particles/units/heroes/hero_riki", context) -- for spectator
-  PrecacheResource("particle_folder", "particles/units/heroes/hero_disruptor", context) -- for spectator
-  PrecacheResource("particle_folder", "particles/radiant_fx2", context) -- testing particle ability
+
+
+  PrecacheResource("particle_folder", "particles/radiant_fx2", context) -- testing particle ability 
+  PrecacheResource("particle_folder", "particles/customgames/capturepoints", context) -- testing particle ability 
+  PrecacheResource("particle_folder", "particles/dire_fx", context) -- testing particle ability 
+  PrecacheResource("particle_folder", "particles/econ/courier/courier_faceless_rex", context) -- testing particle ability 
+  PrecacheResource("particle_folder", "particles/econ/courier/courier_greevil_red", context) -- testing particle ability 
+  PrecacheResource("particle_folder", "particles/econ/items/ancient_apparition/aa_blast_ti_5", context) -- testing particle ability 
+
+
+
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_obsidian_destroyer", context) -- for Portal of Heroes
+  PrecacheResource("particle_folder", "particles/econ/courier/courier_trail_international_2013_se", context) -- for Purifier
+
+
 
     -- Sounds
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts", context) -- for Boar and Hawk Scouts

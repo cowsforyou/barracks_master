@@ -1,0 +1,42 @@
+"test_particle01"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+	"MaxLevel" 						"1"
+
+	"Modifiers"
+	{
+		"modifier_keep_particle"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+	
+			"OnCreated"
+			{
+				"AttachEffect"
+				{
+					"EffectName"        "particles/units/heroes/hero_obsidian_destroyer/obsidian_destroyer_prison_top_orb.vpcf"
+					"EffectAttachType"  "follow_origin"
+					"Target"			"CASTER"
+					"ControlPointEntities"
+					{
+						"CASTER"	"attach_fx"
+					}
+				}
+			}
+		}
+	}
+}
+
+//working particles
+//particles/customgames/capturepoints/cp_allied_fire.vpcf
+//particles/customgames/capturepoints/cp_mover.vpcf
+//particles/dire_fx/fire_barracks.vpcf
+//particles/econ/courier/courier_faceless_rex/cour_rex_ground_b.vpcf
+//particles/econ/courier/courier_polycount_01/courier_trail_polycount_01.vpcf
+//particles/econ/courier/courier_trail_orbit/courier_trail_orbit.vpcf
+//particles/econ/events/fall_major_2015/teleport_end_fallmjr_2015.vpcf
+//particles/econ/events/fall_major_2015/teleport_start_fallmjr_2015_counter.vpcf
+//particles/econ/items/enigma/enigma_world_chasm/enigma_blackhole_ti5.vpcf
+//particles/units/heroes/hero_obsidian_destroyer/obsidian_destroyer_prison_top_orb.vpcf

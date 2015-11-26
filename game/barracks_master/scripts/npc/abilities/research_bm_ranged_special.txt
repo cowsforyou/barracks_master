@@ -1,30 +1,40 @@
-"research_special_ranged"
+"research_bm_ranged_special"
 {
 	"BaseClass"             		"ability_datadriven"
-	"AbilityTextureName"			"research_ultimate_ability"
+	"AbilityTextureName"			"bm_desolator3"
 	"MaxLevel" 						"1"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 
-	"AbilityGoldCost"				"50"
-	"AbilityChannelTime"			"10"
+	"AbilityGoldCost"				"650"
+	"AbilityChannelTime"			"270"
 	
 	"AbilitySpecial"
 	{
-		"01"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"research_time"			"10"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"gold_cost"				"50"
-		}
+        "01"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "bonus_damage"          "20"
+        }
+        "02"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "corruption_armor"      "-4"
+        }
 		"03"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"lumber_cost"			"25"
+			"research_time"			"270"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"gold_cost"				"650"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"lumber_cost"			"800"
 		}
 	}
 
