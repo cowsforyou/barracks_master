@@ -3,7 +3,7 @@
 	"Language"		"russian"
 	"Tokens"
 	{		
-		"addon_game_name"			"Строитель"
+		"addon_game_name"			"Мастера казарм"
 		
 		//---------------------------------------------------------------------------------------------------------------------------------
 		//Barracks Master
@@ -239,7 +239,7 @@ Send your suggestions to thenewmetadota@gmail.com."
 		//Skeleton Damage
 		//-------------------------------------------------------------
 		"DOTA_Tooltip_ability_bm_skeleton_damage"                                           "Улучшение оружия"
-		"DOTA_Tooltip_ability_bm_skeleton_damage_Description"                               "Grands additional damage"
+		"DOTA_Tooltip_ability_bm_skeleton_damage_Description"                               "Увеличивает урон."
 		"DOTA_Tooltip_ability_bm_skeleton_damage_damage_bonus"    							"Дополнительный урон:"	
 
 		"DOTA_Tooltip_ability_bm_skeleton_damage_disabled"                                  "Улучшение оружия"
@@ -248,8 +248,8 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_modifier_skeleton_damage_bonus"                                       "Улучшение оружия"
 		"DOTA_Tooltip_modifier_skeleton_damage_bonus_Description"                           ""
 
-		"DOTA_Tooltip_ability_research_bm_skeleton_damage"                                  "Upgrade Skeleton Damage"
-		"DOTA_Tooltip_ability_research_bm_skeleton_damage_Description"                      "Increases damage of skeleton creeps"
+		"DOTA_Tooltip_ability_research_bm_skeleton_damage"                                  "Улучшение оружия"
+		"DOTA_Tooltip_ability_research_bm_skeleton_damage_Description"                      "Увеличивает урон."
 		"DOTA_Tooltip_ability_research_bm_skeleton_damage_damage_bonus"                     "Дополнительный урон:"
 		"DOTA_Tooltip_ability_research_bm_skeleton_damage_research_time"                    "<font color='#057aff'>Время изучения</font>:"
 		"DOTA_Tooltip_ability_research_bm_skeleton_damage_gold_cost"                        "<font color='#fff22e'>Стоимость(золота)</font>:"
@@ -262,17 +262,17 @@ Send your suggestions to thenewmetadota@gmail.com."
 		//Melee Armor
 		//-------------------------------------------------------------
 		"DOTA_Tooltip_ability_bm_melee_armor"                                           	"Улучшение брони"
-		"DOTA_Tooltip_ability_bm_melee_armor_Description"                               	"Добавление дополнительной брони"
+		"DOTA_Tooltip_ability_bm_melee_armor_Description"                               	"Добавление дополнительной брони."
 		"DOTA_Tooltip_ability_bm_melee_armor_armor_bonus"    								"Улучшение брони:"		
 
 		"DOTA_Tooltip_ability_bm_melee_armor_disabled"                                      "Улучшение брони"
-		"DOTA_Tooltip_ability_bm_melee_armor_Description"                               	"Добавление дополнительной брони"
+		"DOTA_Tooltip_ability_bm_melee_armor_Description"                               	"Добавление дополнительной брони."
 
 		"DOTA_Tooltip_modifier_melee_armor_bonus"                                         	"Улучшение брони"
 		"DOTA_Tooltip_modifier_melee_armor_bonus_Description"                             	""
 
-		"DOTA_Tooltip_ability_research_bm_melee_armor"                                    	"Upgrade Melee Armor"
-		"DOTA_Tooltip_ability_research_bm_melee_armor_Description"                        	"Increases armor of melee creeps"
+		"DOTA_Tooltip_ability_research_bm_melee_armor"                                    	"Улучшение брони"
+		"DOTA_Tooltip_ability_research_bm_melee_armor_Description"                        	"Добавление дополнительной брони."
 		"DOTA_Tooltip_ability_research_bm_melee_armor_armor_bonus"    						"Улучшение брони:"
 		"DOTA_Tooltip_ability_research_bm_melee_armor_research_time"                        "<font color='#057aff'>Время изучения</font>:"
 		"DOTA_Tooltip_ability_research_bm_melee_armor_gold_cost"                          	"<font color='#fff22e'>Стоимость(золота)</font>:"
@@ -285,7 +285,7 @@ Send your suggestions to thenewmetadota@gmail.com."
 		//Melee Damage
 		//-------------------------------------------------------------
 		"DOTA_Tooltip_ability_bm_melee_damage"                                           	"Улучшение оружия"
-		"DOTA_Tooltip_ability_bm_melee_damage_Description"                               	"Grands additional damage"
+		"DOTA_Tooltip_ability_bm_melee_damage_Description"                               	"Увеличивает урон."
 		"DOTA_Tooltip_ability_bm_melee_damage_damage_bonus"    								"Дополнительный урон:"	
 
 		"DOTA_Tooltip_ability_bm_melee_damage_disabled"                                     "Улучшение оружия"
@@ -294,8 +294,8 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_modifier_melee_damage_bonus"                                         	"Улучшение оружия"
 		"DOTA_Tooltip_modifier_melee_damage_bonus_Description"                             	""
 
-		"DOTA_Tooltip_ability_research_bm_melee_damage"                                    	"Upgrade Melee Damage"
-		"DOTA_Tooltip_ability_research_bm_melee_damage_Description"                        	"Increases damage of melee creeps"
+		"DOTA_Tooltip_ability_research_bm_melee_damage"                                    	"Улучшение оружия"
+		"DOTA_Tooltip_ability_research_bm_melee_damage_Description"                        	"Увеличивает урон."
 		"DOTA_Tooltip_ability_research_bm_melee_damage_damage_bonus"                       	"Дополнительный урон:"
 		"DOTA_Tooltip_ability_research_bm_melee_damage_research_time"                       "<font color='#057aff'>Время изучения</font>:"
 		"DOTA_Tooltip_ability_research_bm_melee_damage_gold_cost"                          	"<font color='#fff22e'>Стоимость(золота)</font>:"
@@ -325,7 +325,7 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_research_bm_melee_hp_lumber_cost"                        		"<font color='#28fe77'>Стоимость(дерева)</font>:"
 
 		"DOTA_Tooltip_ability_research_bm_melee_hp_disabled"                         		"Сыворотка здоровья"	
-		"DOTA_Tooltip_ability_research_bm_melee_hp_disabled_Description"             		"Increases health of melee creeps.\n<b><font color='#eedd44'>требуются:\n - Лаборатория</font></b>\n"
+		"DOTA_Tooltip_ability_research_bm_melee_hp_disabled_Description"             		"Увеличивает здоровье крипа-мечника.\n<b><font color='#eedd44'>требуются:\n - Лаборатория</font></b>\n"
 		"DOTA_Tooltip_ability_item_research_bm_melee_hp"                               		"Отменить улучшение"
 		"DOTA_Tooltip_ability_item_research_bm_melee_hp_Description"                   		""
 
@@ -345,16 +345,16 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_modifier_bm_melee_special_bash"                                     	"Оглушающие атаки"
 		"DOTA_Tooltip_modifier_bm_melee_special_bash_Description"                         	"Существо оглушено."
 
-		"DOTA_Tooltip_ability_research_bm_melee_special"                                  	"Research Bashloard"
+		"DOTA_Tooltip_ability_research_bm_melee_special"                                  	"Исследовать Оглушающие атаки"
 		"DOTA_Tooltip_ability_research_bm_melee_special_Description"                      	"Увеличивает скорость атаки и добавляет к каждой атаке шанс оглушить цель. Башни тоже подвергаются оглушению."
 		"DOTA_Tooltip_ability_research_bm_melee_special_bonus_attack_speed"					"Бонусная скорость атаки:"
 		"DOTA_Tooltip_ability_research_bm_melee_special_bash_chance"						"Шанс оглушить:"
 		"DOTA_Tooltip_ability_research_bm_melee_special_bash_duration"						"Длительность оглушения:"	
-		"DOTA_Tooltip_ability_research_bm_melee_special_research_time"                    	"<font color='#057aff'>Время изучения<</font>:"
+		"DOTA_Tooltip_ability_research_bm_melee_special_research_time"                    	"<font color='#057aff'>Время изучения</font>:"
 		"DOTA_Tooltip_ability_research_bm_melee_special_gold_cost"                        	"<font color='#fff22e'>Стоимость(золота)</font>:"
 		"DOTA_Tooltip_ability_research_bm_melee_special_lumber_cost"                      	"<font color='#28fe77'>Стоимость(дерева)</font>:"
 
-		"DOTA_Tooltip_ability_research_bm_melee_special_disabled"                         	"Research Bashloard"
+		"DOTA_Tooltip_ability_research_bm_melee_special_disabled"                         	"Исследовать Оглушающие атаки"
 		"DOTA_Tooltip_ability_research_bm_melee_special_disabled_Description"             	"Увеличивает скорость атаки и добавляет к каждой атаке шанс оглушить цель. Башни тоже подвергаются оглушению.\n<b><font color='#eedd44'>требуются:\n - Библиотека заклинаний</font></b>\n"
 
 
@@ -371,8 +371,8 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_modifier_ranged_armor_bonus"                                         	"Улучшение брони"
 		"DOTA_Tooltip_modifier_ranged_armor_bonus_Description"                             	""
 
-		"DOTA_Tooltip_ability_research_bm_ranged_armor"                                    	"Upgrade Ranged Armor"
-		"DOTA_Tooltip_ability_research_bm_ranged_armor_Description"                        	"Increases armor of ranged creeps"
+		"DOTA_Tooltip_ability_research_bm_ranged_armor"                                    	"Улучшение брони"
+		"DOTA_Tooltip_ability_research_bm_ranged_armor_Description"                        	"Добавляет дополнительную броню."
 		"DOTA_Tooltip_ability_research_bm_ranged_armor_armor_bonus"    						"Улучшение брони:"
 		"DOTA_Tooltip_ability_research_bm_ranged_armor_research_time"                       "<font color='#057aff'>Время изучения</font>:"
 		"DOTA_Tooltip_ability_research_bm_ranged_armor_gold_cost"                          	"<font color='#fff22e'>Стоимость(золота)</font>:"
@@ -417,14 +417,14 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_modifier_ranged_health_bonus"                                         "Бонус здоровья"
 		"DOTA_Tooltip_modifier_ranged_health_bonus_Description"                             ""
 
-		"DOTA_Tooltip_ability_research_bm_ranged_hp"                                    	"Сыворотка здоровья"
+		"DOTA_Tooltip_ability_research_bm_ranged_hp"                                    	"Исследовать Сыворотка здоровья"
 		"DOTA_Tooltip_ability_research_bm_ranged_hp_Description"                        	"Увеличивает здоровье крипов-магов."
 		"DOTA_Tooltip_ability_research_bm_ranged_hp_health_bonus"                       	"Бонус здоровья:"
 		"DOTA_Tooltip_ability_research_bm_ranged_hp_research_time"                       	"<font color='#057aff'>Время изучения</font>:"
 		"DOTA_Tooltip_ability_research_bm_ranged_hp_gold_cost"                          	"<font color='#fff22e'>Стоимость(золота)</font>:"
 		"DOTA_Tooltip_ability_research_bm_ranged_hp_lumber_cost"                        	"<font color='#28fe77'>Стоимость(дерева)</font>:"
 
-		"DOTA_Tooltip_ability_research_bm_ranged_hp_disabled"                         		"Сыворотка здоровья"
+		"DOTA_Tooltip_ability_research_bm_ranged_hp_disabled"                         		"Исследовать Сыворотка здоровья"
 		"DOTA_Tooltip_ability_research_bm_ranged_hp_disabled_Description"             		"Увеличивает здоровье крипо-магов.\n<b><font color='#eedd44'>требуются:\n - Лаборатория</font></b>\n"
 
 		"DOTA_Tooltip_ability_item_research_bm_ranged_hp"                               	"Отменить улучшение"
@@ -445,7 +445,7 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_bm_ranged_special_disabled"                                 	"Проклятый клинок"
 		"DOTA_Tooltip_ability_bm_ranged_special_disabled_Description"                     	"Увеличивает урон и уменьшает броню атакованной вами цели."
 
-		"DOTA_Tooltip_ability_research_bm_ranged_special"                                 	"изучить Проклятый клинок"
+		"DOTA_Tooltip_ability_research_bm_ranged_special"                                 	"Исследовать Проклятый клинок"
 		"DOTA_Tooltip_ability_research_bm_ranged_special_Description"                     	"Увеличивает урон и уменьшает броню атакованной вами цели. Понижение брони так же работает и против построек."
 		"DOTA_Tooltip_ability_research_bm_ranged_special_bonus_damage"  					"Бонусный урон:"
 		"DOTA_Tooltip_ability_research_bm_ranged_special_corruption_armor"  				"Снижение брони:"
@@ -453,7 +453,7 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_research_bm_ranged_special_gold_cost"                       	"<font color='#fff22e'>Стоимость(золота)</font>:"
 		"DOTA_Tooltip_ability_research_bm_ranged_special_lumber_cost"                     	"<font color='#28fe77'>Стоимость(дерева)</font>:"
 
-		"DOTA_Tooltip_ability_research_bm_ranged_special_disabled"                        	"изучить Проклятый клинок"
+		"DOTA_Tooltip_ability_research_bm_ranged_special_disabled"                        	"Исследовать Проклятый клинок"
 		"DOTA_Tooltip_ability_research_bm_ranged_special_disabled_Description"            	"Увеличивает урон и уменьшает броню атакованной вами цели. Понижение брони так же работает и против построек.\n<b><font color='#eedd44'>требуются:\n - Библиотека заклинаний</font></b>\n"
 
 
@@ -630,7 +630,6 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_item_boar_Description"                                      	""
 		"DOTA_Tooltip_ability_item_boar_duration"                            				"Длительность жизни:"
 		"DOTA_Tooltip_ability_item_boar_gold_cost"                                			"<font color='#fff22e'>Стоимость(золота)</font>:"
-		//"DOTA_Tooltip_ability_item_boar_max_count"                                		"максимальное колличество:"
 
 		"DOTA_Tooltip_ability_item_hawk"                                                  	"Ястреб-разведчик"
 		"DOTA_Tooltip_ability_item_hawk_Description"                                      	""

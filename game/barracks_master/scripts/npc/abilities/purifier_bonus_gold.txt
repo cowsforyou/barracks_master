@@ -31,7 +31,7 @@
         "RunScript"
         {
           "ScriptFile"    "barracks/autocast.lua"
-          "Function"      "Think"
+          "Function"      "Autocast"
         }
       }
     }

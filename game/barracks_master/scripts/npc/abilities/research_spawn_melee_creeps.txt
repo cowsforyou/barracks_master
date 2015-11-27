@@ -1,0 +1,67 @@
+"research_spawn_melee_creeps"
+{
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+    "BaseClass"                     "ability_datadriven"
+    "AbilityTextureName"            "armor"
+    "MaxLevel"                      "6"
+
+    "AbilityGoldCost"               "0 100 200 300 300 300"
+    "AbilityChannelTime"            "0 30 45 180 180 180"
+    
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "creep_count"           "2 3 4 5 6 7"
+        }
+      
+        "02"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "research_time"         "0 30 45 180 180 180"
+        }
+
+        "03"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "gold_cost"             "0 100 200 300 300 300"
+        }
+ 
+        "04"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "lumber_cost"           "0 0 0 125 125 125"
+        }
+    }
+
+    "OnSpellStart"
+    {
+        "RunScript"
+        {
+            "ScriptFile"    "buildings/queue.lua"
+            "Function"      "EnqueueUnit"
+        }
+    }
+
+    "OnChannelSucceeded"
+    {
+        "FireSound"
+        {
+            "EffectName"    "BarracksMaster.ResearchComplete"
+            "Target"        "CASTER"
+        }
+
+        "RunScript"
+        {
+            "ScriptFile"    "buildings/queue.lua"
+            "Function"      "NextQueue"
+        }
+
+        "RunScript"
+        {
+            "ScriptFile"    "buildings/research.lua"
+            "Function"      "ResearchComplete"
+        }
+    }
+}

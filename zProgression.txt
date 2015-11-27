@@ -67,7 +67,6 @@
 [x] Have "Cancelled" play when research or building is cancelled (soundfile: sounds/vo/announcer/ann_custom_generic_alert_15.vsnd)
 [ ] Have "Insufficient Funds" play when there is not enough gold error (soundfile: sounds/vo/announcer/ann_custom_generic_alert_06.vsnd)
 [ ] Have "Not Enough Resources" play when there is not enough lumber error (soundfile: sounds/vo/announcer/ann_custom_generic_alert_05.vsnd)
-[ ] Have autocast visual play on wood chips
 
 -- Advanced --
 
@@ -132,6 +131,7 @@
 [x] Bashlord typo
 [x] Chaos Meteor roll length
 [ ] Thunderhide should not be immune to magic
+[ ] Autocast visual on wood chips is not working
 
 
 
