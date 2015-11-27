@@ -41,7 +41,7 @@
         "03"
         {
             "var_type"              "FIELD_INTEGER"
-            "travel_distance"       "400" // changing this does nothing - hardcoded in lua
+            "travel_distance"       "20" // changing this does nothing - hardcoded in lua
         }
         "04"
         {

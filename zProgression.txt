@@ -127,6 +127,11 @@
 [x] Research gets reset on building when it's destroyed and rebuilt
 [x] Late game crashes (related to superweapons possibly?)
 [ ] Double building on the same spot renders the gold/lumber wasted
+[ ] DC bug - DCed people cannot build anything
+[x] Mystic flare is not hitting heroes
+[x] Bashlord typo
+[x] Chaos Meteor roll length
+[ ] Thunderhide should not be immune to magic
 
 
 
@@ -134,6 +139,7 @@
 Balance
 
 [ ] Disable additional gold from hero kills/assists
+[ ] Hero spawn invulnerable for 3sec
 
 
 

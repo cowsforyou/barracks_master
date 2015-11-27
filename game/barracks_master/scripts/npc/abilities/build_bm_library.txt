@@ -19,7 +19,7 @@
 	"ModelRotation"					"90.0"
 	"AbilityCooldown"				"0"
 
-	"BuildTime"						"60.0"
+	"BuildTime"						"45.0"
 	"AbilityGoldCost"				"500"
 	"MaxBuildingCount"				"1"
 	// End of BuildingHelper info
@@ -29,7 +29,7 @@
 		"01"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"build_time"			"60.0"
+			"build_time"			"45.0"
 		}
 		"02"
 		{
@@ -39,7 +39,7 @@
 		"03"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"lumber_cost"			"600"
+			"lumber_cost"			"500"
 		}
 	}
 

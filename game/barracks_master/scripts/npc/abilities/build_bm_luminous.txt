@@ -19,7 +19,7 @@
 	"UnitName"						"bm_luminous"
 	"AbilityCooldown"				"0"
 
-	"BuildTime"						"120.0"
+	"BuildTime"						"100.0"
 	"AbilityGoldCost"				"600"
 	"MaxBuildingCount"				"1"
 	// End of BuildingHelper info
@@ -29,12 +29,12 @@
 		"01"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"build_time"			"120.0"
+			"build_time"			"100.0"
 		}
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"gold_cost"				"600"
+			"gold_cost"				"700"
 		}
 		"03"
 		{

@@ -1045,7 +1045,7 @@
 		// BuildingHelper info
 		"Building"						"1" //bool
 		"BuildingSize"					"4" 
-		"BuildTime"						"45.0"
+		"BuildTime"						"35.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
 		"Scale"							"0" //bool
@@ -1065,7 +1065,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"build_time"			"45.0"
+				"build_time"			"35.0"
 			}
 			"02"
 			{
@@ -1169,7 +1169,7 @@
 		// BuildingHelper info
 		"Building"						"1" //bool
 		"BuildingSize"					"5" 
-		"BuildTime"						"40.0"
+		"BuildTime"						"35.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
 		"Scale"							"0" //bool
@@ -1189,7 +1189,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"build_time"			"40.0"
+				"build_time"			"35.0"
 			}
 			"02"
 			{
@@ -1199,7 +1199,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"150"
+				"lumber_cost"			"100"
 			}
 		}
 	
@@ -1240,7 +1240,7 @@
 		"ModelRotation"					"90.0"
 		"AbilityCooldown"				"0"
 	
-		"BuildTime"						"60.0"
+		"BuildTime"						"45.0"
 		"AbilityGoldCost"				"500"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
@@ -1250,7 +1250,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"build_time"			"60.0"
+				"build_time"			"45.0"
 			}
 			"02"
 			{
@@ -1260,7 +1260,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"600"
+				"lumber_cost"			"500"
 			}
 		}
 	
@@ -1292,7 +1292,7 @@
 		// BuildingHelper info
 		"Building"						"1" //bool
 		"BuildingSize"					"5" 
-		"BuildTime"						"35.0"
+		"BuildTime"						"30.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
 		"Scale"							"0" //bool
@@ -1312,7 +1312,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"build_time"			"35.0"
+				"build_time"			"30.0"
 			}
 			"02"
 			{
@@ -1351,7 +1351,7 @@
 		"UnitName"						"bm_luminous"
 		"AbilityCooldown"				"0"
 	
-		"BuildTime"						"120.0"
+		"BuildTime"						"100.0"
 		"AbilityGoldCost"				"600"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
@@ -1361,12 +1361,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"build_time"			"120.0"
+				"build_time"			"100.0"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"600"
+				"gold_cost"				"700"
 			}
 			"03"
 			{
@@ -1403,7 +1403,7 @@
 		// BuildingHelper info
 		"Building"						"1" //bool
 		"BuildingSize"					"4" 
-		"BuildTime"						"30.0"
+		"BuildTime"						"25.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
 		"Scale"							"0" //bool
@@ -1423,7 +1423,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"build_time"			"30.0"
+				"build_time"			"25.0"
 			}
 			"02"
 			{
@@ -1565,7 +1565,7 @@
 		// BuildingHelper info
 		"Building"						"1" //bool
 		"BuildingSize"					"5" 
-		"BuildTime"						"35.0"
+		"BuildTime"						"30.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
 		"Scale"							"0" //bool
@@ -1585,7 +1585,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"build_time"			"35.0"
+				"build_time"			"30.0"
 			}
 			"02"
 			{
@@ -1743,7 +1743,7 @@
 		"UnitName"						"bm_unpromising"
 		"AbilityCooldown"				"0"
 	
-		"BuildTime"						"120.0"
+		"BuildTime"						"100.0"
 		"AbilityGoldCost"				"600"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
@@ -1753,12 +1753,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"build_time"			"120.0"
+				"build_time"			"100.0"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"600"
+				"gold_cost"				"700"
 			}
 			"03"
 			{
@@ -1911,7 +1911,7 @@
 		// BuildingHelper info
 		"Building"						"1" //bool
 		"BuildingSize"					"4" 
-		"BuildTime"						"10.0"
+		"BuildTime"						"30.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
 		"Scale"							"0" //bool
@@ -2312,7 +2312,7 @@
 	    // Target
 	    //-------------------------------------------------------------------------------------------------------------
 	    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
-	    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_BASIC"
+	    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO" 
 	
 	    // Casting
 	    //-------------------------------------------------------------------------------------------------------------
@@ -5101,7 +5101,7 @@
 	        "03"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "travel_distance"       "400" // changing this does nothing - hardcoded in lua
+	            "travel_distance"       "20" // changing this does nothing - hardcoded in lua
 	        }
 	        "04"
 	        {

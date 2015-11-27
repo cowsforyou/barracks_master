@@ -38,7 +38,7 @@ function invoker_chaos_meteor_datadriven_on_spell_start(keys)
     local burn_dps = 8000
     
     --Chaos Meteor's travel distance is dependent on the level of Wex.  This value is stored now since leveling up Wex while the meteor is in midair should have no effect.
-    local travel_distance = 400
+    local travel_distance = 20
     
     --Spawn the rolling meteor after the delay.
     Timers:CreateTimer({
