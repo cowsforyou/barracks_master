@@ -171,7 +171,7 @@
 			"Ability2"					"spawn_hero_vengeful"				// Ability 2
 			"Ability3"					"spawn_hero_nevermore"				// Ability 3
 			"Ability4"					"spawn_hero_beastmaster"			// Ability 4
-			//"Ability5"					"spawn_hero_medusa"					// Ability 5		
+			"Ability5"					"spawn_hero_medusa"					// Ability 5		
 			"Ability9"					"particle_floating_orb"		
 			"Ability10"					"ability_building"
 			"Ability11"					"ability_building_queue"
@@ -2121,12 +2121,12 @@
 	        "DisableClumpingBehavior"   "1"
 	        "AttachWearables"
 	        {
-	            "Wearable1"     {   "ItemDef"       "486"       } //Weapon
-	            "Wearable2"     {   "ItemDef"       "8259"      } //Tail
-	            "Wearable3"     {   "ItemDef"       "6996"      } //Head
-	            "Wearable4"     {   "ItemDef"       "509"       } //Arms
-	            "Wearable4"     {   "ItemDef"       "509"       } //Armor
-	            "Wearable4"     {   "ItemDef"       "509"       } //Ambient
+	            "Wearable1"     {   "ItemDef"       "381"       } //Weapon
+	            "Wearable2"     {   "ItemDef"       "385"       } //Tail
+	            "Wearable3"     {   "ItemDef"       "382"       } //Head
+	            "Wearable4"     {   "ItemDef"       "384"       } //Arms
+	            "Wearable4"     {   "ItemDef"       "383"       } //Armor
+	            "Wearable4"     {   "ItemDef"       "531"       } //Ambient
 	        }
 	    }
 	} 

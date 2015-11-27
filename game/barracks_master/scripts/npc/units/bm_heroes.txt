@@ -20,7 +20,7 @@
 		"Ability2"					"spawn_hero_vengeful"				// Ability 2
 		"Ability3"					"spawn_hero_nevermore"				// Ability 3
 		"Ability4"					"spawn_hero_beastmaster"			// Ability 4
-		//"Ability5"					"spawn_hero_medusa"					// Ability 5		
+		"Ability5"					"spawn_hero_medusa"					// Ability 5		
 		"Ability9"					"particle_floating_orb"		
 		"Ability10"					"ability_building"
 		"Ability11"					"ability_building_queue"
