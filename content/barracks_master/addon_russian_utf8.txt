@@ -16,6 +16,22 @@
 "bm_updates_title"	"Updates"
 
 "bm_updates_text"	"
+Nov 27:
+• Players now start with 3x Clarities
+• Fixed bug causing Thunderhide to be spell immune.
+• Library of Spells cost reworked from 500gold/500lumber to 600gold/400lumber.
+• Techies mana cost reduced from 170 to 130.
+• Bashlord research time decreased from 150 to 110sec.
+• Corrupted Blade research time decreased from 150 to 110sec.
+• Health Vial research time decreased from 120 to 90sec.
+• Health Vial for Melee lumber cost increased from 125 to 200.
+• Health Vial for Ranged lumber cost increased from 75 to 120.
+• Ancient Barracks model size reduced slightly.
+• Siege Barracks model size reduced slightly.
+
+Nov 27:
+• Russian tooltips update.
+
 Nov 26:
 • Fixed bug that Mystic Flare was not able to attack the Barracks Master.
 • Chaos Meteor roll distance reduced from 400 to 20.
@@ -30,32 +46,6 @@ Nov 26:
 • Library of Spells build time decreased from 50 to 45sec.
 • Library of Spells lumber cost decreased from 600 to 500. 
 • Luminous and Unpromising Tower build time decreased from 120 to 100sec.
-
-Nov 26:
-• Russian(Русский) translation added! Thank you str!
-• Techies mana cost increased from 130 to 170.
-
-Nov 26:
-• Fixed autospawn Lumberjack bug.
-
-Nov 26:
-• Library of Spells build time decreased from 90 to 60sec.
-• Library of Spells cost increased from 300gold/450lumber to 500gold/600lumber.
-• Luminous and Unpromising Tower build time increased from 60 to 120sec.
-• Bashlord research time decreased from 270 to 150sec.
-• Corrupted Blade research time decreased from 270 to 150sec.
-• Corrupted Blade bonus damage increased from 20 to 30.
-• Corrupted Blade armor reduction increased from -4 to -5.
-• Autocast visual added on Eldwurm's Gold.
-
-Nov 26:
-• New particle effect added on Portal of Heroes.
-• New particle effect added on Purifier.
-
-Nov 25:
-• New research on Melee Barracks added: Bashlord.
-• New research on Ranged Barracks added: Corrupted Blade.
-• Ranged Barracks build time increased from 20 to 25sec.
 "
 
 "bm_contact_text"	"
@@ -210,26 +200,26 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_build_bm_library_disabled_Description"             			"Открывает самые высокоуровневые способности и открывает доступ к строительству Светящейся башни и Башни тьмы , с убийственными способностями. Библиотека заклинаний очень хрупкая и по этому уязвима к рэйдам минёров.Будьте аккуратны.\n<b><font color='#eedd44'>требуются:\n - Лаборатория</font></b>"
 
 
-		"bm_unpromising"                                                             		"Unpromising Tower"
-		"DOTA_Tooltip_ability_build_bm_unpromising"                        					"Unpromising Tower"
-		"DOTA_Tooltip_ability_build_bm_unpromising_Description"                  	    	"Enables the usage of spells of evil and chaos. All spells have global range. You may only build the Unpromising Tower or the Luminous Tower. Which side will you choose?"
+		"bm_unpromising"                                                             		"Башня тьмы"
+		"DOTA_Tooltip_ability_build_bm_unpromising"                        					"Башня тьмы"
+		"DOTA_Tooltip_ability_build_bm_unpromising_Description"                  	    	"Позволяет использовать способности ада и хаоса. Все способности можно использовать в любую точку карты. Вы можете сделать только башню тьмы или светящуюся башню.Какую сторону выберешь ты?"
 		"DOTA_Tooltip_ability_build_bm_unpromising_build_time"                  		    "<font color='#057aff'>Время строительства</font>:"
 		"DOTA_Tooltip_ability_build_bm_unpromising_gold_cost"                       	 	"<font color='#fff22e'>Стоимость(золота)</font>:"
 		"DOTA_Tooltip_ability_build_bm_unpromising_lumber_cost"                      		"<font color='#28fe77'>Стоимость(дерева)</font>:"
 
-		"DOTA_Tooltip_ability_build_bm_unpromising_disabled"                         		"Unpromising Tower"
-		"DOTA_Tooltip_ability_build_bm_unpromising_disabled_Description"             		"Enables the usage of spells evil and chaotic. All spells have global range. You may only build the Unpromising Tower or the Luminous Tower. Which side will you choose?\n<b><font color='#eedd44'>требуются:\n - Библиотека заклинаний</font></b>"
+		"DOTA_Tooltip_ability_build_bm_unpromising_disabled"                         		"Башня тьмы"
+		"DOTA_Tooltip_ability_build_bm_unpromising_disabled_Description"             		"Позволяет использовать способности ада и хаоса. Все способности можно использовать в любую точку карты. Вы можете сделать только башню тьмы или светящуюся башню.Какую сторону выберешь ты?\n<b><font color='#eedd44'>требуются:\n - Библиотека заклинаний</font></b>"
 
 
-		"bm_luminous"                                                             			"Luminous Tower"
-		"DOTA_Tooltip_ability_build_bm_luminous"                        					"Luminous Tower"
-		"DOTA_Tooltip_ability_build_bm_luminous_Description"                  	    		"Enables the usage of spells pure and orderly. All spells have global range. You may only build the Luminous Tower or the Unpromising Tower. Which side will you choose?"
+		"bm_luminous"                                                             			"Светящаяся башня"
+		"DOTA_Tooltip_ability_build_bm_luminous"                        					"Светящаяся башня"
+		"DOTA_Tooltip_ability_build_bm_luminous_Description"                  	    		"Позволяет использовать способности света и рая. Все способности можно использовать в любую точку карты.  Вы можете сделать только башню тьмы или светящуюся башню. Какую сторону выберешь ты?"
 		"DOTA_Tooltip_ability_build_bm_luminous_build_time"                  		    	"<font color='#057aff'>Время строительства</font>:"
 		"DOTA_Tooltip_ability_build_bm_luminous_gold_cost"                       	 		"<font color='#fff22e'>Стоимость(золота)</font>:"
 		"DOTA_Tooltip_ability_build_bm_luminous_lumber_cost"                      			"<font color='#28fe77'>Стоимость(дерева)</font>:"
 
-		"DOTA_Tooltip_ability_build_bm_luminous_disabled"                         			"Luminous Tower"
-		"DOTA_Tooltip_ability_build_bm_luminous_disabled_Description"             			"Enables the usage of spells pure and orderly. All spells have global range. You may only build the Luminous Tower or the Unpromising Tower. Which side will you choose?\n<b><font color='#eedd44'>требуются:\n - Библиотека заклинаний</font></b>\n"
+		"DOTA_Tooltip_ability_build_bm_luminous_disabled"                         			"Светящаяся башня"
+		"DOTA_Tooltip_ability_build_bm_luminous_disabled_Description"             			"Позволяет использовать способности света и рая. Все способности можно использовать в любую точку карты.  Вы можете сделать только башню тьмы или светящуюся башню. Какую сторону выберешь ты?\n<b><font color='#eedd44'>требуются:\n - Библиотека заклинаний</font></b>\n"
 
 
 		//-------------------
@@ -326,6 +316,7 @@ Send your suggestions to thenewmetadota@gmail.com."
 
 		"DOTA_Tooltip_ability_research_bm_melee_hp_disabled"                         		"Сыворотка здоровья"	
 		"DOTA_Tooltip_ability_research_bm_melee_hp_disabled_Description"             		"Увеличивает здоровье крипа-мечника.\n<b><font color='#eedd44'>требуются:\n - Лаборатория</font></b>\n"
+
 		"DOTA_Tooltip_ability_item_research_bm_melee_hp"                               		"Отменить улучшение"
 		"DOTA_Tooltip_ability_item_research_bm_melee_hp_Description"                   		""
 
@@ -357,6 +348,8 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_research_bm_melee_special_disabled"                         	"Исследовать Оглушающие атаки"
 		"DOTA_Tooltip_ability_research_bm_melee_special_disabled_Description"             	"Увеличивает скорость атаки и добавляет к каждой атаке шанс оглушить цель. Башни тоже подвергаются оглушению.\n<b><font color='#eedd44'>требуются:\n - Библиотека заклинаний</font></b>\n"
 
+		"DOTA_Tooltip_ability_item_research_bm_melee_special"                             	"Отменить улучшение"
+		"DOTA_Tooltip_ability_item_research_bm_melee_special_Description"                 	""
 
 
 		//Ranged Armor
@@ -456,6 +449,8 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_research_bm_ranged_special_disabled"                        	"Исследовать Проклятый клинок"
 		"DOTA_Tooltip_ability_research_bm_ranged_special_disabled_Description"            	"Увеличивает урон и уменьшает броню атакованной вами цели. Понижение брони так же работает и против построек.\n<b><font color='#eedd44'>требуются:\n - Библиотека заклинаний</font></b>\n"
 
+		"DOTA_Tooltip_ability_item_research_bm_ranged_special"                            	"Отменить улучшение"
+		"DOTA_Tooltip_ability_item_research_bm_ranged_special_Description"                	""
 
 
 		//Air Evasion
@@ -592,6 +587,9 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_research_purifier_bonus_lumber_research_time"               	"<font color='#057aff'>Время изучения</font>:"
 		"DOTA_Tooltip_ability_research_purifier_bonus_lumber_gold_cost"                   	"<font color='#fff22e'>Стоимость(золота)</font>:"
 
+		"DOTA_Tooltip_ability_item_research_purifier_bonus_lumber"                        	"Отменить улучшение"
+		"DOTA_Tooltip_ability_item_research_purifier_bonus_lumber_Description"            	""
+
 
 		//Misc
 		//-------------------------------------------------------------
@@ -617,12 +615,21 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_bm_truestrike"                                              	"True Strike"
 		"DOTA_Tooltip_ability_bm_truestrike_Description"                                  	"Ваши атаки всегда попадут в цель. Не работает на постройки."
 
-		"DOTA_Tooltip_ability_bm_command_aura"                                            	"Vengeance Aura"
-		"DOTA_Tooltip_ability_bm_command_aura_Description"                                	"Vengeful Spirit's presence increases the physical damage of nearby friendly units."
-		"DOTA_Tooltip_ability_bm_command_aura_bonus_damage_pct"                           	"BONUS DAMAGE PERCENTAGE:"
-		"DOTA_Tooltip_ability_bm_command_aura_radius"                                     	"RADIUS:"
-		"DOTA_Tooltip_modifier_command_aura_buff"                                         	"Vengeance Aura"
-		"DOTA_Tooltip_modifier_command_aura_buff_Description"                             	"12 percent bonus damage"
+		"DOTA_Tooltip_ability_bm_command_aura"                                            	"Аура возмездия"
+		"DOTA_Tooltip_ability_bm_command_aura_Description"                                	"Vengeful Spirit's увеличивает урон наносимый всеми дружественными юнитами поблизости."
+		"DOTA_Tooltip_ability_bm_command_aura_bonus_damage_pct"                           	"Дополнительный урон в процентах:"
+		"DOTA_Tooltip_ability_bm_command_aura_radius"                                     	"Радиус:"
+		"DOTA_Tooltip_modifier_command_aura_buff"                                         	"Аура возмездия"
+		"DOTA_Tooltip_modifier_command_aura_buff_Description"                             	"12 процентах бонусного урона"
+
+		"DOTA_Tooltip_ability_bm_wardrums_aura"                                           	"War Drums Aura"
+		"DOTA_Tooltip_ability_bm_wardrums_aura_Description"                               	"The rhythm of the Thunderhide's heartbeat increases the attack speed and attack damage of nearby allies. "
+		"DOTA_Tooltip_ability_bm_wardrums_aura_attackspeed_bonus"                         	"Дополнительная скорость атаки:"
+		"DOTA_Tooltip_ability_bm_wardrums_aura_damage_pct_bonus"                          	"Дополнительный урон:"
+		"DOTA_Tooltip_ability_bm_wardrums_aura_radius"                                    	"Радиус:"
+		"DOTA_Tooltip_modifier_bm_wardrums_aura_buff"                                     	"War Drums Aura"
+		"DOTA_Tooltip_modifier_bm_wardrums_aura_buff_Description"                         	"15 percent attack damage bonus and 15 attack speed bonus."
+
 
 		//-------------------
 		//Items

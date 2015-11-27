@@ -1,0 +1,41 @@
+// Autocast creep spawner spell; starts casting as soon as the building is fully constructed
+"spawn_hero_medusa"
+{
+    "BaseClass"                     "ability_datadriven"
+    "AbilityTextureName"            "hero_medusa"
+    "MaxLevel"                      "1"
+
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+    "AbilityCastPoint"              "0"
+
+    "AbilityGoldCost"               "600"
+    "AbilityCooldown"               "15.0"
+
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "creep_count"			"1"
+        }
+
+        "02"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "gold_cost"             "600"
+        }
+    }
+
+    // run this script every time the spell is used
+    "OnSpellStart"
+    {
+        "RunScript"
+        {
+            "ScriptFile"    "barracks/spawner_auto.lua"
+            "Function"      "OnSpellStart"
+            "creepName"		"hero_medusa"
+            "soundName"     "Hero_Medusa.Pick"
+            "iconName"      "npc_dota_hero_medusa"
+        }
+    }
+}

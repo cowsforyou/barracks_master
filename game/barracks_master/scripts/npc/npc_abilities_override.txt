@@ -205,6 +205,63 @@
             }
         }
     }
+
+    "medusa_split_shot"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        //"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+        "MaxLevel"                      "1"
+
+        // Casting
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "damage_modifier"       "-20"
+            }
+            "02"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "damage_modifier_tooltip"       "80"
+            }
+            "03"
+            {   
+                "var_type"              "FIELD_INTEGER"
+                "arrow_count"           "9"
+            }
+            "04"
+            {   
+                "var_type"              "FIELD_INTEGER"
+                "total_arrow_count"     "10"
+            }
+            "05"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "range"                 "700"
+            }
+            "06"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "projectile_speed"      "1200"
+            }
+        }
+
+        "modifier_toggle"
+        {
+            "Passive"       "1"
+            "IsHidden"      "1"
+            "OnCreated"
+            {
+                "RunScript"
+                {
+                    "ScriptFile"    "barracks/toggle.lua"
+                    "Function"      "Toggle"
+                }
+            }
+        }
+    }
 }
 
 

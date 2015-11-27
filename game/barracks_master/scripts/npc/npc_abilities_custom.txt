@@ -1033,6 +1033,65 @@
 	    }
 	  }
 	}
+	"bm_wardrums_aura"
+	{
+	  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	  "BaseClass"             "ability_datadriven"
+	  "AbilityTextureName"    "big_thunder_lizard_wardrums_aura"
+	
+	  "MaxLevel"    "1"
+	
+	  // Special  
+	  //-------------------------------------------------------------------------------------------------------------
+	  "AbilitySpecial"
+	  {
+	    "01"
+	    {
+	      "var_type"            "FIELD_INTEGER"
+	      "attackspeed_bonus"   "15"
+	    }
+	
+	    "02"
+	    {
+	      "var_type"            "FIELD_INTEGER"
+	      "damage_pct_bonus"    "15"
+	    }
+	
+	    "03"
+	    {
+	      "var_type"            "FIELD_INTEGER"
+	      "radius"              "900"
+	    }
+	  }
+	
+	  // Modifiers
+	  //-------------------------------------------------------------------------------------------------------------
+	  "Modifiers"
+	  {
+	    "modifier_bm_wardrums_aura"
+	    {
+	      "Passive"           "1"
+	      "IsHidden"          "1"
+	
+	      "Aura"              "modifier_bm_wardrums_aura_buff"    
+	      "Aura_Radius"       "%radius"
+	      "Aura_Teams"        "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	      "Aura_Types"        "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	    }
+	
+	    "modifier_bm_wardrums_aura_buff"
+	    {
+	      "Passive"    "1"
+	      "IsHidden"   "0"
+	
+	      "Properties"
+	      {
+	        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"      "%attackspeed_bonus" // grab from AbilitySpecial
+	        "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"   "%damage_pct_bonus"
+	      }        
+	    }
+	  }
+	}
 	// Building requires repair to finish construction. Can be assisted to make the process faster
 	"build_bm_ancient_barracks"
 	{
@@ -1241,7 +1300,7 @@
 		"AbilityCooldown"				"0"
 	
 		"BuildTime"						"45.0"
-		"AbilityGoldCost"				"500"
+		"AbilityGoldCost"				"600"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
 	
@@ -1255,12 +1314,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"500"
+				"gold_cost"				"600"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"500"
+				"lumber_cost"			"400"
 			}
 		}
 	
@@ -3116,7 +3175,7 @@
 	    "MaxLevel"                      "1"
 	
 	    "AbilityGoldCost"               "500"
-	    "AbilityChannelTime"            "120"
+	    "AbilityChannelTime"            "90"
 	    
 	    "AbilitySpecial"
 	    {
@@ -3129,7 +3188,7 @@
 	        "02"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "research_time"         "120"
+	        "research_time"         "90"
 	      }
 	
 	        "03"
@@ -3141,7 +3200,7 @@
 	        "04"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "lumber_cost"           "125"
+	        "lumber_cost"           "200"
 	      }
 	    }
 	
@@ -3189,7 +3248,7 @@
 		"MaxLevel" 						"1"
 	
 		"AbilityGoldCost"				"950"
-		"AbilityChannelTime"			"150"
+		"AbilityChannelTime"			"110"
 		
 		"AbilitySpecial"
 		{
@@ -3211,7 +3270,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"research_time"			"150"
+				"research_time"			"110"
 			}
 			"05"
 			{
@@ -3403,7 +3462,7 @@
 	    "MaxLevel"                      "1"
 	
 	    "AbilityGoldCost"               "350"
-	    "AbilityChannelTime"            "120"
+	    "AbilityChannelTime"            "90"
 	    
 	    "AbilitySpecial"
 	    {
@@ -3416,7 +3475,7 @@
 	        "02"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "research_time"         "120"
+	        "research_time"         "90"
 	      }
 	
 	        "03"
@@ -3428,7 +3487,7 @@
 	        "04"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "lumber_cost"           "75"
+	        "lumber_cost"           "120"
 	      }
 	    }
 	
@@ -3477,7 +3536,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 	
 		"AbilityGoldCost"				"650"
-		"AbilityChannelTime"			"150"
+		"AbilityChannelTime"			"110"
 		
 		"AbilitySpecial"
 		{
@@ -3494,7 +3553,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"research_time"			"150"
+				"research_time"			"110"
 			}
 			"04"
 			{
@@ -4297,6 +4356,47 @@
 	            "creepName"		"hero_beastmaster"
 	            "soundName"     "Hero_Beastmaster.Pick"
 	            "iconName"      "npc_dota_hero_beastmaster"
+	        }
+	    }
+	}
+	// Autocast creep spawner spell; starts casting as soon as the building is fully constructed
+	"spawn_hero_medusa"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "hero_medusa"
+	    "MaxLevel"                      "1"
+	
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"
+	
+	    "AbilityGoldCost"               "600"
+	    "AbilityCooldown"               "15.0"
+	
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"				"FIELD_INTEGER"
+	            "creep_count"			"1"
+	        }
+	
+	        "02"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "gold_cost"             "600"
+	        }
+	    }
+	
+	    // run this script every time the spell is used
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "barracks/spawner_auto.lua"
+	            "Function"      "OnSpellStart"
+	            "creepName"		"hero_medusa"
+	            "soundName"     "Hero_Medusa.Pick"
+	            "iconName"      "npc_dota_hero_medusa"
 	        }
 	    }
 	}

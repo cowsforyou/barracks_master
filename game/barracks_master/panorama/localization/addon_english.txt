@@ -31,6 +31,7 @@
 	"hero_beastmaster"								"Beastmaster has spawned"
 	"hero_vengeful"									"Vengeful Spirit has spawned"
 	"hero_nevermore"								"Shadow Fiend has spawned"
+	"hero_medusa"									"Medusa has spawned"	
 
 	"alch_gold"										"Alchemist was feeling rich and donated gold to you. Amount received: "
 	"give_item_last_stand"							"You have been awarded an extra charge of Last Stand"

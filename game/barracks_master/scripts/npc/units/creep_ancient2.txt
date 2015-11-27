@@ -16,7 +16,7 @@
         // Abilities
         //----------------------------------------------------------------
         
-        "Ability1"                  "big_thunder_lizard_wardrums_aura"              // Ability 1
+        "Ability1"                  "bm_wardrums_aura"              // Ability 1
         "Ability2"                  ""          // Ability 2
         "Ability3"                  ""          // Ability 3
         "Ability4"                  ""          // Ability 4.

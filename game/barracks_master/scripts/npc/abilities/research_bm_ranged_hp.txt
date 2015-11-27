@@ -6,7 +6,7 @@
     "MaxLevel"                      "1"
 
     "AbilityGoldCost"               "350"
-    "AbilityChannelTime"            "120"
+    "AbilityChannelTime"            "90"
     
     "AbilitySpecial"
     {
@@ -19,7 +19,7 @@
         "02"
       {
         "var_type"              "FIELD_INTEGER"
-        "research_time"         "120"
+        "research_time"         "90"
       }
 
         "03"
@@ -31,7 +31,7 @@
         "04"
       {
         "var_type"              "FIELD_INTEGER"
-        "lumber_cost"           "75"
+        "lumber_cost"           "120"
       }
     }
 

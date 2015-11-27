@@ -126,12 +126,14 @@
 [x] Research gets reset on building when it's destroyed and rebuilt
 [x] Late game crashes (related to superweapons possibly?)
 [ ] Double building on the same spot renders the gold/lumber wasted
-[ ] DC bug - DCed people cannot build anything
+[ ] DC bug - DCed people cannot build anything and creeps spawn but don't move
 [x] Mystic flare is not hitting heroes
 [x] Bashlord typo
 [x] Chaos Meteor roll length
 [ ] Thunderhide should not be immune to magic
 [ ] Autocast visual on wood chips is not working
+[x] Potraits not working for any of the units/buildings/heroes only the tower portrait is working
+
 
 
 
@@ -140,6 +142,7 @@ Balance
 
 [ ] Disable additional gold from hero kills/assists
 [ ] Hero spawn invulnerable for 3sec
+[ ] Reduce Bashlord and Corrupted Blade research time
 
 
 

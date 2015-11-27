@@ -63,6 +63,7 @@ function Precache( context )
   PrecacheResource("particle_folder", "particles/units/heroes/hero_vengeful", context) -- for Hero: Vengeful Spirit
   PrecacheResource("particle_folder", "particles/units/heroes/hero_nevermore", context) -- for Hero: Shadow Fiend
                                                                                         -- for Hero: Beastmaster (precached above)
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_medusa", context) -- for Hero: Medusa                                                                                        
 
   PrecacheResource("particle_folder", "particles/units/heroes/hero_skywrath_mage", context) -- for Mystic Flare
   PrecacheResource("particle_folder", "particles/units/heroes/hero_invoker", context) -- for Sun Strike/Chaos Meteor
@@ -96,6 +97,7 @@ function Precache( context )
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_vengefulspirit.vsndevts", context) -- for Hero: Vengeful Spirit
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_nevermore.vsndevts", context) -- for Hero: Shadow Fiend
                                                                                                           -- for Hero: Beastmaster (precached above)
+  PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_medusa.vsndevts", context) -- for Hero: Medusa                                                                                                      
 
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_skywrath_mage.vsndevts", context) -- for Mystic Flare
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_invoker.vsndevts", context) -- for Sun Strike/Chaos Meteor

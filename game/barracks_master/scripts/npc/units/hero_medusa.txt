@@ -1,0 +1,95 @@
+//=================================================================================
+// Hero: Medusa
+//=================================================================================
+"hero_medusa"
+{
+    // General
+    //
+    "BaseClass"                 "npc_dota_creature"                 // Class of entity of link to.
+    "Model"                     "models/heroes/medusa/medusa.vmdl"  // Model.
+    "SoundSet"                  "Hero_Medusa"                    // Name of sound set.
+    "ModelScale"                "0.85"
+    "Level"                     "1"
+    "IgnoreAddSummonedToSelection"  "1"
+            
+    // Abilities
+    //----------------------------------------------------------------
+    "AbilityLayout"             "4"
+    "Ability1"                  "bm_truestrike"          // Ability 1.
+    "Ability2"                  "medusa_split_shot"          // Ability 2.
+    "Ability3"                  ""          // Ability 3.
+    "Ability4"                  ""          // Ability 4.
+    "Ability5"                  ""          // Ability 5.
+    "Ability6"                  ""          // Ability 6 - Extra.
+    "Ability7"                  ""          // Ability 7 - Extra.
+    "Ability8"                  ""          // Ability 8 - Extra.
+
+    // Armor
+    //----------------------------------------------------------------
+    "ArmorPhysical"             "5"         // Physical protection.
+    "MagicalResistance"         "25"         // Magical protection.
+
+    // Attack
+    //----------------------------------------------------------------
+    "AttackCapabilities"        "DOTA_UNIT_CAP_RANGED_ATTACK"
+    "AttackDamageMin"           "110"
+    "AttackDamageMax"           "120"
+    "AttackRate"                "1.3"
+    "AttackAnimationPoint"      "0.500000"
+    "AttackAcquisitionRange"    "900"
+    "AttackRange"               "600"
+    "ProjectileModel"           "particles/units/heroes/hero_medusa/medusa_base_attack.vpcf"
+    "ProjectileSpeed"           "1200"
+
+    // Bounty
+    //----------------------------------------------------------------
+    "BountyXP"                  "0"        // Experience earn.
+    "BountyGoldMin"             "150"        // Gold earned min.
+    "BountyGoldMax"             "190"        // Gold earned max.
+
+    // Bounds
+    //----------------------------------------------------------------
+    "BoundsHullName"            "DOTA_HULL_SIZE_HERO"
+    "HealthBarOffset"           "170"
+
+    // Movement
+    //----------------------------------------------------------------
+    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_GROUND"         // Type of locomotion - ground, air
+    "MovementSpeed"             "325"                               // Speed
+    "MovementTurnRate"          "0.5"                               // Turning rate.
+
+    // Status
+    //----------------------------------------------------------------
+    "StatusHealth"              "1000"      // Base health.
+    "StatusHealthRegen"         "0.5"       // Health regeneration rate.
+    "StatusMana"                "0"         // Base mana.
+    "StatusManaRegen"           "0"         // Mana regeneration rate.
+
+    // Team
+    //----------------------------------------------------------------
+    "TeamName"                  "DOTA_TEAM_NEUTRALS"            // Team name.
+    "CombatClassAttack"         "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_SOFT"
+    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+    
+    // Vision
+    //----------------------------------------------------------------
+    "VisionDaytimeRange"        "1100"       // Range of vision during day light.
+    "VisionNighttimeRange"      "800"       // Range of vision at night time.
+    
+    // Creature Data
+    //----------------------------------------------------------------
+    "Creature"
+    {
+        "DisableClumpingBehavior"   "1"
+        "AttachWearables"
+        {
+            "Wearable1"     {   "ItemDef"       "486"       } //Weapon
+            "Wearable2"     {   "ItemDef"       "8259"      } //Tail
+            "Wearable3"     {   "ItemDef"       "6996"      } //Head
+            "Wearable4"     {   "ItemDef"       "509"       } //Arms
+            "Wearable4"     {   "ItemDef"       "509"       } //Armor
+            "Wearable4"     {   "ItemDef"       "509"       } //Ambient
+        }
+    }
+} 

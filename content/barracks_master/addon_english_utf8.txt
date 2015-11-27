@@ -16,6 +16,22 @@
 "bm_updates_title"	"Updates"
 
 "bm_updates_text"	"
+Nov 27:
+• Players now start with 3x Clarities
+• Fixed bug causing Thunderhide to be spell immune.
+• Library of Spells cost reworked from 500gold/500lumber to 600gold/400lumber.
+• Techies mana cost reduced from 170 to 130.
+• Bashlord research time decreased from 150 to 110sec.
+• Corrupted Blade research time decreased from 150 to 110sec.
+• Health Vial research time decreased from 120 to 90sec.
+• Health Vial for Melee lumber cost increased from 125 to 200.
+• Health Vial for Ranged lumber cost increased from 75 to 120.
+• Ancient Barracks model size reduced slightly.
+• Siege Barracks model size reduced slightly.
+
+Nov 27:
+• Russian tooltips update.
+
 Nov 26:
 • Fixed bug that Mystic Flare was not able to attack the Barracks Master.
 • Chaos Meteor roll distance reduced from 400 to 20.
@@ -30,32 +46,6 @@ Nov 26:
 • Library of Spells build time decreased from 50 to 45sec.
 • Library of Spells lumber cost decreased from 600 to 500. 
 • Luminous and Unpromising Tower build time decreased from 120 to 100sec.
-
-Nov 26:
-• Russian(Русский) translation added! Thank you str!
-• Techies mana cost increased from 130 to 170.
-
-Nov 26:
-• Fixed autospawn Lumberjack bug.
-
-Nov 26:
-• Library of Spells build time decreased from 90 to 60sec.
-• Library of Spells cost increased from 300gold/450lumber to 500gold/600lumber.
-• Luminous and Unpromising Tower build time increased from 60 to 120sec.
-• Bashlord research time decreased from 270 to 150sec.
-• Corrupted Blade research time decreased from 270 to 150sec.
-• Corrupted Blade bonus damage increased from 20 to 30.
-• Corrupted Blade armor reduction increased from -4 to -5.
-• Autocast visual added on Eldwurm's Gold.
-
-Nov 26:
-• New particle effect added on Portal of Heroes.
-• New particle effect added on Purifier.
-
-Nov 25:
-• New research on Melee Barracks added: Bashlord.
-• New research on Ranged Barracks added: Corrupted Blade.
-• Ranged Barracks build time increased from 20 to 25sec.
 "
 
 "bm_contact_text"	"
@@ -326,7 +316,8 @@ Send your suggestions to thenewmetadota@gmail.com."
 
 		"DOTA_Tooltip_ability_research_bm_melee_hp_disabled"                         		"Research Health Vial"	
 		"DOTA_Tooltip_ability_research_bm_melee_hp_disabled_Description"             		"Increases health of melee creeps.\n<b><font color='#eedd44'>Requires:\n - Tech Lab</font></b>\n"
-		"DOTA_Tooltip_ability_item_research_bm_melee_hp"                               		"Cancel Upgrade"
+
+		"DOTA_Tooltip_ability_item_research_bm_melee_hp"                               		"Cancel Research"
 		"DOTA_Tooltip_ability_item_research_bm_melee_hp_Description"                   		""
 
 
@@ -357,6 +348,8 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_research_bm_melee_special_disabled"                         	"Research Bashlord"
 		"DOTA_Tooltip_ability_research_bm_melee_special_disabled_Description"             	"Increases attack speed and grants each attack a chance to stun the target. Turn your Melee Creep into a Bashlord by giving it this ability. Even towers can be bashed!\n<b><font color='#eedd44'>Requires:\n - Library of Spells</font></b>\n"
 
+		"DOTA_Tooltip_ability_item_research_bm_melee_special"                             	"Cancel Research"
+		"DOTA_Tooltip_ability_item_research_bm_melee_special_Description"                 	""
 
 
 		//Ranged Armor
@@ -427,7 +420,7 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_research_bm_ranged_hp_disabled"                         		"Research Health Vial"
 		"DOTA_Tooltip_ability_research_bm_ranged_hp_disabled_Description"             		"Increases health of ranged creeps.\n<b><font color='#eedd44'>Requires:\n - Tech Lab</font></b>\n"
 
-		"DOTA_Tooltip_ability_item_research_bm_ranged_hp"                               	"Cancel Upgrade"
+		"DOTA_Tooltip_ability_item_research_bm_ranged_hp"                               	"Cancel Research"
 		"DOTA_Tooltip_ability_item_research_bm_ranged_hp_Description"                   	""
 
 
@@ -456,6 +449,8 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_research_bm_ranged_special_disabled"                        	"Research Corrupted Blade"
 		"DOTA_Tooltip_ability_research_bm_ranged_special_disabled_Description"            	"Grants bonus damage and reduces your target's armor. The Corruption debuff works against buildings as well.\n<b><font color='#eedd44'>Requires:\n - Library of Spells</font></b>\n"
 
+		"DOTA_Tooltip_ability_item_research_bm_ranged_special"                            	"Cancel Research"
+		"DOTA_Tooltip_ability_item_research_bm_ranged_special_Description"                	""
 
 
 		//Air Evasion
@@ -593,6 +588,9 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_research_purifier_bonus_lumber_research_time"               	"<font color='#057aff'>RESEARCH TIME</font>:"
 		"DOTA_Tooltip_ability_research_purifier_bonus_lumber_gold_cost"                   	"<font color='#fff22e'>GOLD COST</font>:"
 
+		"DOTA_Tooltip_ability_item_research_purifier_bonus_lumber"                        	"Cancel Research"
+		"DOTA_Tooltip_ability_item_research_purifier_bonus_lumber_Description"            	""
+
 
 		//Misc
 		//-------------------------------------------------------------
@@ -625,6 +623,15 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_modifier_command_aura_buff"                                         	"Vengeance Aura"
 		"DOTA_Tooltip_modifier_command_aura_buff_Description"                             	"12 percent bonus damage"
 
+		"DOTA_Tooltip_ability_bm_wardrums_aura"                                           	"War Drums Aura"
+		"DOTA_Tooltip_ability_bm_wardrums_aura_Description"                               	"The rhythm of the Thunderhide's heartbeat increases the attack speed and attack damage of nearby allies. "
+		"DOTA_Tooltip_ability_bm_wardrums_aura_attackspeed_bonus"                         	"ATTACK SPEED BONUS:"
+		"DOTA_Tooltip_ability_bm_wardrums_aura_damage_pct_bonus"                          	"ATTACK DAMAGE BONUS PERCENTAGE:"
+		"DOTA_Tooltip_ability_bm_wardrums_aura_radius"                                    	"RADIUS:"
+		"DOTA_Tooltip_modifier_bm_wardrums_aura_buff"                                     	"War Drums Aura"
+		"DOTA_Tooltip_modifier_bm_wardrums_aura_buff_Description"                         	"15 percent attack damage bonus and 15 attack speed bonus."
+
+
 		//-------------------
 		//Items
 		//-------------------
@@ -632,7 +639,6 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_item_boar_Description"                                      	""
 		"DOTA_Tooltip_ability_item_boar_duration"                            				"BOAR DURATION:"
 		"DOTA_Tooltip_ability_item_boar_gold_cost"                                			"<font color='#fff22e'>GOLD COST</font>:"
-		//"DOTA_Tooltip_ability_item_boar_max_count"                                		"MAX COUNT:"
 
 		"DOTA_Tooltip_ability_item_hawk"                                                  	"Hawk Scout"
 		"DOTA_Tooltip_ability_item_hawk_Description"                                      	""
