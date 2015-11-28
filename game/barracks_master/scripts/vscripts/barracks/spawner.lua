@@ -82,9 +82,9 @@ function AutoSpawnCreeps(player, buildingAbility, creepName, numberToSpawn, over
         unit:SetOwner(hero)
         ApplyModelToUnit(unit, team)
         ApplyColorToUnit(unit, playerColor)
-        if ability:GetAbilityName() == "medusa_split_shot" then 
-            ability:Toggle() 
-        end
+        
+        local split_shot = unit:FindAbilityByName("medusa_split_shot")
+        if split_shot then split_shot:Toggle() end
 
         -- Building Helper tie-ins
         unit.GoldCost = buildingAbility:GetSpecialValueFor("gold_cost") or 0
