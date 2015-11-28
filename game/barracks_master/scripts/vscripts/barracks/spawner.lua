@@ -83,8 +83,12 @@ function AutoSpawnCreeps(player, buildingAbility, creepName, numberToSpawn, over
         ApplyModelToUnit(unit, team)
         ApplyColorToUnit(unit, playerColor)
         
+        -- Turn on toggle for specific abilities -- cows
         local split_shot = unit:FindAbilityByName("medusa_split_shot")
-        if split_shot then split_shot:Toggle() end
+        if split_shot then split_shot:ToggleAbility() end
+
+        local mana_shield = unit:FindAbilityByName("medusa_mana_shield")
+        if mana_shield then mana_shield:ToggleAbility() end        
 
         -- Building Helper tie-ins
         unit.GoldCost = buildingAbility:GetSpecialValueFor("gold_cost") or 0

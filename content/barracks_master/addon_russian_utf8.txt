@@ -16,7 +16,10 @@
 "bm_updates_title"	"Updates"
 
 "bm_updates_text"	"
-Nov 27:
+----- Nov 27:
+• Medusa added: Spawnable at Portal of Heroes.
+
+----- Nov 27:
 • Players now start with 3x Clarities
 • Fixed bug causing Thunderhide to be spell immune.
 • Library of Spells cost reworked from 500gold/500lumber to 600gold/400lumber.
@@ -29,10 +32,10 @@ Nov 27:
 • Ancient Barracks model size reduced slightly.
 • Siege Barracks model size reduced slightly.
 
-Nov 27:
+----- Nov 27:
 • Russian tooltips update.
 
-Nov 26:
+----- Nov 26:
 • Fixed bug that Mystic Flare was not able to attack the Barracks Master.
 • Chaos Meteor roll distance reduced from 400 to 20.
 • Techies cooldown increased from 5 to 90sec.
@@ -561,6 +564,10 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_spawn_hero_beastmaster_Description"                           "Beastmaster имеет True Strike и увеличивает скорость атаки союзных юнитов на 15."
 		"DOTA_Tooltip_ability_spawn_hero_beastmaster_gold_cost"                             "<font color='#fff22e'>Стоимость(золота)</font>:"
 		"DOTA_Tooltip_ability_spawn_hero_beastmaster_lumber_cost"                           "<font color='#28fe77'>Стоимость(дерева)</font>:"
+
+		"DOTA_Tooltip_ability_spawn_hero_medusa"                                          	"Spawn Medusa"
+		"DOTA_Tooltip_ability_spawn_hero_medusa_Description"                              	"Medusa has True Strike and has Split Shot which allows her to attack up to 10 targets."
+		"DOTA_Tooltip_ability_spawn_hero_medusa_gold_cost"                                	"<font color='#fff22e'>GOLD COST</font>:"
 
 		"DOTA_Tooltip_ability_spawn_lumberjacks"                                     		"Спавнер Лесоруб"
 		"DOTA_Tooltip_ability_spawn_lumberjacks_Description"                              	"Люди часто думают, что Лесоруб размахивает руками бесцельно, но это не так. При более близком осмотре можно понять, что на самом деле они собирают дерево."

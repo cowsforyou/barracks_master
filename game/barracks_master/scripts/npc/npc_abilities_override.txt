@@ -247,6 +247,28 @@
             }
         }
     }
+
+    "medusa_mana_shield"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "MaxLevel"                      "1"
+
+        // Casting
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "damage_per_mana"       "1.6"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "absorption_tooltip"    "60"
+            }
+        }
+    }
 }
 
 
