@@ -2053,8 +2053,8 @@
 	    //----------------------------------------------------------------
 	    "AbilityLayout"             "4"
 	    "Ability1"                  "bm_truestrike"          // Ability 1.
-	    "Ability2"                  "medusa_split_shot"          // Ability 2.
-	    "Ability3"                  ""          // Ability 3.
+	    "Ability2"                  "medusa_mana_shield"          // Ability 2.
+	    "Ability3"                  "medusa_split_shot"          // Ability 3.
 	    "Ability4"                  ""          // Ability 4.
 	    "Ability5"                  ""          // Ability 5.
 	    "Ability6"                  ""          // Ability 6 - Extra.
@@ -2097,9 +2097,9 @@
 	
 	    // Status
 	    //----------------------------------------------------------------
-	    "StatusHealth"              "1000"      // Base health.
+	    "StatusHealth"              "800"      // Base health.
 	    "StatusHealthRegen"         "0.5"       // Health regeneration rate.
-	    "StatusMana"                "0"         // Base mana.
+	    "StatusMana"                "300"         // Base mana.
 	    "StatusManaRegen"           "0"         // Mana regeneration rate.
 	
 	    // Team
