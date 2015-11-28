@@ -665,7 +665,7 @@
 	        "01"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "bonus_attack_speed"    "25"
+	            "bonus_attack_speed"    "15"
 	        }
 	        "02"
 	        {
@@ -1115,7 +1115,7 @@
 	
 		"UnitName"						"bm_ancient_barracks"
 		"AbilityCooldown"				"0"
-		"AbilityGoldCost"				"700"
+		"AbilityGoldCost"				"900"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
 	
@@ -1129,7 +1129,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"700"
+				"gold_cost"				"900"
 			}
 			"03"
 			{
@@ -1177,7 +1177,7 @@
 	
 		"UnitName"						"bm_aviation_sanctuary"
 		"AbilityCooldown"				"0"
-		"AbilityGoldCost"				"400"
+		"AbilityGoldCost"				"350"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
 	
@@ -1191,7 +1191,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"400"
+				"gold_cost"				"350"
 			}
 			"03"
 			{
@@ -1239,7 +1239,7 @@
 	
 		"UnitName"						"bm_heroes"
 		"AbilityCooldown"				"0"
-		"AbilityGoldCost"				"300"
+		"AbilityGoldCost"				"600"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
 	
@@ -1253,12 +1253,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"300"
+				"gold_cost"				"600"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"100"
+				"lumber_cost"			"50"
 			}
 		}
 	
@@ -1300,7 +1300,7 @@
 		"AbilityCooldown"				"0"
 	
 		"BuildTime"						"45.0"
-		"AbilityGoldCost"				"600"
+		"AbilityGoldCost"				"800"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
 	
@@ -1314,7 +1314,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"600"
+				"gold_cost"				"800"
 			}
 			"03"
 			{
@@ -1362,7 +1362,7 @@
 	
 		"UnitName"						"bm_lumber_yard"
 		"AbilityCooldown"				"0"
-		"AbilityGoldCost"				"350"
+		"AbilityGoldCost"				"400"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
 	
@@ -1376,7 +1376,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"350"
+				"gold_cost"				"400"
 			}
 		}
 	
@@ -1411,7 +1411,7 @@
 		"AbilityCooldown"				"0"
 	
 		"BuildTime"						"100.0"
-		"AbilityGoldCost"				"600"
+		"AbilityGoldCost"				"980"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
 	
@@ -1425,7 +1425,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"700"
+				"gold_cost"				"980"
 			}
 			"03"
 			{
@@ -1473,7 +1473,7 @@
 	
 		"UnitName"						"bm_melee_barracks"
 		"AbilityCooldown"				"0"
-		"AbilityGoldCost"				"500"
+		"AbilityGoldCost"				"250"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
 	
@@ -1487,7 +1487,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"500"
+				"gold_cost"				"250"
 			}
 		}
 	
@@ -1512,7 +1512,7 @@
 		// BuildingHelper info
 		"Building"						"1" //bool
 		"BuildingSize"					"3" 
-		"BuildTime"						"90.0"
+		"BuildTime"						"70.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
 		"Scale"							"0" //bool
@@ -1523,7 +1523,7 @@
 	
 		"UnitName"						"bm_purifier"
 		"AbilityCooldown"				"0"
-		"AbilityGoldCost"				"450"
+		"AbilityGoldCost"				"850"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
 	
@@ -1532,12 +1532,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"build_time"			"90.0"
+				"build_time"			"70.0"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"450"
+				"gold_cost"				"850"
 			}
 			"03"
 			{
@@ -1585,7 +1585,7 @@
 	
 		"UnitName"						"bm_ranged_barracks"
 		"AbilityCooldown"				"0"
-		"AbilityGoldCost"				"300"
+		"AbilityGoldCost"				"200"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
 	
@@ -1599,7 +1599,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"300"
+				"gold_cost"				"200"
 			}
 		}
 	
@@ -1635,7 +1635,7 @@
 	
 		"UnitName"						"bm_siege_barracks"
 		"AbilityCooldown"				"0"
-		"AbilityGoldCost"				"400"
+		"AbilityGoldCost"				"500"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
 	
@@ -1649,7 +1649,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"400"
+				"gold_cost"				"500"
 			}
 		}
 	
@@ -1692,7 +1692,7 @@
 		"UnitName"						"bm_skeleton_barracks"
 		"AbilityCooldown"				"0"
 		"BuildTime"						"20.0"	
-		"AbilityGoldCost"				"400"
+		"AbilityGoldCost"				"150"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
 	
@@ -1706,7 +1706,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"400"
+				"gold_cost"				"150"
 			}
 		}
 	
@@ -1742,7 +1742,7 @@
 	
 		"UnitName"						"bm_tech_lab"
 		"AbilityCooldown"				"0"
-		"AbilityGoldCost"				"400"
+		"AbilityGoldCost"				"500"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
 	
@@ -1756,7 +1756,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"400"
+				"gold_cost"				"500"
 			}
 			"03"
 			{
@@ -1803,7 +1803,7 @@
 		"AbilityCooldown"				"0"
 	
 		"BuildTime"						"100.0"
-		"AbilityGoldCost"				"600"
+		"AbilityGoldCost"				"980"
 		"MaxBuildingCount"				"1"
 		// End of BuildingHelper info
 	
@@ -1817,7 +1817,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"700"
+				"gold_cost"				"980"
 			}
 			"03"
 			{
@@ -2973,7 +2973,7 @@
 	    "AbilityTextureName"            "evasion"
 	    "MaxLevel"                      "3"
 	
-	    "AbilityGoldCost"               "100 150 250"
+	    "AbilityGoldCost"               "150 350 550"
 	    "AbilityChannelTime"            "45 60 180"
 	    
 	    "AbilitySpecial"
@@ -2993,7 +2993,7 @@
 	        "03"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "gold_cost"             "100 150 250"
+	        "gold_cost"             "150 350 550"
 	      }
 	 
 	        "04"
@@ -3040,7 +3040,7 @@
 	    "AbilityTextureName"            "armor"
 	    "MaxLevel"                      "3"
 	
-	    "AbilityGoldCost"               "100 200 300"
+	    "AbilityGoldCost"               "100 200 450"
 	    "AbilityChannelTime"            "30 45 180"
 	    
 	    "AbilitySpecial"
@@ -3060,7 +3060,7 @@
 	        "03"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "gold_cost"             "100 200 300"
+	        "gold_cost"             "100 200 450"
 	      }
 	 
 	        "04"
@@ -3107,7 +3107,7 @@
 	    "AbilityTextureName"            "damage"
 	    "MaxLevel"                      "3"
 	
-	    "AbilityGoldCost"               "110 200 400"
+	    "AbilityGoldCost"               "110 260 500"
 	    "AbilityChannelTime"            "45 60 180"
 	    
 	    "AbilitySpecial"
@@ -3127,7 +3127,7 @@
 	        "03"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "gold_cost"             "110 200 400"
+	        "gold_cost"             "110 260 500"
 	      }
 	 
 	        "04"
@@ -3174,7 +3174,7 @@
 	    "AbilityTextureName"            "health_vial2"
 	    "MaxLevel"                      "1"
 	
-	    "AbilityGoldCost"               "500"
+	    "AbilityGoldCost"               "700"
 	    "AbilityChannelTime"            "90"
 	    
 	    "AbilitySpecial"
@@ -3194,7 +3194,7 @@
 	        "03"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "gold_cost"             "500"
+	        "gold_cost"             "700"
 	      }
 	 
 	        "04"
@@ -3280,7 +3280,7 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"1200"
+				"lumber_cost"			"1100"
 			}
 		}
 	
@@ -3327,7 +3327,7 @@
 	    "AbilityTextureName"            "armor"
 	    "MaxLevel"                      "3"
 	
-	    "AbilityGoldCost"               "50 100 250"
+	    "AbilityGoldCost"               "100 200 450"
 	    "AbilityChannelTime"            "30 45 180"
 	    
 	    "AbilitySpecial"
@@ -3347,7 +3347,7 @@
 	        "03"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "gold_cost"             "50 100 250"
+	        "gold_cost"             "100 200 450"
 	      }
 	 
 	        "04"
@@ -3394,7 +3394,7 @@
 	    "AbilityTextureName"            "damage"
 	    "MaxLevel"                      "3"
 	
-	    "AbilityGoldCost"               "70 125 350"
+	    "AbilityGoldCost"               "150 300 550"
 	    "AbilityChannelTime"            "30 60 180"
 	    
 	    "AbilitySpecial"
@@ -3414,7 +3414,7 @@
 	        "03"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "gold_cost"             "70 125 350"
+	        "gold_cost"             "150 300 550"
 	      }
 	 
 	        "04"
@@ -3461,7 +3461,7 @@
 	    "AbilityTextureName"            "health_vial2"
 	    "MaxLevel"                      "1"
 	
-	    "AbilityGoldCost"               "350"
+	    "AbilityGoldCost"               "650"
 	    "AbilityChannelTime"            "90"
 	    
 	    "AbilitySpecial"
@@ -3481,7 +3481,7 @@
 	        "03"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "gold_cost"             "350"
+	        "gold_cost"             "650"
 	      }
 	 
 	        "04"
@@ -3535,7 +3535,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 	
-		"AbilityGoldCost"				"650"
+		"AbilityGoldCost"				"900"
 		"AbilityChannelTime"			"110"
 		
 		"AbilitySpecial"
@@ -3558,7 +3558,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"650"
+				"gold_cost"				"900"
 			}
 			"05"
 			{
@@ -3610,7 +3610,7 @@
 	    "AbilityTextureName"            "beastmaster_call_of_the_wild"
 	    "MaxLevel"                      "1"
 	
-	    "AbilityGoldCost"               "120"
+	    "AbilityGoldCost"               "180"
 	    "AbilityChannelTime"            "60"
 	    
 	    "AbilitySpecial"
@@ -3624,7 +3624,7 @@
 	        "02"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "gold_cost"             "120"
+	        "gold_cost"             "180"
 	      }
 	 
 	        "03"
@@ -3672,7 +3672,7 @@
 	    "AbilityTextureName"            "techies"
 	    "MaxLevel"                      "1"
 	
-	    "AbilityGoldCost"               "50"
+	    "AbilityGoldCost"               "300"
 	    "AbilityChannelTime"            "60"
 	    
 	    "AbilitySpecial"
@@ -3686,7 +3686,7 @@
 	        "02"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "gold_cost"             "50"
+	        "gold_cost"             "300"
 	      }
 	 
 	        "03"
@@ -3849,7 +3849,7 @@
 	    "AbilityTextureName"            "wood_chips"
 	    "MaxLevel"                      "3"
 	
-	    "AbilityGoldCost"               "200 400 600"
+	    "AbilityGoldCost"               "350 550 800"
 	    "AbilityChannelTime"            "60 120 240"
 	    
 	    "AbilitySpecial"
@@ -3869,7 +3869,7 @@
 	        "03"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "gold_cost"             "200 400 600"
+	        "gold_cost"             "350 550 800"
 	      }
 	    }
 	
@@ -3903,15 +3903,82 @@
 	        }
 	    }
 	}
+	"research_spawn_air_creeps"
+	{
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "air_barracks_increase"
+	    "MaxLevel"                      "5"
+	
+	    "AbilityGoldCost"               "0 100 300 500 800"
+	    "AbilityChannelTime"            "0 3 5 5 7"
+	    
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "creep_count"           "1 2 3 4 5"
+	        }
+	      
+	        "02"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "research_time"         "0 3 5 5 7"
+	        }
+	
+	        "03"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "gold_cost"             "0 100 300 500 800"
+	        }
+	 
+	        "04"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "lumber_cost"           "0 0 100 150 200"
+	        }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "buildings/queue.lua"
+	            "Function"      "EnqueueUnit"
+	        }
+	    }
+	
+	    "OnChannelSucceeded"
+	    {
+	        "FireSound"
+	        {
+	            "EffectName"    "BarracksMaster.ResearchComplete"
+	            "Target"        "CASTER"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "buildings/queue.lua"
+	            "Function"      "NextQueue"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "buildings/research.lua"
+	            "Function"      "ResearchComplete"
+	        }
+	    }
+	}
 	"research_spawn_melee_creeps"
 	{
 	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 	    "BaseClass"                     "ability_datadriven"
-	    "AbilityTextureName"            "armor"
+	    "AbilityTextureName"            "melee_barracks_increase"
 	    "MaxLevel"                      "6"
 	
-	    "AbilityGoldCost"               "0 100 200 300 300 300"
-	    "AbilityChannelTime"            "0 30 45 180 180 180"
+	    "AbilityGoldCost"               "0 60 100 150 300 600"
+	    "AbilityChannelTime"            "0 3 5 5 7 7"
 	    
 	    "AbilitySpecial"
 	    {
@@ -3924,19 +3991,220 @@
 	        "02"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "research_time"         "0 30 45 180 180 180"
+	            "research_time"         "0 3 5 5 7 7"
 	        }
 	
 	        "03"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "gold_cost"             "0 100 200 300 300 300"
+	            "gold_cost"             "0 60 100 150 300 600"
 	        }
 	 
 	        "04"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "lumber_cost"           "0 0 0 125 125 125"
+	            "lumber_cost"           "0 0 0 0 80 120"
+	        }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "buildings/queue.lua"
+	            "Function"      "EnqueueUnit"
+	        }
+	    }
+	
+	    "OnChannelSucceeded"
+	    {
+	        "FireSound"
+	        {
+	            "EffectName"    "BarracksMaster.ResearchComplete"
+	            "Target"        "CASTER"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "buildings/queue.lua"
+	            "Function"      "NextQueue"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "buildings/research.lua"
+	            "Function"      "ResearchComplete"
+	        }
+	    }
+	}
+	"research_spawn_ranged_creeps"
+	{
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "ranged_barracks_increase"
+	    "MaxLevel"                      "5"
+	
+	    "AbilityGoldCost"               "0 100 200 400 700"
+	    "AbilityChannelTime"            "0 3 5 5 7"
+	    
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "creep_count"           "1 2 3 4 5"
+	        }
+	      
+	        "02"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "research_time"         "0 3 5 5 7"
+	        }
+	
+	        "03"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "gold_cost"             "0 100 200 400 700"
+	        }
+	 
+	        "04"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "lumber_cost"           "0 0 40 80 120"
+	        }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "buildings/queue.lua"
+	            "Function"      "EnqueueUnit"
+	        }
+	    }
+	
+	    "OnChannelSucceeded"
+	    {
+	        "FireSound"
+	        {
+	            "EffectName"    "BarracksMaster.ResearchComplete"
+	            "Target"        "CASTER"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "buildings/queue.lua"
+	            "Function"      "NextQueue"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "buildings/research.lua"
+	            "Function"      "ResearchComplete"
+	        }
+	    }
+	}
+	"research_spawn_siege_creeps"
+	{
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "siege_barracks_increase"
+	    "MaxLevel"                      "3"
+	
+	    "AbilityGoldCost"               "0 500 800"
+	    "AbilityChannelTime"            "0 5 7"
+	    
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "creep_count"           "1 2 3"
+	        }
+	      
+	        "02"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "research_time"         "0 5 7"
+	        }
+	
+	        "03"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "gold_cost"             "0 500 800"
+	        }
+	 
+	        "04"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "lumber_cost"           "0 100 200"
+	        }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "buildings/queue.lua"
+	            "Function"      "EnqueueUnit"
+	        }
+	    }
+	
+	    "OnChannelSucceeded"
+	    {
+	        "FireSound"
+	        {
+	            "EffectName"    "BarracksMaster.ResearchComplete"
+	            "Target"        "CASTER"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "buildings/queue.lua"
+	            "Function"      "NextQueue"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "buildings/research.lua"
+	            "Function"      "ResearchComplete"
+	        }
+	    }
+	}
+	"research_spawn_skeleton_creeps"
+	{
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "skeleton_barracks_increase"
+	    "MaxLevel"                      "3"
+	
+	    "AbilityGoldCost"               "0 80 150"
+	    "AbilityChannelTime"            "0 3 5"
+	    
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "creep_count"           "2 3 4"
+	        }
+	      
+	        "02"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "research_time"         "0 3 5"
+	        }
+	
+	        "03"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "gold_cost"             "0 80 150"
+	        }
+	 
+	        "04"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "lumber_cost"           "0 0 0"
 	        }
 	    }
 	
@@ -4215,7 +4483,7 @@
 	{
 	    "BaseClass"                     "ability_datadriven"
 	    "AbilityTextureName"            "visage_summon_familiars"
-	    "MaxLevel"                      "1"
+	    "MaxLevel"                      "5"
 	
 	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	    "AbilityCastPoint"              "0"
@@ -4225,7 +4493,7 @@
 	        "01"
 	        {
 	            "var_type"				"FIELD_INTEGER"
-	            "creep_count"			"2"
+	            "creep_count"			"1 2 3 4 5"
 	        }
 	    }
 	
@@ -4322,7 +4590,7 @@
 	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	    "AbilityCastPoint"              "0"
 	
-	    "AbilityGoldCost"               "250"
+	    "AbilityGoldCost"               "300"
 	    "AbilityCooldown"               "40.0"
 	
 	    "AbilitySpecial"
@@ -4336,7 +4604,7 @@
 	        "02"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "gold_cost"             "250"
+	            "gold_cost"             "300"
 	        }
 	
 	        "03"
@@ -4369,7 +4637,7 @@
 	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	    "AbilityCastPoint"              "0"
 	
-	    "AbilityGoldCost"               "600"
+	    "AbilityGoldCost"               "700"
 	    "AbilityCooldown"               "15.0"
 	
 	    "AbilitySpecial"
@@ -4383,7 +4651,7 @@
 	        "02"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "gold_cost"             "600"
+	            "gold_cost"             "700"
 	        }
 	    }
 	
@@ -4410,7 +4678,7 @@
 	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	    "AbilityCastPoint"              "0"
 	
-	    "AbilityGoldCost"               "150"
+	    "AbilityGoldCost"               "200"
 	    "AbilityCooldown"               "40.0"
 	
 	    "AbilitySpecial"
@@ -4424,7 +4692,7 @@
 	        "02"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "gold_cost"             "150"
+	            "gold_cost"             "200"
 	        }
 	
 	        "03"
@@ -4505,7 +4773,7 @@
 	    "AbilityCastPoint"              "0"
 	
 	    "AbilityGoldCost"               "80"
-	    "AbilityCooldown"               "30.0"
+	    "AbilityCooldown"               "25.0"
 	
 	    "AbilitySpecial"
 	    {
@@ -4552,7 +4820,7 @@
 	{
 	    "BaseClass"                     "ability_datadriven"
 	    "AbilityTextureName"            "melee_barracks3"
-	    "MaxLevel"                      "1"
+	    "MaxLevel"                      "6"
 	
 	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	    "AbilityCastPoint"              "0"
@@ -4562,7 +4830,7 @@
 	        "01"
 	        {
 	            "var_type"				"FIELD_INTEGER"
-	            "creep_count"			"4"
+	            "creep_count"			"2 3 4 5 6 7"
 	        }
 	    }
 	
@@ -4603,7 +4871,7 @@
 	{
 	    "BaseClass"                     "ability_datadriven"
 	    "AbilityTextureName"            "ranged_barracks3"
-	    "MaxLevel"                      "1"
+	    "MaxLevel"                      "5"
 	
 	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	    "AbilityCastPoint"              "0"
@@ -4613,7 +4881,7 @@
 	        "01"
 	        {
 	            "var_type"				"FIELD_INTEGER"
-	            "creep_count"			"1"
+	            "creep_count"			"1 2 3 4 5"
 	        }
 	    }
 	
@@ -4654,7 +4922,7 @@
 	{
 	    "BaseClass"                     "ability_datadriven"
 	    "AbilityTextureName"            "siege_barracks3"
-	    "MaxLevel"                      "1"
+	    "MaxLevel"                      "3"
 	
 	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	    "AbilityCastPoint"              "0"
@@ -4664,7 +4932,7 @@
 	        "01"
 	        {
 	            "var_type"				"FIELD_INTEGER"
-	            "creep_count"			"1"
+	            "creep_count"			"1 2 3"
 	        }
 	    }
 	
@@ -4705,7 +4973,7 @@
 	{
 	    "BaseClass"                     "ability_datadriven"
 	    "AbilityTextureName"            "skeleton_barracks4"
-	    "MaxLevel"                      "1"
+	    "MaxLevel"                      "3"
 	
 	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	    "AbilityCastPoint"              "0"
@@ -4715,7 +4983,7 @@
 	        "01"
 	        {
 	            "var_type"				"FIELD_INTEGER"
-	            "creep_count"			"4"
+	            "creep_count"			"2 3 4"
 	        }
 	    }
 	

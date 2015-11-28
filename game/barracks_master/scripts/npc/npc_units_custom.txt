@@ -95,10 +95,11 @@
 		//----------------------------------------------------------------
 		"AbilityLayout"				"5"
 		"Ability1"					"spawn_air_creeps"			// Ability 1
-		"Ability2"					"research_bm_air_evasion"		
-		"Ability3"					"research_bm_scout_hawk"			
-		"Ability4"					""		
-		"Ability5"					""			
+		"Ability2"					"research_spawn_air_creeps"		
+		"Ability3"					"research_bm_air_evasion"		
+		"Ability4"					"research_bm_scout_hawk"			
+		"Ability5"					""		
+		"Ability6"					""			
 		"Ability10"					"ability_building"
 		"Ability11"					"ability_building_queue"
 	
@@ -466,13 +467,14 @@
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"AbilityLayout"				"5"
+		"AbilityLayout"				"6"
 	
 		"Ability1"					"spawn_melee_creeps"
-		"Ability2"					"research_bm_melee_armor"
-		"Ability3"					"research_bm_melee_damage"
-		"Ability4"					"research_bm_melee_hp_disabled"
-		"Ability5"					"research_bm_melee_special_disabled"
+		"Ability2"					"research_spawn_melee_creeps"
+		"Ability3"					"research_bm_melee_armor"
+		"Ability4"					"research_bm_melee_damage"
+		"Ability5"					"research_bm_melee_hp_disabled"
+		"Ability6"					"research_bm_melee_special_disabled"
 		"Ability9"					""
 		"Ability10"					"ability_building"
 		"Ability11"					"ability_building_queue"
@@ -618,13 +620,14 @@
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"AbilityLayout"				"5"
+		"AbilityLayout"				"6"
 		"Ability1"					"spawn_ranged_creeps"
-		"Ability2"					"research_bm_ranged_armor"
-		"Ability3"					"research_bm_ranged_damage"
-		"Ability4"					"research_bm_ranged_hp_disabled"
-		"Ability5"					"research_bm_ranged_special_disabled"
-		"Ability6"					""
+		"Ability2"					"research_spawn_ranged_creeps"	
+		"Ability3"					"research_bm_ranged_armor"
+		"Ability4"					"research_bm_ranged_damage"
+		"Ability5"					"research_bm_ranged_hp_disabled"
+		"Ability6"					"research_bm_ranged_special_disabled"
+		"Ability9"					""
 		"Ability10"					"ability_building"
 		"Ability11"					"ability_building_queue"
 		
@@ -695,7 +698,7 @@
 		//----------------------------------------------------------------
 		"AbilityLayout"				"5"
 		"Ability1"					"spawn_siege_creeps"
-		"Ability2"					""
+		"Ability2"					"research_spawn_siege_creeps"
 		"Ability3"					""
 		"Ability4"					""
 		"Ability10"					"ability_building"
@@ -768,9 +771,10 @@
 		//----------------------------------------------------------------
 		"AbilityLayout"				"5"
 		"Ability1"					"spawn_skeleton_creeps"
-		"Ability2"					"research_bm_skeleton_damage"
-		"Ability3"					""
+		"Ability2"					"research_spawn_skeleton_creeps"	
+		"Ability3"					"research_bm_skeleton_damage"
 		"Ability4"					""
+		"Ability5"					""
 		"Ability10"					"ability_building"
 		"Ability11"					"ability_building_queue"
 		

@@ -16,6 +16,10 @@
 "bm_updates_title"	"Updates"
 
 "bm_updates_text"	"
+----- Nov 28:
+• V1.1 released! Creep count can now be increased at all barracks. Visit the main page for the full patch notes.
+• **We are hosting our first Barracks Master Amateur Tournament on Dec 5th** The tournament is open to everyone worldwide! First come first serve. Visit the main page for the link to sign up.
+
 ----- Nov 27:
 • Medusa added: Spawnable at Portal of Heroes.
 
@@ -34,21 +38,6 @@
 
 ----- Nov 27:
 • Russian tooltips update.
-
------ Nov 26:
-• Fixed bug that Mystic Flare was not able to attack the Barracks Master.
-• Chaos Meteor roll distance reduced from 400 to 20.
-• Techies cooldown increased from 5 to 90sec.
-• Techies gold cost increased from 250 to 350.
-• Melee Barracks build time decreased from 30 to 25sec.
-• The Stump build time decreased from 35 to 30sec.
-• Siege Barracks build time decreased from 35 to 30sec.
-• Ancient Barracks build time decreased from 45 to 35sec.
-• Portal of Heroes build time decreased from 40 to 35sec.
-• Portal of Heroes lumber cost decreased from 150 to 100.
-• Library of Spells build time decreased from 50 to 45sec.
-• Library of Spells lumber cost decreased from 600 to 500. 
-• Luminous and Unpromising Tower build time decreased from 120 to 100sec.
 "
 
 "bm_contact_text"	"
@@ -531,21 +520,66 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_spawn_skeleton_creeps_Description"                            "Automatically spawns Skeleton Creeps"
 		"DOTA_Tooltip_ability_spawn_skeleton_creeps_creep_count"                            "CREEP COUNT:"	
 
+		"DOTA_Tooltip_ability_research_spawn_skeleton_creeps"                             	"Increase Spawn Count"
+		"DOTA_Tooltip_ability_research_spawn_skeleton_creeps_Description"                 	"Increase the number of Skeleton Creeps that spawn."
+		"DOTA_Tooltip_ability_research_spawn_skeleton_creeps_creep_count"                 	"CREEP COUNT:"
+		"DOTA_Tooltip_ability_research_spawn_skeleton_creeps_research_time"               	"<font color='#057aff'>RESEARCH TIME</font>:"
+		"DOTA_Tooltip_ability_research_spawn_skeleton_creeps_gold_cost"                   	"<font color='#fff22e'>GOLD COST</font>:"
+		"DOTA_Tooltip_ability_research_spawn_skeleton_creeps_lumber_cost"                 	"<font color='#28fe77'>LUMBER COST</font>:"
+
+
+
 		"DOTA_Tooltip_ability_spawn_melee_creeps"                                           "Melee Spawner"
 		"DOTA_Tooltip_ability_spawn_melee_creeps_Description"                               "Automatically spawns Melee Creeps"
-		"DOTA_Tooltip_ability_spawn_melee_creeps_creep_count"                               "CREEP COUNT:"		
+		"DOTA_Tooltip_ability_spawn_melee_creeps_creep_count"                               "CREEP COUNT:"
+
+		"DOTA_Tooltip_ability_research_spawn_melee_creeps"                                	"Increase Spawn Count"
+		"DOTA_Tooltip_ability_research_spawn_melee_creeps_Description"                    	"Increase the number of Melee Creeps that spawn."
+		"DOTA_Tooltip_ability_research_spawn_melee_creeps_creep_count"                    	"CREEP COUNT:"
+		"DOTA_Tooltip_ability_research_spawn_melee_creeps_research_time"                  	"<font color='#057aff'>RESEARCH TIME</font>:"
+		"DOTA_Tooltip_ability_research_spawn_melee_creeps_gold_cost"                      	"<font color='#fff22e'>GOLD COST</font>:"
+		"DOTA_Tooltip_ability_research_spawn_melee_creeps_lumber_cost"                    	"<font color='#28fe77'>LUMBER COST</font>:"
+
+
 
 		"DOTA_Tooltip_ability_spawn_ranged_creeps"                                     		"Ranged Spawner"
 		"DOTA_Tooltip_ability_spawn_ranged_creeps_Description"                              "Automatically spawns Ranged Creeps"
 		"DOTA_Tooltip_ability_spawn_ranged_creeps_creep_count"                              "CREEP COUNT:"	
 
+		"DOTA_Tooltip_ability_research_spawn_ranged_creeps"                               	"Increase Spawn Count"
+		"DOTA_Tooltip_ability_research_spawn_ranged_creeps_Description"                   	"Increase the number of Ranged Creeps that spawn."
+		"DOTA_Tooltip_ability_research_spawn_ranged_creeps_creep_count"                   	"CREEP COUNT:"
+		"DOTA_Tooltip_ability_research_spawn_ranged_creeps_research_time"                 	"<font color='#057aff'>RESEARCH TIME</font>:"
+		"DOTA_Tooltip_ability_research_spawn_ranged_creeps_gold_cost"                     	"<font color='#fff22e'>GOLD COST</font>:"
+		"DOTA_Tooltip_ability_research_spawn_ranged_creeps_lumber_cost"                   	"<font color='#28fe77'>LUMBER COST</font>:"
+
+
+
 		"DOTA_Tooltip_ability_spawn_siege_creeps"                                     		"Siege Spawner"
 		"DOTA_Tooltip_ability_spawn_siege_creeps_Description"                              	"Automatically spawns Siege Creeps"
 		"DOTA_Tooltip_ability_spawn_siege_creeps_creep_count"                              	"CREEP COUNT:"	
 
+		"DOTA_Tooltip_ability_research_spawn_siege_creeps"                                	"Increase Spawn Count"
+		"DOTA_Tooltip_ability_research_spawn_siege_creeps_Description"                    	"Increase the number of Siege Creeps that spawn."
+		"DOTA_Tooltip_ability_research_spawn_siege_creeps_creep_count"                    	"CREEP COUNT:"
+		"DOTA_Tooltip_ability_research_spawn_siege_creeps_research_time"                  	"<font color='#057aff'>RESEARCH TIME</font>:"
+		"DOTA_Tooltip_ability_research_spawn_siege_creeps_gold_cost"                      	"<font color='#fff22e'>GOLD COST</font>:"
+		"DOTA_Tooltip_ability_research_spawn_siege_creeps_lumber_cost"                    	"<font color='#28fe77'>LUMBER COST</font>:"
+
+
+
 		"DOTA_Tooltip_ability_spawn_air_creeps"                                     		"Air Spawner"
 		"DOTA_Tooltip_ability_spawn_air_creeps_Description"                              	"Automatically spawns Air Creeps."
 		"DOTA_Tooltip_ability_spawn_air_creeps_creep_count"                              	"COUNT:"	
+
+		"DOTA_Tooltip_ability_research_spawn_air_creeps"                                  	"Increase Spawn Count"
+		"DOTA_Tooltip_ability_research_spawn_air_creeps_Description"                      	"Increase the number of Air Creeps that spawn."
+		"DOTA_Tooltip_ability_research_spawn_air_creeps_creep_count"                      	"CREEP COUNT:"
+		"DOTA_Tooltip_ability_research_spawn_air_creeps_research_time"                    	"<font color='#057aff'>RESEARCH TIME</font>:"
+		"DOTA_Tooltip_ability_research_spawn_air_creeps_gold_cost"                        	"<font color='#fff22e'>GOLD COST</font>:"
+		"DOTA_Tooltip_ability_research_spawn_air_creeps_lumber_cost"                      	"<font color='#28fe77'>LUMBER COST</font>:"
+
+
 
 		"DOTA_Tooltip_ability_spawn_ancient_creeps"                                     	"Ancient Spawner"
 		"DOTA_Tooltip_ability_spawn_ancient_creeps_Description"                             "Automatically spawns your chosen Ancient. Select a different Ancient to toggle."
@@ -661,6 +695,6 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_item_last_stand_Description"                                  "The Barracks Master channels all his inner strength to deal a devastating blow to anyone who dares oppose him. Limited charges. Use wisely."
 		"DOTA_Tooltip_ability_item_last_stand_damage"                            			"DAMAGE:"
 		"DOTA_Tooltip_ability_item_last_stand_radius"                               		"RADIUS:"		
-		
+
 	}
 }

@@ -5,7 +5,7 @@
     "AbilityTextureName"            "armor"
     "MaxLevel"                      "3"
 
-    "AbilityGoldCost"               "100 200 300"
+    "AbilityGoldCost"               "100 200 450"
     "AbilityChannelTime"            "30 45 180"
     
     "AbilitySpecial"
@@ -25,7 +25,7 @@
         "03"
       {
         "var_type"              "FIELD_INTEGER"
-        "gold_cost"             "100 200 300"
+        "gold_cost"             "100 200 450"
       }
  
         "04"

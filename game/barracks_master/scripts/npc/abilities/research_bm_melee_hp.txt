@@ -5,7 +5,7 @@
     "AbilityTextureName"            "health_vial2"
     "MaxLevel"                      "1"
 
-    "AbilityGoldCost"               "500"
+    "AbilityGoldCost"               "700"
     "AbilityChannelTime"            "90"
     
     "AbilitySpecial"
@@ -25,7 +25,7 @@
         "03"
       {
         "var_type"              "FIELD_INTEGER"
-        "gold_cost"             "500"
+        "gold_cost"             "700"
       }
  
         "04"

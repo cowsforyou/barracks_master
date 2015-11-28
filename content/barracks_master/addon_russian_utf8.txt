@@ -16,6 +16,10 @@
 "bm_updates_title"	"Updates"
 
 "bm_updates_text"	"
+----- Nov 28:
+• V1.1 released! Creep count can now be increased at all barracks. Visit the main page for the full patch notes.
+• **We are hosting our first Barracks Master Amateur Tournament on Dec 5th** The tournament is open to everyone worldwide! First come first serve. Visit the main page for the link to sign up.
+
 ----- Nov 27:
 • Medusa added: Spawnable at Portal of Heroes.
 
@@ -34,21 +38,6 @@
 
 ----- Nov 27:
 • Russian tooltips update.
-
------ Nov 26:
-• Fixed bug that Mystic Flare was not able to attack the Barracks Master.
-• Chaos Meteor roll distance reduced from 400 to 20.
-• Techies cooldown increased from 5 to 90sec.
-• Techies gold cost increased from 250 to 350.
-• Melee Barracks build time decreased from 30 to 25sec.
-• The Stump build time decreased from 35 to 30sec.
-• Siege Barracks build time decreased from 35 to 30sec.
-• Ancient Barracks build time decreased from 45 to 35sec.
-• Portal of Heroes build time decreased from 40 to 35sec.
-• Portal of Heroes lumber cost decreased from 150 to 100.
-• Library of Spells build time decreased from 50 to 45sec.
-• Library of Spells lumber cost decreased from 600 to 500. 
-• Luminous and Unpromising Tower build time decreased from 120 to 100sec.
 "
 
 "bm_contact_text"	"

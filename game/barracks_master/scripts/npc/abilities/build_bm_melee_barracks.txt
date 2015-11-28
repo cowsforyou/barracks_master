@@ -21,7 +21,7 @@
 
 	"UnitName"						"bm_melee_barracks"
 	"AbilityCooldown"				"0"
-	"AbilityGoldCost"				"500"
+	"AbilityGoldCost"				"250"
 	"MaxBuildingCount"				"1"
 	// End of BuildingHelper info
 
@@ -35,7 +35,7 @@
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"gold_cost"				"500"
+			"gold_cost"				"250"
 		}
 	}
 

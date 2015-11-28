@@ -20,7 +20,7 @@
 	"AbilityCooldown"				"0"
 
 	"BuildTime"						"45.0"
-	"AbilityGoldCost"				"600"
+	"AbilityGoldCost"				"800"
 	"MaxBuildingCount"				"1"
 	// End of BuildingHelper info
 
@@ -34,7 +34,7 @@
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"gold_cost"				"600"
+			"gold_cost"				"800"
 		}
 		"03"
 		{

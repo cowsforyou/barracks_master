@@ -21,7 +21,7 @@
 
 	"UnitName"						"bm_aviation_sanctuary"
 	"AbilityCooldown"				"0"
-	"AbilityGoldCost"				"400"
+	"AbilityGoldCost"				"350"
 	"MaxBuildingCount"				"1"
 	// End of BuildingHelper info
 
@@ -35,7 +35,7 @@
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"gold_cost"				"400"
+			"gold_cost"				"350"
 		}
 		"03"
 		{

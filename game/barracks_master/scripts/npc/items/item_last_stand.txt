@@ -55,13 +55,13 @@
         "01"
         {
             "var_type"                  "FIELD_FLOAT"
-            "radius"                    "400"
+            "radius"                    "450"
         }
 
         "02"
         {
             "var_type"                  "FIELD_INTEGER"
-            "damage"                    "1400"
+            "damage"                    "1800"
         }
 
         "03"

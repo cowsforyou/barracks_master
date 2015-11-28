@@ -6,7 +6,7 @@
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 
-	"AbilityGoldCost"				"650"
+	"AbilityGoldCost"				"900"
 	"AbilityChannelTime"			"110"
 	
 	"AbilitySpecial"
@@ -29,7 +29,7 @@
 		"04"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"gold_cost"				"650"
+			"gold_cost"				"900"
 		}
 		"05"
 		{

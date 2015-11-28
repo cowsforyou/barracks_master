@@ -3,7 +3,7 @@
 {
     "BaseClass"                     "ability_datadriven"
     "AbilityTextureName"            "melee_barracks3"
-    "MaxLevel"                      "1"
+    "MaxLevel"                      "6"
 
     "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
     "AbilityCastPoint"              "0"
@@ -13,7 +13,7 @@
         "01"
         {
             "var_type"				"FIELD_INTEGER"
-            "creep_count"			"4"
+            "creep_count"			"2 3 4 5 6 7"
         }
     }
 

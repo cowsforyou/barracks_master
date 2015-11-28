@@ -5,7 +5,7 @@
     "AbilityTextureName"            "damage"
     "MaxLevel"                      "3"
 
-    "AbilityGoldCost"               "70 125 350"
+    "AbilityGoldCost"               "150 300 550"
     "AbilityChannelTime"            "30 60 180"
     
     "AbilitySpecial"
@@ -25,7 +25,7 @@
         "03"
       {
         "var_type"              "FIELD_INTEGER"
-        "gold_cost"             "70 125 350"
+        "gold_cost"             "150 300 550"
       }
  
         "04"

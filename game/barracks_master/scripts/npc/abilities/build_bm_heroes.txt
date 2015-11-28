@@ -21,7 +21,7 @@
 
 	"UnitName"						"bm_heroes"
 	"AbilityCooldown"				"0"
-	"AbilityGoldCost"				"300"
+	"AbilityGoldCost"				"600"
 	"MaxBuildingCount"				"1"
 	// End of BuildingHelper info
 
@@ -35,12 +35,12 @@
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"gold_cost"				"300"
+			"gold_cost"				"600"
 		}
 		"03"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"lumber_cost"			"100"
+			"lumber_cost"			"50"
 		}
 	}
 

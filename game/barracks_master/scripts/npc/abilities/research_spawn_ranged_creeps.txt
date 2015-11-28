@@ -1,0 +1,67 @@
+"research_spawn_ranged_creeps"
+{
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+    "BaseClass"                     "ability_datadriven"
+    "AbilityTextureName"            "ranged_barracks_increase"
+    "MaxLevel"                      "5"
+
+    "AbilityGoldCost"               "0 100 200 400 700"
+    "AbilityChannelTime"            "0 3 5 5 7"
+    
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "creep_count"           "1 2 3 4 5"
+        }
+      
+        "02"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "research_time"         "0 3 5 5 7"
+        }
+
+        "03"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "gold_cost"             "0 100 200 400 700"
+        }
+ 
+        "04"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "lumber_cost"           "0 0 40 80 120"
+        }
+    }
+
+    "OnSpellStart"
+    {
+        "RunScript"
+        {
+            "ScriptFile"    "buildings/queue.lua"
+            "Function"      "EnqueueUnit"
+        }
+    }
+
+    "OnChannelSucceeded"
+    {
+        "FireSound"
+        {
+            "EffectName"    "BarracksMaster.ResearchComplete"
+            "Target"        "CASTER"
+        }
+
+        "RunScript"
+        {
+            "ScriptFile"    "buildings/queue.lua"
+            "Function"      "NextQueue"
+        }
+
+        "RunScript"
+        {
+            "ScriptFile"    "buildings/research.lua"
+            "Function"      "ResearchComplete"
+        }
+    }
+}

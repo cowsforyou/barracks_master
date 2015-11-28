@@ -21,7 +21,7 @@
 
 	"UnitName"						"bm_ranged_barracks"
 	"AbilityCooldown"				"0"
-	"AbilityGoldCost"				"300"
+	"AbilityGoldCost"				"200"
 	"MaxBuildingCount"				"1"
 	// End of BuildingHelper info
 
@@ -35,7 +35,7 @@
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"gold_cost"				"300"
+			"gold_cost"				"200"
 		}
 	}
 

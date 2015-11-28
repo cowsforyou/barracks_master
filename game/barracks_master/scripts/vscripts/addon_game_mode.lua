@@ -119,6 +119,7 @@ function Precache( context )
   PrecacheUnitByNameSync("hero_vengeful", context)
   PrecacheUnitByNameSync("hero_nevermore", context)  
   PrecacheUnitByNameSync("hero_beastmaster", context) 
+  PrecacheUnitByNameSync("hero_medusa", context)   
 
   PrecacheUnitByNameSync("bm_skeleton_barracks", context) 
   PrecacheUnitByNameSync("bm_melee_barracks", context) 

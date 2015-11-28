@@ -5,7 +5,7 @@
     "AbilityTextureName"            "wood_chips"
     "MaxLevel"                      "3"
 
-    "AbilityGoldCost"               "200 400 600"
+    "AbilityGoldCost"               "350 550 800"
     "AbilityChannelTime"            "60 120 240"
     
     "AbilitySpecial"
@@ -25,7 +25,7 @@
         "03"
       {
         "var_type"              "FIELD_INTEGER"
-        "gold_cost"             "200 400 600"
+        "gold_cost"             "350 550 800"
       }
     }
 

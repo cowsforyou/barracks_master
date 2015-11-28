@@ -3,9 +3,9 @@ if not AlchemistGifter then
 end
 
 -- Formula: GIFT_CONSTANT + (CURRENT_MINUTE * GIFT_MULTIPLIER) every GIFT_INTERVAL minutes
-GIFT_MULTIPLIER = 23
-GIFT_CONSTANT = 100
-GIFT_INTERVAL = 4 -- minutes
+GIFT_MULTIPLIER = 19
+GIFT_CONSTANT = 120
+GIFT_INTERVAL = 3 -- minutes
 
 function AlchemistGifter:Setup()
 	local t = GIFT_INTERVAL * 60

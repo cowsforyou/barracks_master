@@ -5,7 +5,7 @@
     "AbilityTextureName"            "evasion"
     "MaxLevel"                      "3"
 
-    "AbilityGoldCost"               "100 150 250"
+    "AbilityGoldCost"               "150 350 550"
     "AbilityChannelTime"            "45 60 180"
     
     "AbilitySpecial"
@@ -25,7 +25,7 @@
         "03"
       {
         "var_type"              "FIELD_INTEGER"
-        "gold_cost"             "100 150 250"
+        "gold_cost"             "150 350 550"
       }
  
         "04"

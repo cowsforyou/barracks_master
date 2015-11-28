@@ -15,13 +15,14 @@
 	
 	// Abilities
 	//----------------------------------------------------------------
-	"AbilityLayout"				"5"
+	"AbilityLayout"				"6"
 	"Ability1"					"spawn_ranged_creeps"
-	"Ability2"					"research_bm_ranged_armor"
-	"Ability3"					"research_bm_ranged_damage"
-	"Ability4"					"research_bm_ranged_hp_disabled"
-	"Ability5"					"research_bm_ranged_special_disabled"
-	"Ability6"					""
+	"Ability2"					"research_spawn_ranged_creeps"	
+	"Ability3"					"research_bm_ranged_armor"
+	"Ability4"					"research_bm_ranged_damage"
+	"Ability5"					"research_bm_ranged_hp_disabled"
+	"Ability6"					"research_bm_ranged_special_disabled"
+	"Ability9"					""
 	"Ability10"					"ability_building"
 	"Ability11"					"ability_building_queue"
 	
