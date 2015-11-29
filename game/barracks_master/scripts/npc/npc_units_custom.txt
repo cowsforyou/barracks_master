@@ -699,7 +699,7 @@
 		"AbilityLayout"				"5"
 		"Ability1"					"spawn_siege_creeps"
 		"Ability2"					"research_spawn_siege_creeps"
-		"Ability3"					""
+		"Ability3"					"research_bm_siege_special_disabled"
 		"Ability4"					""
 		"Ability10"					"ability_building"
 		"Ability11"					"ability_building_queue"
@@ -1633,7 +1633,7 @@
         // Abilities
         //----------------------------------------------------------------
         
-        "Ability1"                  ""          // Ability 1.
+        "Ability1"                  "bm_siege_special_disabled"          // Ability 1.
         "Ability2"                  ""          // Ability 2.
         "Ability3"                  ""          // Ability 3.
         "Ability4"                  ""          // Ability 4.

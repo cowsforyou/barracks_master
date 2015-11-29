@@ -1,0 +1,75 @@
+"research_bm_siege_special"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"bm_snowball"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+
+	"AbilityGoldCost"				"950"
+	"AbilityChannelTime"			"110"
+	
+	"AbilitySpecial"
+	{
+        "01"
+        {
+            "var_type"                      "FIELD_INTEGER"
+            "attack_slow"                   "-20"
+        }
+        "02"
+        {
+            "var_type"                      "FIELD_INTEGER"
+            "aoe_damage"                    "60"
+        }
+        "03"
+        {
+            "var_type"                      "FIELD_INTEGER"
+            "radius"                        "160"
+        }
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"research_time"			"110"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"gold_cost"				"950"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"lumber_cost"			"1200"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/queue.lua"
+			"Function"		"EnqueueUnit"
+		}
+	}
+
+	"OnChannelSucceeded"
+	{
+        "FireSound"
+        {
+            "EffectName"    "BarracksMaster.ResearchComplete"
+            "Target"        "CASTER"
+        }
+
+		"RunScript"
+		{
+			"ScriptFile"   	"buildings/queue.lua"
+			"Function"      "NextQueue"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/research.lua"
+			"Function"		"ResearchComplete"
+		}
+	}
+}

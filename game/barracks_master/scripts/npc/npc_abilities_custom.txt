@@ -685,7 +685,6 @@
 	        {
 	            "Passive"           "1"
 	            "IsHidden"          "1"
-	            "Attributes"        "MODIFIER_ATTRIBUTE_MULTIPLE"
 	            
 	            "EffectName"            "particles/items2_fx/mask_of_madness.vpcf"
 	            "EffectAttachType"      "follow_origin"
@@ -968,6 +967,124 @@
 	{
 	    "BaseClass"                     "ability_datadriven"
 	    "AbilityTextureName"            "bm_desolator3"
+	    "MaxLevel"                      "0"
+	}
+	"bm_siege_special"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	    "AbilityTextureName"            "bm_snowball"
+	
+	    "MaxLevel"                      "1"
+	
+	    "AbilityDuration"               "4.0"
+	
+	    // Special  
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"                      "FIELD_INTEGER"
+	            "attack_slow"                   "-20"
+	        }
+	        "02"
+	        {
+	            "var_type"                      "FIELD_INTEGER"
+	            "aoe_damage"                    "60"
+	        }
+	        "03"
+	        {
+	            "var_type"                      "FIELD_INTEGER"
+	            "radius"                        "160"
+	        }
+	        "04"
+	        {
+	            "var_type"                      "FIELD_FLOAT"
+	            "movement_slow"                 "-60"
+	        }
+	    }
+	    
+	    // Modifiers  
+	    //-------------------------------------------------------------------------------------------------------------
+	    "Modifiers"
+	    {
+	        "modifier_siege_special"
+	        {
+	            "Passive"    "1"
+	            "IsHidden"   "1"
+	
+	            "EffectName"            "particles/items2_fx/mask_of_madness.vpcf"
+	            "EffectAttachType"      "follow_origin"
+	
+	            "Properties"
+	            {
+	                "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%attack_slow"
+	            }
+	
+	            "OnAttackLanded"
+	            {
+	                "FireSound"
+	                {
+	                    "EffectName"    "Ability.FrostNova"
+	                    "Target"        "TARGET"
+	                }
+	
+	                "FireEffect"
+	                {
+	                    "EffectName"        "particles/units/heroes/hero_lich/lich_frost_nova.vpcf"
+	                    "EffectAttachType"  "follow_origin"
+	                    "Target"            "TARGET"
+	                }
+	
+	                "ActOnTargets"
+	                {
+	                    "Target"
+	                    {
+	                        "Center"                "TARGET"
+	                        "Radius"                "%radius"
+	                        "Teams"                 "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	                        "Types"                 "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+	                    }
+	
+	                    "Action"
+	                    {
+	                        "ApplyModifier"
+	                        {
+	                            "ModifierName"      "snowball_movement_slow"
+	                            "Target"            "TARGET"
+	                            "Duration"          "%AbilityDuration"
+	                        }
+	
+	                        "Damage"
+	                        {
+	                            "Type"      "DAMAGE_TYPE_MAGICAL"
+	                            "Target"    "TARGET"
+	                            "Damage"    "%aoe_damage"
+	                        }
+	                    }
+	                }
+	            }
+	        }
+	
+	        "snowball_movement_slow"
+	        {
+	            "IsDebuff"      "1"
+	
+	            "StatusEffectName"      "particles/status_fx/status_effect_frost_lich.vpcf"
+	            "StatusEffectPriority"  "10"
+	
+	            "Properties"
+	            {
+	                "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"  "%movement_slow"
+	            }
+	        }
+	    }
+	}
+	"bm_siege_special_disabled"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "bm_snowball"
 	    "MaxLevel"                      "0"
 	}
 	"bm_skeleton_damage"
@@ -3133,7 +3250,7 @@
 	        "04"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "lumber_cost"           "0 0 150"
+	        "lumber_cost"           "0 0 350"
 	      }
 	    }
 	
@@ -3727,6 +3844,87 @@
 	        }
 	    }
 	}
+	"research_bm_siege_special"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"bm_snowball"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	
+		"AbilityGoldCost"				"950"
+		"AbilityChannelTime"			"110"
+		
+		"AbilitySpecial"
+		{
+	        "01"
+	        {
+	            "var_type"                      "FIELD_INTEGER"
+	            "attack_slow"                   "-20"
+	        }
+	        "02"
+	        {
+	            "var_type"                      "FIELD_INTEGER"
+	            "aoe_damage"                    "60"
+	        }
+	        "03"
+	        {
+	            "var_type"                      "FIELD_INTEGER"
+	            "radius"                        "160"
+	        }
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"research_time"			"110"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"950"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"1200"
+			}
+		}
+	
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/queue.lua"
+				"Function"		"EnqueueUnit"
+			}
+		}
+	
+		"OnChannelSucceeded"
+		{
+	        "FireSound"
+	        {
+	            "EffectName"    "BarracksMaster.ResearchComplete"
+	            "Target"        "CASTER"
+	        }
+	
+			"RunScript"
+			{
+				"ScriptFile"   	"buildings/queue.lua"
+				"Function"      "NextQueue"
+			}
+	
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/research.lua"
+				"Function"		"ResearchComplete"
+			}
+		}
+	}
+	"research_bm_siege_special_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"bm_snowball"
+		"MaxLevel" 						"0"
+	}
 	"research_bm_skeleton_damage"
 	{
 	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
@@ -3936,7 +4134,7 @@
 	        "04"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "lumber_cost"           "0 0 100 150 200"
+	            "lumber_cost"           "0 0 100 250 400"
 	        }
 	    }
 	
@@ -4003,7 +4201,7 @@
 	        "04"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "lumber_cost"           "0 0 0 0 80 120"
+	            "lumber_cost"           "0 0 0 0 150 300"
 	        }
 	    }
 	
@@ -4070,7 +4268,7 @@
 	        "04"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "lumber_cost"           "0 0 40 80 120"
+	            "lumber_cost"           "0 0 80 250 350"
 	        }
 	    }
 	
@@ -4137,7 +4335,7 @@
 	        "04"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "lumber_cost"           "0 100 200"
+	            "lumber_cost"           "0 300 500"
 	        }
 	    }
 	

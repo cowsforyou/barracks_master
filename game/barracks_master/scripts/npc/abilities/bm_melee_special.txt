@@ -33,7 +33,6 @@
         {
             "Passive"           "1"
             "IsHidden"          "1"
-            "Attributes"        "MODIFIER_ATTRIBUTE_MULTIPLE"
             
             "EffectName"            "particles/items2_fx/mask_of_madness.vpcf"
             "EffectAttachType"      "follow_origin"

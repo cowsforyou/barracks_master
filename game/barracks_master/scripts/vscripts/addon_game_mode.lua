@@ -70,7 +70,7 @@ function Precache( context )
   PrecacheResource("particle_folder", "particles/units/heroes/hero_lich", context) -- for Chain Frost
 
   PrecacheResource("particle_folder", "particles/units/heroes/hero_treant", context) -- for Living Armor
-  PrecacheResource("particle_folder", "particles/units/heroes/hero_sniper", context) -- for Assassinate  
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_sniper", context) -- for Assassinate
 
   PrecacheResource("particle_folder", "particles/units/heroes/hero_riki", context) -- for spectator
 

@@ -16,6 +16,23 @@
 "bm_updates_title"	"Updates"
 
 "bm_updates_text"	"
+**Barracks Master Amateur Tournament**
+bit.do/bmaster
+
+----- Nov 29:
+• New Siege Creep ability added: Snowball.
+• Melee damage lumber cost increased from 0/0/150 to 0/0/350.
+• Increase Air Creeps lumber cost increased from 0/0/100/150/200 to 0/0/100/250/400.
+• Increase Melee Creeps lumber cost increased from 0/0/0/0/80/120 to 0/0/0/0/150/300.
+• Increase Ranged Creeps lumber cost increased from 0/0/40/80/120 to 0/0/80/250/350.
+• Increase Siege Creeps lumber cost increased from 0/100/200 to 0/300/500.
+
+----- Nov 28:
+• Russian tooltips update.
+
+----- Nov 28:
+• Spectator mode now disabled.
+
 ----- Nov 28:
 • V1.1 released! Creep count can now be increased at all barracks. Visit the main page for the full patch notes.
 • **We are hosting our first Barracks Master Amateur Tournament on Dec 5th** The tournament is open to everyone worldwide! First come first serve. Visit the main page for the link to sign up.
@@ -35,9 +52,6 @@
 • Health Vial for Ranged lumber cost increased from 75 to 120.
 • Ancient Barracks model size reduced slightly.
 • Siege Barracks model size reduced slightly.
-
------ Nov 27:
-• Russian tooltips update.
 "
 
 "bm_contact_text"	"
@@ -443,6 +457,38 @@ Send your suggestions to thenewmetadota@gmail.com."
 
 		"DOTA_Tooltip_ability_item_research_bm_ranged_special"                            	"Cancel Research"
 		"DOTA_Tooltip_ability_item_research_bm_ranged_special_Description"                	""
+
+
+
+		//Siege Special: Snowball
+		//-------------------------------------------------------------
+		"DOTA_Tooltip_snowball_movement_slow"                                             	"Snowball"
+		"DOTA_Tooltip_snowball_movement_slow_Description"                                 	"Movement speed slowed"
+
+		"DOTA_Tooltip_ability_bm_siege_special"                                           	"Snowball"
+		"DOTA_Tooltip_ability_bm_siege_special_Description"                               	"Upgrade your attacks to do AoE damage and slow. Change out your standard boulders for icy snowballs that deal AoE damage and movement slow at the cost of a slight reduction to your attack speed."
+		"DOTA_Tooltip_ability_bm_siege_special_attack_slow"                               	"ATTACK SLOW:"
+		"DOTA_Tooltip_ability_bm_siege_special_aoe_damage"                                	"AOE DAMAGE:"
+		"DOTA_Tooltip_ability_bm_siege_special_radius"                                    	"RADIUS:"
+
+		"DOTA_Tooltip_ability_bm_siege_special_disabled"                                  	"Snowball"
+		"DOTA_Tooltip_ability_bm_siege_special_disabled_Description"                      	"Upgrade your attacks to do AoE damage and slow."
+
+		"DOTA_Tooltip_ability_research_bm_siege_special"                                  	"Research Snowball"
+		"DOTA_Tooltip_ability_research_bm_siege_special_Description"                      	"Upgrade your attacks to do AoE damage and slow. Change out your standard boulders for icy snowballs that deal AoE damage and movement slow at the cost of a slight reduction to your attack speed."
+		"DOTA_Tooltip_ability_research_bm_siege_special_attack_slow"                      	"ATTACK SLOW:"
+		"DOTA_Tooltip_ability_research_bm_siege_special_aoe_damage"                       	"AOE DAMAGE:"
+		"DOTA_Tooltip_ability_research_bm_siege_special_radius"                           	"RADIUS:"
+		"DOTA_Tooltip_ability_research_bm_siege_special_research_time"                    	"<font color='#057aff'>RESEARCH TIME</font>:"
+		"DOTA_Tooltip_ability_research_bm_siege_special_gold_cost"                        	"<font color='#fff22e'>GOLD COST</font>:"
+		"DOTA_Tooltip_ability_research_bm_siege_special_lumber_cost"                      	"<font color='#28fe77'>LUMBER COST</font>:"
+
+		"DOTA_Tooltip_ability_research_bm_siege_special_disabled"                         	"Research Snowball"
+		"DOTA_Tooltip_ability_research_bm_siege_special_disabled_Description"             	"Upgrade your attacks to do AoE damage and slow. Change out your standard boulders for icy snowballs that deal AoE damage and movement slow at the cost of a slight reduction to your attack speed.\n<b><font color='#eedd44'>Requires:\n - Library of Spells</font></b>\n"
+
+		"DOTA_Tooltip_ability_item_research_bm_siege_special"                             	"Cancel Research"
+		"DOTA_Tooltip_ability_item_research_bm_siege_special_Description"                 	""
+
 
 
 		//Air Evasion

@@ -1,0 +1,6 @@
+"bm_siege_special_disabled"
+{
+    "BaseClass"                     "ability_datadriven"
+    "AbilityTextureName"            "bm_snowball"
+    "MaxLevel"                      "0"
+}

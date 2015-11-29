@@ -9,6 +9,7 @@
 [x] Create advanced creep pathing with multiple orders
 
 
+
 -- Building Mechanics --
 
 [x] Import build helper
@@ -19,7 +20,7 @@
 [x] Color-in the creeps
 [x] Allow ability slots to be "toggled"
 [x] Learn how to create/edit ability/item icons
-[ ] Create spawn additional unit ability for melee and ranged barracks
+[x] Create spawn additional unit ability for melee and ranged barracks
 [x] Color in player buildings
 [x] Create toggle button for Ancient Barracks
 [x] Learn how to add lumber cost to buildings/research
@@ -34,12 +35,14 @@
 [x] Code when to award Last Stand item
 
 
+
 -- Player Mechanics --
 
 [x] Specify exact spawn locations for each player
 [x] Learn how to edit passive income
 [x] Award chunks of passive income progressively throughout the game
 [x] Create function to award last hit gold from creeps to player
+
 
 
 -- UI --
@@ -68,9 +71,6 @@
 [ ] Have "Insufficient Funds" play when there is not enough gold error (soundfile: sounds/vo/announcer/ann_custom_generic_alert_06.vsnd)
 [ ] Have "Not Enough Resources" play when there is not enough lumber error (soundfile: sounds/vo/announcer/ann_custom_generic_alert_05.vsnd)
 
--- Advanced --
-
-[ ] Enable normal and fast game modes
 
 
 -- Bugs --
@@ -125,54 +125,23 @@
 [x] Lumber having decimal places on scoreboard
 [x] Research gets reset on building when it's destroyed and rebuilt
 [x] Late game crashes (related to superweapons possibly?)
-[ ] Double building on the same spot renders the gold/lumber wasted
 [ ] DC bug - DCed people cannot build anything and creeps spawn but don't move
 [x] Mystic flare is not hitting heroes
 [x] Bashlord typo
 [x] Chaos Meteor roll length
-[ ] Thunderhide should not be immune to magic
+[x] Thunderhide should not be immune to magic
 [ ] Autocast visual on wood chips is not working
 [x] Potraits not working for any of the units/buildings/heroes only the tower portrait is working
+[ ] If a structure build command was given but the area later becomes invalid (due an ally or enemy unit into the area) the resources are used up but the building is not built
 
 
 
+-- Ideas --
 
-
-Balance
-
-[ ] Disable additional gold from hero kills/assists
 [ ] Hero spawn invulnerable for 3sec
-[ ] Reduce Bashlord and Corrupted Blade research time
-
-
-
-
--------------------------------------
--- Checklist for creating upgrades --
--------------------------------------
-
-[ ] Create actual ability
-[ ] Create actual ability disabled
-[ ] Create research ability
-[ ] Create research ability disabled*
-[ ] Create item to cancel research
-[ ] Add requirements in tech_tree.kv*
-[ ] Give research ability to building
-[ ] Give actual ability to unit
-
-[ ] Create tooltip for actual ability
-[ ] Create tooltip for actual ability disabled
-[ ] Create tooltip for ability modifier status
-[ ] Create tooltip for research ability
-[ ] Create tooltip for research ability disabled
-[ ] Create tooltip for item to cancel research
-
-[ ] Image on actual ability
-[ ] Image on actual ability disabled
-[ ] Image on research ability
-[ ] Image on research ability disabled
-[ ] Image on item to cancel research
-
+[ ] Speed up upgrades/build time at the cost of resources
+[ ] Auto spawn bots if all 4 slots not filled
+[ ] Able to sell structures for half the value (use item slot)
 
 
 
@@ -180,56 +149,42 @@ Balance
 -- Tech Tree
 ---------------------------------------------------
 
-+Zombies	+Melee		+Ranged					+Lumber Yard
--Damage		-Armor(3)	-Armor(3)				-Workers(5)
-			-Damage(3)	-Damage(3)		 		-Defense*
-			-Count(1)	-Count(1) 		 			|
-			-HP* 		-HP* 	 					|
-			-Special**	-Special** 		 			|
-	   			|		   |			 			|
-	   			-------------			-----------------------------
-		   			|					|							|	
-				  +Siege 			+*Research Lab 			+Aviation Sanctuary
-				  -Count(1)			-Research Techies		-Count(1)
-				  -Special**			|					-Evasion(3)
-					|					|					-Special**
-					|					|					-Research Hawk
-					|					|
-					|					|
-					|					-------------------------------------------------
-					|					|					   	|						|
-				+Ancient		+Portal of Heroes			+Purifier			+**Library of Spells				
-				-Toggle			-SF 						-Wood Chips					|				
-								-Beastmaster 											|				
-								-Vengeful Spirit 										|				
-								-Medusa 												|
-																						|
-																						|
-																	---------------------------------------------
-																	|											|
-															+Unpromising Tower 							+Luminous Tower
-															-Chain Frost 								-Mystic Flare
-															-Chaos Meteor 								-Sun Strike
-															-Call Down 									-Guardian Angel
++Skeleton		+Melee				+Ranged				+The Stump
+-Count(4)		-Count(7)			-Count(5)			-Lumberjack(10)
+-Damage(2)		-Damage(3)			-Damage(3)		 	-Living Armor
+				-Armor(3)			-Armor(1) 	 		-Overgrowth**
+				-HP* 				-HP* 	 				|
+				-Special**			-Special** 				|
+	   				|		   			|			 		|
+	   				---------------------		-------------------------------------------------
+		   					|					|						|						|
+				  		+Siege 			+*Research Lab 			+Aviation Sanctuary			+Arrow Tower
+				  		-Count(3)		-Techies				-Count(4)					
+				  		-Special**			|					-Evasion(3)
+							|				|					-Special**
+							|				|					-Hawk
+							|				|
+							|				|
+							|				-------------------------------------------------
+							|				|					   	|						|
+						+Ancient	+Portal of Heroes			+Purifier			+**Library of Spells				
+						-Toggle		-Vengeful Spirit 			-Wood Chips(3)		-Assassinate				
+									-Shadow Fiend 											|				
+									-Beastmaster 											|				
+									-Medusa 												|
+																							|
+																							|
+														-----------------------------------------------------------------------------
+														|									|										|
+													+Warp Chasm						+Unpromising Tower 						+Luminous Tower
+													-Tidehunter						-Chain Frost 							-Mystic Flare
+													-Enigma							-Chaos Meteor 							-Sun Strike
+													-Hero							-Call Down 								-Guardian Angel
 
 
 ---------------------------------------------------
 -- Specials
 ---------------------------------------------------
-+Melee
--Battlelust
--Creeps gain attack speed and quickly charge into range.
--Attack Speed Bonus: 30
--Proc Distance: 300
--Rush Speed: 800
--Cooldown: 4.0sec
-
-+Ranged
--Corruption
--Attacks reduce the target's armor.
--Armor Reduction: 7
--Duration: 15
-
 +Siege
 -Dull Boulders
 -Attacks in a small AoE with a slight reduction to damage.
