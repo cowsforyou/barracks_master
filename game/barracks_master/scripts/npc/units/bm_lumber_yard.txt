@@ -7,7 +7,7 @@
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_creature"
 	"Model"						"models/items/furion/treant_stump.vmdl"
-	"ModelScale"				"1.5"
+	"ModelScale"				"1.4"
 	"Level"						"1"
 	"HealthBarOffset"			"140"
 	"HasInventory"				"1"
@@ -20,7 +20,7 @@
 	"Ability2"					"treant_living_armor"
 	"Ability3"					""
 	"Ability4"					""
-	"Ability9"					""
+	"Ability9"					"particle_stump"
 	"Ability10"					"ability_building"
 	"Ability11"					"ability_building_queue"
 	
@@ -44,7 +44,7 @@
 	// Bounds
 	//----------------------------------------------------------------
 	"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
-	"RingRadius"				"150"
+	"RingRadius"				"145"
 	"CollisionSize"				"80"
 	
 	// Movement

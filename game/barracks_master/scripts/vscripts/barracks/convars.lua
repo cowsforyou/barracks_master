@@ -82,7 +82,7 @@ function BMConvars:SpawnFakeHeroes_DEPRECATED() -- broken
   -- our master list of heroes, with the spectator heroes removed
   local missingHeroList = LoadKeyValues("scripts/npc/herolist.txt")
   missingHeroList["npc_dota_hero_wisp"] = nil
-  missingHeroList["npc_dota_hero_disruptor"] = nil
+  --missingHeroList["npc_dota_hero_disruptor"] = nil
 
   -- heroes in current game
   local heroList = HeroList:GetAllHeroes()

@@ -133,12 +133,13 @@
 [ ] Autocast visual on wood chips is not working
 [x] Potraits not working for any of the units/buildings/heroes only the tower portrait is working
 [ ] If a structure build command was given but the area later becomes invalid (due an ally or enemy unit into the area) the resources are used up but the building is not built
+[ ] Potential crash bug with chaos metoer on stump/lumberjacks
 
 
 
 -- Ideas --
 
-[ ] Hero spawn invulnerable for 3sec
+[ ] Hero spawn invisible for 5sec
 [ ] Speed up upgrades/build time at the cost of resources
 [ ] Auto spawn bots if all 4 slots not filled
 [ ] Able to sell structures for half the value (use item slot)
@@ -183,10 +184,10 @@
 
 
 ---------------------------------------------------
--- Specials
+-- Particles
 ---------------------------------------------------
-+Siege
--Dull Boulders
--Attacks in a small AoE with a slight reduction to damage.
--AoE Raidus: 150
--Damage Reduction: 7
+particles/econ/courier/courier_trail_hw_2012/courier_trail_hw_2012_ghosts.vpcf - green animation circling randomly
+particles/econ/items/puck/puck_alliance_set/puck_dreamcoil_waves_glow_aproset.vpcf - puck dreamcoil spiral rotating center
+particles/econ/items/outworld_devourer/od_shards_exile_gold/od_shards_exile_prison_top_orb_flare_gold.vpcf - green floating orb - maybe used for warp chasm + tp effect?
+particles/econ/items/lanaya/lanaya_epit_trap/templar_assassin_epit_trap_core_ring.vpcf - purple ring at base - layana trap
+particles/units/heroes/hero_winter_wyvern/wyvern_winters_curse_drop.vpcf - potential for researching effect but need to loop

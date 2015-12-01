@@ -81,12 +81,14 @@ function Precache( context )
   PrecacheResource("particle_folder", "particles/econ/courier/courier_faceless_rex", context) -- testing particle ability 
   PrecacheResource("particle_folder", "particles/econ/courier/courier_greevil_red", context) -- testing particle ability 
   PrecacheResource("particle_folder", "particles/econ/items/ancient_apparition/aa_blast_ti_5", context) -- testing particle ability 
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_silencer", context) -- testing particle ability 
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_winter_wyvern", context) -- testing particle ability 
 
 
 
+  PrecacheResource("particle_folder", "particles/econ/courier/courier_trail_hw_2012", context) -- for The Stump 
   PrecacheResource("particle_folder", "particles/units/heroes/hero_obsidian_destroyer", context) -- for Portal of Heroes
   PrecacheResource("particle_folder", "particles/econ/courier/courier_trail_international_2013_se", context) -- for Purifier
-
 
 
     -- Sounds
@@ -135,14 +137,12 @@ function Precache( context )
   PrecacheUnitByNameSync("bm_unpromising", context)         
   PrecacheUnitByNameSync("bm_luminous", context)    
 
-
   PrecacheUnitByNameSync("npc_dota_hero_sven", context)
   PrecacheUnitByNameSync("npc_dota_hero_templar_assassin", context)
-  PrecacheUnitByNameSync("npc_dota_hero_axe", context)
+  PrecacheUnitByNameSync("npc_dota_hero_terrorblade", context)
   PrecacheUnitByNameSync("npc_dota_hero_venomancer", context)
 
   PrecacheUnitByNameSync("npc_dota_hero_wisp", context) -- for spectator
-  PrecacheUnitByNameSync("npc_dota_hero_disruptor", context) -- for spectator
 
     -- Items
   PrecacheItemByNameSync("item_boar", context)
@@ -154,7 +154,6 @@ function Precache( context )
   -- Non Barracks Master --   
     -- Model ghost and grid particles
   PrecacheResource("particle_folder", "particles/buildinghelper", context)
-  PrecacheResource("particle_folder", "particles/econ/items/earthshaker/earthshaker_gravelmaw/", context)
 
     -- Resources used
   PrecacheUnitByNameSync("peasant", context)
@@ -167,7 +166,6 @@ function Precache( context )
   PrecacheUnitByNameSync("dark_tower", context)
 
   PrecacheItemByNameSync("item_apply_modifiers", context)
-
 end
 
 -- Create our game mode and initialize it

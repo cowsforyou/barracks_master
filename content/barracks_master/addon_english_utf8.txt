@@ -16,8 +16,19 @@
 "bm_updates_title"	"Updates"
 
 "bm_updates_text"	"
-**Barracks Master Amateur Tournament**
-bit.do/bmaster
+**Barracks Master Amateur Tournament on Dec 5th**
+Prize money available! Free to join.
+Register at: bit.do/bmaster
+
+
+----- Nov 30:
+• Axe replaced with Terrorblade.
+
+----- Nov 29:
+• Loading screen fix.
+• New particle effect added to The Stump.
+• Slight reduction in The Stump model size.
+• Slight reduction in Lumberjack model size.
 
 ----- Nov 29:
 • New Siege Creep ability added: Snowball.
@@ -32,26 +43,6 @@ bit.do/bmaster
 
 ----- Nov 28:
 • Spectator mode now disabled.
-
------ Nov 28:
-• V1.1 released! Creep count can now be increased at all barracks. Visit the main page for the full patch notes.
-• **We are hosting our first Barracks Master Amateur Tournament on Dec 5th** The tournament is open to everyone worldwide! First come first serve. Visit the main page for the link to sign up.
-
------ Nov 27:
-• Medusa added: Spawnable at Portal of Heroes.
-
------ Nov 27:
-• Players now start with 3x Clarities
-• Fixed bug causing Thunderhide to be spell immune.
-• Library of Spells cost reworked from 500gold/500lumber to 600gold/400lumber.
-• Techies mana cost reduced from 170 to 130.
-• Bashlord research time decreased from 150 to 110sec.
-• Corrupted Blade research time decreased from 150 to 110sec.
-• Health Vial research time decreased from 120 to 90sec.
-• Health Vial for Melee lumber cost increased from 125 to 200.
-• Health Vial for Ranged lumber cost increased from 75 to 120.
-• Ancient Barracks model size reduced slightly.
-• Siege Barracks model size reduced slightly.
 "
 
 "bm_contact_text"	"
@@ -62,7 +53,7 @@ Send your suggestions to thenewmetadota@gmail.com."
 		//-------------------
 		//Builders
 		//-------------------
-		"npc_dota_hero_axe"                                                    				"Barracks Master"
+		"npc_dota_hero_terrorblade"                                                    		"Barracks Master"
 		"npc_dota_hero_sven"                                                    			"Barracks Master"
 		"npc_dota_hero_templar_assassin"                                                    "Barracks Master"
 		"npc_dota_hero_venomancer"                                                    		"Barracks Master"

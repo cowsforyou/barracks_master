@@ -214,7 +214,7 @@ function GameMode:PostLoadPrecache()
     if PlayerResource:IsValidPlayer(playerID) then
       PrecacheUnitByNameAsync("npc_dota_hero_sven", function(...) end, playerID)
       PrecacheUnitByNameAsync("npc_dota_hero_templar_assassin", function(...) end, playerID)
-      PrecacheUnitByNameAsync("npc_dota_hero_axe", function(...) end, playerID)
+      PrecacheUnitByNameAsync("npc_dota_hero_terrorblade", function(...) end, playerID)
       PrecacheUnitByNameAsync("npc_dota_hero_venomancer", function(...) end, playerID)
     end
   end
@@ -263,7 +263,7 @@ function GameMode:ReplaceWithBMHero(playerID, team, slot)
     elseif slot == 2 then heroName = "npc_dota_hero_templar_assassin"
     end
   elseif team == DOTA_TEAM_BADGUYS then
-    if     slot == 1 then heroName = "npc_dota_hero_axe"
+    if     slot == 1 then heroName = "npc_dota_hero_terrorblade"
     elseif slot == 2 then heroName = "npc_dota_hero_venomancer"
     end
   end

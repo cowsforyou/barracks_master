@@ -232,7 +232,7 @@ function GetPlayerColor(player)
         color = "blue"
     elseif unitName == "npc_dota_hero_templar_assassin" then
         color = "purple"
-    elseif unitName == "npc_dota_hero_axe" then
+    elseif unitName == "npc_dota_hero_terrorblade" then
         color = "red"
     elseif unitName == "npc_dota_hero_venomancer" then
         color = "green"
@@ -252,7 +252,7 @@ end
 function GetTeamByUnitName(unitName)
     if unitName == "npc_dota_hero_sven" or unitName == "npc_dota_hero_templar_assassin" then
         return DOTA_TEAM_GOODGUYS
-    elseif unitName == "npc_dota_hero_axe" or unitName == "npc_dota_hero_venomancer" then
+    elseif unitName == "npc_dota_hero_terrorblade" or unitName == "npc_dota_hero_venomancer" then
         return DOTA_TEAM_BADGUYS
     end
 end
