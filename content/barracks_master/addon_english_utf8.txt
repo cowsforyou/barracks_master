@@ -21,6 +21,10 @@ Prize money available! Free to join.
 Register at: bit.do/bmaster
 
 
+----- Dec 2:
+• Barracks Master can now be tracked on getdotastats.com.
+• Shoutout to the 6 teams that signed up for the tournament this weekend! We now have participants from Canada, Singapore, Russia, Ukraine, Lebanon, Czech Republic and South Africa! The tournament is a casual one so we hope more teams will sign up just for fun! If you do not have a teammate you can ask around on the game channel or ask players in the game itself. Good luck! 
+
 ----- Nov 30:
 • Axe replaced with Terrorblade.
 
@@ -29,20 +33,6 @@ Register at: bit.do/bmaster
 • New particle effect added to The Stump.
 • Slight reduction in The Stump model size.
 • Slight reduction in Lumberjack model size.
-
------ Nov 29:
-• New Siege Creep ability added: Snowball.
-• Melee damage lumber cost increased from 0/0/150 to 0/0/350.
-• Increase Air Creeps lumber cost increased from 0/0/100/150/200 to 0/0/100/250/400.
-• Increase Melee Creeps lumber cost increased from 0/0/0/0/80/120 to 0/0/0/0/150/300.
-• Increase Ranged Creeps lumber cost increased from 0/0/40/80/120 to 0/0/80/250/350.
-• Increase Siege Creeps lumber cost increased from 0/100/200 to 0/300/500.
-
------ Nov 28:
-• Russian tooltips update.
-
------ Nov 28:
-• Spectator mode now disabled.
 "
 
 "bm_contact_text"	"
@@ -732,6 +722,5 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_item_last_stand_Description"                                  "The Barracks Master channels all his inner strength to deal a devastating blow to anyone who dares oppose him. Limited charges. Use wisely."
 		"DOTA_Tooltip_ability_item_last_stand_damage"                            			"DAMAGE:"
 		"DOTA_Tooltip_ability_item_last_stand_radius"                               		"RADIUS:"		
-
 	}
 }
