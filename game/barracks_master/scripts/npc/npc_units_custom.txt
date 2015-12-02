@@ -389,7 +389,8 @@
 		"HealthBarOffset"			"140"
 		"HasInventory"				"1"
 		"ConsideredHero"			"1"
-		
+		"UnitLabel"					"UltimateTower"
+	
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"5"
@@ -913,6 +914,7 @@
 		"HealthBarOffset"			"140"
 		"HasInventory"				"1"
 		"ConsideredHero"			"1"
+		"UnitLabel"					"UltimateTower"
 		
 		// Abilities
 		//----------------------------------------------------------------

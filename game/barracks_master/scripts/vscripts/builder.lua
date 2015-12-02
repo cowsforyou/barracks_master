@@ -17,7 +17,7 @@ function Build( event )
 	end
 
 	-- Handle the name for item-ability build
-	local building_name
+	local building_name = nil
 	if event.ItemUnitName then
 		building_name = event.ItemUnitName --Directly passed through the runscript
 	else
@@ -44,17 +44,16 @@ function Build( event )
 	end
 
 	-- <<<VEGGIESAMA
+	-- Ultimate towers possess the "UltimateTower" unit label in their unit KV
+	-- Only one ultimate tower may be built per player.
+	if IsUltimateTower(building_name) and HasBuiltUltimateTower(player) then
+		SendErrorMessage(playerID, "#error_max_ultimate_towers")
+		return
+	end
+
 	-- Set MaxBuildingCount in the ability KV to trigger this check.
 	-- No one player can build more than X building units at a time.
-	local buildingCounter = 0
-    for _,building in pairs(player.structures) do
-    	if building and IsValidEntity(building) and building:GetUnitName() == building_name then
-    		buildingCounter = buildingCounter + 1
-    	end
-    end
-
-	local maxBuildingCount = AbilityKV[ability_name].MaxBuildingCount
-	if maxBuildingCount ~= nil and buildingCounter >= maxBuildingCount then
+	if HasReachedMaxBuildingLimit(player, ability_name, building_name) then
 		SendErrorMessage(playerID, "#error_max_building_count")
 		--print("MaxBuildingCount limit reached! Aborting build command.")
 		return
@@ -240,6 +239,37 @@ end
 -- Called when the Cancel ability-item is used
 function CancelBuilding( keys )
 	BuildingHelper:CancelBuilding(keys)
+end
+
+function IsUltimateTower(building_name)
+	local unitTable = GameRules.UnitKV[building_name]
+	return (unitTable.UnitLabel == "UltimateTower")
+end
+
+function HasBuiltUltimateTower(player)
+    for _,building in pairs(player.structures) do
+    	if building and IsValidEntity(building) and building:GetUnitLabel() == "UltimateTower" then
+    		return true
+    	end
+    end
+
+    return false
+end
+
+function HasReachedMaxBuildingLimit(player, ability_name, building_name)
+	local buildingCounter = 0
+    for _,building in pairs(player.structures) do
+    	if building and IsValidEntity(building) and building:GetUnitName() == building_name then
+    		buildingCounter = buildingCounter + 1
+    	end
+    end
+
+	local maxBuildingCount = GameRules.AbilityKV[ability_name].MaxBuildingCount
+	if maxBuildingCount ~= nil and buildingCounter >= maxBuildingCount then
+		return true
+	end
+
+	return false
 end
 
 --------------------------------

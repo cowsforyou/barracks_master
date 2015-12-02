@@ -12,6 +12,7 @@
 	"HealthBarOffset"			"140"
 	"HasInventory"				"1"
 	"ConsideredHero"			"1"
+	"UnitLabel"					"UltimateTower"
 	
 	// Abilities
 	//----------------------------------------------------------------
