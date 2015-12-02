@@ -1,0 +1,39 @@
+"addon"
+{
+	"Unassigned"      								"Unassigned Team"
+	"Spectator"       								"Spectator Team"
+	"Neutrals"        								"Neutral Team"
+	"NoTeam"          								"No Team"
+
+	"DOTA_GoodGuys"   								"Radiant"
+	"DOTA_BadGuys"    								"Dire"
+	"DOTA_Custom1"    								"Spectator"
+	"DOTA_Custom2"    								"Orange Dog"
+	"DOTA_Custom3"    								"Blue Rooster"
+	"DOTA_Custom4"    								"Green Ram"
+	"DOTA_Custom5"    								"Brown Rat"
+	"DOTA_Custom6"    								"Cyan Boar"
+	"DOTA_Custom7"    								"Olive Snake"
+	"DOTA_Custom8"    								"Purple Horse"
+	
+	"addonname"										"Barracks Master"
+
+	"custom_end_screen_legend_cs"					"CS"
+	"custom_end_screen_legend_networth"				"NET WORTH"
+	"custom_end_screen_legend_gold"					"GOLD"
+	"custom_end_screen_legend_lumber"				"LUMBER"
+
+	"error_max_unit_count_reached"					"Max Unit Count Reached"
+	"error_max_building_count"						"Structure Already Built"
+	"error_max_ultimate_towers"						"Ultimate Tower Already Built"
+	"error_not_enough_lumber"						"Not Enough Lumber"
+	"error_invalid_build_position"					"Invalid Build Area"
+
+	"hero_beastmaster"								"Beastmaster has spawned"
+	"hero_vengeful"									"Vengeful Spirit has spawned"
+	"hero_nevermore"								"Shadow Fiend has spawned"
+	"hero_medusa"									"Medusa has spawned"	
+
+	"alch_gold"										"Alchemist was feeling rich and donated gold to you. Amount received: "
+	"give_item_last_stand"							"You have been awarded an extra charge of Last Stand"
+}
