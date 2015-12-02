@@ -8,14 +8,15 @@ end
 
 -- Modifies the lumber of this player. Accepts negative values
 function ModifyLumber( player, lumber_value )
+	local hero = player:GetAssignedHero()
 	if lumber_value == 0 then return end
 	if lumber_value > 0 then
-		player.lumber = player.lumber + lumber_value
-	    CustomGameEventManager:Send_ServerToPlayer(player, "player_lumber_changed", { lumber = math.floor(player.lumber) })
+		hero.lumber = hero.lumber + lumber_value
+	    CustomGameEventManager:Send_ServerToPlayer(player, "player_lumber_changed", { lumber = math.floor(hero.lumber) })
 	else
 		if PlayerHasEnoughLumber( player, math.abs(lumber_value) ) then
-			player.lumber = player.lumber + lumber_value
-		    CustomGameEventManager:Send_ServerToPlayer(player, "player_lumber_changed", { lumber = math.floor(player.lumber) })
+			hero.lumber = hero.lumber + lumber_value
+		    CustomGameEventManager:Send_ServerToPlayer(player, "player_lumber_changed", { lumber = math.floor(hero.lumber) })
 		end
 	end
 end
@@ -78,8 +79,9 @@ end
 -- Returns bool
 function PlayerHasEnoughLumber( player, lumber_cost )
 	local pID = player:GetPlayerID()
+	local hero = player:GetAssignedHero()
 
-	if player.lumber < lumber_cost then
+	if hero.lumber < lumber_cost then
 		SendErrorMessage(pID, "#error_not_enough_lumber")
 		return false
 	else
@@ -88,12 +90,14 @@ function PlayerHasEnoughLumber( player, lumber_cost )
 end
 
 function GetResearchLevel(player, research_name)
-	return player.upgrades[research_name]
+	local hero = player:GetAssignedHero()
+	return hero.upgrades[research_name]
 end
 
 -- Returns bool
 function PlayerHasResearch( player, research_name )
-	if player.upgrades[research_name] then
+	local hero = player:GetAssignedHero()
+	if hero.upgrades[research_name] then
 		return true
 	else
 		return false
@@ -107,9 +111,10 @@ function PlayerHasRequirementForAbility( player, ability_name )
 		return true
 	end
 
+	local hero = player:GetAssignedHero()
 	local requirements = GameRules.Requirements
-	local buildings = player.buildings
-	local upgrades = player.upgrades
+	local buildings = hero.buildings
+	local upgrades = hero.upgrades
 	local requirement_failed = false
 
 	if requirements[ability_name] then

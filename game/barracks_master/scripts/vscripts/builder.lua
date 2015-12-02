@@ -109,7 +109,7 @@ function Build( event )
 
     -- The construction failed and was never confirmed due to the gridnav being blocked in the attempted area
 	event:OnConstructionFailed(function()
-		local name = player.activeBuilding
+		local name = hero.activeBuilding
 		DebugPrint("[BH] Failed placement of " .. name)
 		SendErrorMessage(caster:GetPlayerOwnerID(), "#error_invalid_build_position")
 	end)
@@ -158,7 +158,7 @@ function Build( event )
     	CheckAbilityRequirements( unit, player )
 
 		-- Add the building handle to the list of structures
-		table.insert(player.structures, unit)
+		table.insert(hero.structures, unit)
 
     	-- colorize the building when construction starts
     	local playerColor = GetPlayerColor(player)
@@ -195,18 +195,18 @@ function Build( event )
 		end
 
 		-- Add 1 to the player building tracking table for that name
-		if not player.buildings[building_name] then
-			player.buildings[building_name] = 1
+		if not hero.buildings[building_name] then
+			hero.buildings[building_name] = 1
 		else
-			player.buildings[building_name] = player.buildings[building_name] + 1
+			hero.buildings[building_name] = hero.buildings[building_name] + 1
 		end
 
 		-- Update the abilities of the builders and buildings
-    	for k,units in pairs(player.units) do
+    	for k,units in pairs(hero.units) do
     		CheckAbilityRequirements( units, player )
     	end
 
-    	for k,structure in pairs(player.structures) do
+    	for k,structure in pairs(hero.structures) do
     		CheckAbilityRequirements( structure, player )
     	end
 
@@ -247,7 +247,8 @@ function IsUltimateTower(building_name)
 end
 
 function HasBuiltUltimateTower(player)
-    for _,building in pairs(player.structures) do
+	local hero = player:GetAssignedHero()
+    for _,building in pairs(hero.structures) do
     	if building and IsValidEntity(building) and building:GetUnitLabel() == "UltimateTower" then
     		return true
     	end
@@ -257,8 +258,9 @@ function HasBuiltUltimateTower(player)
 end
 
 function HasReachedMaxBuildingLimit(player, ability_name, building_name)
+	local hero = player:GetAssignedHero()
 	local buildingCounter = 0
-    for _,building in pairs(player.structures) do
+    for _,building in pairs(hero.structures) do
     	if building and IsValidEntity(building) and building:GetUnitName() == building_name then
     		buildingCounter = buildingCounter + 1
     	end

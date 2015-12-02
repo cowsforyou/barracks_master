@@ -18,7 +18,7 @@ function ManualSpawnCreeps(player, building, buildingAbility, creepName)
     -- Building Helper tie-ins
     unit.GoldCost = buildingAbility:GetSpecialValueFor("gold_cost") or 0    
     CheckAbilityRequirements(unit, player) -- upgrades on spawn
-    table.insert(player.units, unit)       -- adds unit to player's units table
+    table.insert(hero.units, unit)       -- adds unit to player's units table
 
     -- unstick
     Timers:CreateTimer(0.1, function()
@@ -93,7 +93,7 @@ function AutoSpawnCreeps(player, buildingAbility, creepName, numberToSpawn, over
         -- Building Helper tie-ins
         unit.GoldCost = buildingAbility:GetSpecialValueFor("gold_cost") or 0
         CheckAbilityRequirements(unit, player) -- upgrades on spawn
-        table.insert(player.units, unit)       -- adds unit to player's units table
+        table.insert(hero.units, unit)       -- adds unit to player's units table
 
         -- short delay before issuing orders, or the orders won't go through
         Timers:CreateTimer(0.1, function()

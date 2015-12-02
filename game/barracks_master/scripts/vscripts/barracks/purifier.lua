@@ -3,7 +3,8 @@ if not Purifier then
 end
 
 function Purifier:FindPurifier(player)
-    for _,structure in pairs(player.structures) do
+    local hero = player:GetAssignedHero()
+    for _,structure in pairs(hero.structures) do
         if structure:GetUnitName() == "bm_purifier" then
             return structure
         end

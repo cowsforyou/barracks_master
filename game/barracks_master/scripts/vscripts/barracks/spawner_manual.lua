@@ -42,13 +42,14 @@ function OnSpellStart( keys )
 end
 
 function GetUnitCount(player, unitName)
-    if player.units == nil then
-        print("Invalid player.units table")
+    local hero = player:GetAssignedHero()
+    if hero.units == nil then
+        print("Invalid hero.units table")
         return 0
     end
     
     local unitCount = 0
-    for _,unit in pairs(player.units) do
+    for _,unit in pairs(hero.units) do
         if not unit:IsNull() and unit:GetUnitName() == unitName then
             unitCount = unitCount + 1
         end

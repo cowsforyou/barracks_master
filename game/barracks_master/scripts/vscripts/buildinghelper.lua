@@ -58,8 +58,9 @@ function BuildingHelper:BuildCommand( args )
     local location = Vector(x, y, z)
 
     local player = PlayerResource:GetPlayer(args['PlayerID'])
+    local hero = player:GetAssignedHero()
     local queue = tobool(args['Queue'])
-    local builder = player.activeBuilder
+    local builder = hero.activeBuilder
 
     DebugPrint("[BH] Build Command - Queued: ",queue)
 
@@ -81,12 +82,13 @@ end
 ]]--
 function BuildingHelper:CancelCommand( args )
     local player = PlayerResource:GetPlayer(args['PlayerID'])
-    player.activeBuilding = nil
+    local hero = player:GetAssignedHero()
+    hero.activeBuilding = nil
 
-    if not player.activeBuilder then
+    if not hero.activeBuilder then
         return
     end
-    BuildingHelper:ClearQueue(player.activeBuilder)
+    BuildingHelper:ClearQueue(hero.activeBuilder)
 end
 
 --[[
@@ -142,35 +144,36 @@ function BuildingHelper:AddBuilding(keys)
 
     -- Get the local player, this assumes the player is only placing one building at a time
     local player = PlayerResource:GetPlayer(builder:GetMainControllingPlayer())
-  
-    player.buildingPosChosen = false
-    player.activeBuilder = builder
-    player.activeBuilding = unitName
-    player.activeBuildingTable = buildingTable
-    player.activeCallbacks = callbacks
+    local hero = player:GetAssignedHero()
+
+    hero.buildingPosChosen = false
+    hero.activeBuilder = builder
+    hero.activeBuilding = unitName
+    hero.activeBuildingTable = buildingTable
+    hero.activeCallbacks = callbacks
 
     -- Make a model dummy to pass it to panorama
-    player.activeBuildingTable.mgd = CreateUnitByName(unitName, OutOfWorldVector, false, nil, nil, builder:GetTeam())
+    hero.activeBuildingTable.mgd = CreateUnitByName(unitName, OutOfWorldVector, false, nil, nil, builder:GetTeam())
 
     -- Adjust the Model Orientation
     local yaw = buildingTable:GetVal("ModelRotation", "float")
-    player.activeBuildingTable.mgd:SetAngles(0, -yaw, 0)
+    hero.activeBuildingTable.mgd:SetAngles(0, -yaw, 0)
 
     -- Position is CP0, model attach is CP1, color is CP2, alpha is CP3.x, scale is CP4.x
-    player.activeBuildingTable.modelParticle = ParticleManager:CreateParticleForPlayer("particles/buildinghelper/ghost_model.vpcf", PATTACH_ABSORIGIN, player.activeBuildingTable.mgd, player)
-    ParticleManager:SetParticleControlEnt(player.activeBuildingTable.modelParticle, 1, player.activeBuildingTable.mgd, 1, "follow_origin", player.activeBuildingTable.mgd:GetAbsOrigin(), true)            
-    ParticleManager:SetParticleControl(player.activeBuildingTable.modelParticle, 3, Vector(MODEL_ALPHA,0,0))
-    ParticleManager:SetParticleControl(player.activeBuildingTable.modelParticle, 4, Vector(fMaxScale,0,0))
+    hero.activeBuildingTable.modelParticle = ParticleManager:CreateParticleForPlayer("particles/buildinghelper/ghost_model.vpcf", PATTACH_ABSORIGIN, hero.activeBuildingTable.mgd, player)
+    ParticleManager:SetParticleControlEnt(hero.activeBuildingTable.modelParticle, 1, hero.activeBuildingTable.mgd, 1, "follow_origin", hero.activeBuildingTable.mgd:GetAbsOrigin(), true)            
+    ParticleManager:SetParticleControl(hero.activeBuildingTable.modelParticle, 3, Vector(MODEL_ALPHA,0,0))
+    ParticleManager:SetParticleControl(hero.activeBuildingTable.modelParticle, 4, Vector(fMaxScale,0,0))
 
     local color = Vector(255,255,255)
     if RECOLOR_GHOST_MODEL then
         color = Vector(0,255,0)
     end
-    ParticleManager:SetParticleControl(player.activeBuildingTable.modelParticle, 2, color)
+    ParticleManager:SetParticleControl(hero.activeBuildingTable.modelParticle, 2, color)
 
     local paramsTable = { state = "active", size = size, scale = fMaxScale, 
                           grid_alpha = GRID_ALPHA, model_alpha = MODEL_ALPHA, recolor_ghost = RECOLOR_GHOST_MODEL,
-                          entindex = player.activeBuildingTable.mgd:GetEntityIndex(), builderIndex = builder:GetEntityIndex()
+                          entindex = hero.activeBuildingTable.mgd:GetEntityIndex(), builderIndex = builder:GetEntityIndex()
                         }
     CustomGameEventManager:Send_ServerToPlayer(player, "building_helper_enable", paramsTable)
 end
@@ -900,11 +903,12 @@ end
 ]]--
 function BuildingHelper:AddToQueue( builder, location, bQueued )
     local player = PlayerResource:GetPlayer(builder:GetMainControllingPlayer())
-    local building = player.activeBuilding
-    local buildingTable = player.activeBuildingTable
+    local hero = player:GetAssignedHero()
+    local building = hero.activeBuilding
+    local buildingTable = hero.activeBuildingTable
     local fMaxScale = buildingTable:GetVal("MaxScale", "float")
     local size = buildingTable:GetVal("BuildingSize", "number")
-    local callbacks = player.activeCallbacks
+    local callbacks = hero.activeCallbacks
 
     SnapToGrid(size, location)
 

@@ -10,11 +10,11 @@ function BuildingEvents:OnPlayerPickHero(keys)
   local playerID = hero:GetPlayerID()
 
   -- Initialize Variables for Tracking
-  player.units = {} -- This keeps the handle of all the units of the player, to iterate for unlocking upgrades
-  player.structures = {} -- This keeps the handle of the constructed units, to iterate for unlocking upgrades
-  player.buildings = {} -- This keeps the name and quantity of each building
-  player.upgrades = {} -- This kees the name of all the upgrades researched
-  player.lumber = 0 -- Secondary resource of the player
+  hero.units = {} -- This keeps the handle of all the units of the player, to iterate for unlocking upgrades
+  hero.structures = {} -- This keeps the handle of the constructed units, to iterate for unlocking upgrades
+  hero.buildings = {} -- This keeps the name and quantity of each building
+  hero.upgrades = {} -- This kees the name of all the upgrades researched
+  hero.lumber = 0 -- Secondary resource of the player
 
   -- Create city center in front of the hero
   local position = hero:GetAbsOrigin() + hero:GetForwardVector() * 300
@@ -30,14 +30,14 @@ function BuildingEvents:OnPlayerPickHero(keys)
   building.BuildTime = 15 -- not right
 
   -- Add the building to the player structures list
-  player.buildings[starting_rax_name] = 1
-  table.insert(player.structures, building)
+  hero.buildings[starting_rax_name] = 1
+  table.insert(hero.structures, building)
 
   CheckAbilityRequirements( hero, player )
   CheckAbilityRequirements( building, player )
 
   -- Add the hero to the player units list
-  table.insert(player.units, hero)
+  table.insert(hero.units, hero)
   hero.state = "idle" --Builder state
 
   --[[
@@ -52,7 +52,7 @@ function BuildingEvents:OnPlayerPickHero(keys)
     local builder = CreateUnitByName("peasant", builder_pos, true, hero, hero, hero:GetTeamNumber())
     builder:SetOwner(hero)
     builder:SetControllableByPlayer(playerID, true)
-    table.insert(player.units, builder)
+    table.insert(hero.units, builder)
     builder.state = "idle"
 
     -- Go through the abilities and upgrade
@@ -98,13 +98,15 @@ function BuildingEvents:OnEntityKilled( event )
   -- The Unit that was Killed
   local killedUnit = EntIndexToHScript(event.entindex_killed)
   -- The Killing entity
-  local killerEntity
+  local killerEntity = nil
   if event.entindex_attacker then
     killerEntity = EntIndexToHScript(event.entindex_attacker)
   end
 
   -- Player owner of the unit
   local player = killedUnit:GetPlayerOwner()
+  local hero = nil
+  if player then hero = player:GetAssignedHero() end
 
   -- Building Killed
   if IsCustomBuilding(killedUnit) then
@@ -116,17 +118,17 @@ function BuildingEvents:OnEntityKilled( event )
     local building_name = killedUnit:GetUnitName()
         
     -- Substract 1 to the player building tracking table for that name
-    if player.buildings[building_name] then
-      player.buildings[building_name] = player.buildings[building_name] - 1
+    if hero.buildings[building_name] then
+      hero.buildings[building_name] = hero.buildings[building_name] - 1
     end
 
     -- possible unit downgrades
-    for k,units in pairs(player.units) do
+    for k,units in pairs(hero.units) do
         CheckAbilityRequirements( units, player )
     end
 
     -- possible structure downgrades
-    for k,structure in pairs(player.structures) do
+    for k,structure in pairs(hero.structures) do
       CheckAbilityRequirements( structure, player )
     end
   end
@@ -138,9 +140,9 @@ function BuildingEvents:OnEntityKilled( event )
 
   if player and not killedUnit:IsHero() then
     if IsCustomBuilding(killedUnit) then
-      RemoveMatchingEntityFromTable(player.structures, killedUnit)
+      RemoveMatchingEntityFromTable(hero.structures, killedUnit)
     else
-      RemoveMatchingEntityFromTable(player.units, killedUnit)
+      RemoveMatchingEntityFromTable(hero.units, killedUnit)
     end
   end
 end
@@ -150,8 +152,8 @@ function RemoveMatchingEntityFromTable(tbl, entity)
     if item and IsValidEntity(item) then
       if item:entindex() == entity:entindex() then
         table.remove(tbl, i)
-        print("Successfully removed "..entity:GetUnitName().." from table. Player owner: "..
-          entity:GetPlayerOwnerID() .. ". Table length: "..#tbl)
+        --print("Successfully removed "..entity:GetUnitName().." from table. Player owner: "..
+        --  entity:GetPlayerOwnerID() .. ". Table length: "..#tbl)
         return true
       end
     else
@@ -172,6 +174,7 @@ function BuildingEvents:OnPlayerSelectedEntities( event )
   local mainSelected = GetMainSelectedEntity(pID)
   if IsValidEntity(mainSelected) and IsBuilder(mainSelected) then
     local player = PlayerResource:GetPlayer(pID)
-    player.activeBuilder = mainSelected
+    local hero = player:GetAssignedHero()
+    hero.activeBuilder = mainSelected
   end
 end

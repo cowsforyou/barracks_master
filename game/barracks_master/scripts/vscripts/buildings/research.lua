@@ -4,25 +4,26 @@
 function ResearchComplete( event )
 	local caster = event.caster
 	local player = caster:GetPlayerOwner()
+	local hero = player:GetAssignedHero()
 	local ability = event.ability
 	local ability_level = ability:GetLevel()
 	local research_name = ability:GetAbilityName()
 
 	-- It shouldn't be possible to research the same upgrade more than once.
-	player.upgrades[research_name] = ability_level
+	hero.upgrades[research_name] = ability_level
 	ability:SetLevel(ability_level + 1)
 	
 	-- Go through all the upgradeable units and upgrade with the research
-	for _,unit in pairs(player.units) do
+	for _,unit in pairs(hero.units) do
 		CheckAbilityRequirements( unit, player )
 	end
 
 	-- Also, on the buildings that have the upgrade, disable the upgrade and/or apply the next rank.
-	for _,structure in pairs(player.structures) do
+	for _,structure in pairs(hero.structures) do
 		CheckAbilityRequirements( structure, player )
 	end
 
-	--PrintTable(player.upgrades)
+	--PrintTable(hero.upgrades)
 end
 
 function ScoutResearchComplete ( event )
@@ -38,10 +39,11 @@ end
 
 function LumberResearchComplete( event )
 	local player = event.caster:GetPlayerOwner()
+	local hero = player:GetAssignedHero()
 	local level = event.Level
 	local extra_lumber_carried = event.ability:GetLevelSpecialValueFor("extra_lumber_carried", level - 1)
 
-	player.LumberCarried = 10 + extra_lumber_carried
+	hero.LumberCarried = 10 + extra_lumber_carried
 end
 
 

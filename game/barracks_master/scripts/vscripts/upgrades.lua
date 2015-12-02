@@ -31,7 +31,8 @@ function CheckAbilityRequirements( unit, player )
 	CheckResearchRequirements( unit, player )
 
 	if not IsValidEntity(unit) then
-		print("Not a Valid Entity!, there's currently ",#player.units,"units and",#player.structures,"structures in the table")
+		local hero = player:GetAssignedHero()
+		print("Not a Valid Entity!, there's currently ",#hero.units,"units and",#hero.structures,"structures in the table")
 		return
 	end
 

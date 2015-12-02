@@ -26,8 +26,8 @@ function UpgradeBuilding( event )
 
 	-- Remove the old building from the structures list
 	if IsValidEntity(caster) then
-		local buildingIndex = getIndex(player.structures, caster)
-        table.remove(player.structures, buildingIndex)
+		local buildingIndex = getIndex(hero.structures, caster)
+        table.remove(hero.structures, buildingIndex)
 		
 		-- Remove old building entity
 		caster:RemoveSelf()
@@ -38,21 +38,21 @@ function UpgradeBuilding( event )
 	building:SetHealth(newRelativeHP)
 
 	-- Add 1 to the buildings list for that name. The old name still remains
-	if not player.buildings[new_unit] then
-		player.buildings[new_unit] = 1
+	if not hero.buildings[new_unit] then
+		hero.buildings[new_unit] = 1
 	else
-		player.buildings[new_unit] = player.buildings[new_unit] + 1
+		hero.buildings[new_unit] = hero.buildings[new_unit] + 1
 	end
 
 	-- Add the new building to the structures list
-	table.insert(player.structures, building)
+	table.insert(hero.structures, building)
 
 	-- Update the abilities of the units and structures
-	for k,unit in pairs(player.units) do
+	for k,unit in pairs(hero.units) do
 		CheckAbilityRequirements( unit, player )
 	end
 
-	for k,structure in pairs(player.structures) do
+	for k,structure in pairs(hero.structures) do
 		CheckAbilityRequirements( structure, player )
 	end
 end
