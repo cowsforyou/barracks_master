@@ -22,6 +22,9 @@ Register at: bit.do/bmaster
 
 
 ----- Dec 2:
+• Minor patch for getdotastats.com.
+
+----- Dec 2:
 • Barracks Master can now be tracked on getdotastats.com.
 • Shoutout to the 6 teams that signed up for the tournament this weekend! We now have participants from Canada, Singapore, Russia, Ukraine, Lebanon, Czech Republic and South Africa! The tournament is a casual one so we hope more teams will sign up just for fun! If you do not have a teammate you can ask around on the game channel or ask players in the game itself. Good luck! 
 
