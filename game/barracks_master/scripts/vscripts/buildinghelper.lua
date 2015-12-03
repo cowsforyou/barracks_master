@@ -384,6 +384,7 @@ function BuildingHelper:StartBuilding( keys )
 
     -- Check gridnav and cancel if invalid
     if not BuildingHelper:ValidPosition(size, location, callbacks) then
+        print("StartBuilding failure -- were resources lost?")
         
         -- Remove the model particle and Advance Queue
         BuildingHelper:AdvanceQueue(builder)
@@ -914,6 +915,7 @@ function BuildingHelper:AddToQueue( builder, location, bQueued )
 
     -- Check gridnav
     if not BuildingHelper:ValidPosition(size, location, callbacks) then
+        print("AddToQueue failure")
         return
     end
 
