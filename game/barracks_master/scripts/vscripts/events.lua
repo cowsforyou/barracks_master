@@ -82,7 +82,14 @@ end
 -- state as necessary
 function GameMode:OnPlayerReconnect(keys)
   DebugPrint( '[BAREBONES] OnPlayerReconnect' )
-  DebugPrintTable(keys) 
+  DebugPrintTable(keys)
+
+  -- hack fix for ability swapper
+  local playerID = keys.PlayerID
+  print("Player"..playerID.." reconnected.")
+  local player = PlayerResource:GetPlayer(playerID)
+  local hero = PlayerResource:GetSelectedHeroEntity(playerID)
+  CheckAbilityRequirements(hero, player)
 end
 
 -- An item was purchased by a player
