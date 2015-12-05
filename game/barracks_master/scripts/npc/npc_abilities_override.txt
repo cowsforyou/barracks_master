@@ -134,7 +134,7 @@
         
         // Casting
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCastRange"              "0"
+        "AbilityCastRange"              "4500"
         "AbilityCastRangeBuffer"        "0"
         "AbilityCastPoint"              "2.0"
 

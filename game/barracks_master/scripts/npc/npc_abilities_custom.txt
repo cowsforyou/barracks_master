@@ -2667,7 +2667,7 @@
 	        "02"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "area_of_effect"        "175"
+	            "area_of_effect"        "200"
 	        }
 	        "03"
 	        {
@@ -5836,7 +5836,7 @@
 	        "02"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "area_of_effect"        "275"
+	            "area_of_effect"        "180"
 	        }
 	        "03"
 	        {
@@ -5876,7 +5876,7 @@
 	        "10"
 	        {
 	            "var_type"              "FIELD_FLOAT"
-	            "burn_dps"              "8000" // changing this does nothing - hardcoded in lua
+	            "burn_dps"              "9999" // changing this does nothing - hardcoded in lua
 	        }
 	        "11"
 	        {

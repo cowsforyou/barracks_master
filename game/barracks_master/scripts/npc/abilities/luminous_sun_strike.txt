@@ -32,7 +32,7 @@
         "02"
         {
             "var_type"              "FIELD_INTEGER"
-            "area_of_effect"        "175"
+            "area_of_effect"        "200"
         }
         "03"
         {

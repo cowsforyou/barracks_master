@@ -34,8 +34,8 @@ function invoker_chaos_meteor_datadriven_on_spell_start(keys)
     ParticleManager:SetParticleControl(chaos_meteor_fly_particle_effect, 2, Vector(1.3, 0, 0))
     
     --Chaos Meteor's main and burn damage is dependent on the level of Exort.  This values are stored now since leveling up Exort while the meteor is in midair should have no effect.
-    local main_damage = 8000
-    local burn_dps = 8000
+    local main_damage = 9999
+    local burn_dps = 9999
     
     --Chaos Meteor's travel distance is dependent on the level of Wex.  This value is stored now since leveling up Wex while the meteor is in midair should have no effect.
     local travel_distance = 20
