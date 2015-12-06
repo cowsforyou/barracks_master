@@ -84,9 +84,9 @@ MAX_NUMBER_OF_TEAMS = 2               -- How many potential teams can be in this
 USE_CUSTOM_TEAM_COLORS = true          -- Should we use custom team colors?
 USE_CUSTOM_TEAM_COLORS_FOR_PLAYERS = true          -- Should we use custom team colors to color the players/minimap?
 
-TEAM_COLORS = {}                        -- If USE_CUSTOM_TEAM_COLORS is set, use these colors.
-TEAM_COLORS[DOTA_TEAM_GOODGUYS] = { 61, 210, 150 }  --    Teal
-TEAM_COLORS[DOTA_TEAM_BADGUYS]  = { 51, 111, 7 }    --    Dark Green
+TEAM_COLORS = {}                        -- If USE_CUSTOM_TEAM_COLORS is set, use these colors. -- cows: these will only change the color of the health bars and tp. note: non-hero units will get a darker shade of the color
+TEAM_COLORS[DOTA_TEAM_GOODGUYS] = { 255, 255, 0 }	--    Yellow
+TEAM_COLORS[DOTA_TEAM_BADGUYS]  = { 0, 255, 255 }	--    Light Blue
 TEAM_COLORS[DOTA_TEAM_CUSTOM_1] = { 180, 180, 180 } --    Gray
 TEAM_COLORS[DOTA_TEAM_CUSTOM_2] = { 255, 108, 0 }   --    Orange
 TEAM_COLORS[DOTA_TEAM_CUSTOM_3] = { 52, 85, 255 }   --    Blue

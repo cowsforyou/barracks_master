@@ -29,7 +29,7 @@
 [x] Replace city center default spawn to bm_melee_barracks
 [x] Code max lumberjacks to be 10
 [x] Code in purifier
-[ ] Create either/or function for Luminous and Unpromising Towers.
+[x] Create either/or function for Luminous and Unpromising Towers.
 [x] Create truestrike modifier for heroes
 [x] Create Last Stand item
 [x] Code when to award Last Stand item
@@ -125,7 +125,7 @@
 [x] Lumber having decimal places on scoreboard
 [x] Research gets reset on building when it's destroyed and rebuilt
 [x] Late game crashes (related to superweapons possibly?)
-[ ] DC bug - DCed people cannot build anything and creeps spawn but don't move
+[x] DC bug - DCed people cannot build anything and creeps spawn but don't move
 [x] Mystic flare is not hitting heroes
 [x] Bashlord typo
 [x] Chaos Meteor roll length
@@ -134,6 +134,7 @@
 [x] Potraits not working for any of the units/buildings/heroes only the tower portrait is working
 [ ] If a structure build command was given but the area later becomes invalid (due an ally or enemy unit into the area) the resources are used up but the building is not built
 [ ] Potential crash bug with chaos metoer on stump/lumberjacks
+[ ] Lumberjacks does not autocast after dc
 
 
 
