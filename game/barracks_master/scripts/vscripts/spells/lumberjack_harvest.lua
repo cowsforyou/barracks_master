@@ -3,12 +3,14 @@ function OnChannelSucceeded(keys)
     local ability = keys.ability
     local target = keys.target
     local player = caster:GetPlayerOwner()
-
     local lumber = ability:GetSpecialValueFor("lumber_per_tick")
 
-    ModifyLumber(player, lumber)
-    PopupLumber(caster, lumber)
-    Purifier:EarnedLumber(player, lumber)
+    -- DC'd players will not gain lumber until they reconnect 
+    if player then 
+        ModifyLumber(player, lumber)
+        PopupLumber(caster, lumber)
+        Purifier:EarnedLumber(player, lumber)
+    end
 
     caster:CastAbilityOnTarget(target, ability, player:entindex())
 	--print("Gain lumber and restart channel.")
