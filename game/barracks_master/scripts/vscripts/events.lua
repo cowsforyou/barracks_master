@@ -45,6 +45,12 @@ function GameMode:OnNPCSpawned(keys)
   GameMode:_OnNPCSpawned(keys)
 
   local npc = EntIndexToHScript(keys.entindex)
+  if npc and npc:IsRealHero() then
+    -- Heroes gain 5 seconds of invisibility when spawning
+    local dur = 5.0
+    npc:AddNewModifier(npc, nil, "modifier_invisible", {duration=dur})
+  end
+
 end
 
 -- An entity somewhere has been hurt.  This event fires very often with many units so don't do too many expensive
