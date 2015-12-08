@@ -118,7 +118,7 @@
 [x] Clean up purifier description to make clear only creep kills gets bonus
 [x] Clean up Portal of Heroes ambient animation
 [x] Random Lumberjack console error bug
-[ ] Color health bars?
+[x] Color health bars
 [x] Have gold cost of disabled buildings shown
 [x] Tooltips for ancient toggle not showing description
 [x] Modify pathing of creeps after t2
@@ -134,13 +134,13 @@
 [x] Potraits not working for any of the units/buildings/heroes only the tower portrait is working
 [ ] If a structure build command was given but the area later becomes invalid (due an ally or enemy unit into the area) the resources are used up but the building is not built
 [ ] Potential crash bug with chaos metoer on stump/lumberjacks
-[ ] Lumberjacks does not autocast after dc
+[x] Lumberjacks does not autocast after dc
 
 
 
 -- Ideas --
 
-[ ] Hero spawn invisible for 5sec
+[x] Hero spawn invisible for 5sec
 [ ] Speed up upgrades/build time at the cost of resources
 [ ] Auto spawn bots if all 4 slots not filled
 [ ] Able to sell structures for half the value (use item slot)
