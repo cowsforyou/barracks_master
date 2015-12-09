@@ -39,6 +39,7 @@ function Build( event )
 	hero:ModifyGold(gold_cost, false, 0)
 
 	if not PlayerHasEnoughLumber( player, lumber_cost ) then
+		-- include sound for insufficient lumber here -- cows
 		SendErrorMessage(playerID, "#error_not_enough_lumber")		
 		return
 	end
@@ -67,25 +68,23 @@ function Build( event )
 	event:OnPreConstruction(function(vPos)
 
        	-- Blight check
-       	if string.match(building_name, "undead") and building_name ~= "undead_necropolis" then
+       	--[[if string.match(building_name, "undead") and building_name ~= "undead_necropolis" then
        		local bHasBlight = HasBlight(vPos)
        		DebugPrint("[BH] Blight check for "..building_name..":", bHasBlight)
        		if not bHasBlight then
        			SendErrorMessage(caster:GetPlayerOwnerID(), "#error_must_build_on_blight")
        			return false
        		end
-       	end
+       	end]]--
 
        	-- If not enough resources to queue, stop
        	if not PlayerHasEnoughGold( player, lumber_cost ) then
        		SendErrorMessage(caster:GetPlayerOwnerID(), "#error_not_enough_gold")
-       		EmitSoundOn("BarracksMaster.InsufficientFunds", caster) -- cows
 			return false
 		end
 
        	if not PlayerHasEnoughLumber( player, lumber_cost ) then
-       		SendErrorMessage(caster:GetPlayerOwnerID(), "#error_not_enough_lumber")
-        	EmitSoundOn("BarracksMaster.InsufficientResources", caster) -- cows      		
+       		SendErrorMessage(caster:GetPlayerOwnerID(), "#error_not_enough_lumber")    		
 			return false
 		end
 
@@ -131,6 +130,7 @@ function Build( event )
 		DebugPrint("[BH] Started construction of " .. unit:GetUnitName() .. " " .. unit:GetEntityIndex())
 
 		-- Play construction sound -- cows
+		--Sounds:EmitSoundOnClient(playerID, "BarracksMaster.Building") -- need to have 2 includes for this to work
 	    EmitSoundOn("BarracksMaster.Building", caster)
 		print("Building Construction Start")
 
@@ -274,6 +274,7 @@ function HasReachedMaxBuildingLimit(player, ability_name, building_name)
 	return false
 end
 
+--[[
 --------------------------------
 --       Repair Scripts       --
 --------------------------------
@@ -450,12 +451,12 @@ function Repair( event )
 		-- Lumber takes floats just fine
 		local lumber_per_second = lumber_cost / ( build_time * 1.5 ) * 0.35 * stack_count
 
-		--[[print("Building is repaired for "..health_per_second)
-		if gold_per_second > 0 then
-			print("Cost is "..gold_per_second.." gold and "..lumber_per_second.." lumber per second")
-		else
-			print("Cost is "..gold_float.." gold and "..lumber_per_second.." lumber per second")
-		end]]
+		--print("Building is repaired for "..health_per_second)
+		--if gold_per_second > 0 then
+		--	print("Cost is "..gold_per_second.." gold and "..lumber_per_second.." lumber per second")
+		--else
+		--	print("Cost is "..gold_float.." gold and "..lumber_per_second.." lumber per second")
+		--end
 			
 		local healthGain = 0
 		if PlayerHasEnoughGold( player, math.ceil(gold_per_second+gold_float) ) and PlayerHasEnoughLumber( player, lumber_per_second ) then
@@ -605,3 +606,4 @@ function RepairAnimation( event )
 	local caster = event.caster
 	caster:StartGesture(ACT_DOTA_ATTACK)
 end
+]]--
