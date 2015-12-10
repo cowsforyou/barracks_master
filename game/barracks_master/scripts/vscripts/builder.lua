@@ -241,6 +241,7 @@ function CancelBuilding( keys )
 	BuildingHelper:CancelBuilding(keys)
 end
 
+-- Called when a unit with UltimateTower label is built -- cows
 function IsUltimateTower(building_name)
 	local unitTable = GameRules.UnitKV[building_name]
 	return (unitTable.UnitLabel == "UltimateTower")
@@ -257,6 +258,7 @@ function HasBuiltUltimateTower(player)
     return false
 end
 
+-- Called when a unit has a MaxBuildingCount attribute 
 function HasReachedMaxBuildingLimit(player, ability_name, building_name)
 	local hero = player:GetAssignedHero()
 	local buildingCounter = 0

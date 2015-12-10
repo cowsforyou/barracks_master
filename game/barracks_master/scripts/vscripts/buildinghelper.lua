@@ -65,13 +65,13 @@ function BuildingHelper:BuildCommand( args )
     DebugPrint("[BH] Build Command - Queued: ",queue)
 
     -- Cancel current repair
-    if builder:HasModifier("modifier_builder_repairing") and not queue then
+    --[[if builder:HasModifier("modifier_builder_repairing") and not queue then
         local repair_ability = builder:FindAbilityByName("repair")
         local event = {}
         event.caster = builder
         event.ability = repair_ability
         BuilderStopRepairing(event)
-    end
+    end]]--
 
     BuildingHelper:AddToQueue(builder, location, queue)
 end
