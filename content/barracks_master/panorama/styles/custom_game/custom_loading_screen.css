@@ -9,49 +9,70 @@
     background-color: black;
 }
 
-#TitlePanel
+/*-------------------------
+Background Panel
+-------------------------*/
+
+#BM_Backgrounds
+{
+
+}
+
+#BG_Main
+{
+	background-repeat: no-repeat;
+	background-position: 100% 100%;
+	background-size: 100% 100%;
+}
+
+#BG_Sides
+{
+	horizontal-align: left;
+	vertical-align: top;
+	margin-top: 0px;
+	margin-left: 0px;
+	opacity: .7;
+}
+
+#BG_TopLeft
+{
+	horizontal-align: left;
+	vertical-align: top;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+#GameTitle
 {
 	horizontal-align: left;
 	vertical-align: top;
 	margin-top: 15px;
-	margin-left: 70px;
-	flow-children: right;
-}
-
-#BMTitle
-{
+	margin-left: 60px;
 	font-size: 20px;
 	color: #cccccc;
 	text-shadow: 2px 2px 2px #000000;
 }
 
-#BM_Updates_BG
-{
-	horizontal-align: left;
-	vertical-align: top;
-	margin-top: 95px;
-	margin-left: 660px;
-	width: 400px;
-	height: 856px;
-	background-color: black;
-	opacity: .7;
-}
+/*-------------------------
+Updates Panel
+-------------------------*/
 
 #BM_Updates
 {
 	horizontal-align: left;
 	vertical-align: top;
-	margin-top: 95px;
-	margin-left: 660px;
+	margin-top: 102px;
+	margin-left: 50px;
 	width: 400px;
-	height: 856px;
+	height: 927px;
+	background-color: black;
+	opacity: .5;
 }
 
 #UpdatesTitle
 {
-	padding-top: 7px;
-	padding-left: 7px;
-	padding-left: 7px;
+	padding-top: 10px;
+	padding-left: 12px;
 	font-size: 30px;
 	font-weight: bold;
 	color: #ffffff;
@@ -61,8 +82,8 @@
 #Updates
 {
 	padding-top: 40px;
-	padding-left: 7px;
-	padding-left: 7px;
+	padding-left: 12px;
+	padding-right: 12px;
 	font-size: 15px;
 	color: #ffffff;
 }
@@ -70,58 +91,58 @@
 #Contact
 {
 	vertical-align: bottom;
-	padding-bottom: 12px;
-	padding-left: 7px;
-	padding-left: 7px;
+	padding-bottom: 15px;
+	padding-left: 12px;
+	padding-right: 12px;
 	font-size: 16px;
 	color: #e5e5e5;
 }
 
-.SeqP
+/*-------------------------
+Tutorial Panel
+-------------------------*/
+
+/*.SeqBg
 {
 	background-repeat: no-repeat;
 	background-position: 100% 100%;
 	background-size: 100% 100%;
-}
+}*/
 
-.SeqBg
+#BM_Tutorials
 {
-	background-repeat: no-repeat;
-	background-position: 100% 100%;
-	background-size: 100% 100%;
+	horizontal-align: left;
+	vertical-align: top;
+	margin-top: 0px;
+	margin-left: 525px;
 }
 
-#seq
-{
-
-}
-
-#seq_bg
+/*#seq_bg
 {
     margin-left: 0px;
 	pre-transform-scale2d: 1.0, 1.0;
-}
+}*/
 
-#seq_p1
+#T1
 {
-	margin-left: 100px;
+	margin-left: 0px;
 	margin-top: 50px;
 }
 
-#seq_p2
+#T2
 {
-	margin-left: 100px;
+	margin-left: 0px;
 	margin-top: 280px;
 }
 
-#seq_p3
+#T3
 {
-	margin-left: 100px;
+	margin-left: 0px;
 	margin-top: 510px;
 }
 
-#seq_p4
+#T4
 {
-	margin-left: 100px;
+	margin-left: 0px;
 	margin-top: 740px;
 }
