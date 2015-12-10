@@ -36,6 +36,7 @@ function Build( event )
 
 	-- If the ability has an AbilityGoldCost, it's impossible to not have enough gold the first time it's cast
 	-- Always refund the gold here, as the building hasn't been placed yet
+	--ability:GetGoldCost(1) 
 	hero:ModifyGold(gold_cost, false, 0)
 
 	if not PlayerHasEnoughLumber( player, lumber_cost ) then
@@ -78,12 +79,12 @@ function Build( event )
        	end]]--
 
        	-- If not enough resources to queue, stop
-       	if not PlayerHasEnoughGold( player, lumber_cost ) then
+       	if not PlayerHasEnoughGold(player, gold_cost) then
        		SendErrorMessage(caster:GetPlayerOwnerID(), "#error_not_enough_gold")
 			return false
 		end
 
-       	if not PlayerHasEnoughLumber( player, lumber_cost ) then
+       	if not PlayerHasEnoughLumber(player, lumber_cost) then
        		SendErrorMessage(caster:GetPlayerOwnerID(), "#error_not_enough_lumber")    		
 			return false
 		end
