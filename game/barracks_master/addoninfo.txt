@@ -4,7 +4,7 @@
   "maps"      "barracks_master_duo_xmas"
   "IsPlayable"  "1"
   
-  "barracks_master_duo"
+  "barracks_master_duo_xmas"
   {
           "MaxPlayers"                    "4"
   }

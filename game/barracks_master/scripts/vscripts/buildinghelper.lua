@@ -384,11 +384,14 @@ function BuildingHelper:StartBuilding( keys )
 
     -- Check gridnav and cancel if invalid
     if not BuildingHelper:ValidPosition(size, location, callbacks) then
-        print("StartBuilding failure -- were resources lost?")
         
         -- Remove the model particle and Advance Queue
         BuildingHelper:AdvanceQueue(builder)
         ParticleManager:DestroyParticle(work.particleIndex, true)
+
+        -- Building canceled, refund resources
+        work.refund = true
+        callbacks.onConstructionCancelled(work)
         return
     end
 
