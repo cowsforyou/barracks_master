@@ -28,6 +28,7 @@ function Build( event )
 	local unit_table = UnitKV[building_name]
 	local build_time = ability:GetSpecialValueFor("build_time")
 	local gold_cost = ability:GetSpecialValueFor("gold_cost")
+	print("Gold1")
 	local lumber_cost = ability:GetSpecialValueFor("lumber_cost")
 
 	local hero = caster:GetPlayerOwner():GetAssignedHero()
@@ -38,6 +39,7 @@ function Build( event )
 	-- Always refund the gold here, as the building hasn't been placed yet
 	--ability:GetGoldCost(1) 
 	hero:ModifyGold(gold_cost, false, 0)
+	print("Gold2")
 
 	if not PlayerHasEnoughLumber( player, lumber_cost ) then
 		-- include sound for insufficient lumber here -- cows
@@ -80,6 +82,7 @@ function Build( event )
 
        	-- If not enough resources to queue, stop
        	if not PlayerHasEnoughGold(player, gold_cost) then
+       		print("Gold3")
        		SendErrorMessage(caster:GetPlayerOwnerID(), "#error_not_enough_gold")
 			return false
 		end
@@ -97,6 +100,7 @@ function Build( event )
 		
     	-- Spend resources
     	hero:ModifyGold(-gold_cost, false, 0)
+    	print("Gold4 - Consumed when ghost is confirmed")
     	ModifyLumber( player, -lumber_cost)
 
     	-- Play a sound
@@ -122,6 +126,7 @@ function Build( event )
 		-- Refund resources for this cancelled work
 		if work.refund then
 			hero:ModifyGold(gold_cost, false, 0)
+			print("Gold5 - refund gold if building does not get built")
     		ModifyLumber( player, lumber_cost)
     	end
 	end)
@@ -136,8 +141,9 @@ function Build( event )
 		print("Building Construction Start")
 
 		-- Store the Build Time, Gold Cost and secondary resource the building 
-	    -- This is necessary for repair to know what was the cost of the building and use resources periodically
+	    -- This is to refund the resources if the building is not completed
 	    unit.GoldCost = gold_cost
+	    print("Gold6 - Store Info")
 	    unit.LumberCost = lumber_cost
 	    unit.BuildTime = build_time
 
