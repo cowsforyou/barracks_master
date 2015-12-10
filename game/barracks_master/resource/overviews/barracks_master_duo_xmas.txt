@@ -1,0 +1,8 @@
+barracks_master_duo_xmas
+{
+	material materials/overviews/barracks_master_duo_xmas.vmat
+	pos_x -8192
+	pos_y 256
+	scale 8.250
+}
+

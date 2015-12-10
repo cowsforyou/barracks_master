@@ -1,7 +1,7 @@
 "AddonInfo"
 {
   "TeamCount" "2"
-  "maps"      "barracks_master_duo"
+  "maps"      "barracks_master_duo_xmas"
   "IsPlayable"  "1"
   
   "barracks_master_duo"
