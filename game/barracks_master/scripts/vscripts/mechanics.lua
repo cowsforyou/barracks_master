@@ -81,6 +81,7 @@ function PlayerHasEnoughLumber( player, lumber_cost )
 	local pID = player:GetPlayerID()
 	local hero = player:GetAssignedHero()
 
+	print(gold , gold_cost, gold < gold_cost ) 
 	if hero.lumber < lumber_cost then
 		SendErrorMessage(pID, "#error_not_enough_lumber")
 		return false
