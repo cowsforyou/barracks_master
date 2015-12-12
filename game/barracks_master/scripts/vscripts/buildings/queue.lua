@@ -15,7 +15,7 @@ function EnqueueUnit( event )
 	end
 
 	if not PlayerHasEnoughLumber( player, lumber_cost ) then
- 		PlayerResource:ModifyGold(pID, gold_cost, false, 0) -- refund gold
+ 		PlayerResource:ModifyGold(pID, gold_cost, true, 0) -- refund gold
 		--SendErrorMessage(pID, "#error_not_enough_lumber")
 		return
 	end
@@ -41,7 +41,7 @@ function EnqueueUnit( event )
 
 	else
 		-- Refund with message
- 		PlayerResource:ModifyGold(pID, gold_cost, false, 0)
+ 		PlayerResource:ModifyGold(pID, gold_cost, true, 0)
 		SendErrorMessage(caster:GetPlayerOwnerID(), "#error_queue_full")
 	end
 end
@@ -81,7 +81,7 @@ function DequeueUnit( event )
 	            caster:RemoveItem(item)
 	            
 	            -- Refund ability cost
-	            PlayerResource:ModifyGold(pID, gold_cost, false, 0)
+	            PlayerResource:ModifyGold(pID, gold_cost, true, 0)
 	            ModifyLumber(player, lumber_cost)
 				print(string.format("Refunding %s gold and %s lumber.", gold_cost, lumber_cost))
 

@@ -38,7 +38,7 @@ function Build( event )
 	-- If the ability has an AbilityGoldCost, it's impossible to not have enough gold the first time it's cast
 	-- Always refund the gold here, as the building hasn't been placed yet
 	--ability:GetGoldCost(1) 
-	hero:ModifyGold(gold_cost, false, 0)
+	hero:ModifyGold(gold_cost, true, 0)
 	print("Gold2")
 
 	if not PlayerHasEnoughLumber( player, lumber_cost ) then
@@ -99,7 +99,7 @@ function Build( event )
     event:OnBuildingPosChosen(function(vPos)
 		
     	-- Spend resources
-    	hero:ModifyGold(-gold_cost, false, 0)
+    	hero:ModifyGold(-gold_cost, true, 0)
     	print("Gold4 - Consumed when ghost is confirmed")
     	ModifyLumber( player, -lumber_cost)
 
@@ -125,7 +125,7 @@ function Build( event )
 
 		-- Refund resources for this cancelled work
 		if work.refund then
-			hero:ModifyGold(gold_cost, false, 0)
+			hero:ModifyGold(gold_cost, true, 0)
 			print("Gold5 - refund gold if building does not get built")
     		ModifyLumber( player, lumber_cost)
     	end
