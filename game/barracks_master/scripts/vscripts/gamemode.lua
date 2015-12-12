@@ -22,7 +22,11 @@ function GameMode:InitGameMode()
 
   -- Filters
   GameRules:GetGameModeEntity():SetExecuteOrderFilter( Dynamic_Wrap( GameMode, "FilterExecuteOrder" ), self )
+  --GameRules:GetGameModeEntity():SetModifyGoldFilter( function( params ) DeepPrintTable( params ) end, self )
 
+
+  Timers:CreateTimer(function() ConvertReliableGold() return 1 end) 
+  
   -- Register Listener
   CustomGameEventManager:RegisterListener( "update_selected_entities", Dynamic_Wrap(BuildingEvents, 'OnPlayerSelectedEntities'))
   CustomGameEventManager:RegisterListener( "repair_order", Dynamic_Wrap(GameMode, "RepairOrder"))   
