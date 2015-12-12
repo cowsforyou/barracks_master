@@ -1,0 +1,74 @@
+"bm_air_special"
+{
+    "BaseClass"                     "ability_datadriven"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityTextureName"            "bm_desolator3"
+
+    "MaxLevel"                      "1"
+
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "lightning_damage"      "85 125 180"
+        }
+        "02"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "lightning_bounces"     "4 6 8"
+        }
+        "03"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "bounce_range"          "500"
+        }
+        "04"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "lightning_decay"       "20"
+        }
+        "05"
+        {
+            "var_type"              "FIELD_FLOAT"
+            "time_between_bounces"  "0.2"
+        }
+        "06"
+        {
+            "var_type"              "FIELD_FLOAT"
+            "lightning_chance"      "50"
+        }        
+    }
+    
+
+    // Modifiers
+    //-------------------------------------------------------------------------------------------------------------
+    "Modifiers"
+    {
+        "modifier_lightning"
+        {
+            "Passive"       "1"
+            "IsHidden"      "1"
+            "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+
+            "OnAttackLanded"
+            {
+                "Random"
+                {
+                    "Chance"        "%lightning_chance"
+
+                    "OnSuccess"
+                    {
+                        "RunScript"
+                        {
+                            "ScriptFile"    "spells/chain_lightning.lua"
+                            "Function"      "ChainLightning"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

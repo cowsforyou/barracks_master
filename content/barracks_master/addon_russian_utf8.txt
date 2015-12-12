@@ -16,26 +16,29 @@
 "bm_updates_title"	"Updates"
 
 "bm_updates_text"	"
-**Barracks Master Amateur Tournament on Dec 5th**
-Prize money available! Free to join.
-Register at: bit.do/bmaster
+**Congratulations to Team Catdog (coldrefreader & Moon Moon) for winning our first Barracks Master tournament!**
+VODs available: bit.ly/barracksmaster
 
 
------ Dec 2:
-• Minor patch for getdotastats.com.
+----- Dec 10:
+• Fixed bug which did not refund resources if the building area was suddenly blocked.
+• Fixed tree placement which allowed you to walk into secret rune area on the Radiant side.
 
------ Dec 2:
-• Barracks Master can now be tracked on getdotastats.com.
-• Shoutout to the 6 teams that signed up for the tournament this weekend! We now have participants from Canada, Singapore, Russia, Ukraine, Lebanon, Czech Republic and South Africa! The tournament is a casual one so we hope more teams will sign up just for fun! If you do not have a teammate you can ask around on the game channel or ask players in the game itself. Good luck! 
+----- Dec 10:
+• Christmas tree added to the map. Happy holidays everyone!
 
------ Nov 30:
-• Axe replaced with Terrorblade.
+----- Dec 9:
+• Loading screen layout modified in preparation for a custom pregame screen.
+• Loading screen tutorials updated.
 
------ Nov 29:
-• Loading screen fix.
-• New particle effect added to The Stump.
-• Slight reduction in The Stump model size.
-• Slight reduction in Lumberjack model size.
+----- Dec 8:
+• Removed the ability to force attack a friendly building.
+
+----- Dec 6:
+• Barracks Masters now spawn with a 5sec invisibility buff.
+• Fixed bug that caused Lumberjacks to be unable to harvest after disconnecting.
+• Radiant team health bars are now yellow.
+• Dire team health bars are now light blue.
 "
 
 "bm_contact_text"	"

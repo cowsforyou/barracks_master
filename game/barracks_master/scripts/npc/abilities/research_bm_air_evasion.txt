@@ -5,34 +5,40 @@
     "AbilityTextureName"            "evasion"
     "MaxLevel"                      "3"
 
-    "AbilityGoldCost"               "150 350 550"
-    "AbilityChannelTime"            "45 60 180"
+    "AbilityGoldCost"               "250 350 550"
+    "AbilityChannelTime"            "45 80 180"
     
     "AbilitySpecial"
     {
         "01"
-      {
-        "var_type"              "FIELD_INTEGER"
-        "evasion_bonus"         "10 15 30"
-      }
+        {
+            "var_type"              "FIELD_INTEGER"
+            "evasion_bonus"         "10 15 30"
+        }
 
         "02"
-      {
-        "var_type"              "FIELD_INTEGER"
-        "research_time"         "45 60 180"
-      }
+        {
+            "var_type"              "FIELD_INTEGER"
+            "research_time"         "45 80 180"
+        }
 
         "03"
-      {
-        "var_type"              "FIELD_INTEGER"
-        "gold_cost"             "150 350 550"
-      }
+        {
+            "var_type"              "FIELD_INTEGER"
+            "gold_cost"             "250 350 550"
+        }
  
         "04"
-      {
-        "var_type"              "FIELD_INTEGER"
-        "lumber_cost"           "100 150 300"
-      }
+        {
+            "var_type"              "FIELD_INTEGER"
+            "lumber_cost"           "125 200 450"
+        }
+
+        "05"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "radius"                "350"
+        }
     }
 
     "OnSpellStart"

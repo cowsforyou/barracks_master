@@ -407,44 +407,135 @@
 	  }
 	"bm_air_evasion"
 	{
-	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	    "BaseClass"             "ability_datadriven"
-	    "AbilityTextureName"    "evasion"
+	  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	  "BaseClass"             "ability_datadriven"
+	  "AbilityTextureName"    "evasion"
 	
-	    "MaxLevel"    "3"
+	  "MaxLevel"    "3"
 	
-	    "Modifiers"
+	  // Ability Special  
+	  //-------------------------------------------------------------------------------------------------------------
+	  "AbilitySpecial"
+	  {
+	    "01"
 	    {
-	      "modifier_air_evasion_bonus"
-	      {
-	        "Passive"    "1"
-	        "IsHidden"   "0"
-	        
-	        "Properties"
-	        {
-	            "MODIFIER_PROPERTY_EVASION_CONSTANT"    "%evasion_bonus" // grab from AbilitySpecial
-	        }
-	        
-	      }
+	      "var_type"        "FIELD_INTEGER"
+	      "evasion_bonus"   "10 15 30"
 	    }
 	
-	    // Special  
-	    //-------------------------------------------------------------------------------------------------------------
-	    "AbilitySpecial"
+	    "02"
 	    {
-	      "01"
-	      {
-	        "var_type"        "FIELD_INTEGER"
-	        "evasion_bonus"   "10 15 30"
-	      }
-	      
+	      "var_type"        "FIELD_INTEGER"
+	      "radius"          "350"
 	    }
+	  }
+	
+	  // Modifiers 
+	  //-------------------------------------------------------------------------------------------------------------
+	  "Modifiers"
+	  {
+	    "modifier_air_evasion_bonus"
+	    {
+	      "Passive"    "1"
+	      "IsHidden"   "1"
+	       
+	      "Aura"              "modifier_air_evasion_bonus_buff"    
+	      "Aura_Radius"       "%radius"
+	      "Aura_Teams"        "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	      "Aura_Types"        "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	    }
+	
+	    "modifier_air_evasion_bonus_buff"
+	    {
+	      "Passive"    "1"
+	      "IsHidden"   "0"
+	
+	      "Properties"
+	      {
+	        "MODIFIER_PROPERTY_EVASION_CONSTANT"    "%evasion_bonus" // grab from AbilitySpecial
+	      }    
+	    }
+	  }
 	}
 	"bm_air_evasion_disabled"
 	{
 	    "BaseClass"                     "ability_datadriven"
 	    "AbilityTextureName"            "evasion"
 	    "MaxLevel"                      "0"
+	}
+	"bm_air_special"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	    "AbilityTextureName"            "bm_desolator3"
+	
+	    "MaxLevel"                      "1"
+	
+	    // Special  
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "lightning_damage"      "85 125 180"
+	        }
+	        "02"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "lightning_bounces"     "4 6 8"
+	        }
+	        "03"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "bounce_range"          "500"
+	        }
+	        "04"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "lightning_decay"       "20"
+	        }
+	        "05"
+	        {
+	            "var_type"              "FIELD_FLOAT"
+	            "time_between_bounces"  "0.2"
+	        }
+	        "06"
+	        {
+	            "var_type"              "FIELD_FLOAT"
+	            "lightning_chance"      "50"
+	        }        
+	    }
+	    
+	
+	    // Modifiers
+	    //-------------------------------------------------------------------------------------------------------------
+	    "Modifiers"
+	    {
+	        "modifier_lightning"
+	        {
+	            "Passive"       "1"
+	            "IsHidden"      "1"
+	            "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+	
+	            "OnAttackLanded"
+	            {
+	                "Random"
+	                {
+	                    "Chance"        "%lightning_chance"
+	
+	                    "OnSuccess"
+	                    {
+	                        "RunScript"
+	                        {
+	                            "ScriptFile"    "spells/chain_lightning.lua"
+	                            "Function"      "ChainLightning"
+	                        }
+	                    }
+	                }
+	            }
+	        }
+	    }
 	}
 	"bm_air_special"
 	{
@@ -3178,34 +3269,40 @@
 	    "AbilityTextureName"            "evasion"
 	    "MaxLevel"                      "3"
 	
-	    "AbilityGoldCost"               "150 350 550"
-	    "AbilityChannelTime"            "45 60 180"
+	    "AbilityGoldCost"               "250 350 550"
+	    "AbilityChannelTime"            "45 80 180"
 	    
 	    "AbilitySpecial"
 	    {
 	        "01"
-	      {
-	        "var_type"              "FIELD_INTEGER"
-	        "evasion_bonus"         "10 15 30"
-	      }
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "evasion_bonus"         "10 15 30"
+	        }
 	
 	        "02"
-	      {
-	        "var_type"              "FIELD_INTEGER"
-	        "research_time"         "45 60 180"
-	      }
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "research_time"         "45 80 180"
+	        }
 	
 	        "03"
-	      {
-	        "var_type"              "FIELD_INTEGER"
-	        "gold_cost"             "150 350 550"
-	      }
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "gold_cost"             "250 350 550"
+	        }
 	 
 	        "04"
-	      {
-	        "var_type"              "FIELD_INTEGER"
-	        "lumber_cost"           "100 150 300"
-	      }
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "lumber_cost"           "125 200 450"
+	        }
+	
+	        "05"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "radius"                "350"
+	        }
 	    }
 	
 	    "OnSpellStart"
