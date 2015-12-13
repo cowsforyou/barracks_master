@@ -76,7 +76,7 @@
         "10"
         {
             "var_type"              "FIELD_FLOAT"
-            "burn_dps"              "9999" // changing this does nothing - hardcoded in lua
+            "burn_dps"              "1" // changing this does nothing - hardcoded in lua
         }
         "11"
         {
