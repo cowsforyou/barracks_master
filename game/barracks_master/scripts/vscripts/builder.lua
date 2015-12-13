@@ -93,22 +93,8 @@ function Build( event )
 		end
 
 		-- If max count reached, stop
-		function HasReachedMaxBuildingLimit(player, ability_name, building_name)
-			local hero = player:GetAssignedHero()
-			local buildingCounter = 0
-    		for _,building in pairs(hero.structures) do
-    			if building and IsValidEntity(building) and building:GetUnitName() == building_name then
-    				buildingCounter = buildingCounter + 1
-    			end
-    		end
 
-			local maxBuildingCount = GameRules.AbilityKV[ability_name].MaxBuildingCount
-			if maxBuildingCount ~= nil and buildingCounter >= maxBuildingCount then
-				return true
-			end
-			return false
-		end
-
+		
 		return true
     end)
 
