@@ -22,11 +22,20 @@ function GameMode:InitGameMode()
 
   -- Filters
   GameRules:GetGameModeEntity():SetExecuteOrderFilter( Dynamic_Wrap( GameMode, "FilterExecuteOrder" ), self )
-  --GameRules:GetGameModeEntity():SetModifyGoldFilter( function( params ) DeepPrintTable( params ) end, self )
+
+  -- Converting all reliable gold to unreliable gold
+  -- 1) Timer method
+  Timers:CreateTimer(function() ConvertReliableGold() return 1 end)
+
+  -- 2) Gold filter method
+  --[[GameRules:GetGameModeEntity():SetModifyGoldFilter(
+    function( self, params ) 
+      reliable = 1
+      return true
+    end, 
+  self)]]--
 
 
-  Timers:CreateTimer(function() ConvertReliableGold() return 1 end) 
-  
   -- Register Listener
   CustomGameEventManager:RegisterListener( "update_selected_entities", Dynamic_Wrap(BuildingEvents, 'OnPlayerSelectedEntities'))
   CustomGameEventManager:RegisterListener( "repair_order", Dynamic_Wrap(GameMode, "RepairOrder"))   

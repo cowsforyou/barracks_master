@@ -92,6 +92,23 @@ function Build( event )
 			return false
 		end
 
+		-- If max count reached, stop
+		function HasReachedMaxBuildingLimit(player, ability_name, building_name)
+			local hero = player:GetAssignedHero()
+			local buildingCounter = 0
+    		for _,building in pairs(hero.structures) do
+    			if building and IsValidEntity(building) and building:GetUnitName() == building_name then
+    				buildingCounter = buildingCounter + 1
+    			end
+    		end
+
+			local maxBuildingCount = GameRules.AbilityKV[ability_name].MaxBuildingCount
+			if maxBuildingCount ~= nil and buildingCounter >= maxBuildingCount then
+				return true
+			end
+			return false
+		end
+
 		return true
     end)
 
@@ -123,7 +140,7 @@ function Build( event )
 		local name = work.name
 		DebugPrint("[BH] Cancelled construction of " .. name)
 
-		-- Refund resources for this cancelled work
+		-- Refund resources if work never begins and order is stopped
 		if work.refund then
 			hero:ModifyGold(gold_cost, false, 0)
 			print("Gold5 - refund gold if building does not get built")

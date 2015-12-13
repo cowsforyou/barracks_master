@@ -320,3 +320,14 @@ function ReorderItems( caster )
     	caster:SwapItems(itemSlot,k-1)
     end
 end
+
+-- Make all the gold unreliable for all players
+function ConvertReliableGold()
+    for playerID=0,DOTA_MAX_TEAM_PLAYERS do
+        if PlayerResource:IsValidPlayer(playerID) then
+            local gold = PlayerResource:GetGold(playerID)
+            PlayerResource:SetGold(playerID, 0, true) --0 reliable
+            PlayerResource:SetGold(playerID, gold, false) --all unreliable
+        end
+    end
+end
