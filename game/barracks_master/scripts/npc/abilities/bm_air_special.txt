@@ -13,12 +13,12 @@
         "01"
         {
             "var_type"              "FIELD_INTEGER"
-            "lightning_damage"      "85 125 180"
+            "lightning_damage"      "85"
         }
         "02"
         {
             "var_type"              "FIELD_INTEGER"
-            "lightning_bounces"     "4 6 8"
+            "lightning_bounces"     "8"
         }
         "03"
         {

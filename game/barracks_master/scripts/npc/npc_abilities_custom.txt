@@ -478,12 +478,12 @@
 	        "01"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "lightning_damage"      "85 125 180"
+	            "lightning_damage"      "85"
 	        }
 	        "02"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "lightning_bounces"     "4 6 8"
+	            "lightning_bounces"     "8"
 	        }
 	        "03"
 	        {
@@ -536,16 +536,6 @@
 	            }
 	        }
 	    }
-	}
-	"bm_air_special"
-	{
-	    "BaseClass"                     "ability_datadriven"
-	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	    "AbilityTextureName"            "research_ultimate_ability"
-	
-	    "MaxLevel"                      "1"
-	
-	    
 	}
 	"bm_air_special_disabled"
 	{

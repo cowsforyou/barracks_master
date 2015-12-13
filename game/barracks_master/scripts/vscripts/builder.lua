@@ -93,7 +93,12 @@ function Build( event )
 		end
 
 		-- If max count reached, stop
-
+		print("precheck")
+        if HasReachedMaxBuildingLimit(player, ability_name, building_name) then
+            SendErrorMessage(playerID, "#test")
+            print("check complete")
+            return false
+        end
 		
 		return true
     end)
