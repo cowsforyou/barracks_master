@@ -3,7 +3,7 @@
 	// General
 	//----------------------------------------------------------------
 	"Model"						"models/heroes/beastmaster/beastmaster_bird.vmdl"	// Model.
-	"BaseClass"					"npc_dota_beastmaster_hawk"
+	"BaseClass"					"npc_dota_creature"
 	"SoundSet"					"0"			// Name of sound set.
 	"Level"						"6"
     "IgnoreAddSummonedToSelection"  "1"
@@ -25,6 +25,8 @@
 	// Attack
 	//----------------------------------------------------------------
 	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+	"AttackDamageMin"			"0"
+	"AttackDamageMax"			"0"
 
 	// Bounds
 	//----------------------------------------------------------------

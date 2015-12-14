@@ -86,8 +86,10 @@ function CreateChainLightning( caster, start_position, target, damage )
     ParticleManager:SetParticleControl(particle,0, start_position)
     ParticleManager:SetParticleControl(particle,1, target_position)
 
-    EmitSoundOn("Hero_Zuus.ArcLightning.Target", target)    
-    ApplyDamage({ victim = target, attacker = caster, damage = damage, damage_type = DAMAGE_TYPE_MAGICAL })
+    EmitSoundOn("Hero_Zuus.ArcLightning.Target", target)
+    if target:IsHero() or target:IsCreature() or target:IsCreep() then
+        ApplyDamage({ victim = target, attacker = caster, damage = damage, damage_type = DAMAGE_TYPE_MAGICAL })
+    end
     PopupDamage(target, math.floor(damage))
 
     return target_position

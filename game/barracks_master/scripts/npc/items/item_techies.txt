@@ -41,14 +41,13 @@
             "var_type"                  "FIELD_INTEGER"
             "gold_cost"                 "350"
         }
-
-        // Extra        
-        "08"
+    
+        "03"
         {
             "var_type"                  "FIELD_INTEGER"
             "techies_count"             "1"
         }
-        "12"
+        "04"
         {
             "var_type"              "FIELD_INTEGER"
             "distance"              "150" // The distance in front of the target at which units will be created
@@ -57,15 +56,10 @@
 
     "OnSpellStart"
     {
-        "FireSound"
-        {
-            "EffectName"    "techies_tech_spawn_01"
-            "Target"        "CASTER"
-        }
-
         "SpawnUnit"
         {
             "UnitName"          "scout_techies"
+            
             "Target"
             {
                 "Center"                "CASTER"
@@ -96,7 +90,7 @@
 
                 "ApplyModifier"
                 {
-                    "ModifierName"  "modifier_beastmaster_techies"
+                    "ModifierName"  "modifier_creation_and_death_effects"
                     "Target"        "TARGET"
                 }
 
@@ -111,12 +105,18 @@
 
     "Modifiers"
     {
-        "modifier_beastmaster_techies"
+        "modifier_creation_and_death_effects"
         {
             "IsHidden"      "1"
 
             "OnCreated"
             {
+                "FireSound"
+                {
+                    "EffectName"    "techies_tech_spawn_01"
+                    "Target"        "CASTER"
+                }
+
                 "FireEffect"
                 {
                     "Target"            "TARGET"

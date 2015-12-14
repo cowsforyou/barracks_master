@@ -25,7 +25,6 @@
 	// Attack
 	//----------------------------------------------------------------
 	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
-	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 	"AttackDamageMin"			"0"
 	"AttackDamageMax"			"0"	   
 

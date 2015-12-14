@@ -119,48 +119,25 @@
 	        {
 	            "var_type"                  "FIELD_INTEGER"
 	            "gold_cost"                 "10"
-	        }
+	        }   
 	        "03"
-	        {
-	            "var_type"                  "FIELD_INTEGER"
-	            "max_count"                 "3"
-	        }
-	
-	        // Extra        
-	        "08"
 	        {
 	            "var_type"                  "FIELD_INTEGER"
 	            "boar_count"                "1"
 	        }
-	        "12"
+	        "04"
 	        {
 	            "var_type"                  "FIELD_INTEGER"
 	            "distance"                  "150" // The distance in front of the target at which units will be created
 	        }
 	    }
 	
-	
-	    //"OnUpgrade"
-	    //{
-	    //    "RunScript"
-	    //    {
-	    //        "ScriptFile"    "spells/call_of_the_wild.lua"
-	    //        "Function"      "LevelUpAbility"
-	    //        "ability_name"  "beastmaster_call_of_the_wild_datadriven"
-	    //    }
-	    //}
-	
 	    "OnSpellStart"
 	    {
-	        "FireSound"
-	        {
-	            "EffectName"    "Hero_Beastmaster.Call.Boar"
-	            "Target"        "CASTER"
-	        }
-	
 	        "SpawnUnit"
 	        {
 	            "UnitName"          "scout_boar"
+	            
 	            "Target"
 	            {
 	                "Center"                "CASTER"
@@ -191,7 +168,7 @@
 	
 	                "ApplyModifier"
 	                {
-	                    "ModifierName"  "modifier_beastmaster_boar"
+	                    "ModifierName"  "modifier_creation_and_death_effects"
 	                    "Target"        "TARGET"
 	                }
 	
@@ -206,12 +183,18 @@
 	
 	    "Modifiers"
 	    {
-	        "modifier_beastmaster_boar"
+	        "modifier_creation_and_death_effects"
 	        {
 	            "IsHidden"      "1"
 	
 	            "OnCreated"
 	            {
+	                "FireSound"
+	                {
+	                    "EffectName"    "Hero_Beastmaster.Call.Boar"
+	                    "Target"        "CASTER"
+	                }
+	
 	                "FireEffect"
 	                {
 	                    "Target"            "TARGET"
@@ -521,15 +504,10 @@
 	
 	    "OnSpellStart"
 	    {
-	        "FireSound"
-	        {
-	            "EffectName"    "Hero_Beastmaster.Call.Hawk"
-	            "Target"        "CASTER"
-	        }
-	
 	        "SpawnUnit"
 	        {
 	            "UnitName"          "scout_hawk"
+	            
 	            "Target"
 	            {
 	                "Center"                "CASTER"
@@ -581,6 +559,12 @@
 	
 	            "OnCreated"
 	            {
+	                "FireSound"
+	                {
+	                    "EffectName"    "Hero_Beastmaster.Call.Hawk"
+	                    "Target"        "CASTER"
+	                }
+	
 	                "FireEffect"
 	                {
 	                    "Target"            "TARGET"
@@ -1636,14 +1620,13 @@
 	            "var_type"                  "FIELD_INTEGER"
 	            "gold_cost"                 "350"
 	        }
-	
-	        // Extra        
-	        "08"
+	    
+	        "03"
 	        {
 	            "var_type"                  "FIELD_INTEGER"
 	            "techies_count"             "1"
 	        }
-	        "12"
+	        "04"
 	        {
 	            "var_type"              "FIELD_INTEGER"
 	            "distance"              "150" // The distance in front of the target at which units will be created
@@ -1652,15 +1635,10 @@
 	
 	    "OnSpellStart"
 	    {
-	        "FireSound"
-	        {
-	            "EffectName"    "techies_tech_spawn_01"
-	            "Target"        "CASTER"
-	        }
-	
 	        "SpawnUnit"
 	        {
 	            "UnitName"          "scout_techies"
+	            
 	            "Target"
 	            {
 	                "Center"                "CASTER"
@@ -1691,7 +1669,7 @@
 	
 	                "ApplyModifier"
 	                {
-	                    "ModifierName"  "modifier_beastmaster_techies"
+	                    "ModifierName"  "modifier_creation_and_death_effects"
 	                    "Target"        "TARGET"
 	                }
 	
@@ -1706,12 +1684,18 @@
 	
 	    "Modifiers"
 	    {
-	        "modifier_beastmaster_techies"
+	        "modifier_creation_and_death_effects"
 	        {
 	            "IsHidden"      "1"
 	
 	            "OnCreated"
 	            {
+	                "FireSound"
+	                {
+	                    "EffectName"    "techies_tech_spawn_01"
+	                    "Target"        "CASTER"
+	                }
+	
 	                "FireEffect"
 	                {
 	                    "Target"            "TARGET"

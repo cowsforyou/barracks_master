@@ -470,7 +470,6 @@
 	    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"   
 	    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
 	    "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
-	    "AbilityUnitTargetFlags"        ""
 	    "AbilityTextureName"            "bm_static_touch"
 	
 	    "MaxLevel"                      "1"
@@ -482,7 +481,7 @@
 	        "01"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "lightning_damage"      "65"
+	            "lightning_damage"      "150"
 	        }
 	        "02"
 	        {
@@ -521,7 +520,6 @@
 	        }                
 	    }
 	    
-	
 	    // Modifiers
 	    //-------------------------------------------------------------------------------------------------------------
 	    "Modifiers"
