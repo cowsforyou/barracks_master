@@ -72,20 +72,8 @@ function Precache( context )
 
   PrecacheResource("particle_folder", "particles/units/heroes/hero_treant", context) -- for Living Armor
   PrecacheResource("particle_folder", "particles/units/heroes/hero_sniper", context) -- for Assassinate
-
-  PrecacheResource("particle_folder", "particles/units/heroes/hero_riki", context) -- for spectator
-
-
-  PrecacheResource("particle_folder", "particles/radiant_fx2", context) -- testing particle ability 
-  PrecacheResource("particle_folder", "particles/customgames/capturepoints", context) -- testing particle ability 
-  PrecacheResource("particle_folder", "particles/dire_fx", context) -- testing particle ability 
-  PrecacheResource("particle_folder", "particles/econ/courier/courier_faceless_rex", context) -- testing particle ability 
-  PrecacheResource("particle_folder", "particles/econ/courier/courier_greevil_red", context) -- testing particle ability 
-  PrecacheResource("particle_folder", "particles/econ/items/ancient_apparition/aa_blast_ti_5", context) -- testing particle ability 
-  PrecacheResource("particle_folder", "particles/units/heroes/hero_silencer", context) -- testing particle ability 
-  PrecacheResource("particle_folder", "particles/units/heroes/hero_winter_wyvern", context) -- testing particle ability 
-
-
+  PrecacheResource("particle", "particles/units/heroes/hero_sniper", context) -- for Assassinate  
+  PrecacheResource("particle_folder", "particles/items_fx/chain_lightning.vpcf", context) -- for air creep ult
 
   PrecacheResource("particle_folder", "particles/econ/courier/courier_trail_hw_2012", context) -- for The Stump 
   PrecacheResource("particle_folder", "particles/units/heroes/hero_obsidian_destroyer", context) -- for Portal of Heroes
@@ -108,6 +96,7 @@ function Precache( context )
 
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_treant.vsndevts", context) -- for Living Armor
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_sniper.vsndevts", context) -- for Assassinate 
+  PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_zuus.vsndevts", context) -- for air creep ult
 
   PrecacheResource("soundfile", "soundevents/BM_custom_sounds.vsndevts", context) -- for Barracks Master Announcer
 
@@ -173,14 +162,3 @@ end
 function Activate()
   GameMode:InitGameMode()
 end
-
----------------------------------------------------------------------------
-
-
-
-
---[[
-  OUT OF VECTOR IS CAUSING ISSUES? CNetworkOriginCellCoordQuantizedVector m_cellZ cell 155 is outside of cell bounds (0->128) @(-15714.285156 -15714.285156 23405.712891)
-  NEED TO ADD ABILITY_BUILDING AND QUEUE MANUALLY, NECESSARY?
-  COLLISION SIZE?
-]]--
