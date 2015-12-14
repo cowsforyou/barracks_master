@@ -1139,7 +1139,7 @@
 	        //----------------------------------------------------------------
 	        "AbilityLayout"             "4"
 	        "Ability1"                  "bm_air_evasion_disabled"          // Ability 1.
-	        "Ability2"                  ""          // Ability 2.
+	        "Ability2"                  "bm_air_special"          // Ability 2.
 	        "Ability3"                  ""          // Ability 3.
 	        "Ability4"                  ""          // Ability 4.
 	        "Ability5"                  ""          // Ability 5.
@@ -1160,7 +1160,7 @@
 	        "AttackDamageType"          "DAMAGE_TYPE_ArmorPhysical"
 	        "AttackRate"                "0.8"       // Speed of attack.
 	        "AttackAnimationPoint"      "0.33"      // Normalized time in animation cycle to attack.
-	        "AttackAcquisitionRange"    "250"       // Range within a target can be acquired.
+	        "AttackAcquisitionRange"    "800"       // Range within a target can be acquired.
 	        "AttackRange"               "160"           // Range within a target can be attacked.
 	        "ProjectileModel"           "particles/units/heroes/hero_visage/visage_familiar_base_attack.vpcf" // Particle system model for projectile.
 	        "ProjectileSpeed"           "900"       // Speed of projectile.
@@ -1455,12 +1455,12 @@
 	
 	        // Abilities
 	        //----------------------------------------------------------------
-	        "AbilityLayout"             "5"
+	        "AbilityLayout"             "4"
 	        "Ability1"                  "bm_melee_armor_disabled"           // Ability 1.
 	        "Ability2"                  "bm_melee_damage_disabled"          // Ability 2.
 	        "Ability3"                  "bm_melee_hp_disabled"              // Ability 3.
 	        "Ability4"                  "bm_melee_special_disabled"          // Ability 4.
-	        "Ability5"                  "bm_air_special"          // Ability 5.
+	        "Ability5"                  ""          // Ability 5.
 	        "Ability6"                  ""          // Ability 6 - Extra.
 	        "Ability7"                  ""          // Ability 7 - Extra.
 	        "Ability8"                  ""          // Ability 8 - Extra.

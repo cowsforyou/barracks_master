@@ -469,10 +469,9 @@
 	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"   
 	    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
-	    "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"    
-	    "AbilityTextureName"            "bm_desolator3"
-	
-	
+	    "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+	    "AbilityUnitTargetFlags"        ""
+	    "AbilityTextureName"            "bm_static_touch"
 	
 	    "MaxLevel"                      "1"
 	
@@ -483,12 +482,12 @@
 	        "01"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "lightning_damage"      "85"
+	            "lightning_damage"      "65"
 	        }
 	        "02"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "lightning_bounces"     "8"
+	            "lightning_bounces"     "5"
 	        }
 	        "03"
 	        {
@@ -498,7 +497,7 @@
 	        "04"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "lightning_decay"       "20"
+	            "lightning_decay"       "10"
 	        }
 	        "05"
 	        {
@@ -508,8 +507,18 @@
 	        "06"
 	        {
 	            "var_type"              "FIELD_FLOAT"
-	            "lightning_chance"      "50"
-	        }        
+	            "lightning_chance"      "20"
+	        }
+	        "07"
+	        {
+	            "var_type"              "FIELD_FLOAT"
+	            "bonus_range"           "200"
+	        }    
+	        "08"
+	        {
+	            "var_type"              "FIELD_FLOAT"
+	            "bonus_movespeed"       "-30"
+	        }                
 	    }
 	    
 	
@@ -517,11 +526,19 @@
 	    //-------------------------------------------------------------------------------------------------------------
 	    "Modifiers"
 	    {
-	        "modifier_lightning"
+	        "modifier_static_touch"
 	        {
 	            "Passive"       "1"
 	            "IsHidden"      "1"
-	            "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+	
+	            "EffectName"            "particles/items2_fx/mask_of_madness.vpcf"
+	            "EffectAttachType"      "follow_origin"
+	
+	            "Properties"
+	            {
+	                "MODIFIER_PROPERTY_ATTACK_RANGE_BONUS"          "%bonus_range"
+	                "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"    "%bonus_movespeed"
+	            }
 	
 	            "OnAttackLanded"
 	            {

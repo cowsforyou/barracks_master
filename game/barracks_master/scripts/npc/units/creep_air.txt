@@ -37,7 +37,7 @@
         "AttackDamageType"          "DAMAGE_TYPE_ArmorPhysical"
         "AttackRate"                "0.8"       // Speed of attack.
         "AttackAnimationPoint"      "0.33"      // Normalized time in animation cycle to attack.
-        "AttackAcquisitionRange"    "250"       // Range within a target can be acquired.
+        "AttackAcquisitionRange"    "800"       // Range within a target can be acquired.
         "AttackRange"               "160"           // Range within a target can be attacked.
         "ProjectileModel"           "particles/units/heroes/hero_visage/visage_familiar_base_attack.vpcf" // Particle system model for projectile.
         "ProjectileSpeed"           "900"       // Speed of projectile.
