@@ -1,0 +1,89 @@
+"research_bm_air_special"
+{
+    "BaseClass"                     "ability_datadriven"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+    "AbilityTextureName"            "bm_static_touch"
+    "MaxLevel"                      "1"
+
+    "AbilityGoldCost"               "950"
+    "AbilityChannelTime"            "110"
+    
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "lightning_damage"      "150"
+        }
+        "02"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "lightning_bounces"     "5"
+        }
+        "03"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "lightning_decay"       "10"
+        }
+        "04"
+        {
+            "var_type"              "FIELD_FLOAT"
+            "lightning_chance"      "20"
+        }
+        "05"
+        {
+            "var_type"              "FIELD_FLOAT"
+            "bonus_range"           "200"
+        }    
+        "06"
+        {
+            "var_type"              "FIELD_FLOAT"
+            "bonus_movespeed"       "-30"
+        } 
+        "07"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "research_time"         "110"
+        }
+        "08"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "gold_cost"             "950"
+        }
+        "09"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "lumber_cost"           "1200"
+        }
+    }
+
+    "OnSpellStart"
+    {
+        "RunScript"
+        {
+            "ScriptFile"    "buildings/queue.lua"
+            "Function"      "EnqueueUnit"
+        }
+    }
+
+    "OnChannelSucceeded"
+    {
+        "FireSound"
+        {
+            "EffectName"    "BarracksMaster.ResearchComplete"
+            "Target"        "CASTER"
+        }
+        
+        "RunScript"
+        {
+            "ScriptFile"    "buildings/queue.lua"
+            "Function"      "NextQueue"
+        }
+
+        "RunScript"
+        {
+            "ScriptFile"    "buildings/research.lua"
+            "Function"      "ResearchComplete"
+        }
+    }
+}

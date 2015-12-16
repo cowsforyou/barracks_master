@@ -1,6 +1,6 @@
 "bm_air_special_disabled"
 {
     "BaseClass"                     "ability_datadriven"
-    "AbilityTextureName"            "research_ultimate_ability"
+    "AbilityTextureName"            "bm_static_touch"
     "MaxLevel"                      "0"
 }

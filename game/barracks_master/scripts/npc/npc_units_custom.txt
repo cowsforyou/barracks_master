@@ -98,7 +98,7 @@
 		"Ability2"					"research_spawn_air_creeps"		
 		"Ability3"					"research_bm_air_evasion"		
 		"Ability4"					"research_bm_scout_hawk"			
-		"Ability5"					""		
+		"Ability5"					"research_bm_air_special_disabled"		
 		"Ability6"					""			
 		"Ability10"					"ability_building"
 		"Ability11"					"ability_building_queue"
@@ -1139,7 +1139,7 @@
 	        //----------------------------------------------------------------
 	        "AbilityLayout"             "4"
 	        "Ability1"                  "bm_air_evasion_disabled"          // Ability 1.
-	        "Ability2"                  "bm_air_special"          // Ability 2.
+	        "Ability2"                  "bm_air_special_disabled"          // Ability 2.
 	        "Ability3"                  ""          // Ability 3.
 	        "Ability4"                  ""          // Ability 4.
 	        "Ability5"                  ""          // Ability 5.
@@ -1201,8 +1201,6 @@
 	        //----------------------------------------------------------------
 	        "VisionDaytimeRange"        "1100"       // Range of vision during day light.
 	        "VisionNighttimeRange"      "800"       // Range of vision at night time.
-	        
-	        //Inventory
 	    }   
 	//=================================================================================
 	    // Creeps: Ancient Creep 1: Granite Golem
@@ -2623,7 +2621,6 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"Beastmaster_Boar"			// Name of sound set.
 		"Level"						"5"
-		"IgnoreAddSummonedToSelection"  "1"   
 		"ModelScale"				"0.65"
 		"IsSummoned"				"1"
 		"UnitLabel"					"boar"
@@ -2711,6 +2708,8 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
 	
 		// Bounds
 		//----------------------------------------------------------------
@@ -2774,7 +2773,6 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
-		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackDamageMin"			"0"
 		"AttackDamageMax"			"0"	   
 	
