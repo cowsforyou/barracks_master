@@ -79,6 +79,8 @@ function Precache( context )
   PrecacheResource("particle_folder", "particles/units/heroes/hero_obsidian_destroyer", context) -- for Portal of Heroes
   PrecacheResource("particle_folder", "particles/econ/courier/courier_trail_international_2013_se", context) -- for Purifier
 
+  PrecacheResource("particle_folder", "particles/econ/courier/courier_greevil_purple", context) -- for test
+
 
     -- Sounds
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts", context) -- for Boar and Hawk Scouts
@@ -104,6 +106,7 @@ function Precache( context )
     -- Units
   PrecacheUnitByNameSync("lumberjack", context)    
   PrecacheUnitByNameSync("scout_boar", context)
+  PrecacheUnitByNameSync("scout_boar2", context)  
   PrecacheUnitByNameSync("scout_hawk", context)
   PrecacheUnitByNameSync("scout_techies", context)
   PrecacheUnitByNameSync("creep_air", context)

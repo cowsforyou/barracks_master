@@ -1,4 +1,8 @@
-"item_boar"
+// Rewrite of Beastmaster Call of the Wild Boar
+// Author: Noya
+// Date: April 5, 2015
+// This ability is used with beastmaster_call_of_the_wild_datadriven, skilling one will attempt to upgrade the other
+"item_boar3"
 {
     // General
     //-------------------------------------------------------------------------------------------------------------
@@ -19,7 +23,7 @@
 
     // Time     
     //-------------------------------------------------------------------------------------------------------------
-    "AbilityCooldown"               "3.0"
+    "AbilityCooldown"               "12.0"
 
     // Cost
     //-------------------------------------------------------------------------------------------------------------
@@ -52,16 +56,52 @@
         }
     }
 
-    // Others
-    //-------------------------------------------------------------------------------------------------------------
     "OnSpellStart"
     {
-        "RunScript"
+        "SpawnUnit"
         {
-            "ScriptFile"    "spells/boar.lua"
-            "Function"      "SpawnBoar"
-            "Distance"      "%distance"
-            "Duration"      "%duration"
+            "UnitName"          "scout_boar"
+            
+            "Target"
+            {
+                "Center"                "CASTER"
+                "ScriptSelectPoints"
+                {
+                    "ScriptFile"    "spells/call_of_the_wild.lua"
+                    "Function"      "GetFrontPoint"
+                    "Target"        "CASTER"
+                    "Distance"      "%distance"
+                }
+            }
+
+            "UnitCount"         "%boar_count"
+            "Duration"          "%duration"
+
+            "GrantsGold"        "1"
+            "GrantsXP"          "1"
+
+            // This makes sure units never get stuck
+            "OnSpawn"
+            {
+                "ApplyModifier"
+                {
+                    "ModifierName"  "modifier_phased"
+                    "Target"        "TARGET"
+                    "Duration"      "0.03"
+                }
+
+                "ApplyModifier"
+                {
+                    "ModifierName"  "modifier_creation_and_death_effects"
+                    "Target"        "TARGET"
+                }
+
+                "RunScript"
+                {
+                    "ScriptFile"    "spells/call_of_the_wild.lua"
+                    "Function"      "SetUnitsMoveForward"
+                }
+            }
         }
     }
 
