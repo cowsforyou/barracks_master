@@ -7,8 +7,10 @@ function SpawnBoar( event )
     local playerID = caster:GetPlayerID()
     local steamID = PlayerResource:GetSteamAccountID(playerID)
     local unitName = "scout_boar"
-    if steamID == 46639111 or steamID == 86718505 then
-        unitName = "scout_boar_2"
+    if steamID == 86718505 or 64143044 then
+        unitName = "scout_boar_p"
+    elseif steamID == 46639111 then
+        unitName = "scout_wolf_p"
     end
 
     -- Create the unit in front of the caster
@@ -23,8 +25,8 @@ function SpawnBoar( event )
 
     -- Apply modifiers
     local ability = event.ability
-    ability:ApplyDataDrivenModifier( caster, caster, "modifier_creation_and_death_effects", {} )
+    ability:ApplyDataDrivenModifier( caster, unit, "modifier_creation_and_death_effects", {} )
 
     -- Set duration for summoned units
-    caster:AddNewModifier( caster, nil, "modifier_kill", {duration = duration} )
+    unit:AddNewModifier( unit, nil, "modifier_kill", {duration = duration} )
 end

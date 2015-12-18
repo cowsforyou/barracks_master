@@ -1,4 +1,4 @@
-"scout_boar_2"
+"scout_wolf_p"
 {										
 	// General
 	//----------------------------------------------------------------
@@ -11,7 +11,7 @@
 
 	// Abilities
 	//----------------------------------------------------------------
-	"Ability1"					"particle_purple_ambient"			// Ability 1
+	"Ability1"					"particle_ambient_purple"			// Ability 1
 	"Ability2"					""			// Ability 2
 	"Ability3"					""			// Ability 3
 	"Ability4"					""			// Ability 4

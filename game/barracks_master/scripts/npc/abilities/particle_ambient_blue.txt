@@ -1,0 +1,30 @@
+"particle_ambient_blue"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+	"MaxLevel" 						"1"
+
+	"Modifiers"
+	{
+		"modifier_keep_particle"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+	
+			"OnCreated"
+			{
+				"AttachEffect"
+				{
+					"EffectName"        "particles/econ/courier/courier_greevil_blue/courier_greevil_blue_ambient_3.vpcf"
+					"EffectAttachType"  "follow_origin"
+					"Target"			"CASTER"
+					"ControlPointEntities"
+					{
+						"CASTER"	"attach_hitloc"
+					}
+				}
+			}
+		}
+	}
+}
