@@ -3,6 +3,6 @@
 	"npc_dota_hero_terrorblade"						"-1"
 	"npc_dota_hero_sven"							"-1"
 	"npc_dota_hero_templar_assassin"				"-1"
-	"npc_dota_hero_venomancer"						"-1"
+	"npc_dota_hero_arc_warden"						"-1"
 	"npc_dota_hero_wisp"							"-1"
 }

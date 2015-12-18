@@ -137,7 +137,7 @@ function Precache( context )
   PrecacheUnitByNameSync("npc_dota_hero_sven", context)
   PrecacheUnitByNameSync("npc_dota_hero_templar_assassin", context)
   PrecacheUnitByNameSync("npc_dota_hero_terrorblade", context)
-  PrecacheUnitByNameSync("npc_dota_hero_venomancer", context)
+  PrecacheUnitByNameSync("npc_dota_hero_arc_warden", context)
 
   PrecacheUnitByNameSync("npc_dota_hero_wisp", context) -- for spectator
 

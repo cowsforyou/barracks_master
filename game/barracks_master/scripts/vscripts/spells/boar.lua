@@ -7,10 +7,15 @@ function SpawnBoar( event )
     local playerID = caster:GetPlayerID()
     local steamID = PlayerResource:GetSteamAccountID(playerID)
     local unitName = "scout_boar"
-    if steamID == 86718505 or 64143044 then
-        unitName = "scout_boar_p"
+
+    if steamID == 64143044 then
+        unitName = "scout_boar_purple"
+
+    elseif steamID == 86718505 then
+        unitName = "scout_wolf_red"
+
     elseif steamID == 46639111 then
-        unitName = "scout_wolf_p"
+        unitName = "scout_wolf_purple"
     end
 
     -- Create the unit in front of the caster
