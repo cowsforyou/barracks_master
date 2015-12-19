@@ -11,11 +11,24 @@ function SpawnBoar( event )
     if steamID == 64143044 then
         unitName = "scout_boar_purple"
 
+--    elseif steamID == 46639111 then
+--        unitName = "scout_boar_white"
+
+--    elseif steamID == 46639111 then
+--        unitName = "scout_wolf"
+
     elseif steamID == 86718505 then
         unitName = "scout_wolf_red"
 
+--    elseif steamID == 46639111 then
+--        unitName = "scout_wolf_purple"
+
+--    elseif steamID == 46639111 then
+--        unitName = "scout_wolf_white"
+
     elseif steamID == 46639111 then
-        unitName = "scout_wolf_purple"
+        unitName = "scout_wolf_yellow"
+
     end
 
     -- Create the unit in front of the caster
