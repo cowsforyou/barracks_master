@@ -19,7 +19,7 @@
         "02"
         {
             "var_type"              "FIELD_INTEGER"
-            "corruption_armor"      "-5"
+            "corruption_armor"      "-4"
         }
 		"03"
 		{

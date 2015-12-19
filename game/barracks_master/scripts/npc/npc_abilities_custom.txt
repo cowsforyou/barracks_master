@@ -481,7 +481,7 @@
 	        "01"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "lightning_damage"      "150"
+	            "lightning_damage"      "120"
 	        }
 	        "02"
 	        {
@@ -496,7 +496,7 @@
 	        "04"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "lightning_decay"       "10"
+	            "lightning_decay"       "25"
 	        }
 	        "05"
 	        {
@@ -794,7 +794,7 @@
 	        "01"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "bonus_attack_speed"    "15"
+	            "bonus_attack_speed"    "25"
 	        }
 	        "02"
 	        {
@@ -1026,7 +1026,7 @@
 	        "01"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "bonus_damage"          "20"
+	            "bonus_damage"          "30"
 	        }
 	        "02"
 	        {
@@ -3540,7 +3540,7 @@
 	        "01"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "lightning_damage"      "150"
+	            "lightning_damage"      "120"
 	        }
 	        "02"
 	        {
@@ -3550,7 +3550,7 @@
 	        "03"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "lightning_decay"       "10"
+	            "lightning_decay"       "25"
 	        }
 	        "04"
 	        {
@@ -4135,7 +4135,7 @@
 	        "02"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "corruption_armor"      "-5"
+	            "corruption_armor"      "-4"
 	        }
 			"03"
 			{

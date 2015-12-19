@@ -16,7 +16,7 @@
         "01"
         {
             "var_type"              "FIELD_INTEGER"
-            "lightning_damage"      "150"
+            "lightning_damage"      "120"
         }
         "02"
         {
@@ -31,7 +31,7 @@
         "04"
         {
             "var_type"              "FIELD_INTEGER"
-            "lightning_decay"       "10"
+            "lightning_decay"       "25"
         }
         "05"
         {
