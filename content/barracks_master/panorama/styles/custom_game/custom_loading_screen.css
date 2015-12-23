@@ -71,7 +71,7 @@ Updates Panel
 
 #UpdatesTitle
 {
-	padding-top: 10px;
+	padding-top: 610px;
 	padding-left: 12px;
 	font-size: 30px;
 	font-weight: bold;
@@ -81,14 +81,14 @@ Updates Panel
 
 #Updates
 {
-	padding-top: 40px;
+	padding-top: 640px;
 	padding-left: 12px;
 	padding-right: 12px;
 	font-size: 15px;
 	color: #ffffff;
 }
 
-#Contact
+/*#Contact
 {
 	vertical-align: bottom;
 	padding-bottom: 15px;
@@ -96,18 +96,11 @@ Updates Panel
 	padding-right: 12px;
 	font-size: 16px;
 	color: #e5e5e5;
-}
+}*/
 
 /*-------------------------
 Tutorial Panel
 -------------------------*/
-
-/*.SeqBg
-{
-	background-repeat: no-repeat;
-	background-position: 100% 100%;
-	background-size: 100% 100%;
-}*/
 
 #BM_Tutorials
 {
@@ -116,12 +109,6 @@ Tutorial Panel
 	margin-top: 0px;
 	margin-left: 525px;
 }
-
-/*#seq_bg
-{
-    margin-left: 0px;
-	pre-transform-scale2d: 1.0, 1.0;
-}*/
 
 #T1
 {
@@ -145,4 +132,23 @@ Tutorial Panel
 {
 	margin-left: 0px;
 	margin-top: 740px;
+}
+
+
+/*-------------------------
+Tournament Panel
+-------------------------*/
+
+#BM_Tournament
+{
+	horizontal-align: left;
+	vertical-align: top;
+	margin-top: 102px;
+	margin-left: 50px;
+}
+
+#T_Img1
+{
+	margin-left: 0px;
+	margin-top: 0px;
 }
