@@ -18,15 +18,21 @@
 				"IsHidden"				"1"
 				"OnCreated"
 				{
+					//"AttachEffect"
+					//{
+					//	"EffectName"        "particles/econ/events/ti5/radiant_fountain_regen_lvl2_ti5.vpcf"
+					//	"EffectAttachType"  "follow_origin"
+					//	"Target"            "TARGET"
+					//	"ControlPoints"
+					//	{
+					//		"01"			"0 250 0"
+					//	}
+					//}
 					"AttachEffect"
 					{
-						"EffectName"        "particles/econ/events/ti5/radiant_fountain_regen_lvl2_ti5.vpcf"
+						"EffectName"        "particles/bm_custom_particles/bm_particle_research_ring.vpcf"
 						"EffectAttachType"  "follow_origin"
 						"Target"            "TARGET"
-						"ControlPoints"
-						{
-							"01"			"0 250 0"
-						}
 					}
 				}
 	 
@@ -138,161 +144,6 @@
 	            "Function"      "SpawnBoar"
 	            "Distance"      "%distance"
 	            "Duration"      "%duration"
-	        }
-	    }
-	
-	    "Modifiers"
-	    {
-	        "modifier_creation_and_death_effects"
-	        {
-	            "IsHidden"      "1"
-	
-	            "OnCreated"
-	            {
-	                "FireSound"
-	                {
-	                    "EffectName"    "Hero_Beastmaster.Call.Boar"
-	                    "Target"        "CASTER"
-	                }
-	
-	                "FireEffect"
-	                {
-	                    "Target"            "TARGET"
-	                    "EffectName"        "particles/units/heroes/hero_beastmaster/beastmaster_call_boar.vpcf"
-	                    "EffectAttachType"  "follow_origin"
-	                }
-	            }
-	
-	            "OnDeath"
-	            {
-	                "FireEffect"
-	                {
-	                    "Target"            
-	                    {
-	                        "Center"    "UNIT"
-	                        "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
-	                    }
-	                    "EffectName"        "particles/units/heroes/hero_lone_druid/lone_druid_spirit_bear_death.vpcf"
-	                    "EffectAttachType"  "follow_origin"
-	                }
-	                
-	                "FireSound"
-	                {
-	                    "Target"            
-	                    {
-	                        "Center"    "UNIT"
-	                        "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
-	                    }
-	                    "EffectName"    "Hero_Beastmaster_Boar.Death"
-	                }
-	            }
-	        }
-	    }
-	}
-	// Rewrite of Beastmaster Call of the Wild Boar
-	// Author: Noya
-	// Date: April 5, 2015
-	// This ability is used with beastmaster_call_of_the_wild_datadriven, skilling one will attempt to upgrade the other
-	"item_boar3"
-	{
-	    // General
-	    //-------------------------------------------------------------------------------------------------------------
-	    "ID"    "1002"
-	    "BaseClass"                     "item_datadriven"
-	    "AbilityTextureName"			"item_boar"
-	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-	
-	    "ItemKillable"      "0" 
-	    "ItemSellable"      "0"
-	    "ItemPurchasable"   "0"
-	    "ItemDroppable"     "0"
-	
-	    
-	    // Casting
-	    //-------------------------------------------------------------------------------------------------------------
-	    "AbilityCastPoint"              "0.3"
-	
-	    // Time     
-	    //-------------------------------------------------------------------------------------------------------------
-	    "AbilityCooldown"               "12.0"
-	
-	    // Cost
-	    //-------------------------------------------------------------------------------------------------------------
-	    "AbilityGoldCost"               "10"
-	    "AbilityManaCost"               "40"
-	
-	    // Special
-	    //-------------------------------------------------------------------------------------------------------------
-	    "AbilitySpecial"
-	    {
-	        "01"
-	        {
-	            "var_type"                  "FIELD_INTEGER"
-	            "duration"                  "40"
-	        }
-	        "02"
-	        {
-	            "var_type"                  "FIELD_INTEGER"
-	            "gold_cost"                 "10"
-	        }   
-	        "03"
-	        {
-	            "var_type"                  "FIELD_INTEGER"
-	            "boar_count"                "1"
-	        }
-	        "04"
-	        {
-	            "var_type"                  "FIELD_INTEGER"
-	            "distance"                  "150" // The distance in front of the target at which units will be created
-	        }
-	    }
-	
-	    "OnSpellStart"
-	    {
-	        "SpawnUnit"
-	        {
-	            "UnitName"          "scout_boar"
-	            
-	            "Target"
-	            {
-	                "Center"                "CASTER"
-	                "ScriptSelectPoints"
-	                {
-	                    "ScriptFile"    "spells/call_of_the_wild.lua"
-	                    "Function"      "GetFrontPoint"
-	                    "Target"        "CASTER"
-	                    "Distance"      "%distance"
-	                }
-	            }
-	
-	            "UnitCount"         "%boar_count"
-	            "Duration"          "%duration"
-	
-	            "GrantsGold"        "1"
-	            "GrantsXP"          "1"
-	
-	            // This makes sure units never get stuck
-	            "OnSpawn"
-	            {
-	                "ApplyModifier"
-	                {
-	                    "ModifierName"  "modifier_phased"
-	                    "Target"        "TARGET"
-	                    "Duration"      "0.03"
-	                }
-	
-	                "ApplyModifier"
-	                {
-	                    "ModifierName"  "modifier_creation_and_death_effects"
-	                    "Target"        "TARGET"
-	                }
-	
-	                "RunScript"
-	                {
-	                    "ScriptFile"    "spells/call_of_the_wild.lua"
-	                    "Function"      "SetUnitsMoveForward"
-	                }
-	            }
 	        }
 	    }
 	

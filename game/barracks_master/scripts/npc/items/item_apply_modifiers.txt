@@ -16,15 +16,21 @@
 			"IsHidden"				"1"
 			"OnCreated"
 			{
+				//"AttachEffect"
+				//{
+				//	"EffectName"        "particles/econ/events/ti5/radiant_fountain_regen_lvl2_ti5.vpcf"
+				//	"EffectAttachType"  "follow_origin"
+				//	"Target"            "TARGET"
+				//	"ControlPoints"
+				//	{
+				//		"01"			"0 250 0"
+				//	}
+				//}
 				"AttachEffect"
 				{
-					"EffectName"        "particles/econ/events/ti5/radiant_fountain_regen_lvl2_ti5.vpcf"
+					"EffectName"        "particles/bm_custom_particles/bm_particle_construction_ring.vpcf"
 					"EffectAttachType"  "follow_origin"
 					"Target"            "TARGET"
-					"ControlPoints"
-					{
-						"01"			"0 250 0"
-					}
 				}
 			}
  

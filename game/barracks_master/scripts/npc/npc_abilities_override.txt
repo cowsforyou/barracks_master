@@ -98,7 +98,7 @@
             "01"
             {
                 "var_type"          "FIELD_INTEGER"
-                "damage_count"      "5"
+                "damage_count"      "4"
             }
             "02"
             {
@@ -113,7 +113,7 @@
             "04"
             {
                 "var_type"          "FIELD_FLOAT"
-                "duration"          "15.0"
+                "duration"          "25.0"
             }
         }
     }

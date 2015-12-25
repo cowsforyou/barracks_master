@@ -85,6 +85,8 @@ function Precache( context )
   PrecacheResource("particle_folder", "particles/econ/courier/courier_greevil_blue", context) -- for land scout -- ice
   PrecacheResource("particle_folder", "particles/econ/courier/courier_greevil_yellow", context) -- for land scout -- electric
 
+  PrecacheResource("particle_folder", "particles/bm_custom_particles", context) -- for Construction/Research
+
     -- Sounds
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts", context) -- for Boar and Hawk Scouts
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_techies.vsndevts", context) -- for Techies Scout

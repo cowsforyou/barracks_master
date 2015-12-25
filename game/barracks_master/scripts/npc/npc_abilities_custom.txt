@@ -3206,6 +3206,36 @@
 			}
 		}
 	}
+	"particle_researching2"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	
+		"MaxLevel" 						"1"
+	
+		"Modifiers"
+		{
+			"modifier_keep_particle"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+		
+				"OnCreated"
+				{
+					"AttachEffect"
+					{
+						"EffectName"        "particles/units/heroes/hero_wisp/wisp_relocate_channel.vpcf"
+						"EffectAttachType"  "follow_origin"
+						"Target"			"CASTER"
+						"ControlPointEntities"
+						{
+							"CASTER"	"attach_hitloc"
+						}
+					}
+				}
+			}
+		}
+	}
 	"particle_small_fire"
 	{
 		"BaseClass"             		"ability_datadriven"

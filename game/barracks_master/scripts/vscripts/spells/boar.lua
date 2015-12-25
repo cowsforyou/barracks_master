@@ -8,7 +8,10 @@ function SpawnBoar( event )
     local steamID = PlayerResource:GetSteamAccountID(playerID)
     local unitName = "scout_boar"
 
-    if steamID == 64143044 then
+    if steamID == 49458799 then
+        unitName = "scout_boar_blue"
+
+    elseif steamID == 64143044 or steamID == 103029867 then
         unitName = "scout_boar_purple"
 
 --    elseif steamID == 46639111 then
@@ -20,14 +23,21 @@ function SpawnBoar( event )
     elseif steamID == 86718505 then
         unitName = "scout_wolf_red"
 
---    elseif steamID == 46639111 then
---        unitName = "scout_wolf_purple"
+    elseif steamID == 46639111 then
+        unitName = "scout_wolf_purple"
 
 --    elseif steamID == 46639111 then
 --        unitName = "scout_wolf_white"
 
-    elseif steamID == 46639111 then
-        unitName = "scout_wolf_yellow"
+--    elseif steamID == 46639111 then
+--        unitName = "scout_wolf_yellow"
+
+-- 46639111 cows
+-- 64143044 bobby
+-- 86718505 noya
+-- 49458799 cawkeye
+-- 103029867 seriously
+-- 103245869 irest
 
     end
 
