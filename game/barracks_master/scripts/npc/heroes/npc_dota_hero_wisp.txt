@@ -2,8 +2,6 @@
 {
 	"override_hero"				"npc_dota_hero_wisp"
 
-	"UnitLabel"					"builder"
-
 	// Armor
 	//-------------------------------------------------------------------------------------------------------------
 	"ArmorPhysical"					"10"
@@ -27,8 +25,8 @@
 
 	// Status
 	//-------------------------------------------------------------------------------------------------------------
-	"StatusHealth"					"1000"			// Base health.
-	"StatusHealthRegen"				"10"
+	"StatusHealth"					"1"			// Base health.
+	"StatusHealthRegen"				"1"
 	"StatusMana"					"1000"
 	"StatusManaRegen"				"10"
 
@@ -46,7 +44,7 @@
 	// Abilities
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityLayout"				"4"
-	"Ability1" 					"bm_io"
+	"Ability1" 					"bm_io_modifier_and_hawkspawn"
 	"Ability2" 					""
 	"Ability3" 					""
 	"Ability4" 					""

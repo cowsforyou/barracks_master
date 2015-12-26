@@ -188,7 +188,7 @@ function Build( event )
 		EmitSoundOn("BarracksMaster.ConstructionComplete", caster) -- cows
 		print("Building Finished")
 
-		-- Let the building cast abilities
+		-- Remove Particle Effect
 		unit:RemoveModifierByName("modifier_construction")
 
 		-- Remove item_building_cancel

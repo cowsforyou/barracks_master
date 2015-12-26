@@ -23,17 +23,17 @@ function BMConvars:RegisterCommands()
     Convars:RegisterCommand("bm_fake_heroes", Dynamic_Wrap(self, 'SpawnFakeHeroes'), "Spawn heroes to fill in missing players.", FCVAR_CHEAT )
     Convars:RegisterCommand("bm_money", Dynamic_Wrap(self, 'GiveMoney'), "+9999 gold and lumber", FCVAR_CHEAT )
     Convars:RegisterCommand("bm_warpten", Dynamic_Wrap(self, 'WarpTen'), "Instant buildings.", FCVAR_CHEAT )
+    Convars:RegisterCommand("bm_tech", Dynamic_Wrap(self, 'Synergy'), "Unlock tech tree.", FCVAR_CHEAT )
 end
 
 function BMConvars:WarpTen()
-  local humanPlayer = Convars:GetCommandClient()
-  local humanPlayerID = humanPlayer:GetPlayerID()
-
   if GameRules.WarpTen == nil or GameRules.WarpTen == false then
-    print("Instant buildings activated.")
+    print("Instant build enabled.")
+    Notifications:BottomToAll({text="Instant Build Enabled", duration=4, style={color="red", ["font-size"]="70px"}})
     GameRules.WarpTen = true
   else
-    print("Instant buildings deactivated.")
+    print("Instant build disabled.")
+    Notifications:BottomToAll({text="Instant Build Disabled", duration=4, style={color="red", ["font-size"]="70px"}})
     GameRules.WarpTen = false
   end
 end
@@ -43,8 +43,8 @@ function BMConvars:GiveMoney()
   local humanPlayerID = humanPlayer:GetPlayerID()
   local hero = humanPlayer:GetAssignedHero()
 
-  hero:ModifyGold(9999, false, 0)
-  ModifyLumber(humanPlayer, 9999)
+  hero:ModifyGold(50000, false, 0)
+  ModifyLumber(humanPlayer, 50000)
 end
 
 function BMConvars:SpawnFakeHeroes()
@@ -72,7 +72,17 @@ function BMConvars:SpawnFakeHeroes()
   end
 end
 
-
+function BMConvars:Synergy()
+  if GameRules.Synergy == nil or GameRules.Synergy == false then
+    print("Tech tree now unlocked.")
+    Notifications:BottomToAll({text="Tech Tree Unlocked", duration=4, style={color="red", ["font-size"]="70px"}})
+    GameRules.Synergy = true
+  else
+    print("Tech tree locked.")
+    Notifications:BottomToAll({text="Tech Tree Locked", duration=4, style={color="red", ["font-size"]="70px"}})
+    GameRules.Synergy = false
+  end
+end
 
 --------------------------------------------------------------------------------
 function BMConvars:SpawnFakeHeroes_DEPRECATED() -- broken
