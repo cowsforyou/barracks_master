@@ -4609,7 +4609,7 @@
 	    "MaxLevel"                      "5"
 	
 	    "AbilityGoldCost"               "0 100 300 500 800"
-	    "AbilityChannelTime"            "0 3 5 5 7"
+	    "AbilityChannelTime"            "1 3 5 5 7"
 	    
 	    "AbilitySpecial"
 	    {
@@ -4622,7 +4622,7 @@
 	        "02"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "research_time"         "0 3 5 5 7"
+	            "research_time"         "1 3 5 5 7"
 	        }
 	
 	        "03"
@@ -4676,7 +4676,7 @@
 	    "MaxLevel"                      "6"
 	
 	    "AbilityGoldCost"               "0 60 100 150 300 600"
-	    "AbilityChannelTime"            "0 3 5 5 7 7"
+	    "AbilityChannelTime"            "1 3 5 5 7 7"
 	    
 	    "AbilitySpecial"
 	    {
@@ -4689,7 +4689,7 @@
 	        "02"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "research_time"         "0 3 5 5 7 7"
+	            "research_time"         "1 3 5 5 7 7"
 	        }
 	
 	        "03"
@@ -4743,7 +4743,7 @@
 	    "MaxLevel"                      "5"
 	
 	    "AbilityGoldCost"               "0 100 200 400 700"
-	    "AbilityChannelTime"            "0 3 5 5 7"
+	    "AbilityChannelTime"            "1 3 5 5 7"
 	    
 	    "AbilitySpecial"
 	    {
@@ -4756,7 +4756,7 @@
 	        "02"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "research_time"         "0 3 5 5 7"
+	            "research_time"         "1 3 5 5 7"
 	        }
 	
 	        "03"
@@ -4810,7 +4810,7 @@
 	    "MaxLevel"                      "3"
 	
 	    "AbilityGoldCost"               "0 500 800"
-	    "AbilityChannelTime"            "0 5 7"
+	    "AbilityChannelTime"            "1 5 7"
 	    
 	    "AbilitySpecial"
 	    {
@@ -4823,7 +4823,7 @@
 	        "02"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "research_time"         "0 5 7"
+	            "research_time"         "1 5 7"
 	        }
 	
 	        "03"
@@ -4877,7 +4877,7 @@
 	    "MaxLevel"                      "3"
 	
 	    "AbilityGoldCost"               "0 80 150"
-	    "AbilityChannelTime"            "0 3 5"
+	    "AbilityChannelTime"            "1 3 5"
 	    
 	    "AbilitySpecial"
 	    {
@@ -4890,7 +4890,7 @@
 	        "02"
 	        {
 	            "var_type"              "FIELD_INTEGER"
-	            "research_time"         "0 3 5"
+	            "research_time"         "1 3 5"
 	        }
 	
 	        "03"

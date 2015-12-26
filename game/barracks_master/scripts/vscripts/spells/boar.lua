@@ -14,6 +14,9 @@ function SpawnBoar( event )
     elseif steamID == 64143044 or steamID == 103029867 then
         unitName = "scout_boar_purple"
 
+    elseif steamID == 103245869 then
+        unitName = "scout_boar_red"
+
 --    elseif steamID == 46639111 then
 --        unitName = "scout_boar_white"
 

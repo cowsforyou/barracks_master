@@ -189,6 +189,9 @@ function AdvanceQueue( event )
 						-- Add Research Particle Effect -- cows
     					ApplyModifier(caster, "modifier_research")
 
+    					-- Play A Sound -- cows
+    					EmitSoundOn("BarracksMaster.Training", caster)
+
 						-- Fake mana channel bar
 						local channel_time = ability_to_channel:GetChannelTime()
 						caster:SetMana(0)
@@ -233,6 +236,9 @@ function AdvanceQueue( event )
 
 							-- Add Research Particle Effect -- cows
     						ApplyModifier(caster, "modifier_research")
+
+    						-- Play A Sound -- cows
+    						EmitSoundOn("BarracksMaster.Training", caster)
 
 							-- Fake mana channel bar
 							local channel_time = ability_to_channel:GetChannelTime()
