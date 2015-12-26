@@ -92,6 +92,9 @@ function DequeueUnit( event )
 					train_ability:EndChannel(true)
 					print("Cancel current channel")
 
+					-- Remove Research Particle Effect
+					caster:RemoveModifierByName("modifier_research")
+
 					-- Fake mana channel bar
 					caster:SetMana(0)
 					caster:SetBaseManaRegen(0)
@@ -183,6 +186,9 @@ function AdvanceQueue( event )
 						ability_to_channel:SetChanneling(true)
 						print("->"..ability_to_channel:GetAbilityName()," started channel")
 
+						-- Add Research Particle Effect -- cows
+    					ApplyModifier(caster, "modifier_research")
+
 						-- Fake mana channel bar
 						local channel_time = ability_to_channel:GetChannelTime()
 						caster:SetMana(0)
@@ -205,6 +211,9 @@ function AdvanceQueue( event )
 								ability_to_channel:EndChannel(false)
 								ReorderItems(caster)
 								--print("Unit finished building")
+								
+								-- Remove Research Particle Effect
+								caster:RemoveModifierByName("modifier_research")
 							else
 								--print("This unit was interrupted")
 							end
@@ -221,6 +230,9 @@ function AdvanceQueue( event )
 						if ability_to_channel then
 							ability_to_channel:SetChanneling(true)
 							print("->"..ability_to_channel:GetAbilityName()," started channel")
+
+							-- Add Research Particle Effect -- cows
+    						ApplyModifier(caster, "modifier_research")
 
 							-- Fake mana channel bar
 							local channel_time = ability_to_channel:GetChannelTime()
@@ -244,6 +256,10 @@ function AdvanceQueue( event )
 									ability_to_channel:EndChannel(false)
 									ReorderItems(caster)
 									print("Research complete!")
+
+									-- Remove Research Particle Effect
+									caster:RemoveModifierByName("modifier_research")
+
 								else
 									--print("This Research was interrupted")
 								end

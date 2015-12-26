@@ -30,7 +30,7 @@
 					//}
 					"AttachEffect"
 					{
-						"EffectName"        "particles/bm_custom_particles/bm_particle_research_ring.vpcf"
+						"EffectName"        "particles/bm_custom_particles/bm_particle_construction_ring.vpcf"
 						"EffectAttachType"  "follow_origin"
 						"Target"            "TARGET"
 					}
@@ -43,7 +43,21 @@
 				}
 				// added by Veggiesama END
 			}
-			
+	
+			"modifier_research"
+			{
+				"IsHidden"				"1"
+				"OnCreated"
+				{
+					"AttachEffect"
+					{
+						"EffectName"        "particles/bm_custom_particles/bm_particle_research_ring.vpcf"
+						"EffectAttachType"  "follow_origin"
+						"Target"            "TARGET"
+					}
+				}
+			}
+	
 			"modifier_builder_hidden"
 			{
 				"IsHidden"				"1"  
