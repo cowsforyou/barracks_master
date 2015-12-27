@@ -1,29 +1,29 @@
------ Ready Screen Interactions -----
+----- Pregame Screen Interactions -----
 
-1) I'm not sure if you're able to force a slot 2 selection if slot 1 is empty, so if the answer is yes, then players should be able to pick any slot they wish (e.g. they can pick TA immediately on Radiant). If that is not possible, then have the script auto push players to slot 1 so access to slot 2 is only possible if slot 1 is filled.
+----- Refer to the series of images preview01, preview02 etc to see the design -----
 
-2) Players should be automatically assigned to the Radiant and Dire teams. Should they wish to swap around, they can do so on their own by moving to Unassigned or directly to the other team. Automatically assigning them to the Radiant/Dire should make it easier for noobs (as opposed to default assigning everyone to Unassigned).
+1) Fonts used throughout is dota's default: Radiance. The title "BARRACKS MASTER" is Radiance-Bold.
 
-3) There will be two different layouts (preview_duo and preview_quad will show you the preview). One is for the 2v2 map the other is for the 4v4 map.
+2) There will be two maps in Barracks Master (duo map and quad map) the pregame screen should display a 2 player count per team for the duo and 4 player count per team for the quad.
 
-4) The middle background should correspond to the hero selected by the player. If the player has selected unassigned, then it should revert to the default background.
+3) Spectator team will always be 4 count regardless of the map.
 
-5) The chat box width is the default width that Valve is using. If you're able to modify the width, then having it stretched to match the unassigned grey line width is ideal.
+4) The players should be placed automatically in the radiant/dire teams. They may choose to shuffle on their own.
 
-6) I did not include the minimap image since I am assuming you are going to draw that from the actual file. But the size I am using in the preview is 80% of the original tga file resolution.
+5) Currently the slots corresponds to a specific spawn point and a specific hero in the game. However, with the present interface it always fills slot 1 first (Sven for Radiant and TB for Dire). If you're able to override that so players can choose slot 2 leaving slot 1 empty, then that is great. If unable, then follow the current system where slot 1 must be filled before slot 2 is allowed.
 
-7) Everyone will be by default given the red color on the ready screen. However, in the case of color duplicates, the AI should just assign the next available color to the 2nd player with the duplicate color. E.g. Slot 1 and 2 Radiant have red selected, then when the game starts, slot 1 will be given red and slot 2 be given blue.
+6) Currently, the colors are coded to specific heroes (e.g. Sven is blue, TB is red). You can find the codes at the bottom of spawner.lua. This is probably where you'll need to tweak to allow the choosing of different colors.
 
-8) The countdown timer is also the default one used by Valve currently so that image is not provided. The background for it however is provided (background_timer.png).
+7) There should be 8 colors available (red, blue, cyan, purple, yellow, orange, green, pink). You can see how the dropdown should look like on preview05_duo_colordrop.png.
 
-9) The additional heroes in the quad mode are not decided yet, so the TA and Veno icons are placeholders.
+8) The colors should automatically be picked for them when they fill the empty slots (refer to preview06_2players.png). Clicking the color dropdown should only show the remaining available colors (no duplicates).
 
-10) The LOCK + START button is also not provided - that is the default one Valve uses.
+9) The hero background on the left should populate based on the hero chosen. The hero background should overlay the existing background at 30% opacity. Refer to preview03_duo_w_background.png.
 
-11) The updates background and host control backgrounds should be set to 50% opacity.
+10) The Updates, Image and Ladder backgrounds should be at 50% opacity.
 
-12) The hero backgrounds should all be set at 30% opacity.
+11) The map preview and map name should correspond to the chosen map (either duo or quad). Note that the quad map is not created yet but please make provisions.
 
-13) The color picker is not coded on the game yet so you will have to help me do that to work with this Ready Screen. Everything else should be available and just needs a link up.
+12) Likewise for the hero icons (the TA spam and veno spam on preview02_quad.png) - they have not been decided yet so those are placeholders.
 
-14) For the updates panel on the left, pull the text from addon_english.txt in the game/barracks_master/resource folder. It is under "bm_updates_text" - that is what I'm using currently for my loading screen.
+12) I did not include the images for the chatbox, star icon, countdown timer and LOCK + START button as these are the default ones Valve is using.
