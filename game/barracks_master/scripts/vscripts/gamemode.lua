@@ -35,6 +35,8 @@ function GameMode:InitGameMode()
     end, 
   self)]]--
 
+  -- Don't end the game if everyone is unassigned
+  SendToServerConsole("dota_surrender_on_disconnect 0")
 
   -- Register Listener
   CustomGameEventManager:RegisterListener( "update_selected_entities", Dynamic_Wrap(BuildingEvents, 'OnPlayerSelectedEntities'))
