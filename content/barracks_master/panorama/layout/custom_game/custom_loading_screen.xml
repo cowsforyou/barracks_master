@@ -3,11 +3,9 @@
 		<include src="file://{resources}/styles/custom_game/custom_loading_screen.css" />
 	</styles>
 
-	<!-- You can include other stuff besides styles like javascript. for example below:
 	<scripts>
-    	<include src="file://{resources}/scripts/custom_loading_screen.js" /> 
+    	<include src="file://{resources}/scripts/custom_game/custom_loading_screen.js" /> 
   	</scripts>
-	-->
 
 	<Panel class="BMLoadingRoot">
 
@@ -18,22 +16,33 @@
 			<Label id="GameTitle" text="#addon_game_name" style="" />		
 		</Panel>
 
-		<Panel id="BM_Updates">
-			<Label id="UpdatesTitle" text="#bm_updates_title" style="" />
-			<Label id="Updates" text="#bm_updates_text" style="" />
-			<!--<Label id="Contact" text="#bm_contact_text" style="" />-->
+		<Panel class="BM_Left">
+			<Panel id="BM_Updates">
+				<Label id="UpdatesTitle" text="#bm_updates_title" style="" />
+				<Label id="Updates" text="#bm_updates_text" style="" />
+				<!--<Label id="Contact" text="#bm_contact_text" style="" />-->
+			</Panel>
+
+			<Panel id="BM_Ladder">
+				<Label id="UpdatesTitle" text="Coming Soon" />
+				<Label id="Updates" text="1st. Noya" style="" />
+			</Panel>
+
+			<Panel id="BM_Image">
+				<Label id="UpdatesTitle" text="Image" />
+			</Panel>
+
+			<!--<Panel id="BM_Tournament" >
+				<Image id="T_Img1" src="file://{images}/custom_game/loading_screen/bm_tourney_image.psd" />
+			</Panel>-->
 		</Panel>
 
+		<!-- Center -->
 		<Panel id="BM_Tutorials" >
 			<Image id="T1" src="file://{images}/custom_game/loading_screen/bm_loading_screen_s1.psd" />
 			<Image id="T2" src="file://{images}/custom_game/loading_screen/bm_loading_screen_s2.psd" />
 			<Image id="T3" src="file://{images}/custom_game/loading_screen/bm_loading_screen_s3.psd" />
 			<Image id="T4" src="file://{images}/custom_game/loading_screen/bm_loading_screen_s4.psd" />
 		</Panel>
-
-		<Panel id="BM_Tournament" >
-			<Image id="T_Img1" src="file://{images}/custom_game/loading_screen/bm_tourney_image.psd" />
-		</Panel>
-
 	</Panel>
 </root>

@@ -54,36 +54,65 @@ Background Panel
 }
 
 /*-------------------------
-Updates Panel
+Left Panel
 -------------------------*/
+
+.BM_Left
+{
+	horizontal-align: left;
+	vertical-align: top;
+	width: 675px;
+	height: 700px;
+	margin-top: 72px;
+	margin-left: 48px;
+}
 
 #BM_Updates
 {
 	horizontal-align: left;
 	vertical-align: top;
-	margin-top: 102px;
-	margin-left: 50px;
-	width: 400px;
-	height: 927px;
-	background-color: black;
+	width: 404px;
+	height: 400px;
 	opacity: .5;
+	flow-children: down;
+
+	background-color: black;
+}
+
+#BM_Image
+{
+	width: 404px;
+	height: 282px;
+	margin-top: 420px;
+	opacity: .5;
+
+	background-color: black;
+}
+
+#BM_Ladder
+{
+	width: 250px;
+	height: 700px;
+	margin-left: 450px;
+	opacity: .5;
+	flow-children: down;
+
+	background-color: black;
 }
 
 #UpdatesTitle
 {
-	padding-top: 610px;
-	padding-left: 12px;
 	font-size: 30px;
 	font-weight: bold;
 	color: #ffffff;
 	text-shadow: 2px 2px 2px #000000;
+	text-align: center;
+	horizontal-align: center;
+	vertical-align: center;
 }
 
 #Updates
 {
-	padding-top: 640px;
-	padding-left: 12px;
-	padding-right: 12px;
 	font-size: 15px;
 	color: #ffffff;
 }
@@ -151,4 +180,13 @@ Tournament Panel
 {
 	margin-left: 0px;
 	margin-top: 0px;
+}
+
+/*-------------------------
+Custom Game Setup
+-------------------------*/
+
+.Done_Loading
+{
+	background-image: url("file://{images}/custom_game/pregame_screen/background_default.png");
 }
