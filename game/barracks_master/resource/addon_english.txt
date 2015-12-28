@@ -16,6 +16,9 @@
 "bm_updates_title"	"Updates"
 
 "bm_updates_text"	"
+----- Dec 28:
+• Assassinate damage increased from 2000 to 5000.
+
 ----- Dec 27:
 • Tree regrowth time increased from 130 to 300sec.
 • Techies Scout cooldown increased from 90 to 120sec.
@@ -23,11 +26,6 @@
 ----- Dec 25:
 • Added new particle effect for building and researching.
 • Added new sound when initializing research.
-
------ Dec 25:
-• Radiant towers shifted slightly for better symmetry.
-• Living armor reworked from 5 damage count to 4 and from 15 to 25sec duration.
-• Library of Spells building size reduced slightly.
 "
 
 "bm_contact_text"	"
@@ -508,7 +506,7 @@ Send your suggestions to thenewmetadota@gmail.com."
 		//Air Special: Static Touch
 		//-------------------------------------------------------------
 		"DOTA_Tooltip_ability_bm_air_special"                                             	"Static Touch"
-		"DOTA_Tooltip_ability_bm_air_special_Description"                                 	"Gives your attack the chance to proc Chain Lightning. Static Touch also increases the range and decreases the movement speed of the Air Creeps to allow them to attack from a distance.  Chain Lightning bounces up to 5 times. The lightning damage diminishes by 10 percent after every bounce."
+		"DOTA_Tooltip_ability_bm_air_special_Description"                                 	"Gives your attack the chance to proc Chain Lightning. Static Touch also increases the range and decreases the movement speed of Air Creeps allowing them to attack from a distance. Chain Lightning bounces up to 5 times. The lightning damage diminishes by 10 percent after each bounce."
 		"DOTA_Tooltip_ability_bm_air_special_lightning_damage"                            	"LIGHTNING DAMAGE:"
 		"DOTA_Tooltip_ability_bm_air_special_lightning_chance"                            	"PERCENTAGE CHANCE:"
 		"DOTA_Tooltip_ability_bm_air_special_bonus_range"                                 	"BONUS RANGE:"
@@ -518,7 +516,7 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_bm_air_special_disabled_Description"                        	"Gives your attack the chance to proc Chain Lightning."
 
 		"DOTA_Tooltip_ability_research_bm_air_special"                                    	"Research Static Touch"
-		"DOTA_Tooltip_ability_research_bm_air_special_Description"                        	"Gives your attack the chance to proc Chain Lightning. Static Touch also increases the range and decreases the movement speed of the Air Creeps to allow them to attack from a distance.  Chain Lightning bounces up to 5 times. The lightning damage diminishes by 10 percent after every bounce."
+		"DOTA_Tooltip_ability_research_bm_air_special_Description"                        	"Gives your attack the chance to proc Chain Lightning. Static Touch also increases the range and decreases the movement speed of Air Creeps allowing them to attack from a distance. Chain Lightning bounces up to 5 times. The lightning damage diminishes by 10 percent after each bounce."
 		"DOTA_Tooltip_ability_research_bm_air_special_lightning_damage"                   	"LIGHTNING DAMAGE:"
 		"DOTA_Tooltip_ability_research_bm_air_special_lightning_chance"                   	"PERCENTAGE CHANCE:"
 		"DOTA_Tooltip_ability_research_bm_air_special_bonus_range"                        	"BONUS RANGE:"
