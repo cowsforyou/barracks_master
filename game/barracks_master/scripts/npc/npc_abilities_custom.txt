@@ -448,6 +448,7 @@
 	    "SpawnUnit"
 	    {
 	      "UnitName"  "scout_io_hawk"
+	      "UnitCount" "2"
 	    }
 	  }
 	

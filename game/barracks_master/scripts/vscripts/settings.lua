@@ -10,7 +10,7 @@ ALLOW_SAME_HERO_SELECTION = false       -- Should we let people select the same 
 HERO_SELECTION_TIME = 30.0              -- How long should we let people select their hero?
 PRE_GAME_TIME = 30.0                    -- How long after people select their heroes should the horn blow and the game start?
 POST_GAME_TIME = 60.0                   -- How long should we let people look at the scoreboard before closing the server automatically?
-TREE_REGROW_TIME = 130.0                 -- How long should it take individual trees to respawn after being cut down/destroyed?
+TREE_REGROW_TIME = 300.0                -- How long should it take individual trees to respawn after being cut down/destroyed?
 
 GOLD_PER_TICK = 5                     	-- How much gold should players get per tick?
 GOLD_TICK_TIME = 10                     -- How long should we wait in seconds between gold ticks?
@@ -58,7 +58,7 @@ ENABLE_FIRST_BLOOD = false               -- Should we enable first blood for the
 HIDE_KILL_BANNERS = false               -- Should we hide the kill banners that show when a player is killed?
 LOSE_GOLD_ON_DEATH = false              -- Should we have players lose the normal amount of dota gold on death?
 SHOW_ONLY_PLAYER_INVENTORY = false      -- Should we only allow players to see their own inventory even when selecting other units?
-DISABLE_STASH_PURCHASING = false        -- Should we prevent players from being able to buy items into their stash when not at a shop?
+DISABLE_STASH_PURCHASING = true         -- Should we prevent players from being able to buy items into their stash when not at a shop?
 DISABLE_ANNOUNCER = false               -- Should we disable the announcer from working in the game?
 FORCE_PICKED_HERO = "npc_dota_hero_wisp" -- What hero should we force all players to spawn as? (e.g. "npc_dota_hero_axe").  Use nil to allow players to pick their own hero.
 
@@ -87,7 +87,7 @@ USE_CUSTOM_TEAM_COLORS_FOR_PLAYERS = true          -- Should we use custom team 
 TEAM_COLORS = {}                        -- If USE_CUSTOM_TEAM_COLORS is set, use these colors. -- cows: these will only change the color of the health bars and tp. note: non-hero units will get a darker shade of the color
 TEAM_COLORS[DOTA_TEAM_GOODGUYS] = { 255, 255, 0 }	--    Yellow
 TEAM_COLORS[DOTA_TEAM_BADGUYS]  = { 0, 255, 255 }	--    Light Blue
-TEAM_COLORS[DOTA_TEAM_CUSTOM_1] = { 180, 180, 180 } --    Gray
+TEAM_COLORS[DOTA_TEAM_CUSTOM_1] = { 140, 42, 244 } 	--    	Purple
 TEAM_COLORS[DOTA_TEAM_CUSTOM_2] = { 255, 108, 0 }   --    Orange
 TEAM_COLORS[DOTA_TEAM_CUSTOM_3] = { 52, 85, 255 }   --    Blue
 TEAM_COLORS[DOTA_TEAM_CUSTOM_4] = { 101, 212, 19 }  --    Green
