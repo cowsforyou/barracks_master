@@ -1,0 +1,8 @@
+barracks_master_quad
+{
+	material materials/overviews/barracks_master_quad.vmat
+	pos_x -8192
+	pos_y 256
+	scale 8.250
+}
+
