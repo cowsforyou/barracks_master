@@ -68,6 +68,9 @@ function OnAutoAssignPressed()
 //--------------------------------------------------------------------------------------------------
 function OnShufflePlayersPressed()
 {
+    // Autoassign first
+    Game.AutoAssignPlayersToTeams();
+
 	// Shuffle the team assignments of any players which are assigned to a team, 
 	// this will not assign any players to a team which are currently unassigned. 
 	// This will also not attempt to keep players in a party on the same team.
@@ -312,6 +315,9 @@ function UpdateTimer()
 	
 	var mapInfo = Game.GetMapInfo();
 	$( "#MapInfo" ).SetDialogVariable( "map_name", mapInfo.map_display_name );
+
+    var mapName = mapInfo.map_display_name;
+    $( "#MinimapImage").SetImage(  "s2r://panorama/images/custom_game/pregame_screen/"+mapName+".png" )
 
 	if ( transitionTime >= 0 )
 	{

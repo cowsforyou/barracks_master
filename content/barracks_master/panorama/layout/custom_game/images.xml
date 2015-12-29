@@ -6,5 +6,7 @@
         <Image style="opacity:0;" src="file://{images}/custom_game/pregame_screen/background_hero_sven.png" />
         <Image style="opacity:0;" src="file://{images}/custom_game/pregame_screen/background_hero_ta.png" />
         <Image style="opacity:0;" src="file://{images}/custom_game/pregame_screen/background_hero_tb.png" />
+
+        <Image style="opacity:0;" src="file://{images}/custom_game/pregame_screen/barracks_master_duo.png" />
     </Panel>
 </root>
