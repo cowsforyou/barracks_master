@@ -143,6 +143,7 @@ function UpdateTeamPanel( teamPanel )
 	// Add all of the players currently assigned to the team
 	var localPlayerID = Game.GetLocalPlayerID()
 	var teamPlayers = Game.GetPlayerIDsOnTeam( teamId );
+	var slotNumber = -1 //The slot the local player is in
 	for ( var i = 0; i < teamPlayers.length; ++i )
 	{
 		var playerSlot = FindPlayerSlotInTeamPanel( teamPanel, i );
@@ -153,24 +154,7 @@ function UpdateTeamPanel( teamPanel )
 		$.Msg("Creating slot "+i+" on team "+teamId+" for player "+teamPlayers[ i ])
 		if (teamPlayers[i] == localPlayerID)
 		{
-			var background = $("#HeroBackground")
-            // Radiant
-            if (teamId == 2)
-            {
-				if (i == 0)
-					background.SetImage( "s2r://panorama/images/custom_game/pregame_screen/background_hero_sven.png" )
-                else if (i==1)
-                    background.SetImage( "s2r://panorama/images/custom_game/pregame_screen/background_hero_ta.png" )
-            }
-
-            // Dire
-			else if (teamId == 3)
-            {
-                if (i==0)
-				    background.SetImage( "s2r://panorama/images/custom_game/pregame_screen/background_hero_tb.png" )
-                else if (i==1)
-                    background.SetImage( "s2r://panorama/images/custom_game/pregame_screen/background_hero_arc.png" )
-            }
+			slotNumber = i
 		}
 	}
 
@@ -196,7 +180,42 @@ function UpdateTeamPanel( teamPanel )
 	{
 		var localPlayerIsOnTeam = ( localPlayerInfo.player_team_id === teamId );
 		teamPanel.SetHasClass( "local_player_on_this_team", localPlayerIsOnTeam );
+
+        // Update the background
+        if (localPlayerIsOnTeam)
+            ChangeHeroBackground(teamId, slotNumber)
 	}
+}
+
+function ChangeHeroBackground(teamID, slotNumber)
+{
+    $.Msg("ChangeHeroBackground ",teamID," ",slotNumber)
+    var background = $("#HeroBackground")
+
+    background.visible = true;	
+    // Radiant
+    if (teamID == 2)
+    {
+        if (slotNumber == 0)
+            background.SetImage( "s2r://panorama/images/custom_game/pregame_screen/background_hero_sven.png" )
+        else if (slotNumber == 1)
+            background.SetImage( "s2r://panorama/images/custom_game/pregame_screen/background_hero_ta.png" )
+    }
+
+    // Dire
+    else if (teamID == 3)
+    {
+        if (slotNumber == 0)
+            background.SetImage( "s2r://panorama/images/custom_game/pregame_screen/background_hero_tb.png" )
+        else if (slotNumber == 1)
+            background.SetImage( "s2r://panorama/images/custom_game/pregame_screen/background_hero_arc.png" )
+    }
+}
+
+// Set the background invisible when unassigned
+function HideHeroBackground() {
+    var background = $("#HeroBackground")
+    background.visible = false;
 }
 
 
@@ -224,6 +243,8 @@ function OnTeamPlayerListChanged()
 	{		
 		var playerId = unassignedPlayers[ i ];
 		FindOrCreatePanelForPlayer( playerId, unassignedPlayersContainerNode );
+
+        HideHeroBackground()
 	}
 
 	// Update all of the team panels moving the player panels for the
