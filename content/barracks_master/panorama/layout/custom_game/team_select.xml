@@ -24,22 +24,21 @@
 					</Panel>
 					<Panel id="TeamsListRoot" />
 				</Panel>
-			</Panel>
 
-			<!--Unassigned and Spectators-->
-			<Panel id="GameAndPlayersRoot">
+				<!--Unassigned and Spectators-->
+				<Panel id="GameAndPlayersRoot">
 
-				<!--Unassigned players-->
-				<Panel id="UnassignedPlayerPanel" >
-					<Button id="UnassignedPlayersButton" onactivate="OnLeaveTeamPressed()">
-						<Panel id="UnassignedPlayersHeader">
-							<Label text="#custom_game_team_select_unassigned_players" />
-						</Panel>
-						<Panel id="UnassignedPlayersDivider" />
-						<Panel id="UnassignedPlayersContainer" />
-					</Button>
+					<!--Unassigned players-->
+					<Panel id="UnassignedPlayerPanel" >
+						<Button id="UnassignedPlayersButton" onactivate="OnLeaveTeamPressed()">
+							<Panel id="UnassignedPlayersHeader">
+								<Label text="#custom_game_team_select_unassigned_players" />
+							</Panel>
+							<Panel id="UnassignedPlayersDivider" />
+							<Panel id="UnassignedPlayersContainer" />
+						</Button>
+					</Panel>
 				</Panel>
-								
 			</Panel>
 
 		</Panel>
@@ -66,7 +65,7 @@
 			<Button id="ShuffleTeamAssignmentButton" class="PlayButton" onactivate="OnShufflePlayersPressed()">
 				<Label text="#custom_game_team_select_shuffle" />
 			</Button>
-			
+
 			<!--Start and lock button-->
 			<Button id="LockAndStartButton" class="PlayButton" onactivate="OnLockAndStartPressed()">
 				<Label text="#custom_game_team_select_lock_start" />

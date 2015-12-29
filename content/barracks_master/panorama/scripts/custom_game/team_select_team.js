@@ -54,7 +54,7 @@ function OnJoinTeamPressed()
 		var teamColor = GameUI.CustomUIConfig().team_colors[ teamId ];
 		teamColor = teamColor.replace( ";", "" );
 		
-		var teamBackgroundGradient = $( "#TeamBackgroundGradient" );
+		/*var teamBackgroundGradient = $( "#TeamBackgroundGradient" );
 		if ( teamBackgroundGradient )
 		{
 			var gradientText = 'gradient( linear, -800% -1600%, 50% 100%, from( ' + teamColor + ' ), to( #00000088 ) );';
@@ -66,7 +66,7 @@ function OnJoinTeamPressed()
 		{
 			var gradientText = 'gradient( linear, -800% -1600%, 90% 100%, from( ' + teamColor + ' ), to( #00000088 ) );';
 			teamBackgroundGradientHighlight.style.backgroundColor = gradientText;
-		}
+		}*/
 
 		var teamNameLabel = $( "#TeamNameLabel" );
 		if ( teamNameLabel )
