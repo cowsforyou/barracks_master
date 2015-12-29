@@ -176,7 +176,7 @@ function UpdateTeamPanel( teamPanel )
 	// Fill in the remaining player slots with the empty slot indicator
 	var teamDetails = Game.GetTeamDetails( teamId );
 	var nNumPlayerSlots = teamDetails.team_max_players;
-	for ( var i = teamPlayers.length; i < nNumPlayerSlots; ++i )
+	for ( var i = 0; i < nNumPlayerSlots; ++i )
 	{
 		var playerSlot = FindPlayerSlotInTeamPanel( teamPanel, i );
 		if ( playerSlot.GetChildCount() == 0 )
