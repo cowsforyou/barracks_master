@@ -83,7 +83,7 @@ function OnShufflePlayersPressed()
 // is not already one in the global list. Make the new or existing panel a child panel of the 
 // specified parent panel
 //--------------------------------------------------------------------------------------------------
-function FindOrCreatePanelForPlayer( playerId, parent )
+function FindOrCreatePanelForPlayer( playerId, parent, bHideSlot )
 {
 	// Search the list of player player panels for one witht the specified player id
 	for ( var i = 0; i < g_PlayerPanels.length; ++i )
@@ -93,6 +93,10 @@ function FindOrCreatePanelForPlayer( playerId, parent )
 		if ( playerPanel.GetAttributeInt( "player_id", -1 ) == playerId )
 		{
 			playerPanel.SetParent( parent );
+
+            if (bHideSlot) playerPanel.FindChildTraverse( "HeroSlot" ).visible = false
+            else playerPanel.FindChildTraverse( "HeroSlot" ).visible = true
+
 			return playerPanel;
 		}
 	}
@@ -100,7 +104,7 @@ function FindOrCreatePanelForPlayer( playerId, parent )
 	// Create a new player panel for the specified player id if an existing one was not found
 	var newPlayerPanel = $.CreatePanel( "Panel", parent, "player_root" );
 	newPlayerPanel.SetAttributeInt( "player_id", playerId );
-	newPlayerPanel.BLoadLayout( "file://{resources}/layout/custom_game/team_select_player.xml", false, false );
+	newPlayerPanel.BLoadLayout( "file://{resources}/layout/custom_game/team_select_player.xml", false, false );   
 
 	// Add the panel to the global list of player planels so that we will find it next time
 	g_PlayerPanels.push( newPlayerPanel );
@@ -154,10 +158,12 @@ function UpdateTeamPanel( teamPanel )
 		FindOrCreatePanelForPlayer( teamPlayers[ i ], playerSlot );
 
 		// Adjust the background for the local player
-		$.Msg("Creating slot "+i+" on team "+teamId+" for player "+teamPlayers[ i ])
+		//$.Msg("Creating slot "+i+" on team "+teamId+" for player "+teamPlayers[ i ])
 		if (teamPlayers[i] == localPlayerID)
 		{
 			slotNumber = i
+
+            AdjustSlot(playerSlot, teamId, i)
 		}
 	}
 
@@ -171,6 +177,8 @@ function UpdateTeamPanel( teamPanel )
 		{
 			var empty_slot = $.CreatePanel( "Panel", playerSlot, "player_root" );
 			empty_slot.BLoadLayout( "file://{resources}/layout/custom_game/team_select_empty_slot.xml", false, false );
+
+            AdjustSlot(empty_slot, teamId, i)
 		}
 	}
 
@@ -190,9 +198,17 @@ function UpdateTeamPanel( teamPanel )
 	}
 }
 
+function AdjustSlot(panel, teamID, slotNumber)
+{
+    var adjusted_team = teamID-1
+    var adjusted_slot = slotNumber+1
+    var slotImage = panel.FindChildTraverse("HeroSlot")
+    slotImage.SetImage( "s2r://panorama/images/custom_game/pregame_screen/team"+adjusted_team+"_slot"+adjusted_slot+".png" )
+}
+
 function ChangeHeroBackground(teamID, slotNumber)
 {
-    $.Msg("ChangeHeroBackground ",teamID," ",slotNumber)
+    //$.Msg("ChangeHeroBackground ",teamID," ",slotNumber)
     var background = $("#HeroBackground")
 
     background.visible = true;	
@@ -245,7 +261,7 @@ function OnTeamPlayerListChanged()
 	for ( var i = 0; i < unassignedPlayers.length; ++i )
 	{		
 		var playerId = unassignedPlayers[ i ];
-		FindOrCreatePanelForPlayer( playerId, unassignedPlayersContainerNode );
+		FindOrCreatePanelForPlayer( playerId, unassignedPlayersContainerNode, true );
 
         HideHeroBackground()
 	}

@@ -723,3 +723,9 @@ DOTAAvatarImage
     margin-top: 30px;
     text-align: center;
 }
+
+#HeroSlot
+{
+    width: 48px;
+    height: 48px;
+}

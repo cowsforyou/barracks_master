@@ -8,5 +8,16 @@
         <Image style="opacity:0;" src="file://{images}/custom_game/pregame_screen/background_hero_tb.png" />
 
         <Image style="opacity:0;" src="file://{images}/custom_game/pregame_screen/barracks_master_duo.png" />
+        <Image style="opacity:0;" src="file://{images}/custom_game/pregame_screen/barracks_master_quad.png" />
+
+        <Image style="opacity:0;" src="file://{images}/custom_game/pregame_screen/team1_slot1.png" />
+        <Image style="opacity:0;" src="file://{images}/custom_game/pregame_screen/team1_slot2.png" />
+        <Image style="opacity:0;" src="file://{images}/custom_game/pregame_screen/team1_slot3.png" />
+        <Image style="opacity:0;" src="file://{images}/custom_game/pregame_screen/team1_slot4.png" />
+        <Image style="opacity:0;" src="file://{images}/custom_game/pregame_screen/team2_slot1.png" />
+        <Image style="opacity:0;" src="file://{images}/custom_game/pregame_screen/team2_slot2.png" />
+        <Image style="opacity:0;" src="file://{images}/custom_game/pregame_screen/team2_slot3.png" />
+        <Image style="opacity:0;" src="file://{images}/custom_game/pregame_screen/team2_slot4.png" />
+        
     </Panel>
 </root>
