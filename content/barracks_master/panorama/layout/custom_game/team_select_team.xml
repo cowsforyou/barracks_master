@@ -6,7 +6,7 @@
 	<scripts>
 		<include src="file://{resources}/scripts/custom_game/team_select_team.js" />
 	</scripts>
-	<Button class="TeamSelectTeam" onactivate="OnJoinTeamPressed()">
+	<Button class="TeamSelectTeam" ><!--onactivate="OnJoinTeamPressed()"-->
 		<Panel id="TeamBackgroundGradient" />
 		<Panel id="TeamBackgroundGradientHighlight" />
 		<Panel id="TeamGroup" >

@@ -3,7 +3,10 @@
 		<include src="file://{resources}/styles/dotastyles.css" />
 		<include src="file://{resources}/styles/custom_game/team_select.css" />
 	</styles>
-	<Panel class="TeamSelectEmptySlot">
+    <scripts>
+        <include src="file://{resources}/scripts/custom_game/team_select_player.js" />
+    </scripts>
+	<Panel class="TeamSelectEmptySlot" onactivate="OnJoinSlotPressed()">
         <Image id="HeroSlot"/>
 		<Panel id="EmptySlotIcon" />
 		<Label id="PlayerName" text="#custom_game_team_select_empty_slot" />

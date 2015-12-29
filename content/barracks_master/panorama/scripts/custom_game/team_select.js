@@ -94,6 +94,7 @@ function FindOrCreatePanelForPlayer( playerId, parent, bHideSlot )
 		{
 			playerPanel.SetParent( parent );
 
+            // Adjust hero slot image
             if (bHideSlot) playerPanel.FindChildTraverse( "HeroSlot" ).visible = false
             else playerPanel.FindChildTraverse( "HeroSlot" ).visible = true
 
@@ -104,7 +105,7 @@ function FindOrCreatePanelForPlayer( playerId, parent, bHideSlot )
 	// Create a new player panel for the specified player id if an existing one was not found
 	var newPlayerPanel = $.CreatePanel( "Panel", parent, "player_root" );
 	newPlayerPanel.SetAttributeInt( "player_id", playerId );
-	newPlayerPanel.BLoadLayout( "file://{resources}/layout/custom_game/team_select_player.xml", false, false );   
+	newPlayerPanel.BLoadLayout( "file://{resources}/layout/custom_game/team_select_player.xml", false, false );
 
 	// Add the panel to the global list of player planels so that we will find it next time
 	g_PlayerPanels.push( newPlayerPanel );
@@ -118,6 +119,7 @@ function FindOrCreatePanelForPlayer( playerId, parent, bHideSlot )
 //--------------------------------------------------------------------------------------------------
 function FindPlayerSlotInTeamPanel( teamPanel, playerSlot )
 {
+    $.Msg("FindPlayerSlotInTeamPanel ",playerSlot)
 	var playerListNode = teamPanel.FindChildInLayoutFile( "PlayerList" );
 	if ( playerListNode == null )
 		return null;
@@ -126,6 +128,7 @@ function FindPlayerSlotInTeamPanel( teamPanel, playerSlot )
 	for ( var i = 0; i < nNumChildren; ++i )
 	{
 		var panel = playerListNode.GetChild( i );
+
 		if ( panel.GetAttributeInt( "player_slot", -1 ) == playerSlot )
 		{
 			return panel;
@@ -151,9 +154,13 @@ function UpdateTeamPanel( teamPanel )
 	var localPlayerID = Game.GetLocalPlayerID()
 	var teamPlayers = Game.GetPlayerIDsOnTeam( teamId );
 	var slotNumber = -1 //The slot the local player is in
+
 	for ( var i = 0; i < teamPlayers.length; ++i )
 	{
-		var playerSlot = FindPlayerSlotInTeamPanel( teamPanel, i );
+        var playerValues = CustomNetTables.GetTableValue( "pregame_slots", teamPlayers[i])
+        var playerSlotNumber = playerValues.slotID
+		var playerSlot = FindPlayerSlotInTeamPanel( teamPanel, playerSlotNumber);
+
 		playerSlot.RemoveAndDeleteChildren();
 		FindOrCreatePanelForPlayer( teamPlayers[ i ], playerSlot );
 
@@ -163,7 +170,7 @@ function UpdateTeamPanel( teamPanel )
 		{
 			slotNumber = i
 
-            AdjustSlot(playerSlot, teamId, i)
+            AdjustSlot(playerSlot, teamId, playerSlotNumber)
 		}
 	}
 
@@ -176,6 +183,9 @@ function UpdateTeamPanel( teamPanel )
 		if ( playerSlot.GetChildCount() == 0 )
 		{
 			var empty_slot = $.CreatePanel( "Panel", playerSlot, "player_root" );
+            empty_slot.SetAttributeInt( "team_id", teamId );
+            empty_slot.SetAttributeInt( "player_slot", i );
+
 			empty_slot.BLoadLayout( "file://{resources}/layout/custom_game/team_select_empty_slot.xml", false, false );
 
             AdjustSlot(empty_slot, teamId, i)
@@ -208,7 +218,7 @@ function AdjustSlot(panel, teamID, slotNumber)
 
 function ChangeHeroBackground(teamID, slotNumber)
 {
-    //$.Msg("ChangeHeroBackground ",teamID," ",slotNumber)
+    $.Msg("ChangeHeroBackground ",teamID," ",slotNumber)
     var background = $("#HeroBackground")
 
     background.visible = true;	
@@ -358,6 +368,10 @@ function UpdateTimer()
 	$.Schedule( 0.1, UpdateTimer );
 }
 
+function OnUpdate() {
+    OnTeamPlayerListChanged()
+}
+
 
 //--------------------------------------------------------------------------------------------------
 // Entry point called when the team select panel is created
@@ -406,7 +420,7 @@ function UpdateTimer()
 	// Automatically assign players to teams.
 	if ( bAutoAssignTeams )
 	{
-		Game.AutoAssignPlayersToTeams();
+		//Game.AutoAssignPlayersToTeams();
 	}
 
 	// Do an initial update of the player team assignment
@@ -420,5 +434,8 @@ function UpdateTimer()
 
 	// Register a listener for the event which is broadcast whenever a player attempts to pick a team
 	$.RegisterForUnhandledEvent( "DOTAGame_PlayerSelectedCustomTeam", OnPlayerSelectedTeam );
+
+    // Update teams whenever the pregame_slots table changes
+    CustomNetTables.SubscribeNetTableListener("pregame_slots", OnUpdate );
 
 })();

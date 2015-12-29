@@ -425,3 +425,11 @@ function GameMode:OnPlayerChat(keys)
 
   local text = keys.text
 end
+
+-- Called whenever a player changes slot in the UI, networked as nettable
+function GameMode:OnPlayerSlotUpdated( event )
+  local playerID = event.PlayerID
+  local teamID = event.teamID
+  local slotID = event.slotID
+  CustomNetTables:SetTableValue("pregame_slots", tostring(playerID), {teamID = teamID, slotID = slotID})
+end
