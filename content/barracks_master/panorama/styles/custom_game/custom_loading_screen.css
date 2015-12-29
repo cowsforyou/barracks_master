@@ -135,8 +135,9 @@ Tutorial Panel
 {
 	horizontal-align: left;
 	vertical-align: top;
-	margin-top: 0px;
-	margin-left: 525px;
+	margin-top: 50px;
+	margin-left: 768px;
+	flow-children: down;
 }
 
 #T1
@@ -148,19 +149,19 @@ Tutorial Panel
 #T2
 {
 	margin-left: 0px;
-	margin-top: 280px;
+	margin-top: 50px;
 }
 
 #T3
 {
 	margin-left: 0px;
-	margin-top: 510px;
+	margin-top: 50px;
 }
 
 #T4
 {
 	margin-left: 0px;
-	margin-top: 740px;
+	margin-top: 50px;
 }
 
 

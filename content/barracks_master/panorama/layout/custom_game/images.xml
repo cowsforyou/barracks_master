@@ -1,0 +1,10 @@
+<root>
+    <!-- Use this to compile vtex images -->    
+    <Panel hittest="false" class="ImagesRoot">
+        <Image style="opacity:0;" src="file://{images}/custom_game/pregame_screen/background_default.png" />
+        <Image style="opacity:0;" src="file://{images}/custom_game/pregame_screen/background_hero_arc.png" />
+        <Image style="opacity:0;" src="file://{images}/custom_game/pregame_screen/background_hero_sven.png" />
+        <Image style="opacity:0;" src="file://{images}/custom_game/pregame_screen/background_hero_ta.png" />
+        <Image style="opacity:0;" src="file://{images}/custom_game/pregame_screen/background_hero_tb.png" />
+    </Panel>
+</root>

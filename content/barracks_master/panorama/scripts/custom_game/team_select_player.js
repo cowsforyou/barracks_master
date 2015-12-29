@@ -17,6 +17,8 @@ function OnLeaveTeamPressed()
 function OnPlayerDetailsChanged()
 {
     var playerId = $.GetContextPanel().GetAttributeInt("player_id", -1);
+    var slotID = $.GetContextPanel().GetAttributeInt("player_slot", -1);
+
 	var playerInfo = Game.GetPlayerInfo( playerId );
 	if ( !playerInfo )
 		return;

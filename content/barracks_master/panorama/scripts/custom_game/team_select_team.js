@@ -8,6 +8,7 @@ function OnJoinTeamPressed()
 {
 	// Get the team id asscociated with the team button that was pressed
 	var teamId = $.GetContextPanel().GetAttributeInt( "team_id", -1 );
+	var playerSlot = $.GetContextPanel().GetAttributeInt( "player_slot", -1 )
 
 	// Request to join the team of the button that was pressed
 	Game.PlayerJoinTeam( teamId );

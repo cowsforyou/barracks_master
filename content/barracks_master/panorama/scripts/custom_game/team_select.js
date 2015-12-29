@@ -140,13 +140,38 @@ function UpdateTeamPanel( teamPanel )
 	if ( teamId <= 0 )
 		return;
 	
-	// Add all of the players currently assigned to the team 
+	// Add all of the players currently assigned to the team
+	var localPlayerID = Game.GetLocalPlayerID()
 	var teamPlayers = Game.GetPlayerIDsOnTeam( teamId );
 	for ( var i = 0; i < teamPlayers.length; ++i )
 	{
 		var playerSlot = FindPlayerSlotInTeamPanel( teamPanel, i );
 		playerSlot.RemoveAndDeleteChildren();
 		FindOrCreatePanelForPlayer( teamPlayers[ i ], playerSlot );
+
+		// Adjust the background for the local player
+		$.Msg("Creating slot "+i+" on team "+teamId+" for player "+teamPlayers[ i ])
+		if (teamPlayers[i] == localPlayerID)
+		{
+			var background = $("#HeroBackground")
+            // Radiant
+            if (teamId == 2)
+            {
+				if (i == 0)
+					background.SetImage( "s2r://panorama/images/custom_game/pregame_screen/background_hero_sven.png" )
+                else if (i==1)
+                    background.SetImage( "s2r://panorama/images/custom_game/pregame_screen/background_hero_ta.png" )
+            }
+
+            // Dire
+			else if (teamId == 3)
+            {
+                if (i==0)
+				    background.SetImage( "s2r://panorama/images/custom_game/pregame_screen/background_hero_tb.png" )
+                else if (i==1)
+                    background.SetImage( "s2r://panorama/images/custom_game/pregame_screen/background_hero_arc.png" )
+            }
+		}
 	}
 
 	// Fill in the remaining player slots with the empty slot indicator

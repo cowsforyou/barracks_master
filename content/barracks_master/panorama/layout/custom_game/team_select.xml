@@ -8,6 +8,8 @@
 		<include src="file://{resources}/scripts/custom_game/team_select.js" />
 	</scripts>
 	<Panel hittest="false" class="TeamSelect">
+		<Image id="HeroBackground" src="" />
+
 		<Panel hittest="false" id="TeamSelectContainer" selectionpos="auto">`
 			<!--Empty space to let the loading screen and chat be visible-->
 			<Panel hittest="false" id="TeamsSelectEmptySpace" />
@@ -29,6 +31,7 @@
 
 			<!--Game Info and Unassigned players, right hand panel-->
 			<Panel id="GameAndPlayersRoot">
+
 				
 				<Panel id="GameInfoPanel" >
 					
@@ -78,6 +81,7 @@
 				</Button>
 				
 			</Panel>
+
 		</Panel>
 	</Panel>
 </root>
