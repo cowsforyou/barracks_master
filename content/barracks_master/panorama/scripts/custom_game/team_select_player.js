@@ -21,8 +21,6 @@ function OnJoinSlotPressed() {
 	
 	// Request to join the team of the button that was pressed
 	Game.PlayerJoinTeam( teamID );
-
-	$.Msg("\nOnJoinSlotPressed - Team: ",teamID," Slot: ", slotID)
 }
 
 //--------------------------------------------------------------------------------------------------

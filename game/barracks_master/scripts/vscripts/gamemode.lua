@@ -38,6 +38,12 @@ function GameMode:InitGameMode()
   -- Don't end the game if everyone is unassigned
   SendToServerConsole("dota_surrender_on_disconnect 0")
 
+  -- Set initial nettable slots for autoassigment
+  CustomNetTables:SetTableValue("pregame_slots", tostring(0), {teamID = 2, slotID = 0})
+  CustomNetTables:SetTableValue("pregame_slots", tostring(1), {teamID = 2, slotID = 1})
+  CustomNetTables:SetTableValue("pregame_slots", tostring(2), {teamID = 3, slotID = 0})
+  CustomNetTables:SetTableValue("pregame_slots", tostring(3), {teamID = 3, slotID = 1})
+
   -- Register Listener
   CustomGameEventManager:RegisterListener( "update_selected_entities", Dynamic_Wrap(BuildingEvents, 'OnPlayerSelectedEntities'))
   CustomGameEventManager:RegisterListener( "repair_order", Dynamic_Wrap(GameMode, "RepairOrder"))   

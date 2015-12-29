@@ -567,8 +567,8 @@
 {
 	width: 100%;
     margin: 2px;
-	height: 1px;
-	background-color: #49525555;
+	height: 2px;
+	background-color: gray;
 }
 
 #PlayerList
@@ -585,14 +585,11 @@
 
 .player_slot
 {
-    height: 32px;
+    height: 48px;
     width: 100%;
     flow-children: right;
     margin-top: 2px;
 }
-
-
-
 
 .TeamSelectPlayer
 {
@@ -604,8 +601,9 @@
 
 DOTAAvatarImage
 {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
+    margin-left: 4px;
     background-color: black;
 	vertical-align:middle;
 }
@@ -615,6 +613,7 @@ DOTAAvatarImage
     background-image: url( "file://{images}/icon_star.png");
     background-repeat: no-repeat;
     background-size: contain;
+    vertical-align: center;
     overflow: noclip;
     width: 24px;
     height: 24px;
@@ -638,6 +637,7 @@ DOTAAvatarImage
     text-shadow: 2px 2px 2px black;
     width: fill-parent-flow( 1 );
 	white-space: nowrap;
+    font-size: 24px;
 }
 
 #PlayerLeaveTeamButton 
@@ -672,18 +672,18 @@ DOTAAvatarImage
 
 .TeamSelectEmptySlot #PlayerName
 {
-	color: #454545;
+	color: white;
 	letter-spacing: 1px;
-	font-size: 18px;
+	font-size: 22px;
 }
 
 #EmptySlotIcon 
 {	
-    width: 32px;
-	height: 32px;
+    width: 48px;
+	height: 48px;
     opacity: 0.7;
     background-image: url("file://{images}/custom_game/empty_slot_avatar.png");
-    background-size: 32px 32px;
+    background-size: 40px 40px;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 }

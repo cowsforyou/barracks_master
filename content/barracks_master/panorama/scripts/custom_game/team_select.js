@@ -119,7 +119,6 @@ function FindOrCreatePanelForPlayer( playerId, parent, bHideSlot )
 //--------------------------------------------------------------------------------------------------
 function FindPlayerSlotInTeamPanel( teamPanel, playerSlot )
 {
-    $.Msg("FindPlayerSlotInTeamPanel ",playerSlot)
 	var playerListNode = teamPanel.FindChildInLayoutFile( "PlayerList" );
 	if ( playerListNode == null )
 		return null;
@@ -165,7 +164,7 @@ function UpdateTeamPanel( teamPanel )
 		FindOrCreatePanelForPlayer( teamPlayers[ i ], playerSlot );
 
 		// Adjust the background for the local player
-		//$.Msg("Creating slot "+i+" on team "+teamId+" for player "+teamPlayers[ i ])
+		//$.Msg("Creating slot "+playerSlotNumber+" on team "+teamId+" for player "+teamPlayers[ i ])
 		if (teamPlayers[i] == localPlayerID)
 		{
 			slotNumber = i
@@ -182,6 +181,7 @@ function UpdateTeamPanel( teamPanel )
 		var playerSlot = FindPlayerSlotInTeamPanel( teamPanel, i );
 		if ( playerSlot.GetChildCount() == 0 )
 		{
+            //$.Msg("Creating empty slot ",i," on team ",teamId)
 			var empty_slot = $.CreatePanel( "Panel", playerSlot, "player_root" );
             empty_slot.SetAttributeInt( "team_id", teamId );
             empty_slot.SetAttributeInt( "player_slot", i );
@@ -218,7 +218,6 @@ function AdjustSlot(panel, teamID, slotNumber)
 
 function ChangeHeroBackground(teamID, slotNumber)
 {
-    $.Msg("ChangeHeroBackground ",teamID," ",slotNumber)
     var background = $("#HeroBackground")
 
     background.visible = true;	
@@ -420,7 +419,7 @@ function OnUpdate() {
 	// Automatically assign players to teams.
 	if ( bAutoAssignTeams )
 	{
-		//Game.AutoAssignPlayersToTeams();
+		Game.AutoAssignPlayersToTeams();
 	}
 
 	// Do an initial update of the player team assignment
