@@ -1,22 +1,15 @@
 "AddonInfo"
 {
-  "TeamCount" "2"
-  "maps"      "barracks_master_duo_xmas"
+  "maps"      	"barracks_master_duo barracks_master_quad"
   "IsPlayable"  "1"
   
-  "barracks_master_duo_xmas"
+  "barracks_master_duo"
   {
-          "MaxPlayers"                    "4"
+	"MaxPlayers"		"4"
   }
 
-
-
-//  "desert_duo"
-//  {
-//          "MaxPlayers"                    "4"
-//  }
-//  "forest_solo"
-//  {
-//          "MaxPlayers"                    "4"
-//  }
+  "barracks_master_quad"
+  {
+	"MaxPlayers"		"8"
+  }
 }
