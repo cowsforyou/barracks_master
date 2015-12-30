@@ -204,7 +204,7 @@ function UpdateTeamPanel( teamPanel )
 
         // Update the background
         if (localPlayerIsOnTeam)
-            ChangeHeroBackground(teamId, slotNumber)
+            ChangeHeroBackground(teamId, playerSlotNumber)
 	}
 }
 

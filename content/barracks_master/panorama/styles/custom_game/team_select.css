@@ -519,12 +519,13 @@
 
 #TeamNameLabel
 {
-	font-size: 20px;
+	font-size: 30px;
 	vertical-align: top;
 	text-shadow: 2px 2px 2px black;
    	margin-left: 1px;
-    margin-top: 1px;    
-	text-transform: uppercase;
+    margin-top: 1px;
+    color: white;
+	//text-transform: uppercase;
 	white-space: nowrap;
 	width: 100%;
 }

@@ -18,9 +18,6 @@
 			<!--Teams List, left hand panel-->
 			<Panel id="TeamsList" >
 				<Panel id="TeamsListGroup" >
-					<Panel id="TeamListHeader">
-						<Image id="TeamListLockedIcon" src="file://{images}/control_icons/lock_small.png" />
-					</Panel>
 					<Panel id="TeamsListRoot" />
 				</Panel>
 
