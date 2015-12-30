@@ -44,6 +44,11 @@ function GameMode:InitGameMode()
   CustomNetTables:SetTableValue("pregame_slots", tostring(2), {teamID = 3, slotID = 0})
   CustomNetTables:SetTableValue("pregame_slots", tostring(3), {teamID = 3, slotID = 1})
 
+  CustomNetTables:SetTableValue("pregame_slots", tostring(4), {teamID = 2, slotID = 2})
+  CustomNetTables:SetTableValue("pregame_slots", tostring(5), {teamID = 2, slotID = 3})
+  CustomNetTables:SetTableValue("pregame_slots", tostring(6), {teamID = 3, slotID = 2})
+  CustomNetTables:SetTableValue("pregame_slots", tostring(7), {teamID = 4, slotID = 3})
+
   -- Register Listener
   CustomGameEventManager:RegisterListener( "update_selected_entities", Dynamic_Wrap(BuildingEvents, 'OnPlayerSelectedEntities'))
   CustomGameEventManager:RegisterListener( "repair_order", Dynamic_Wrap(GameMode, "RepairOrder"))   
@@ -64,6 +69,16 @@ function GameMode:InitGameMode()
 
   -- Keeps the blighted gridnav positions
   GameRules.Blight = {}
+
+  -- Team sizes for each map
+  local mapName = GetMapName()
+  if mapName == "barracks_master_quad" then
+    GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_GOODGUYS, 4)
+    GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_BADGUYS, 4)
+  else
+    GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_GOODGUYS, 2)
+    GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_BADGUYS, 2)
+  end
 
   DebugPrint('[BAREBONES] Done loading Barebones gamemode!\n\n')  
 end
