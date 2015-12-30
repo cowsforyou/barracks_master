@@ -248,15 +248,13 @@ function GameMode:OnPlayerPickHero(keys)
   local team = player:GetTeam()
   local playerCountForTeam = PlayerResource:GetPlayerCountForTeam(team)
   local newHeroName = ""
-  for slot=1, playerCountForTeam do
-    --print (slot.." / "..playerCountForTeam)
-    local playerID = player:GetPlayerID()
-    if playerID == PlayerResource:GetNthPlayerIDOnTeam(team, slot) then
-      player.heroReplaced = true
-      newHeroName = self:ReplaceWithBMHero(playerID, team, slot)
-      print(string.format("Player ID %s is on Team %s, Slot %s", playerID, team, slot))
-    end
-  end
+  local playerID = player:GetPlayerID()
+  local playerTable = CustomNetTables:GetTableValue("pregame_slots", tostring(playerID))
+  local slot = playerTable.slotID
+  
+  player.heroReplaced = true
+  newHeroName = self:ReplaceWithBMHero(playerID, team, slot)
+  print(string.format("Player ID %s is on Team %s, Slot %s: %s", playerID, team, slot, newHeroName))
 
   -- building helper for non-spectators
   if team ~= DOTA_TEAM_CUSTOM_1 then 
@@ -272,12 +270,12 @@ end
 function GameMode:ReplaceWithBMHero(playerID, team, slot)
   local heroName = ""
   if     team == DOTA_TEAM_GOODGUYS then
-    if     slot == 1 then heroName = "npc_dota_hero_sven"
-    elseif slot == 2 then heroName = "npc_dota_hero_templar_assassin"
+    if     slot == 0 then heroName = "npc_dota_hero_sven"
+    elseif slot == 1 then heroName = "npc_dota_hero_templar_assassin"
     end
   elseif team == DOTA_TEAM_BADGUYS then
-    if     slot == 1 then heroName = "npc_dota_hero_terrorblade"
-    elseif slot == 2 then heroName = "npc_dota_hero_arc_warden"
+    if     slot == 0 then heroName = "npc_dota_hero_terrorblade"
+    elseif slot == 1 then heroName = "npc_dota_hero_arc_warden"
     end
   end
 
