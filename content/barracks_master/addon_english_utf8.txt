@@ -16,29 +16,15 @@
 "bm_updates_title"	"Updates"
 
 "bm_updates_text"	"
-**Congratulations to Team Catdog (coldrefreader & Moon Moon) for winning our first Barracks Master tournament!**
-VODs available: bit.ly/barracksmaster
+----- Dec 28:
+• Tooltip fix.
 
+----- Dec 28:
+• Assassinate damage increased from 2000 to 5000.
 
------ Dec 10:
-• Fixed bug which did not refund resources if the building area was suddenly blocked.
-• Fixed tree placement which allowed you to walk into secret rune area on the Radiant side.
-
------ Dec 10:
-• Christmas tree added to the map. Happy holidays everyone!
-
------ Dec 9:
-• Loading screen layout modified in preparation for a custom pregame screen.
-• Loading screen tutorials updated.
-
------ Dec 8:
-• Removed the ability to force attack a friendly building.
-
------ Dec 6:
-• Barracks Masters now spawn with a 5sec invisibility buff.
-• Fixed bug that caused Lumberjacks to be unable to harvest after disconnecting.
-• Radiant team health bars are now yellow.
-• Dire team health bars are now light blue.
+----- Dec 27:
+• Tree regrowth time increased from 130 to 300sec.
+• Techies Scout cooldown increased from 90 to 120sec.
 "
 
 "bm_contact_text"	"
@@ -52,7 +38,7 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"npc_dota_hero_terrorblade"                                                    		"Barracks Master"
 		"npc_dota_hero_sven"                                                    			"Barracks Master"
 		"npc_dota_hero_templar_assassin"                                                    "Barracks Master"
-		"npc_dota_hero_venomancer"                                                    		"Barracks Master"
+		"npc_dota_hero_arc_warden"                                                    		"Barracks Master"
 
 
 		//-------------------
@@ -72,9 +58,22 @@ Send your suggestions to thenewmetadota@gmail.com."
 		//-------------------
 		//Scouts
 		//-------------------
-		"scout_boar"                                                                      	"Boar Scout"
-		"scout_hawk"                                                                      	"Hawk Scout"
-		"scout_techies"                                                                     "Techies Scout"		
+		"scout_boar"                                                                      	"Land Scout"
+		"scout_hawk"                                                                      	"Air Scout"
+		"scout_techies"                                                                     "Techies Scout"
+
+		"scout_boar_blue"                                                                   "Land Scout"
+		"scout_boar_purple"                                                          		"Land Scout"
+		"scout_boar_red"                                                                   	"Land Scout"
+		"scout_boar_white"                                                                  "Land Scout"
+		"scout_boar_yellow"                                                                 "Land Scout"
+
+		"scout_wolf"                                                                   		"Land Scout"
+		"scout_wolf_blue"                                                                   "Land Scout"
+		"scout_wolf_purple"                                                                 "Land Scout"
+		"scout_wolf_red"                                                                   	"Land Scout"
+		"scout_wolf_white"                                                                  "Land Scout"
+		"scout_wolf_yellow"                                                                 "Land Scout"
 
 
 		//-------------------
@@ -83,7 +82,7 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"hero_vengeful"																		"Vengeful Spirit"
 		"hero_nevermore"																	"Shadow Fiend"
 		"hero_beastmaster"																	"Beastmaster"
-
+		"hero_medusa"                                                                     	"Medusa"
 
 		//-------------------
 		//Buildings
@@ -151,13 +150,13 @@ Send your suggestions to thenewmetadota@gmail.com."
 
 		"bm_aviation_sanctuary"                                                             "Air Barracks"
 		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary"                        			"Air Barracks"
-		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_Description"                      "Spawns Air Creeps and unlocks the Hawk Scout. Air Creeps have moderate HP and damage. They are however, the only units in the game that can be upgraded with Evasion."
+		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_Description"                      "Spawns Air Creeps and unlocks the Hawk Scout. Air Creeps have moderate HP and damage but can be upgraded with Evasion Aura."
 		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_build_time"                       "<font color='#057aff'>BUILD TIME</font>:"
 		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_gold_cost"                        "<font color='#fff22e'>GOLD COST</font>:"
 		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_lumber_cost"                      "<font color='#28fe77'>LUMBER COST</font>:"
 
 		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_disabled"                         "Aviation Sanctuary"
-		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_disabled_Description"             "Spawns Air Creeps and unlocks the Hawk Scout. Air Creeps have moderate HP and damage. They are however, the only units in the game that can be upgraded with Evasion.\n<b><font color='#eedd44'>Requires:\n - The Stump</font></b>\n"
+		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_disabled_Description"             "Spawns Air Creeps and unlocks the Hawk Scout. Air Creeps have moderate HP and damage. They are however, the only units in the game that can provide Evasion. Air Creeps can also be upgraded with Static Touch.\n<b><font color='#eedd44'>Requires:\n - The Stump</font></b>\n"
 
 
 		"bm_heroes"                                                             			"Portal of Heroes"
@@ -480,26 +479,56 @@ Send your suggestions to thenewmetadota@gmail.com."
 
 		//Air Evasion
 		//-------------------------------------------------------------
+		"DOTA_Tooltip_modifier_air_evasion_bonus_buff"                                    	"Evasion Aura"
+		"DOTA_Tooltip_modifier_air_evasion_bonus_buff_Description"                        	"Grants evasion"
+
 		"DOTA_Tooltip_ability_bm_air_evasion"                                             	"Evasion Aura"
-		"DOTA_Tooltip_ability_bm_air_evasion_Description"                                 	"Provides evasion to Air Creeps."
+		"DOTA_Tooltip_ability_bm_air_evasion_Description"                                 	"Provides evasion to all friendly units in a small area."
 		"DOTA_Tooltip_ability_bm_air_evasion_evasion_bonus"                               	"EVASION PERCENTAGE:"
 		"DOTA_Tooltip_ability_bm_air_evasion_radius" 										"RADIUS:"
 
 		"DOTA_Tooltip_ability_bm_air_evasion_disabled"                                    	"Evasion Aura"
-		"DOTA_Tooltip_ability_bm_air_evasion_disabled_Description"                        	"Provides evasion to Air Creeps."
+		"DOTA_Tooltip_ability_bm_air_evasion_disabled_Description"                        	"Provides evasion to all friendly units in a small area."
 
-		"DOTA_Tooltip_modifier_air_evasion_bonus"                                         	"Evasion Aura"
-		"DOTA_Tooltip_modifier_air_evasion_bonus_Description"                             	"Grants evasion"
-
-		"DOTA_Tooltip_ability_research_bm_air_evasion"                                    	"Evasion Aura"
-		"DOTA_Tooltip_ability_research_bm_air_evasion_Description"                        	"Provides evasion to Air Creeps."
+		"DOTA_Tooltip_ability_research_bm_air_evasion"                                    	"Research Evasion Aura"
+		"DOTA_Tooltip_ability_research_bm_air_evasion_Description"                        	"Provides evasion to all friendly units in a small area."
 		"DOTA_Tooltip_ability_research_bm_air_evasion_evasion_bonus"              			"EVASION PERCENTAGE:"
+		"DOTA_Tooltip_ability_research_bm_air_evasion_radius"              					"RADIUS:"		
 		"DOTA_Tooltip_ability_research_bm_air_evasion_research_time"                      	"<font color='#057aff'>RESEARCH TIME</font>:"
 		"DOTA_Tooltip_ability_research_bm_air_evasion_gold_cost"                          	"<font color='#fff22e'>GOLD COST</font>:"
 		"DOTA_Tooltip_ability_research_bm_air_evasion_lumber_cost"                        	"<font color='#28fe77'>LUMBER COST</font>:"
 
-		"DOTA_Tooltip_ability_item_research_bm_air_evasion"                               	"Cancel Upgrade"
+		"DOTA_Tooltip_ability_item_research_bm_air_evasion"                               	"Cancel Research"
 		"DOTA_Tooltip_ability_item_research_bm_air_evasion_Description"                   	""
+
+
+		//Air Special: Static Touch
+		//-------------------------------------------------------------
+		"DOTA_Tooltip_ability_bm_air_special"                                             	"Static Touch"
+		"DOTA_Tooltip_ability_bm_air_special_Description"                                 	"Gives your attack the chance to proc Chain Lightning. Static Touch also increases the range and decreases the movement speed of Air Creeps allowing them to attack from a distance. Chain Lightning bounces up to 5 times. The lightning damage diminishes by 10 percent after each bounce."
+		"DOTA_Tooltip_ability_bm_air_special_lightning_damage"                            	"LIGHTNING DAMAGE:"
+		"DOTA_Tooltip_ability_bm_air_special_lightning_chance"                            	"PERCENTAGE CHANCE:"
+		"DOTA_Tooltip_ability_bm_air_special_bonus_range"                                 	"BONUS RANGE:"
+		"DOTA_Tooltip_ability_bm_air_special_bonus_movespeed"                             	"MOVESPEED REDUCTION:"
+
+		"DOTA_Tooltip_ability_bm_air_special_disabled"                                    	"Static Touch"
+		"DOTA_Tooltip_ability_bm_air_special_disabled_Description"                        	"Gives your attack the chance to proc Chain Lightning."
+
+		"DOTA_Tooltip_ability_research_bm_air_special"                                    	"Research Static Touch"
+		"DOTA_Tooltip_ability_research_bm_air_special_Description"                        	"Gives your attack the chance to proc Chain Lightning. Static Touch also increases the range and decreases the movement speed of Air Creeps allowing them to attack from a distance. Chain Lightning bounces up to 5 times. The lightning damage diminishes by 10 percent after each bounce."
+		"DOTA_Tooltip_ability_research_bm_air_special_lightning_damage"                   	"LIGHTNING DAMAGE:"
+		"DOTA_Tooltip_ability_research_bm_air_special_lightning_chance"                   	"PERCENTAGE CHANCE:"
+		"DOTA_Tooltip_ability_research_bm_air_special_bonus_range"                        	"BONUS RANGE:"
+		"DOTA_Tooltip_ability_research_bm_air_special_bonus_movespeed"                    	"MOVESPEED REDUCTION:"
+		"DOTA_Tooltip_ability_research_bm_air_special_research_time"                      	"<font color='#057aff'>RESEARCH TIME</font>:"
+		"DOTA_Tooltip_ability_research_bm_air_special_gold_cost"                          	"<font color='#fff22e'>GOLD COST</font>:"
+		"DOTA_Tooltip_ability_research_bm_air_special_lumber_cost"                        	"<font color='#28fe77'>LUMBER COST</font>:"
+
+		"DOTA_Tooltip_ability_research_bm_air_special_disabled"                           	"Research Static Touch"
+		"DOTA_Tooltip_ability_research_bm_air_special_disabled_Description"               	"Gives your attack the chance to proc Chain Lightning.\n<b><font color='#eedd44'>Requires:\n - Library of Spells</font></b>\n"
+
+		"DOTA_Tooltip_ability_item_research_bm_air_special"                               	"Cancel Research"
+		"DOTA_Tooltip_ability_item_research_bm_air_special_Description"                   	""
 
 
 		//Mystic Flare
@@ -515,6 +544,7 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_luminous_sun_strike"                                        	"Sun Strike"
 		"DOTA_Tooltip_ability_luminous_sun_strike_Description"                            	"Sends a catastrophic ray of fierce energy from the sun at any targeted location, incinerating everything beneath it."
 		"DOTA_Tooltip_ability_luminous_sun_strike_damage"   								"DAMAGE:"
+		"DOTA_Tooltip_ability_luminous_sun_strike_area_of_effect"   						"AOE:"
 
 
 		//Chain Frost
@@ -530,6 +560,9 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_unpromising_chaos_meteor"                                  	"Chaos Meteor"
 		"DOTA_Tooltip_ability_unpromising_chaos_meteor_Description"              			"Launch a flaming meatball onto the targeted location. Upon landing, the meatball rolls forward, destroying everything in its path."
 		"DOTA_Tooltip_ability_unpromising_chaos_meteor_main_damage"    						"DAMAGE:"
+		"DOTA_Tooltip_ability_unpromising_chaos_meteor_area_of_effect"    					"AOE:"
+		"DOTA_Tooltip_ability_unpromising_chaos_meteor_travel_distance"    					"ROLL DISTANCE:"
+
 
 
 		//Scout Unlocks
@@ -676,8 +709,13 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_item_building_cancel"                                       	"Building Cancel"
 		"DOTA_Tooltip_ability_item_building_cancel_Description"                           	""
 
+		"DOTA_Tooltip_ability_bm_mango"                                                   	"Enchanted Mango"
+		"DOTA_Tooltip_ability_bm_mango_Description"                                       	"Consume the mango to instantly restore mana. The Stump also produces delicious mangoes!"
+		"DOTA_Tooltip_ability_bm_mango_range_tooltip"                                       "CAST RANGE:"
+		"DOTA_Tooltip_ability_bm_mango_mana_amount"                                       	"MANA RESTORED:"
+
 		"DOTA_Tooltip_ability_lumberjack_harvest"                                     		"Harvest Lumber"
-		"DOTA_Tooltip_ability_lumberjack_harvest_Description"                               "Use ability and target The Stump to begin harvesting."
+		"DOTA_Tooltip_ability_lumberjack_harvest_Description"                               "Target The Stump to begin harvesting."
 
 		"DOTA_Tooltip_ability_select_ancient1"                                     			"Granite Golem"
 		"DOTA_Tooltip_ability_select_ancient1_Description"                                  "Click to select Granite Golems as your Ancient spawn. Granite Golems have Granite Aura which increases the health capacity of nearby units."
@@ -710,19 +748,19 @@ Send your suggestions to thenewmetadota@gmail.com."
 		//-------------------
 		//Items
 		//-------------------
-		"DOTA_Tooltip_ability_item_boar"                                                  	"Boar Scout"
+		"DOTA_Tooltip_ability_item_boar"                                                  	"Land Scout"
 		"DOTA_Tooltip_ability_item_boar_Description"                                      	""
-		"DOTA_Tooltip_ability_item_boar_duration"                            				"BOAR DURATION:"
+		"DOTA_Tooltip_ability_item_boar_duration"                            				"DURATION:"
 		"DOTA_Tooltip_ability_item_boar_gold_cost"                                			"<font color='#fff22e'>GOLD COST</font>:"
 
-		"DOTA_Tooltip_ability_item_hawk"                                                  	"Hawk Scout"
+		"DOTA_Tooltip_ability_item_hawk"                                                  	"Air Scout"
 		"DOTA_Tooltip_ability_item_hawk_Description"                                      	""
-		"DOTA_Tooltip_ability_item_hawk_duration"                            				"HAWK DURATION:"
+		"DOTA_Tooltip_ability_item_hawk_duration"                            				"DURATION:"
 		"DOTA_Tooltip_ability_item_hawk_gold_cost"                                			"<font color='#fff22e'>GOLD COST</font>:"
 
 		"DOTA_Tooltip_ability_item_techies"                                                 "Techies Scout"
 		"DOTA_Tooltip_ability_item_techies_Description"                                     ""
-		"DOTA_Tooltip_ability_item_techies_duration"                            			"TECHIES DURATION:"
+		"DOTA_Tooltip_ability_item_techies_duration"                            			"DURATION:"
 		"DOTA_Tooltip_ability_item_techies_gold_cost"                               		"<font color='#fff22e'>GOLD COST</font>:"
 
 		"DOTA_Tooltip_ability_item_last_stand"                                              "Last Stand"

@@ -54,40 +54,55 @@ require('events')
 function Precache( context )
 
 
-  -- Barracks Master --
-    -- Particles
+-- Barracks Master --
+  -- Particles
+
+    -- Scouts
   PrecacheResource("particle_folder", "particles/units/heroes/hero_lone_druid", context) -- for Boar, Hawk and Techies Scouts
   PrecacheResource("particle_folder", "particles/units/heroes/hero_beastmaster", context) -- for Boar, Hawk and Techies Scouts  
   PrecacheResource("particle_folder", "particles/units/heroes/hero_techies", context) -- for Techies Scout
   PrecacheResource("particle_folder", "particles/units/heroes/hero_shredder", context) -- for Lumberjack
 
-  PrecacheResource("particle_folder", "particles/units/heroes/hero_vengeful", context) -- for Hero: Vengeful Spirit
-  PrecacheResource("particle_folder", "particles/units/heroes/hero_nevermore", context) -- for Hero: Shadow Fiend
-                                                                                        -- for Hero: Beastmaster (precached above)
-  PrecacheResource("particle_folder", "particles/units/heroes/hero_medusa", context) -- for Hero: Medusa                                                                                        
 
-  PrecacheResource("particle_folder", "particles/units/heroes/hero_skywrath_mage", context) -- for Mystic Flare
-  PrecacheResource("particle_folder", "particles/units/heroes/hero_invoker", context) -- for Sun Strike/Chaos Meteor
-  PrecacheResource("particle_folder", "particles/units/heroes/hero_lich", context) -- for Chain Frost
-
-  PrecacheResource("particle_folder", "particles/units/heroes/hero_treant", context) -- for Living Armor
-  PrecacheResource("particle_folder", "particles/units/heroes/hero_sniper", context) -- for Assassinate
-  PrecacheResource("particle", "particles/units/heroes/hero_sniper", context) -- for Assassinate  
-  PrecacheResource("particle_folder", "particles/items_fx/chain_lightning.vpcf", context) -- for air creep ult
-
-  PrecacheResource("particle_folder", "particles/econ/courier/courier_trail_hw_2012", context) -- for The Stump 
-  PrecacheResource("particle_folder", "particles/units/heroes/hero_obsidian_destroyer", context) -- for Portal of Heroes
-  PrecacheResource("particle_folder", "particles/econ/courier/courier_trail_international_2013_se", context) -- for Purifier
-
+    -- Custom Scouts
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_lycan", context) -- for Wolf   
   PrecacheResource("particle_folder", "particles/econ/courier/courier_greevil_white", context) -- for land scout -- champion
   PrecacheResource("particle_folder", "particles/econ/courier/courier_greevil_purple", context) -- for land scout -- ghost
   PrecacheResource("particle_folder", "particles/econ/courier/courier_greevil_red", context) -- for land scout -- fire
   PrecacheResource("particle_folder", "particles/econ/courier/courier_greevil_blue", context) -- for land scout -- ice
   PrecacheResource("particle_folder", "particles/econ/courier/courier_greevil_yellow", context) -- for land scout -- electric
 
+
+    -- Heroes
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_vengeful", context) -- for Hero: Vengeful Spirit
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_nevermore", context) -- for Hero: Shadow Fiend
+                                                                                        -- for Hero: Beastmaster (precached above)
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_medusa", context) -- for Hero: Medusa                                                                                        
+
+
+    -- Buildings
+  PrecacheResource("particle_folder", "particles/econ/courier/courier_trail_hw_2012", context) -- for The Stump 
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_obsidian_destroyer", context) -- for Portal of Heroes
+  PrecacheResource("particle_folder", "particles/econ/courier/courier_trail_international_2013_se", context) -- for Purifier
+
+
+    -- Abilities
+  PrecacheResource("particle", "particles/items3_fx/mango_active.vpcf", context) -- for Enchanted Mango
+  PrecacheResource("particle", "particles/items_fx/chain_lightning.vpcf", context) -- for Static Touch
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_skywrath_mage", context) -- for Mystic Flare
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_invoker", context) -- for Sun Strike/Chaos Meteor
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_lich", context) -- for Chain Frost
+
+
+    -- Override Abilities
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_treant", context) -- for Living Armor
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_sniper", context) -- for Assassinate
+
+
+    -- Misc
   PrecacheResource("particle_folder", "particles/bm_custom_particles", context) -- for Construction/Research
 
-    -- Sounds
+-- Sounds
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts", context) -- for Boar and Hawk Scouts
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_techies.vsndevts", context) -- for Techies Scout
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_shredder.vsndevts", context) -- for Lumberjacks

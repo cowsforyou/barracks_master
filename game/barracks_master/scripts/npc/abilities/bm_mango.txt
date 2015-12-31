@@ -1,0 +1,60 @@
+"bm_mango"
+{
+    "BaseClass"                     "ability_datadriven"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"   
+    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+    "AbilityTextureName"            "bm_mango"
+
+    "MaxLevel"                      "1"
+
+    // Casting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastRange"              "400"
+    "AbilityCastPoint"              "0.0"
+    "AbilityCooldown"               "70.0"
+    "AbilityManaCost"               "0"   
+
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "mana_amount"           "150"
+        }
+        "02"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "range_tooltip"         "400"
+        }        
+
+    }
+    
+    // OnSpellStart
+    //-------------------------------------------------------------------------------------------------------------
+    "OnSpellStart"
+    {
+        "RunScript"
+        {
+            "Target"        "TARGET"
+            "ScriptFile"    "spells/addmana.lua"
+            "Function"      "AddMana"
+            "mana_amount"   "%mana_amount"
+        }
+
+        "FireSound"
+        {
+            "Target"        "CASTER"
+            "EffectName"    "DOTA_Item.Mango.Activate"
+        }
+
+        "FireEffect"
+        {
+            "Target"            "TARGET"
+            "EffectName"        "particles/items3_fx/mango_active.vpcf"
+            "EffectAttachType"  "follow_origin"
+        }
+    }
+}

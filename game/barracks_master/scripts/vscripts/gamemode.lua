@@ -11,6 +11,11 @@ function GameMode:InitGameMode()
   GameRules:GetGameModeEntity():SetHUDVisible(6, false)
   GameRules:GetGameModeEntity():SetCameraDistanceOverride(1300)
 
+  -- Modifying the HUD -- cows
+  GameRules:GetGameModeEntity():SetHUDVisible(2, false)
+  GameRules:GetGameModeEntity():SetHUDVisible(8, false)  
+  GameRules:GetGameModeEntity():SetHUDVisible(9, false)    
+
   -- DebugPrint
   --Convars:RegisterConvar('debug_spew', tostring(DEBUG_SPEW), 'Set to 1 to start spewing debug info. Set to 0 to disable.', 0)
   -- Commands can be registered for debugging purposes or as functions that can be called by the custom Scaleform UI
@@ -23,7 +28,7 @@ function GameMode:InitGameMode()
   -- Filters
   GameRules:GetGameModeEntity():SetExecuteOrderFilter( Dynamic_Wrap( GameMode, "FilterExecuteOrder" ), self )
 
-  -- Converting all reliable gold to unreliable gold
+  -- Converting all reliable gold to unreliable gold -- cows
   -- 1) Timer method
   Timers:CreateTimer(function() ConvertReliableGold() return 1 end)
 

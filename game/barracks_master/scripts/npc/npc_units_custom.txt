@@ -321,7 +321,7 @@
 		"AbilityLayout"				"5"
 		"Ability1"					"spawn_lumberjacks"
 		"Ability2"					"treant_living_armor"
-		"Ability3"					""
+		"Ability3"					"bm_mango_disabled"
 		"Ability4"					""
 		"Ability9"					"particle_stump"
 		"Ability10"					"ability_building"

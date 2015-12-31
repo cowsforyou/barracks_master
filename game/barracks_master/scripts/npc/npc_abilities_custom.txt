@@ -138,66 +138,6 @@
 			}
 		}		
 	}
-	"barebones_empty1"
-	  {
-	    // General
-	    //-------------------------------------------------------------------------------------------------------------
-	    //"ID"              "5343"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
-	    "MaxLevel"            "0"
-	    "BaseClass"           "ability_datadriven"
-	    "AbilityTextureName"            "rubick_empty1"
-	  }
-	"barebones_empty2"
-	  {
-	    // General
-	    //-------------------------------------------------------------------------------------------------------------
-	    //"ID"              "5343"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
-	    "MaxLevel"            "0"
-	    "BaseClass"           "ability_datadriven"
-	    "AbilityTextureName"            "rubick_empty1"
-	  }
-	"barebones_empty3"
-	  {
-	    // General
-	    //-------------------------------------------------------------------------------------------------------------
-	    //"ID"              "5343"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
-	    "MaxLevel"            "0"
-	    "BaseClass"           "ability_datadriven"
-	    "AbilityTextureName"            "rubick_empty1"
-	  }
-	"barebones_empty4"
-	  {
-	    // General
-	    //-------------------------------------------------------------------------------------------------------------
-	    //"ID"              "5343"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
-	    "MaxLevel"            "0"
-	    "BaseClass"           "ability_datadriven"
-	    "AbilityTextureName"            "rubick_empty1"
-	  }
-	"barebones_empty5"
-	  {
-	    // General
-	    //-------------------------------------------------------------------------------------------------------------
-	    //"ID"              "5343"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
-	    "MaxLevel"            "0"
-	    "BaseClass"           "ability_datadriven"
-	    "AbilityTextureName"            "rubick_empty1"
-	  }
-	"barebones_empty6"
-	  {
-	    // General
-	    //-------------------------------------------------------------------------------------------------------------
-	    //"ID"              "5343"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
-	    "MaxLevel"            "0"
-	    "BaseClass"           "ability_datadriven"
-	    "AbilityTextureName"            "rubick_empty1"
-	  }
 	"bm_air_evasion"
 	{
 	  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -473,6 +413,72 @@
 	      }        
 	    }
 	  }
+	}
+	"bm_mango"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"   
+	    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+	    "AbilityTextureName"            "bm_mango"
+	
+	    "MaxLevel"                      "1"
+	
+	    // Casting
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilityCastRange"              "400"
+	    "AbilityCastPoint"              "0.0"
+	    "AbilityCooldown"               "70.0"
+	    "AbilityManaCost"               "0"   
+	
+	    // Special  
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "mana_amount"           "150"
+	        }
+	        "02"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "range_tooltip"         "400"
+	        }        
+	
+	    }
+	    
+	    // OnSpellStart
+	    //-------------------------------------------------------------------------------------------------------------
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "Target"        "TARGET"
+	            "ScriptFile"    "spells/addmana.lua"
+	            "Function"      "AddMana"
+	            "mana_amount"   "%mana_amount"
+	        }
+	
+	        "FireSound"
+	        {
+	            "Target"        "CASTER"
+	            "EffectName"    "DOTA_Item.Mango.Activate"
+	        }
+	
+	        "FireEffect"
+	        {
+	            "Target"            "TARGET"
+	            "EffectName"        "particles/items3_fx/mango_active.vpcf"
+	            "EffectAttachType"  "follow_origin"
+	        }
+	    }
+	}
+	"bm_mango_disabled"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "bm_mango"
+	    "MaxLevel"                      "0"
 	}
 	"bm_melee_armor"
 	{
@@ -2399,7 +2405,7 @@
 	    "MaxLevel"               "1"
 	
 	    "AbilityChannelTime"     "5.0"
-	    "AbilityCooldown"        "3.0"
+	    "AbilityCooldown"        "2.0"
 	
 	    "AbilityCastAnimation"   "ACT_DOTA_TELEPORT"
 	    "AnimationIgnoresModelScale"    "0"

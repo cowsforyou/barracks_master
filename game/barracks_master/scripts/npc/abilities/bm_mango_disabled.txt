@@ -1,0 +1,6 @@
+"bm_mango_disabled"
+{
+    "BaseClass"                     "ability_datadriven"
+    "AbilityTextureName"            "bm_mango"
+    "MaxLevel"                      "0"
+}

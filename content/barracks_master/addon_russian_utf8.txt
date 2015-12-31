@@ -1,6 +1,6 @@
 ﻿"lang"
 {
-	"Language"		"russian"
+	"Language"		"Russian"
 	"Tokens"
 	{		
 		"addon_game_name"			"Мастера казарм"
@@ -16,29 +16,15 @@
 "bm_updates_title"	"Updates"
 
 "bm_updates_text"	"
-**Congratulations to Team Catdog (coldrefreader & Moon Moon) for winning our first Barracks Master tournament!**
-VODs available: bit.ly/barracksmaster
+----- Dec 28:
+• Tooltip fix.
 
+----- Dec 28:
+• Assassinate damage increased from 2000 to 5000.
 
------ Dec 10:
-• Fixed bug which did not refund resources if the building area was suddenly blocked.
-• Fixed tree placement which allowed you to walk into secret rune area on the Radiant side.
-
------ Dec 10:
-• Christmas tree added to the map. Happy holidays everyone!
-
------ Dec 9:
-• Loading screen layout modified in preparation for a custom pregame screen.
-• Loading screen tutorials updated.
-
------ Dec 8:
-• Removed the ability to force attack a friendly building.
-
------ Dec 6:
-• Barracks Masters now spawn with a 5sec invisibility buff.
-• Fixed bug that caused Lumberjacks to be unable to harvest after disconnecting.
-• Radiant team health bars are now yellow.
-• Dire team health bars are now light blue.
+----- Dec 27:
+• Tree regrowth time increased from 130 to 300sec.
+• Techies Scout cooldown increased from 90 to 120sec.
 "
 
 "bm_contact_text"	"
@@ -52,7 +38,7 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"npc_dota_hero_terrorblade"                                                  		"Строитель"
 		"npc_dota_hero_sven"                                                    			"Строитель"
 		"npc_dota_hero_templar_assassin"                                                    "Строитель"
-		"npc_dota_hero_venomancer"                                                    		"Строитель"
+		"npc_dota_hero_arc_warden"                                                    		"Строитель"
 
 
 		//-------------------
@@ -72,18 +58,30 @@ Send your suggestions to thenewmetadota@gmail.com."
 		//-------------------
 		//Scouts
 		//-------------------
-		"scout_boar"                                                                      	"Кабан-разведчик"
-		"scout_hawk"                                                                      	"Ястреб-разведчик"
+		"scout_boar"                                                                      	"земля-разведчик"
+		"scout_hawk"                                                                      	"воздух-разведчик"
 		"scout_techies"                                                                     "Минёр-разведчик"		
 
+		"scout_boar_blue"                                                                   "земля-разведчик"
+		"scout_boar_purple"                                                          		"земля-разведчик"
+		"scout_boar_red"                                                                   	"земля-разведчик"
+		"scout_boar_white"                                                                  "земля-разведчик"
+		"scout_boar_yellow"                                                                 "земля-разведчик"
 
+		"scout_wolf"                                                                   		"земля-разведчик"
+		"scout_wolf_blue"                                                                   "земля-разведчик"
+		"scout_wolf_purple"                                                                 "земля-разведчик"
+		"scout_wolf_red"                                                                   	"земля-разведчик"
+		"scout_wolf_white"                                                                  "земля-разведчик"
+		"scout_wolf_yellow"                                                                 "земля-разведчик"
+		
 		//-------------------
 		//Heroes
 		//-------------------
 		"hero_vengeful"																		"Vengeful Spirit"
 		"hero_nevermore"																	"Shadow Fiend"
 		"hero_beastmaster"																	"Beastmaster"
-
+		"hero_medusa"                                                                     	"Medusa"
 
 		//-------------------
 		//Buildings
@@ -456,7 +454,7 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_bm_siege_special_Description"                               	"Upgrade your attacks to do AoE damage and slow. Change out your standard boulders for icy snowballs that deal AoE damage and movement slow at the cost of a slight reduction to your attack speed."
 		"DOTA_Tooltip_ability_bm_siege_special_attack_slow"                               	"ATTACK SLOW:"
 		"DOTA_Tooltip_ability_bm_siege_special_aoe_damage"                                	"AOE DAMAGE:"
-		"DOTA_Tooltip_ability_bm_siege_special_radius"                                    	"RADIUS:"
+		"DOTA_Tooltip_ability_bm_siege_special_radius"                                    	"Радиус:"
 
 		"DOTA_Tooltip_ability_bm_siege_special_disabled"                                  	"Snowball"
 		"DOTA_Tooltip_ability_bm_siege_special_disabled_Description"                      	"Upgrade your attacks to do AoE damage and slow."
@@ -465,7 +463,7 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_research_bm_siege_special_Description"                      	"Upgrade your attacks to do AoE damage and slow. Change out your standard boulders for icy snowballs that deal AoE damage and movement slow at the cost of a slight reduction to your attack speed."
 		"DOTA_Tooltip_ability_research_bm_siege_special_attack_slow"                      	"ATTACK SLOW:"
 		"DOTA_Tooltip_ability_research_bm_siege_special_aoe_damage"                       	"AOE DAMAGE:"
-		"DOTA_Tooltip_ability_research_bm_siege_special_radius"                           	"RADIUS:"
+		"DOTA_Tooltip_ability_research_bm_siege_special_radius"                           	"Радиус:"
 		"DOTA_Tooltip_ability_research_bm_siege_special_research_time"                    	"<font color='#057aff'>Время изучения</font>:"
 		"DOTA_Tooltip_ability_research_bm_siege_special_gold_cost"                        	"<font color='#fff22e'>Стоимость(золота)</font>:"
 		"DOTA_Tooltip_ability_research_bm_siege_special_lumber_cost"                      	"<font color='#28fe77'>Стоимость(дерева)</font>:"
@@ -480,25 +478,57 @@ Send your suggestions to thenewmetadota@gmail.com."
 
 		//Air Evasion
 		//-------------------------------------------------------------
+		"DOTA_Tooltip_modifier_air_evasion_bonus_buff"                                    	"Уклонение"
+		"DOTA_Tooltip_modifier_air_evasion_bonus_buff_Description"                        	"Даёт шанс увернуться от атаки"
+
 		"DOTA_Tooltip_ability_bm_air_evasion"                                             	"Уклонение"
 		"DOTA_Tooltip_ability_bm_air_evasion_Description"                                 	"Добавляет летающим крипам возможность уклониться от атак."
 		"DOTA_Tooltip_ability_bm_air_evasion_evasion_bonus"                               	"Шанс уворота:"
+		"DOTA_Tooltip_ability_bm_air_evasion_radius" 										"Радиус:"
 
 		"DOTA_Tooltip_ability_bm_air_evasion_disabled"                                    	"Уклонение"
 		"DOTA_Tooltip_ability_bm_air_evasion_disabled_Description"                        	"Добавляет летающим крипам возможность уклониться от атак."
 
-		"DOTA_Tooltip_modifier_air_evasion_bonus"                                         	"Уклонение"
-		"DOTA_Tooltip_modifier_air_evasion_bonus_Description"                             	"Даёт шанс увернуться от атаки"
-
 		"DOTA_Tooltip_ability_research_bm_air_evasion"                                    	"Уклонение"
 		"DOTA_Tooltip_ability_research_bm_air_evasion_Description"                        	"Добавляет летающим крипам возможность уклониться от атак."
 		"DOTA_Tooltip_ability_research_bm_air_evasion_evasion_bonus"              			"Шанс уворота:"
+		"DOTA_Tooltip_ability_research_bm_air_evasion_radius"              					"Радиус:"	
 		"DOTA_Tooltip_ability_research_bm_air_evasion_research_time"                      	"<font color='#057aff'>Время изучения</font>:"
 		"DOTA_Tooltip_ability_research_bm_air_evasion_gold_cost"                          	"<font color='#fff22e'>Стоимость(золота)</font>:"
 		"DOTA_Tooltip_ability_research_bm_air_evasion_lumber_cost"                        	"<font color='#28fe77'>Стоимость(дерева)</font>:"
 
-		"DOTA_Tooltip_ability_item_research_bm_air_evasion"                               	"Отменить улучшение"
+		"DOTA_Tooltip_ability_item_research_bm_air_evasion"                               	"тмеОнить улучшение"
 		"DOTA_Tooltip_ability_item_research_bm_air_evasion_Description"                   	""
+
+
+		//Air Special: Static Touch
+		//-------------------------------------------------------------
+		"DOTA_Tooltip_ability_bm_air_special"                                             	"Static Touch"
+		"DOTA_Tooltip_ability_bm_air_special_Description"                                 	"Gives your attack the chance to proc Chain Lightning. Static Touch also increases the range and decreases the movement speed of the Air Creeps to allow them to attack from a distance.  Chain Lightning bounces up to 5 times. The lightning damage diminishes by 10 percent after every bounce."
+		"DOTA_Tooltip_ability_bm_air_special_lightning_damage"                            	"LIGHTNING DAMAGE:"
+		"DOTA_Tooltip_ability_bm_air_special_lightning_chance"                            	"PERCENTAGE CHANCE:"
+		"DOTA_Tooltip_ability_bm_air_special_bonus_range"                                 	"BONUS RANGE:"
+		"DOTA_Tooltip_ability_bm_air_special_bonus_movespeed"                             	"MOVESPEED REDUCTION:"
+
+		"DOTA_Tooltip_ability_bm_air_special_disabled"                                    	"Static Touch"
+		"DOTA_Tooltip_ability_bm_air_special_disabled_Description"                        	"Gives your attack the chance to proc Chain Lightning."
+
+		"DOTA_Tooltip_ability_research_bm_air_special"                                    	"Research Static Touch"
+		"DOTA_Tooltip_ability_research_bm_air_special_Description"                        	"Gives your attack the chance to proc Chain Lightning. Static Touch also increases the range and decreases the movement speed of the Air Creeps to allow them to attack from a distance.  Chain Lightning bounces up to 5 times. The lightning damage diminishes by 10 percent after every bounce."
+		"DOTA_Tooltip_ability_research_bm_air_special_lightning_damage"                   	"LIGHTNING DAMAGE:"
+		"DOTA_Tooltip_ability_research_bm_air_special_lightning_chance"                   	"PERCENTAGE CHANCE:"
+		"DOTA_Tooltip_ability_research_bm_air_special_bonus_range"                        	"BONUS RANGE:"
+		"DOTA_Tooltip_ability_research_bm_air_special_bonus_movespeed"                    	"MOVESPEED REDUCTION:"
+		"DOTA_Tooltip_ability_research_bm_air_special_research_time"                      	"<font color='#057aff'>Время изучения</font>:"
+		"DOTA_Tooltip_ability_research_bm_air_special_gold_cost"                          	"<font color='#fff22e'>Стоимость(золота)</font>:"
+		"DOTA_Tooltip_ability_research_bm_air_special_lumber_cost"                        	"<font color='#28fe77'>Стоимость(дерева)</font>:"
+
+		"DOTA_Tooltip_ability_research_bm_air_special_disabled"                           	"Research Static Touch"
+		"DOTA_Tooltip_ability_research_bm_air_special_disabled_Description"               	"Gives your attack the chance to proc Chain Lightning.\n<b><font color='#eedd44'>требуются:\n - Библиотека заклинаний</font></b>\n"
+
+		"DOTA_Tooltip_ability_item_research_bm_air_special"                               	"тмеОнить улучшение"
+		"DOTA_Tooltip_ability_item_research_bm_air_special_Description"                   	""
+
 
 
 		//Mystic Flare
@@ -514,6 +544,7 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_luminous_sun_strike"                                        	"Sun Strike"
 		"DOTA_Tooltip_ability_luminous_sun_strike_Description"                            	"Отправляет направленный, концентрированный луч света в определённую область, который сжигает всё , что попало под него. "
 		"DOTA_Tooltip_ability_luminous_sun_strike_damage"   								"урон:"
+		"DOTA_Tooltip_ability_luminous_sun_strike_area_of_effect"   						"AOE:"
 
 
 		//Chain Frost
@@ -529,6 +560,10 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_unpromising_chaos_meteor"                                  	"Chaos Meteor"
 		"DOTA_Tooltip_ability_unpromising_chaos_meteor_Description"              			"Запускает метеорит в определённое место, наносящий урон всему, что находится перед ним."
 		"DOTA_Tooltip_ability_unpromising_chaos_meteor_main_damage"    						"урон:"
+		"DOTA_Tooltip_ability_unpromising_chaos_meteor_area_of_effect"    					"AOE:"
+		"DOTA_Tooltip_ability_unpromising_chaos_meteor_travel_distance"    					"ROLL DISTANCE:"
+
+		
 
 		//Scout Unlocks
 		//-------------------------------------------------------------
@@ -669,6 +704,11 @@ Send your suggestions to thenewmetadota@gmail.com."
 		"DOTA_Tooltip_ability_item_building_cancel"                                       	"Отменить строительство"
 		"DOTA_Tooltip_ability_item_building_cancel_Description"                           	""
 
+		"DOTA_Tooltip_ability_bm_mango"                                                   	"Enchanted Mango"
+		"DOTA_Tooltip_ability_bm_mango_Description"                                       	"Consume the mango to instantly restore mana. The Stump also produces delicious mangoes!"
+		"DOTA_Tooltip_ability_bm_mango_range_tooltip"                                       "CAST RANGE:"
+		"DOTA_Tooltip_ability_bm_mango_mana_amount"                                       	"MANA RESTORED:"
+
 		"DOTA_Tooltip_ability_lumberjack_harvest"                                     		"Сбор урожая"
 		"DOTA_Tooltip_ability_lumberjack_harvest_Description"                               "Используйте способность на Пень, что бы начать добычу."
 
@@ -702,12 +742,12 @@ Send your suggestions to thenewmetadota@gmail.com."
 
 		//-------------------
 		//Items
-		"DOTA_Tooltip_ability_item_boar"                                                  	"Кабан-разведчик"
+		"DOTA_Tooltip_ability_item_boar"                                                  	"земля-разведчик"
 		"DOTA_Tooltip_ability_item_boar_Description"                                      	""
 		"DOTA_Tooltip_ability_item_boar_duration"                            				"Длительность жизни:"
 		"DOTA_Tooltip_ability_item_boar_gold_cost"                                			"<font color='#fff22e'>Стоимость(золота)</font>:"
 
-		"DOTA_Tooltip_ability_item_hawk"                                                  	"Ястреб-разведчик"
+		"DOTA_Tooltip_ability_item_hawk"                                                  	"воздух-разведчик"
 		"DOTA_Tooltip_ability_item_hawk_Description"                                      	""
 		"DOTA_Tooltip_ability_item_hawk_duration"                            				"Длительность жизни:"
 		"DOTA_Tooltip_ability_item_hawk_gold_cost"                                			"<font color='#fff22e'>Стоимость(золота)</font>:"
