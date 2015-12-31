@@ -11,8 +11,7 @@
 
 		<Panel id="BM_Backgrounds">
 			<Image id="BG_Main" src="file://{images}/custom_game/loading_screen/bm_loading_screen.psd" />
-			<Image id="BG_Sides" src="file://{images}/custom_game/loading_screen/background_sides.png"/>
-			<Image id="BG_TopLeft" src="file://{images}/custom_game/loading_screen/background_top_left.png"/>	
+			<Image id="BG_Left" src="file://{images}/custom_game/loading_screen/background_left.png"/>
 			<Label id="GameTitle" text="#addon_game_name" style="" />		
 		</Panel>
 

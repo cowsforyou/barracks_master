@@ -25,21 +25,13 @@ Background Panel
 	background-size: 100% 100%;
 }
 
-#BG_Sides
+#BG_Left
 {
 	horizontal-align: left;
 	vertical-align: top;
 	margin-top: 0px;
 	margin-left: 0px;
-	opacity: .7;
-}
-
-#BG_TopLeft
-{
-	horizontal-align: left;
-	vertical-align: top;
-	margin-top: 0px;
-	margin-left: 0px;
+	/*--opacity: .7;--*/
 }
 
 #GameTitle
@@ -117,16 +109,6 @@ Left Panel
 	color: #ffffff;
 }
 
-/*#Contact
-{
-	vertical-align: bottom;
-	padding-bottom: 15px;
-	padding-left: 12px;
-	padding-right: 12px;
-	font-size: 16px;
-	color: #e5e5e5;
-}*/
-
 /*-------------------------
 Tutorial Panel
 -------------------------*/
@@ -135,33 +117,33 @@ Tutorial Panel
 {
 	horizontal-align: left;
 	vertical-align: top;
-	margin-top: 50px;
-	margin-left: 768px;
+	margin-top: 0px;
+	margin-left: 800px;
 	flow-children: down;
 }
 
 #T1
 {
 	margin-left: 0px;
-	margin-top: 50px;
+	margin-top: 40px;
 }
 
 #T2
 {
 	margin-left: 0px;
-	margin-top: 50px;
+	margin-top: 15px;
 }
 
 #T3
 {
 	margin-left: 0px;
-	margin-top: 50px;
+	margin-top: 15px;
 }
 
 #T4
 {
 	margin-left: 0px;
-	margin-top: 50px;
+	margin-top: 15px;
 }
 
 
