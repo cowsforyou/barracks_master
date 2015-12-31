@@ -43,5 +43,19 @@
 	width:36px; 
 	height:26px; 
 	background-image: url("s2r://panorama/images/custom_game/lumber_icon.png"); 
-	background-size: 100% 100%;
+	background-size: 100% 100%;   
+}
+
+.QuickbuyPanel
+{
+    horizontal-align: right;
+    vertical-align: bottom;
+
+    margin-bottom: 86px;
+    margin-right: 4px;
+}
+
+#LogoOverlay 
+{   
+    background-size: 100% 100%;   
 }

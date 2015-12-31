@@ -13,5 +13,8 @@
 			<Label id="LumberText" text="" html="true" class="TitleFont" />
 			<Image hittest="false" id="LumberIcon" src="file://{images}/custom_game/lumber_icon.png" />
 		</Panel>
+		<Panel class="QuickbuyPanel">
+			<Image hittest="false" id="LogoOverlay" src="file://{images}/custom_game/bmlogo_quickbuy_overlay2.png" />
+		</Panel>
 	</Panel>
 </root>
