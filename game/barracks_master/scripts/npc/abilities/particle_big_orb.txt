@@ -1,4 +1,4 @@
-"particle_researching"
+"particle_big_orb"
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
@@ -16,12 +16,13 @@
 			{
 				"AttachEffect"
 				{
-					"EffectName"        "particles/econ/courier/courier_trail_hw_2012/courier_trail_hw_2012_ghosts.vpcf"
-					"EffectAttachType"  "follow_overhead"
+					"EffectName"        "particles/bm_custom_particles/bm_particle_big_orb.vpcf"
+					"EffectAttachType"  "follow_origin"
 					"Target"			"CASTER"
-					"ControlPointEntities"
+
+					"ControlPoints"
 					{
-						"CASTER"	"attach_fx"
+						"01"			"0 0 0"
 					}
 				}
 			}

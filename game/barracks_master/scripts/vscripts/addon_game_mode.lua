@@ -102,6 +102,7 @@ function Precache( context )
     -- Misc
   PrecacheResource("particle_folder", "particles/bm_custom_particles", context) -- for Construction/Research
 
+
 -- Sounds
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts", context) -- for Boar and Hawk Scouts
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_techies.vsndevts", context) -- for Techies Scout
@@ -118,16 +119,14 @@ function Precache( context )
 
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_treant.vsndevts", context) -- for Living Armor
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_sniper.vsndevts", context) -- for Assassinate 
-  PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_zuus.vsndevts", context) -- for air creep ult
+  PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_zuus.vsndevts", context) -- for Static Touch
 
   PrecacheResource("soundfile", "soundevents/BM_custom_sounds.vsndevts", context) -- for Barracks Master Announcer
 
 
-    -- Units
+-- Units
   PrecacheUnitByNameSync("lumberjack", context)    
   PrecacheUnitByNameSync("scout_boar", context)
-  PrecacheUnitByNameSync("scout_boar_p", context)
-  PrecacheUnitByNameSync("scout_wolf_p", context)
   PrecacheUnitByNameSync("scout_hawk", context)
   PrecacheUnitByNameSync("scout_techies", context)
   PrecacheUnitByNameSync("creep_air", context)
@@ -147,7 +146,8 @@ function Precache( context )
   PrecacheUnitByNameSync("bm_ancient_barracks", context) 
   PrecacheUnitByNameSync("bm_heroes", context) 
   PrecacheUnitByNameSync("bm_purifier", context) 
-  PrecacheUnitByNameSync("bm_library", context) 
+  PrecacheUnitByNameSync("bm_library", context)
+  PrecacheUnitByNameSync("bm_warp_chasm", context)
   PrecacheUnitByNameSync("bm_unpromising", context)         
   PrecacheUnitByNameSync("bm_luminous", context)    
 
@@ -164,6 +164,7 @@ function Precache( context )
   PrecacheItemByNameSync("item_techies", context)
   PrecacheItemByNameSync("item_last_stand", context)
 
+  PrecacheItemByNameSync("item_apply_modifiers", context)
 
   -- Non Barracks Master --   
     -- Model ghost and grid particles
@@ -178,8 +179,6 @@ function Precache( context )
   PrecacheUnitByNameSync("tech_center", context)
   PrecacheUnitByNameSync("dragon_tower", context)
   PrecacheUnitByNameSync("dark_tower", context)
-
-  PrecacheItemByNameSync("item_apply_modifiers", context)
 end
 
 -- Create our game mode and initialize it
