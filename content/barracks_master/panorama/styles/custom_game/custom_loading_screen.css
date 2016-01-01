@@ -25,14 +25,14 @@ Background Panel
 	background-size: 100% 100%;
 }
 
-#BG_Left
+/*--#BG_Left
 {
 	horizontal-align: left;
 	vertical-align: top;
 	margin-top: 0px;
 	margin-left: 0px;
-	/*--opacity: .7;--*/
-}
+	opacity: .7;
+}--*/
 
 #GameTitle
 {
@@ -46,10 +46,49 @@ Background Panel
 }
 
 /*-------------------------
-Left Panel
+Left Panel Backgrounds
+-------------------------*/
+.BM_Left_Backgrounds
+{
+	horizontal-align: left;
+	vertical-align: top;
+	margin-top: 72px;
+	margin-left: 48px;
+}
+
+#UpdatesPanel
+{
+	horizontal-align: left;
+	vertical-align: top;
+	width: 404px;
+	height: 400px;
+	opacity: .7;
+	background-color: black;
+}
+
+#LadderPanel
+{
+	width: 250px;
+	height: 700px;
+	margin-left: 424px;
+	opacity: .7;
+	background-color: black;
+}
+
+#BannerPanel
+{
+	width: 404px;
+	height: 282px;
+	margin-top: 420px;
+	opacity: .7;
+	background-color: black;
+}
+
+/*-------------------------
+Left Panel Items
 -------------------------*/
 
-.BM_Left
+.BM_Left_Items
 {
 	horizontal-align: left;
 	vertical-align: top;
@@ -65,31 +104,7 @@ Left Panel
 	vertical-align: top;
 	width: 404px;
 	height: 400px;
-	opacity: .5;
 	flow-children: down;
-
-	background-color: black;
-}
-
-#BM_Image
-{
-	width: 404px;
-	height: 282px;
-	margin-top: 420px;
-	opacity: .5;
-
-	background-color: black;
-}
-
-#BM_Ladder
-{
-	width: 250px;
-	height: 700px;
-	margin-left: 450px;
-	opacity: .5;
-	flow-children: down;
-
-	background-color: black;
 }
 
 #UpdatesTitle
@@ -107,6 +122,26 @@ Left Panel
 {
 	font-size: 15px;
 	color: #ffffff;
+}
+
+#BM_Ladder
+{
+	width: 250px;
+	height: 700px;
+	margin-left: 424px;
+	flow-children: down;
+}
+
+#BM_Banner
+{
+	width: 404px;
+	height: 282px;
+	margin-top: 420px;
+}
+
+#Banner01
+{
+	opacity: 1.0;
 }
 
 /*-------------------------
