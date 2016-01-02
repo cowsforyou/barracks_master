@@ -113,15 +113,17 @@ Left Panel Items
 	font-weight: bold;
 	color: #ffffff;
 	text-shadow: 2px 2px 2px #000000;
-	text-align: center;
-	horizontal-align: center;
-	vertical-align: center;
+	horizontal-align: left;
+	padding-left: 15px;
+	padding-top: 10px;
 }
 
-#Updates
+#UpdatesText
 {
 	font-size: 15px;
 	color: #ffffff;
+	padding-left: 12px;
+	padding-right: 12px;
 }
 
 #BM_Ladder
@@ -131,6 +133,26 @@ Left Panel Items
 	margin-left: 424px;
 	flow-children: down;
 }
+
+#LadderTitle
+{
+	font-size: 30px;
+	font-weight: bold;
+	color: #ffffff;
+	text-shadow: 2px 2px 2px #000000;
+	horizontal-align: left;
+	padding-left: 15px;
+	padding-top: 10px;
+}
+
+#LadderText
+{
+	font-size: 15px;
+	color: #ffffff;
+	padding-left: 15px;
+	padding-top: 10px;
+}
+
 
 #BM_Banner
 {

@@ -23,12 +23,12 @@
 		<Panel class="BM_Left_Items">
 			<Panel id="BM_Updates">
 				<Label id="UpdatesTitle" text="#bm_updates_title" style="" />
-				<Label id="Updates" text="#bm_updates_text" style="" />
+				<Label id="UpdatesText" text="#bm_updates_text" style="" />
 			</Panel>
 
 			<Panel id="BM_Ladder">
-				<Label id="UpdatesTitle" text="Coming Soon" />
-				<Label id="Updates" text="1st. Noya" style="" />
+				<Label id="LadderTitle" text="#bm_ladder_title" />
+				<Label id="LadderText" text="#bm_ladder_text" style="" />
 			</Panel>
 
 			<Panel id="BM_Banner">
