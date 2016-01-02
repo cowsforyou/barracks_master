@@ -1,15 +1,24 @@
 "AddonInfo"
 {
-  "maps"      	"barracks_master_duo barracks_master_quad"
+  "maps"        "barracks_master_duo"
   "IsPlayable"  "1"
   
   "barracks_master_duo"
   {
-	"MaxPlayers"		"4"
+    "MaxPlayers"    "4"
   }
 
-  "barracks_master_quad"
-  {
-	"MaxPlayers"		"8"
-  }
+
+//  "maps"      	"barracks_master_duo barracks_master_quad"
+//  "IsPlayable"  "1"
+  
+//  "barracks_master_duo"
+//  {
+//	 "MaxPlayers"		"4"
+//  }
+
+//  "barracks_master_quad"
+//  {
+//	 "MaxPlayers"		"8"
+//  }
 }
