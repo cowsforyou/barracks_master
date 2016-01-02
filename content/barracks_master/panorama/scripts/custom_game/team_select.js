@@ -25,8 +25,8 @@ function OnLeaveTeamPressed()
 function OnLockAndStartPressed()
 {
 	// Don't allow a forced start if there are unassigned players
-	if ( Game.GetUnassignedPlayerIDs().length > 0  )
-		return;
+	/*if ( Game.GetUnassignedPlayerIDs().length > 0  )
+		return;*/
 
 	// Lock the team selection so that no more team changes can be made
 	Game.SetTeamSelectionLocked( true );
@@ -85,18 +85,31 @@ function OnShufflePlayersPressed()
 //--------------------------------------------------------------------------------------------------
 function FindOrCreatePanelForPlayer( playerId, parent, bHideSlot )
 {
+	$.Msg("FindOrCreatePanelForPlayer ",playerId, " ", parent)
+
 	// Search the list of player player panels for one witht the specified player id
+	$.Msg("Number of player panels: ",g_PlayerPanels.length)
 	for ( var i = 0; i < g_PlayerPanels.length; ++i )
 	{
 		var playerPanel = g_PlayerPanels[ i ];
-		
+		$.Msg("Accessing player panel i=",i)
+
+		try {
+		    $.Msg(playerPanel)
+		}
+		catch(err) {
+            $.Msg("Error catch: Deleted panel, breaking loop and creating new panel for ",i)
+		    break
+		}
+
+		// ERROR: This shit here sometimes drops a deleted object
 		if ( playerPanel.GetAttributeInt( "player_id", -1 ) == playerId )
 		{
-			playerPanel.SetParent( parent );
-
             // Adjust hero slot image
             if (bHideSlot) playerPanel.FindChildTraverse( "HeroSlot" ).visible = false
             else playerPanel.FindChildTraverse( "HeroSlot" ).visible = true
+
+           	playerPanel.SetParent( parent );
 
 			return playerPanel;
 		}
@@ -152,7 +165,6 @@ function UpdateTeamPanel( teamPanel )
 	// Add all of the players currently assigned to the team
 	var localPlayerID = Game.GetLocalPlayerID()
 	var teamPlayers = Game.GetPlayerIDsOnTeam( teamId );
-	var slotNumber = -1 //The slot the local player is in
 
 	for ( var i = 0; i < teamPlayers.length; ++i )
 	{
@@ -161,16 +173,12 @@ function UpdateTeamPanel( teamPanel )
 		var playerSlot = FindPlayerSlotInTeamPanel( teamPanel, playerSlotNumber);
 
 		playerSlot.RemoveAndDeleteChildren();
+
 		FindOrCreatePanelForPlayer( teamPlayers[ i ], playerSlot );
 
 		// Adjust the background for the local player
-		//$.Msg("Creating slot "+playerSlotNumber+" on team "+teamId+" for player "+teamPlayers[ i ])
-		if (teamPlayers[i] == localPlayerID)
-		{
-			slotNumber = i
-
-            AdjustSlot(playerSlot, teamId, playerSlotNumber)
-		}
+		$.Msg("Creating slot "+playerSlotNumber+" on team "+teamId+" for player "+teamPlayers[ i ])
+        AdjustSlot(playerSlot, teamId, playerSlotNumber)
 	}
 
 	// Fill in the remaining player slots with the empty slot indicator
@@ -181,7 +189,7 @@ function UpdateTeamPanel( teamPanel )
 		var playerSlot = FindPlayerSlotInTeamPanel( teamPanel, i );
 		if ( playerSlot.GetChildCount() == 0 )
 		{
-            //$.Msg("Creating empty slot ",i," on team ",teamId)
+            $.Msg("Creating empty slot ",i," on team ",teamId)
 			var empty_slot = $.CreatePanel( "Panel", playerSlot, "player_root" );
             empty_slot.SetAttributeInt( "team_id", teamId );
             empty_slot.SetAttributeInt( "player_slot", i );
@@ -260,8 +268,15 @@ function OnTeamPlayerListChanged()
 	// Move all existing player panels back to the unassigned player list
 	for ( var i = 0; i < g_PlayerPanels.length; ++i )
 	{
-		var playerPanel = g_PlayerPanels[ i ];
-		playerPanel.SetParent( unassignedPlayersContainerNode );
+        try {
+            $.Msg(g_PlayerPanels[i])
+            var playerPanel = g_PlayerPanels[ i ];
+            playerPanel.SetParent( unassignedPlayersContainerNode );
+        }
+        catch(err) {
+            $.Msg("Error catch: Deleted panel, breaking loop and creating new panel for ",i)
+            break
+        }
 	}
 		
 	// Make sure all of the unassigned player have a player panel 
@@ -270,6 +285,7 @@ function OnTeamPlayerListChanged()
 	for ( var i = 0; i < unassignedPlayers.length; ++i )
 	{		
 		var playerId = unassignedPlayers[ i ];
+		$.Msg("Proceed to FindOrCreatePanelForPlayer for ",playerId)
 		FindOrCreatePanelForPlayer( playerId, unassignedPlayersContainerNode, true );
 
         HideHeroBackground()
@@ -370,7 +386,6 @@ function UpdateTimer()
 function OnUpdate() {
     OnTeamPlayerListChanged()
 }
-
 
 //--------------------------------------------------------------------------------------------------
 // Entry point called when the team select panel is created
