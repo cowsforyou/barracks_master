@@ -14,19 +14,20 @@
 
 #TeamsSelectEmptySpace
 {
-    width: fill-parent-flow(1);
+    width: 800px;
 }
 
 #TeamsList
 {
-    width: 400px;
+    width: 500px;
 	height: 100%;
+    margin-top: 300px;
 	flow-children: down;    
     padding-left: 16px;
 	padding-right: 16px;
     margin-left: 16px;
-    background-color: gradient( linear, 100% 0%, 100% 100%, from( #111111 ), color-stop( 0.01, #202327 ), color-stop( 0.2, #141619ff ), to( #000000dd ) );
-    box-shadow: black -4px -4px 8px 8px;
+    //background-color: gradient( linear, 100% 0%, 100% 100%, from( #111111 ), color-stop( 0.01, #202327 ), color-stop( 0.2, #141619ff ), to( #000000dd ) );
+    //box-shadow: black -4px -4px 8px 8px;
    
 	animation-name: TeamsListAppear;
 	animation-duration: 0.75s;
@@ -93,11 +94,10 @@
 }
 
 #ShuffleTeamAssignmentButton
-{    
-    height: 32px;
-    margin-top: 8px;
-    margin-left: 6px;
-    horizontal-align: left;
+{
+    margin-right: 50px;
+    margin-left: 50px;
+    horizontal-align: center;
     flow-children: right;
     visibility: collapse;
 }
@@ -111,10 +111,10 @@
 {
     font-size: 24px;
 	text-transform: uppercase;
-    margin-top: 2px;
-    margin-right: 5px;
-    color: #6e6f6f;
+    color: white;
     vertical-align: center;
+    width: 330px;
+    text-align: center;
 }
 
 #ShuffleTeamAssignmentButton:hover Label
@@ -145,8 +145,8 @@
     width: 400px;
     height: 100%;
     flow-children: down;
- 	background-color: gradient( linear, 100% 0%, 100% 100%, from( #111111 ), color-stop( 0.01, #202327 ), color-stop( 0.2, #141619 ), to( #000000 ) );
-    box-shadow: black -4px -4px 16px 16px;
+ 	//background-color: gradient( linear, 100% 0%, 100% 100%, from( #111111 ), color-stop( 0.01, #202327 ), color-stop( 0.2, #141619 ), to( #000000 ) );
+    //box-shadow: black -4px -4px 16px 16px;
 }
 
 #GameInfoPanel 
@@ -157,20 +157,19 @@
 
 #GameModeNameLabel 
 {
-    font-size: 32px;
-	text-transform: uppercase;
-}
-
-#MapInfoLabel
-{
-    color: #a9aaaa;
+    font-size: 50px;
+    horizontal-align: right;
+    margin-right: 300px;
+    margin-top: 30px;
 	text-transform: uppercase;
 }
 
 #StartGameCountdownTimer
 {
+    horizontal-align: center;
 	width: 96px;
 	margin-top: 32px;
+    margin-bottom: 32px;
 }
 
 #TeamSelectTimer
@@ -266,9 +265,9 @@
 	height: fill-parent-flow (1);
 	max-height: 80%;
 	width: 100%;
-	background-color: gradient( linear, 100% 0%, 100% 100%, from( #111111 ), color-stop( 0.00, #272b30 ), color-stop( 0.6, #181a1e ), to( #181a1e ) );
-	box-shadow: inset #000000 0px 2px 6px 3px;
-    border-bottom: 1px solid #404b4a11;
+	//background-color: gradient( linear, 100% 0%, 100% 100%, from( #111111 ), color-stop( 0.00, #272b30 ), color-stop( 0.6, #181a1e ), to( #181a1e ) );
+	//box-shadow: inset #000000 0px 2px 6px 3px;
+    //border-bottom: 1px solid #404b4a11;
 }
 
 #UnassignedPlayersHeader
@@ -366,7 +365,8 @@
 
 #LockAndStartButton
 { 
-    horizontal-align: right;
+    margin-right: 50px;
+    margin-left: 50px;
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #2d4881cc ), to( #486ca9cc ) );
 	box-shadow: fill #486ca922 -4px -4px 8px 8px;
 	border-top: 1px solid #ffffff03;
@@ -404,20 +404,21 @@
     visibility: collapse;
 }
 
-.no_unassigned_players #LockAndStartButton:hover
+#LockAndStartButton:hover
 {
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #2d4881cc ), to( #84acff ) );
 	box-shadow: fill #486ca966 -4px -4px 18px 8px;
 }
 
-.no_unassigned_players #LockAndStartButton:active
+#LockAndStartButton:active
 {
     sound: "ui_team_select_lock_and_start";
 }
 
 #CancelAndUnlockButton
 { 
-    horizontal-align: right;
+    margin-right: 50px;
+    margin-left: 50px;
     //background-color: gradient( linear, 0% 0%, 0% 100%, from( #722217 ), to( #DD4A29 ) );
 	//box-shadow: fill #DD4A2922 -4px -4px 8px 8px;
 	//border-top: 1px solid #ffffff03;
@@ -455,13 +456,11 @@
     visibility: visible;
 }
 
-
-
 .TeamSelectTeam
 {
     width: 100%;
     margin: 6px;
-	background-color: gradient( linear, 100% 0%, 100% 100%, from( #272b30 ), color-stop( 0.6, #181a1e ), to( #181a1e ) );
+	//background-color: gradient( linear, 100% 0%, 100% 100%, from( #272b30 ), color-stop( 0.6, #181a1e ), to( #181a1e ) );
     
     //box-shadow: fill #44444430 -5px -5px 9px 9px;
     //border-top: 1px solid #ffffff10;
@@ -472,7 +471,7 @@
 
 .TeamSelectTeam.local_player_on_this_team
 {
-    box-shadow: fill #ffffff40 -3px -3px 3px 6px;
+    //box-shadow: fill #ffffff40 -3px -3px 3px 6px;
     //box-shadow: -3px -3px 12px 6px #FFFFFF88;
 }
 
@@ -520,12 +519,13 @@
 
 #TeamNameLabel
 {
-	font-size: 20px;
+	font-size: 30px;
 	vertical-align: top;
 	text-shadow: 2px 2px 2px black;
    	margin-left: 1px;
-    margin-top: 1px;    
-	text-transform: uppercase;
+    margin-top: 1px;
+    color: white;
+	//text-transform: uppercase;
 	white-space: nowrap;
 	width: 100%;
 }
@@ -568,8 +568,8 @@
 {
 	width: 100%;
     margin: 2px;
-	height: 1px;
-	background-color: #49525555;
+	height: 2px;
+	background-color: gray;
 }
 
 #PlayerList
@@ -586,14 +586,11 @@
 
 .player_slot
 {
-    height: 32px;
+    height: 48px;
     width: 100%;
     flow-children: right;
     margin-top: 2px;
 }
-
-
-
 
 .TeamSelectPlayer
 {
@@ -605,8 +602,9 @@
 
 DOTAAvatarImage
 {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
+    margin-left: 4px;
     background-color: black;
 	vertical-align:middle;
 }
@@ -616,6 +614,7 @@ DOTAAvatarImage
     background-image: url( "file://{images}/icon_star.png");
     background-repeat: no-repeat;
     background-size: contain;
+    vertical-align: center;
     overflow: noclip;
     width: 24px;
     height: 24px;
@@ -639,6 +638,7 @@ DOTAAvatarImage
     text-shadow: 2px 2px 2px black;
     width: fill-parent-flow( 1 );
 	white-space: nowrap;
+    font-size: 24px;
 }
 
 #PlayerLeaveTeamButton 
@@ -673,19 +673,60 @@ DOTAAvatarImage
 
 .TeamSelectEmptySlot #PlayerName
 {
-	color: #454545;
+	color: white;
 	letter-spacing: 1px;
-	font-size: 18px;
+	font-size: 22px;
 }
 
 #EmptySlotIcon 
 {	
-    width: 32px;
-	height: 32px;
+    width: 48px;
+	height: 48px;
     opacity: 0.7;
     background-image: url("file://{images}/custom_game/empty_slot_avatar.png");
-    background-size: 32px 32px;
+    background-size: 40px 40px;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 }
 
+
+/*---------------
+    Custom
+----------------*/
+
+#HeroBackground
+{
+    horizontal-align: right;
+    opacity: 0.3;
+}
+
+#RightPanel
+{
+    horizontal-align: right;
+    margin-top: 165px;
+    margin-right: 80px;
+    flow-children: down;
+}
+
+#MinimapImage
+{
+    width: 400px;
+    height: 400px;
+    background-image: url("file://{images}/custom_game/pregame_screen/map_preview_duo.png");
+}
+
+#MapInfoLabel
+{
+    color: #a9aaaa;
+    font-size: 20px;
+    text-transform: uppercase;
+    width: 400px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#HeroSlot
+{
+    width: 48px;
+    height: 48px;
+}

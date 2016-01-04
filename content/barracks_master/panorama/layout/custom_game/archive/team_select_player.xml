@@ -7,6 +7,7 @@
 		<include src="file://{resources}/scripts/custom_game/team_select_player.js" />
 	</scripts>
 	<Panel class="TeamSelectPlayer">
+		<Image id="HeroSlot"/>
 		<DOTAAvatarImage id="PlayerAvatar" />
 		<Label id="PlayerIsHostPanel" />
 		<Label id="PlayerName" text="PLAYER_NAME" />
