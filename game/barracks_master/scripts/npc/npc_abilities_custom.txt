@@ -1240,6 +1240,60 @@
 		"AbilityTextureName"			"granite_golem_hp_aura"
 		"MaxLevel" 						"0"
 	}
+	"build_bm_arrow"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"granite_golem_hp_aura"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"4" 
+		"BuildTime"						"5.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"BuilderInside"					"1"
+		"ModelRotation"					"0.0"
+	
+		"UnitName"						"bm_arrow"
+		"AbilityCooldown"				"0"
+		"AbilityGoldCost"				"100"
+		"MaxBuildingCount"				"1"
+		// End of BuildingHelper info
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"100"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
 	// Building requires repair to finish construction. Can be assisted to make the process faster
 	"build_bm_aviation_sanctuary"
 	{
