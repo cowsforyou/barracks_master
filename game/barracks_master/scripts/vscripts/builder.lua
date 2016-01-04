@@ -80,6 +80,12 @@ function Build( event )
        		end
        	end]]--
 
+       	-- If attempting to build below a certain height, reject (to deny building in lane)
+        if vPos.z < 250 then
+            SendErrorMessage(caster:GetPlayerOwnerID(), "#error_cannot_build_in_lane")
+            return false
+        end
+
        	-- If not enough resources to queue, stop
        	if not PlayerHasEnoughGold(player, gold_cost) then
        		print("Gold3")

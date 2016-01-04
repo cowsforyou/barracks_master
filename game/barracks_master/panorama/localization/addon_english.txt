@@ -11,6 +11,7 @@
 	"error_not_enough_gold"							"Not Enough Gold"	
 	"error_not_enough_lumber"						"Not Enough Lumber"
 	"error_invalid_build_position"					"Invalid Build Area"
+	"error_cannot_build_in_lane"					"Cannot Build In Lane"
 
 	"hero_beastmaster"								"Beastmaster has spawned"
 	"hero_vengeful"									"Vengeful Spirit has spawned"
