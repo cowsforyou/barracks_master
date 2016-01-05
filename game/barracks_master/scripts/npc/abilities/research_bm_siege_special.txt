@@ -14,17 +14,17 @@
         "01"
         {
             "var_type"                      "FIELD_INTEGER"
-            "attack_slow"                   "-20"
+            "aoe_damage"                    "75"
         }
         "02"
         {
             "var_type"                      "FIELD_INTEGER"
-            "aoe_damage"                    "60"
+            "radius"                        "160"
         }
         "03"
         {
-            "var_type"                      "FIELD_INTEGER"
-            "radius"                        "160"
+            "var_type"                      "FIELD_FLOAT"
+            "movement_slow"                 "-60"
         }
 		"04"
 		{
