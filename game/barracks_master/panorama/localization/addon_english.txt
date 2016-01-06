@@ -20,4 +20,5 @@
 
 	"alch_gold"										"Alchemist was feeling rich and donated gold to you. Amount received: "
 	"give_item_last_stand"							"You have been awarded an extra charge of Last Stand"
+	"warning_library"								"WARNING: Library of Spells Detected"
 }

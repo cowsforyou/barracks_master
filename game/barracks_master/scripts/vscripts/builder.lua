@@ -194,6 +194,13 @@ function Build( event )
 		EmitSoundOn("BarracksMaster.ConstructionComplete", caster) -- cows
 		print("Building Finished")
 
+		-- Popup notification and sound for specific buildings
+		local dur = 4.0
+		if unit:GetUnitName() == "bm_library" then
+			Notifications:BottomToAll({text="#warning_library", duration=dur, style={color="red", ["font-size"]="40px"}})
+			EmitGlobalSound("General.PingWarning")
+		end
+
 		-- Remove Particle Effect
 		unit:RemoveModifierByName("modifier_construction")
 
