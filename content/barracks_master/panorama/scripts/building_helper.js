@@ -132,6 +132,7 @@ function StartBuildingHelper( params )
             // Overlay Grid, visible with Alt pressed
             // Keep in mind that a particle with 0 alpha does still eat frame rate.
             overlay_alpha = GameUI.IsAltDown() ? 90 : 0;
+            //overlay_alpha = 90;  // comment out above and use this line instead if you want to use white grids by default
 
             color = [255,255,255]
             var part2 = 0
