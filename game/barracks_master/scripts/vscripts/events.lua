@@ -45,6 +45,11 @@ function GameMode:OnNPCSpawned(keys)
   GameMode:_OnNPCSpawned(keys)
 
   local npc = EntIndexToHScript(keys.entindex)
+  -- All new spawns start with phased
+  if npc then
+    npc:AddNewModifier( npc, nil, "modifier_phased", {duration=3.0} )
+  end
+
   if npc and npc:IsRealHero() then
     -- Heroes gain 5 seconds of invisibility when spawning
     local dur = 5.0
