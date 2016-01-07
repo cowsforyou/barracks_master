@@ -3,6 +3,5 @@
 	custom_net_tables =
 	[
 		"scores",
-        "pregame_slots",
 	]
 } 
