@@ -72,6 +72,7 @@ function GameMode:InitGameMode()
   else
     GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_GOODGUYS, 2)
     GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_BADGUYS, 2)
+    --GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_CUSTOM_1, 4)    
   end
 
   DebugPrint('[BAREBONES] Done loading Barebones gamemode!\n\n')  
