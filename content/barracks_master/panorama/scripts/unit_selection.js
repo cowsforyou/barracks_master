@@ -6,30 +6,34 @@ function OnUpdateSelectedUnit( event )
 {
 	if (skip == true){
 		skip = false;
-		//$.Msg("skip")
 		return
 	}
 
 	var iPlayerID = Players.GetLocalPlayer();
 	var selectedEntities = Players.GetSelectedEntities( iPlayerID );
-	var mainSelected = Players.GetLocalPlayerPortraitUnit();
 
-	//$.Msg( "Player "+iPlayerID+" Selected Entities ("+(selectedEntities.length)+")" );
 	if (selectedEntities.length > 1 && IsMixedBuildingSelectionGroup(selectedEntities) ){
 		$.Msg( "IsMixedBuildingSelectionGroup, proceeding to deselect the buildings and get only the units ")
-
-		skip = true;
-		GameUI.SelectUnit(FirstNonBuildingEntityFromSelection(selectedEntities), false); // Overrides the selection group
-
-		for (var i = 0; i < selectedEntities.length; i++) {
-			skip = true; // Makes it skip an update
-			if (!IsCustomBuilding(selectedEntities[i])){
-				GameUI.SelectUnit(selectedEntities[i], true);
-			}
-		}	
+		$.Schedule(1/60, DeselectBuildings)	
 	}
 
 	$.Schedule(0.03, SendSelectedEntities);
+}
+
+function DeselectBuildings() {
+	var iPlayerID = Players.GetLocalPlayer();
+	var selectedEntities = Players.GetSelectedEntities( iPlayerID );
+	
+	skip = true;
+	var first = FirstNonBuildingEntityFromSelection(selectedEntities)
+	GameUI.SelectUnit(first, false); // Overrides the selection group
+
+	for (var unit of selectedEntities) {
+		skip = true; // Makes it skip an update
+		if (!IsCustomBuilding(unit) && unit != first){
+			GameUI.SelectUnit(unit, true);
+		}
+	}
 }
 
 function FirstNonBuildingEntityFromSelection( entityList ){
@@ -56,34 +60,6 @@ function SendSelectedEntities (params) {
 	GameEvents.SendCustomGameEventToServer( "update_selected_entities", { pID: iPlayerID, selected_entities: newSelectedEntities })
 }
 
-function IsBaseName( unitName ){
-	if (unitName.indexOf("human") != -1){
-		if ( (unitName.indexOf("town_hall") != -1) || (unitName.indexOf("keep")!= -1) || (unitName.indexOf("castle")!= -1) ){
-			return true
-		}
-		else return false
-	}
-	else if (unitName.indexOf("nightelf") != -1){
-		if ( (unitName.indexOf("tree_of_life") != -1) || (unitName.indexOf("tree_of_ages")!= -1) || (unitName.indexOf("tree_of_eternity")!= -1) ){
-			return true
-		}
-		else return false
-	}
-	else if (unitName.indexOf("undead") != -1){
-		if ( (unitName.indexOf("necropolis") != -1) || (unitName.indexOf("halls_of_the_dead")!= -1) || (unitName.indexOf("black_citadel")!= -1) ){
-			return true
-		}
-		else return false
-	}
-	else if (unitName.indexOf("orc") != -1){
-		if ( (unitName.indexOf("great_hall") != -1) || (unitName.indexOf("stronghold")!= -1) || (unitName.indexOf("fortress")!= -1) ){
-			return true
-		}
-		else return false
-	}
-	else return false
-}
-
 // Returns whether the selection group contains both buildings and non-building units
 function IsMixedBuildingSelectionGroup ( entityList ) {
 	var buildings = 0
@@ -96,35 +72,49 @@ function IsMixedBuildingSelectionGroup ( entityList ) {
 			nonBuildings++
 		}
 	}
-	//$.Msg( "Buildings: ",buildings, " NonBuildings: ", nonBuildings)
+	$.Msg( "Buildings: ",buildings, " NonBuildings: ", nonBuildings)
 	return (buildings>0 && nonBuildings>0)
 }
 
 function IsCustomBuilding( entityIndex ){
 	var ability_building = Entities.GetAbilityByName( entityIndex, "ability_building")
-	return (ability_building != -1)
+	var ability_tower = Entities.GetAbilityByName( entityIndex, "ability_tower")
+	if (ability_building != -1){
+		//$.Msg(entityIndex+" IsCustomBuilding - Ability Index: "+ ability_building)
+		return true
+	}
+	else if (ability_tower != -1){
+		//$.Msg(entityIndex+" IsCustomBuilding Tower - Ability Index: "+ ability_tower)
+		return true
+	}
+	else
+		return false
 }
 
-function IsLumberyard (entityIndex) {
-	var buildingName = Entities.GetUnitName( entityIndex )
-	return (buildingName == "bm_lumber_yard")
+function IsGoldMine( entityIndex ) {
+	return (Entities.GetUnitName(entityIndex) == "gold_mine")
 }
 
 function AddToSelection ( args ) {
+	$.Msg("Add To Selection")
 	var entIndex = args.ent_index
-
-	$.Msg("Add "+entIndex+" to Selection")
-
 	GameUI.SelectUnit(entIndex, true)
 	OnUpdateSelectedUnit( args )
 }
 
-function RemoveFromSelection ( args ) {
+function NewSelection ( args ) {
+	$.Msg("New Selection")
 	var entIndex = args.ent_index
+	GameUI.SelectUnit(entIndex, false)
+	OnUpdateSelectedUnit( args )
+}
+
+function RemoveFromSelection ( args ) {
+	$.Msg("Remove From Selection")
+	var entIndex = args.ent_index
+
 	var iPlayerID = Players.GetLocalPlayer();
 	var selectedEntities = Players.GetSelectedEntities( iPlayerID );
-
-	$.Msg("Remove "+entIndex+" from Selection")
 
 	skip = true;
 	GameUI.SelectUnit(GetFirstUnitFromSelectionSkipUnit(selectedEntities, entIndex), false); // Overrides the selection group
@@ -138,8 +128,15 @@ function RemoveFromSelection ( args ) {
 	OnUpdateSelectedUnit( args )
 }
 
+function OnUpdateQueryUnit( event )
+{
+	$.Msg( "OnUpdateQueryUnit" );
+}
+
 (function () {
 	GameEvents.Subscribe( "add_to_selection", AddToSelection );
 	GameEvents.Subscribe( "remove_from_selection", RemoveFromSelection);
+	GameEvents.Subscribe( "new_selection", NewSelection);
 	GameEvents.Subscribe( "dota_player_update_selected_unit", OnUpdateSelectedUnit );
+	GameEvents.Subscribe( "dota_player_update_query_unit", OnUpdateQueryUnit );
 })();

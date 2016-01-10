@@ -19,7 +19,7 @@ function BuildingEvents:OnPlayerPickHero(keys)
   -- Create city center in front of the hero
   local position = hero:GetAbsOrigin() + hero:GetForwardVector() * 300
   local starting_rax_name = "bm_melee_barracks"
-  local building = BuildingHelper:PlaceBuilding(player, starting_rax_name, position, true, 5) 
+  local building = BuildingHelper:PlaceBuilding(player, name, location, construction_size, pathing_size, angle)
 
   -- Set health to test repair
   --building:SetHealth(building:GetMaxHealth()/3)
@@ -108,8 +108,8 @@ function BuildingEvents:OnEntityKilled( event )
   -- Building Killed
   if IsCustomBuilding(killedUnit) then
 
-     -- Building Helper grid cleanup
-    BuildingHelper:RemoveBuilding(killedUnit, true)
+    -- Building Helper grid cleanup
+    -- BuildingHelper:RemoveBuilding(killedUnit, true) -- removing with upgraded script
 
     -- Check units for downgrades
     local building_name = killedUnit:GetUnitName()
@@ -131,9 +131,9 @@ function BuildingEvents:OnEntityKilled( event )
   end
 
   -- Cancel queue of a builder when killed
-  if IsBuilder(killedUnit) then
+  --[[if IsBuilder(killedUnit) then
     BuildingHelper:ClearQueue(killedUnit)
-  end
+  end]]-- removing with upgraded script
 
   if player and not killedUnit:IsHero() then
     if IsCustomBuilding(killedUnit) then

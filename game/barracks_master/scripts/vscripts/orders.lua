@@ -74,6 +74,7 @@ function GameMode:FilterExecuteOrder( filterTable )
     ------------------------------------------------
     --              ClearQueue Order              --
     ------------------------------------------------
+    --[[
     -- Cancel queue on Stop and Hold
     elseif order_type == DOTA_UNIT_ORDER_STOP or order_type == DOTA_UNIT_ORDER_HOLD_POSITION then
         for n, unit_index in pairs(units) do 
@@ -93,7 +94,7 @@ function GameMode:FilterExecuteOrder( filterTable )
         end
         return true
     end
-
+    --]] -- removing with upgraded script
     return true
 end
 
