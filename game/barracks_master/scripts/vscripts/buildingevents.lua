@@ -163,14 +163,14 @@ end
 
 -- Called whenever a player changes its current selection, it keeps a list of entity indexes
 function BuildingEvents:OnPlayerSelectedEntities( event )
-  local pID = event.pID
+  local playerID = event.PlayerID
 
-  GameRules.SELECTED_UNITS[pID] = event.selected_entities
+  GameRules.SELECTED_UNITS[playerID] = event.selected_entities
 
   -- This is for Building Helper to know which is the currently active builder
-  local mainSelected = GetMainSelectedEntity(pID)
+  local mainSelected = GetMainSelectedEntity(playerID)
   if IsValidEntity(mainSelected) and IsBuilder(mainSelected) then
-    local player = PlayerResource:GetPlayer(pID)
+    local player = PlayerResource:GetPlayer(playerID)
     local hero = player:GetAssignedHero()
     hero.activeBuilder = mainSelected
   end
