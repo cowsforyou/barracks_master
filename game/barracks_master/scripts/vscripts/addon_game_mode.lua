@@ -8,7 +8,7 @@ require('gamemode')
 require('utilities')
 require('upgrades')
 require('mechanics')
-require('orders')
+--require('orders')
 require('builder')
 require('buildinghelper')
 require('buildingevents') -- veg
