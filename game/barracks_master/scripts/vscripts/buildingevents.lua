@@ -16,10 +16,13 @@ function BuildingEvents:OnPlayerPickHero(keys)
   hero.upgrades = {} -- This kees the name of all the upgrades researched
   hero.lumber = 0 -- Secondary resource of the player
 
-  -- Create city center in front of the hero
+  -- Create a building in front of the hero
   local position = hero:GetAbsOrigin() + hero:GetForwardVector() * 300
   local starting_rax_name = "bm_melee_barracks"
-  local building = BuildingHelper:PlaceBuilding(player, name, location, construction_size, pathing_size, angle)
+  local construction_size = BuildingHelper:GetConstructionSize(starting_rax_name)
+  local pathing_size = BuildingHelper:GetConstructionSize(starting_rax_name) 
+  local angle = 0 -- rotate building when spawned
+  local building = BuildingHelper:PlaceBuilding(player, starting_rax_name, position, construction_size, pathing_size, angle)
 
   -- Set health to test repair
   --building:SetHealth(building:GetMaxHealth()/3)
