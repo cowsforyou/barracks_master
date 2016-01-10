@@ -190,6 +190,8 @@ function BuildingHelper:InitGNV()
     local worldMin = Vector(GetWorldMinX(), GetWorldMinY(), 0)
     local worldMax = Vector(GetWorldMaxX(), GetWorldMaxY(), 0)
 
+    print(worldMin, worldMax)
+
     local boundX1 = GridNav:WorldToGridPosX(worldMin.x)
     local boundX2 = GridNav:WorldToGridPosX(worldMax.x)
     local boundY1 = GridNav:WorldToGridPosY(worldMin.y)

@@ -10,7 +10,6 @@ require('upgrades')
 require('mechanics')
 require('orders')
 require('builder')
-require('buildinghelper')
 require('buildingevents') -- veg
 require('statcollection/init') -- cows
 
@@ -39,6 +38,7 @@ require('libraries/animations')
 -- This library can be used for performing "Frankenstein" attachments on units
 require('libraries/attachments')
 require('libraries/popups')
+require('libraries/buildinghelper')
 
 -- These internal libraries set up barebones's events and processes.  Feel free to inspect them/change them if you need to.
 require('internal/gamemode')
