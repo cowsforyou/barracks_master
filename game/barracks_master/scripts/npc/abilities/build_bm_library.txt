@@ -9,8 +9,7 @@
 
 	// BuildingHelper info
 	"UnitName"						"bm_library"
-	"Building"						"1" //bool
-	"BuildingSize"					"5" 
+	"Building"						"1" //bool 
 	"AbilityCastRange"				"200"
 	"UpdateHealth"					"1" //bool
 	"Scale"							"0" //bool

@@ -13,6 +13,9 @@
 	"HasInventory"				"1"
 	"ConsideredHero"			"1"
 	
+	"ConstructionSize"			"4"
+	"BlockPathingSize"			"4"
+
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"5"

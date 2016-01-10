@@ -13,6 +13,9 @@
 	"HasInventory"				"1"
 	"ConsideredHero"			"1"
 	"UnitLabel"					"UltimateTower"
+	
+	"ConstructionSize"			"4"
+	"BlockPathingSize"			"4"
 
 	// Abilities
 	//----------------------------------------------------------------

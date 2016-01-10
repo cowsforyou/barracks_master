@@ -1263,7 +1263,6 @@
 	
 		// BuildingHelper info
 		"Building"						"1" //bool
-		"BuildingSize"					"4" 
 		"BuildTime"						"35.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
@@ -1379,7 +1378,6 @@
 	
 		// BuildingHelper info
 		"Building"						"1" //bool
-		"BuildingSize"					"4" 
 		"BuildTime"						"30.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
@@ -1441,7 +1439,6 @@
 	
 		// BuildingHelper info
 		"Building"						"1" //bool
-		"BuildingSize"					"5" 
 		"BuildTime"						"35.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
@@ -1503,8 +1500,7 @@
 	
 		// BuildingHelper info
 		"UnitName"						"bm_library"
-		"Building"						"1" //bool
-		"BuildingSize"					"5" 
+		"Building"						"1" //bool 
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
 		"Scale"							"0" //bool
@@ -1563,8 +1559,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
 		// BuildingHelper info
-		"Building"						"1" //bool
-		"BuildingSize"					"5" 
+		"Building"						"1" //bool 
 		"BuildTime"						"30.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
@@ -1613,8 +1608,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
 		// BuildingHelper info
-		"Building"						"1" //bool
-		"BuildingSize"					"4" 
+		"Building"						"1" //bool 
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
 		"Scale"							"0" //bool
@@ -1675,7 +1669,6 @@
 	
 		// BuildingHelper info
 		"Building"						"1" //bool
-		"BuildingSize"					"4" 
 		"BuildTime"						"25.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
@@ -1725,7 +1718,6 @@
 	
 		// BuildingHelper info
 		"Building"						"1" //bool
-		"BuildingSize"					"3" 
 		"BuildTime"						"70.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
@@ -1787,8 +1779,6 @@
 	
 		// BuildingHelper info
 		"Building"						"1" //bool
-		"ConstructionSize"				"4"
-		"BlockPathingSize"				"4"
 		"BuildTime"						"25.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
@@ -1838,7 +1828,6 @@
 	
 		// BuildingHelper info
 		"Building"						"1" //bool
-		"BuildingSize"					"5" 
 		"BuildTime"						"30.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
@@ -1895,7 +1884,6 @@
 	
 		// BuildingHelper info
 		"Building"						"1" //bool
-		"BuildingSize"					"3" 
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
 		"Scale"							"0" //bool
@@ -1945,7 +1933,6 @@
 	
 		// BuildingHelper info
 		"Building"						"1" //bool
-		"BuildingSize"					"4" 
 		"BuildTime"						"45.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
@@ -2007,7 +1994,6 @@
 	
 		// BuildingHelper info
 		"Building"						"1" //bool
-		"BuildingSize"					"4" 
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
 		"Scale"							"0" //bool

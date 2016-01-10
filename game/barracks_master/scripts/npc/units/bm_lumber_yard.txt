@@ -12,7 +12,10 @@
 	"HealthBarOffset"			"140"
 	"HasInventory"				"1"
 	"ConsideredHero"			"1"
-	
+
+	"ConstructionSize"			"5"
+	"BlockPathingSize"			"5"
+
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"5"

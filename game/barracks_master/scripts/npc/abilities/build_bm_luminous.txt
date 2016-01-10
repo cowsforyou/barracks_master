@@ -8,8 +8,7 @@
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
 	// BuildingHelper info
-	"Building"						"1" //bool
-	"BuildingSize"					"4" 
+	"Building"						"1" //bool 
 	"AbilityCastRange"				"200"
 	"UpdateHealth"					"1" //bool
 	"Scale"							"0" //bool

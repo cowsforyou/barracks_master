@@ -9,7 +9,6 @@
 
 	// BuildingHelper info
 	"Building"						"1" //bool
-	"BuildingSize"					"4" 
 	"BuildTime"						"45.0"
 	"AbilityCastRange"				"200"
 	"UpdateHealth"					"1" //bool
