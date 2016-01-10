@@ -161,7 +161,6 @@ function RemoveMatchingEntityFromTable(tbl, entity)
   return false
 end
 
---[[
 -- Called whenever a player changes its current selection, it keeps a list of entity indexes
 function BuildingEvents:OnPlayerSelectedEntities( event )
   local pID = event.pID
@@ -176,4 +175,3 @@ function BuildingEvents:OnPlayerSelectedEntities( event )
     hero.activeBuilder = mainSelected
   end
 end
-]]-- removing with updated script

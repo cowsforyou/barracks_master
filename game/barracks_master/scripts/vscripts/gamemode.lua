@@ -26,7 +26,7 @@ function GameMode:InitGameMode()
   --ListenToGameEvent('dota_player_pick_hero', Dynamic_Wrap(GameMode, 'OnPlayerPickHero'), self)
 
   -- Filters
-  GameRules:GetGameModeEntity():SetExecuteOrderFilter( Dynamic_Wrap( GameMode, "FilterExecuteOrder" ), self )
+  --GameRules:GetGameModeEntity():SetExecuteOrderFilter( Dynamic_Wrap( GameMode, "FilterExecuteOrder" ), self )
 
   -- Converting all reliable gold to unreliable gold -- cows
   -- 1) Timer method

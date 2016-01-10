@@ -24,7 +24,7 @@ function GameMode:FilterExecuteOrder( filterTable )
         return true
     end
 
-    if units then
+    --[[if units then
         for n,unit_index in pairs(units) do
             local unit = EntIndexToHScript(unit_index)
             if unit and IsValidEntity(unit) then
@@ -37,7 +37,7 @@ function GameMode:FilterExecuteOrder( filterTable )
                 end
             end
         end
-    end
+    end]]-- removing with improved script
 
     ------------------------------------------------
     --           Ability Multi Order              --
@@ -93,8 +93,8 @@ function GameMode:FilterExecuteOrder( filterTable )
             BuildingHelper:ClearQueue(unit)
         end
         return true
+        --]] -- removing with upgraded script
     end
-    --]] -- removing with upgraded script
     return true
 end
 

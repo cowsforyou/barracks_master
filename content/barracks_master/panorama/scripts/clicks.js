@@ -56,7 +56,7 @@ function IsBuilder(entIndex) {
 }
 
 (function () {
-    CustomNetTables.SubscribeNetTableListener( "attacks_enabled", OnAttacksEnabledChanged );
+    //CustomNetTables.SubscribeNetTableListener( "attacks_enabled", OnAttacksEnabledChanged );
 })();
 
 // Main mouse event callback
