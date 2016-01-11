@@ -267,7 +267,24 @@ end
 
 -- Called when the Cancel ability-item is used
 function CancelBuilding( keys )
-    BuildingHelper:CancelBuilding(keys)
+    local building = keys.unit
+    local hero = building:GetOwner()
+    local playerID = hero:GetPlayerID()
+
+    BuildingHelper:print("CancelBuilding "..building:GetUnitName().." "..building:GetEntityIndex())
+
+    -- Refund here
+
+    -- Eject builder
+    local builder = building.builder_inside
+    if builder then   
+        builder:SetAbsOrigin(building:GetAbsOrigin())
+    end
+
+    building.state = "canceled"
+    Timers:CreateTimer(1/5, function() 
+        BuildingHelper:RemoveBuilding(building, true)
+    end)
 end
 
 -- Called when a unit with UltimateTower label is built -- cows
