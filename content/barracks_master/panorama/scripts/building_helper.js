@@ -45,7 +45,7 @@ if (CustomNetTables.GetTableValue( "building_settings", "height_restriction") !=
 var GRID_TYPES = CustomNetTables.GetTableValue( "building_settings", "grid_types")
 
 var Root = $.GetContextPanel()
-var localHeroIndex = Players.GetPlayerHeroEntityIndex( Players.GetLocalPlayer() );
+var localHeroIndex
 
 if (! Root.loaded)
 {
@@ -60,6 +60,7 @@ function StartBuildingHelper( params )
     if (params !== undefined)
     {
         // Set the parameters passed by AddBuilding
+        localHeroIndex = Players.GetPlayerHeroEntityIndex( Players.GetLocalPlayer() );
         state = params.state;
         size = params.size;
         range = params.range;

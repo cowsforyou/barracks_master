@@ -162,6 +162,11 @@ function Build( event )
         unit.LumberCost = lumber_cost
         unit.BuildTime = build_time
 
+        -- Override construction time for instant placement cheat code
+        if GameRules.WarpTen then
+            unit.overrideBuildTime = .1
+        end
+
         -- Give item to cancel
         local item = CreateItem("item_building_cancel", playersHero, playersHero)
         unit:AddItem(item)
