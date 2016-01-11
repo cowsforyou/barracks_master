@@ -135,12 +135,14 @@ function StartBuildingHelper( params )
     {   
         $.Schedule(frame_rate, StartBuildingHelper);
 
-        // Get all the creature entities on the screen
+        // Get all the visible entities
         var entities = Entities.GetAllEntitiesByClassname('npc_dota_building')
         var hero_entities = Entities.GetAllHeroEntities()
         var creature_entities = Entities.GetAllEntitiesByClassname('npc_dota_creature')
         var dummy_entities = Entities.GetAllEntitiesByName('npc_dota_thinker')
+        var building_entities = Entities.GetAllBuildingEntities()
         entities = entities.concat(hero_entities)
+        entities = entities.concat(building_entities)
         entities = entities.concat(creature_entities)
         entities = entities.concat(dummy_entities)
 
