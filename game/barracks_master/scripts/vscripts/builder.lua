@@ -278,7 +278,17 @@ function CancelBuilding( keys )
 
     BuildingHelper:print("CancelBuilding "..building:GetUnitName().." "..building:GetEntityIndex())
 
-    -- Refund here
+    -- Refund here -- cows
+    local gold_cost = GetGoldCost(building)
+    local lumber_cost = GetLumberCost(building)
+    local player = PlayerResource:GetPlayer(playerID)   
+
+    print("printcheck if firing")
+    hero:ModifyGold( gold_cost, false, 0 )
+    ModifyLumber( player, lumber_cost )
+
+    -- Play a sound -- cows
+    EmitSoundOn("BarracksMaster.Cancelled", building)
 
     -- Eject builder
     local builder = building.builder_inside
