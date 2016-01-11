@@ -70,9 +70,7 @@ function StartBuildingHelper( params )
         var propScale = params.propScale;
         offsetZ = params.offsetZ;
 
-        $.Msg(GRID_TYPES)
         requires = GetRequiredGridType(entindex)
-        $.Msg("REQUIRES ", requires)
         distance_to_gold_mine = HasGoldMineDistanceRestriction(entindex)
         
         // If we chose to not recolor the ghost model, set it white
