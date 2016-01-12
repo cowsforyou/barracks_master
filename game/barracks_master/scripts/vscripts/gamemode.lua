@@ -47,8 +47,6 @@ function GameMode:InitGameMode()
   CustomGameEventManager:RegisterListener( "update_selected_entities", Dynamic_Wrap(BuildingEvents, 'OnPlayerSelectedEntities'))
   CustomGameEventManager:RegisterListener( "repair_order", Dynamic_Wrap(GameMode, "RepairOrder"))   
   CustomGameEventManager:RegisterListener( "harvest_order", Dynamic_Wrap(GameMode, "HarvestOrder"))   
-  CustomGameEventManager:RegisterListener( "building_helper_build_command", Dynamic_Wrap(BuildingHelper, "BuildCommand"))
-  CustomGameEventManager:RegisterListener( "building_helper_cancel_command", Dynamic_Wrap(BuildingHelper, "CancelCommand"))
   CustomGameEventManager:RegisterListener( "update_player_slot", Dynamic_Wrap(GameMode, "OnPlayerSlotUpdated"))
   
   -- Full units file to get the custom values
