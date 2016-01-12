@@ -87,6 +87,14 @@ function Build( event )
             return false
         end
 
+        -- If attempting to build on an existing structure (created on hammer), reject
+        local construction_size = BuildingHelper:GetConstructionSize(building_name) * 16
+        local buildings = FindUnitsInRadius(0, vPos, nil, construction_size, DOTA_UNIT_TARGET_TEAM_BOTH, DOTA_UNIT_TARGET_BUILDING, DOTA_UNIT_TARGET_FLAG_INVULNERABLE, FIND_ANY_ORDER, false)
+        if #buildings > 0 then 
+            SendErrorMessage(caster:GetPlayerOwnerID(), "#error_invalid_build_position")
+            return false 
+        end
+
         -- If not enough resources to queue, stop
         if not PlayerHasEnoughGold(player, gold_cost) then
             print("Gold Insufficient 1 - Insufficient gold when attempting to place ghost")
