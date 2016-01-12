@@ -28,19 +28,18 @@ function Build( event )
     local unit_table = UnitKV[building_name]
     local build_time = ability:GetSpecialValueFor("build_time")
     local gold_cost = ability:GetSpecialValueFor("gold_cost")
-    print("Gold1")
+    print("Gold Main 1 - Finding out the gold cost")
     local lumber_cost = ability:GetSpecialValueFor("lumber_cost")
 
     local hero = caster:GetPlayerOwner():GetAssignedHero()
     local playerID = hero:GetPlayerID()
     local player = PlayerResource:GetPlayer(playerID)   
 
-    -- If the ability has an AbilityGoldCost, it's impossible to not have enough gold the first time it's cast
-    -- Always refund the gold here, as the building hasn't been placed yet
-    --ability:GetGoldCost(1) 
+    -- If at this point, gold is already deducted due to AbilityGoldCost, so we are going to refund it as the building is not built yet - we will only deduct when the building is placed -- cows
     hero:ModifyGold(gold_cost, false, 0)
-    print("Gold2")
+    print("Gold Main 2 - Refunding initial gold spent")
 
+    -- Now we handle the lumber check
     if not PlayerHasEnoughLumber( player, lumber_cost ) then
         -- include sound for insufficient lumber here -- cows
         SendErrorMessage(playerID, "#error_not_enough_lumber")      
@@ -63,6 +62,8 @@ function Build( event )
         return
     end
     -- VEGGIESAMA>>>
+
+    -------------------- ^ once the above checks are all made, the building ghost model will now appear --------------------
 
     -- Makes a building dummy and starts panorama ghosting
     BuildingHelper:AddBuilding(event)
@@ -88,7 +89,7 @@ function Build( event )
 
         -- If not enough resources to queue, stop
         if not PlayerHasEnoughGold(player, gold_cost) then
-            print("Gold3")
+            print("Gold Insufficient 1 - Insufficient gold when attempting to place ghost")
             SendErrorMessage(caster:GetPlayerOwnerID(), "#error_not_enough_gold")
             return false
         end
@@ -109,12 +110,14 @@ function Build( event )
         return true
     end)
 
+    -------------------- ^ once the additional checks are all made, the player can now place his ghost model --------------------
+
     -- Position for a building was confirmed and valid
     event:OnBuildingPosChosen(function(vPos)
         
         -- Spend resources
         hero:ModifyGold(-gold_cost, false, 0)
-        print("Gold4 - Consumed when ghost is confirmed")
+        print("Gold Main 3 - Gold deducted when building position is confirmed")
         ModifyLumber( player, -lumber_cost)
 
         -- Play a sound
@@ -122,7 +125,6 @@ function Build( event )
 
         -- Move the units away from the building place
     
-
     end)
 
     -- The construction failed and was never confirmed due to the gridnav being blocked in the attempted area
@@ -140,9 +142,9 @@ function Build( event )
 
         -- Refund resources if work never begins and order is stopped
         if work.refund then
-            hero:ModifyGold(gold_cost, false, 0)
-            print("Gold5 - refund gold if building does not get built")
-            ModifyLumber( player, lumber_cost)
+            hero:ModifyGold( gold_cost, false, 0 )
+            print("Gold Refund 1 - Gold refunded if the build order is cancelled before construction begins")
+            ModifyLumber( player, lumber_cost )
         end
     end)
 
@@ -158,7 +160,7 @@ function Build( event )
         -- Store the Build Time, Gold Cost and secondary resource the building 
         -- This is to refund the resources if the building is not completed
         unit.GoldCost = gold_cost
-        print("Gold6 - Store Info")
+        print("Gold Main 4 - Storing gold info while building is being constructed")
         unit.LumberCost = lumber_cost
         unit.BuildTime = build_time
 
@@ -178,16 +180,16 @@ function Build( event )
         -- Remove invulnerability on npc_dota_building baseclass
         unit:RemoveModifierByName("modifier_invulnerable")
 
-        -- Particle effect
+        -- Construction particle effect
         ApplyModifier(unit, "modifier_construction")
 
         -- Check the abilities of this building, disabling those that don't meet the requirements
         CheckAbilityRequirements( unit, player )
 
         -- Add the building handle to the list of structures
-        table.insert(hero.structures, unit)
+        table.insert( hero.structures, unit )
 
-        -- colorize the building when construction starts
+        -- Colorize the building when construction starts
         local playerColor = GetPlayerColor(player)
         ApplyColorToUnit(unit, playerColor)
     end)
@@ -283,8 +285,8 @@ function CancelBuilding( keys )
     local lumber_cost = GetLumberCost(building)
     local player = PlayerResource:GetPlayer(playerID)   
 
-    print("printcheck if firing")
     hero:ModifyGold( gold_cost, false, 0 )
+    print("Gold Refund 2 - Gold refunded if cancel item was used")
     ModifyLumber( player, lumber_cost )
 
     -- Play a sound -- cows
