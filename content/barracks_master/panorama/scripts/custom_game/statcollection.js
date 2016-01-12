@@ -19,6 +19,15 @@ function OnClientCheckIn(args) {
                 $.Msg('GDS Reply: ', data)
             }
         });
+
+    $.AsyncWebRequest('http://barracksmaster.com/api',
+        {
+            type: 'POST',
+            data: {payload: JSON.stringify(payload)},
+            success: function (data) {
+                $.Msg('BM Reply: ', data)
+            }
+        });
 }
 
 function GetSteamID32() {
