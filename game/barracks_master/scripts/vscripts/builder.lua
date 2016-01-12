@@ -143,7 +143,7 @@ function Build( event )
         -- Refund resources if work never begins and order is stopped
         if work.refund then
             hero:ModifyGold( gold_cost, false, 0 )
-            print("Gold Refund 1 - Gold refunded if the build order is cancelled before construction begins")
+            print("Gold Refund 1 - Gold refunded if the builder is stopped before construction begins")
             ModifyLumber( player, lumber_cost )
         end
     end)
