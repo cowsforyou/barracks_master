@@ -43,6 +43,9 @@ if (CustomNetTables.GetTableValue( "building_settings", "height_restriction") !=
     height_restriction = CustomNetTables.GetTableValue( "building_settings", "height_restriction").value;
 
 var GRID_TYPES = CustomNetTables.GetTableValue( "building_settings", "grid_types")
+CustomNetTables.SubscribeNetTableListener( "building_settings", function() {
+    GRID_TYPES = CustomNetTables.GetTableValue( "building_settings", "grid_types")
+})
 
 var Root = $.GetContextPanel()
 var localHeroIndex
@@ -72,6 +75,7 @@ function StartBuildingHelper( params )
         offsetZ = params.offsetZ;
 
         requires = GetRequiredGridType(entindex)
+        $.Msg(Entities.GetUnitName(entindex)," requires ", requires)
         distance_to_gold_mine = HasGoldMineDistanceRestriction(entindex)
         
         // If we chose to not recolor the ghost model, set it white
@@ -180,7 +184,16 @@ function StartBuildingHelper( params )
             {
                 for (var gridType in specialGrid)
                 {
-                    BlockGridSquares(entPos, Number(specialGrid[gridType].Square), GRID_TYPES[gridType.toUpperCase()])
+                    if (specialGrid[gridType].Square)
+                    {
+                        //$.Msg("Setting ",specialGrid[gridType].Square," grid squares with ",gridType.toUpperCase()," [",GRID_TYPES[gridType.toUpperCase()],"]")
+                        BlockGridSquares(entPos, Number(specialGrid[gridType].Square), GRID_TYPES[gridType.toUpperCase()])
+                    }
+                    else if (specialGrid[gridType].Radius)
+                    {
+                        //$.Msg("Setting ",specialGrid[gridType].Radius," grid radius with ",gridType.toUpperCase()," [",GRID_TYPES[gridType.toUpperCase()],"]")
+                        BlockGridInRadius(entPos, Number(specialGrid[gridType].Radius), GRID_TYPES[gridType.toUpperCase()])
+                    }
                 }              
             }
         }
@@ -399,34 +412,47 @@ function RegisterGNV(msg){
     var GridNav = [];
     var squareX = msg.squareX
     var squareY = msg.squareY
-    $.Msg("Registering GNV ["+squareX+","+squareY+"]")
+    var boundX = msg.boundX
+    var boundY = msg.boundY
+    $.Msg("Registering GNV ["+squareX+","+squareY+"] ","Min Bounds: X="+boundX+", Y="+boundY)
 
     var arr = [];
     // Thanks to BMD for this method
     for (var i=0; i<msg.gnv.length; i++){
-        var code = msg.gnv.charCodeAt(i)+53;
-        for (var j=6; j>=0; j-=2){
+        var code = msg.gnv.charCodeAt(i)-32;
+        for (var j=4; j>=0; j-=2){
             var g = (code & (3 << j)) >> j;
-
-            arr.push(g);
+            if (g != 0)
+              arr.push(g);
         }
     }
 
     // Load the GridNav
     var x = 0;
-    for (var i = 0; i < squareX; i++) {
+    for (var i = 0; i < squareY; i++) {
         GridNav[i] = []
-        for (var j = 0; j < squareY; j++) {
-            GridNav[i][j] = (arr[x] == 1) ? GRID_TYPES["BUILDABLE"] : GRID_TYPES["BLOCKED"]
-            x++
+        for (var j = 0; j < squareX; j++) {
+          GridNav[i][j] = (arr[x] == 1) ? GRID_TYPES["BUILDABLE"] : GRID_TYPES["BLOCKED"]
+          x++
         }
-
-        // ASCII Art
-        //$.Msg(GridNav[i].join(''))
     }
+
     Root.GridNav = GridNav
     Root.squareX = squareX
     Root.squareY = squareY
+    Root.boundX = boundX
+    Root.boundY = boundY
+
+    // ASCII Art
+    /*
+    for (var i = 0; i<squareY; i++) {
+        var a = [];
+        for (var j = 0; j<squareX; j++){
+            a.push((GridNav[i][j] == 1 ) ? '=' : '.');
+        }
+
+        $.Msg(a.join(''))
+    }*/
 
     // Debug Prints
     var tab = {"0":0, "1":0, "2":0, "3":0};
@@ -476,24 +502,32 @@ function SnapToGrid32(coord) {
 }
 
 function IsBlocked(position) {
-    var x = WorldToGridPosX(position[0]) + Root.squareX/2
-    var y = WorldToGridPosY(position[1]) + Root.squareY/2
+    var y = WorldToGridPosX(position[0]) - Root.boundX
+    var x = WorldToGridPosY(position[1]) - Root.boundY
 
-    //{"BUILDABLE":2,"GOLDMINE":4,"BLOCKED":1}
+    //{"BLIGHT":8,"BUILDABLE":2,"GOLDMINE":4,"BLOCKED":1}
     // Check height restriction
     if (height_restriction !== undefined && position[2] < height_restriction)
         return true
 
-    // Check main gridnav
-    if (!(Root.GridNav[x][y] & requires))
+    // Merge grids together into the same value
+    var flag = Root.GridNav[x][y]
+    var entGridValue = (entityGrid[x] !== undefined && entityGrid[x][y] !== undefined) ? entityGrid[x][y] : GRID_TYPES["BUILDABLE"]
+    if (entityGrid[x] && entityGrid[x][y])
+        flag = flag | entityGrid[x][y]
+
+    // Don't count buildable if its blocked
+    var adjust = (GRID_TYPES["BUILDABLE"]+GRID_TYPES["BLOCKED"])
+    if ((flag & adjust)==adjust)
+        flag-=GRID_TYPES["BUILDABLE"]
+
+    //$.Msg('GRID:',Root.GridNav[x][y],' ENTGRID:',entGridValue,' FLAG:',flag,' REQUIRES:', requires)
+
+    // If the bits don't match, its invalid
+    if ((flag & requires) != requires)
         return true
 
-    // Check entity grid
-    if (entityGrid[x] && entityGrid[x][y] && !(entityGrid[x][y] & requires))
-    {
-        return true
-    }
-
+    // If there's a tree standing, its invalid
     if (update_trees && treeGrid[x] && (treeGrid[x][y] & GRID_TYPES["BLOCKED"]))
         return true
 
@@ -501,19 +535,19 @@ function IsBlocked(position) {
 }
 
 function BlockEntityGrid(position, gridType) {
-    var x = WorldToGridPosX(position[0]) + Root.squareX/2
-    var y = WorldToGridPosY(position[1]) + Root.squareY/2
+    var y = WorldToGridPosX(position[0]) - Root.boundX
+    var x = WorldToGridPosY(position[1]) - Root.boundY
 
     if (entityGrid[x] === undefined) entityGrid[x] = []
     if (entityGrid[x][y] === undefined) entityGrid[x][y] = 0
 
-    entityGrid[x][y] = entityGrid[x][y] + gridType
+    entityGrid[x][y] = entityGrid[x][y] | gridType
 }
 
 // Trees block 2x2
 function BlockTreeGrid (position) {
-    var x = WorldToGridPosX(position[0]) + Root.squareX/2
-    var y = WorldToGridPosY(position[1]) + Root.squareY/2
+    var y = WorldToGridPosX(position[0]) - Root.boundX
+    var x = WorldToGridPosY(position[1]) - Root.boundY
 
     if (treeGrid[x] === undefined) treeGrid[x] = []
 
@@ -534,8 +568,7 @@ function BlockGridSquares (position, squares, gridType) {
         {
             for (var y=boundingRect["topBorderY"]-32; y >= boundingRect["bottomBorderY"]+32; y-=64)
             {
-                var pos = [x,y,0]
-                BlockTreeGrid(pos)
+                BlockTreeGrid([x,y,0])
             }
         }
     }
@@ -545,8 +578,26 @@ function BlockGridSquares (position, squares, gridType) {
         {
             for (var y=boundingRect["topBorderY"]-32; y >= boundingRect["bottomBorderY"]+32; y-=64)
             {
-                var pos = [x,y,0]
-                BlockEntityGrid(pos, gridType)
+                BlockEntityGrid([x,y,0], gridType)
+            }
+        }
+    }
+}
+
+function BlockGridInRadius (position, radius, gridType) {
+    var boundingRect = {}
+    boundingRect["leftBorderX"] = position[0]-radius
+    boundingRect["rightBorderX"] = position[0]+radius
+    boundingRect["topBorderY"] = position[1]+radius
+    boundingRect["bottomBorderY"] = position[1]-radius
+
+    for (var x=boundingRect["leftBorderX"]+32; x <= boundingRect["rightBorderX"]-32; x+=64)
+    {
+        for (var y=boundingRect["topBorderY"]-32; y >= boundingRect["bottomBorderY"]+32; y-=64)
+        {
+            if (Length2D(position, [x,y,0]) <= radius)
+            {
+                BlockEntityGrid([x,y,0], gridType)
             }
         }
     }
@@ -570,7 +621,15 @@ function GetRequiredGridType(entIndex) {
     var entName = Entities.GetUnitName(entIndex)
     var table = CustomNetTables.GetTableValue( "construction_size", entName)
     if (table && table.requires !== undefined)
-        return table.requires
+    {
+        var types = table.requires.split(" ")
+        var value = 0
+        for (var i = 0; i < types.length; i++)
+        {
+            value+=GRID_TYPES[types[i]]
+        }
+        return value
+    }
     else
         return GRID_TYPES["BUILDABLE"]
 }
@@ -609,7 +668,7 @@ function TooCloseToGoldmine(position) {
 }
 
 function Length2D(v1, v2) {
-    return Math.sqrt( (v2[0]-v1[0])*(v2[0]-v1[0]) + (v2[1]-v1[1])*(v2[1]-v1[1]) + (v2[2]-v1[2])*(v2[2]-v1[2]) )
+    return Math.sqrt( (v2[0]-v1[0])*(v2[0]-v1[0]) + (v2[1]-v1[1])*(v2[1]-v1[1]) )
 }
 
 function PrintGridCoords(x,y) {
