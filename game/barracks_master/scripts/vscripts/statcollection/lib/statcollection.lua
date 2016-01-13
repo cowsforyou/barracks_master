@@ -329,6 +329,12 @@ function statCollection:sendStage1()
         -- Tell the user
         print(printPrefix .. messagePhase1Complete)
     end)
+  
+        self:sendBMData(1, payload, function(err, res)
+        print('BARRACKS MASTER STAGE 1 WAS CALLED')
+        print(err)
+        print(res)
+    end)
 end
 
 -- Sends stage2
@@ -396,6 +402,12 @@ function statCollection:sendStage2()
 
         -- Tell the user
         print(printPrefix .. messagePhase2Complete)
+    end)
+  
+   self:sendBMData(2, payload, function(err, res)
+        print('BARRACKS MASTER STAGE 2 WAS CALLED')
+        print(err)
+        print(res)
     end)
 end
 
@@ -475,6 +487,12 @@ function statCollection:sendStage3(winners, lastRound)
 
         -- Tell the user
         print(printPrefix .. messagePhase3Complete)
+    end)
+  
+    self:sendBMData(3, payload, function(err, res)
+        print('BARRACKS MASTER STAGE 3 WAS CALLED')
+        print(err)
+        print(res)
     end)
 end
 
@@ -564,6 +582,31 @@ function statCollection:sendStage(stageName, payload, callback)
     req:Send(function(res)
         if res.StatusCode ~= 200 or not res.Body then
             print(printPrefix .. errorFailedToContactServer)
+            return
+        end
+
+        -- Try to decode the result
+        local obj, pos, err = json.decode(res.Body, 1, nil)
+
+        -- Feed the result into our callback
+        callback(err, obj)
+    end)
+end
+
+function statCollection:sendBMData(stage, payload, callback)
+    -- Create the request
+    local req = CreateHTTPRequest('POST', 'http://barracksmaster.com/api')
+    --print(json.encode(payload))
+    -- Add the data
+    req:SetHTTPRequestGetOrPostParameter('key', 'UbiGPvDoFn7z8isRV6h71Mrq3q3N93N1')
+    req:SetHTTPRequestGetOrPostParameter('stage', stage)
+    req:SetHTTPRequestGetOrPostParameter('payload', json.encode(payload))
+
+    -- Send the request
+    req:Send(function(res)
+        if res.StatusCode ~= 200 or not res.Body then
+            print('BARRACKSMASTER API RETURNED A NON 200 RESPONSE')
+                print(printPrefix .. errorFailedToContactServer)
             return
         end
 
