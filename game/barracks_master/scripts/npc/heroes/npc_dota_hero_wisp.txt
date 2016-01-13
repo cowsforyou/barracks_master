@@ -32,14 +32,14 @@
 
 	// Movement
 	//-------------------------------------------------------------------------------------------------------------
-	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 	"MovementSpeed"				"600"
 	"MovementTurnRate"			"0.500000"
 
 	// Vision
 	//----------------------------------------------------------------
-	"VisionDaytimeRange"		"4000"		// Range of vision during day light.
-	"VisionNighttimeRange"		"4000"		// Range of vision at night time.
+	"VisionDaytimeRange"		"5"		// Range of vision during day light.
+	"VisionNighttimeRange"		"5"		// Range of vision at night time.
 
 	// Abilities
 	//-------------------------------------------------------------------------------------------------------------
