@@ -21,16 +21,28 @@ function BuildingEvents:OnPlayerPickHero(keys)
   local starting_rax_name = "bm_melee_barracks"
   local construction_size = BuildingHelper:GetConstructionSize(starting_rax_name)
   local pathing_size = BuildingHelper:GetConstructionSize(starting_rax_name) 
-  local angle = 0 -- rotate building when spawned
+  local angle = 90 -- rotate building when spawned
   local building = BuildingHelper:PlaceBuilding(player, starting_rax_name, position, construction_size, pathing_size, angle)
+
+  --<< cows start
+  -- Colorize starting rax
+  local playerHero = player:GetAssignedHero()
+  local heroName = playerHero:GetUnitName()
+
+  if      heroName == "npc_dota_hero_sven"              then building:SetRenderColor(50,167,255) -- blue
+  elseif  heroName == "npc_dota_hero_templar_assassin"  then building:SetRenderColor(255,255,0) -- purple
+  elseif  heroName == "npc_dota_hero_terrorblade"       then building:SetRenderColor(255,128,128) -- red
+  elseif  heroName == "npc_dota_hero_arc_warden"        then building:SetRenderColor(128,255,128) -- green
+  end
+  -- cows end>>
 
   -- Set health to test repair
   --building:SetHealth(building:GetMaxHealth()/3)
 
-  -- These are required for repair to know how many resources the building takes
+  --[[ These are required for repair to know how many resources the building takes
   building.GoldCost = GameRules.AbilityKV["build_"..starting_rax_name]["AbilityGoldCost"]
-  building.LumberCost = 100 -- not right
-  building.BuildTime = 15 -- not right
+  building.LumberCost = 100
+  building.BuildTime = 15 ]]--
 
   -- Add the building to the player structures list
   hero.buildings[starting_rax_name] = 1
@@ -79,10 +91,6 @@ function BuildingEvents:OnPlayerPickHero(keys)
   hero:AddItemByName("item_travel_boots")
   hero:AddItemByName("item_boar")
   hero:AddItemByName("item_last_stand")
-
-  -- Give a building ability
-  -- Legacy: local item = CreateItem("item_build_wall", hero, hero)
-  -- Legacy: hero:AddItem(item)
 
   -- Learn all abilities (this isn't necessary on creatures)
   for i=0,15 do
