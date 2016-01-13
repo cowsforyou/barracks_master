@@ -33,7 +33,7 @@
 
 			<Panel id="BM_Banner">
 				<!--<Label id="UpdatesTitle" text="Image" /> -->
-				<Image id="Banner01" src="file://{images}/custom_game/loading_screen/banner_02.psd" />
+				<Image id="Banner01" src="file://{images}/custom_game/loading_screen/banner_03.psd" />
 			</Panel>
 		</Panel>
 
