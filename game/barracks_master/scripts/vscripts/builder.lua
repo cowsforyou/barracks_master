@@ -254,10 +254,18 @@ function Build( event )
             CheckAbilityRequirements( structure, player )
         end
 
+        --[[
         -- Remove specific modifiers from arrow tower
         if unit:GetUnitName() == "bm_arrow" then
             ApplyModifier(unit, "modifier_arrow")
             unit:RemoveModifierByName("modifier_building")      
+        end
+        ]]--
+
+        -- Add duration for arrow tower
+        if unit:GetUnitName() == "bm_arrow" then
+            unit:AddNewModifier( unit, unit, "modifier_kill", { duration=60 } )
+            -- add cooldown here
         end
 
     end)
