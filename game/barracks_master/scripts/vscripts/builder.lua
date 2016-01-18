@@ -254,6 +254,13 @@ function Build( event )
             CheckAbilityRequirements( structure, player )
         end
 
+        -- Remove specific modifiers from arrow tower
+        if unit:GetUnitName() == "bm_arrow" then
+            print("test")
+            ApplyModifier(unit, "modifier_arrow")
+            print("test2")            
+        end
+
     end)
 
     -- These callbacks will only fire when the state between below half health/above half health changes.

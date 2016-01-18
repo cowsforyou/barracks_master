@@ -90,5 +90,23 @@
 				}
 			}
 		}
+
+		"modifier_arrow"
+		{
+			"IsHidden"				"1"  
+
+			"States"
+			{
+				"MODIFIER_STATE_ROOTED"		"MODIFIER_STATE_VALUE_DISABLED"
+				"MODIFIER_STATE_LOW_ATTACK_PRIORITY" "MODIFIER_STATE_VALUE_DISABLED"
+			}
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_DISABLE_TURNING" "0"
+				"MODIFIER_PROPERTY_IGNORE_CAST_ANGLE" "0"
+				"MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE"	"100"
+			}
+		}
 	}		
 }
