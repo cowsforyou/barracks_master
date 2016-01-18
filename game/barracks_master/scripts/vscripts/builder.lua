@@ -265,7 +265,7 @@ function Build( event )
         -- Add duration for arrow tower
         if unit:GetUnitName() == "bm_arrow" then
             unit:AddNewModifier( unit, unit, "modifier_kill", { duration=60 } )
-            -- add cooldown here
+            caster:FindAbilityByName("build_bm_arrow"):StartCooldown(180) 
         end
 
     end)
