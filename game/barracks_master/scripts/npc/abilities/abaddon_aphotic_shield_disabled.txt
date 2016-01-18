@@ -1,0 +1,6 @@
+"abaddon_aphotic_shield_disabled"
+{
+    "BaseClass"                     "ability_datadriven"
+    "AbilityTextureName"            "abaddon_aphotic_shield"
+    "MaxLevel"                      "0"
+}

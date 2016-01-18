@@ -1,0 +1,6 @@
+"build_bm_arrow_disabled"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"bm_arrow"
+	"MaxLevel" 						"0"
+}

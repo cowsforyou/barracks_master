@@ -1,7 +1,7 @@
 "build_bm_arrow"
 {
 	"BaseClass"             		"ability_datadriven"
-	"AbilityTextureName"			"granite_golem_hp_aura"
+	"AbilityTextureName"			"bm_arrow"
 	"MaxLevel" 						"1"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -19,7 +19,7 @@
 
 	"UnitName"						"bm_arrow"
 	"AbilityCooldown"				"0"
-	"AbilityGoldCost"				"100"
+	"AbilityGoldCost"				"150"
 	"MaxBuildingCount"				"1"
 	// End of BuildingHelper info
 
@@ -28,17 +28,27 @@
 		"01"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"build_time"			"10.0"
+			"build_time"			"7.0"
 		}
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"gold_cost"				"100"
+			"gold_cost"				"150"
 		}
 		"03"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"lumber_cost"			"0"
+			"lumber_cost"			"50"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"duration_tooltip"		"60"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"cooldown_tooltip"		"180"
 		}
 	}
 

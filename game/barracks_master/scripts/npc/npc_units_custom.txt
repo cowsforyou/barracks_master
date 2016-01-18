@@ -98,13 +98,13 @@
 		"HasInventory"				"0"
 		"ConsideredHero"			"1"
 	
-		"ConstructionSize"			"3"
-		"BlockPathingSize"			"0"
+		"ConstructionSize"			"2"
+		"BlockPathingSize"			"2"
 	
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"5"
-		"Ability1"					"abaddon_aphotic_shield"
+		"Ability1"					"abaddon_aphotic_shield_disabled"
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
@@ -147,12 +147,12 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"	// Needed to cast Point abilities
-		"MovementSpeed"				"100"
+		"MovementSpeed"				"0"
 	 	"MovementTurnRate" 			"1.0"	
 		
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"100"
+		"StatusHealth"				"120"
 		"StatusHealthRegen"			"0"
 		"StatusMana"				"0"
 		"StatusManaRegen"			"0"
