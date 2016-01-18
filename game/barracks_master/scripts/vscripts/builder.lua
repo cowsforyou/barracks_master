@@ -256,9 +256,8 @@ function Build( event )
 
         -- Remove specific modifiers from arrow tower
         if unit:GetUnitName() == "bm_arrow" then
-            print("test")
             ApplyModifier(unit, "modifier_arrow")
-            print("test2")            
+            unit:RemoveModifierByName("modifier_building")      
         end
 
     end)
