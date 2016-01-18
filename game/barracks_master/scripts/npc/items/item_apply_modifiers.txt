@@ -16,16 +16,6 @@
 			"IsHidden"				"1"
 			"OnCreated"
 			{
-				//"AttachEffect"
-				//{
-				//	"EffectName"        "particles/econ/events/ti5/radiant_fountain_regen_lvl2_ti5.vpcf"
-				//	"EffectAttachType"  "follow_origin"
-				//	"Target"            "TARGET"
-				//	"ControlPoints"
-				//	{
-				//		"01"			"0 250 0"
-				//	}
-				//}
 				"AttachEffect"
 				{
 					"EffectName"        "particles/bm_custom_particles/bm_particle_construction_ring.vpcf"
@@ -38,6 +28,7 @@
 			"States"
 			{
 				"MODIFIER_STATE_SILENCED"		"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_DISARMED"		"MODIFIER_STATE_VALUE_ENABLED"
 			}
 			// added by Veggiesama END
 		}
@@ -91,24 +82,24 @@
 			}
 		}
 
-		"modifier_arrow"
-		{
-			//"IsHidden"				"1"  
-			"Priority" 		"MODIFIER_PRIORITY_ULTRA" 
+		//"modifier_arrow"
+		//{
+		//	"IsHidden"				"1"  
+		//	"Priority" 		"MODIFIER_PRIORITY_ULTRA" 
 
-			"States"
-			{
-				"MODIFIER_STATE_ROOTED"					"MODIFIER_STATE_VALUE_DISABLED"
-				"MODIFIER_STATE_LOW_ATTACK_PRIORITY" 	"MODIFIER_STATE_VALUE_DISABLED"
-				//"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_ENABLED"
-			}
+		//	"States"
+		//	{
+		//		"MODIFIER_STATE_ROOTED"					"MODIFIER_STATE_VALUE_DISABLED"
+		//		"MODIFIER_STATE_LOW_ATTACK_PRIORITY" 	"MODIFIER_STATE_VALUE_DISABLED"
+		//		"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_ENABLED"
+		//	}
 
-			"Properties"
-			{
-				"MODIFIER_PROPERTY_DISABLE_TURNING" "0"
-				"MODIFIER_PROPERTY_IGNORE_CAST_ANGLE" "0"
-				"MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE"	"100"
-			}
-		}
+		//	"Properties"
+		//	{
+		//		"MODIFIER_PROPERTY_DISABLE_TURNING" "0"
+		//		"MODIFIER_PROPERTY_IGNORE_CAST_ANGLE" "0"
+		//		"MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE"	"100"
+		//	}
+		//}
 	}		
 }
