@@ -93,8 +93,9 @@
 
 		"modifier_arrow"
 		{
-			"IsHidden"				"1"  
-
+			//"IsHidden"				"1"  
+			"Priority" 		"MODIFIER_PRIORITY_ULTRA" 
+			
 			"States"
 			{
 				"MODIFIER_STATE_ROOTED"		"MODIFIER_STATE_VALUE_DISABLED"
