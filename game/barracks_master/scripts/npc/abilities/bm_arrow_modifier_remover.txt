@@ -1,0 +1,25 @@
+"bm_arrow_modifier_remover"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+	"MaxLevel" 						"1"
+
+	"Modifiers"
+	{
+		"modifier_modifier_remover"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+	
+			"OnSpellStart" // or try OnCreated
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"spells/arrow_modifier_remover.lua"
+					"Function"		"RemoveModifier"	// unit:RemoveModifierByName("modifier_invulnerable")
+				}
+			}
+		}
+	}
+}

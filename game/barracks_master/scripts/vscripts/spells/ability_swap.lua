@@ -13,10 +13,11 @@ function OnSpellStart(keys)
         "build_bm_siege_barracks",
         "build_bm_tech_lab",-- start page 2
         "build_bm_aviation_sanctuary",
+        "build_bm_arrow",
         "build_bm_ancient_barracks",
         "build_bm_heroes",
-        "build_bm_purifier",-- start page 3
-        "build_bm_library",
+        "build_bm_purifier",
+        "build_bm_library",-- start page 3
         "build_bm_unpromising",
         "build_bm_luminous",
         -- remaining slots will be filled with blanks, if any

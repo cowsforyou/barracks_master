@@ -88,6 +88,7 @@ function Precache( context )
 
     -- Abilities
   PrecacheResource("particle", "particles/items3_fx/mango_active.vpcf", context) -- for Enchanted Mango
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_abaddon", context) -- for Aphotic Shield  
   PrecacheResource("particle", "particles/items_fx/chain_lightning.vpcf", context) -- for Static Touch
   PrecacheResource("particle_folder", "particles/units/heroes/hero_skywrath_mage", context) -- for Mystic Flare
   PrecacheResource("particle_folder", "particles/units/heroes/hero_invoker", context) -- for Sun Strike/Chaos Meteor
@@ -118,6 +119,7 @@ function Precache( context )
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_lich.vsndevts", context) -- for Chain Frost
 
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_treant.vsndevts", context) -- for Living Armor
+  PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_abaddon.vsndevts", context) -- for Aphotic Shield  
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_sniper.vsndevts", context) -- for Assassinate 
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_zuus.vsndevts", context) -- for Static Touch
 

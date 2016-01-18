@@ -1,4 +1,3 @@
-// Building requires repair to finish construction. Can be assisted to make the process faster
 "build_bm_aviation_sanctuary"
 {
 	"BaseClass"             		"ability_datadriven"
