@@ -73,9 +73,16 @@
 				{
 					"AttachEffect"
 					{
-						"EffectName"        "particles/dire_fx/fire_barracks.vpcf"
+						//"EffectName"        "particles/dire_fx/fire_barracks.vpcf"
+						//"EffectAttachType"  "follow_origin"
+						//"Target"            "TARGET"
+						//"ControlPointEntities"
+						//{
+						//	"TARGET"	"attach_fx"
+						//}
+						"EffectName"        "particles/econ/courier/courier_greevil_red/courier_greevil_red_ambient_3.vpcf"
 						"EffectAttachType"  "follow_origin"
-						"Target"            "TARGET"
+						"Target"			"TARGET"
 						"ControlPointEntities"
 						{
 							"TARGET"	"attach_fx"

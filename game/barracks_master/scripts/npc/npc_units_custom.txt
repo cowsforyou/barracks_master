@@ -93,6 +93,8 @@
 	    "DestructionEffect"         "particles/radiant_fx/tower_good3_dest_lvl3_hit.vpcf"
 	    "ProjectileModel"           "particles/units/heroes/hero_mirana/mirana_base_attack.vpcf"
 	
+		"SoundSet"					"Hero_Mirana"
+	
 		"Level"						"1"
 		"HealthBarOffset"			"140"
 		"HasInventory"				"0"
