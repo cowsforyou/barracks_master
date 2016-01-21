@@ -1,0 +1,13 @@
+<root>
+    <styles>
+        <include src="file://{resources}/styles/custom_game/ladder.css" />
+    </styles>
+    <scripts>
+        <include src="file://{resources}/scripts/ladder/ladder_player.js" />
+    </scripts>
+    <Panel class="LadderPlayerContainer">
+        <DOTAAvatarImage id="AvatarImage" steamid="" />
+        <Label id="LadderRank" text="#"/>
+        <Label id="LadderName" text=""/>
+    </Panel>
+</root>

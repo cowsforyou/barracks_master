@@ -73,6 +73,7 @@ Left Panel Backgrounds
 	margin-left: 424px;
 	opacity: .7;
 	background-color: black;
+	flow-children: down;
 }
 
 #BannerPanel

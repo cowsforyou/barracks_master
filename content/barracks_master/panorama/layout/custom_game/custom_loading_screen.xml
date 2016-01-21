@@ -5,7 +5,7 @@
 
 	<scripts>
     	<include src="file://{resources}/scripts/custom_game/custom_loading_screen.js" /> 
-    	<include src="file://{resources}/scripts/ladder.js" />
+    	<include src="file://{resources}/scripts/ladder/ladder.js" />
   	</scripts>
 
 	<Panel class="BMLoadingRoot">
