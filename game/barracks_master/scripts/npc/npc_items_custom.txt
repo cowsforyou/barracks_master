@@ -83,26 +83,6 @@
 					}
 				}
 			}
-	
-			//"modifier_arrow"
-			//{
-			//	"IsHidden"				"1"  
-			//	"Priority" 		"MODIFIER_PRIORITY_ULTRA" 
-	
-			//	"States"
-			//	{
-			//		"MODIFIER_STATE_ROOTED"					"MODIFIER_STATE_VALUE_DISABLED"
-			//		"MODIFIER_STATE_LOW_ATTACK_PRIORITY" 	"MODIFIER_STATE_VALUE_DISABLED"
-			//		"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_ENABLED"
-			//	}
-	
-			//	"Properties"
-			//	{
-			//		"MODIFIER_PROPERTY_DISABLE_TURNING" "0"
-			//		"MODIFIER_PROPERTY_IGNORE_CAST_ANGLE" "0"
-			//		"MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE"	"100"
-			//	}
-			//}
 		}		
 	}
 	"item_boar"
