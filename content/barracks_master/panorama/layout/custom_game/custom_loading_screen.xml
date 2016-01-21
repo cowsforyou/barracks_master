@@ -29,11 +29,11 @@
 
 			<Panel id="BM_Ladder">
 				<Label id="LadderTitle" text="#bm_ladder_title" />
+				<Label id="LadderPlayerPanel" text="" style="" />
 				<Label id="LadderText" text="#bm_ladder_text" style="" />
 			</Panel>
 
 			<Panel id="BM_Banner">
-				<!--<Label id="UpdatesTitle" text="Image" /> -->
 				<Image id="Banner01" src="file://{images}/custom_game/loading_screen/banner_04.psd" />
 			</Panel>
 		</Panel>

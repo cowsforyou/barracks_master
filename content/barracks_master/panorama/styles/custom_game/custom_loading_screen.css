@@ -73,7 +73,6 @@ Left Panel Backgrounds
 	margin-left: 424px;
 	opacity: .7;
 	background-color: black;
-	flow-children: down;
 }
 
 #BannerPanel
@@ -123,9 +122,11 @@ Left Panel Items
 {
 	font-size: 15px;
 	color: #ffffff;
-	padding-left: 12px;
-	padding-right: 12px;
+	padding-left: 15px;
+	padding-right: 15px;	
 }
+
+/*-- Ladder Panel --*/
 
 #BM_Ladder
 {
@@ -137,24 +138,72 @@ Left Panel Items
 
 #LadderTitle
 {
+	horizontal-align: left;
 	font-size: 30px;
 	font-weight: bold;
 	color: #ffffff;
 	text-shadow: 2px 2px 2px #000000;
-	horizontal-align: left;
 	padding-left: 15px;
 	padding-top: 10px;
+}
+
+#LadderPlayerPanel
+{
+	width: 250px;
+	height: 625px;
+	margin-top: 0px;
+	flow-children: down;
 }
 
 #LadderText
 {
-	font-size: 15px;
+	vertical-align: bottom;
+	margin-bottom: 10px;
+	horizontal-align: center;
+	font-size: 16px;
 	color: #ffffff;
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-top: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
+/*-- These are from ladder_player.xml--*/
+
+.LadderPlayerContainer
+{
+	padding-left: 15px;
+	padding-right: 15px;
+    width: 100%;
+    height: 10%;
+
+    flow-children: right;
+}
+
+#LadderRank
+{
+    font-size: 18px;
+    font-weight: bold;
+	color: #ffffff;
+	vertical-align: center;
+}
+
+#AvatarImage
+{
+	margin-left: 12px;
+    width: 32px;
+    height: 32px;
+    vertical-align: center;
+}
+
+#LadderName
+{
+	margin-left: 7px;
+    font-size: 17px;
+	color: #ffffff;
+	vertical-align: center;
+}
+
+
+/*-- Banner Panel--*/
 
 #BM_Banner
 {
@@ -203,25 +252,6 @@ Tutorial Panel
 {
 	margin-left: 0px;
 	margin-top: 15px;
-}
-
-
-/*-------------------------
-Tournament Panel
--------------------------*/
-
-#BM_Tournament
-{
-	horizontal-align: left;
-	vertical-align: top;
-	margin-top: 102px;
-	margin-left: 50px;
-}
-
-#T_Img1
-{
-	margin-left: 0px;
-	margin-top: 0px;
 }
 
 /*-------------------------

@@ -23,7 +23,7 @@ function GetLadderData() {
 }
 
 function CreateLadderPlayer(rank, steamid, name) {
-    var parent = $('#LadderPanel')
+    var parent = $('#LadderPlayerPanel')
     var playerPanel = $.CreatePanel("Panel", parent, name)
     playerPanel.steamid = steamid
     playerPanel.rankText = rank
