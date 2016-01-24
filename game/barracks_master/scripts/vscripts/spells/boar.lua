@@ -8,7 +8,7 @@ function SpawnBoar( event )
     local steamID = PlayerResource:GetSteamAccountID(playerID)
     local unitName = "scout_boar"
 
-    if steamID == 49458799 then
+    if steamID == 49458799 or steamID == 12498553 or steamID == 191904610 then
         unitName = "scout_boar_blue"
 
     elseif steamID == 64143044 or steamID == 103029867 then
@@ -41,6 +41,9 @@ function SpawnBoar( event )
 -- 49458799 cawkeye
 -- 103029867 seriously
 -- 103245869 irest
+-- 12498553 Jumbero
+-- 191904610 chesscraftMC
+
 
     end
 
