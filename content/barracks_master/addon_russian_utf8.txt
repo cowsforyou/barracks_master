@@ -16,21 +16,25 @@
 "bm_updates_title"	"Updates"
 
 "bm_updates_text"	"
------ Jan 17:
-• Ladder is now LIVE! Thank you Bobby Shaftoe!
-• Harvest Lumber cooldown decreased from 2.0 to 0.5sec.
+----- Jan 24:
+• Level 3 Evasion Aura bonus improved from 30 to 40 percent.
+• Level 3 Evasion Aura cost increased from 550 to 750 gold and 450 to 550 lumber.
 
------ Jan 13:
-• Testing APIs for ladder creation.
+----- Jan 20:
+• Ladder should now be showing the correct points.
+• Top 10 now showing on the loadscreen. Thank you Noya!
 
------ Jan 13:
-• Fixed starting barracks not being colored in and rotated correctly.
-• Buildable area behind both Ancients are now identical.
-• Tweaks to map to allow for faster load times.
+----- Jan 18:
+• Arrow Tower build time increased from 7-12sec.
+• Arrow Tower now has attack sounds.
+• Building gridnav size reduced.
+
+----- Jan 18:
+• New building added: Arrow Tower.
 "
 
 "bm_ladder_title"	"Ladder"
-"bm_ladder_text"	"We are working on bringing the ladder updates straight to the load screen. But in the meanwhile please check your rank at barracksmaster.com"
+"bm_ladder_text"	"Full ladder: barracksmaster.com"
 
 		//-------------------
 		//Builders
@@ -156,6 +160,18 @@
 
 		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_disabled"                         "Казармы летающих крипов"
 		"DOTA_Tooltip_ability_build_bm_aviation_sanctuary_disabled_Description"             "Создаёт летюащих крипов и открывает вам 'ястреба разведчика'. Летающие крипы имею среднее колличество HP и урона. Так же они единственные крипы, которые могут изучит увороты.\n<b><font color='#eedd44'>требуются:\n - Пень</font></b>\n"
+
+		"bm_arrow"                                                                        	"Arrow Tower"
+		"DOTA_Tooltip_ability_build_bm_arrow"                                             	"Arrow Tower"
+		"DOTA_Tooltip_ability_build_bm_arrow_Description"                                 	"A mini tower that has a defensive ability. Damage can also be upgraded. Use wisely - the Arrow Tower has a short duration and long cooldown."
+		"DOTA_Tooltip_ability_build_bm_arrow_build_time"                                  	"<font color='#057aff'>BUILD TIME</font>:"
+		"DOTA_Tooltip_ability_build_bm_arrow_gold_cost"                                   	"<font color='#fff22e'>GOLD COST</font>:"
+		"DOTA_Tooltip_ability_build_bm_arrow_lumber_cost"                                 	"<font color='#28fe77'>LUMBER COST</font>:"
+		"DOTA_Tooltip_ability_build_bm_arrow_duration_tooltip"                              "DURATION:"
+		"DOTA_Tooltip_ability_build_bm_arrow_cooldown_tooltip"                              "COOLDOWN:"
+
+		"DOTA_Tooltip_ability_build_bm_arrow_disabled"                                    	"Arrow Tower"
+		"DOTA_Tooltip_ability_build_bm_arrow_disabled_Description"                        	"A mini tower that has a defensive ability. Damage can also be upgraded. Use wisely - the Arrow Tower has a short duration and long cooldown.\n<b><font color='#eedd44'>Requires:\n - Air Barracks</font></b>\n"
 
 
 		"bm_heroes"                                                             			"Портал героев"
@@ -528,6 +544,11 @@
 		"DOTA_Tooltip_ability_item_research_bm_air_special"                               	"тмеОнить улучшение"
 		"DOTA_Tooltip_ability_item_research_bm_air_special_Description"                   	""
 
+
+		//Aphotic Shield
+		//-------------------------------------------------------------
+		"DOTA_Tooltip_ability_abaddon_aphotic_shield_disabled"                    			"Aphotic Shield"
+		"DOTA_Tooltip_ability_abaddon_aphotic_shield_disabled_Description"					"Summons dark energies around an ally unit, creating a shield that absorbs a set amount of damage before expiring. When the shield is destroyed it will burst and deal damage equal to the amount it could absorb to an area around it.\n<b><font color='#eedd44'>Requires:\n - Library of Spells</font></b>\n"
 
 
 		//Mystic Flare

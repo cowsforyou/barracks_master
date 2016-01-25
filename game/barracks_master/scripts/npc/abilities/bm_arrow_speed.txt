@@ -1,0 +1,74 @@
+"bm_arrow_speed"
+{
+    "BaseClass"                     "ability_datadriven"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+    "AbilityTextureName"            "windrunner_focusfire"
+
+    "MaxLevel"                      "1"
+
+    // Casting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastPoint"              "0.0"
+
+    // Time     
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"               "60.0"
+    "AbilityDuration"               "15.0"
+
+    // Cost
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityManaCost"               "0"
+
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "bonus_attack_speed"    "360"
+        }
+        "02"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "damage_reduction"      "-40"
+        }
+        "03"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "duration_tooltip"      "15"
+        }        
+    }
+
+    "OnSpellStart"
+    {
+        "FireSound"
+        {
+            "Target"                        "CASTER"
+            "EffectName"                    "Ability.Focusfire"
+        }
+
+        "ApplyModifier"
+        {
+            "ModifierName"  "modifier_bm_arrow_speed"
+            "Target"        "CASTER"
+        }
+    }
+
+    "Modifiers"
+    {
+        "modifier_bm_arrow_speed"
+        {
+            "IsBuff"        "1"
+            "IsPurgable"    "0"
+            "IsHidden"      "0"
+            "Duration"      "%AbilityDuration"
+
+            "Properties"
+            {
+                "MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"      	"%damage_reduction"
+                "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"      "%bonus_attack_speed"
+            }
+        }
+    }
+}

@@ -1,0 +1,6 @@
+"bm_arrow_fire_disabled"
+{
+    "BaseClass"                     "ability_datadriven"
+    "AbilityTextureName"            "clinkz_searing_arrows"
+    "MaxLevel"                      "0"
+}

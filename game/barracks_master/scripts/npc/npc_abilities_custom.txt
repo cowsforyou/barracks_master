@@ -271,6 +271,176 @@
 	    "AbilityTextureName"            "bm_static_touch"
 	    "MaxLevel"                      "0"
 	}
+	"bm_arrow_fire"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	    "AbilityTextureName"            "clinkz_searing_arrows"
+	
+	    "MaxLevel"                      "1"
+	
+	    // Casting
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilityCastPoint"              "0.0"
+	
+	    // Time     
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilityCooldown"               "60.0"
+	    "AbilityDuration"               "15.0"
+	
+	    // Cost
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilityManaCost"               "0"
+	
+	    // Special  
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "bonus_damage"          "30"
+	        }
+	        
+	        "02"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "duration_tooltip"      "15"
+	        }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "FireSound"
+	        {
+	            "Target"            "CASTER"
+	            "EffectName"        "Hero_Clinkz.Strafe"
+	        }
+	
+	        "ApplyModifier"
+	        {
+	            "ModifierName"  "modifier_bm_arrow_fire"
+	            "Target"        "CASTER"
+	        }
+	    }
+	
+	    "Modifiers"
+	    {
+	        "modifier_bm_arrow_fire"
+	        {
+	            "IsBuff"        "1"
+	            "IsPurgable"    "0"
+	            "IsHidden"      "0"
+	            "Duration"      "%AbilityDuration"
+	
+	            "Orb"
+	            {
+	                "Priority"              "DOTA_ORB_PRIORITY_ABILITY"
+	                "ProjectileName"        "particles/units/heroes/hero_clinkz/clinkz_searing_arrow.vpcf"
+	            }
+	
+	            "OnOrbFire"
+	            {
+	                "FireSound"
+	                {
+	                    "EffectName"        "Hero_Clinkz.SearingArrows"
+	                    "Target"            "CASTER"
+	                }
+	            }
+	
+	            "Properties"
+	            {
+	                "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"      	"%bonus_damage"
+	            }
+	        }
+	    }
+	}
+	"bm_arrow_fire_disabled"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "clinkz_searing_arrows"
+	    "MaxLevel"                      "0"
+	}
+	"bm_arrow_speed"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	    "AbilityTextureName"            "windrunner_focusfire"
+	
+	    "MaxLevel"                      "1"
+	
+	    // Casting
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilityCastPoint"              "0.0"
+	
+	    // Time     
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilityCooldown"               "60.0"
+	    "AbilityDuration"               "15.0"
+	
+	    // Cost
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilityManaCost"               "0"
+	
+	    // Special  
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "bonus_attack_speed"    "360"
+	        }
+	        "02"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "damage_reduction"      "-40"
+	        }
+	        "03"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "duration_tooltip"      "15"
+	        }        
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "FireSound"
+	        {
+	            "Target"                        "CASTER"
+	            "EffectName"                    "Ability.Focusfire"
+	        }
+	
+	        "ApplyModifier"
+	        {
+	            "ModifierName"  "modifier_bm_arrow_speed"
+	            "Target"        "CASTER"
+	        }
+	    }
+	
+	    "Modifiers"
+	    {
+	        "modifier_bm_arrow_speed"
+	        {
+	            "IsBuff"        "1"
+	            "IsPurgable"    "0"
+	            "IsHidden"      "0"
+	            "Duration"      "%AbilityDuration"
+	
+	            "Properties"
+	            {
+	                "MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"      	"%damage_reduction"
+	                "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"      "%bonus_attack_speed"
+	            }
+	        }
+	    }
+	}
+	"bm_arrow_speed_disabled"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "windrunner_focusfire"
+	    "MaxLevel"                      "0"
+	}
 	"bm_command_aura"
 	{
 	  "BaseClass"             "ability_datadriven"

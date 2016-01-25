@@ -107,8 +107,8 @@
 		//----------------------------------------------------------------
 		"AbilityLayout"				"5"
 		"Ability1"					"abaddon_aphotic_shield_disabled"
-		"Ability2"					""
-		"Ability3"					""
+		"Ability2"					"bm_arrow_fire_disabled"
+		"Ability3"					"bm_arrow_speed_disabled"
 		"Ability4"					""
 		"Ability5"					""
 		"Ability6"					""

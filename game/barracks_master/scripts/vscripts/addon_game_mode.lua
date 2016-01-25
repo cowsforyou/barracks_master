@@ -88,7 +88,8 @@ function Precache( context )
 
     -- Abilities
   PrecacheResource("particle", "particles/items3_fx/mango_active.vpcf", context) -- for Enchanted Mango
-  PrecacheResource("particle_folder", "particles/units/heroes/hero_abaddon", context) -- for Aphotic Shield  
+  PrecacheResource("particle_folder", "particles/units/heroes/hero_abaddon", context) -- for Aphotic Shield
+  PrecacheResource("particle", "particles/units/heroes/hero_clinkz/clinkz_searing_arrow.vpcf", context) -- for Arrow Fire
   PrecacheResource("particle", "particles/items_fx/chain_lightning.vpcf", context) -- for Static Touch
   PrecacheResource("particle_folder", "particles/units/heroes/hero_skywrath_mage", context) -- for Mystic Flare
   PrecacheResource("particle_folder", "particles/units/heroes/hero_invoker", context) -- for Sun Strike/Chaos Meteor
@@ -121,6 +122,8 @@ function Precache( context )
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_treant.vsndevts", context) -- for Living Armor
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_mirana.vsndevts", context) -- for Arrow Tower
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_abaddon.vsndevts", context) -- for Aphotic Shield  
+  PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_windrunner.vsndevts", context) -- for Arrow Speed
+  PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_clinkz.vsndevts", context) -- for Arrow Fire
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_sniper.vsndevts", context) -- for Assassinate 
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_zuus.vsndevts", context) -- for Static Touch
 
@@ -147,6 +150,7 @@ function Precache( context )
   PrecacheUnitByNameSync("bm_siege_barracks", context) 
   PrecacheUnitByNameSync("bm_tech_lab", context)
   PrecacheUnitByNameSync("bm_aviation_sanctuary", context)
+  PrecacheUnitByNameSync("bm_arrow", context)  
   PrecacheUnitByNameSync("bm_ancient_barracks", context) 
   PrecacheUnitByNameSync("bm_heroes", context) 
   PrecacheUnitByNameSync("bm_purifier", context) 
@@ -170,19 +174,8 @@ function Precache( context )
 
   PrecacheItemByNameSync("item_apply_modifiers", context)
 
-  -- Non Barracks Master --   
-    -- Model ghost and grid particles
+  -- Model ghost and grid particles
   PrecacheResource("particle_folder", "particles/buildinghelper", context)
-
-    -- Resources used
-  PrecacheUnitByNameSync("peasant", context)
-  PrecacheUnitByNameSync("tower", context)
-  PrecacheUnitByNameSync("tower_tier2", context)
-  PrecacheUnitByNameSync("city_center", context)
-  PrecacheUnitByNameSync("city_center_tier2", context)
-  PrecacheUnitByNameSync("tech_center", context)
-  PrecacheUnitByNameSync("dragon_tower", context)
-  PrecacheUnitByNameSync("dark_tower", context)
 end
 
 -- Create our game mode and initialize it

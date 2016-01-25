@@ -1,0 +1,6 @@
+"bm_arrow_speed_disabled"
+{
+    "BaseClass"                     "ability_datadriven"
+    "AbilityTextureName"            "windrunner_focusfire"
+    "MaxLevel"                      "0"
+}
