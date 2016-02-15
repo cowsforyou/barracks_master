@@ -16,6 +16,8 @@ function GameMode:InitGameMode()
   GameRules:GetGameModeEntity():SetHUDVisible(8, false)  
   --GameRules:GetGameModeEntity():SetHUDVisible(9, false) 
 
+  GameRules:SetPostGameTime(60)
+
   -- DebugPrint
   --Convars:RegisterConvar('debug_spew', tostring(DEBUG_SPEW), 'Set to 1 to start spewing debug info. Set to 0 to disable.', 0)
   -- Commands can be registered for debugging purposes or as functions that can be called by the custom Scaleform UI

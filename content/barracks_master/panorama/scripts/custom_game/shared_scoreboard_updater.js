@@ -1,5 +1,33 @@
 "use strict";
 
+GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_ENDGAME, false );			// Hide Endgame scoreboard
+
+/*=============================================================================
+  Custom BM Points
+    +5 points base
+    +3 to the winners
+    +2 per player still connected
+*///===========================================================================
+function GetBMPointsForTeam( teamID )
+{
+	var points = 5
+	if (teamID == Game.GetGameWinner())
+		points+=3
+
+	var teamPlayers = Game.GetPlayerIDsOnTeam(teamID)
+	for (var i in teamPlayers)
+	{
+		var playerID = teamPlayers[i]
+		var playerInfo = Game.GetPlayerInfo( playerID );
+		if (playerInfo.player_connection_state == DOTAConnectionState_t.DOTA_CONNECTION_STATE_CONNECTED)
+			points+=2
+	}	
+
+	return points
+}
+
+//=============================================================================
+
 
 //=============================================================================
 //=============================================================================
@@ -242,7 +270,8 @@ function _ScoreboardUpdater_UpdateTeamPanel( scoreboardConfig, containerPanel, t
 		teamsInfo.max_team_players = teamPlayers.length;
 	}
 
-	_ScoreboardUpdater_SetTextSafe( teamPanel, "TeamScore", teamDetails.team_score )
+	var teamScore = GetBMPointsForTeam(teamId)
+	_ScoreboardUpdater_SetTextSafe( teamPanel, "TeamScore", "+"+teamScore )
 	_ScoreboardUpdater_SetTextSafe( teamPanel, "TeamName", $.Localize( teamDetails.team_name ) )
 	
 	if ( GameUI.CustomUIConfig().team_colors )
