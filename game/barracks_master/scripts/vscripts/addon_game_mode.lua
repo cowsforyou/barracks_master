@@ -12,6 +12,7 @@ require('orders')
 require('builder')
 require('buildingevents') -- veg
 require('statcollection/init') -- cows
+require("statcollection/points")
 
 require('barracks/spawner')
 require('barracks/spawn_synchronizer')

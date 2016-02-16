@@ -14,14 +14,15 @@ function GetBMPointsForTeam( teamID )
 	if (teamID == Game.GetGameWinner())
 		points+=3
 
-	var teamPlayers = Game.GetPlayerIDsOnTeam(teamID)
-	for (var i in teamPlayers)
+	for (playerID=0,DOTALimits_t.DOTA_MAX_TEAM_PLAYERS)
 	{
-		var playerID = teamPlayers[i]
-		var playerInfo = Game.GetPlayerInfo( playerID );
-		if (playerInfo.player_connection_state == DOTAConnectionState_t.DOTA_CONNECTION_STATE_CONNECTED)
-			points+=2
-	}	
+        if (Players.IsValidPlayerID(playerID)
+        {
+            var playerInfo = Game.GetPlayerInfo( playerID );
+			if (playerInfo.player_connection_state == DOTAConnectionState_t.DOTA_CONNECTION_STATE_CONNECTED)
+                points = points+2
+        }
+    }
 
 	return points
 }
