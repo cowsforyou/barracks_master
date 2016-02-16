@@ -62,6 +62,8 @@ function BuildPlayersArray()
 
                     -- Example functions for generic stats are defined in statcollection/lib/utilities.lua
                     -- Add player values here as someValue = GetSomePlayerValue(),
+                    ph = GetHeroName(playerID), -- Hero by its short name
+                    pt = GetBMPointsForPlayer(playerID), -- 5 points per game, plus 3 to the winners and plus 2 for each player still connected. Leavers get no points
                 })
             end
         end
