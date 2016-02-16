@@ -23,14 +23,14 @@ function SpawnBoar( event )
 --    elseif steamID == 46639111 then
 --        unitName = "scout_wolf"
 
-    elseif steamID == 86718505 then
+    elseif steamID == 86718505 or steamID == 153872184 or steamID == 63131067 then
         unitName = "scout_wolf_red"
 
     elseif steamID == 46639111 then
         unitName = "scout_wolf_purple"
 
---    elseif steamID == 46639111 then
---        unitName = "scout_wolf_white"
+    elseif steamID == 109293655 or steamID == 119816162 then
+        unitName = "scout_wolf_white"
 
 --    elseif steamID == 46639111 then
 --        unitName = "scout_wolf_yellow"
@@ -43,6 +43,10 @@ function SpawnBoar( event )
 -- 103245869 irest
 -- 12498553 Jumbero
 -- 191904610 chesscraftMC
+-- 153872184 mvp
+-- 63131067 mvp's partner
+-- 109293655 cold
+-- 119816162 Moon Moon
 
 
     end
