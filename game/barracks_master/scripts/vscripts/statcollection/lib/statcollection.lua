@@ -21,6 +21,7 @@ local statInfo = LoadKeyValues('scripts/vscripts/statcollection/settings.kv')
 
 -- Where stuff is posted to
 local postLocation = 'http://getdotastats.com/s2/api/'
+local bmPost = 'https://barracksmaster.herokuapp.com/' --new_match
 
 -- The schema version we are currently using
 local schemaVersion = 4
@@ -562,20 +563,46 @@ function statCollection:sendCustom(args)
         -- Tell the user
         print(printPrefix .. messageCustomComplete)
     end)
+
+    -- Send custom to bm
+    self:sendStage('new_match', payload, function(err, res)
+        local prefix = "BM Stats:  "
+
+        -- Check if we got an error
+        if err then
+            print(prefix .. errorJsonDecode)
+            print(prefix .. err)
+            return
+        end
+
+        -- Check for an error
+        if res.error then
+            print(prefix .. errorSomethingWentWrong)
+            print(res.error)
+            return
+        end
+
+        -- Tell the user
+        print(prefix .. messageCustomComplete .. " [" .. bmPost .. ']')
+    end, bmPost)
 end
 
 -- Sends the payload data for the given stage, and return the result
-function statCollection:sendStage(stageName, payload, callback)
+function statCollection:sendStage(stageName, payload, callback, override_host)
+    local host = override_host or postLocation
+
+    print("Sending HTTP Request to ",host .. stageName)
+
     -- Create the request
-    local req = CreateHTTPRequest('POST', postLocation .. stageName)
-    --print(json.encode(payload))
+    local req = CreateHTTPRequest('POST', host .. stageName)
+    print(json.encode(payload))
     -- Add the data
     req:SetHTTPRequestGetOrPostParameter('payload', json.encode(payload))
 
     -- Send the request
     req:Send(function(res)
         if res.StatusCode ~= 200 or not res.Body then
-            print(printPrefix .. errorFailedToContactServer)
+            print(errorFailedToContactServer)
             return
         end
 

@@ -7,7 +7,7 @@ function GetBMPointsForPlayer( playerID )
     local points = 5
 
     -- Winners get 3 extra points
-    if (PlayerResource:GetTeam() == statCollection.winner) then
+    if (PlayerResource:GetTeam(playerID) == statCollection.winner) then
         points = points + 3
     end
 
