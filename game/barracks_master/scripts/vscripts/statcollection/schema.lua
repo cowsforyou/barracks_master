@@ -31,6 +31,12 @@ function customSchema:init()
             end
         end
     end, nil)
+
+    -- Write 'test_schema' on the console to test your current functions instead of having to end the game
+    if Convars:GetBool('developer') then
+        Convars:RegisterCommand("test_schema", function() PrintSchema(BuildGameArray(), BuildPlayersArray()) end, "Test the custom schema arrays", 0)
+        Convars:RegisterCommand("test_end_game", function() GameRules:SetGameWinner(DOTA_TEAM_GOODGUYS) end, "Test the end game", 0)
+    end
 end
 
 -------------------------------------
@@ -63,10 +69,10 @@ function BuildPlayersArray()
                     -- Example functions for generic stats are defined in statcollection/lib/utilities.lua
                     -- Add player values here as someValue = GetSomePlayerValue(),
                     ph = GetHeroName(playerID), -- Hero by its short name
-                    nw = ScoreboardUpdater:GetNetWorth(PlayerResource:GetPlayer(playerID))
+                    nw = ScoreboardUpdater:GetNetWorth(PlayerResource:GetPlayer(playerID)),
                     gl = hero:GetGold() or 0, -- Gold remaining
                     lm = hero.lumber or 0, -- Lumber remaining, should be total instead
-                    cs = PlayerResource:GetLastHits(playerID) or 0
+                    cs = PlayerResource:GetLastHits(playerID) or 0,
                     pt = GetBMPointsForPlayer(playerID), -- 5 points per game, plus 3 to the winners and plus 2 for each player still connected. Leavers get no points
                 })
             end
@@ -83,12 +89,6 @@ function PrintSchema(gameArray, playerArray)
     print("\n-------- PLAYER DATA --------")
     DeepPrintTable(playerArray)
     print("-------------------------------------")
-end
-
--- Write 'test_schema' on the console to test your current functions instead of having to end the game
-if Convars:GetBool('developer') then
-    Convars:RegisterCommand("test_schema", function() PrintSchema(BuildGameArray(), BuildPlayersArray()) end, "Test the custom schema arrays", 0)
-    Convars:RegisterCommand("test_end_game", function() GameRules:SetGameWinner(DOTA_TEAM_GOODGUYS) end, "Test the custom schema arrays", 0)
 end
 
 -------------------------------------
