@@ -4,6 +4,16 @@ function GetBMPointsForPlayer( playerID )
         return 0
     end
 
+    -- Games with a duration less than 10 min don't give points
+    if GameRules:GetDOTATime(false, false) < 600 then
+        return 0
+    end
+
+    -- Neither do single player games
+    if PlayerResource:GetPlayerCount() == 1 then
+        return 0
+    end
+
     local points = 5
 
     -- Winners get 3 extra points

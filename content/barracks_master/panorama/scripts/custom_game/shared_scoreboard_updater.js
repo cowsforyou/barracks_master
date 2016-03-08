@@ -7,9 +7,14 @@ GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_ENDGAME, fals
     +5 points base
     +3 to the winners
     +2 per player still connected
+    0 on single player or games that last for less than 10 minutes
 *///===========================================================================
 function GetBMPointsForTeam( teamID )
 {
+	if (Game.GetDOTATime(false, false) < 600) return 0
+
+	if (Game.GetAllPlayerIDs().length == 1) return 0
+
 	var points = 5
 	if (teamID == Game.GetGameWinner())
 		points+=3
