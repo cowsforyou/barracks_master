@@ -20,8 +20,8 @@ function UpgradeBuilding( event )
 	building:SetAngles(0, -angle.y, 0)
 
 	-- If the building to ugprade is selected, change the selection to the new one
-	if IsCurrentlySelected(caster) then
-		AddUnitToSelection(building)
+	if PlayerResource:IsUnitSelected(playerID, caster) then
+		PlayerResource:AddToSelection(playerID, building)
 	end
 
 	-- Remove the old building from the structures list

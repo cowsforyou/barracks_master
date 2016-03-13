@@ -46,7 +46,6 @@ function GameMode:InitGameMode()
   SendToServerConsole("dota_surrender_on_disconnect 0")
 
   -- Register Listener
-  CustomGameEventManager:RegisterListener( "update_selected_entities", Dynamic_Wrap(BuildingEvents, 'OnPlayerSelectedEntities'))
   CustomGameEventManager:RegisterListener( "repair_order", Dynamic_Wrap(GameMode, "RepairOrder"))   
   CustomGameEventManager:RegisterListener( "harvest_order", Dynamic_Wrap(GameMode, "HarvestOrder"))   
   CustomGameEventManager:RegisterListener( "update_player_slot", Dynamic_Wrap(GameMode, "OnPlayerSlotUpdated"))
@@ -57,9 +56,6 @@ function GameMode:InitGameMode()
   GameRules.HeroKV = LoadKeyValues("scripts/npc/npc_heroes_custom.txt")
   GameRules.ItemKV = LoadKeyValues("scripts/npc/npc_items_custom.txt")
   GameRules.Requirements = LoadKeyValues("scripts/kv/tech_tree.kv")
-
-    -- Store and update selected units of each pID
-  GameRules.SELECTED_UNITS = {}
 
   -- Keeps the blighted gridnav positions
   GameRules.Blight = {}

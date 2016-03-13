@@ -187,45 +187,6 @@ function IsValidAlive( unit )
 	return (IsValidEntity(unit) and unit:IsAlive())
 end
 
-function AddUnitToSelection( unit )
-	local player = unit:GetPlayerOwner()
-	CustomGameEventManager:Send_ServerToPlayer(player, "add_to_selection", { ent_index = unit:GetEntityIndex() })
-end
-
-function RemoveUnitFromSelection( unit )
-	local player = unit:GetPlayerOwner()
-	local ent_index = unit:GetEntityIndex()
-	CustomGameEventManager:Send_ServerToPlayer(player, "remove_from_selection", { ent_index = unit:GetEntityIndex() })
-end
-
-function GetSelectedEntities( playerID )
-	return GameRules.SELECTED_UNITS[playerID]
-end
-
-function IsCurrentlySelected( unit )
-	local entIndex = unit:GetEntityIndex()
-	local playerID = unit:GetPlayerOwnerID()
-	local selectedEntities = GetSelectedEntities( playerID )
-	for _,v in pairs(selectedEntities) do
-		if v==entIndex then
-			return true
-		end
-	end
-	return false
-end
-
--- Force-check the game event
-function UpdateSelectedEntities()
-	FireGameEvent("dota_player_update_selected_unit", {})
-end
-
-function GetMainSelectedEntity( playerID )
-	if GameRules.SELECTED_UNITS[playerID]["0"] then
-		return EntIndexToHScript(GameRules.SELECTED_UNITS[playerID]["0"])
-	end
-	return nil
-end
-
 -- ToggleAbility On only if its turned Off
 function ToggleOn( ability )
 	if ability:GetToggleState() == false then

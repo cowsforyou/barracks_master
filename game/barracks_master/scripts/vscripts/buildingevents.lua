@@ -171,18 +171,3 @@ function RemoveMatchingEntityFromTable(tbl, entity)
   print("ERROR: Could not find entity "..entity:GetUnitName().." in table.")
   return false
 end
-
--- Called whenever a player changes its current selection, it keeps a list of entity indexes
-function BuildingEvents:OnPlayerSelectedEntities( event )
-  local playerID = event.PlayerID
-
-  GameRules.SELECTED_UNITS[playerID] = event.selected_entities
-
-  -- This is for Building Helper to know which is the currently active builder
-  local mainSelected = GetMainSelectedEntity(playerID)
-  if IsValidEntity(mainSelected) and IsBuilder(mainSelected) then
-    local player = PlayerResource:GetPlayer(playerID)
-    local hero = player:GetAssignedHero()
-    hero.activeBuilder = mainSelected
-  end
-end

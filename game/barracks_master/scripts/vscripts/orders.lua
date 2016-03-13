@@ -24,21 +24,6 @@ function GameMode:FilterExecuteOrder( filterTable )
         return true
     end
 
-    --[[if units then
-        for n,unit_index in pairs(units) do
-            local unit = EntIndexToHScript(unit_index)
-            if unit and IsValidEntity(unit) then
-                if not unit:IsBuilding() and not IsCustomBuilding(unit) then
-
-                    -- Set hold position
-                    if order_type == DOTA_UNIT_ORDER_HOLD_POSITION then
-                        unit.bHold = true
-                    end
-                end
-            end
-        end
-    end]]-- removing with improved script
-
     ------------------------------------------------
     --           Ability Multi Order              --
     ------------------------------------------------
@@ -47,7 +32,7 @@ function GameMode:FilterExecuteOrder( filterTable )
 
         local ability = EntIndexToHScript(abilityIndex) 
         local abilityName = ability:GetAbilityName()
-        local entityList = GetSelectedEntities(unit:GetPlayerOwnerID())
+        local entityList = PlayerResource:GetSelectedEntities(unit:GetPlayerOwnerID())
         for _,entityIndex in pairs(entityList) do
             local caster = EntIndexToHScript(entityIndex)
             -- Make sure the original caster unit doesn't cast twice
@@ -70,30 +55,6 @@ function GameMode:FilterExecuteOrder( filterTable )
             end
         end
         return true
-
-    ------------------------------------------------
-    --              ClearQueue Order              --
-    ------------------------------------------------
-    --[[
-    -- Cancel queue on Stop and Hold
-    elseif order_type == DOTA_UNIT_ORDER_STOP or order_type == DOTA_UNIT_ORDER_HOLD_POSITION then
-        for n, unit_index in pairs(units) do 
-            local unit = EntIndexToHScript(unit_index)
-            if IsBuilder(unit) then
-                BuildingHelper:ClearQueue(unit)
-            end
-        end
-        return true
-
-    -- Cancel builder queue when casting non building abilities
-    elseif (abilityIndex and abilityIndex ~= 0) and IsBuilder(unit) and ability then
-        local ability = EntIndexToHScript(abilityIndex)
-        print("ORDER FILTER",ability:GetAbilityName(), IsBuildingAbility(ability))
-        if not IsBuildingAbility(ability) then
-            BuildingHelper:ClearQueue(unit)
-        end
-        return true
-        --]] -- removing with upgraded script
     end
     return true
 end
@@ -106,7 +67,7 @@ function GameMode:RepairOrder( event )
     local entityIndex = event.mainSelected
     local targetIndex = event.targetIndex
     local building = EntIndexToHScript(targetIndex)
-    local selectedEntities = GetSelectedEntities(pID)
+    local selectedEntities = PlayerResource:GetSelectedEntities(pID)
     local queue = tobool(event.queue)
 
     local unit = EntIndexToHScript(entityIndex)
@@ -126,7 +87,7 @@ function GameMode:HarvestOrder( event )
     local entityIndex = event.mainSelected
     local targetIndex = event.targetIndex
     local building = EntIndexToHScript(targetIndex)
-    local selectedEntities = GetSelectedEntities(pID)
+    local selectedEntities = PlayerResource:GetSelectedEntities(pID)
     local queue = tobool(event.queue)
 
     local unit = EntIndexToHScript(entityIndex)
