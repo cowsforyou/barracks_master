@@ -320,10 +320,8 @@ function CancelBuilding( keys )
         builder:SetAbsOrigin(building:GetAbsOrigin())
     end
 
-    building.state = "canceled"
-    Timers:CreateTimer(1/5, function() 
-        BuildingHelper:RemoveBuilding(building, true)
-    end)
+    building:ForceKill(true)
+    PlayerResource:ResetSelection(playerID)
 end
 
 -- Called when a unit with UltimateTower label is built -- cows
