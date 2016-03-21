@@ -19,7 +19,7 @@
 				<Panel class="LegendPanel ScoreCol_TeamInfo" />
 				<Panel class="LegendPanel ScoreCol_Hero" />
 				<Panel class="LegendPanel ScoreCol_PlayerDetails" />
-				<Label class="LegendPanel ScoreCol_TeamScore" text="#end_screen_bm_score" />
+				<Label class="LegendPanel ScoreCol_PlayerScore" text="#end_screen_bm_score" />
 				<Label class="LegendPanel ScoreCol_CS" text="#custom_end_screen_legend_cs" />
 				<Label class="LegendPanel ScoreCol_NetWorth" text="#custom_end_screen_legend_networth" />
 				<Label class="LegendPanel ScoreCol_Gold" text="#custom_end_screen_legend_gold" />

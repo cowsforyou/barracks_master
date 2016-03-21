@@ -245,6 +245,7 @@
 #DeathsContainer,
 #AssistsContainer,
 #CSContainer,
+#ScoreContainer,
 #NetWorthContainer,
 #GoldContainer,
 #LumberContainer,
@@ -298,6 +299,7 @@
 #CS,
 #NetWorth,
 #Gold,
+#PlayerScore,
 #Lumber,
 {
 	horizontal-align: center;
@@ -305,6 +307,11 @@
 	text-align: center;
 	font-size: 20px;
 	margin-top: 3px;
+}
+
+#PlayerScore
+{
+    font-weight: bold;
 }
 
 #PlayerGoldAmount
@@ -370,9 +377,9 @@
 	width: 170px;
 }
 
-.ScoreCol_TeamScore
+.ScoreCol_PlayerScore
 {
-	width: 80px;
+	width: 60px;
 	text-align: center;
 }
 
@@ -396,6 +403,12 @@
 {
 	width: 50px;
 	text-align: center;
+}
+
+.ScoreCol_BM_Points
+{
+    width: 60px;
+    text-align: center;
 }
 
 .ScoreCol_NetWorth

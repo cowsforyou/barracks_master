@@ -14,7 +14,10 @@
 					<Label id="HeroNameAndDescription" text="#custom_scoreboard_hero_name_and_desc" />
 				</Panel>
 			</Panel>
-			<Panel id="TeamScoreSpace" class="ScoreCol_TeamScore" />
+			<Panel id="ScoreContainer" class="ScoreCol_BM_Points ScoreboardPanel">
+				<Label id="PlayerScore" text="999" />
+			</Panel>
+
 			<Panel id="CSContainer" class="ScoreCol_CS ScoreboardPanel">
 				<Label id="CS" text="999" />
 			</Panel>

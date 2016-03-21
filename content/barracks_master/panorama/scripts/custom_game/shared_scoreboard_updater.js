@@ -9,13 +9,14 @@ GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_ENDGAME, fals
     +2 per player still connected
     0 on single player or games that last for less than 10 minutes
 *///===========================================================================
-function GetBMPointsForTeam( teamID )
+function GetBMPointsForPlayer( pID )
 {
 	if (Game.GetDOTATime(false, false) < 600) return 0
 
 	if (Game.GetAllPlayerIDs().length == 1) return 0
 
 	var points = 5
+	var teamID = Entities.GetTeamNumber(Players.GetPlayerHeroEntityIndex( pID ))
 	if (teamID == Game.GetGameWinner())
 		points+=3
 
@@ -48,6 +49,16 @@ function _ScoreboardUpdater_SetTextSafe( panel, childName, textValue )
 	childPanel.text = textValue;
 }
 
+function _ScoreboardUpdater_SetColorSafe( panel, childName, colorValue ) {
+	if ( panel === null )
+		return;
+	var childPanel = panel.FindChildInLayoutFile( childName )
+	if ( childPanel === null )
+		return;
+	
+	childPanel.style['color'] = colorValue;
+}
+
 //=============================================================================
 //=============================================================================
 function _ScoreboardUpdater_UpdatePlayerPanel( scoreboardConfig, playersContainer, playerId, localPlayerTeamId )
@@ -71,6 +82,15 @@ function _ScoreboardUpdater_UpdatePlayerPanel( scoreboardConfig, playersContaine
 
 	if ( playerInfo )
 	{
+		var playerScore = GetBMPointsForPlayer(playerId)
+		_ScoreboardUpdater_SetTextSafe( playerPanel, "PlayerScore", "+"+playerScore )
+
+		//color the points
+		if (playerInfo.player_connection_state != DOTAConnectionState_t.DOTA_CONNECTION_STATE_CONNECTED)
+			_ScoreboardUpdater_SetColorSafe( playerPanel, "PlayerScore", "#FF0000")
+		else
+			_ScoreboardUpdater_SetColorSafe( playerPanel, "PlayerScore", "#00FF00")
+
 		isTeammate = ( playerInfo.player_team_id == localPlayerTeamId );
 		if ( isTeammate )
 		{
@@ -276,8 +296,6 @@ function _ScoreboardUpdater_UpdateTeamPanel( scoreboardConfig, containerPanel, t
 		teamsInfo.max_team_players = teamPlayers.length;
 	}
 
-	var teamScore = GetBMPointsForTeam(teamId)
-	_ScoreboardUpdater_SetTextSafe( teamPanel, "TeamScore", "+"+teamScore )
 	_ScoreboardUpdater_SetTextSafe( teamPanel, "TeamName", $.Localize( teamDetails.team_name ) )
 	
 	if ( GameUI.CustomUIConfig().team_colors )
