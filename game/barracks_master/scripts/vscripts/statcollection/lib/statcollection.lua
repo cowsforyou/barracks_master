@@ -21,7 +21,6 @@ local statInfo = LoadKeyValues('scripts/vscripts/statcollection/settings.kv')
 
 -- Where stuff is posted to
 local postLocation = 'http://getdotastats.com/s2/api/'
-local bmPost = 'https://barracksmaster.herokuapp.com/' --new_match
 
 -- The schema version we are currently using
 local schemaVersion = 4
@@ -563,46 +562,27 @@ function statCollection:sendCustom(args)
         -- Tell the user
         print(printPrefix .. messageCustomComplete)
     end)
-
-    -- Send custom to bm
-    self:sendStage('new_match', payload, function(err, res)
-        local prefix = "BM Stats:  "
-
-        -- Check if we got an error
-        if err then
-            print(prefix .. errorJsonDecode)
-            print(prefix .. err)
-            return
-        end
-
-        -- Check for an error
-        if res.error then
-            print(prefix .. errorSomethingWentWrong)
-            print(res.error)
-            return
-        end
-
-        -- Tell the user
-        print(prefix .. messageCustomComplete .. " [" .. bmPost .. ']')
-    end, bmPost)
 end
 
 -- Sends the payload data for the given stage, and return the result
+-- Optional override_host can be added to reutilize this function for other sites
 function statCollection:sendStage(stageName, payload, callback, override_host)
     local host = override_host or postLocation
 
-    print("Sending HTTP Request to ",host .. stageName)
-
     -- Create the request
     local req = CreateHTTPRequest('POST', host .. stageName)
-    print(json.encode(payload))
+    local encoded = json.encode(payload)
+    if self.TESTING then
+        statCollection:print(encoded)
+    end
+
     -- Add the data
-    req:SetHTTPRequestGetOrPostParameter('payload', json.encode(payload))
+    req:SetHTTPRequestGetOrPostParameter('payload', encoded)
 
     -- Send the request
     req:Send(function(res)
         if res.StatusCode ~= 200 or not res.Body then
-            print(errorFailedToContactServer)
+            statCollection:print(errorFailedToContactServer)
             return
         end
 
@@ -614,6 +594,62 @@ function statCollection:sendStage(stageName, payload, callback, override_host)
     end)
 end
 
+-- Checks the error and result objects and returns whether its invalid or not
+function statCollection:ReturnedErrors(err, res)
+    if err then
+        statCollection:print(errorJsonDecode)
+        statCollection:print(err)
+        return true
+    end
+
+    if res.error then
+        statCollection:print(errorSomethingWentWrong)
+        statCollection:print(res.error)
+        return true
+    end
+
+    -- no errors
+    return false
+end
+
+function statCollection:printError(where, msg)
+    statCollection:print("ERROR at "..where)
+    statCollection:print(msg)
+    statCollection:print("Auth Key: ", self.authKey)
+    statCollection:print("MatchID: ", self.matchID)
+end
+
+function statCollection:print(s1, s2)
+    local str = s1
+    if s1 then
+        str = printPrefix .. tostring(s1)
+    end
+
+    if s2 then
+        str = str .. " " .. tostring(s2)
+    end
+
+    -- print to panorama console in dedicated servers Testing mode
+    if IsDedicatedServer() and self.TESTING then
+        CustomGameEventManager:Send_ServerToAllClients("statcollection_print", { content = str })
+    else
+    -- print to vscript developer console, or non-dedi server
+        if self.TESTING or Convars:GetBool("developer") then
+            print(str)
+        end
+    end
+end
+
+function tobool(s)
+    return s == true or s == "true" or s == "1" or s == 1
+end
+
+
+
+
+
+
+-- To be deprecated
 function statCollection:sendBMData(stage, payload, callback)
     -- Create the request
     local req = CreateHTTPRequest('POST', 'http://barracksmaster.com/api')
@@ -637,12 +673,4 @@ function statCollection:sendBMData(stage, payload, callback)
         -- Feed the result into our callback
         callback(err, obj)
     end)
-end
-
-function tobool(s)
-    if s == "true" or s == "1" or s == 1 then
-        return true
-    else --nil "false" "0"
-    return false
-    end
 end

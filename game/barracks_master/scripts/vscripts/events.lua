@@ -33,7 +33,15 @@ function GameMode:OnGameRulesStateChange(keys)
   elseif newState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
     SpawnSynchronizer:Setup()
     AlchemistGifter:Setup()
-  end  
+
+  -- Post Game Stats
+  elseif newState >= DOTA_GAMERULES_STATE_POST_GAME then
+    Timers:CreateTimer(1, function()
+      if statCollection and statCollection.sendBMPost then
+        statCollection:sendBMPost()
+      end
+    end)
+  end
 end
 
 -- An NPC has spawned somewhere in game.  This includes heroes
