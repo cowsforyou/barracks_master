@@ -47,7 +47,7 @@ end
 -- Returns a table with our custom game tracking.
 function BuildGameArray()
     local game = {}
-    game.dr = GameRules:GetDOTATime(false, false)
+    game.dr = math.floor(GameRules:GetDOTATime(false, false)+0.5)
 
     return game
 end

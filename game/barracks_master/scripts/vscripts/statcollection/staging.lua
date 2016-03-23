@@ -20,7 +20,7 @@ end
 function statCollection:sendBMPost()
     local payload = {
         dotaMatchID = tostring(GameRules:GetMatchID()),
-        duration = GameRules:GetDOTATime(false, false),
+        duration = math.floor(GameRules:GetDOTATime(false, false)+0.5),
         winner = statCollection.winner,
         players = BuildPlayersArray(),
     }
