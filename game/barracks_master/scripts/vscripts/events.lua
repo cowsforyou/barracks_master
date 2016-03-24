@@ -36,7 +36,7 @@ function GameMode:OnGameRulesStateChange(keys)
 
   -- Post Game Stats
   elseif newState >= DOTA_GAMERULES_STATE_POST_GAME then
-    Timers:CreateTimer(1, function()
+    Timers:CreateTimer(0.03, function()
       if statCollection and statCollection.sendBMPost and not statCollection.sent_BMPost then
         statCollection.sent_BMPost = true
         statCollection:sendBMPost()
