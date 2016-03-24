@@ -75,6 +75,7 @@ function BuildPlayersArray()
                     pt = GetBMPointsForPlayer(playerID), -- 5 points per game, plus 3 to the winners and plus 2 for each player still connected. Leavers get no points
                     con = (PlayerResource:GetConnectionState(playerID) == 2) and 1 or 0,  -- 1 is connected, 0 is disconnected
                     win = (PlayerResource:GetTeam(playerID) == statCollection.winner) and 1 or 0, -- 1 is winner, 0 is loser
+                    mmr = 0,
                 })
             end
         end
