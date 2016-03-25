@@ -11,7 +11,7 @@ GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_ENDGAME, fals
 *///===========================================================================
 function GetBMPointsForPlayer( pID )
 {
-    if (Game.GetDOTATime(false, false) < 600) return 0
+    if (Game.GetDOTATime(false, false) < 480) return 0
 
     if (Game.GetAllPlayerIDs().length == 1) return 0
 

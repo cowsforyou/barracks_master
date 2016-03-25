@@ -5,7 +5,7 @@ function GetBMPointsForPlayer( playerID )
     end
 
     -- Games with a duration less than 10 min don't give points
-    if GameRules:GetDOTATime(false, false) < 600 then
+    if GameRules:GetDOTATime(false, false) < 480 then
         return 0
     end
 
