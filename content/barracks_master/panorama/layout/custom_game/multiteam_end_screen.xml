@@ -26,6 +26,10 @@
 				<Label class="LegendPanel ScoreCol_Lumber" text="#custom_end_screen_legend_lumber" />
 			</Panel>
 			<Panel id="TeamsContainer" />
+			<Panel class="ExtraText">
+				<Label id="ExtraText_Note" text="#custom_end_screen_extra_note" style="" />
+				<Label id="ExtraText_Website" text="#custom_end_screen_extra_website" style="" />
+			</Panel>
 			<Button id="CloseButton" onactivate="Game.FinishGame();">
 				<Label text="#CustomEndScreenClose" />
 			</Button>

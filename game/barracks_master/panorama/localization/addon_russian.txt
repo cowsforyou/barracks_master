@@ -5,6 +5,11 @@
 	"custom_end_screen_legend_gold"					"GOLD"
 	"custom_end_screen_legend_lumber"				"LUMBER"
 
+	"end_screen_bm_score"							"BM POINTS"
+
+	"custom_end_screen_extra_note"					"Points will only be awarded for games longer than 8mins."
+	"custom_end_screen_extra_website"				"Visit barracksmaster.com to check your rank."	
+
 	"error_max_unit_count_reached"					"Max Unit Count Reached"
 	"error_max_building_count"						"Structure Already Built"
 	"error_max_ultimate_towers"						"Only One Ultimate Tower Can Be Built"

@@ -61,6 +61,30 @@
 	width: 100%;
 }
 
+/*----- Extra Text ----- */
+
+.ExtraText
+{
+	padding-top: 10px;
+
+	horizontal-align: right;
+	flow-children: down;
+}
+
+#ExtraText_Note
+{
+	padding-top: 0px;
+	horizontal-align: right;
+}
+
+#ExtraText_Website
+{
+	padding-top: 0px;
+	horizontal-align: right;
+}
+
+/*----- -----*/
+
 #CloseButton
 {
 	background-color: #121618;
