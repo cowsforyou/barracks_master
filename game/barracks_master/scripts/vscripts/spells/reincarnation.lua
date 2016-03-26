@@ -34,6 +34,7 @@ function ReincarnationCheck( event )
                 ParticleManager:CreateParticle(particleName, PATTACH_ABSORIGIN_FOLLOW, caster)
                 caster:RespawnUnit()
                 caster.reincarnating = nil
+                ability:RemoveSelf()
             end)
         end
     end
