@@ -1345,7 +1345,7 @@
 	         {
 	            "RunScript"
 	            {
-	               "ScriptFile"    "abilities/skeleton/reincarnation.lua"
+	               "ScriptFile"    "spells/reincarnation.lua"
 	               "Function"      "ReincarnationCheck"
 	               "Damage"        "%attack_damage"
 	            }

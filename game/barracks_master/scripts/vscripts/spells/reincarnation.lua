@@ -9,11 +9,6 @@ function ReincarnationCheck( event )
 
         local chance = ability:GetLevelSpecialValueFor("reincarnate_chance", ability:GetLevel()-1)
 
-        -- Double the chance under the effects of the leaders aura
-        if caster:HasModifier("modifier_reincarnation_buff") then
-            chance = chance * 2
-        end
-
         if RollPercentage(chance) then
             caster.reincarnating = true
             caster:Heal(damage, caster)
@@ -26,7 +21,7 @@ function ReincarnationCheck( event )
                 unit:RemoveModifierByName("modifier_hide")
             end
 
-            local particleName = "particles/custom/skeleton/reincarnate_explode.vpcf"
+            local particleName = "particles/bm_custom_particles/bm_particle_reincarnate.vpcf"
             ParticleManager:CreateParticle(particleName, PATTACH_ABSORIGIN_FOLLOW, caster)
 
             local tombstone = "particles/generic_hero_status/death_tombstone.vpcf"
