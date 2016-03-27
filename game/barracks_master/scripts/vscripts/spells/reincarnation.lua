@@ -7,14 +7,12 @@ function ReincarnationCheck( event )
     local health = caster:GetHealth()
     if health <= 0 then
 
-        local chance = ability:GetLevelSpecialValueFor("reincarnate_chance", ability:GetLevel()-1)
-
-        if RollPercentage(chance) then
             caster.reincarnating = true
             caster:Heal(damage, caster)
             caster:SetHealth(1)
+            caster:AddNoDraw
 
-            local duration = 2
+            local duration = ability:GetLevelSpecialValueFor( "respawn_time", ability:GetLevel() - 1 )
             ability:ApplyDataDrivenModifier(caster, caster, "modifier_reincarnating", {duration=duration})
 
             if caster:HasModifier("modifier_hide") then
@@ -35,7 +33,7 @@ function ReincarnationCheck( event )
                 caster:RespawnUnit()
                 caster.reincarnating = nil
                 ability:RemoveSelf()
+                caster:RemoveModifierByName("modifier_skeleton_reincarnation")
             end)
-        end
     end
 end

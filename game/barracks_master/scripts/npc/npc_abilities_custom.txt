@@ -1324,11 +1324,6 @@
 	         "var_type"              "FIELD_INTEGER"
 	         "respawn_health"        "40"
 	      }
-	      "03"
-	      {
-	         "var_type"            "FIELD_INTEGER"
-	         "reincarnate_chance"  "100"
-	      }
 	   }
 	    
 	   // Modifiers
@@ -1355,15 +1350,13 @@
 	      "modifier_reincarnating"
 	      {
 	         "IsHidden"  "1"
-	         "Duration"  "2"
 	         "States"
 	         {
-	            "MODIFIER_STATE_ATTACK_IMMUNE"      "MODIFIER_STATE_VALUE_ENABLED"
-	            "MODIFIER_STATE_MAGIC_IMMUNE"       "MODIFIER_STATE_VALUE_ENABLED"
 	            "MODIFIER_STATE_NO_HEALTH_BAR"      "MODIFIER_STATE_VALUE_ENABLED"
 	            "MODIFIER_STATE_STUNNED"            "MODIFIER_STATE_VALUE_ENABLED"
 	            "MODIFIER_STATE_INVULNERABLE"       "MODIFIER_STATE_VALUE_ENABLED"
 	            "MODIFIER_STATE_NO_UNIT_COLLISION"  "MODIFIER_STATE_VALUE_ENABLED"
+	            "MODIFIER_STATE_UNSELECTABLE"       "MODIFIER_STATE_VALUE_ENABLED"
 	         }
 	
 	         "Properties"
