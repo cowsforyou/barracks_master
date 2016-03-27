@@ -5,12 +5,14 @@ function ReincarnationCheck( event )
 
     -- Check if the damage would be lethal
     local health = caster:GetHealth()
+    local healthPercentage = ability:GetLevelSpecialValueFor( "respawn_health", ability:GetLevel() - 1 )
+    local healthNew = caster:GetMaxHealth() * healthPercentage/100
     if health <= 0 then
 
             caster.reincarnating = true
             caster:Heal(damage, caster)
             caster:SetHealth(1)
-            caster:AddNoDraw
+            caster:AddNoDraw()
 
             local duration = ability:GetLevelSpecialValueFor( "respawn_time", ability:GetLevel() - 1 )
             ability:ApplyDataDrivenModifier(caster, caster, "modifier_reincarnating", {duration=duration})
@@ -34,6 +36,8 @@ function ReincarnationCheck( event )
                 caster.reincarnating = nil
                 ability:RemoveSelf()
                 caster:RemoveModifierByName("modifier_skeleton_reincarnation")
+                -- Set Health
+                caster:SetHealth(healthNew)
             end)
     end
 end

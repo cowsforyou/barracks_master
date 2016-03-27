@@ -1322,7 +1322,7 @@
 	      "02"
 	      {
 	         "var_type"              "FIELD_INTEGER"
-	         "respawn_health"        "40"
+	         "respawn_health"        "50"
 	      }
 	   }
 	    
