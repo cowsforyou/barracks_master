@@ -1,0 +1,6 @@
+"bm_skeleton_rise_again_disabled"
+{
+    "BaseClass"                     "ability_datadriven"
+    "AbilityTextureName"            "skeleton_king_reincarnation"
+    "MaxLevel"                      "0"
+}

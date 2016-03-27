@@ -17,7 +17,7 @@
         //----------------------------------------------------------------
         
         "Ability1"                  "bm_skeleton_damage_disabled"          // Ability 1.
-        "Ability2"                  "bm_skeleton_rise_again"          // Ability 2.
+        "Ability2"                  "bm_skeleton_rise_again_disabled"          // Ability 2.
         "Ability3"                  ""          // Ability 3.
         "Ability4"                  ""          // Ability 4.
         "Ability5"                  ""          // Ability 5.

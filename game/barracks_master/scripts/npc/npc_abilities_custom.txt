@@ -1366,6 +1366,12 @@
 	      }
 	   }
 	}
+	"bm_skeleton_rise_again_disabled"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "skeleton_king_reincarnation"
+	    "MaxLevel"                      "0"
+	}
 	"bm_truestrike"
 	{
 	  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -4700,6 +4706,72 @@
 	        "var_type"              "FIELD_INTEGER"
 	        "gold_cost"             "75 150"
 	      }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "buildings/queue.lua"
+	            "Function"      "EnqueueUnit"
+	        }
+	    }
+	
+	    "OnChannelSucceeded"
+	    {
+	        "FireSound"
+	        {
+	            "EffectName"    "BarracksMaster.ResearchComplete"
+	            "Target"        "CASTER"
+	        }
+	        
+	        "RunScript"
+	        {
+	            "ScriptFile"    "buildings/queue.lua"
+	            "Function"      "NextQueue"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "buildings/research.lua"
+	            "Function"      "ResearchComplete"
+	        }
+	    }
+	}
+	"research_bm_skeleton_rise_again"
+	{
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "skeleton_king_reincarnation"
+	    "MaxLevel"                      "1"
+	
+	    "AbilityGoldCost"               "400"
+	    "AbilityChannelTime"            "500"
+	    
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "respawn_time"          "2"
+	        }
+	        "02"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "respawn_health"        "50"
+	        }
+	      
+	        "03"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "research_time"         "80"
+	        }
+	
+	        "04"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "gold_cost"             "400"
+	        }
 	    }
 	
 	    "OnSpellStart"

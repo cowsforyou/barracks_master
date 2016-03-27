@@ -22,7 +22,7 @@
 	"Ability1"					"spawn_skeleton_creeps"
 	"Ability2"					"research_spawn_skeleton_creeps"	
 	"Ability3"					"research_bm_skeleton_damage"
-	"Ability4"					""
+	"Ability4"					"research_bm_skeleton_rise_again"
 	"Ability5"					""
 	"Ability10"					"ability_building"
 	"Ability11"					"ability_building_queue"
