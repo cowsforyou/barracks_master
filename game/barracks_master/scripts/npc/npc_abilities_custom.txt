@@ -1347,6 +1347,26 @@
 	         }
 	      }
 	
+	      "modifier_keep_particle"
+	      {
+	         "Passive"         "1"
+	         "IsHidden"        "1"
+	   
+	         "OnCreated"
+	         {
+	            "AttachEffect"
+	            {
+	               "EffectName"        "particles/econ/courier/courier_greevil_orange/courier_greevil_orange_ambient_2.vpcf"
+	               "EffectAttachType"  "follow_origin"
+	               "Target"       "CASTER"
+	               "ControlPointEntities"
+	               {
+	                  "CASTER" "attach_hitloc"
+	               }
+	            }
+	         }
+	      }
+	
 	      "modifier_reincarnating"
 	      {
 	         "IsHidden"  "1"
@@ -4746,7 +4766,7 @@
 	    "MaxLevel"                      "1"
 	
 	    "AbilityGoldCost"               "400"
-	    "AbilityChannelTime"            "500"
+	    "AbilityChannelTime"            "80"
 	    
 	    "AbilitySpecial"
 	    {
@@ -4771,6 +4791,12 @@
 	        {
 	            "var_type"              "FIELD_INTEGER"
 	            "gold_cost"             "400"
+	        }
+	
+	        "05"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "lumber_cost"           "500"
 	        }
 	    }
 	

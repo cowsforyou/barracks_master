@@ -43,6 +43,26 @@
          }
       }
 
+      "modifier_keep_particle"
+      {
+         "Passive"         "1"
+         "IsHidden"        "1"
+   
+         "OnCreated"
+         {
+            "AttachEffect"
+            {
+               "EffectName"        "particles/econ/courier/courier_greevil_orange/courier_greevil_orange_ambient_2.vpcf"
+               "EffectAttachType"  "follow_origin"
+               "Target"       "CASTER"
+               "ControlPointEntities"
+               {
+                  "CASTER" "attach_hitloc"
+               }
+            }
+         }
+      }
+
       "modifier_reincarnating"
       {
          "IsHidden"  "1"

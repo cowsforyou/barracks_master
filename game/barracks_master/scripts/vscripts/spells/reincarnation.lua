@@ -15,6 +15,7 @@ function ReincarnationCheck( event )
         caster:Heal(damage, caster)
         caster:SetHealth(1)
         caster:AddNoDraw() -- This makes the creep invisible
+        caster:RemoveModifierByName("modifier_keep_particle")
 
         local duration = ability:GetLevelSpecialValueFor( "respawn_time", ability:GetLevel() - 1 )
         ability:ApplyDataDrivenModifier(caster, caster, "modifier_reincarnating", {duration=duration})
@@ -36,8 +37,10 @@ function ReincarnationCheck( event )
             ParticleManager:CreateParticle(particleName, PATTACH_ABSORIGIN_FOLLOW, caster)
             caster:RespawnUnit()
             caster.reincarnating = nil
+            -- Remove ability and any passives
             ability:RemoveSelf()
-            caster:RemoveModifierByName("modifier_skeleton_reincarnation")
+            caster:RemoveModifierByName("modifier_skeleton_reincarnation")          
+            caster:RemoveModifierByName("modifier_keep_particle")    
             -- Set respawned health
             caster:SetHealth(healthNew)
         end)
