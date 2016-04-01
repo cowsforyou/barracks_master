@@ -4,8 +4,8 @@ GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_ENDGAME, fals
 
 /*=============================================================================
   Custom BM Points
-    +5 points base
-    +3 to the winners
+    +3 points base
+    +5 to the winners
     +2 per player still connected
     0 on single player or games that last for less than 10 minutes
 *///===========================================================================
@@ -20,10 +20,10 @@ function GetBMPointsForPlayer( pID )
     if (playerInfo.player_connection_state != DOTAConnectionState_t.DOTA_CONNECTION_STATE_CONNECTED)
         return 0
 
-    var points = 5
+    var points = 3
     var teamID = Entities.GetTeamNumber(Players.GetPlayerHeroEntityIndex( pID ))
     if (teamID == Game.GetGameWinner())
-        points+=3
+        points+=5
 
     for (var playerID=0; playerID <= DOTALimits_t.DOTA_MAX_TEAM_PLAYERS; playerID++)
     {

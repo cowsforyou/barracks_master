@@ -14,11 +14,12 @@ function GetBMPointsForPlayer( playerID )
         return 0
     end
 
-    local points = 5
+    -- Each game has +3 points base
+    local points = 3
 
-    -- Winners get 3 extra points
+    -- Winners get 5 extra points
     if (PlayerResource:GetTeam(playerID) == statCollection.winner) then
-        points = points + 3
+        points = points + 5
     end
 
     -- 2 points for each player still connected
