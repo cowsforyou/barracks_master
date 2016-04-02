@@ -14,11 +14,14 @@ function SpawnBoar( event )
     elseif steamID == 64143044 or steamID == 103029867 then
         unitName = "scout_boar_purple"
 
-    elseif steamID == 103245869 then
+    elseif steamID == 103245869 or steamID == 167473888 or steamID == 177902321 or steamID == 177884423 then
         unitName = "scout_boar_red"
 
 --    elseif steamID == 46639111 then
 --        unitName = "scout_boar_white"
+
+    elseif steamID == 65558412 then
+        unitName = "scout_boar_yellow"
 
 --    elseif steamID == 46639111 then
 --        unitName = "scout_wolf"
@@ -47,6 +50,12 @@ function SpawnBoar( event )
 -- 63131067 mvp's partner
 -- 109293655 cold
 -- 119816162 Moon Moon
+-- 167473888 Дворник Коля
+-- 177902321 poopoo99
+-- 177884423 booboo99
+-- 65558412 str
+
+
 
 
     end
