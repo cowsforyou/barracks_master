@@ -147,6 +147,7 @@ Left Panel Items
 	padding-top: 10px;
 }
 
+/*--
 #LadderNote
 {
 	font-size: 16px;
@@ -155,8 +156,9 @@ Left Panel Items
 	padding-left: 15px;
 	padding-right: 15px;
 }
+--*/
 
-/*--
+
 #LadderPlayerPanel
 {
 	width: 250px;
@@ -164,7 +166,7 @@ Left Panel Items
 	margin-top: 0px;
 	flow-children: down;
 }
---*/
+
 
 #LadderText
 {
