@@ -8,7 +8,7 @@ function GetLadderData() {
             $.Msg("Recieved "+ladder.length+" entries!")
             for (var i in ladder) {
                 var player = ladder[i]
-                var rank = player['rnak']
+                var rank = player['rank']
                 var name = player['username']
                 var points = player['points']
                 var steamID = player['steamID']
