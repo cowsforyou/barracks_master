@@ -4,8 +4,10 @@ function GetLadderData() {
     $.Msg("Getting Ladder data...")
     $.AsyncWebRequest( url, { type: 'GET', 
         success: function( data ) {
-            var ladder = JSON.parse(data);
-            $.Msg("Recieved "+ladder.length+" entries!")
+            $.Msg("Success!")
+            //var ladder = JSON.parse(data);
+            $.Msg(data)
+            /*$.Msg("Recieved "+ladder.length+" entries!")
             for (var i in ladder) {
                 var player = ladder[i]
                 var rank = player['rank']
@@ -14,7 +16,7 @@ function GetLadderData() {
                 var steamID = player['steamID']
                 $.Msg("Rank #"+rank+": "+name+" | Points: "+points)
                 CreateLadderPlayer(rank, steamID, name)
-            };
+            };*/
         }
     })
 }
