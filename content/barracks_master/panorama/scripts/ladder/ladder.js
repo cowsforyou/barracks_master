@@ -3,9 +3,13 @@ var url = 'http://barracksmaster.herokuapp.com/top_10'
 function GetLadderData() {
     $.Msg("Getting Ladder data...")
     $.AsyncWebRequest( url, { type: 'GET', 
-        success: function( ladder ) {      
+        success: function( data ) 
+        {      
+            var ladder = JSON.parse(data);
+            $.Msg(data)
             $.Msg("Recieved "+ladder.length+" entries!")
-            for (var i in ladder) {
+            for (var i in ladder) 
+            {
                 var player = ladder[i]
                 var rank = player['rank']
                 var name = player['username']
