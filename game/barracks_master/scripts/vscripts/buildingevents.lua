@@ -24,6 +24,11 @@ function BuildingEvents:OnPlayerPickHero(keys)
   local angle = 90 -- rotate building when spawned
   local building = BuildingHelper:PlaceBuilding(player, starting_rax_name, position, construction_size, pathing_size, angle)
 
+  -- Preupgrade research_spawn_melee_creeps
+  local spawn_melee_creeps = building:FindAbilityByName("research_spawn_melee_creeps")
+  hero.upgrades["research_spawn_melee_creeps"] = 1
+  spawn_melee_creeps:SetLevel(2)
+
   --<< cows start
   -- Colorize starting rax
   local playerHero = player:GetAssignedHero()
