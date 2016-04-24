@@ -18,6 +18,8 @@ function statCollection:StageCustom(payload)
 end
 
 function statCollection:sendBMPost()
+    if PlayerResource:GetPlayerCount() == 1 then return end --Don't send single player lobbies
+    
     local payload = {
         dotaMatchID = tostring(GameRules:GetMatchID()),
         duration = math.floor(GameRules:GetDOTATime(false, false)+0.5),
