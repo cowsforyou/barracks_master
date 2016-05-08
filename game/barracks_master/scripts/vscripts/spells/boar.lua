@@ -14,7 +14,7 @@ function SpawnBoar( event )
     elseif steamID == 64143044 or steamID == 103029867 then
         unitName = "scout_boar_purple"
 
-    elseif steamID == 103245869 or steamID == 167473888 or steamID == 177902321 or steamID == 177884423 then
+    elseif steamID == 103245869 or steamID == 167473888 or steamID == 177902321 or steamID == 177884423 or steamID == 201214330 or steamID == 30948065 then
         unitName = "scout_boar_red"
 
 --    elseif steamID == 46639111 then
@@ -26,7 +26,7 @@ function SpawnBoar( event )
 --    elseif steamID == 46639111 then
 --        unitName = "scout_wolf"
 
-    elseif steamID == 86718505 or steamID == 153872184 or steamID == 63131067 then
+    elseif steamID == 86718505 or steamID == 153872184 or steamID == 63131067 or steamID == 128354369 then
         unitName = "scout_wolf_red"
 
     elseif steamID == 46639111 then
@@ -54,6 +54,10 @@ function SpawnBoar( event )
 -- 177902321 poopoo99
 -- 177884423 booboo99
 -- 65558412 str
+-- 128354369 GrandMASTER!
+-- 201214330 Legolas
+-- 30948065 lak1r
+
 
 
 

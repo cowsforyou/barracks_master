@@ -128,6 +128,8 @@ function Precache( context )
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_sniper.vsndevts", context) -- for Assassinate 
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_zuus.vsndevts", context) -- for Static Touch
 
+  PrecacheResource("soundfile", "soundevents/voscripts/game_sounds_vo_techies.vsndevts", context) -- for Mines
+
     -- Global Announcements
   PrecacheResource("soundfile", "soundevents/BM_custom_sounds.vsndevts", context) -- for Barracks Master Announcer
 
@@ -172,6 +174,7 @@ function Precache( context )
   PrecacheItemByNameSync("item_hawk", context)
   PrecacheItemByNameSync("item_techies", context)
   PrecacheItemByNameSync("item_last_stand", context)
+  PrecacheItemByNameSync("item_mines", context)  
 
   PrecacheItemByNameSync("item_apply_modifiers", context)
 

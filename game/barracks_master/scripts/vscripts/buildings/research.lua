@@ -33,7 +33,11 @@ function ScoutResearchComplete ( event )
 	local player = caster:GetPlayerOwner()
 	local hero = player:GetAssignedHero()
 
-	hero:AddItemByName(itemName)
+	if GetItemByName(hero, itemName) then
+		GetItemByName(hero, itemName):SetCurrentCharges(GetItemByName(hero, itemName):GetCurrentCharges() + 1)
+	else
+		hero:AddItemByName(itemName)
+	end
 	ResearchComplete(event)
 end
 

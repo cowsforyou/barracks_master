@@ -976,7 +976,7 @@
 		//----------------------------------------------------------------
 		"AbilityLayout"				"5"
 		"Ability1"					"research_bm_scout_techies"
-		"Ability2"					""
+		"Ability2"					"bm_mines"
 		"Ability3"					""
 		"Ability4"					""
 		"Ability10"					"ability_building"

@@ -936,6 +936,41 @@
 	    "AbilityTextureName"            "bm_basher3"
 	    "MaxLevel"                      "0"
 	}
+	"bm_mines"
+	{
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "techies_land_mines"
+	    "MaxLevel"                      "1"
+	
+	    "AbilityGoldCost"               "300"
+	    "AbilityCooldown"               "5.0"
+	    
+	    "AbilitySpecial"
+	    {    
+	        "01"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "gold_cost"             "300"
+	        }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "buildings/research.lua"
+	            "Function"      "ScoutResearchComplete"
+	            "item_name"     "item_mines"
+	        }
+	
+	        "FireSound"
+	        {
+	            "EffectName"    "techies_tech_move_26"
+	            "Target"        "CASTER"
+	        }
+	    }
+	}
 	"bm_ranged_armor"
 	{
 	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
