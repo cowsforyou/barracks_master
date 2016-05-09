@@ -21,9 +21,9 @@
 
     // Item Details
     //-------------------------------------------------------------------------------------------------------------  
-    "ItemDroppable"         "1"
-    "ItemKillable"          "1"
-    "ItemShareability"      "ITEM_FULLY_SHAREABLE"
+    "ItemDroppable"         "0"
+    "ItemKillable"          "0"
+    "ItemShareability"      "ITEM_NOT_SHAREABLE"
 
     "ItemInitialCharges"    "1"
     "ItemRequiresCharges"   "1"
@@ -50,17 +50,17 @@
         "01"
         {
             "var_type"                  "FIELD_INTEGER"
-            "damage"                    "200"
+            "damage"                    "150"
         }
         "02"
         {
             "var_type"                  "FIELD_INTEGER"
-            "small_radius"              "300"
+            "small_radius"              "100"
         }
         "03"
         {
             "var_type"                  "FIELD_INTEGER"
-            "big_radius"                "400"
+            "big_radius"                "150"
         }
         "04"
         {
@@ -75,7 +75,7 @@
         "06"
         {
             "var_type"                  "FIELD_FLOAT"
-            "explode_delay"             "0.3"
+            "explode_delay"             "0.1"
         }
         "07"
         {
@@ -97,13 +97,12 @@
 
     "OnSpellStart"
     {
+
         "FireSound"
         {
             "EffectName"    "Hero_Techies.LandMine.Plant"
             "Target"        "CASTER"
         }
-
-        "SpendCharge" {}
 
         "RunScript"
         {
@@ -230,6 +229,7 @@
 
         "modifier_land_mine_caster_datadriven"
         {
+            "IsHidden"      "1"
             "IsBuff"        "1"
             "IsPurgable"    "0"
         }

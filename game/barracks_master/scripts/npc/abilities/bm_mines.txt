@@ -28,8 +28,22 @@
 
         "FireSound"
         {
-            "EffectName"    "techies_tech_move_26"
+            "EffectName"    "ui.comp_coins_tick"
             "Target"        "CASTER"
         }
+
+        "FireEffect"
+        {
+            "Target"            "CASTER"
+            "EffectName"        "particles/econ/courier/courier_flopjaw/flopjaw_death_coins.vpcf"
+            "EffectAttachType"  "follow_overhead"
+        }
+
+        "FireSound"
+        {
+            "EffectName"    "techies_tech_remotemines_28"
+            "Target"        "CASTER"
+        }
+
     }
 }

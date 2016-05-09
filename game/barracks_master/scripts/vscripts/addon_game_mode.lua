@@ -104,6 +104,7 @@ function Precache( context )
 
     -- Misc
   PrecacheResource("particle_folder", "particles/bm_custom_particles", context) -- for Construction/Research
+  PrecacheResource("particle", "particles/econ/courier/courier_flopjaw/flopjaw_death_coins.vpcf", context) -- for Mines
 
 
 -- Sounds

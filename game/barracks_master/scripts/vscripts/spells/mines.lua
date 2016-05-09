@@ -51,6 +51,12 @@ function LandMinesPlant( keys )
     Timers:CreateTimer(fade_time, function()
         ability:ApplyDataDrivenModifier(caster, land_mine, modifier_land_mine_invisibility, {})
     end)
+
+    local itemName = "item_mines"
+    local minesItem = GetItemByName(caster, itemName)
+    if minesItem then
+        minesItem:SetCurrentCharges(minesItem:GetCurrentCharges() - 1)
+    end
 end
 
 --[[Author: Pizzalol
