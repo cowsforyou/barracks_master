@@ -944,7 +944,7 @@
 	    "MaxLevel"                      "1"
 	
 	    "AbilityGoldCost"               "300"
-	    "AbilityCooldown"               "5.0"
+	    "AbilityCooldown"               "180.0"
 	    
 	    "AbilitySpecial"
 	    {    
@@ -953,6 +953,11 @@
 	            "var_type"              "FIELD_INTEGER"
 	            "gold_cost"             "300"
 	        }
+	        "02"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "damage_tooltip"        "150"
+	        }    
 	    }
 	
 	    "OnSpellStart"
