@@ -3,6 +3,7 @@ var Root = $.GetContextPanel();
 function Check_Loading(){
 	var GameState = Game.GetState()
 
+	/*
 	// Update the background during custom game setup
 	if (GameState == DOTA_GameState.DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP){
 		$.Msg("Changing Load Screen")
@@ -17,6 +18,7 @@ function Check_Loading(){
 	else{
 		$.Schedule(0.1, Check_Loading)
 	}
+	*/
 }
 
 (function () {

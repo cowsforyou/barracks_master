@@ -11,7 +11,7 @@
 	<Panel class="BMLoadingRoot">
 
 		<Panel id="BM_Backgrounds">
-			<Image id="BG_Main" src="file://{images}/custom_game/loading_screen/bm_loading_screen.psd" />
+			<Image id="BG_Main" src="file://{images}/custom_game/loading_screen/bm_loading_screen_2.png" />
 			<Label id="GameTitle" text="#addon_game_name" style="" />		
 		</Panel>
 
@@ -38,12 +38,13 @@
 			</Panel>
 		</Panel>
 
-		<!-- Center -->
+		<!-- Center 
 		<Panel id="BM_Tutorials" >
 			<Image id="T1" src="file://{images}/custom_game/loading_screen/bm_loading_screen_s1.psd" />
 			<Image id="T2" src="file://{images}/custom_game/loading_screen/bm_loading_screen_s2.psd" />
 			<Image id="T3" src="file://{images}/custom_game/loading_screen/bm_loading_screen_s3.psd" />
 			<Image id="T4" src="file://{images}/custom_game/loading_screen/bm_loading_screen_s4.psd" />
 		</Panel>
+		-->
 	</Panel>
 </root>
