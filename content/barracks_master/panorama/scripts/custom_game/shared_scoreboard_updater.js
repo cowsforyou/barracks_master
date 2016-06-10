@@ -15,6 +15,8 @@ function GetBMPointsForPlayer( pID )
 
     if (Game.GetAllPlayerIDs().length == 1) return 0
 
+    if (CustomNetTables.GetTableValue("scores", "cheats_enabled")) return 0
+
     // Only connected players get points
     var playerInfo = Game.GetPlayerInfo( pID );
     if (playerInfo.player_connection_state != DOTAConnectionState_t.DOTA_CONNECTION_STATE_CONNECTED)

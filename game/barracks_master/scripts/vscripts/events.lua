@@ -33,10 +33,13 @@ function GameMode:OnGameRulesStateChange(keys)
   elseif newState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
     SpawnSynchronizer:Setup()
     AlchemistGifter:Setup()
-
-    -- Show cheat message if not on tools
-    if not Convars:GetBool("developer") and GameRules:IsCheatMode() then
+        
+    if GameRules:IsCheatMode() then
+      CustomNetTables:SetTableValue("scores", "cheats_enabled", { value = true })
+      -- Show cheat message if not on tools
+      if not Convars:GetBool("developer") then
         GameRules:SendCustomMessage("#bm_cheats_enabled", 0, 0)
+      end
     end
 
   -- Post Game Stats
