@@ -34,6 +34,11 @@ function GameMode:OnGameRulesStateChange(keys)
     SpawnSynchronizer:Setup()
     AlchemistGifter:Setup()
 
+    -- Show cheat message if not on tools
+    if not Convars:GetBool("developer") and GameRules:IsCheatMode() then
+        GameRules:SendCustomMessage("#bm_cheats_enabled", 0, 0)
+    end
+
   -- Post Game Stats
   elseif newState >= DOTA_GAMERULES_STATE_POST_GAME then
     Timers:CreateTimer(0.03, function()
