@@ -34,7 +34,7 @@
 			</Panel>
 
 			<Panel id="BM_Banner">
-				<Image id="Banner01" src="file://{images}/custom_game/loading_screen/banner_11.png" />
+				<Image id="Banner01" src="file://{images}/custom_game/loading_screen/banner_12.psd" />
 			</Panel>
 		</Panel>
 
